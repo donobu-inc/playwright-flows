@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  run-donobu-flows:
     runs-on: ubuntu-latest
     container: mcr.microsoft.com/playwright:v1.51.0-jammy
 
