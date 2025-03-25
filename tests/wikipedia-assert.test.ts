@@ -10,7 +10,7 @@
  * (e.g. OPENAI_API_KEY, ANTHROPIC_API_KEY, etc).
  */
 import { test } from "donobu";
-import { openAiClientFixture } from "donobu";
+import { gptClientFixture } from "donobu";
 
 // Overall objective:
 //   View article history and verify earliest revision
@@ -18,7 +18,7 @@ import { openAiClientFixture } from "donobu";
 //     Click on View history link
 //     Click on the oldest link to sort by oldest first
 //     Assert that first row in results shows date of the first revision listed on this page as 16 April 2004
-test.extend({ gptClient: openAiClientFixture("gpt-4o") })(
+test.extend({ gptClient: gptClientFixture() })(
   "Test for https://en.wikipedia.org/wiki/Software_testing",
   async ({ page }) => {
     // Initializing web navigation.

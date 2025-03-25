@@ -10,14 +10,14 @@
  * (e.g. OPENAI_API_KEY, ANTHROPIC_API_KEY, etc).
  */
 import { test } from "donobu";
-import { openAiClientFixture } from "donobu";
+import { gptClientFixture } from "donobu";
 
 // Overall objective:
 //   Check the seach results for YCombinator
 //     1) Scroll down all the way to see the search box and submit search for "dogfooding".
 //     2) Assert that the search results show "The Ultimate Dogfooding Story" in the top few links.
 test.extend({
-  gptClient: openAiClientFixture("gpt-4o"),
+  gptClient: gptClientFixture(),
 })("Test for https://news.ycombinator.com", async ({ page }) => {
   // Initializing web navigation.
   await page.goto("https://news.ycombinator.com");
