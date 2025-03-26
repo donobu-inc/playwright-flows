@@ -1,7 +1,7 @@
 # Supercharged Playwright Scripts using Donobu
 
 This repository houses Typescript-based Playwright flows that were generated using [Donobu](https://donobu.com).
-Donobu extends the Playwright test fixture to include capabilities like:
+Donobu extends the standard Playwright test fixture to include capabilities like:
 
 - Adding prioritized failover for when standard one-shot selectors fail when clicking, inputting text, etc.
 - Performing selector-less visual/semantic assertions on a page.
