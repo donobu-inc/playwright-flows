@@ -7,13 +7,16 @@
  */
 import { test } from "donobu";
 
-// Overall objective:
-//   Create an account on this website.
-//
-//     Use a random email variation of myemail@example.com
-//
-//     Make up reasonable data including passwords to fill all the forms.
-test("Test for https://stage.everbutton.com", async ({ page }) => {
+const testTitle = "Test for https://stage.everbutton.com";
+const testDetails = {
+  annotation: {
+    type: "objective",
+    description: `Create an account on this website.
+Use a random email variation of myemail@example.com
+Make up reasonable data including passwords to fill all the forms.`,
+  },
+};
+test(testTitle, testDetails, async ({ page }) => {
   // Initializing web navigation.
   await page.goto("https://stage.everbutton.com");
   // Navigating to the registration page to create a new account.
@@ -46,13 +49,27 @@ test("Test for https://stage.everbutton.com", async ({ page }) => {
       frame: null,
     },
   });
-  // Entering a new randomized email to complete the registration form.
+  // Entering a randomized email to complete the registration form.
   await page.inputRandomizedEmailAddress({
     baseEmail: "myemail@example.com",
     finalizeWithSubmit: false,
     selector: {
       element: [
         "#email",
+        "div > input:nth-of-type(1)",
+        "input",
+        "div > :nth-child(2)",
+      ],
+      frame: null,
+    },
+  });
+  // Entering a password to complete the registration form.
+  await page.inputText({
+    text: "SecurePass123",
+    finalizeWithSubmit: false,
+    selector: {
+      element: [
+        "#password",
         "div > input:nth-of-type(1)",
         "input",
         "div > :nth-child(2)",

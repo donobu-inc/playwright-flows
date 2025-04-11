@@ -12,18 +12,24 @@
 import { test } from "donobu";
 import { gptClientFixture } from "donobu";
 
-// Overall objective:
-//   View article history and verify earliest revision
-//
-//     Click on View history link
-//     Click on the oldest link to sort by oldest first
-//     Assert that first row in results shows date of the first revision listed on this page as 16 April 2004
+const testTitle = "Test for https://en.wikipedia.org/wiki/Software_testing";
+const testDetails = {
+  annotation: {
+    type: "objective",
+    description: `View the article history and verify the earliest revision.
+  
+  Click on View history link
+  Click on the oldest link to sort by oldest first
+  Assert that first row in results shows date of the first revision listed on this page as 16 April 2004`,
+  },
+};
 test.extend({ gptClient: gptClientFixture() })(
-  "Test for https://en.wikipedia.org/wiki/Software_testing",
+  testTitle,
+  testDetails,
   async ({ page }) => {
     // Initializing web navigation.
     await page.goto("https://en.wikipedia.org/wiki/Software_testing");
-    // Clicking on the 'View history' link to access the article's revision history, which is necessary to verify the earliest revision date.
+    // Clicking on the 'View history' link to access the article's revision history.
     await page.clickElement({
       selector: {
         element: [
@@ -37,7 +43,7 @@ test.extend({ gptClient: gptClientFixture() })(
         frame: null,
       },
     });
-    // Clicking on the 'older 50' link to load more revisions and find the earliest one.
+    // Clicking on the 'oldest' link to sort the revisions by oldest first.
     await page.clickElement({
       selector: {
         element: [
@@ -53,7 +59,7 @@ test.extend({ gptClient: gptClientFixture() })(
         frame: null,
       },
     });
-    // Verifying that the first row in the results shows the date of the first revision as 16 April 2004, as required by the objective.
+    // Verifying that the first revision date matches the expected date of 16 April 2004.
     await page.visuallyAssert({
       assertionToTestFor:
         "Assert that the first row in results shows date of the first revision listed on this page as 16 April 2004.",
