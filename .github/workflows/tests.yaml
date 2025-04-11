@@ -12,22 +12,28 @@ on:
 jobs:
   run-donobu-flows:
     runs-on: ubuntu-latest
-    container: mcr.microsoft.com/playwright:v1.51.0-jammy
-
-    defaults:
-      run:
-        shell: bash
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install dependencies
-        run: npm install
+        run: npm install && npx playwright install --with-deps
 
       - name: Run Playwright tests
         id: run_tests
         continue-on-error: true
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SELF_HEAL_TESTS_ENABLED: true
         run: npx playwright test
+
+      - name: Automatically create a pull request for fixing failed tests (if any)
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Fix failing Playwright tests"
+          title: "[Fixed] Playwright tests"
+          body: "Fix failing Playwright tests"
+          branch: fix-playwright-tests
+          base: main
