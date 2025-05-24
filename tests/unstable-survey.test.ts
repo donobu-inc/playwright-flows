@@ -17,14 +17,14 @@ const testDetails = {
 test(testTitle, testDetails, async ({ page }) => {
   // Initializing web navigation.
   await page.goto('https://unstable-survey-dinoer.replit.app');
-  // Entering the full name to proceed with the survey.
+  // Filling in the required name field to proceed with the survey.
   await page.inputText({
     text: 'John Doe',
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:r0\\:-form-item',
-        "[placeholder='Enter\\ your\\ full\\ name']",
+        '#\\:rf\\:-form-item',
+        "[placeholder='Enter\\ your\\ name']",
         'div > input:nth-of-type(1)',
         'input',
         'div > :nth-child(2)',
@@ -32,14 +32,14 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Entering an email address to continue the survey.
+  // Filling in the required email field to proceed with the survey.
   await page.inputRandomizedEmailAddress({
     baseEmail: 'example@example.com',
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:r1\\:-form-item',
-        "[placeholder='Enter\\ your\\ email\\ address']",
+        '#\\:rg\\:-form-item',
+        "[placeholder='Enter\\ your\\ contact\\ email']",
         'div > input:nth-of-type(1)',
         'input',
         'div > :nth-child(2)',
@@ -47,16 +47,16 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Interacting with the age group dropdown to select an option.
+  // Attempting to open the dropdown to select an occupation option.
   await page.clickElement({
     selector: {
       element: [
-        '#\\:r2\\:-form-item',
+        '#\\:rh\\:-form-item',
         "[data-state='closed']",
         "button[data-state='closed']",
         "[data-placeholder='']",
         "button[data-placeholder='']",
-        "//button[normalize-space(.)='Select your age group']",
+        "//button[normalize-space(.)='Select your occupation']",
         'div > button:nth-of-type(1)',
         'button',
         'div > :nth-child(2)',
@@ -64,13 +64,13 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting the age group to continue the survey.
+  // Choosing 'Student' as the occupation to proceed with the survey.
   await page.clickElement({
     selector: {
       element: [
         "[data-highlighted='']",
         "div[data-highlighted='']",
-        "//div[normalize-space(.)='18-24']",
+        "//div[normalize-space(.)='Student']",
         "div[data-state='unchecked']",
         "[data-radix-collection-item='']",
         "div[data-radix-collection-item='']",
@@ -82,11 +82,11 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting how the user heard about the survey.
+  // Indicating an interest in technology to continue with the survey.
   await page.clickElement({
     selector: {
       element: [
-        '#\\:r5\\:-form-item',
+        '#\\:rk\\:-form-item',
         "[data-state='unchecked']",
         "button[data-state='unchecked']",
         'div > button:nth-of-type(1)',
@@ -96,11 +96,11 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Scrolling down to access the 'Next' button to proceed.
+  // Scrolling down to access the 'Next' button and proceed with the survey.
   await page.scroll({
     direction: 'DOWN',
   });
-  // Submitting the current survey information to continue to the next page.
+  // Proceeding to the next step of the survey.
   await page.clickElement({
     selector: {
       element: [
@@ -112,7 +112,7 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Submitting the reviewed selections to complete the survey.
+  // Submitting the form to complete the survey process.
   await page.clickElement({
     selector: {
       element: [
