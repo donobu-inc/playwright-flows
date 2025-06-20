@@ -1,30 +1,26 @@
 /**
- * Be sure that Donobu is installed before running this script...
- *    'npm install donobu' or 'yarn add donobu'
- *
- * Also, be sure that Playwright's browsers are installed...
- *    'npx playwright install'
- *
- * Also, since this test is using tools that require the usage of an LLM, be
- * sure to have an appropriate LLM API key available as an environment variable
- * (e.g. OPENAI_API_KEY, ANTHROPIC_API_KEY, or GOOGLE_GENERATIVE_AI_API_KEY).
+ * Note that this test uses tools that require the usage of an LLM, so be
+ * sure to have an appropriate LLM API key available. This can be done
+ * by providing an environment variable (e.g. OPENAI_API_KEY, ANTHROPIC_API_KEY,
+ * or GOOGLE_GENERATIVE_AI_API_KEY) or by configuring a flow runner using
+ * the Donobu app.
  */
 import { test } from 'donobu';
 
-const testTitle = 'Test for https://www.starbucks.com/menu';
-const testDetails = {
+const title = 'Test for https://www.starbucks.com/menu';
+const details = {
   annotation: {
     type: 'objective',
-    description: `Assert that the featured menu page has fun, Spring season vibes.
+    description: `Assert that the featured menu page has fun, summer season vibes.
   
-  Then find a store in the town of Stowe, Vermont. Ensure that the address is "109 Main Street".
+  Then find a store in the town of Stowe, Vermont. Assert that the address is "109 Main Street".
   Also ensure that the map shows Mt. Mansfield close by.`,
   },
 };
-test(testTitle, testDetails, async ({ page }) => {
+test(title, details, async ({ page }) => {
   // Initializing web navigation.
   await page.goto('https://www.starbucks.com/menu');
-  // Clicking the 'Agree' button to dismiss the cookie notice, allowing access to the page content.
+  // Accepting the cookie consent to proceed with browsing the website.
   await page.clickElement({
     selector: {
       element: [
@@ -40,7 +36,7 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Clicking on the 'Featured' menu item to see the featured items and determine if they have a Spring theme.
+  // Navigating to the featured menu page to check for summer season vibes as part of the overall objective.
   await page.clickElement({
     selector: {
       element: [
@@ -55,11 +51,12 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Verifying that the featured menu page has a Spring theme as required by the objective. The page title is 'The Spring edit' and the drinks are light and refreshing, so it has Spring vibes.
+  // Asserting that the featured menu page has fun, summer season vibes as required by the overall objective before proceeding to find a store in Stowe, Vermont and asserting its address and nearby landmarks like Mt. Mansfield on the map which is part of the overall objective..
   await page.visuallyAssert({
-    assertionToTestFor: 'The featured menu page has fun, Spring season vibes.',
+    assertionToTestFor:
+      'The featured menu page has fun, summer season vibes, as indicated by phrases like "See you on the patio" and "Summer-Berry is back".',
   });
-  // Clicking on the 'Find a store' link to locate a store in Stowe, Vermont.
+  // Navigating to the store locator page to find a store in Stowe, Vermont, as required by the overall objective.
   await page.clickElement({
     selector: {
       element: [
@@ -74,7 +71,7 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Inputting the location Stowe, Vermont to find a store in that town.
+  // Entering 'Stowe, Vermont' into the search box to find a store in that location as required by the overall objective.
   await page.inputText({
     text: 'Stowe, Vermont',
     finalizeWithSubmit: false,
@@ -92,7 +89,7 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Submitting the search term to find stores in Stowe, Vermont.
+  // Submitting the search for 'Stowe, Vermont' to find the store location as required by the overall objective.
   await page.clickElement({
     selector: {
       element: [
@@ -109,8 +106,9 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Asserting that the address of the store is 109 Main Street.
-  await page.assertPageText({
-    text: '109 Main Street',
+  // Asserting the address of the Stowe, Vermont store and the proximity of Mt. Mansfield on the map as required by the overall objective after finding the store location in Stowe, Vermont and asserting its address and nearby landmarks like Mt. Mansfield on the map which is part of the overall objective..
+  await page.visuallyAssert({
+    assertionToTestFor:
+      'The address of the Starbucks store in Stowe, Vermont is "109 Main Street" and the map shows Mt. Mansfield close by.',
   });
 });
