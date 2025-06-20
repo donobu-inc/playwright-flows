@@ -1,7 +1,14 @@
-import { defineConfig } from "donobu";
+import { defineConfig, devices } from 'donobu';
 
 export default defineConfig({
+  testDir: './tests',
   projects: [
+    {
+      name: 'logged-out-tests',
+      testMatch: 'tests/*.test.ts',
+      use: { ...devices['Desktop Chromium'] },
+      timeout: 40000,
+    },
     {
       name: "login",
       testMatch: "**/auth/login.spec.ts",
