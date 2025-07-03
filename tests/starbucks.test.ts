@@ -36,7 +36,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Navigating to the featured menu page to check for summer season vibes as part of the overall objective.
+  // Navigating to the featured menu page to check for summer season vibes.
   await page.clickElement({
     selector: {
       element: [
@@ -51,18 +51,18 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Asserting that the featured menu page has fun, summer season vibes as required by the overall objective before proceeding to find a store in Stowe, Vermont and asserting its address and nearby landmarks like Mt. Mansfield on the map which is part of the overall objective..
+  // Asserting that the featured menu page has fun, summer season vibes as indicated by the content.
   await page.visuallyAssert({
     assertionToTestFor:
-      'The featured menu page has fun, summer season vibes, as indicated by phrases like "See you on the patio" and "Summer-Berry is back".',
+      "The featured menu page has fun, summer season vibes, as indicated by phrases like 'See you on the patio' and 'Summer-Berry is back'.",
   });
-  // Navigating to the store locator page to find a store in Stowe, Vermont, as required by the overall objective.
+  // Navigating to the store locator page to find a store in Stowe, Vermont.
   await page.clickElement({
     selector: {
       element: [
         'span > :nth-child(2)',
         'span > a:nth-of-type(1)',
-        'html > body > div:nth-of-type(3) > header > nav > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span > a',
+        'html > body > div:nth-of-type(2) > header > nav > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span > a',
         "//a[normalize-space(.)='Find a store']",
         "[href='https\\:\\/\\/www\\.starbucks\\.com\\/store-locator']",
         "a[href='https\\:\\/\\/www\\.starbucks\\.com\\/store-locator']",
@@ -71,7 +71,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Entering 'Stowe, Vermont' into the search box to find a store in that location as required by the overall objective.
+  // Entering 'Stowe, Vermont' into the search box to find a store in that location.
   await page.inputText({
     text: 'Stowe, Vermont',
     finalizeWithSubmit: false,
@@ -89,7 +89,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Submitting the search for 'Stowe, Vermont' to find the store location as required by the overall objective.
+  // Submitting the search for 'Stowe, Vermont' to find the store location.
   await page.clickElement({
     selector: {
       element: [
@@ -106,9 +106,9 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Asserting the address of the Stowe, Vermont store and the proximity of Mt. Mansfield on the map as required by the overall objective after finding the store location in Stowe, Vermont and asserting its address and nearby landmarks like Mt. Mansfield on the map which is part of the overall objective..
+  // Asserting the address of the Stowe, Vermont store and the proximity of Mt. Mansfield on the map.
   await page.visuallyAssert({
     assertionToTestFor:
-      'The address of the Starbucks store in Stowe, Vermont is "109 Main Street" and the map shows Mt. Mansfield close by.',
+      "The address of the Starbucks store in Stowe, Vermont is '109 Main Street' and the map shows Mt. Mansfield close by.",
   });
 });
