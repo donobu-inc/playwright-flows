@@ -1,30 +1,24 @@
-/**
- * Be sure that Donobu is installed before running this script...
- *    'npm install donobu' or 'yarn add donobu'
- *
- * Also, be sure that Playwright's browsers are installed...
- *    'npx playwright install'
- */
 import { test } from 'donobu';
 
-const testTitle = 'Test for https://unstable-survey-dinoer.replit.app';
-const testDetails = {
+const title = 'Test for https://unstable-survey-dinoer.replit.app';
+const details = {
   annotation: {
     type: 'objective',
     description: `Go through the survey and end the flow.`,
   },
 };
-test(testTitle, testDetails, async ({ page }) => {
+test(title, details, async ({ page }) => {
   // Initializing web navigation.
   await page.goto('https://unstable-survey-dinoer.replit.app');
-  // Entering the full name to proceed with the survey.
+  // Entering the full name as part of the survey process.
   await page.inputText({
     text: 'John Doe',
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:r0\\:-form-item',
-        "[placeholder='Enter\\ your\\ full\\ name']",
+        "[placeholder='Enter\\ your\\ name']",
+        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
+        '#\\:rf\\:-form-item',
         'div > input:nth-of-type(1)',
         'input',
         'div > :nth-child(2)',
@@ -38,8 +32,9 @@ test(testTitle, testDetails, async ({ page }) => {
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:r1\\:-form-item',
-        "[placeholder='Enter\\ your\\ email\\ address']",
+        "[placeholder='Enter\\ your\\ contact\\ email']",
+        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
+        '#\\:rg\\:-form-item',
         'div > input:nth-of-type(1)',
         'input',
         'div > :nth-child(2)',
@@ -47,16 +42,18 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Interacting with the age group dropdown to select an option.
+  // Interacting with the occupation dropdown to select an option.
   await page.clickElement({
+    optionValues: ['1'],
     selector: {
       element: [
-        '#\\:r2\\:-form-item',
+        "//button[normalize-space(.)='Select your occupation']",
+        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
+        '#\\:rh\\:-form-item',
         "[data-state='closed']",
         "button[data-state='closed']",
         "[data-placeholder='']",
         "button[data-placeholder='']",
-        "//button[normalize-space(.)='Select your age group']",
         'div > button:nth-of-type(1)',
         'button',
         'div > :nth-child(2)',
@@ -64,13 +61,14 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting the age group to continue the survey.
+  // Selecting 'Student' as the occupation to continue the survey.
   await page.clickElement({
     selector: {
       element: [
+        "//div[normalize-space(.)='Student']",
+        'html > body > div:nth-of-type(2) > div > div > div:nth-of-type(1)',
         "[data-highlighted='']",
         "div[data-highlighted='']",
-        "//div[normalize-space(.)='18-24']",
         "div[data-state='unchecked']",
         "[data-radix-collection-item='']",
         "div[data-radix-collection-item='']",
@@ -82,11 +80,12 @@ test(testTitle, testDetails, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting how the user heard about the survey.
+  // Selecting the interest in 'Technology' to continue the survey.
   await page.clickElement({
     selector: {
       element: [
-        '#\\:r5\\:-form-item',
+        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
+        '#\\:rk\\:-form-item',
         "[data-state='unchecked']",
         "button[data-state='unchecked']",
         'div > button:nth-of-type(1)',
@@ -105,6 +104,7 @@ test(testTitle, testDetails, async ({ page }) => {
     selector: {
       element: [
         "//button[normalize-space(.)='Next']",
+        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button',
         'div > button:nth-of-type(1)',
         'button',
         'div > :nth-child(1)',
@@ -118,6 +118,7 @@ test(testTitle, testDetails, async ({ page }) => {
       element: [
         "//button[normalize-space(.)='Submit']",
         'div > button:nth-of-type(2)',
+        'html > body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)',
         'button',
         'div > :nth-child(2)',
       ],
