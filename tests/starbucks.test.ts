@@ -51,10 +51,10 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Asserting that the featured menu page has fun, summer season vibes as indicated by the content.
+  // Checking if the featured menu page conveys a fun, summer season vibe through specific phrases.
   await page.visuallyAssert({
     assertionToTestFor:
-      "The featured menu page has fun, summer season vibes, as indicated by phrases like 'See you on the patio' and 'Summer-Berry is back'.",
+      "Assert that the featured menu page has fun, summer season vibes, as indicated by phrases like 'See you on the patio' and 'Summer-Berry is back'.",
   });
   // Navigating to the store locator page to find a store in Stowe, Vermont.
   await page.clickElement({
@@ -106,9 +106,9 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Asserting the address of the Stowe, Vermont store and the proximity of Mt. Mansfield on the map.
+  // Verifying that the address of the Starbucks store in Stowe, Vermont is correct and that Mt. Mansfield is shown close by on the map.
   await page.visuallyAssert({
     assertionToTestFor:
-      "The address of the Starbucks store in Stowe, Vermont is '109 Main Street' and the map shows Mt. Mansfield close by.",
+      "Assert that the address of the Starbucks store in Stowe, Vermont is '109 Main Street' and the map shows Mt. Mansfield close by.",
   });
 });
