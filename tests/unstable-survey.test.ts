@@ -91,11 +91,15 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
+  // Scrolling down to access the 'Next' button to proceed with the survey.
+  await page.scroll({
+    direction: 'DOWN',
+  });
   // Selecting an interest to continue with the survey.
   await page.clickElement({
     selector: {
       element: [
-        '#\\:rk\\:-form-item',
+        '#\\:r1d\\:-form-item',
         'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
         "[data-state='unchecked']",
         "button[data-state='unchecked']",
@@ -106,11 +110,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Scrolling down to access the 'Next' button to proceed with the survey.
-  await page.scroll({
-    direction: 'DOWN',
-  });
-  // Proceeding to the next section of the survey by clicking the 'Next' button.
+  // Proceeding to the next section of the survey by clicking 'Next'.
   await page.clickElement({
     selector: {
       element: [
@@ -155,7 +155,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting the age group from the dropdown.
+  // Selecting the age group to continue the survey.
   await page.clickElement({
     selector: {
       element: [
@@ -192,22 +192,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting 'Social Media' to answer how the user heard about the survey.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#\\:r1d\\:-form-item',
-        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
-        "[data-state='unchecked']",
-        "button[data-state='unchecked']",
-        'div > button:nth-of-type(1)',
-        'button',
-        'div > :nth-child(1)',
-      ],
-      frame: null,
-    },
-  });
-  // Proceeding to the next section of the survey by clicking the 'Next' button.
+  // Proceeding to the next section of the survey by clicking 'Next'.
   await page.clickElement({
     selector: {
       element: [
@@ -233,7 +218,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Verifying that the survey was submitted successfully as indicated by the thank you message.
+  // Verifying that the survey was submitted successfully.
   await page.visuallyAssert({
     assertionToTestFor:
       'Assert that the webpage displays a message indicating that the survey was submitted successfully.',
