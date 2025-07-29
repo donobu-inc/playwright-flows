@@ -28,8 +28,8 @@ test(title, details, async ({ page }) => {
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:rf\\:-form-item',
-        "[placeholder='Enter\\ your\\ name']",
+        '#\\:r0\\:-form-item',
+        "[placeholder='Enter\\ your\\ full\\ name']",
         'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
         'div > input:nth-of-type(1)',
         'input',
@@ -38,7 +38,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Entering a randomized email address to proceed with the survey.
+  // Re-attempting to enter a randomized email address since the previous attempt failed.
   await page.inputRandomizedEmailAddress({
     baseEmail: 'example@example.com',
     finalizeWithSubmit: false,
@@ -54,7 +54,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting the occupation to proceed with the survey.
+  // Proceeding to select the occupation to continue the survey.
   await page.clickElement({
     selector: {
       element: [
@@ -72,7 +72,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting the occupation 'Student' to proceed with the survey.
+  // Selecting 'Student' as the occupation to proceed with the survey.
   await page.clickElement({
     selector: {
       element: [
@@ -106,7 +106,7 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Scrolling down to access the 'Next' button to proceed with the survey.
+  // Scrolling down to access the 'Next' button.
   await page.scroll({
     direction: 'DOWN',
   });
@@ -123,14 +123,14 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Re-entering the full name as it is required.
+  // Re-entering the full name as it is required for submission.
   await page.inputText({
     text: 'John Doe',
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:r18\\:-form-item',
-        "[placeholder='Enter\\ your\\ full\\ name']",
+        '#\\:rf\\:-form-item',
+        "[placeholder='Enter\\ your\\ name']",
         'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
         'div > input:nth-of-type(1)',
         'input',
@@ -145,64 +145,12 @@ test(title, details, async ({ page }) => {
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:r19\\:-form-item',
-        "[placeholder='Enter\\ your\\ email\\ address']",
+        '#\\:rg\\:-form-item',
+        "[placeholder='Enter\\ your\\ contact\\ email']",
         'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
         'div > input:nth-of-type(1)',
         'input',
         'div > :nth-child(2)',
-      ],
-      frame: null,
-    },
-  });
-  // Selecting the age group from the dropdown.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#\\:r1a\\:-form-item',
-        "//button[normalize-space(.)='Select your age group']",
-        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
-        "[data-state='closed']",
-        "button[data-state='closed']",
-        "[data-placeholder='']",
-        "button[data-placeholder='']",
-        'div > button:nth-of-type(1)',
-        'button',
-        'div > :nth-child(2)',
-      ],
-      frame: null,
-    },
-  });
-  // Selecting the age group '18-24' to continue the survey.
-  await page.clickElement({
-    selector: {
-      element: [
-        "//div[normalize-space(.)='18-24']",
-        'html > body > div:nth-of-type(2) > div > div > div:nth-of-type(1)',
-        "[data-highlighted='']",
-        "div[data-highlighted='']",
-        "div[data-state='unchecked']",
-        "[data-radix-collection-item='']",
-        "div[data-radix-collection-item='']",
-        "[data-state='unchecked']",
-        'div > div:nth-of-type(1)',
-        'div > :nth-child(1)',
-        'div',
-      ],
-      frame: null,
-    },
-  });
-  // Selecting 'Social Media' to answer how the user heard about the survey.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#\\:r1d\\:-form-item',
-        'html > body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
-        "[data-state='unchecked']",
-        "button[data-state='unchecked']",
-        'div > button:nth-of-type(1)',
-        'button',
-        'div > :nth-child(1)',
       ],
       frame: null,
     },
