@@ -17,23 +17,60 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Install Donobu dependencies
         run: npm install && npx playwright install --with-deps
 
       - name: Run Playwright tests
         id: run_tests
         continue-on-error: true
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
+          GOOGLE_GENERATIVE_AI_MODEL_NAME: gemini-2.5-flash
           SELF_HEAL_TESTS_ENABLED: true
-        run: npx playwright test --reporter=json | npm exec playwright-json-to-markdown >> $GITHUB_STEP_SUMMARY
 
+        run: npx playwright test
+
+      - name: Upload Raw Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: test-results/
+          retention-days: 3
+
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: html-report
+          path: playwright-report/
+          retention-days: 3
+
+      - name: Report test results
+        if: always()
+        run: npm exec playwright-json-to-markdown < "test-results/playwright-report.json" >> $GITHUB_STEP_SUMMARY
+
+      - name: Post to Slack
+        if: always()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            WORKFLOW_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+            SLACK_PAYLOAD=$(npm exec playwright-json-to-slack-json -- --report-url "$WORKFLOW_URL" < "test-results/playwright-report.json")
+            curl --header 'Content-type: application/json' --data "$SLACK_PAYLOAD" "$SLACK_WEBHOOK_URL"
+          else
+            echo "SLACK_WEBHOOK_URL secret not present, skipping Slack notification."
+          fi
+
+      # Create a self-healing PR only when this workflow was not triggered by a pull-request.
       - name: Automatically create a pull request for fixing failed tests (if any)
+        if: ${{ github.event_name != 'pull_request' }}
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Fix failing Playwright tests"
           title: "[Fixed] Playwright tests"
           body: "Fix failing Playwright tests"
-          branch: fix-playwright-tests
-          base: main
+          branch: fix-playwright-tests-for-${{ github.ref_name }}
+          base: ${{ github.ref_name }}
