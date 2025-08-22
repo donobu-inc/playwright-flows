@@ -16,8 +16,8 @@
   },
   "homepage": "https://github.com/donobu-inc/playwright-flows#readme",
   "devDependencies": {
-        "@playwright/test": "1.53.2",
-        "donobu": "^2.37.1",
-        "playwright": "1.53.2"
+    "@playwright/test": "1.53.2",
+    "donobu": "^2.37.3",
+    "playwright": "1.53.2"
   }
 }
