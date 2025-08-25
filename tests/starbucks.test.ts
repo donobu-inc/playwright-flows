@@ -2,71 +2,97 @@
  * Note that this test uses tools that require the usage of an LLM, so be
  * sure to have an appropriate LLM API key available. This can be done
  * by providing an environment variable (e.g. OPENAI_API_KEY, ANTHROPIC_API_KEY,
- * or GOOGLE_GENERATIVE_AI_API_KEY) or by configuring a flow runner using
- * the Donobu app.
+ * or GOOGLE_GENERATIVE_AI_API_KEY) when running the test...
+ *
+ *    Example: `OPENAI_API_KEY=YOUR_KEY npx playwright test`
+ *
+ * ...or by configuring a flow runner using the Donobu app.
  */
 import { test } from 'donobu';
 
 const title = 'Test for https://www.starbucks.com/menu';
 const details = {
-  annotation: {
-    type: 'objective',
-    description: `Assert that the featured menu page has fun, summer season vibes.
+  annotation: [
+    {
+      type: 'objective',
+      description: `Assert that the featured menu page has fun, summer season vibes.
   
   Then find a store in the town of Stowe, Vermont. Assert that the address is "109 Main Street".
   Also ensure that the map shows Mt. Mansfield close by.`,
-  },
+    },
+  ],
 };
 test(title, details, async ({ page }) => {
   // Initializing web navigation.
   await page.goto('https://www.starbucks.com/menu');
-  // Accepting the cookie consent to proceed with browsing the website.
-  await page.clickElement({
-    selector: {
-      element: [
-        "//button[normalize-space(.)='Agree']",
-        'div > button:nth-of-type(2)',
-        'html > body > div:nth-of-type(1) > div > div > div:nth-of-type(3) > button:nth-of-type(2)',
-        '#truste-consent-button',
-        '.truste-button2',
-        'button.truste-button2',
-        'button',
-        'div > :nth-child(2)',
-      ],
-      frame: null,
-    },
-  });
   // Navigating to the featured menu page to check for summer season vibes.
   await page.clickElement({
     selector: {
       element: [
-        "//a[normalize-space(.)='Featured']",
-        'html > body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div:nth-of-type(1) > nav > ul > li:nth-of-type(2) > a',
-        "[href='https\\:\\/\\/www\\.starbucks\\.com\\/menu\\/featured']",
-        "a[href='https\\:\\/\\/www\\.starbucks\\.com\\/menu\\/featured']",
-        'li > a:nth-of-type(1)',
-        'li > :nth-child(1)',
-        'a',
+        '#content > div:nth-of-type(1) > nav > ul > li:nth-of-type(2) > a',
+        ".//a[normalize-space(.)='Featured']",
+        "[href='https://www.starbucks.com/menu/featured']",
+        'li:nth-of-type(2) > a.sb-global-subnav-item',
+        'ul.sb-global-subnav-list > li:nth-of-type(2) > a',
+        "[aria-label='Menu'] > ul > li:nth-of-type(2) > a",
+        'body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div:nth-of-type(1) > nav > ul > li:nth-of-type(2) > a',
+        'a.sb-global-subnav-item',
       ],
       frame: null,
     },
   });
-  // Checking if the featured menu page conveys a fun, summer season vibe through specific phrases.
+  // Scrolling down the page to check for additional phrases that indicate a fun, summer season vibe, such as 'Summer-Berry is back', as part of the visual assertion.
+  await page.scroll({
+    direction: 'DOWN',
+    selector: {
+      element: ['html'],
+      frame: null,
+    },
+  });
+  // Scrolling down the page further to check for additional phrases that indicate a fun, summer season vibe, such as 'Summer-Berry is back', as part of the visual assertion.
+  await page.scroll({
+    direction: 'DOWN',
+    selector: {
+      element: ['html'],
+      frame: null,
+    },
+  });
+  // Scrolling down the page further to check for additional phrases that indicate a fun, summer season vibe, such as 'See you on the patio' and 'Summer-Berry is back', as part of the visual assertion.
+  await page.scroll({
+    direction: 'DOWN',
+    selector: {
+      element: ['html'],
+      frame: null,
+    },
+  });
+  // Checking if the featured menu page conveys a fun, summer season vibe through specific phrases, as per the Playwright test's visual assertion.
   await page.visuallyAssert({
     assertionToTestFor:
       "Assert that the featured menu page has fun, summer season vibes, as indicated by phrases like 'See you on the patio' and 'Summer-Berry is back'.",
+  });
+  // Scrolling up the page to find the 'Find a store' link, which is typically located in the header or a prominent navigation area, to proceed with navigating to the store locator page.
+  await page.scroll({
+    direction: 'UP',
+    selector: {
+      element: ['html'],
+      frame: null,
+    },
   });
   // Navigating to the store locator page to find a store in Stowe, Vermont.
   await page.clickElement({
     selector: {
       element: [
-        'span > :nth-child(2)',
-        'span > a:nth-of-type(1)',
-        'html > body > div:nth-of-type(2) > header > nav > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span > a',
-        "//a[normalize-space(.)='Find a store']",
-        "[href='https\\:\\/\\/www\\.starbucks\\.com\\/store-locator']",
-        "a[href='https\\:\\/\\/www\\.starbucks\\.com\\/store-locator']",
-        'a',
+        "(.//a[normalize-space(.)='Find a store'])[1]",
+        "span:nth-of-type(1) > [href='/store-locator']",
+        'span:nth-of-type(1) > a.sb-textLink',
+        'span.self-stretch > a',
+        'div.ml6 > span:nth-of-type(1) > a',
+        'div.sb-globalNav__wrapper > div:nth-of-type(2) > div > span:nth-of-type(1) > a',
+        "[aria-label='Global'] > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span:nth-of-type(1) > a",
+        'body > div:nth-of-type(2) > header > nav > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span:nth-of-type(1) > a',
+        "[href='/store-locator']",
+        ".//a[normalize-space(.)='Find a store']",
+        'a.sb-textLink',
       ],
       frame: null,
     },
@@ -77,14 +103,16 @@ test(title, details, async ({ page }) => {
     finalizeWithSubmit: false,
     selector: {
       element: [
-        "[aria-label='Enter\\ a\\ location\\ to\\ search\\ for\\ Starbucks\\ stores']",
-        "[placeholder='Find\\ a\\ store']",
-        'form > :nth-child(1)',
-        'form > input:nth-of-type(1)',
-        'html > body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div > div:nth-of-type(2) > div > div > form > input',
+        "[aria-label='Enter a location to search for Starbucks stores']",
+        "[name='place']",
+        "[placeholder='Find a store']",
         "[data-e2e='searchTermInput']",
-        "input[data-e2e='searchTermInput']",
-        'input',
+        'input.text-sm',
+        "[role='search'] > input",
+        'div.locatorControls___xuVoV > div > div > form > input',
+        '#content > div > div:nth-of-type(2) > div > div > form > input',
+        'div.flex-auto > main > div > div:nth-of-type(2) > div > div > form > input',
+        'body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div > div:nth-of-type(2) > div > div > form > input',
       ],
       frame: null,
     },
@@ -93,20 +121,19 @@ test(title, details, async ({ page }) => {
   await page.clickElement({
     selector: {
       element: [
-        "[aria-label='Submit\\ search\\ term']",
-        'html > body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div > div:nth-of-type(2) > div > div > form > div > button',
-        '.button___s0b6x',
+        "[aria-label='Submit search term']",
         "[data-e2e='submitSearchTermButton']",
-        "button[data-e2e='submitSearchTermButton']",
         'button.button___s0b6x',
-        'div > button:nth-of-type(1)',
-        'button',
-        'div > :nth-child(1)',
+        "[role='search'] > div > button",
+        'div.buttonContainer___SHtOm > button',
+        'div.locatorControls___xuVoV > div > div > form > div > button',
+        '#content > div > div:nth-of-type(2) > div > div > form > div > button',
+        'body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div > div:nth-of-type(2) > div > div > form > div > button',
       ],
       frame: null,
     },
   });
-  // Verifying that the address of the Starbucks store in Stowe, Vermont is correct and that Mt. Mansfield is shown close by on the map.
+  // Verifying that the address of the Starbucks store in Stowe, Vermont is correct and that Mt. Mansfield is shown close by on the map, as per the Playwright test's visual assertion.
   await page.visuallyAssert({
     assertionToTestFor:
       "Assert that the address of the Starbucks store in Stowe, Vermont is '109 Main Street' and the map shows Mt. Mansfield close by.",
