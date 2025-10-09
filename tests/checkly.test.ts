@@ -94,6 +94,19 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
+  // Clicking the first search result, 'Playwright Check Suite', to navigate to the relevant documentation page.
+  await page.clickElement({
+    selector: {
+      element: [
+        '#headlessui-dialog-_r_4_ > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div',
+        'div:nth-of-type(1) > div.cursor-pointer',
+        "[role='listbox'] > div:nth-of-type(1) > div",
+        'body > div:nth-of-type(3) > div > div > div > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(1) > div',
+        'div.cursor-pointer',
+      ],
+      frame: null,
+    },
+  });
   // Navigating back to the search results page to re-evaluate the search results.
   await page.goBack();
   // Re-opening the search modal to find the correct search result.
@@ -116,7 +129,7 @@ test(title, details, async ({ page }) => {
   await page.clickElement({
     selector: {
       element: [
-        '#headlessui-dialog-_r_3n_ > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > div',
+        '#headlessui-dialog-_r_2g_ > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > div',
         'div.cursor-pointer',
         "[role='option'] > div",
         "[role='listbox'] > div:nth-of-type(2) > div",
@@ -125,10 +138,9 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Asserting that the current URL is
-  // '/docs/constructs/playwright-check/' as this is the correct URL for the 'Playwright Check Suites' documentation.
+  // Asserting that the current URL is '/docs/constructs/playwright-check/' as this is the correct URL for the 'Playwright Check Suites' documentation.
   await page.visuallyAssert({
     assertionToTestFor:
-      "Assert that the current URL is \n'/docs/constructs/playwright-check/'",
+      "Assert that the current URL is '/docs/constructs/playwright-check/'",
   });
 });
