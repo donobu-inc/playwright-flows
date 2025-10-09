@@ -28,11 +28,11 @@ test(title, details, async ({ page }) => {
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:rf\\:-form-item',
+        '#\\:r0\\:-form-item',
         '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
-        ".//label[normalize-space()='Your Name *']/following-sibling::input",
+        ".//label[normalize-space()='Full Name *']/following-sibling::input",
         "[name='name']",
-        "[placeholder='Enter your name']",
+        "[placeholder='Enter your full name']",
         'div:nth-of-type(1) > input.flex',
         'form.space-y-6 > div:nth-of-type(1) > input',
         'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
@@ -49,11 +49,11 @@ test(title, details, async ({ page }) => {
     finalizeWithSubmit: false,
     selector: {
       element: [
-        '#\\:rg\\:-form-item',
+        '#\\:r1\\:-form-item',
         '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
-        ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+        ".//label[normalize-space()='Email Address *']/following-sibling::input",
         "[name='email']",
-        "[placeholder='Enter your contact email']",
+        "[placeholder='Enter your email address']",
         'div:nth-of-type(2) > input.flex',
         'form.space-y-6 > div:nth-of-type(2) > input',
         'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
@@ -68,9 +68,9 @@ test(title, details, async ({ page }) => {
   await page.clickElement({
     selector: {
       element: [
-        '#\\:rh\\:-form-item',
+        '#\\:r2\\:-form-item',
         '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
-        ".//button[normalize-space(.)='Select your occupation']",
+        ".//button[normalize-space(.)='Select your age group']",
         "[role='combobox']",
         "[data-state='closed']",
         "[data-placeholder='']",
@@ -83,14 +83,15 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting 'Student' from the occupation dropdown to continue the survey, as there is no 'age group' dropdown.
+  // Selecting '18-24' from the age group dropdown to continue the survey.
   await page.clickElement({
     selector: {
       element: [
-        '#radix-\\:ri\\: > div > div:nth-of-type(1)',
-        ".//div[normalize-space(.)='Student']",
+        '#radix-\\:r3\\: > div > div:nth-of-type(1)',
+        ".//div[normalize-space(.)='18-24']",
         "[data-highlighted='']",
         "[role='presentation'] > div:nth-of-type(1)",
+        'html > body > div:nth-of-type(2) > div > div > div:nth-of-type(1)',
         'body > div:nth-of-type(2) > div > div > div:nth-of-type(1)',
         "[role='option']",
         "[data-radix-collection-item='']",
@@ -100,11 +101,11 @@ test(title, details, async ({ page }) => {
       frame: null,
     },
   });
-  // Selecting the 'Technology' checkbox under 'What interests you?' to proceed with the survey, as there is no 'how the respondent heard about the survey' checkbox.
+  // Selecting the 'Social Media' checkbox for 'How did you hear about us?' to proceed with the survey.
   await page.clickElement({
     selector: {
       element: [
-        '#\\:rk\\:-form-item',
+        '#\\:r5\\:-form-item',
         "div:nth-of-type(1) > [role='checkbox']",
         "div:nth-of-type(1) > [data-state='unchecked']",
         'div:nth-of-type(1) > button.peer',
@@ -123,120 +124,7 @@ test(title, details, async ({ page }) => {
   await page.scroll({
     direction: 'DOWN',
     selector: {
-      element: [],
-      frame: null,
-    },
-  });
-  // Proceeding to the next section of the survey by clicking the 'Next' button.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button',
-        ".//button[normalize-space(.)='Next']",
-        'button.inline-flex',
-        'div.mt-8 > button',
-        'form.space-y-6 > div:nth-of-type(6) > button',
-        'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(6) > button',
-        'div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button',
-        'body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button',
-      ],
-      frame: null,
-    },
-  });
-  // Re-entering the full name to proceed with the survey after a validation error.
-  await page.inputText({
-    text: 'John Doe',
-    finalizeWithSubmit: false,
-    selector: {
-      element: [
-        '#\\:r18\\:-form-item',
-        '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
-        ".//label[normalize-space()='Full Name *']/following-sibling::input",
-        "[name='name']",
-        "[placeholder='Enter your full name']",
-        'div:nth-of-type(1) > input.flex',
-        'form.space-y-6 > div:nth-of-type(1) > input',
-        'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
-        'div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
-        'body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input',
-        'input.flex',
-      ],
-      frame: null,
-    },
-  });
-  // Re-entering a valid randomized email address after a validation error.
-  await page.inputRandomizedEmailAddress({
-    baseEmail: 'example@example.com',
-    finalizeWithSubmit: false,
-    selector: {
-      element: [
-        '#\\:r19\\:-form-item',
-        '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
-        ".//label[normalize-space()='Email Address *']/following-sibling::input",
-        "[name='email']",
-        "[placeholder='Enter your email address']",
-        'div:nth-of-type(2) > input.flex',
-        'form.space-y-6 > div:nth-of-type(2) > input',
-        'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
-        'div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
-        'body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input',
-        'input.flex',
-      ],
-      frame: null,
-    },
-  });
-  // Clicking on the age group dropdown to select an option after a validation error.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#\\:r1a\\:-form-item',
-        '#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
-        ".//button[normalize-space(.)='Select your age group']",
-        "[role='combobox']",
-        "[data-state='closed']",
-        "[data-placeholder='']",
-        'button.flex',
-        'form.space-y-6 > div:nth-of-type(3) > button',
-        'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
-        'div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
-        'body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > button',
-      ],
-      frame: null,
-    },
-  });
-  // Selecting the '18-24' age group to continue the survey.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#radix-\\:r1b\\: > div > div:nth-of-type(1)',
-        ".//div[normalize-space(.)='18-24']",
-        "[data-highlighted='']",
-        "[role='presentation'] > div:nth-of-type(1)",
-        'body > div:nth-of-type(2) > div > div > div:nth-of-type(1)',
-        "[role='option']",
-        "[data-radix-collection-item='']",
-        "[data-state='unchecked']",
-        'div.relative',
-      ],
-      frame: null,
-    },
-  });
-  // Selecting the 'Social Media' checkbox for 'How did you hear about us?' to proceed with the survey.
-  await page.clickElement({
-    selector: {
-      element: [
-        '#\\:r1d\\:-form-item',
-        "div:nth-of-type(1) > [role='checkbox']",
-        "div:nth-of-type(1) > [data-state='unchecked']",
-        'div:nth-of-type(1) > button.peer',
-        'form.space-y-6 > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
-        'div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
-        'div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
-        'body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button',
-        "[role='checkbox']",
-        "[data-state='unchecked']",
-        'button.peer',
-      ],
+      element: ['html'],
       frame: null,
     },
   });
@@ -266,6 +154,7 @@ test(title, details, async ({ page }) => {
         'div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)',
         'div.max-w-2xl > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)',
         'div.min-h-screen > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)',
+        'html > body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)',
         'body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)',
         'button.inline-flex',
       ],
