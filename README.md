@@ -1,14 +1,8 @@
 # Supercharged Playwright Scripts using Donobu
 
-This repository houses Typescript-based Playwright flows that were generated using [Donobu](https://donobu.com).
-Donobu extends the standard Playwright test fixture to include capabilities like:
-
-- Adding prioritized failover for when standard one-shot selectors fail when clicking, inputting text, etc.
-- Performing selector-less visual/semantic assertions on a page.
-- Creating a browser cookie report for a page (`page.createCookieReport()`).
-- Running an accessibility test for a page (`page.runAccessibilityTest()`).
-
-The flows are housed in the [/tests](/tests) directory and can be run as Playwright tests.
+This repository houses Typescript-based Playwright tests the using [Donobu](https://donobu.com) SDK.
+The Donobu SDK automates website interactions and replays them quickly by caching the steps taken
+by the AI web agent.
 
 ## Setup
 

@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
   schedule:
-    - cron: "0 12 * * *" # Runs daily at 12:00 UTC
+    - cron: '0 12 * * *' # Runs daily at 12:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -27,7 +27,6 @@ jobs:
           GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
           GOOGLE_GENERATIVE_AI_MODEL_NAME: gemini-2.5-flash
           SELF_HEAL_TESTS_ENABLED: true
-
         run: npx playwright test
 
       - name: Upload Raw Results
@@ -69,8 +68,8 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Fix failing Playwright tests"
-          title: "[Fixed] Playwright tests"
-          body: "Fix failing Playwright tests"
+          commit-message: 'Fix failing Playwright tests'
+          title: '[Fixed] Playwright tests'
+          body: 'Fix failing Playwright tests'
           branch: fix-playwright-tests-for-${{ github.ref_name }}
           base: ${{ github.ref_name }}
