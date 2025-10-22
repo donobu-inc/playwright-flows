@@ -7,7 +7,7 @@ export default defineConfig({
       name: 'Donobu Tests',
       testMatch: 'tests/*.test.ts',
       use: { ...devices['Desktop Chromium'] },
-      timeout: 120000,
+      timeout: 240000,
     },
   ],
   use: {

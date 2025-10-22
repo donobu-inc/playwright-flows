@@ -24,8 +24,8 @@ jobs:
         id: run_tests
         continue-on-error: true
         env:
-          GOOGLE_GENERATIVE_AI_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
-          GOOGLE_GENERATIVE_AI_MODEL_NAME: gemini-2.5-flash
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL_NAME: claude-haiku-4-5
           SELF_HEAL_TESTS_ENABLED: true
         run: npx playwright test
 
