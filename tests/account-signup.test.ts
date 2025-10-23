@@ -1,7 +1,7 @@
 import { expect, test } from 'donobu';
 import { z } from 'zod/v4';
 
-test('Account signup for Everbutton', {}, async ({ page }) => {
+test('Account signup for Everbutton', async ({ page }) => {
   await page.goto('https://stage.everbutton.com');
   const newCredentials = await page.ai(
     `Create an account on this website.

@@ -1,6 +1,6 @@
 import { test } from 'donobu';
 
-test('Test for https://www.starbucks.com', {}, async ({ page }) => {
+test('Test for https://www.starbucks.com', async ({ page }) => {
   await page.goto('https://www.starbucks.com');
   await page.ai('Go to the featured menu page');
   await page.visuallyAssert({

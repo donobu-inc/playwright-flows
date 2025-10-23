@@ -1,6 +1,6 @@
 import { expect, test } from 'donobu';
 
-test('Checkly dev docs search', {}, async ({ page }) => {
+test('Checkly dev docs search', async ({ page }) => {
   await page.goto('https://checklyhq.com');
   await page.ai(
     `Click into to the developer docs page via the Resources dropdown menu`
