@@ -298,142 +298,6 @@
       ]
     },
     {
-      "pageUrl": "https://www.starbucks.com/",
-      "instruction": "Go to the featured menu page",
-      "schema": null,
-      "allowedTools": [],
-      "maxToolCalls": 25,
-      "toolCallCache": [
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking on the MENU link to navigate to the featured menu page, which is the overall objective.",
-            "selector": {
-              "element": [
-                "(.//a[normalize-space(.)='Menu'])[1]",
-                "div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > [href='/menu']",
-                "li:nth-of-type(1) > a.sb-globalNav__desktopLink",
-                "div.sb-globalNav__wrapper > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
-                "[aria-label='Global'] > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
-                "body > div:nth-of-type(2) > header > nav > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > a",
-                "[href='/menu']",
-                ".//a[normalize-space(.)='Menu']",
-                "a.sb-globalNav__desktopLink"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking on the Featured link to navigate to the featured menu page, which is the overall objective.",
-            "selector": {
-              "element": [
-                "#content > div:nth-of-type(1) > nav > ul > li:nth-of-type(2) > a",
-                ".//a[normalize-space(.)='Featured']",
-                "[href='https://www.starbucks.com/menu/featured']",
-                "li:nth-of-type(2) > a.sb-global-subnav-item",
-                "ul.sb-global-subnav-list > li:nth-of-type(2) > a",
-                "[aria-label='Menu'] > ul > li:nth-of-type(2) > a",
-                "body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div:nth-of-type(1) > nav > ul > li:nth-of-type(2) > a",
-                "a.sb-global-subnav-item"
-              ]
-            }
-          }
-        },
-        {
-          "name": "markObjectiveComplete",
-          "parameters": {
-            "rationale": "Successfully navigated to the featured menu page at https://www.starbucks.com/menu/featured/, which displays the featured menu items with the heading \"Fall favorites meet new arrivals with a protein boost\" and showcases protein-boosted beverages.",
-            "details": "The featured menu page has been successfully accessed. The page displays featured menu items including protein beverages with the tagline \"Protein just dropped\" and information about protein-boosted drink options."
-          }
-        }
-      ]
-    },
-    {
-      "pageUrl": "https://www.starbucks.com/menu/featured/",
-      "instruction": "Find a Starbucks store in Stowe, Vermont",
-      "schema": null,
-      "allowedTools": [],
-      "maxToolCalls": 25,
-      "toolCallCache": [
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking on the \"Find a store\" link to access the store locator feature so I can search for a Starbucks store in Stowe, Vermont",
-            "selector": {
-              "element": [
-                "(.//a[normalize-space(.)='Find a store'])[1]",
-                "span:nth-of-type(1) > [href='/store-locator']",
-                "span:nth-of-type(1) > a.sb-textLink",
-                "span.self-stretch > a",
-                "div.ml6 > span:nth-of-type(1) > a",
-                "div.sb-globalNav__wrapper > div:nth-of-type(2) > div > span:nth-of-type(1) > a",
-                "[aria-label='Global'] > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span:nth-of-type(1) > a",
-                "body > div:nth-of-type(2) > header > nav > div:nth-of-type(1) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > span:nth-of-type(1) > a",
-                "[href='/store-locator']",
-                ".//a[normalize-space(.)='Find a store']",
-                "a.sb-textLink"
-              ]
-            }
-          }
-        },
-        {
-          "name": "inputText",
-          "parameters": {
-            "rationale": "Entering \"Stowe, Vermont\" in the search field to find Starbucks stores in that location",
-            "text": "Stowe, Vermont",
-            "selector": {
-              "element": [
-                "[aria-label='Enter a location to search for Starbucks stores']",
-                "[name='place']",
-                "[placeholder='Find a store']",
-                "[data-e2e='searchTermInput']",
-                "input.text-sm",
-                "[role='search'] > input",
-                "div.locatorControls___xuVoV > div > div > form > input",
-                "#content > div > div:nth-of-type(2) > div > div > form > input",
-                "div.flex-auto > main > div > div:nth-of-type(2) > div > div > form > input",
-                "body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div > div:nth-of-type(2) > div > div > form > input"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking the submit search button to search for Starbucks stores in Stowe, Vermont",
-            "selector": {
-              "element": [
-                "[aria-label='Submit search term']",
-                "[data-e2e='submitSearchTermButton']",
-                "button.button___s0b6x",
-                "[role='search'] > div > button",
-                "div.buttonContainer___SHtOm > button",
-                "div.locatorControls___xuVoV > div > div > form > div > button",
-                "#content > div > div:nth-of-type(2) > div > div > form > div > button",
-                "body > div:nth-of-type(2) > div > div:nth-of-type(3) > main > div > div:nth-of-type(2) > div > div > form > div > button"
-              ]
-            }
-          }
-        },
-        {
-          "name": "makeComment",
-          "parameters": {
-            "rationale": "Documenting the search results to confirm that a Starbucks store has been found in Stowe, Vermont",
-            "comment": "Successfully found a Starbucks store in Stowe, Vermont! The search results show \"Stowe, 109 Main Street\" located at 109 Main St, Stowe, which is 0.1 miles away and is open until 6:30 PM. This is the first result in the store locator and appears to be the closest Starbucks to the search location."
-          }
-        },
-        {
-          "name": "markObjectiveComplete",
-          "parameters": {
-            "rationale": "Successfully finding a Starbucks store in Stowe, Vermont by using the store locator feature",
-            "details": "Found a Starbucks store located at \"Stowe, 109 Main Street\" (109 Main St, Stowe, Vermont). The store is 0.1 miles away from the search location and is open until 6:30 PM. This is the closest Starbucks store to Stowe, Vermont and is available for in-store pickup orders."
-          }
-        }
-      ]
-    },
-    {
       "pageUrl": "https://news.ycombinator.com/",
       "instruction": "Scroll to the bottom of the page and do a search for \"mac app for web testing\"",
       "schema": null,
@@ -684,6 +548,130 @@
       ]
     },
     {
+      "pageUrl": "https://www.starbucks.com/",
+      "instruction": "Go to the featured menu page",
+      "schema": null,
+      "allowedTools": [],
+      "maxToolCalls": 25,
+      "toolCallCache": [
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Dismissing the cookie consent dialog by clicking the \"Agree\" button so I can proceed to navigate to the featured menu page",
+            "selector": {
+              "element": [
+                "#truste-consent-button",
+                ".//button[normalize-space(.)='Agree']",
+                "button.truste-button2"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking on the MENU link in the navigation bar to navigate to the featured menu page",
+            "selector": {
+              "element": [
+                "(.//a[normalize-space(.)='Menu'])[1]",
+                "div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > [href='/menu']",
+                "li:nth-of-type(1) > a.sb-globalNav__desktopLink"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking on the \"Featured\" link in the menu navigation to navigate to the featured menu page",
+            "selector": {
+              "element": [
+                ".//a[normalize-space(.)='Featured']",
+                "[href='https://www.starbucks.com/menu/featured']",
+                "li:nth-of-type(2) > a.sb-global-subnav-item"
+              ]
+            }
+          }
+        },
+        {
+          "name": "markObjectiveComplete",
+          "parameters": {
+            "rationale": "Successfully navigated to the featured menu page at https://www.starbucks.com/menu/featured/ which displays the featured menu content with the heading \"Fall favorites meet new arrivals with a protein boost\"",
+            "details": "The featured menu page has been successfully accessed. The page displays featured items including protein beverages with the tagline \"Fall favorites meet new arrivals with a protein boost\" and shows various drink options with protein content information."
+          }
+        }
+      ]
+    },
+    {
+      "pageUrl": "https://www.starbucks.com/menu/featured/",
+      "instruction": "Find a Starbucks store in Stowe, Vermont",
+      "schema": null,
+      "allowedTools": [],
+      "maxToolCalls": 25,
+      "toolCallCache": [
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking on the \"Find a store\" link to access the store locator feature so I can search for a Starbucks store in Stowe, Vermont",
+            "selector": {
+              "element": [
+                "(.//a[normalize-space(.)='Find a store'])[1]",
+                "span:nth-of-type(1) > [href='/store-locator']",
+                "span:nth-of-type(1) > a.sb-textLink"
+              ]
+            }
+          }
+        },
+        {
+          "name": "inputText",
+          "parameters": {
+            "rationale": "Entering \"Stowe, Vermont\" in the search field to find Starbucks stores in that location",
+            "text": "Stowe, Vermont",
+            "selector": {
+              "element": [
+                "[aria-label='Enter a location to search for Starbucks stores']",
+                "[name='place']",
+                "[placeholder='Find a store']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking the submit search button to search for Starbucks stores in Stowe, Vermont",
+            "selector": {
+              "element": [
+                "[aria-label='Submit search term']",
+                "[data-e2e='submitSearchTermButton']",
+                "button.button___s0b6x"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking on the Stowe, 109 Main Street store marker on the map to view its details and confirm it is a Starbucks location in Stowe, Vermont",
+            "selector": {
+              "element": [
+                "[aria-label='Stowe, 109 Main Street']",
+                "[title='Stowe, 109 Main Street']",
+                "div.gm-style > div:nth-of-type(1) > div:nth-of-type(2) > div > div:nth-of-type(3) > div > gmp-advanced-marker:nth-of-type(1)"
+              ]
+            }
+          }
+        },
+        {
+          "name": "markObjectiveComplete",
+          "parameters": {
+            "rationale": "I have successfully found a Starbucks store in Stowe, Vermont. The search results clearly show \"Stowe, 109 Main Street\" located at 109 Main St, Stowe, which is 0.1 miles away and open until 7:00 PM. This is the primary Starbucks location in Stowe, Vermont.",
+            "details": "Found Starbucks store: Stowe, 109 Main Street, located at 109 Main St, Stowe, Vermont. The store is 0.1 miles away from the search location and is open until 7:00 PM. This store offers in-store service and has an \"Order Here\" option available."
+          }
+        }
+      ]
+    },
+    {
       "pageUrl": "https://unstable-survey-dinoer.replit.app/",
       "instruction": "Fill out the all of the survey questions with fake data go through\nthe submission process until you get to a \"Thank You\" page.",
       "schema": {
@@ -721,22 +709,13 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling out the first survey question with a fake last name to complete the survey form",
-            "text": "Smith",
+            "rationale": "Filling out the first survey question with a fake name to progress through the survey form.",
+            "text": "John Smith",
             "selector": {
               "element": [
-                "#\\:r0\\:-form-item",
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "[data-testid='input-lastname']",
-                ".//label[normalize-space()='Last Name *']/following-sibling::input",
-                "[name='name']",
-                "[placeholder='Enter your last name']",
-                "div:nth-of-type(1) > input.flex",
-                "form.space-y-6 > div:nth-of-type(1) > input",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "input.flex"
+                "#\\:rj\\:-form-item",
+                ".//label[normalize-space()='Your Name *']/following-sibling::input",
+                "[name='name']"
               ]
             }
           }
@@ -744,21 +723,13 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling out the email address field with fake data to complete the survey form",
+            "rationale": "Filling out the contact email field with fake data to progress through the survey form.",
             "text": "john.smith@example.com",
             "selector": {
               "element": [
-                "#\\:r1\\:-form-item",
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                ".//label[normalize-space()='Email Address *']/following-sibling::input",
-                "[name='email']",
-                "[placeholder='Enter your email address']",
-                "div:nth-of-type(2) > input.flex",
-                "form.space-y-6 > div:nth-of-type(2) > input",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                "input.flex"
+                "#\\:rk\\:-form-item",
+                ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+                "[name='email']"
               ]
             }
           }
@@ -766,25 +737,38 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Selecting an age group option to complete the survey form",
+            "rationale": "Opening the occupation dropdown to select a fake occupation value for the survey.",
             "selector": {
               "element": [
-                "#\\:r3\\:-form-item",
-                "#\\:r2\\:-form-item > div:nth-of-type(1) > button",
-                "[data-testid='radio-age-18-24']",
-                "div:nth-of-type(1) > [role='radio']",
-                "div:nth-of-type(1) > [data-radix-collection-item='']",
-                "div:nth-of-type(3) > div > div:nth-of-type(1) > [data-state='unchecked']",
-                "div:nth-of-type(1) > button.aspect-square",
-                "div.space-y-3 > div > div:nth-of-type(1) > button",
-                "form.space-y-6 > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "[role='radio']",
-                "[data-radix-collection-item='']",
-                "button.aspect-square",
-                "[data-state='unchecked']"
+                "#\\:rl\\:-form-item",
+                ".//button[normalize-space(.)='Select your occupation']",
+                "[role='combobox']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Selecting \"Employed\" from the occupation dropdown to fill out the survey with fake data.",
+            "selector": {
+              "element": [
+                "#radix-\\:rm\\: > div > div:nth-of-type(2)",
+                ".//div[normalize-space(.)='Employed']",
+                "[role='presentation'] > div:nth-of-type(2)"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Checking the Technology checkbox to select an interest option for the survey.",
+            "selector": {
+              "element": [
+                "#\\:ro\\:-form-item",
+                "div:nth-of-type(1) > [role='checkbox']",
+                "div:nth-of-type(1) > [data-state='unchecked']"
               ]
             }
           }
@@ -792,7 +776,7 @@
         {
           "name": "scrollPage",
           "parameters": {
-            "rationale": "Scrolling down to see if there are more survey questions below the current view that need to be filled out",
+            "rationale": "Scrolling down to see more survey questions and options that need to be filled out.",
             "direction": "DOWN",
             "selector": {
               "element": [
@@ -804,20 +788,12 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Selecting the Social Media checkbox to complete the \"How did you hear about us?\" question with fake data",
+            "rationale": "Checking the Science checkbox to select additional interests for the survey.",
             "selector": {
               "element": [
-                "#\\:re\\:-form-item",
-                "div:nth-of-type(1) > [role='checkbox']",
-                "div:nth-of-type(1) > [data-state='unchecked']",
-                "div:nth-of-type(1) > button.peer",
-                "form.space-y-6 > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "[role='checkbox']",
-                "button.peer",
-                "[data-state='unchecked']"
+                "#\\:rp\\:-form-item",
+                "div:nth-of-type(2) > [role='checkbox']",
+                "div:nth-of-type(2) > [data-state='unchecked']"
               ]
             }
           }
@@ -825,20 +801,13 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling in the Additional Comments field with fake data to complete the survey form",
-            "text": "This is a great survey! I really enjoyed participating in it.",
+            "rationale": "Filling out the suggestions field with fake data to complete the survey form.",
+            "text": "This is a great survey. I would like to see more questions about technology trends in the future.",
             "selector": {
               "element": [
-                "#\\:ri\\:-form-item",
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea",
-                ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
-                "[name='comments']",
-                "[placeholder='Share any additional thoughts or comments']",
-                "textarea.flex",
-                "form.space-y-6 > div:nth-of-type(5) > textarea",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea"
+                "#\\:rs\\:-form-item",
+                ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
+                "[name='comments']"
               ]
             }
           }
@@ -846,17 +815,12 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Clicking the Next button to proceed to the next page of the survey after filling out all the required fields on the current page",
+            "rationale": "Clicking the Next button to proceed to the next page of the survey after filling out all the required fields on the first page.",
             "selector": {
               "element": [
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button",
                 ".//button[normalize-space(.)='Next']",
                 "button.inline-flex",
-                "div.mt-8 > button",
-                "form.space-y-6 > div:nth-of-type(6) > button",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(6) > button",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button"
+                "div.mt-8 > button"
               ]
             }
           }
@@ -864,18 +828,12 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Clicking the Submit button to proceed to the Thank You page after reviewing all the survey selections",
+            "rationale": "Clicking the Submit button to proceed with the survey submission and move to the Thank You page.",
             "selector": {
               "element": [
-                "#root > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
                 ".//button[normalize-space(.)='Submit']",
                 "div.mt-8 > button:nth-of-type(2)",
-                "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)",
-                "div.max-w-2xl > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "div.min-h-screen > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "html > body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "button.inline-flex"
+                "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)"
               ]
             }
           }
@@ -883,8 +841,8 @@
         {
           "name": "markObjectiveComplete",
           "parameters": {
-            "rationale": "Successfully completed the survey by filling out all required fields with fake data (Last Name: Smith, Email: john.smith@example.com, Age Group: 18-24, Source: Social Media, Comments: This is a great survey! I really enjoyed participating in it.) and proceeding through the submission process to reach the Thank You page which confirms the survey was submitted successfully",
-            "details": "The survey has been completed and submitted successfully. The page now displays \"Thank You!\" with the message \"Your survey has been submitted successfully.\" The URL has changed to https://unstable-survey-dinoer.replit.app/thank-you, confirming that the submission process was completed and the Thank You page was reached as required by the objective."
+            "rationale": "The survey has been successfully completed and submitted. The page now displays a \"Thank You!\" message with the text \"Your survey has been submitted successfully.\" This confirms that all survey questions were filled out with fake data and the submission process was completed successfully, reaching the Thank You page as required by the objective.",
+            "details": "Successfully filled out all survey questions with fake data (Name: John Smith, Email: john.smith@example.com, Occupation: Employed, Interests: Technology and Science, Comments: feedback about the survey) and completed the submission process. The Thank You page was reached, confirming successful survey submission."
           }
         }
       ]
