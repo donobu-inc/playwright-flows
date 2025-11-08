@@ -4,7 +4,7 @@ test('Test for https://www.starbucks.com', async ({ page }) => {
   await page.goto('https://www.starbucks.com');
   await page.ai('Go to the featured menu page');
   await page.visuallyAssert({
-    assertionToTestFor: 'Assert that the featured menu page has a fall vibe.',
+    assertionToTestFor: `Assert that the featured menu page has a seasonally appropriate vibe for ${new Date()}`,
   });
   await page.ai('Find a Starbucks store in Stowe, Vermont');
   await page.visuallyAssert({
