@@ -721,22 +721,13 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling out the first survey question with a fake last name to complete the survey form",
-            "text": "Smith",
+            "rationale": "Filling out the first survey question with a fake name to progress through the survey form.",
+            "text": "John Smith",
             "selector": {
               "element": [
-                "#\\:r0\\:-form-item",
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "[data-testid='input-lastname']",
-                ".//label[normalize-space()='Last Name *']/following-sibling::input",
-                "[name='name']",
-                "[placeholder='Enter your last name']",
-                "div:nth-of-type(1) > input.flex",
-                "form.space-y-6 > div:nth-of-type(1) > input",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(1) > input",
-                "input.flex"
+                "#\\:rj\\:-form-item",
+                ".//label[normalize-space()='Your Name *']/following-sibling::input",
+                "[name='name']"
               ]
             }
           }
@@ -744,21 +735,13 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling out the email address field with fake data to complete the survey form",
+            "rationale": "Filling out the contact email field with a fake email address to progress through the survey form.",
             "text": "john.smith@example.com",
             "selector": {
               "element": [
-                "#\\:r1\\:-form-item",
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                ".//label[normalize-space()='Email Address *']/following-sibling::input",
-                "[name='email']",
-                "[placeholder='Enter your email address']",
-                "div:nth-of-type(2) > input.flex",
-                "form.space-y-6 > div:nth-of-type(2) > input",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(2) > input",
-                "input.flex"
+                "#\\:rk\\:-form-item",
+                ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+                "[name='email']"
               ]
             }
           }
@@ -766,25 +749,64 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Selecting an age group option to complete the survey form",
+            "rationale": "Opening the occupation dropdown to select a fake occupation value for the survey.",
             "selector": {
               "element": [
-                "#\\:r3\\:-form-item",
-                "#\\:r2\\:-form-item > div:nth-of-type(1) > button",
-                "[data-testid='radio-age-18-24']",
-                "div:nth-of-type(1) > [role='radio']",
-                "div:nth-of-type(1) > [data-radix-collection-item='']",
-                "div:nth-of-type(3) > div > div:nth-of-type(1) > [data-state='unchecked']",
-                "div:nth-of-type(1) > button.aspect-square",
-                "div.space-y-3 > div > div:nth-of-type(1) > button",
-                "form.space-y-6 > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(3) > div > div:nth-of-type(1) > button",
-                "[role='radio']",
-                "[data-radix-collection-item='']",
-                "button.aspect-square",
-                "[data-state='unchecked']"
+                "#\\:rl\\:-form-item",
+                ".//button[normalize-space(.)='Select your occupation']",
+                "[role='combobox']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Checking the Technology interest checkbox to select an interest option for the survey.",
+            "selector": {
+              "element": [
+                "#\\:ro\\:-form-item",
+                "div:nth-of-type(1) > [role='checkbox']",
+                "div:nth-of-type(2) > div:nth-of-type(1) > [data-state='unchecked']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking on the occupation dropdown button to open the list of occupation options so I can select one for the survey.",
+            "selector": {
+              "element": [
+                "#\\:rl\\:-form-item",
+                ".//button[normalize-space(.)='Select your occupation']",
+                "[role='combobox']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Selecting \"Employed\" from the occupation dropdown to fill in the occupation field with fake data for the survey.",
+            "selector": {
+              "element": [
+                "#radix-\\:rm\\: > div > div:nth-of-type(2)",
+                ".//div[normalize-space(.)='Employed']",
+                "[role='presentation'] > div:nth-of-type(2)"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Checking the Technology checkbox to select an interest option for the survey.",
+            "selector": {
+              "element": [
+                "#\\:ro\\:-form-item",
+                "div:nth-of-type(1) > [role='checkbox']",
+                "div:nth-of-type(1) > [data-state='unchecked']"
               ]
             }
           }
@@ -792,7 +814,7 @@
         {
           "name": "scrollPage",
           "parameters": {
-            "rationale": "Scrolling down to see if there are more survey questions below the current view that need to be filled out",
+            "rationale": "Scrolling down to see more survey questions and options that need to be filled out.",
             "direction": "DOWN",
             "selector": {
               "element": [
@@ -802,43 +824,15 @@
           }
         },
         {
-          "name": "click",
-          "parameters": {
-            "rationale": "Selecting the Social Media checkbox to complete the \"How did you hear about us?\" question with fake data",
-            "selector": {
-              "element": [
-                "#\\:re\\:-form-item",
-                "div:nth-of-type(1) > [role='checkbox']",
-                "div:nth-of-type(1) > [data-state='unchecked']",
-                "div:nth-of-type(1) > button.peer",
-                "form.space-y-6 > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(1) > button",
-                "[role='checkbox']",
-                "button.peer",
-                "[data-state='unchecked']"
-              ]
-            }
-          }
-        },
-        {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling in the Additional Comments field with fake data to complete the survey form",
-            "text": "This is a great survey! I really enjoyed participating in it.",
+            "rationale": "Filling in the optional suggestions field with fake data to complete all survey questions before proceeding to the next step.",
+            "text": "Great survey! Would love to see more questions about technology trends and innovation in the future.",
             "selector": {
               "element": [
-                "#\\:ri\\:-form-item",
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea",
-                ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
-                "[name='comments']",
-                "[placeholder='Share any additional thoughts or comments']",
-                "textarea.flex",
-                "form.space-y-6 > div:nth-of-type(5) > textarea",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(5) > textarea"
+                "#\\:rs\\:-form-item",
+                ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
+                "[name='comments']"
               ]
             }
           }
@@ -846,17 +840,12 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Clicking the Next button to proceed to the next page of the survey after filling out all the required fields on the current page",
+            "rationale": "Clicking the Next button to proceed to the next step of the survey after filling out all the questions on this page.",
             "selector": {
               "element": [
-                "#root > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button",
                 ".//button[normalize-space(.)='Next']",
                 "button.inline-flex",
-                "div.mt-8 > button",
-                "form.space-y-6 > div:nth-of-type(6) > button",
-                "div.max-w-2xl > div:nth-of-type(3) > form > div:nth-of-type(6) > button",
-                "div.min-h-screen > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button",
-                "body > div > div > div > div:nth-of-type(3) > form > div:nth-of-type(6) > button"
+                "div.mt-8 > button"
               ]
             }
           }
@@ -864,18 +853,12 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Clicking the Submit button to proceed to the Thank You page after reviewing all the survey selections",
+            "rationale": "Clicking the Submit button to proceed to the final step of the survey and reach the Thank You page as required by the objective.",
             "selector": {
               "element": [
-                "#root > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
                 ".//button[normalize-space(.)='Submit']",
                 "div.mt-8 > button:nth-of-type(2)",
-                "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)",
-                "div.max-w-2xl > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "div.min-h-screen > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "html > body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "body > div > div > div > div:nth-of-type(2) > div:nth-of-type(2) > button:nth-of-type(2)",
-                "button.inline-flex"
+                "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)"
               ]
             }
           }
@@ -883,8 +866,8 @@
         {
           "name": "markObjectiveComplete",
           "parameters": {
-            "rationale": "Successfully completed the survey by filling out all required fields with fake data (Last Name: Smith, Email: john.smith@example.com, Age Group: 18-24, Source: Social Media, Comments: This is a great survey! I really enjoyed participating in it.) and proceeding through the submission process to reach the Thank You page which confirms the survey was submitted successfully",
-            "details": "The survey has been completed and submitted successfully. The page now displays \"Thank You!\" with the message \"Your survey has been submitted successfully.\" The URL has changed to https://unstable-survey-dinoer.replit.app/thank-you, confirming that the submission process was completed and the Thank You page was reached as required by the objective."
+            "rationale": "The survey has been successfully completed and submitted. The page now displays \"Thank You!\" with the message \"Your survey has been submitted successfully.\" This confirms that all survey questions were filled out with fake data and the submission process was completed successfully, reaching the Thank You page as required by the objective.",
+            "details": "Successfully filled out all survey questions with fake data:\n- Name: John Smith\n- Email: john.smith@example.com\n- Occupation: Employed\n- Interests: Technology\n- Comments: Great survey! Would love to see more questions about technology trends and innovation in the future.\n\nThe survey was submitted and the Thank You page was reached at https://unstable-survey-dinoer.replit.app/thank-you"
           }
         }
       ]
