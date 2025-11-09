@@ -3,7 +3,7 @@ import { z } from 'zod/v4';
 
 test('Account signup for Everbutton', async ({ page }) => {
   await page.goto('https://stage.everbutton.com');
-  const newCredentials = await page.ai(
+  const newCredentials = await page.ai.act(
     `Create an account on this website.
 Use a random email variation of myemail@example.com
 Make up reasonable data including passwords to fill all the forms.`,
