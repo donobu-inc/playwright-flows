@@ -871,6 +871,48 @@
           }
         }
       ]
+    },
+    {
+      "pageUrl": "https://www.checklyhq.com/",
+      "instruction": "Click on the Resources dropdown menu, then click into to the developer docs option",
+      "schema": null,
+      "allowedTools": [],
+      "maxToolCalls": 25,
+      "toolCallCache": [
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking the 'Resources' dropdown to access the developer docs option.",
+            "selector": {
+              "element": [
+                "#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)",
+                "(.//button[normalize-space(.)='Resources'])[1]",
+                "nav.container > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking the 'Documentation' link to access the developer docs.",
+            "selector": {
+              "element": [
+                ".//a[normalize-space(.)='Documentation']",
+                "li:nth-of-type(1) > [href='/docs/']",
+                "div:nth-of-type(1) > ul > li:nth-of-type(1) > a.text-base"
+              ]
+            }
+          }
+        },
+        {
+          "name": "markObjectiveComplete",
+          "parameters": {
+            "rationale": "Successfully navigated to the Checkly developer documentation page completing the task.",
+            "details": "Accessed the Checkly Documentation page by selecting the 'Documentation' link under the 'Resources' menu."
+          }
+        }
+      ]
     }
   ]
 }
