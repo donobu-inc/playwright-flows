@@ -24,6 +24,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL_NAME: claude-haiku-4-5
+          SELF_HEAL_TESTS_ENABLED: true
+
         run: npx donobu test tests/basic --auto-heal
 
       - name: Upload Raw Results
