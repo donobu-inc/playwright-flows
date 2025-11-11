@@ -763,13 +763,13 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling out the first survey question with a fake last name to complete the survey form",
-            "text": "Smith",
+            "rationale": "Filling out the first survey question with a fake name to progress through the survey form.",
+            "text": "John Smith",
             "selector": {
               "element": [
-                "#\\:r0\\:-form-item",
-                "[data-testid='input-lastname']",
-                ".//label[normalize-space()='Last Name *']/following-sibling::input"
+                "#\\:rj\\:-form-item",
+                ".//label[normalize-space()='Your Name *']/following-sibling::input",
+                "[name='name']"
               ]
             }
           }
@@ -777,12 +777,12 @@
         {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling out the email address field with a fake email to complete the survey form",
+            "rationale": "Filling out the contact email field with a fake email address to complete the survey questions.",
             "text": "john.smith@example.com",
             "selector": {
               "element": [
-                "#\\:r1\\:-form-item",
-                ".//label[normalize-space()='Email Address *']/following-sibling::input",
+                "#\\:rk\\:-form-item",
+                ".//label[normalize-space()='Contact Email *']/following-sibling::input",
                 "[name='email']"
               ]
             }
@@ -791,12 +791,38 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Selecting an age group option to complete the survey form",
+            "rationale": "Opening the occupation dropdown to select a fake occupation for the survey.",
             "selector": {
               "element": [
-                "#\\:r3\\:-form-item",
-                "[data-testid='radio-age-18-24']",
-                "div:nth-of-type(1) > [role='radio']"
+                "#\\:rl\\:-form-item",
+                ".//button[normalize-space(.)='Select your occupation']",
+                "[role='combobox']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Selecting \"Employed\" from the occupation dropdown to complete the occupation field with fake data.",
+            "selector": {
+              "element": [
+                "#radix-\\:rm\\: > div > div:nth-of-type(2)",
+                ".//div[normalize-space(.)='Employed']",
+                "[role='presentation'] > div:nth-of-type(2)"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Checking the Technology checkbox to select an interest option for the survey.",
+            "selector": {
+              "element": [
+                "#\\:ro\\:-form-item",
+                "div:nth-of-type(1) > [role='checkbox']",
+                "div:nth-of-type(1) > [data-state='unchecked']"
               ]
             }
           }
@@ -804,7 +830,7 @@
         {
           "name": "scrollPage",
           "parameters": {
-            "rationale": "Scrolling down to see if there are more survey questions or a button to proceed to the next step",
+            "rationale": "Scrolling down to see more survey questions and options that need to be filled out.",
             "direction": "DOWN",
             "selector": {
               "element": [
@@ -814,27 +840,14 @@
           }
         },
         {
-          "name": "click",
-          "parameters": {
-            "rationale": "Selecting the Social Media checkbox to complete the \"How did you hear about us?\" question with fake data",
-            "selector": {
-              "element": [
-                "#\\:re\\:-form-item",
-                "div:nth-of-type(1) > [role='checkbox']",
-                "div:nth-of-type(1) > [data-state='unchecked']"
-              ]
-            }
-          }
-        },
-        {
           "name": "inputText",
           "parameters": {
-            "rationale": "Filling in the Additional Comments field with fake data to complete the survey form",
-            "text": "This is a great survey! I really enjoyed participating in it.",
+            "rationale": "Filling in the optional suggestions field with fake data to complete all survey questions before submission.",
+            "text": "Great survey! I would suggest adding more questions about personal preferences and hobbies.",
             "selector": {
               "element": [
-                "#\\:ri\\:-form-item",
-                ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
+                "#\\:rs\\:-form-item",
+                ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
                 "[name='comments']"
               ]
             }
@@ -843,7 +856,7 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Clicking the Next button to proceed to the next page of the survey after filling out all the required fields",
+            "rationale": "Clicking the Next button to proceed to the next step of the survey after completing all questions on this page.",
             "selector": {
               "element": [
                 ".//button[normalize-space(.)='Next']",
@@ -856,7 +869,7 @@
         {
           "name": "click",
           "parameters": {
-            "rationale": "Clicking the Submit button to proceed to the Thank You page after reviewing the survey selections",
+            "rationale": "Clicking the Submit button to proceed with submitting the survey and moving toward the Thank You page as required by the objective.",
             "selector": {
               "element": [
                 ".//button[normalize-space(.)='Submit']",
@@ -869,8 +882,8 @@
         {
           "name": "markObjectiveComplete",
           "parameters": {
-            "rationale": "Successfully completed the survey by filling out all required fields with fake data (Last Name: Smith, Email: john.smith@example.com, Age Group: 18-24, Source: Social Media, Comments: This is a great survey! I really enjoyed participating in it.), proceeding through the selection review page, and submitting the form. The page now displays the \"Thank You!\" message with \"Your survey has been submitted successfully.\" confirming the objective has been accomplished.",
-            "details": "Survey completed successfully. The form was filled with fake data across all fields, submitted through the selection review page, and the Thank You page was reached confirming successful submission."
+            "rationale": "The survey has been successfully completed and submitted. The page now displays \"Thank You!\" with the message \"Your survey has been submitted successfully.\" The progress indicator shows all three steps (Survey, Selection, Thank You) are complete, and we have reached the Thank You page as required by the objective.",
+            "details": "Successfully filled out all survey questions with fake data (Name: John Smith, Email: john.smith@example.com, Occupation: Employed, Interests: Technology, Comments: Great survey! I would suggest adding more questions about personal preferences and hobbies), reviewed the selections, submitted the survey, and reached the Thank You page confirming successful submission."
           }
         }
       ]
