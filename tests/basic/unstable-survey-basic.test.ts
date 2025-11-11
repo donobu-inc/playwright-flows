@@ -14,41 +14,72 @@ the submission process until you get to a "Thank You" page.
 test(title, details, async ({ page }) => {
   // Initializing web navigation.
   await page.goto('https://unstable-survey-dinoer.replit.app');
-  // Filling in the Last Name field with fake data to complete the survey.
+  // Filling in the Your Name field with fake data to complete the survey.
   await page
-    .find("[data-testid='input-lastname']", {
+    .find('#root', { failover: ['html > body > div', 'body > div'] })
+    .inputText('John Smith');
+  // Clicking on the Your Name input field to focus it and clear the placeholder text before entering the name.
+  await page
+    .find('#\\:rj\\:-form-item', {
       failover: [
-        ".//label[normalize-space()='Last Name *']/following-sibling::input",
+        ".//label[normalize-space()='Your Name *']/following-sibling::input",
+        "[name='name']",
       ],
     })
-    .inputText('Smith');
-  // Filling in the Email Address field with fake data to complete the survey.
+    .click();
+  // Filling in the Your Name field with fake data to complete the survey.
   await page
-    .find(
-      ".//label[normalize-space()='Email Address *']/following-sibling::input",
-      { failover: ["[name='email']"] },
-    )
+    .find('#\\:rj\\:-form-item', {
+      failover: [
+        ".//label[normalize-space()='Your Name *']/following-sibling::input",
+        "[name='name']",
+      ],
+    })
+    .inputText('John Smith');
+  // Filling in the Contact Email field with fake data to complete the survey.
+  await page
+    .find('#\\:rk\\:-form-item', {
+      failover: [
+        ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+        "[name='email']",
+      ],
+    })
     .inputText('john.smith@example.com');
-  // Selecting an age group option to complete the survey questions.
+  // Clicking on the Occupation dropdown to open it and select an occupation option.
   await page
-    .find("[data-testid='radio-age-18-24']", {
-      failover: ["div:nth-of-type(1) > [role='radio']"],
+    .find('#\\:rl\\:-form-item', {
+      failover: [
+        ".//button[normalize-space(.)='Select your occupation']",
+        "[role='combobox']",
+      ],
     })
     .click();
-  // Scrolling down to see if there are more survey questions below the current view that need to be filled out.
-  await page.find('html').scroll('DOWN');
-  // Selecting the "Social Media" checkbox for the "How did you hear about us?" question to complete the survey with fake data.
+  // Selecting the Employed occupation option to complete the survey questions.
   await page
-    .find("div:nth-of-type(1) > [role='checkbox']", {
-      failover: ["div:nth-of-type(1) > [data-state='unchecked']"],
+    .find('#radix-\\:rm\\: > div > div:nth-of-type(2)', {
+      failover: [
+        ".//div[normalize-space(.)='Employed']",
+        "[role='presentation'] > div:nth-of-type(2)",
+      ],
     })
     .click();
-  // Filling in the Additional Comments field with fake data to complete the survey.
+  // Selecting the Technology checkbox for the "What interests you?" question to complete the survey with fake data.
   await page
-    .find(
-      ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
-      { failover: ["[name='comments']"] },
-    )
+    .find('#\\:ro\\:-form-item', {
+      failover: [
+        "div:nth-of-type(1) > [role='checkbox']",
+        "div:nth-of-type(1) > [data-state='unchecked']",
+      ],
+    })
+    .click();
+  // Filling in the Suggestions (Optional) field with fake data to complete the survey.
+  await page
+    .find('#\\:rs\\:-form-item', {
+      failover: [
+        ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
+        "[name='comments']",
+      ],
+    })
     .inputText('This is a great survey! I enjoyed answering these questions.');
   // Clicking the Next button to proceed to the next step of the survey submission process.
   await page
@@ -65,4 +96,8 @@ test(title, details, async ({ page }) => {
       ],
     })
     .click();
+  // Verifying that the Thank You page has been reached successfully after completing the survey submission process.
+  await page.run('assertPageText', {
+    text: 'Thank You!',
+  });
 });
