@@ -5,7 +5,7 @@ export default defineConfig({
   projects: [
     {
       name: 'Donobu Tests',
-      testMatch: 'tests/*.test.ts',
+      testMatch: '**/*.test.ts',
       use: { ...devices['Desktop Chromium'] },
       timeout: 240000,
     },
