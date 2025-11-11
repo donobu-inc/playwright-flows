@@ -684,195 +684,6 @@
       ]
     },
     {
-      "pageUrl": "https://unstable-survey-dinoer.replit.app/",
-      "instruction": "Fill out the all of the survey questions with fake data go through\nthe submission process until you get to a \"Thank You\" page.",
-      "schema": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-          "surveyData": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "question": {
-                  "type": "string"
-                },
-                "response": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "question",
-                "response"
-              ],
-              "additionalProperties": false
-            }
-          }
-        },
-        "required": [
-          "surveyData"
-        ],
-        "additionalProperties": false
-      },
-      "allowedTools": [],
-      "maxToolCalls": 25,
-      "toolCallCache": [
-        {
-          "name": "inputText",
-          "parameters": {
-            "rationale": "Filling out the first survey question with a fake name to progress through the survey form.",
-            "text": "John Smith",
-            "selector": {
-              "element": [
-                "#\\:rj\\:-form-item",
-                ".//label[normalize-space()='Your Name *']/following-sibling::input",
-                "[name='name']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "inputText",
-          "parameters": {
-            "rationale": "Filling out the contact email field with a fake email address to progress through the survey form.",
-            "text": "john.smith@example.com",
-            "selector": {
-              "element": [
-                "#\\:rk\\:-form-item",
-                ".//label[normalize-space()='Contact Email *']/following-sibling::input",
-                "[name='email']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Opening the occupation dropdown to select a fake occupation value for the survey.",
-            "selector": {
-              "element": [
-                "#\\:rl\\:-form-item",
-                ".//button[normalize-space(.)='Select your occupation']",
-                "[role='combobox']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Checking the Technology interest checkbox to select an interest option for the survey.",
-            "selector": {
-              "element": [
-                "#\\:ro\\:-form-item",
-                "div:nth-of-type(1) > [role='checkbox']",
-                "div:nth-of-type(2) > div:nth-of-type(1) > [data-state='unchecked']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking on the occupation dropdown button to open the list of occupation options so I can select one for the survey.",
-            "selector": {
-              "element": [
-                "#\\:rl\\:-form-item",
-                ".//button[normalize-space(.)='Select your occupation']",
-                "[role='combobox']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Selecting \"Employed\" from the occupation dropdown to fill in the occupation field with fake data for the survey.",
-            "selector": {
-              "element": [
-                "#radix-\\:rm\\: > div > div:nth-of-type(2)",
-                ".//div[normalize-space(.)='Employed']",
-                "[role='presentation'] > div:nth-of-type(2)"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Checking the Technology checkbox to select an interest option for the survey.",
-            "selector": {
-              "element": [
-                "#\\:ro\\:-form-item",
-                "div:nth-of-type(1) > [role='checkbox']",
-                "div:nth-of-type(1) > [data-state='unchecked']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "scrollPage",
-          "parameters": {
-            "rationale": "Scrolling down to see more survey questions and options that need to be filled out.",
-            "direction": "DOWN",
-            "selector": {
-              "element": [
-                "html"
-              ]
-            }
-          }
-        },
-        {
-          "name": "inputText",
-          "parameters": {
-            "rationale": "Filling in the optional suggestions field with fake data to complete all survey questions before proceeding to the next step.",
-            "text": "Great survey! Would love to see more questions about technology trends and innovation in the future.",
-            "selector": {
-              "element": [
-                "#\\:rs\\:-form-item",
-                ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
-                "[name='comments']"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking the Next button to proceed to the next step of the survey after filling out all the questions on this page.",
-            "selector": {
-              "element": [
-                ".//button[normalize-space(.)='Next']",
-                "button.inline-flex",
-                "div.mt-8 > button"
-              ]
-            }
-          }
-        },
-        {
-          "name": "click",
-          "parameters": {
-            "rationale": "Clicking the Submit button to proceed to the final step of the survey and reach the Thank You page as required by the objective.",
-            "selector": {
-              "element": [
-                ".//button[normalize-space(.)='Submit']",
-                "div.mt-8 > button:nth-of-type(2)",
-                "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)"
-              ]
-            }
-          }
-        },
-        {
-          "name": "markObjectiveComplete",
-          "parameters": {
-            "rationale": "The survey has been successfully completed and submitted. The page now displays \"Thank You!\" with the message \"Your survey has been submitted successfully.\" This confirms that all survey questions were filled out with fake data and the submission process was completed successfully, reaching the Thank You page as required by the objective.",
-            "details": "Successfully filled out all survey questions with fake data:\n- Name: John Smith\n- Email: john.smith@example.com\n- Occupation: Employed\n- Interests: Technology\n- Comments: Great survey! Would love to see more questions about technology trends and innovation in the future.\n\nThe survey was submitted and the Thank You page was reached at https://unstable-survey-dinoer.replit.app/thank-you"
-          }
-        }
-      ]
-    },
-    {
       "pageUrl": "https://www.checklyhq.com/",
       "instruction": "Click on the Resources dropdown menu, then click into to the developer docs option",
       "schema": null,
@@ -910,6 +721,156 @@
           "parameters": {
             "rationale": "Successfully navigated to the Checkly developer documentation page completing the task.",
             "details": "Accessed the Checkly Documentation page by selecting the 'Documentation' link under the 'Resources' menu."
+          }
+        }
+      ]
+    },
+    {
+      "pageUrl": "https://unstable-survey-dinoer.replit.app/",
+      "instruction": "Fill out the all of the survey questions with fake data go through\nthe submission process until you get to a \"Thank You\" page.",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "properties": {
+          "surveyData": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "question",
+                "response"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "surveyData"
+        ],
+        "additionalProperties": false
+      },
+      "allowedTools": [],
+      "maxToolCalls": 25,
+      "toolCallCache": [
+        {
+          "name": "inputText",
+          "parameters": {
+            "rationale": "Filling out the first survey question with a fake last name to complete the survey form",
+            "text": "Smith",
+            "selector": {
+              "element": [
+                "#\\:r0\\:-form-item",
+                "[data-testid='input-lastname']",
+                ".//label[normalize-space()='Last Name *']/following-sibling::input"
+              ]
+            }
+          }
+        },
+        {
+          "name": "inputText",
+          "parameters": {
+            "rationale": "Filling out the email address field with a fake email to complete the survey form",
+            "text": "john.smith@example.com",
+            "selector": {
+              "element": [
+                "#\\:r1\\:-form-item",
+                ".//label[normalize-space()='Email Address *']/following-sibling::input",
+                "[name='email']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Selecting an age group option to complete the survey form",
+            "selector": {
+              "element": [
+                "#\\:r3\\:-form-item",
+                "[data-testid='radio-age-18-24']",
+                "div:nth-of-type(1) > [role='radio']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "scrollPage",
+          "parameters": {
+            "rationale": "Scrolling down to see if there are more survey questions or a button to proceed to the next step",
+            "direction": "DOWN",
+            "selector": {
+              "element": [
+                "html"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Selecting the Social Media checkbox to complete the \"How did you hear about us?\" question with fake data",
+            "selector": {
+              "element": [
+                "#\\:re\\:-form-item",
+                "div:nth-of-type(1) > [role='checkbox']",
+                "div:nth-of-type(1) > [data-state='unchecked']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "inputText",
+          "parameters": {
+            "rationale": "Filling in the Additional Comments field with fake data to complete the survey form",
+            "text": "This is a great survey! I really enjoyed participating in it.",
+            "selector": {
+              "element": [
+                "#\\:ri\\:-form-item",
+                ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
+                "[name='comments']"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking the Next button to proceed to the next page of the survey after filling out all the required fields",
+            "selector": {
+              "element": [
+                ".//button[normalize-space(.)='Next']",
+                "button.inline-flex",
+                "div.mt-8 > button"
+              ]
+            }
+          }
+        },
+        {
+          "name": "click",
+          "parameters": {
+            "rationale": "Clicking the Submit button to proceed to the Thank You page after reviewing the survey selections",
+            "selector": {
+              "element": [
+                ".//button[normalize-space(.)='Submit']",
+                "div.mt-8 > button:nth-of-type(2)",
+                "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)"
+              ]
+            }
+          }
+        },
+        {
+          "name": "markObjectiveComplete",
+          "parameters": {
+            "rationale": "Successfully completed the survey by filling out all required fields with fake data (Last Name: Smith, Email: john.smith@example.com, Age Group: 18-24, Source: Social Media, Comments: This is a great survey! I really enjoyed participating in it.), proceeding through the selection review page, and submitting the form. The page now displays the \"Thank You!\" message with \"Your survey has been submitted successfully.\" confirming the objective has been accomplished.",
+            "details": "Survey completed successfully. The form was filled with fake data across all fields, submitted through the selection review page, and the Thank You page was reached confirming successful submission."
           }
         }
       ]
