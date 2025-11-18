@@ -24,6 +24,11 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL_NAME: claude-haiku-4-5
+          USER_NAME: ${{ secrets.USER_NAME }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+          CARD_NUMBER: ${{ secrets.CARD_NUMBER }}
+          CARD_EXPIRY: ${{ secrets.CARD_EXPIRY }}
+          CARD_CVC: ${{ secrets.CARD_CVC }}
           SELF_HEAL_TESTS_ENABLED: true
 
         run: npx donobu test tests/basic --auto-heal
