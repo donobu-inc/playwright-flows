@@ -16,11 +16,6 @@ test('Responsive(iPhone 14) UI check for donobu.com', async ({ page }) => {
             maxToolCalls: 50
         }
     );
-
-    const uiReport = uiReportResponse as {
-        status: string;
-        issues: string[];
-    };
-
-    expect(uiReport.status, uiReport.issues.join('\n')).toBe('PASS');
+    
+    expect(uiReportResponse.status, uiReportResponse.issues.join('\n')).toBe('PASS');
 });

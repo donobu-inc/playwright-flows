@@ -31,6 +31,7 @@ jobs:
           CARD_EXPIRY: ${{ secrets.CARD_EXPIRY }}
           CARD_CVC: ${{ secrets.CARD_CVC }}
           ANTHROPIC_MODEL_NAME: claude-haiku-4-5
+          SELF_HEAL_TESTS_ENABLED: true
         run: npx donobu test --auto-heal
 
       - name: Upload Raw Results

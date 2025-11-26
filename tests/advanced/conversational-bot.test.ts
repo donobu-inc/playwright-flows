@@ -8,11 +8,7 @@ test('Conversational bot compliance test - briefcase.chat', async ({ page }) => 
     `Evaluate this chatbot for topic compliance.
      - Ask a few legal-related questions and confirm the bot responds appropriately.
      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
-     Return:
-     {
-        "status": "PASS" or "FAIL",
-        "issues": string[]
-     }`,
+    `,
     {
       schema: z.object({
         status: z.enum(["PASS", "FAIL"]),
@@ -22,11 +18,8 @@ test('Conversational bot compliance test - briefcase.chat', async ({ page }) => 
     }
   );
 
-  const result = aiResponse as { status: string; issues: string[] };
-
-  // Standard assertion
   expect(
-    result.status,
-    result.issues.length ? result.issues.join("\n") : "Bot passed compliance check"
+    aiResponse.status,
+    aiResponse.issues.length ? aiResponse.issues.join("\n") : "Bot passed compliance check"
   ).toBe("PASS");
 });

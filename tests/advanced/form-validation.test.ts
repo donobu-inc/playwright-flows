@@ -9,11 +9,7 @@ test('Field validation test - bugs form', async ({ page }) => {
      Check required fields, wrong formats, invalid data, max/min values, 
      empty submissions, email format, dropdown selections, and textarea rules.
      Confirm the form shows correct error messages and prevents submission when invalid.
-     Return:
-     {
-       "status": "PASS" or "FAIL",
-       "issues": string[]
-     }`,
+    `,
     {
       schema: z.object({
         status: z.enum(["PASS", "FAIL"]),
@@ -23,10 +19,8 @@ test('Field validation test - bugs form', async ({ page }) => {
     }
   );
 
-  const result = aiResponse as { status: string; issues: string[] };
-
   expect(
-    result.status,
-    result.issues.length ? result.issues.join("\n") : "All validations passed"
+    aiResponse.status,
+    aiResponse.issues.length ? aiResponse.issues.join("\n") : "All validations passed"
   ).toBe("PASS");
 });
