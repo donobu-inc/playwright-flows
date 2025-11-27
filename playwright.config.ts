@@ -7,19 +7,22 @@ export default defineConfig({
       name: 'Donobu Tests',
       testMatch: '**/*.test.ts',
       use: { ...devices['Desktop Chromium'] },
-      metadata: {
-        SELF_HEAL_TESTS_ENABLED: true,
-      },
       testIgnore: ['**/advanced/responsive.test.ts'],
       timeout: 240000,
+
     },
     {
       name: 'Responsive Tests',
       testMatch: '**/advanced/responsive.test.ts',
       use: { ...devices['iPhone 14'] },
-      metadata: {
-        SELF_HEAL_TESTS_ENABLED: true,
-      },
+      timeout: 240000,
+    },
+    {
+      name: 'Responsive Tests',
+      testMatch: '**/basic/test-context.spec.ts',
+      use: { storageState: "login-state.json" },
+      timeout: 240000,
+    }
   ],
   use: {
     screenshot: 'only-on-failure',
