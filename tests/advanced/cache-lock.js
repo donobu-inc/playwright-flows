@@ -562,5 +562,110 @@ module.exports = {
         });
       },
     },
+    {
+      pageUrl: 'https://en.wikipedia.org/wiki/Software_testing',
+      instruction:
+        'View the page history, sort by oldest, and find the earliest (oldest) revision shown in the list (the history page displays in "time, day month year format").',
+      schema: {
+        $schema: 'https://json-schema.org/draft/2020-12/schema',
+        type: 'object',
+        properties: {
+          day: { type: 'number' },
+          month: { type: 'number' },
+          year: { type: 'number' },
+        },
+        required: ['day', 'month', 'year'],
+        additionalProperties: false,
+      },
+      allowedTools: [],
+      maxToolCalls: 50,
+      run: async ({ page }) => {
+        // Clicking on the Wikipedia logo to navigate to the main page, from where I can access the page history or navigation options to view the history of the Software testing page.
+        await page
+          .find("div:nth-of-type(1) > [href='/wiki/Main_Page']", {
+            failover: ['a.mw-logo', 'div.vector-header-start > a'],
+          })
+          .click();
+
+        // Navigating back to the Software testing page so I can access its page history to view the revisions sorted by oldest.
+        await page.goto('https://en.wikipedia.org/wiki/Software_testing');
+
+        // Clicking on the "View history" link to access the page history where I can view all revisions of the Software testing article and sort them by oldest.
+        await page
+          .find("(.//a[normalize-space(.)='View history'])[1]", {
+            failover: [
+              "[title='Past revisions of this page [alt-h]']",
+              "nav:nth-of-type(1) > div > div > ul > li:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history']",
+            ],
+          })
+          .click();
+
+        // Clicking on the "oldest" link to navigate to the oldest revisions of the Software testing page, which will allow me to find the earliest revision shown in the history list.
+        await page
+          .find("(.//a[normalize-space(.)='oldest'])[1]", {
+            failover: [
+              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&dir=prev']",
+              'div:nth-of-type(3) > a.mw-lastlink',
+            ],
+          })
+          .click();
+
+        // Analyzing the page text to identify all revision entries and their dates to find the earliest (oldest) revision shown in the history list.
+        await page.ai.analyzePageText(
+          'Extract all revision dates from the history page and identify the oldest (earliest) revision date shown in the format "time, day month year".',
+          {
+            additionalContext:
+              'The page is currently showing the Software testing article\'s revision history sorted by oldest. I need to find the earliest revision date displayed on this page in the format "time, day month year".',
+          },
+        );
+
+        // Scrolling down to see if there are more revisions below the currently visible ones, to ensure I find the absolute oldest revision in the history list.
+        await page
+          .find('body.skin--responsive', {
+            failover: ['html.client-js > body', 'body'],
+          })
+          .scroll('DOWN', { maxScroll: true });
+
+        // Clicking on the "500" link to display 500 revisions per page, which will allow me to see more historical entries and potentially find the absolute oldest revision on a single page view.
+        await page
+          .find('#mw-content-text > div:nth-of-type(3) > a:nth-of-type(6)', {
+            failover: [
+              "(.//a[normalize-space(.)='500'])[1]",
+              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=500']",
+            ],
+          })
+          .click();
+
+        // Scrolling down within the filter revisions fieldset to see if there are more revision entries below the currently visible ones, ensuring I find the absolute oldest revision in the history.
+        await page
+          .find('#mw-history-search', {
+            failover: [
+              '#mw-history-searchform > fieldset',
+              'fieldset.oo-ui-layout',
+            ],
+          })
+          .scroll('DOWN', { maxScroll: true });
+
+        // Analyzing the page text to identify all revision dates currently visible and find the oldest (earliest) revision shown in the history list after loading 500 revisions per page.
+        await page.ai.analyzePageText(
+          'Extract all revision dates from the history page and identify the oldest (earliest) revision date shown in the format "time, day month year". Look for the last entry in the list which should be the oldest.',
+          {
+            additionalContext:
+              'The page is now showing 500 revisions per page of the Software testing article\'s revision history sorted by oldest. I need to find the earliest revision date displayed on this page in the format "time, day month year".',
+          },
+        );
+
+        // Scrolling down on the main page to see if there are more revision entries below the currently visible ones, ensuring I can find the absolute oldest revision in the history list.
+        await page
+          .find('html.client-js', { failover: ['html'] })
+          .scroll('DOWN', { maxScroll: true });
+
+        // I have successfully viewed the page history of the Software testing Wikipedia article, sorted it by oldest, and identified the earliest (oldest) revision shown in the history list.
+        await page.run('markObjectiveComplete', {
+          details:
+            'The earliest (oldest) revision shown in the Software testing page history is: 13:57, 5 December 2001. This revision was made by user 166.46.99.xxx and added 226 bytes to the page.',
+        });
+      },
+    },
   ],
 };
