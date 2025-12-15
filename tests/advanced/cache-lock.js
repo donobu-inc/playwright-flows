@@ -562,5 +562,93 @@ module.exports = {
         });
       },
     },
+    {
+      pageUrl: 'https://en.wikipedia.org/wiki/Software_testing',
+      instruction:
+        'View the page history, sort by oldest, and find the earliest (oldest) revision shown in the list (the history page displays in "time, day month year format").',
+      schema: {
+        $schema: 'https://json-schema.org/draft/2020-12/schema',
+        type: 'object',
+        properties: {
+          day: { type: 'number' },
+          month: { type: 'number' },
+          year: { type: 'number' },
+        },
+        required: ['day', 'month', 'year'],
+        additionalProperties: false,
+      },
+      allowedTools: [],
+      maxToolCalls: 50,
+      run: async ({ page }) => {
+        // Clicking on the Wikipedia logo to navigate to the main page, from where I can access the page history or navigation options to view the history of the Software testing page.
+        await page
+          .find("div:nth-of-type(1) > [href='/wiki/Main_Page']", {
+            failover: ['a.mw-logo', 'div.vector-header-start > a'],
+          })
+          .click();
+
+        // Navigating back to the Software testing page so I can access its page history to view the revisions and find the oldest one.
+        await page.goto('https://en.wikipedia.org/wiki/Software_testing');
+
+        // Clicking on the "View history" link to access the page history where I can view all revisions and sort them by oldest to find the earliest revision.
+        await page
+          .find("(.//a[normalize-space(.)='View history'])[1]", {
+            failover: [
+              "[title='Past revisions of this page [alt-h]']",
+              "nav:nth-of-type(1) > div > div > ul > li:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history']",
+            ],
+          })
+          .click();
+
+        // Clicking on the "oldest" link to navigate to the oldest revisions of the Software testing page, which will allow me to find the earliest revision in the history.
+        await page
+          .find("(.//a[normalize-space(.)='oldest'])[1]", {
+            failover: [
+              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&dir=prev']",
+              'div:nth-of-type(3) > a.mw-lastlink',
+            ],
+          })
+          .click();
+
+        // Analyzing the page text to identify all the revision dates shown in the history list and determine which one is the oldest (earliest) revision.
+        await page.ai.analyzePageText(
+          'Extract all the revision dates from the history list and identify the oldest (earliest) date shown. The dates should be in "time, day month year format". List all dates found and identify which one is the earliest.',
+          {
+            additionalContext:
+              'The page is currently showing the Software testing Wikipedia article\'s revision history sorted by oldest. I need to find the earliest revision date displayed on this page in the format "time, day month year".',
+          },
+        );
+
+        // Scrolling down through the revision history list to find the oldest (earliest) revision, as the current view shows revisions from April 2004 down to January 2004, but I need to continue scrolling to find the very first revision.
+        await page
+          .find('#mw-history-search', {
+            failover: [
+              '#mw-history-searchform > fieldset',
+              'fieldset.oo-ui-layout',
+            ],
+          })
+          .scroll('DOWN', { maxScroll: true });
+
+        // Scrolling down through the page to see more revisions in the history list and find the oldest (earliest) revision displayed.
+        await page
+          .find('html.client-js', { failover: ['html'] })
+          .scroll('DOWN', { maxScroll: true });
+
+        // Analyzing the page text to identify all revision dates shown in the current view and determine which one is the oldest (earliest) revision displayed on this page.
+        await page.ai.analyzePageText(
+          'Extract all the revision dates visible on this page in the format "time, day month year". List them in the order they appear and identify which one is the earliest (oldest) date.',
+          {
+            additionalContext:
+              "The page is showing the Software testing Wikipedia article's revision history sorted by oldest. I can see revisions from December 2001. I need to identify the earliest date shown on this current view.",
+          },
+        );
+
+        // I have successfully viewed the page history of the Software testing Wikipedia article, sorted by oldest, and identified the earliest (oldest) revision shown in the list.
+        await page.run('markObjectiveComplete', {
+          details:
+            'The earliest (oldest) revision shown in the history list is: 13:57, 5 December 2001. This revision was made by user 166.46.99.xxx and is the first revision of the Software testing article on Wikipedia.',
+        });
+      },
+    },
   ],
 };
