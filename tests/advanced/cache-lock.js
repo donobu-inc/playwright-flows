@@ -300,51 +300,6 @@ module.exports = {
       },
     },
     {
-      pageUrl: 'https://en.wikipedia.org/wiki/Software_testing',
-      instruction:
-        'View the page history, sort by oldest, and find the oldest revision date (the history page displays in "time, day month year format").',
-      schema: {
-        $schema: 'https://json-schema.org/draft/2020-12/schema',
-        type: 'object',
-        properties: {
-          day: { type: 'number' },
-          month: { type: 'number' },
-          year: { type: 'number' },
-        },
-        required: ['day', 'month', 'year'],
-        additionalProperties: false,
-      },
-      allowedTools: [],
-      maxToolCalls: 50,
-      run: async ({ page }) => {
-        // I am clicking the View history tab to open the page history so I can later sort it by oldest and find the oldest revision date.
-        await page
-          .find("(.//a[normalize-space(.)='View history'])[1]", {
-            failover: [
-              "[title='Past revisions of this page [ctrl-option-h]']",
-              "nav:nth-of-type(1) > div > div > ul > li:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history']",
-            ],
-          })
-          .click();
-
-        // I am clicking the oldest link to sort the page history by oldest revisions so I can later find the oldest revision date.
-        await page
-          .find("(.//a[normalize-space(.)='oldest'])[1]", {
-            failover: [
-              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&dir=prev']",
-              'div:nth-of-type(3) > a.mw-lastlink',
-            ],
-          })
-          .click();
-
-        // I am marking the objective complete because the page history is now sorted by oldest and I have identified the oldest revision date.
-        await page.run('markObjectiveComplete', {
-          details:
-            "On the Software testing revision history page, after clicking the 'oldest' link, the earliest listed revision is dated 19:35, 13 January 2004 (time, day month year format). This is the oldest revision date shown.",
-        });
-      },
-    },
-    {
       pageUrl: 'https://news.ycombinator.com/',
       instruction:
         'Scroll to the bottom of the page, locate search input field, do a search with keyword "mac app for web testing"',
@@ -559,6 +514,84 @@ module.exports = {
         await page.run('markObjectiveComplete', {
           details:
             'Starbucks store found in Stowe, Vermont: Stowe, 109 Main Street, 109 Main St, Stowe. The locator shows it as 0.1 miles away from the searched location, currently closed, opening Tuesday at 5:00 AM, with in-store service available.',
+        });
+      },
+    },
+    {
+      pageUrl: 'https://en.wikipedia.org/wiki/Software_testing',
+      instruction:
+        'View the page history, sort by oldest, and find the earliest (oldest) revision shown in the list (the history page displays in "time, day month year format").',
+      schema: {
+        $schema: 'https://json-schema.org/draft/2020-12/schema',
+        type: 'object',
+        properties: {
+          day: { type: 'number' },
+          month: { type: 'number' },
+          year: { type: 'number' },
+        },
+        required: ['day', 'month', 'year'],
+        additionalProperties: false,
+      },
+      allowedTools: [],
+      maxToolCalls: 50,
+      run: async ({ page }) => {
+        // Clicking on the "View history" link to access the page history where I can view all revisions and sort them by oldest to find the earliest revision.
+        await page
+          .find("(.//a[normalize-space(.)='View history'])[1]", {
+            failover: [
+              "[title='Past revisions of this page [ctrl-option-h]']",
+              "nav:nth-of-type(1) > div > div > ul > li:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history']",
+            ],
+          })
+          .click();
+
+        // Clicking on the "oldest" link to navigate to the oldest revisions of the page, which will help me find the earliest revision in the history.
+        await page
+          .find("(.//a[normalize-space(.)='oldest'])[1]", {
+            failover: [
+              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&dir=prev']",
+              'div:nth-of-type(3) > a.mw-lastlink',
+            ],
+          })
+          .click();
+
+        // Scrolling down to the bottom of the page to find the earliest (oldest) revision in the history list, as the page is currently showing revisions from April 2004 down to January 2004, and I need to see if there are even older revisions below.
+        await page
+          .find('html.client-js', { failover: ['html'] })
+          .scroll('DOWN', { maxScroll: true });
+
+        // Analyzing the page text to identify the earliest (oldest) revision shown in the history list, which should be at the bottom of the currently displayed revisions.
+        await page.ai.analyzePageText(
+          'Find the oldest/earliest revision timestamp shown on this page. Look for the revision with the earliest date and time in the format "time, day month year". Return the complete timestamp of the oldest revision visible on this page.',
+          {
+            additionalContext:
+              "The page is showing the Software testing article's revision history sorted by oldest. The visible revisions range from December 2001 to April 2004. I need to find the very last (oldest) revision shown on this page.",
+          },
+        );
+
+        // Recording the earliest (oldest) revision timestamp found in the page history to complete the objective of identifying the oldest revision shown in the list.
+        await page.run('rememberPageText', {
+          name: 'OLDEST_REVISION_TIMESTAMP',
+          selector: {
+            element: [
+              '#pagehistory > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
+              '#mw-history-compare > section > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
+              '#mw-content-text > form > section > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
+              ".//a[normalize-space(.)='13:57, 5 December 2001']",
+              "li:nth-of-type(8) > bdi > bdi > [title='Software testing']",
+              "[href='/w/index.php?title=Software_testing&oldid=284880']",
+              'li:nth-of-type(8) > bdi > bdi > a.mw-changeslist-date',
+              'body > div:nth-of-type(3) > div > div:nth-of-type(3) > main > div:nth-of-type(3) > div:nth-of-type(3) > form > section > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
+              'a.mw-changeslist-date',
+              "[title='Software testing']",
+            ],
+          },
+        });
+
+        // I have successfully viewed the page history, sorted by oldest, and identified the earliest (oldest) revision shown in the list. The page is displaying revisions in reverse chronological order (oldest first) as indicated by the URL parameter "dir=prev". The earliest revision visible on this page is at the bottom of the list.
+        await page.run('markObjectiveComplete', {
+          details:
+            'The earliest (oldest) revision shown in the Software testing page history is: 13:57, 5 December 2001',
         });
       },
     },
