@@ -7,7 +7,7 @@ test('Checkly dev docs search', async ({ page }) => {
   );
   expect(page.url()).toEqual('https://www.checklyhq.com/docs/');
   await page.ai(
-    'Do a search for "Playwright check suite" and chose the match for "Constructs > DETECT".'
+    'Do a search for "Playwright check suite" , after entring every word, check the search results and chose the match for "Constructs > DETECT". DONT submit the search.'
   );
   expect(page.url()).toEqual(
     'https://www.checklyhq.com/docs/constructs/playwright-check/'

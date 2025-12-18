@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "This repository houses Typescript-based Playwright tests that were generated using Donobu.",
   "scripts": {
-    "test": "npx donobu test --auto-heal"
+    "test": "npx donobu test --auto-heal",
+    "test:headed": "npx donobu test --auto-heal --headed"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
   "homepage": "https://github.com/donobu-inc/playwright-flows#readme",
   "devDependencies": {
     "@playwright/test": "1.56.1",
-    "donobu": "3.5.3",
+    "donobu": "3.8.0",
     "playwright": "1.56.1",
     "zod": "^3.25.76"
   }
