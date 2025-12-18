@@ -13,9 +13,14 @@ test('Responsive(iPhone 14) UI check for donobu.com', async ({ page }) => {
                 status: z.enum(['PASS', 'FAIL']),
                 issues: z.array(z.string()),
             }),
-            maxToolCalls: 50
+            maxToolCalls: 50,
+            allowedTools: ['scroll',
+                'runAccessibilityTest'
+            ]
         }
     );
-    
+    await page.ai.assert(`Assert that the page is responsive and does not have any responsiveness issues 
+        eg.overlap, misalignment, broken layout, clipping, bad spacing, resizing problems, or horizontal scroll.`);
+
     expect(uiReportResponse.status, uiReportResponse.issues.join('\n')).toBe('PASS');
 });
