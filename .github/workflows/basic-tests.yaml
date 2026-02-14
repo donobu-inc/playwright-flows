@@ -22,8 +22,7 @@ jobs:
         id: run_tests
         continue-on-error: true
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ANTHROPIC_MODEL_NAME: claude-haiku-4-5
+          DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
           USER_NAME: ${{ secrets.USER_NAME }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
           CARD_NUMBER: ${{ secrets.CARD_NUMBER }}
