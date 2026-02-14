@@ -8,14 +8,14 @@ const { expect } = require('donobu');
 module.exports = {
   caches: [
     {
-      pageUrl: 'https://www.checklyhq.com/',
+      pageUrl: 'www.checklyhq.com',
       instruction:
         'Click on the Resources dropdown menu, then click into to the developer docs option',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the Resources dropdown menu to access the developer docs option as required by the overall objective.
+        // Clicking on the 'Resources' dropdown menu to reveal its options, which is the first step in finding the developer docs.
         await page
           .find(
             '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)',
@@ -28,7 +28,7 @@ module.exports = {
           )
           .click();
 
-        // Clicking on the Documentation link under the DEVELOPERS section to access the developer docs as required by the overall objective.
+        // Clicking on 'Documentation' under the Developers section to navigate to the developer docs as requested in the overall objective.
         await page
           .find(".//a[normalize-space(.)='Documentation']", {
             failover: [
@@ -38,22 +38,22 @@ module.exports = {
           })
           .click();
 
-        // The objective has been successfully completed. I clicked on the Resources dropdown menu on the Checkly homepage, which revealed the developer docs option. I then clicked on the "Documentation" link under the DEVELOPERS section, which navigated to the developer documentation page at https://www.checklyhq.com/docs/. The page now displays the Checkly Documentation with the title "Checkly Documentation" and shows various documentation sections including Getting Started, Detect, and Communicate sections.
+        // The overall objective has been achieved as I navigated from the home page's 'Resources' menu to the 'Documentation' section.
         await page.run('markObjectiveComplete', {
           details:
-            'Successfully navigated to the Checkly developer documentation by clicking on the Resources dropdown menu and then selecting the Documentation option. The current page is https://www.checklyhq.com/docs/ which displays the Checkly Documentation homepage with comprehensive developer resources.',
+            "I have successfully clicked on the 'Resources' dropdown menu and then navigated to the 'Documentation' page, which fulfills the requirement of clicking into the developer docs option.",
         });
       },
     },
     {
-      pageUrl: 'https://www.checklyhq.com/docs/',
+      pageUrl: 'www.checklyhq.com',
       instruction:
         'Do a search for "Playwright check suite" , after entring every word, check the search results and chose the match for "Constructs > DETECT". DONT submit the search.',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Opening the search bar to begin searching for "Playwright check suite" as required by the objective.
+        // I am clicking the search bar to initiate the search for "Playwright check suite" as per the objective.
         await page
           .find('#search-bar-entry', {
             failover: [
@@ -63,31 +63,31 @@ module.exports = {
           })
           .click();
 
-        // Typing the first word "Playwright" of the search query "Playwright check suite" to begin searching as required by the objective.
+        // I am typing the first word "Playwright" into the search bar to start the search process as requested.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
-          .inputText('Playwright');
+          .inputText('Playwright', { append: true });
 
-        // Continuing to type the second word "check" of the search query "Playwright check suite" to progress through the search as required by the objective.
+        // I am typing the next word " check" into the search bar to continue the search process and see how the results update.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
           .inputText(' check', { append: true });
 
-        // Typing the third and final word "suite" of the search query "Playwright check suite" to complete the search input as required by the objective.
+        // I am typing the final word " suite" to complete the search query "Playwright check suite" while monitoring the results for the specific match.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
           .inputText(' suite', { append: true });
 
-        // Clicking on the search result that matches "Constructs > DETECT" to select it as required by the objective. This is the result showing "Constructs DETECT Playwright Check..." which is the match we need.
+        // I am choosing the search result matching "Constructs > DETECT" as specified in the objective after completing the search query "Playwright check suite".
         await page
           .find(
-            '#headlessui-dialog-_r_4_ > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > div',
+            '#headlessui-dialog-_r_5_ > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > div',
             {
               failover: [
                 'div:nth-of-type(2) > div:nth-of-type(2) > div > div.cursor-pointer',
@@ -97,10 +97,10 @@ module.exports = {
           )
           .click();
 
-        // The objective has been successfully completed. I searched for "Playwright check suite" by entering each word sequentially (Playwright, then check, then suite), checked the search results after entering each word, and selected the match for "Constructs > DETECT" which was the "Playwright Check Suite" result under the DETECT section. The page has now navigated to the Playwright Check Suite documentation page at https://www.checklyhq.com/docs/constructs/playwright-check/, confirming that the correct result was selected. The search was not submitted as instructed.
+        // The overall objective has been fulfilled as I searched for the specific phrase, monitored the results incrementally, and selected the targeted match without submitting the form.
         await page.run('markObjectiveComplete', {
           details:
-            'Successfully completed the search for "Playwright check suite" and selected the "Constructs > DETECT" match. The browser is now on the Playwright Check Suite documentation page.',
+            'I have successfully searched for "Playwright check suite" by typing word by word, monitored the results, and selected the "Constructs > DETECT" match as instructed. I am now on the corresponding documentation page.',
         });
       },
     },

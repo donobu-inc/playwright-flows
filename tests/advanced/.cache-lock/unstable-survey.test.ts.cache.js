@@ -8,7 +8,7 @@ const { expect } = require('donobu');
 module.exports = {
   caches: [
     {
-      pageUrl: 'https://unstable-survey-dinoer.replit.app/',
+      pageUrl: 'unstable-survey-dinoer.replit.app',
       instruction:
         'Fill out the all of the survey questions with fake data go through\nthe submission process until you get to a "Thank You" page.',
       schema: {
@@ -34,79 +34,67 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Filling in the "Your Name" field with fake data to complete the survey form
+        // Filling in the last name field with fake data to progress through the survey.
         await page
-          .find('#\\:rj\\:-form-item', {
+          .find('#\\:r0\\:-form-item', {
             failover: [
-              ".//label[normalize-space()='Your Name *']/following-sibling::input",
-              "[name='name']",
+              "[data-testid='input-lastname']",
+              ".//label[normalize-space()='Last Name *']/following-sibling::input",
             ],
           })
-          .inputText('John Smith');
+          .inputText('Smith');
 
-        // Filling in the "Contact Email" field with fake data to complete the survey form
+        // Filling in the email address field with a randomized fake email.
         await page
-          .find('#\\:rk\\:-form-item', {
+          .find('#\\:r1\\:-form-item', {
             failover: [
-              ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+              ".//label[normalize-space()='Email Address *']/following-sibling::input",
               "[name='email']",
             ],
           })
-          .inputText('john.smith@example.com');
+          .inputRandomizedEmailAddress('fakeuser@example.com');
 
-        // Clicking on the Occupation dropdown to select an occupation option for the survey
+        // Selecting an age group as part of filling out the survey questions.
         await page
-          .find('#\\:rl\\:-form-item', {
+          .find('#\\:r5\\:-form-item', {
             failover: [
-              ".//button[normalize-space(.)='Select your occupation']",
-              "[role='combobox']",
+              "[data-testid='radio-age-25-34']",
+              "div:nth-of-type(2) > [role='radio']",
             ],
           })
           .click();
 
-        // Selecting "Employed" from the occupation dropdown to complete the occupation field in the survey
-        await page
-          .find('#radix-\\:rm\\: > div > div:nth-of-type(2)', {
-            failover: [
-              ".//div[normalize-space(.)='Employed']",
-              "[role='presentation'] > div:nth-of-type(2)",
-            ],
-          })
-          .click();
-
-        // Clicking on the Technology checkbox to select it as an interest for the survey
-        await page
-          .find('#\\:ro\\:-form-item', {
-            failover: [
-              "div:nth-of-type(1) > [role='checkbox']",
-              "div:nth-of-type(1) > [data-state='unchecked']",
-            ],
-          })
-          .click();
-
-        // Scrolling down to see more survey questions that need to be filled out
+        // Scrolling down to reveal more survey questions and the next button.
         await page.find('html').scroll('DOWN');
 
-        // Filling in the Suggestions (Optional) field with fake data to complete the survey form
+        // Selecting 'Social Media' for the question 'How did you hear about us?' to continue with the survey.
         await page
-          .find('#\\:rs\\:-form-item', {
+          .find('#\\:re\\:-form-item', {
             failover: [
-              ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
+              "div:nth-of-type(1) > [role='checkbox']",
+              "div:nth-of-type(2) > div:nth-of-type(1) > [data-state='unchecked']",
+            ],
+          })
+          .click();
+
+        // Adding a fake comment to the optional additional comments field.
+        await page
+          .find('#\\:ri\\:-form-item', {
+            failover: [
+              ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
               "[name='comments']",
             ],
           })
-          .inputText(
-            'This is a great survey! I would suggest adding more questions about user experience and feedback mechanisms.',
-          );
+          .inputText('This is a great survey!');
 
-        // Clicking the Next button to proceed to the next page of the survey after completing all fields on the current page
+        // Clicking the 'Next' button to proceed to the next section of the survey.
         await page
           .find(".//button[normalize-space(.)='Next']", {
             failover: ['button.inline-flex', 'div.mt-8 > button'],
           })
           .click();
 
-        // Clicking the Submit button to proceed with the survey submission and move to the Thank You page
+        // Clicking the 'Submit' button to finalize the survey submission.
         await page
           .find(".//button[normalize-space(.)='Submit']", {
             failover: [
@@ -116,10 +104,10 @@ module.exports = {
           })
           .click();
 
-        // The survey has been successfully completed and submitted. The page now displays the "Thank You!" message with the text "Your survey has been submitted successfully." This confirms that all survey questions were filled out with fake data and the submission process was completed successfully, reaching the Thank You page as required by the objective.
+        // The objective was to reach the "Thank You" page after submitting the survey, which has been achieved.
         await page.run('markObjectiveComplete', {
           details:
-            'Successfully filled out the survey form with the following fake data:\n- Name: John Smith\n- Email: john.smith@example.com\n- Occupation: Employed\n- Interests: Technology\n- Suggestions: This is a great survey! I would suggest adding more questions about user experience and feedback mechanisms.\n\nThe survey was submitted and the Thank You page was reached at https://unstable-survey-dinoer.replit.app/thank-you, confirming successful completion of the objective.',
+            'The survey was filled out with fake data, submitted, and the "Thank You" page has been reached.',
         });
       },
     },

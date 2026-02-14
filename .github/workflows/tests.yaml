@@ -30,7 +30,6 @@ jobs:
           CARD_NUMBER: ${{ secrets.CARD_NUMBER }}
           CARD_EXPIRY: ${{ secrets.CARD_EXPIRY }}
           CARD_CVC: ${{ secrets.CARD_CVC }}
-          SELF_HEAL_TESTS_ENABLED: true
         run: npx donobu test --auto-heal
 
       - name: Upload Raw Results

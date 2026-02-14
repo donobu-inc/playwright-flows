@@ -8,27 +8,19 @@ const { expect } = require('donobu');
 module.exports = {
   caches: [
     {
-      pageUrl: 'https://news.ycombinator.com/',
+      pageUrl: 'news.ycombinator.com',
       instruction:
         'Scroll to the bottom of the page, locate search input field, do a search with keyword "mac app for web testing"',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Scrolling down to the bottom of the page to locate the search input field as required by the objective.
+        // Scrolling to the bottom of the page to locate the search input field as per the objective.
         await page
           .find('html > body', { failover: ['body'] })
           .scroll('DOWN', { maxScroll: true });
 
-        // Clicking on the search input field to enter the search keyword "mac app for web testing" as required by the objective.
-        await page
-          .find(
-            '#hnmain > tbody > tr:nth-of-type(4) > td > center > form > input',
-            { failover: ["[name='q']", 'form > input'] },
-          )
-          .click();
-
-        // Entering the search keyword "mac app for web testing" into the search input field to complete the search task as required by the objective.
+        // Inputting the search keyword "mac app for web testing" into the search field and submitting the search.
         await page
           .find(
             '#hnmain > tbody > tr:nth-of-type(4) > td > center > form > input',
@@ -36,10 +28,10 @@ module.exports = {
           )
           .inputText('mac app for web testing', { submit: true });
 
-        // The objective has been successfully completed. I scrolled to the bottom of the Hacker News page, located the search input field, and performed a search with the keyword "mac app for web testing". The search results are now displayed, showing 16 results including the top result "Show HN: Donobu – Mac App for Web Automation and Testing" which is highly relevant to the search query.
+        // The search has been completed and the results page is visible.
         await page.run('markObjectiveComplete', {
           details:
-            'Successfully completed the search for "mac app for web testing" on Hacker News. The search returned 16 results (0.016 seconds) with the top result being "Show HN: Donobu – Mac App for Web Automation and Testing" from donobu.com. The page is now displaying the search results at https://hn.algolia.com/?q=mac+app+for+web+testing',
+            'I have successfully scrolled to the bottom of the page, located the search input field, and performed a search with the keyword "mac app for web testing". The search results are now displayed.',
         });
       },
     },

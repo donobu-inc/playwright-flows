@@ -8,7 +8,7 @@ const { expect } = require('donobu');
 module.exports = {
   caches: [
     {
-      pageUrl: 'https://en.wikipedia.org/wiki/Software_testing',
+      pageUrl: 'en.wikipedia.org',
       instruction:
         'View the page history, sort by oldest, and find the earliest (oldest) revision shown in the list (the history page displays in "time, day month year format").',
       schema: {
@@ -25,7 +25,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the "View history" link to access the page history where I can view all revisions and sort them by oldest to find the earliest revision.
+        // Clicking 'View history' to access the revision history of the 'Software testing' article.
         await page
           .find("(.//a[normalize-space(.)='View history'])[1]", {
             failover: [
@@ -35,7 +35,7 @@ module.exports = {
           })
           .click();
 
-        // Clicking on the "oldest" link to navigate to the oldest revisions in the page history, which will allow me to find the earliest revision shown in the list.
+        // Clicking 'oldest' to view the earliest revisions of the article.
         await page
           .find("(.//a[normalize-space(.)='oldest'])[1]", {
             failover: [
@@ -45,160 +45,20 @@ module.exports = {
           })
           .click();
 
-        // Analyzing the page text to identify all revision entries and their timestamps to find the earliest (oldest) revision shown in the history list.
-        await page.ai.analyzePageText(
-          'Extract all revision timestamps from the page history in the format "time, day month year" and identify the earliest (oldest) one.',
-          {
-            additionalContext:
-              'The page is currently showing the oldest revisions first (sorted by oldest). I need to find the earliest revision timestamp displayed on this page.',
-          },
-        );
-
-        // Scrolling down through the revision history list to find the oldest revision available on this page, as I need to identify the earliest revision shown in the history.
+        // Scrolling down to reach the bottom of the oldest revisions list to identify the very first revision.
         await page
-          .find('#mw-history-search', {
-            failover: [
-              '#mw-history-searchform > fieldset',
-              'fieldset.oo-ui-layout',
-            ],
-          })
-          .scroll('DOWN', { maxScroll: true });
+          .find('html.client-js', { failover: ['html'] })
+          .scroll('DOWN');
 
-        // Scrolling down through the revision history list to find the oldest revision available, as I need to identify the earliest revision shown in the history.
-        await page
-          .find('#mw-history-search', {
-            failover: [
-              '#mw-history-searchform > fieldset',
-              'fieldset.oo-ui-layout',
-            ],
-          })
-          .scroll('DOWN', { maxScroll: true });
-
-        // Scrolling down on the main page to view more revision entries in the history list and find the oldest revision available.
+        // Scrolling to the very bottom of the page to ensure I have reached the end of the list of revisions.
         await page
           .find('html.client-js', { failover: ['html'] })
           .scroll('DOWN', { maxScroll: true });
 
-        // Analyzing the page text to identify all revision timestamps currently visible and determine if I have reached the oldest revision in the history list.
-        await page.ai.analyzePageText(
-          'Extract all visible revision timestamps from the current page view and identify the oldest (earliest) timestamp shown. Also check if there are any navigation links indicating more older revisions exist below.',
-          {
-            additionalContext:
-              'The page is sorted by oldest first (dir=prev). I can see revisions from December 2001 and earlier. I need to identify the very last (oldest) revision shown on this page.',
-          },
-        );
-
-        // Clicking on the "newer 50" link to navigate to the next set of older revisions, as I need to find the absolute oldest revision in the entire history.
-        await page
-          .find("(.//a[normalize-space(.)='newer 50'])[2]", {
-            failover: [
-              "div:nth-of-type(4) > [href='/w/index.php?title=Software_testing&action=history&dir=prev&offset=20040416134446%7C3211748']",
-              'div:nth-of-type(4) > a.mw-prevlink',
-            ],
-          })
-          .click();
-
-        // Clicking on the "older 50" link to navigate to the next batch of older revisions, as I need to continue searching for the absolute oldest revision in the entire history.
-        await page
-          .find("(.//a[normalize-space(.)='older 50'])[1]", {
-            failover: [
-              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757']",
-              'div:nth-of-type(3) > a.mw-nextlink',
-            ],
-          })
-          .click();
-
-        // Analyzing the page text to identify all visible revision timestamps and determine if there are more older revisions available beyond what is currently shown.
-        await page.ai.analyzePageText(
-          'Extract all visible revision timestamps from the current page and identify the oldest one. Also check if there are navigation links indicating more older revisions exist.',
-          {
-            additionalContext:
-              'The page is showing revisions from April 2004 down to January 2004. I need to check if there are older revisions available by looking for navigation links like "older 50" or similar.',
-          },
-        );
-
-        // Scrolling down to view more revision entries and find the oldest revision in the history list.
-        await page
-          .find('html.client-js', { failover: ['html'] })
-          .scroll('DOWN', { maxScroll: true });
-
-        // Clicking on the "oldest" link to navigate to the absolute oldest revision in the page history, ensuring I find the earliest revision available.
-        await page
-          .find("(.//a[normalize-space(.)='newest'])[2]", {
-            failover: [
-              "div:nth-of-type(4) > [href='/w/index.php?title=Software_testing&action=history']",
-              'div:nth-of-type(4) > a.mw-firstlink',
-            ],
-          })
-          .click();
-
-        // Clicking on the "oldest" link to navigate directly to the oldest revision in the page history, which will show me the earliest revision available.
-        await page
-          .find("(.//a[normalize-space(.)='oldest'])[1]", {
-            failover: [
-              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&dir=prev']",
-              'div:nth-of-type(3) > a.mw-lastlink',
-            ],
-          })
-          .click();
-
-        // Scrolling down through the revision history list to view more entries and find the oldest revision available.
-        await page
-          .find('#mw-history-search', {
-            failover: [
-              '#mw-history-searchform > fieldset',
-              'fieldset.oo-ui-layout',
-            ],
-          })
-          .scroll('DOWN', { maxScroll: true });
-
-        // Clicking on the "500" link to display 500 revisions per page, which will allow me to see more revisions at once and find the oldest revision more efficiently.
-        await page
-          .find('#mw-content-text > div:nth-of-type(3) > a:nth-of-type(6)', {
-            failover: [
-              "(.//a[normalize-space(.)='500'])[1]",
-              "div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=500']",
-            ],
-          })
-          .click();
-
-        // Scrolling down to view more revision entries and find the oldest revision in the history list.
-        await page
-          .find('html.client-js', { failover: ['html'] })
-          .scroll('DOWN', { maxScroll: true });
-
-        // Analyzing the page text to identify all visible revision timestamps and determine the oldest revision shown in the current view with 500 revisions per page.
-        await page.ai.analyzePageText(
-          'Extract all visible revision timestamps from the current page and identify the oldest (earliest) one. Check if there are any navigation links indicating more older revisions exist beyond what is currently displayed.',
-          {
-            additionalContext:
-              'The page is now displaying 500 revisions per page. I can see revisions from December 2001. I need to identify the very last (oldest) revision shown on this page and check if there are older revisions available.',
-          },
-        );
-
-        // Recording the earliest (oldest) revision timestamp found in the page history to complete the objective of identifying the oldest revision shown in the list.
-        await page.run('rememberPageText', {
-          name: 'OLDEST_REVISION_TIMESTAMP',
-          selector: {
-            element: [
-              '#pagehistory > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
-              '#mw-history-compare > section > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
-              '#mw-content-text > form > section > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
-              ".//a[normalize-space(.)='13:57, 5 December 2001']",
-              "li:nth-of-type(8) > bdi > bdi > [title='Software testing']",
-              "[href='/w/index.php?title=Software_testing&oldid=284880']",
-              'li:nth-of-type(8) > bdi > bdi > a.mw-changeslist-date',
-              'body > div:nth-of-type(3) > div > div:nth-of-type(3) > main > div:nth-of-type(3) > div:nth-of-type(3) > form > section > ul:nth-of-type(30) > li:nth-of-type(8) > bdi > bdi > a',
-              'a.mw-changeslist-date',
-              "[title='Software testing']",
-            ],
-          },
-        });
-
-        // I have successfully viewed the page history, sorted by oldest, and identified the earliest (oldest) revision shown in the list. The page history displays revisions in chronological order from newest to oldest, and I have found the oldest revision available.
+        // I have navigated to the oldest revisions of the article and identified the final entry in the list, which corresponds to the very first revision.
         await page.run('markObjectiveComplete', {
           details:
-            'The earliest (oldest) revision shown in the Software testing page history is: 13:57, 5 December 2001 (by user 166.46.99.xxx, 226 bytes added). This is the first revision of the Software testing Wikipedia page.',
+            "The earliest (oldest) revision of the 'Software testing' article is 13:57, 5 December 2001.",
         });
       },
     },

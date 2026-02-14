@@ -8,57 +8,37 @@ const { expect } = require('donobu');
 module.exports = {
   caches: [
     {
-      pageUrl: 'https://www.starbucks.com/',
+      pageUrl: 'www.starbucks.com',
       instruction: 'Go to the featured menu page',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Dismissing the cookie consent dialog by clicking the "Agree" button so I can proceed to navigate to the featured menu page
+        // Clicking on the "Order now" button to navigate to the featured menu page, as it points to the '/menu/featured/' URL.
         await page
-          .find('#truste-consent-button', {
+          .find('#\\31 37-106044 > div > div > div:nth-of-type(2) > div > a', {
             failover: [
-              ".//button[normalize-space(.)='Agree']",
-              'button.truste-button2',
+              '#primary-content > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > a',
+              "(.//a[normalize-space(.)='Order now'])[1]",
             ],
           })
           .click();
 
-        // Clicking on the MENU link in the navigation bar to navigate to the featured menu page
-        await page
-          .find("(.//a[normalize-space(.)='Menu'])[1]", {
-            failover: [
-              "div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > [href='/menu']",
-              'li:nth-of-type(1) > a.sb-globalNav__desktopLink',
-            ],
-          })
-          .click();
-
-        // Clicking on the "Featured" link to navigate to the featured menu page as required by the objective
-        await page
-          .find(".//a[normalize-space(.)='Featured']", {
-            failover: [
-              "[href='https://www.starbucks.com/menu/featured']",
-              'li:nth-of-type(2) > a.sb-global-subnav-item',
-            ],
-          })
-          .click();
-
-        // Successfully navigated to the featured menu page at https://www.starbucks.com/menu/featured/ which displays the featured items with the heading "Handcrafted joy to savor and share" and shows the Eggnog Latte as a featured item
+        // The current URL is https://www.starbucks.com/menu/featured/, which confirms that the objective of reaching the featured menu page has been achieved.
         await page.run('markObjectiveComplete', {
           details:
-            'The featured menu page has been successfully accessed. The page displays featured Starbucks items including the Eggnog Latte with its description. The URL confirms we are on the featured menu page: https://www.starbucks.com/menu/featured/',
+            'I have navigated to the featured menu page at https://www.starbucks.com/menu/featured/.',
         });
       },
     },
     {
-      pageUrl: 'https://www.starbucks.com/menu/featured/',
+      pageUrl: 'www.starbucks.com',
       instruction: 'Find a Starbucks store in Stowe, Vermont',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the "Find a store" link to access the store locator feature so I can search for a Starbucks store in Stowe, Vermont.
+        // I am clicking 'Find a store' to access the store locator tool, which will allow me to search for Starbucks locations in Stowe, Vermont.
         await page
           .find("(.//a[normalize-space(.)='Find a store'])[1]", {
             failover: [
@@ -68,28 +48,18 @@ module.exports = {
           })
           .click();
 
-        // Entering "Stowe, Vermont" in the search field to find Starbucks stores in that location.
+        // I am typing 'Stowe, Vermont' into the store search field to find Starbucks locations in that specific area.
         await page
           .find(
             "[aria-label='Enter a location to search for Starbucks stores']",
             { failover: ["[name='place']", "[placeholder='Find a store']"] },
           )
-          .inputText('Stowe, Vermont');
+          .inputText('Stowe, Vermont', { submit: true });
 
-        // Clicking the submit search button to search for Starbucks stores in Stowe, Vermont.
-        await page
-          .find("[aria-label='Submit search term']", {
-            failover: [
-              "[data-e2e='submitSearchTermButton']",
-              'button.button___s0b6x',
-            ],
-          })
-          .click();
-
-        // I have successfully found a Starbucks store in Stowe, Vermont. The search results clearly show "Stowe, 109 Main Street" located at 109 Main St, Stowe, which is 0.1 miles away and opens Thursday at 5:00 AM. This is the primary result displayed in the store locator.
+        // I have successfully located a Starbucks store in Stowe, Vermont, which satisfies the overall objective.
         await page.run('markObjectiveComplete', {
           details:
-            'Found Starbucks store: Stowe, 109 Main Street, located at 109 Main St, Stowe, Vermont. The store is 0.1 miles away from the search location and opens Thursday at 5:00 AM. It is currently closed but available for ordering.',
+            "Found a Starbucks store in Stowe, Vermont: 'Stowe, 109 Main Street' located at 109 Main St, Stowe.",
         });
       },
     },
