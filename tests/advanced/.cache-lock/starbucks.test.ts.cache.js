@@ -63,5 +63,42 @@ module.exports = {
         });
       },
     },
+    {
+      pageUrl: 'www.starbucks.com',
+      instruction: 'Navigate to the featured drinks menu',
+      schema: null,
+      allowedTools: [],
+      maxToolCalls: 50,
+      run: async ({ page }) => {
+        // Clicking on the 'Menu' link to navigate to the general menu page, where I can find the featured drinks section.
+        await page
+          .find("(.//a[normalize-space(.)='Menu'])[1]", {
+            failover: [
+              "div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > [href='/menu']",
+              'li:nth-of-type(1) > a.sb-globalNav__desktopLink',
+            ],
+          })
+          .click('left');
+
+        // Clicking on the 'Featured' link to view the featured menu items, which will include the featured drinks.
+        await page
+          .find(".//a[normalize-space(.)='Featured']", {
+            failover: [
+              "[href='https://www.starbucks.com/menu/featured']",
+              'li:nth-of-type(2) > a.sb-global-subnav-item',
+            ],
+          })
+          .click('left');
+
+        // Scrolling down to see the featured drinks on the featured menu page.
+        await page.find('html').scroll('DOWN');
+
+        // The agent has reached the 'Featured' section of the menu, which contains the featured drinks as requested by the overall objective.
+        await page.run('markObjectiveComplete', {
+          details:
+            'I have successfully navigated to the featured menu page at https://www.starbucks.com/menu/featured/, which displays the current featured drinks.',
+        });
+      },
+    },
   ],
 };
