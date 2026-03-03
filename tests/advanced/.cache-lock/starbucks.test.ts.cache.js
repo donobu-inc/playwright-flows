@@ -70,7 +70,17 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the 'Menu' link to navigate to the general menu page, where I can find the featured drinks section.
+        // Dismissing the cookie consent banner to reveal the full website content.
+        await page
+          .find('#truste-consent-button', {
+            failover: [
+              ".//button[normalize-space(.)='Agree']",
+              'button.truste-button2',
+            ],
+          })
+          .click('left');
+
+        // Navigating to the menu page to find the featured drinks section.
         await page
           .find("(.//a[normalize-space(.)='Menu'])[1]", {
             failover: [
@@ -80,7 +90,7 @@ module.exports = {
           })
           .click('left');
 
-        // Clicking on the 'Featured' link to view the featured menu items, which will include the featured drinks.
+        // Navigating to the "Featured" menu to find the featured drinks as per the objective.
         await page
           .find(".//a[normalize-space(.)='Featured']", {
             failover: [
@@ -90,13 +100,13 @@ module.exports = {
           })
           .click('left');
 
-        // Scrolling down to see the featured drinks on the featured menu page.
+        // Scrolling down to view the featured drinks on the page.
         await page.find('html').scroll('DOWN');
 
-        // The agent has reached the 'Featured' section of the menu, which contains the featured drinks as requested by the overall objective.
+        // The current page is the featured drinks menu as requested in the objective.
         await page.run('markObjectiveComplete', {
           details:
-            'I have successfully navigated to the featured menu page at https://www.starbucks.com/menu/featured/, which displays the current featured drinks.',
+            'I have navigated to the featured drinks menu at https://www.starbucks.com/menu/featured/, which displays current featured beverage options such as the Iced Double Berry Matcha and Iced Banana Bread Matcha.',
         });
       },
     },
