@@ -9,3 +9,9 @@ test-results
 playwright-report
 # Persisted auth state for authenticated tests.
 login-state.json
+# Claude Code local session data
+.claude
+# Environment variables
+.env
+.env.local
+.env.*.local

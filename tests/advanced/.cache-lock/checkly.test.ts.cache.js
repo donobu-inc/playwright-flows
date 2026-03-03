@@ -15,7 +15,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the 'Resources' dropdown menu to reveal its options, which is the first step in finding the developer docs.
+        // Clicking on the 'Resources' dropdown menu to reveal more options, including 'Developer docs'.
         await page
           .find(
             '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)',
@@ -26,9 +26,9 @@ module.exports = {
               ],
             },
           )
-          .click();
+          .click('left');
 
-        // Clicking on 'Documentation' under the Developers section to navigate to the developer docs as requested in the overall objective.
+        // Clicking on the 'Documentation' link within the 'Resources' dropdown menu, which corresponds to the 'developer docs' as specified in the objective.
         await page
           .find(".//a[normalize-space(.)='Documentation']", {
             failover: [
@@ -36,12 +36,12 @@ module.exports = {
               'div:nth-of-type(1) > ul > li:nth-of-type(1) > a.text-base',
             ],
           })
-          .click();
+          .click('left');
 
-        // The overall objective has been achieved as I navigated from the home page's 'Resources' menu to the 'Documentation' section.
+        // The objective to click the Resources dropdown and then the developer docs option has been met.
         await page.run('markObjectiveComplete', {
           details:
-            "I have successfully clicked on the 'Resources' dropdown menu and then navigated to the 'Documentation' page, which fulfills the requirement of clicking into the developer docs option.",
+            "I have successfully navigated to the developer documentation by clicking the 'Resources' dropdown and then selecting the 'Documentation' option under the 'Developers' category. I am now at 'https://www.checklyhq.com/docs/'.",
         });
       },
     },
@@ -53,7 +53,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // I am clicking the search bar to initiate the search for "Playwright check suite" as per the objective.
+        // Opening the search bar to begin the search for "Playwright check suite" as per the objective.
         await page
           .find('#search-bar-entry', {
             failover: [
@@ -61,46 +61,46 @@ module.exports = {
               ".//button[normalize-space(.)='Search...⌘K']",
             ],
           })
-          .click();
+          .click('left');
 
-        // I am typing the first word "Playwright" into the search bar to start the search process as requested.
+        // Entering the first word of the search query "Playwright" to begin looking for the specific documentation entry.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
-          .inputText('Playwright', { append: true });
+          .inputText('Playwright');
 
-        // I am typing the next word " check" into the search bar to continue the search process and see how the results update.
+        // Appending the word " check" to the search query to refine the results as per the objective. I am checking the results after each word entered.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
           .inputText(' check', { append: true });
 
-        // I am typing the final word " suite" to complete the search query "Playwright check suite" while monitoring the results for the specific match.
+        // Entering the final word " suite" of the search query "Playwright check suite" as instructed. I am checking the results after each word.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
           .inputText(' suite', { append: true });
 
-        // I am choosing the search result matching "Constructs > DETECT" as specified in the objective after completing the search query "Playwright check suite".
+        // Choosing the match for "Constructs > DETECT" as per the objective, which is the "Playwright Check Suite" entry in the search results.
         await page
           .find(
-            '#headlessui-dialog-_r_5_ > div:nth-of-type(2) > div > div:nth-of-type(2) > div:nth-of-type(2) > div > div',
+            "[href='/docs/constructs/playwright-check#playwright-check-suite']",
             {
               failover: [
-                'div:nth-of-type(2) > div:nth-of-type(2) > div > div.cursor-pointer',
-                "[role='listbox'] > div:nth-of-type(2) > div > div",
+                'div:nth-of-type(2) > div > a.cursor-pointer',
+                "[role='listbox'] > div:nth-of-type(2) > div > a",
               ],
             },
           )
-          .click();
+          .click('left');
 
-        // The overall objective has been fulfilled as I searched for the specific phrase, monitored the results incrementally, and selected the targeted match without submitting the form.
+        // The objective has been completed as I followed the specific search steps and selected the requested result.
         await page.run('markObjectiveComplete', {
           details:
-            'I have successfully searched for "Playwright check suite" by typing word by word, monitored the results, and selected the "Constructs > DETECT" match as instructed. I am now on the corresponding documentation page.',
+            'I successfully searched for "Playwright check suite" word by word without submitting the search. After entering the full query, I identified and clicked the match for "Constructs > DETECT > Playwright Check Suite" from the search results, which navigated me to the corresponding documentation page.',
         });
       },
     },
