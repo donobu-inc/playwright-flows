@@ -32,7 +32,13 @@ jobs:
           CARD_CVC: ${{ secrets.CARD_CVC }}
         run: npx donobu test --auto-heal
 
-      - name: Upload Raw Results
+      - name: Generate Test Reports
+        if: always()
+        run: |
+          npm exec playwright-json-to-markdown test-results/playwright-report.json >> $GITHUB_STEP_SUMMARY
+          npm exec playwright-json-to-html test-results/playwright-report.json
+
+      - name: Save Test Reports as Artifacts
         uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -40,19 +46,13 @@ jobs:
           path: test-results/
           retention-days: 3
 
-      - name: Upload HTML Report
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: Publish the HTML report to GitHub Pages
+        if: always() && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: html-report
-          path: playwright-report/
-          retention-days: 3
-
-      - name: Report test results
-        if: always()
-        run: |
-          npm exec playwright-json-to-markdown test-results/playwright-report.json >> $GITHUB_STEP_SUMMARY
-          npm exec playwright-json-to-html test-results/playwright-report.json
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./test-results
+          destination_dir: latest
 
       - name: Post to Slack
         if: always()
