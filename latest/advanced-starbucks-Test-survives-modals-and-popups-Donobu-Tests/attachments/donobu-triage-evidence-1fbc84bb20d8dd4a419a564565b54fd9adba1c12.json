@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "evidenceId": "2fd4d8ba-e11e-41e6-9cc8-5b1d26516ba2",
+  "runId": "2026-03-07T18-07-34-660Z-8b791d84",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-07-34-660Z-8b791d84",
+  "collectedAtIso": "2026-03-07T18:09:31.198Z",
+  "failureContext": {
+    "testCase": {
+      "title": "Test survives modals and popups",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/starbucks.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 20673,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "failure": {
+      "errors": [
+        {
+          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('savor and share')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('savor and share')\u001b[22m\n",
+          "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('savor and share')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('savor and share')\u001b[22m\n\n    at /home/runner/work/playwright-flows/playwright-flows/tests/advanced/starbucks.test.ts:8:51"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/advanced-starbucks-Test-survives-modals-and-popups-Donobu-Tests/test-failed-1.png"
+        },
+        {
+          "name": "test-flow-metadata.json",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-step-0-goToWebpage",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-1-click",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-2-click",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-3-click",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-4-scrollPage",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-5-markObjectiveComplete",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-summary",
+          "contentType": "application/json",
+          "path": null
+        }
+      ]
+    },
+    "donobuFlow": {
+      "metadata": {
+        "id": "28fb59ce-1324-4330-97e7-6882f40cec4f",
+        "name": "Test survives modals and popups",
+        "runMode": "DETERMINISTIC",
+        "state": "FAILED",
+        "targetWebsite": "https://www.starbucks.com",
+        "overallObjective": null,
+        "allowedTools": [],
+        "envVars": [],
+        "startedAt": 1772906945299,
+        "completedAt": 1772906966091,
+        "maxToolCalls": null,
+        "gptConfigName": null,
+        "defaultMessageDuration": 250,
+        "resultSummary": null
+      },
+      "recentToolCalls": [
+        {
+          "id": "adhoc_72d8160de5c44e068163502ef72b3e9d",
+          "toolName": "goToWebpage",
+          "success": true,
+          "outcomeSummary": "Successfully navigated to https://www.starbucks.com",
+          "durationMs": 1648,
+          "page": "https://www.starbucks.com",
+          "startedAtIso": "2026-03-07T18:09:05.626Z",
+          "completedAtIso": "2026-03-07T18:09:07.274Z"
+        },
+        {
+          "id": "adhoc_2869a8446d874605bba7fadcd085c6fb",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <button id=\"truste-consent-button\">Accept</button>",
+          "durationMs": 2391,
+          "page": "https://www.starbucks.com/",
+          "startedAtIso": "2026-03-07T18:09:07.662Z",
+          "completedAtIso": "2026-03-07T18:09:10.053Z"
+        },
+        {
+          "id": "adhoc_a426616cac5242d5aa21e69cc75af325",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <a class=\"sb-globalNav__desktopLink inline-block text-noUnderline text-xxs text-upper text-bold\" href=\"/menu\">Menu</a>",
+          "durationMs": 2907,
+          "page": "https://www.starbucks.com/",
+          "startedAtIso": "2026-03-07T18:09:10.711Z",
+          "completedAtIso": "2026-03-07T18:09:13.618Z"
+        },
+        {
+          "id": "adhoc_c0f14ecc1eca406fa40bc5b3d0f85ae5",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <a href=\"https://www.starbucks.com/menu/featured\" class=\"sb-global-subnav-item mr3 sm-mr5\">Featured</a>",
+          "durationMs": 2293,
+          "page": "https://www.starbucks.com/menu",
+          "startedAtIso": "2026-03-07T18:09:14.273Z",
+          "completedAtIso": "2026-03-07T18:09:16.566Z"
+        },
+        {
+          "id": "adhoc_f3dd4cfb25924cfb9053a63f87ac3646",
+          "toolName": "scrollPage",
+          "success": true,
+          "outcomeSummary": "Scrolled DOWN <html lang=\"en-US\">@font-face {font-family: \"Source...</html>",
+          "durationMs": 1762,
+          "page": "https://www.starbucks.com/menu/featured/",
+          "startedAtIso": "2026-03-07T18:09:17.233Z",
+          "completedAtIso": "2026-03-07T18:09:18.995Z"
+        },
+        {
+          "id": "adhoc_223595f2405548ec9f54c0fa77d981da",
+          "toolName": "markObjectiveComplete",
+          "success": true,
+          "outcomeSummary": "Objective has been marked as complete.",
+          "durationMs": 662,
+          "page": "https://www.starbucks.com/menu/featured/",
+          "startedAtIso": "2026-03-07T18:09:19.621Z",
+          "completedAtIso": "2026-03-07T18:09:20.283Z"
+        }
+      ]
+    },
+    "testSnippet": "test('Test survives modals and popups', async ({ page }) => {\n  await page.goto('https://www.starbucks.com');\n\n  await page.ai('Navigate to the featured drinks menu');\n\n  await expect(page.getByText('savor and share')).toBeVisible();\n});",
+    "heuristics": {
+      "failureReason": "SELECTOR_REGRESSION",
+      "evidence": [
+        "Automation reported a missing selector or locator.",
+        "Strong stale cache indicators: Used DETERMINISTIC mode (cache was active and could be stale), CRITICAL: Page.ai succeeded but assertions failed (cached actions may have interacted with wrong elements due to page redesign), This is ambiguous - could be stale cache OR legitimate test failure. Retry with fresh cache is low-cost way to rule out staleness.",
+        "Stack trace or tool history indicates selector failure inside a page.ai call."
+      ],
+      "confidence": 0.85,
+      "failureSummary": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('savor and share')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('savor and share')\u001b[22m\n",
+      "shouldRetryAutomation": true,
+      "requiresCodeChange": false,
+      "requiresProductFix": false,
+      "remediationSteps": [
+        {
+          "category": "RETRY_AUTOMATION",
+          "summary": "Delete the test cache and retry the test.",
+          "details": "Delete the cached .cache-lock/<spec-file>.cache.js entry for this test so page.ai recalculates selectors against the live DOM,\nthen rerun the automation to verify recovery."
+        },
+        {
+          "category": "UPDATE_SELECTORS",
+          "summary": "Update selectors if the autonomous retry still fails.",
+          "details": "If cache invalidation and autonomous retry still fail, fall back to manually adjusting the selector strategy."
+        }
+      ],
+      "additionalDataRequests": [
+        {
+          "description": "Collect DOM snapshots or screenshots around the failing selector.",
+          "suggestedSources": [
+            "Playwright trace viewer",
+            "Donobu tool call screenshots"
+          ]
+        }
+      ],
+      "notes": "High confidence stale cache scenario detected (score: 0.65). Cache invalidation + autonomous retry strongly recommended. Selector failure occurred while executing page.ai steps. Deleting the cached tool calls enables a fresh autonomous attempt.",
+      "occurredDuringPageAi": true,
+      "staleCacheIndicators": {
+        "usedDeterministicMode": true,
+        "selectorFailedDuringPageAi": false,
+        "failedAfterPageAiCompleted": false,
+        "isRetryAttempt": false,
+        "quickFailurePattern": false,
+        "toolCallsShowSelectorIssues": false,
+        "assertionsFailedAfterSuccessfulPageAi": true
+      }
+    }
+  }
+}

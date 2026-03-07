@@ -1,0 +1,66 @@
+{
+  "generatedAtIso": "2026-03-07T18:12:26.917Z",
+  "plan": {
+    "failureSummary": "The test failed because the specific text 'savor and share' was not found on the page after the AI successfully navigated to the featured menu.",
+    "failureReason": "ASSERTION_DRIFT",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "assertionsFailedAfterSuccessfulPageAi === true",
+      "isRetryAttempt === false",
+      "page.ai successfully reached the target URL but the following assertion failed"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Retry with cleared cache to rule out staleness.",
+        "details": "Run the test with the 'clearPageAiCache' directive to ensure the AI isn't navigating to a stale version of the menu or using an outdated selector for the menu button."
+      },
+      {
+        "category": "REFINE_ASSERTIONS",
+        "summary": "Update the failing assertion text to match current site content.",
+        "details": "The text 'savor and share' is likely seasonal or promotional. Update the test to assert on a more stable element (e.g., a header like 'Featured') or the current marketing tagline present on the page."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The page.ai step successfully navigated to the featured menu (https://www.starbucks.com/menu/featured/) by clicking 'See the spring menu'. However, the subsequent assertion for the specific marketing text 'savor and share' failed. This suggests the marketing content on the Starbucks site has changed (e.g., end of spring promotion), making the hardcoded assertion string obsolete. While stale cache is a possibility, the specific nature of the text 'savor and share' points strongly to content drift on a promotional page.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/starbucks.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Test survives modals and popups",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/starbucks.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 42537,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-07T18-11-20-936Z-553a2b77",
+    "runDirectory": "/tmp/donobu-auto-heal-I2Bten/triage/2026-03-07T18-11-20-936Z-553a2b77",
+    "evidencePath": "/tmp/donobu-auto-heal-I2Bten/triage/2026-03-07T18-11-20-936Z-553a2b77/failure-evidence-donobu-tests-test-survives-modals-and-popups-w0-r0-e0-2aee0455-760d-4cb5-9dbd-ae81136e6007.json"
+  },
+  "originalPlaywrightArgs": [
+    "test",
+    "tests/advanced/starbucks.test.ts",
+    "--project=Donobu Tests",
+    "--grep",
+    "Test survives modals and popups",
+    "--output",
+    "/tmp/donobu-auto-heal-I2Bten/playwright-output"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-auto-heal-report-1772907131612.json"
+}

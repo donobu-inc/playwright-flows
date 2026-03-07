@@ -1,0 +1,59 @@
+{
+  "generatedAtIso": "2026-03-07T18:11:20.933Z",
+  "plan": {
+    "failureSummary": "The test reached the 'Featured' menu page successfully via page.ai, but the hardcoded assertion for the text 'savor and share' failed. This indicates the website's promotional content has changed.",
+    "failureReason": "ASSERTION_DRIFT",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "assertionsFailedAfterSuccessfulPageAi",
+      "usedDeterministicMode",
+      "seasonal_content_volatility"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Retry with cleared cache to rule out environmental staleness.",
+        "details": "Run the test with 'clearPageAiCache: true' to ensure the AI agent is interacting with the latest version of the site and not a cached state that might be missing the expected content."
+      },
+      {
+        "category": "REFINE_ASSERTIONS",
+        "summary": "Update the failing assertion to match current website content.",
+        "details": "The text 'savor and share' appears to be part of a seasonal marketing campaign. Update the test to assert on a more stable element (e.g., a header like 'Featured') or the current campaign text."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The AI step 'Navigate to the featured drinks menu' successfully reached the correct URL (https://www.starbucks.com/menu/featured/). The failure occurred on a subsequent hardcoded Playwright assertion. Since Starbucks frequently updates seasonal promotions, 'savor and share' is likely no longer present on the page. While stale cache is possible, Assertion Drift is the more probable root cause for specific marketing text failures.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/starbucks.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Test survives modals and popups",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/starbucks.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 20673,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-07T18-07-34-660Z-8b791d84",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-07-34-660Z-8b791d84",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-07-34-660Z-8b791d84/failure-evidence-donobu-tests-test-survives-modals-and-popups-w0-r0-e0-2fd4d8ba-e11e-41e6-9cc8-5b1d26516ba2.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-07-34-660Z-8b791d84/initial-playwright-report.json"
+}
