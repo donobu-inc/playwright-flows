@@ -1,9 +1,9 @@
-import { test, expect } from 'donobu';
+import { test } from 'donobu';
 
 test('Test survives modals and popups', async ({ page }) => {
   await page.goto('https://www.starbucks.com');
 
-  await page.ai('Navigate to the featured drinks menu');
+  await page.ai('Go to the "Rewards" page');
 
-  await expect(page.getByText('savor and share')).toBeVisible();
+  await page.ai.assert('Ensure there is a CTA for joining the rewards program.');
 });

@@ -9,104 +9,25 @@ module.exports = {
   caches: [
     {
       pageUrl: 'www.starbucks.com',
-      instruction: 'Go to the featured menu page',
+      instruction: 'Go to the "Rewards" page',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the "Order now" button to navigate to the featured menu page, as it points to the '/menu/featured/' URL.
+        // Clicking on the 'Rewards' link to navigate to the Rewards page as requested in the overall objective.
         await page
-          .find('#\\31 37-106044 > div > div > div:nth-of-type(2) > div > a', {
+          .find("(.//a[normalize-space(.)='Rewards'])[1]", {
             failover: [
-              '#primary-content > div:nth-of-type(2) > div > div > div > div:nth-of-type(2) > div > a',
-              "(.//a[normalize-space(.)='Order now'])[1]",
-            ],
-          })
-          .click();
-
-        // The current URL is https://www.starbucks.com/menu/featured/, which confirms that the objective of reaching the featured menu page has been achieved.
-        await page.run('markObjectiveComplete', {
-          details:
-            'I have navigated to the featured menu page at https://www.starbucks.com/menu/featured/.',
-        });
-      },
-    },
-    {
-      pageUrl: 'www.starbucks.com',
-      instruction: 'Find a Starbucks store in Stowe, Vermont',
-      schema: null,
-      allowedTools: [],
-      maxToolCalls: 50,
-      run: async ({ page }) => {
-        // I am clicking 'Find a store' to access the store locator tool, which will allow me to search for Starbucks locations in Stowe, Vermont.
-        await page
-          .find("(.//a[normalize-space(.)='Find a store'])[1]", {
-            failover: [
-              "span:nth-of-type(1) > [href='/store-locator']",
-              'span:nth-of-type(1) > a.sb-textLink',
-            ],
-          })
-          .click();
-
-        // I am typing 'Stowe, Vermont' into the store search field to find Starbucks locations in that specific area.
-        await page
-          .find(
-            "[aria-label='Enter a location to search for Starbucks stores']",
-            { failover: ["[name='place']", "[placeholder='Find a store']"] },
-          )
-          .inputText('Stowe, Vermont', { submit: true });
-
-        // I have successfully located a Starbucks store in Stowe, Vermont, which satisfies the overall objective.
-        await page.run('markObjectiveComplete', {
-          details:
-            "Found a Starbucks store in Stowe, Vermont: 'Stowe, 109 Main Street' located at 109 Main St, Stowe.",
-        });
-      },
-    },
-    {
-      pageUrl: 'www.starbucks.com',
-      instruction: 'Navigate to the featured drinks menu',
-      schema: null,
-      allowedTools: [],
-      maxToolCalls: 50,
-      run: async ({ page }) => {
-        // Dismissing the cookie consent banner to reveal the full website content.
-        await page
-          .find('#truste-consent-button', {
-            failover: [
-              ".//button[normalize-space(.)='Agree']",
-              'button.truste-button2',
+              "div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(2) > [href='/rewards']",
+              'li:nth-of-type(2) > a.sb-globalNav__desktopLink',
             ],
           })
           .click('left');
 
-        // Navigating to the menu page to find the featured drinks section.
-        await page
-          .find("(.//a[normalize-space(.)='Menu'])[1]", {
-            failover: [
-              "div:nth-of-type(2) > div:nth-of-type(1) > ul > li:nth-of-type(1) > [href='/menu']",
-              'li:nth-of-type(1) > a.sb-globalNav__desktopLink',
-            ],
-          })
-          .click('left');
-
-        // Navigating to the "Featured" menu to find the featured drinks as per the objective.
-        await page
-          .find(".//a[normalize-space(.)='Featured']", {
-            failover: [
-              "[href='https://www.starbucks.com/menu/featured']",
-              'li:nth-of-type(2) > a.sb-global-subnav-item',
-            ],
-          })
-          .click('left');
-
-        // Scrolling down to view the featured drinks on the page.
-        await page.find('html').scroll('DOWN');
-
-        // The current page is the featured drinks menu as requested in the objective.
+        // The overall objective was to go to the 'Rewards' page, and I am currently on that page.
         await page.run('markObjectiveComplete', {
           details:
-            'I have navigated to the featured drinks menu at https://www.starbucks.com/menu/featured/, which displays current featured beverage options such as the Iced Double Berry Matcha and Iced Banana Bread Matcha.',
+            "I have successfully navigated to the Starbucks Rewards page, as evidenced by the current URL (https://www.starbucks.com/rewards) and the page content displaying 'Starbucks Rewards'.",
         });
       },
     },
