@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-03-07T18:52:56.302Z",
+  "plan": {
+    "failureSummary": "The test failed during deterministic (cached) execution because it could not locate the 'Select your occupation' combobox using the stored selectors.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "Error: click execution failed (Unable to resolve HTML element)",
+      "Stack trace points to .cache.js (deterministic execution)",
+      "Instruction 'Fill out the all of the survey questions' is semantically flexible"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page AI cache and retry the test.",
+        "details": "Execute the test with 'clearPageAiCache: true' to force a fresh autonomous run that can adapt to UI changes."
+      },
+      {
+        "category": "FIX_APPLICATION",
+        "summary": "Verify application stability.",
+        "details": "If the failure persists after clearing the cache, verify that the 'Select your occupation' field is rendering correctly and is interactable in the 'unstable-survey' environment."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The failure occurred in deterministic mode (cache), which is highly susceptible to selector changes on the 'unstable-survey' application. Since the prompt 'Fill out all of the survey questions' is semantically flexible, clearing the cache will allow the AI to find the updated selectors.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/unstable-survey.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/unstable-survey.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 19761,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-07T18-49-20-694Z-7b3ecdde",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-49-20-694Z-7b3ecdde",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-49-20-694Z-7b3ecdde/failure-evidence-donobu-tests-fill-out-a-survey-w1-r0-e0-783d7d3b-8eb3-4f52-a7ae-ea4f4da2de9b.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-07T18-49-20-694Z-7b3ecdde/initial-playwright-report.json"
+}
