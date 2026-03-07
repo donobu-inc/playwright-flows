@@ -48,7 +48,9 @@ jobs:
 
       - name: Report test results
         if: always()
-        run: npm exec playwright-json-to-markdown < "test-results/playwright-report.json" >> $GITHUB_STEP_SUMMARY
+        run: |
+          npm exec playwright-json-to-markdown test-results/playwright-report.json >> $GITHUB_STEP_SUMMARY
+          npm exec playwright-json-to-html test-results/playwright-report.json
 
       - name: Post to Slack
         if: always()

@@ -18,7 +18,7 @@
   "homepage": "https://github.com/donobu-inc/playwright-flows#readme",
   "devDependencies": {
     "@playwright/test": "1.58.2",
-    "donobu": "3.21.0",
+    "donobu": "5.2.1",
     "playwright": "1.58.2",
     "zod": "^4.3.5"
   }
