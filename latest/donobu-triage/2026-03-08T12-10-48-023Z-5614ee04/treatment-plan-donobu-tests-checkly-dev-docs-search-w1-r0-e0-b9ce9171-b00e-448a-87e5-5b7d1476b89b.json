@@ -1,0 +1,65 @@
+{
+  "generatedAtIso": "2026-03-08T12:14:18.983Z",
+  "plan": {
+    "failureSummary": "The test failed because the URL remained 'https://www.checklyhq.com/' instead of navigating to 'https://www.checklyhq.com/docs/' after the page.ai step. Tool logs show a click with suspicious negative coordinates (-247px), suggesting the cached interaction logic is stale.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "assertionsFailedAfterSuccessfulPageAi = true",
+      "usedDeterministicMode = true",
+      "Negative Y-coordinate in tool call: -247px",
+      "URL did not change after successful click tool execution"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear AI Cache and Retry",
+        "details": "Set clearPageAiCache to true and retry the test to allow the agent to re-analyze the current Checkly homepage and menu structure."
+      },
+      {
+        "category": "ADJUST_TIMING",
+        "summary": "Add navigation synchronization",
+        "details": "If the failure persists after a cache clear, add a 'waitForURL' or a 'page.waitForNavigation' after the page.ai call to ensure the redirect completes before the assertion."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Refine AI instructions for menu interaction",
+        "details": "If the menu interaction is flaky, provide a more specific instruction to the AI, such as 'Hover over Resources and wait for the dropdown to appear before clicking Documentation'."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The tool call for the 'Documentation' link reported success but used a negative Y-coordinate (240px, -247px), which typically indicates an element that is off-screen or a coordinate mismatch from a stale cache. Since the AI objective was marked complete but the URL didn't change, the deterministic cache is likely pointing to an outdated UI structure.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/checkly.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/checkly.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 15392,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-08T12-10-48-023Z-5614ee04",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-08T12-10-48-023Z-5614ee04",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-08T12-10-48-023Z-5614ee04/failure-evidence-donobu-tests-checkly-dev-docs-search-w1-r0-e0-b9ce9171-b00e-448a-87e5-5b7d1476b89b.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-08T12-10-48-023Z-5614ee04/initial-playwright-report.json"
+}
