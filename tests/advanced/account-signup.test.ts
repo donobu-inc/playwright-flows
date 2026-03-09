@@ -13,7 +13,7 @@ Make up reasonable data including passwords to fill all the forms.`,
         password: z.string(),
       }),
       cache: false, // We are creating a new account for every test run with new credentials.
-    }
+    },
   );
   expect(newCredentials.email).toMatch(/myemail\+[^@]+@example\.com/);
   expect(newCredentials.password).toBeTruthy();

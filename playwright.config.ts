@@ -9,14 +9,13 @@ export default defineConfig({
       use: { ...devices['Desktop Chromium'] },
       testIgnore: ['**/advanced/responsive.test.ts'],
       timeout: 240000,
-
     },
     {
       name: 'Responsive Tests',
       testMatch: '**/advanced/responsive.test.ts',
       use: { ...devices['iPhone 14'] },
       timeout: 240000,
-    }
+    },
   ],
   use: {
     screenshot: 'only-on-failure',

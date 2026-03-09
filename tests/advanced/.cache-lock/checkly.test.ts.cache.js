@@ -15,7 +15,17 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the 'Resources' dropdown menu to reveal more options, including 'Developer docs'.
+        // Closing the promotional modal to reveal the main navigation menu and access the 'Resources' dropdown.
+        await page
+          .find(".//button[normalize-space(.)='×']", {
+            failover: [
+              'html > body > div:nth-of-type(2) > div > div:nth-of-type(1) > button',
+              'body > div:nth-of-type(2) > div > div:nth-of-type(1) > button',
+            ],
+          })
+          .click('left');
+
+        // Opening the 'Resources' dropdown menu to find the 'developer docs' option.
         await page
           .find(
             '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)',
@@ -28,7 +38,7 @@ module.exports = {
           )
           .click('left');
 
-        // Clicking on the 'Documentation' link within the 'Resources' dropdown menu, which corresponds to the 'developer docs' as specified in the objective.
+        // Clicking on the 'Documentation' link within the 'Resources' dropdown, which represents the developer docs.
         await page
           .find(".//a[normalize-space(.)='Documentation']", {
             failover: [
@@ -38,22 +48,22 @@ module.exports = {
           })
           .click('left');
 
-        // The objective to click the Resources dropdown and then the developer docs option has been met.
+        // The objective was to click on the Resources dropdown and then the developer docs option. I have reached the Checkly Documentation page, which is the developer docs.
         await page.run('markObjectiveComplete', {
           details:
-            "I have successfully navigated to the developer documentation by clicking the 'Resources' dropdown and then selecting the 'Documentation' option under the 'Developers' category. I am now at 'https://www.checklyhq.com/docs/'.",
+            "I have successfully navigated to the developer documentation by clicking on the 'Resources' dropdown menu and then selecting 'Documentation'. The browser is now at 'https://www.checklyhq.com/docs/'.",
         });
       },
     },
     {
       pageUrl: 'www.checklyhq.com',
       instruction:
-        'Do a search for "Playwright check suite" , after entring every word, check the search results and chose the match for "Constructs > DETECT". DONT submit the search.',
+        'Do a search for "Playwright check suite", and chose the match for "Constructs > DETECT" from the search suggestions dropdown.\n    NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".',
       schema: null,
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Opening the search bar to begin the search for "Playwright check suite" as per the objective.
+        // Clicking on the search bar to initiate the search for "Playwright check suite".
         await page
           .find('#search-bar-entry', {
             failover: [
@@ -63,28 +73,14 @@ module.exports = {
           })
           .click('left');
 
-        // Entering the first word of the search query "Playwright" to begin looking for the specific documentation entry.
+        // Typing the search query "Playwright check suite" to generate search suggestions. Enter is not pressed to allow for typeahead selection.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
-          .inputText('Playwright');
+          .inputText('Playwright check suite');
 
-        // Appending the word " check" to the search query to refine the results as per the objective. I am checking the results after each word entered.
-        await page
-          .find('#search-input', {
-            failover: ["[placeholder='Search...']", "[role='combobox']"],
-          })
-          .inputText(' check', { append: true });
-
-        // Entering the final word " suite" of the search query "Playwright check suite" as instructed. I am checking the results after each word.
-        await page
-          .find('#search-input', {
-            failover: ["[placeholder='Search...']", "[role='combobox']"],
-          })
-          .inputText(' suite', { append: true });
-
-        // Choosing the match for "Constructs > DETECT" as per the objective, which is the "Playwright Check Suite" entry in the search results.
+        // Selecting the search suggestion for "Constructs > DETECT" as per the objective.
         await page
           .find(
             "[href='/docs/constructs/playwright-check#playwright-check-suite']",
@@ -97,10 +93,10 @@ module.exports = {
           )
           .click('left');
 
-        // The objective has been completed as I followed the specific search steps and selected the requested result.
+        // The objective has been met: the search was performed, and the specific suggestion "Constructs > DETECT" was chosen from the typeahead dropdown without submitting via Enter.
         await page.run('markObjectiveComplete', {
           details:
-            'I successfully searched for "Playwright check suite" word by word without submitting the search. After entering the full query, I identified and clicked the match for "Constructs > DETECT > Playwright Check Suite" from the search results, which navigated me to the corresponding documentation page.',
+            'I searched for "Playwright check suite", and selected the "Constructs > DETECT" suggestion from the dropdown, which navigated to the "Playwright Check Suites" documentation page.',
         });
       },
     },

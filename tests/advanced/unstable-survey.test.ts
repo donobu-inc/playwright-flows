@@ -12,13 +12,13 @@ the submission process until you get to a "Thank You" page.`,
           z.object({
             question: z.string(),
             response: z.string(),
-          })
+          }),
         ),
       }),
-    }
+    },
   );
   console.log(
-    `Completed the survey! Survey data: ${JSON.stringify(surveyData, null, 2)}`
+    `Completed the survey! Survey data: ${JSON.stringify(surveyData, null, 2)}`,
   );
   await expect(page).toHaveURL(/thank-you/);
 });

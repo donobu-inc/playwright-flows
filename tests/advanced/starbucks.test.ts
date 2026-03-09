@@ -5,5 +5,7 @@ test('Test survives modals and popups', async ({ page }) => {
 
   await page.ai('Go to the "Rewards" page');
 
-  await page.ai.assert('Ensure there is a CTA for joining the rewards program.');
+  await page.ai.assert(
+    'Ensure there is a CTA for joining the rewards program.',
+  );
 });

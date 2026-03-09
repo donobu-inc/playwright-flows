@@ -11,7 +11,7 @@ test('Inspect Wiki article history', async ({ page }) => {
         month: z.number(),
         year: z.number(),
       }),
-    }
+    },
   );
   expect(oldestRevision.day).toEqual(5);
   expect(oldestRevision.month).toEqual(12);
