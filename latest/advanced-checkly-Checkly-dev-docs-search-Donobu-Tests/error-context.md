@@ -515,394 +515,394 @@
         - img [ref=e549]:
           - generic [ref=e576]:
             - generic [ref=e590]: 4o
-            - generic [ref=e592]: You are
-      - generic [ref=e611]:
-        - generic [ref=e612]:
-          - heading "Why Checkly?" [level=2] [ref=e613]
-          - paragraph [ref=e615]: Checkly is an application reliability platform that has unifies testing, monitoring, observability, status pages, and more into one developer-friendly workflow. We pioneered Monitoring as Code to help teams detect, communicate, and resolve performance issues and outages without leaving their IDE.
-          - link "Learn more about Monitoring as Code" [ref=e616] [cursor=pointer]:
+            - generic [ref=e592]: You are an expert SRE, bui
+      - generic [ref=e610]:
+        - generic [ref=e611]:
+          - heading "Why Checkly?" [level=2] [ref=e612]
+          - paragraph [ref=e614]: Checkly is an application reliability platform that has unifies testing, monitoring, observability, status pages, and more into one developer-friendly workflow. We pioneered Monitoring as Code to help teams detect, communicate, and resolve performance issues and outages without leaving their IDE.
+          - link "Learn more about Monitoring as Code" [ref=e615] [cursor=pointer]:
             - /url: /product/monitoring-as-code/
-        - generic [ref=e618]:
-          - generic [ref=e619]:
-            - heading "Achieve Maximum Application Uptime and Performance" [level=3] [ref=e621]:
-              - link "Achieve Maximum Application Uptime and Performance" [ref=e622] [cursor=pointer]:
+        - generic [ref=e617]:
+          - generic [ref=e618]:
+            - heading "Achieve Maximum Application Uptime and Performance" [level=3] [ref=e620]:
+              - link "Achieve Maximum Application Uptime and Performance" [ref=e621] [cursor=pointer]:
                 - /url: "#achieve-maximum-application-uptime-and-performance"
-            - paragraph [ref=e624]: "Detect incidents in seconds—not minutes—by continuously testing and monitoring real user journeys throughout the SDLC: from local to production."
-          - generic [ref=e625]:
-            - heading "Accelerate Developer Velocity by Shifting Reliability Left" [level=3] [ref=e627]:
-              - link "Accelerate Developer Velocity by Shifting Reliability Left" [ref=e628] [cursor=pointer]:
+            - paragraph [ref=e623]: "Detect incidents in seconds—not minutes—by continuously testing and monitoring real user journeys throughout the SDLC: from local to production."
+          - generic [ref=e624]:
+            - heading "Accelerate Developer Velocity by Shifting Reliability Left" [level=3] [ref=e626]:
+              - link "Accelerate Developer Velocity by Shifting Reliability Left" [ref=e627] [cursor=pointer]:
                 - /url: "#accelerate-developer-velocity-by-shifting-reliability-left"
-            - paragraph [ref=e630]: Enable engineering teams to deliver new products and features with speed and reliability by embedding testing and monitoring earlier in the development lifecycle.
-          - generic [ref=e631]:
-            - heading "Improve Incident Response Time and Communication" [level=3] [ref=e633]:
-              - link "Improve Incident Response Time and Communication" [ref=e634] [cursor=pointer]:
+            - paragraph [ref=e629]: Enable engineering teams to deliver new products and features with speed and reliability by embedding testing and monitoring earlier in the development lifecycle.
+          - generic [ref=e630]:
+            - heading "Improve Incident Response Time and Communication" [level=3] [ref=e632]:
+              - link "Improve Incident Response Time and Communication" [ref=e633] [cursor=pointer]:
                 - /url: "#improve-incident-response-time-and-communication"
-            - paragraph [ref=e636]: Streamline incident response with instant, contextual alerts and automated communication workflows that keep teams and stakeholders informed.
-          - generic [ref=e637]:
-            - heading "Reduce Observability Costs and Instrumentation Sprawl" [level=3] [ref=e639]:
-              - link "Reduce Observability Costs and Instrumentation Sprawl" [ref=e640] [cursor=pointer]:
+            - paragraph [ref=e635]: Streamline incident response with instant, contextual alerts and automated communication workflows that keep teams and stakeholders informed.
+          - generic [ref=e636]:
+            - heading "Reduce Observability Costs and Instrumentation Sprawl" [level=3] [ref=e638]:
+              - link "Reduce Observability Costs and Instrumentation Sprawl" [ref=e639] [cursor=pointer]:
                 - /url: "#reduce-observability-costs-and-instrumentation-sprawl"
-            - paragraph [ref=e642]: Consolidate testing and monitoring tools while reducing telemetry costs through targeted, Playwright-based synthetic monitoring that reuses existing test scripts.
-      - generic [ref=e645]:
-        - generic [ref=e647]:
-          - heading "Collaborate Around Reliability" [level=2] [ref=e649]:
-            - link "Collaborate Around Reliability" [ref=e650] [cursor=pointer]:
+            - paragraph [ref=e641]: Consolidate testing and monitoring tools while reducing telemetry costs through targeted, Playwright-based synthetic monitoring that reuses existing test scripts.
+      - generic [ref=e644]:
+        - generic [ref=e646]:
+          - heading "Collaborate Around Reliability" [level=2] [ref=e648]:
+            - link "Collaborate Around Reliability" [ref=e649] [cursor=pointer]:
               - /url: "#collaborate-around-reliability"
-          - paragraph [ref=e652]: Developers, SREs, and Quality Engineers now have a single workflow to collaborate around application reliability.
-        - generic [ref=e654]:
-          - heading "Version-Controlled Testing & Monitoring" [level=2] [ref=e656]:
-            - link "Version-Controlled Testing & Monitoring" [ref=e657] [cursor=pointer]:
+          - paragraph [ref=e651]: Developers, SREs, and Quality Engineers now have a single workflow to collaborate around application reliability.
+        - generic [ref=e653]:
+          - heading "Version-Controlled Testing & Monitoring" [level=2] [ref=e655]:
+            - link "Version-Controlled Testing & Monitoring" [ref=e656] [cursor=pointer]:
               - /url: "#version-controlled-testing-&-monitoring"
-          - paragraph [ref=e659]: Integrate Checkly into your CI/CD from pre-prod and production to ensure the reliability and availability of your apps and services.
-        - generic [ref=e661]:
-          - heading "Reduce Your Monitoring Costs By Up To 80%" [level=2] [ref=e663]:
-            - link "Reduce Your Monitoring Costs By Up To 80%" [ref=e664] [cursor=pointer]:
+          - paragraph [ref=e658]: Integrate Checkly into your CI/CD from pre-prod and production to ensure the reliability and availability of your apps and services.
+        - generic [ref=e660]:
+          - heading "Reduce Your Monitoring Costs By Up To 80%" [level=2] [ref=e662]:
+            - link "Reduce Your Monitoring Costs By Up To 80%" [ref=e663] [cursor=pointer]:
               - /url: "#reduce-your-monitoring-costs-by-up-to-80%"
-          - paragraph [ref=e666]: Modern, purpose-built monitoring with no hidden fees. Your Checkly subscription includes all features, users, implementation, support and maintenance costs.
-      - generic [ref=e667]:
-        - generic [ref=e669]:
-          - heading "Integrates with your workflow" [level=2] [ref=e671]:
-            - link "Integrates with your workflow" [ref=e672] [cursor=pointer]:
+          - paragraph [ref=e665]: Modern, purpose-built monitoring with no hidden fees. Your Checkly subscription includes all features, users, implementation, support and maintenance costs.
+      - generic [ref=e666]:
+        - generic [ref=e668]:
+          - heading "Integrates with your workflow" [level=2] [ref=e670]:
+            - link "Integrates with your workflow" [ref=e671] [cursor=pointer]:
               - /url: "#integrates-with-your-workflow"
               - text: Integrates with
               - text: your workflow
-          - paragraph [ref=e674]: Checkly integrates with the open source & developer tools you use on a daily basis. From CI, to alerting, to reporting.
-        - generic [ref=e675]:
-          - link "GitHub Run your checks right after a deploy in GitHub actions and get a detailed report directly in your GitHub pull request. GitHub Integration" [ref=e676] [cursor=pointer]:
+          - paragraph [ref=e673]: Checkly integrates with the open source & developer tools you use on a daily basis. From CI, to alerting, to reporting.
+        - generic [ref=e674]:
+          - link "GitHub Run your checks right after a deploy in GitHub actions and get a detailed report directly in your GitHub pull request. GitHub Integration" [ref=e675] [cursor=pointer]:
             - /url: /docs/cicd/github/
-            - generic [ref=e677]:
-              - heading "GitHub" [level=3] [ref=e679]
-              - paragraph [ref=e681]: Run your checks right after a deploy in GitHub actions and get a detailed report directly in your GitHub pull request.
-            - paragraph [ref=e682]: GitHub Integration
-          - link "Vercel Create and run checks automatically against production and preview environments for all your Vercel projects. Vercel Integration" [ref=e683] [cursor=pointer]:
+            - generic [ref=e676]:
+              - heading "GitHub" [level=3] [ref=e678]
+              - paragraph [ref=e680]: Run your checks right after a deploy in GitHub actions and get a detailed report directly in your GitHub pull request.
+            - paragraph [ref=e681]: GitHub Integration
+          - link "Vercel Create and run checks automatically against production and preview environments for all your Vercel projects. Vercel Integration" [ref=e682] [cursor=pointer]:
             - /url: /docs/cicd/vercel/
-            - generic [ref=e684]:
-              - heading "Vercel" [level=3] [ref=e686]
-              - paragraph [ref=e688]: Create and run checks automatically against production and preview environments for all your Vercel projects.
-            - paragraph [ref=e689]: Vercel Integration
-          - link "Coralogix Integrate your Checkly data with Coralogix and monitor your incidents from your Coralogix dashboard. Coralogix Integration" [ref=e690] [cursor=pointer]:
+            - generic [ref=e683]:
+              - heading "Vercel" [level=3] [ref=e685]
+              - paragraph [ref=e687]: Create and run checks automatically against production and preview environments for all your Vercel projects.
+            - paragraph [ref=e688]: Vercel Integration
+          - link "Coralogix Integrate your Checkly data with Coralogix and monitor your incidents from your Coralogix dashboard. Coralogix Integration" [ref=e689] [cursor=pointer]:
             - /url: /docs/integrations/coralogix/
-            - generic [ref=e691]:
-              - heading "Coralogix" [level=3] [ref=e693]
-              - paragraph [ref=e695]: Integrate your Checkly data with Coralogix and monitor your incidents from your Coralogix dashboard.
-            - paragraph [ref=e696]: Coralogix Integration
-          - link "Prometheus logo Prometheus Export your monitoring data to Prometheus and integrate it into your Grafana dashboards. Prometheus Integration" [ref=e697] [cursor=pointer]:
+            - generic [ref=e690]:
+              - heading "Coralogix" [level=3] [ref=e692]
+              - paragraph [ref=e694]: Integrate your Checkly data with Coralogix and monitor your incidents from your Coralogix dashboard.
+            - paragraph [ref=e695]: Coralogix Integration
+          - link "Prometheus logo Prometheus Export your monitoring data to Prometheus and integrate it into your Grafana dashboards. Prometheus Integration" [ref=e696] [cursor=pointer]:
             - /url: /docs/integrations/prometheus/
-            - generic [ref=e698]:
-              - generic [ref=e699]:
-                - img "Prometheus logo" [ref=e700]
-                - heading "Prometheus" [level=3] [ref=e701]
-              - paragraph [ref=e703]: Export your monitoring data to Prometheus and integrate it into your Grafana dashboards.
-            - paragraph [ref=e704]: Prometheus Integration
-          - link "Slack logo Slack Get detailed alerts and logs in Slack when a check fails, degrades or recovers. Slack Integration" [ref=e705] [cursor=pointer]:
+            - generic [ref=e697]:
+              - generic [ref=e698]:
+                - img "Prometheus logo" [ref=e699]
+                - heading "Prometheus" [level=3] [ref=e700]
+              - paragraph [ref=e702]: Export your monitoring data to Prometheus and integrate it into your Grafana dashboards.
+            - paragraph [ref=e703]: Prometheus Integration
+          - link "Slack logo Slack Get detailed alerts and logs in Slack when a check fails, degrades or recovers. Slack Integration" [ref=e704] [cursor=pointer]:
             - /url: /docs/integrations/slack/
-            - generic [ref=e706]:
-              - generic [ref=e707]:
-                - img "Slack logo" [ref=e708]
-                - heading "Slack" [level=3] [ref=e709]
-              - paragraph [ref=e711]: Get detailed alerts and logs in Slack when a check fails, degrades or recovers.
-            - paragraph [ref=e712]: Slack Integration
-          - link "Rootly Coordinate, learn from, and resolve incidents faster, directly in Slack and Teams using Rootly Rootly Integration" [ref=e713] [cursor=pointer]:
+            - generic [ref=e705]:
+              - generic [ref=e706]:
+                - img "Slack logo" [ref=e707]
+                - heading "Slack" [level=3] [ref=e708]
+              - paragraph [ref=e710]: Get detailed alerts and logs in Slack when a check fails, degrades or recovers.
+            - paragraph [ref=e711]: Slack Integration
+          - link "Rootly Coordinate, learn from, and resolve incidents faster, directly in Slack and Teams using Rootly Rootly Integration" [ref=e712] [cursor=pointer]:
             - /url: /docs/integrations/incident-management/rootly/
-            - generic [ref=e714]:
-              - heading "Rootly" [level=3] [ref=e716]
-              - paragraph [ref=e718]: Coordinate, learn from, and resolve incidents faster, directly in Slack and Teams using Rootly
-            - paragraph [ref=e719]: Rootly Integration
-          - link "Pagerduty logo Pagerduty Open and close incidents automatically in Pagerduty for as many teams as you need. Pagerduty Integration" [ref=e720] [cursor=pointer]:
+            - generic [ref=e713]:
+              - heading "Rootly" [level=3] [ref=e715]
+              - paragraph [ref=e717]: Coordinate, learn from, and resolve incidents faster, directly in Slack and Teams using Rootly
+            - paragraph [ref=e718]: Rootly Integration
+          - link "Pagerduty logo Pagerduty Open and close incidents automatically in Pagerduty for as many teams as you need. Pagerduty Integration" [ref=e719] [cursor=pointer]:
             - /url: /docs/integrations/pagerduty/
-            - generic [ref=e721]:
-              - generic [ref=e722]:
-                - img "Pagerduty logo" [ref=e723]
-                - heading "Pagerduty" [level=3] [ref=e724]
-              - paragraph [ref=e726]: Open and close incidents automatically in Pagerduty for as many teams as you need.
-            - paragraph [ref=e727]: Pagerduty Integration
-          - link "OpsGenie logo OpsGenie Open and close incidents automatically in OpsGenie for as many teams as you need. OpsGenie Integration" [ref=e728] [cursor=pointer]:
+            - generic [ref=e720]:
+              - generic [ref=e721]:
+                - img "Pagerduty logo" [ref=e722]
+                - heading "Pagerduty" [level=3] [ref=e723]
+              - paragraph [ref=e725]: Open and close incidents automatically in Pagerduty for as many teams as you need.
+            - paragraph [ref=e726]: Pagerduty Integration
+          - link "OpsGenie logo OpsGenie Open and close incidents automatically in OpsGenie for as many teams as you need. OpsGenie Integration" [ref=e727] [cursor=pointer]:
             - /url: /docs/integrations/opsgenie/
-            - generic [ref=e729]:
-              - generic [ref=e730]:
-                - img "OpsGenie logo" [ref=e731]
-                - heading "OpsGenie" [level=3] [ref=e732]
-              - paragraph [ref=e734]: Open and close incidents automatically in OpsGenie for as many teams as you need.
-            - paragraph [ref=e735]: OpsGenie Integration
-          - link "GitLab logo GitLab CI Create and run checks automatically against production and preview environments in your Gitlab CI/CD pipeline. GitLab Integration" [ref=e736] [cursor=pointer]:
+            - generic [ref=e728]:
+              - generic [ref=e729]:
+                - img "OpsGenie logo" [ref=e730]
+                - heading "OpsGenie" [level=3] [ref=e731]
+              - paragraph [ref=e733]: Open and close incidents automatically in OpsGenie for as many teams as you need.
+            - paragraph [ref=e734]: OpsGenie Integration
+          - link "GitLab logo GitLab CI Create and run checks automatically against production and preview environments in your Gitlab CI/CD pipeline. GitLab Integration" [ref=e735] [cursor=pointer]:
             - /url: /docs/cicd/gitlabci/
-            - generic [ref=e737]:
-              - generic [ref=e738]:
-                - img "GitLab logo" [ref=e739]
-                - heading "GitLab CI" [level=3] [ref=e740]
-              - paragraph [ref=e742]: Create and run checks automatically against production and preview environments in your Gitlab CI/CD pipeline.
-            - paragraph [ref=e743]: GitLab Integration
-          - link "Jenkins logo Jenkins Create and run checks automatically against production and preview environments in your Jenkins CI/CD pipeline. Jenkins Integration" [ref=e744] [cursor=pointer]:
+            - generic [ref=e736]:
+              - generic [ref=e737]:
+                - img "GitLab logo" [ref=e738]
+                - heading "GitLab CI" [level=3] [ref=e739]
+              - paragraph [ref=e741]: Create and run checks automatically against production and preview environments in your Gitlab CI/CD pipeline.
+            - paragraph [ref=e742]: GitLab Integration
+          - link "Jenkins logo Jenkins Create and run checks automatically against production and preview environments in your Jenkins CI/CD pipeline. Jenkins Integration" [ref=e743] [cursor=pointer]:
             - /url: /docs/cicd/jenkins/
-            - generic [ref=e745]:
-              - generic [ref=e746]:
-                - img "Jenkins logo" [ref=e747]
-                - heading "Jenkins" [level=3] [ref=e748]
-              - paragraph [ref=e750]: Create and run checks automatically against production and preview environments in your Jenkins CI/CD pipeline.
-            - paragraph [ref=e751]: Jenkins Integration
-          - link "Incident.io Kick off and resolve incidents in Incident.io. Incident.io Integration" [ref=e752] [cursor=pointer]:
+            - generic [ref=e744]:
+              - generic [ref=e745]:
+                - img "Jenkins logo" [ref=e746]
+                - heading "Jenkins" [level=3] [ref=e747]
+              - paragraph [ref=e749]: Create and run checks automatically against production and preview environments in your Jenkins CI/CD pipeline.
+            - paragraph [ref=e750]: Jenkins Integration
+          - link "Incident.io Kick off and resolve incidents in Incident.io. Incident.io Integration" [ref=e751] [cursor=pointer]:
             - /url: /docs/integrations/incidentio/
-            - generic [ref=e753]:
-              - heading "Incident.io" [level=3] [ref=e755]
-              - paragraph [ref=e757]: Kick off and resolve incidents in Incident.io.
-            - paragraph [ref=e758]: Incident.io Integration
-          - link "Microsoft Teams logo Microsoft Teams Get detailed alerts and logs in Teams when a check fails, degrades or recovers. Teams Integration" [ref=e759] [cursor=pointer]:
+            - generic [ref=e752]:
+              - heading "Incident.io" [level=3] [ref=e754]
+              - paragraph [ref=e756]: Kick off and resolve incidents in Incident.io.
+            - paragraph [ref=e757]: Incident.io Integration
+          - link "Microsoft Teams logo Microsoft Teams Get detailed alerts and logs in Teams when a check fails, degrades or recovers. Teams Integration" [ref=e758] [cursor=pointer]:
             - /url: /docs/integrations/msteams/
-            - generic [ref=e760]:
-              - generic [ref=e761]:
-                - img "Microsoft Teams logo" [ref=e762]
-                - heading "Microsoft Teams" [level=3] [ref=e763]
-              - paragraph [ref=e765]: Get detailed alerts and logs in Teams when a check fails, degrades or recovers.
-            - paragraph [ref=e766]: Teams Integration
-          - link "Telegram logo Telegram Get alerts in your Telegram chats when a check fails, degrades or recovers. Telegram Integration" [ref=e767] [cursor=pointer]:
+            - generic [ref=e759]:
+              - generic [ref=e760]:
+                - img "Microsoft Teams logo" [ref=e761]
+                - heading "Microsoft Teams" [level=3] [ref=e762]
+              - paragraph [ref=e764]: Get detailed alerts and logs in Teams when a check fails, degrades or recovers.
+            - paragraph [ref=e765]: Teams Integration
+          - link "Telegram logo Telegram Get alerts in your Telegram chats when a check fails, degrades or recovers. Telegram Integration" [ref=e766] [cursor=pointer]:
             - /url: /docs/integrations/telegram/
-            - generic [ref=e768]:
-              - generic [ref=e769]:
-                - img "Telegram logo" [ref=e770]
-                - heading "Telegram" [level=3] [ref=e771]
-              - paragraph [ref=e773]: Get alerts in your Telegram chats when a check fails, degrades or recovers.
-            - paragraph [ref=e774]: Telegram Integration
-      - generic [ref=e776]:
-        - generic [ref=e777]:
-          - blockquote [ref=e778]:
-            - paragraph [ref=e779]:
-              - generic [ref=e780]:
-                - generic [ref=e781]: “
+            - generic [ref=e767]:
+              - generic [ref=e768]:
+                - img "Telegram logo" [ref=e769]
+                - heading "Telegram" [level=3] [ref=e770]
+              - paragraph [ref=e772]: Get alerts in your Telegram chats when a check fails, degrades or recovers.
+            - paragraph [ref=e773]: Telegram Integration
+      - generic [ref=e775]:
+        - generic [ref=e776]:
+          - blockquote [ref=e777]:
+            - paragraph [ref=e778]:
+              - generic [ref=e779]:
+                - generic [ref=e780]: “
                 - text: Checkly is super easy to use and fits perfectly in our toolchain.
-            - paragraph [ref=e782]:
+            - paragraph [ref=e781]:
               - text: We monitor our Vercel projects on preview and production to catch issues earlier and we can trust that we are the first ones to know about problems in production.
-              - generic [ref=e783]: ”
-          - img "Andreas Wixler" [ref=e784]
-          - heading "Andreas Wixler" [level=3] [ref=e786]:
-            - link "Andreas Wixler" [ref=e787] [cursor=pointer]:
+              - generic [ref=e782]: ”
+          - img "Andreas Wixler" [ref=e783]
+          - heading "Andreas Wixler" [level=3] [ref=e785]:
+            - link "Andreas Wixler" [ref=e786] [cursor=pointer]:
               - /url: "#andreas-wixler"
-          - paragraph [ref=e789]: CTO & Founder of Finn.auto
-          - link "Read Case Study" [ref=e790] [cursor=pointer]:
+          - paragraph [ref=e788]: CTO & Founder of Finn.auto
+          - link "Read Case Study" [ref=e789] [cursor=pointer]:
             - /url: /case-study/finn/
-        - img "A red car" [ref=e792]
-      - generic [ref=e794]:
-        - generic [ref=e795]:
-          - heading "What our customers say" [level=2] [ref=e797]:
-            - link "What our customers say" [ref=e798] [cursor=pointer]:
+        - img "A red car" [ref=e791]
+      - generic [ref=e793]:
+        - generic [ref=e794]:
+          - heading "What our customers say" [level=2] [ref=e796]:
+            - link "What our customers say" [ref=e797] [cursor=pointer]:
               - /url: "#what-our-customers-say"
-          - paragraph [ref=e800]: Transform your development workflow with a code-based monitoring process that's programmable, fast, and dependable.
-        - generic [ref=e801]:
-          - generic [ref=e802]:
-            - generic [ref=e803]:
-              - paragraph [ref=e806]: "\"Checkly CLI has enhanced our engineering team's ability to quickly build, validate and deploy an entire suite of checks from their local development environment.\""
-              - generic [ref=e807]:
-                - paragraph [ref=e809]: Tavares Chambless
-                - paragraph [ref=e811]: Manager, Quality Assurance, Loyal Health
-            - generic [ref=e812]:
-              - generic [ref=e813]:
-                - img "Railway logo" [ref=e814]
-                - paragraph [ref=e816]: "\"We've been using Checkly for the past months. It's been phenomenal. Super easy to get setup, works flawlessly and intuitively. The team are super receptive & quick to help\""
-              - generic [ref=e817]:
-                - img "Jake Cooper" [ref=e818]
-                - paragraph [ref=e820]: Jake Cooper
-                - paragraph [ref=e822]: Founder / Engineer railway.app
-            - generic [ref=e823]:
-              - generic [ref=e824]:
-                - img "1Password logo" [ref=e825]
-                - paragraph [ref=e827]: "\"Checkly is a fabulous developer tool! The flexible features and developer-friendly API made the integration super easy. Bonus: their support is super friendly and knowledgeable!\""
-              - generic [ref=e828]:
-                - paragraph [ref=e830]: Connor Hicks
-                - paragraph [ref=e832]: Lead Developer 1password.com
-            - generic [ref=e833]:
-              - generic [ref=e834]:
-                - img "Vercel logo" [ref=e835]
-                - paragraph [ref=e837]: "\"Checkly is incredible: It combines Pingdom, Ghost Inspector and Assertible all in the same app, and the insights are much more detailed.\""
-              - generic [ref=e838]:
-                - paragraph [ref=e840]: Leo Lamprecht
-                - paragraph [ref=e842]: SVP Product vercel.com
-            - generic [ref=e843]:
-              - paragraph [ref=e846]: "\"Checkly has helped us save engineering resources and expenses. The number of our customer support tickets are then reduced because the customer is already proactively informed about problems without having to report the issues themselves.\""
-              - generic [ref=e847]:
-                - paragraph [ref=e849]: Aliasger Kiranawala
-                - paragraph [ref=e851]: Lead Software Development Engineer in Test (SDET) at Locus
-            - generic [ref=e852]:
-              - paragraph [ref=e855]: "\"A real advantage that Checkly gives us is that we’re not waiting for our users to report an issue with a product, or waiting on a staff member to file a ticket—Checkly gives us real-time feedback on what is and isn’t working.\""
-              - generic [ref=e856]:
-                - paragraph [ref=e858]: Thomas Reither
-                - paragraph [ref=e860]: Associate Consultant
-            - generic [ref=e861]:
-              - generic [ref=e862]:
-                - img "commercetools" [ref=e863]
-                - paragraph [ref=e865]: "\"With the Checkly CLI... not only has the check administration become easier, but more people feel empowered to add and edit more checks, which has ultimately improved our monitoring efforts.\""
-              - generic [ref=e866]:
-                - img "Tobias Deekens" [ref=e867]
-                - paragraph [ref=e869]: Tobias Deekens
-                - paragraph [ref=e871]: Principal Engineer
-            - generic [ref=e872]:
-              - generic [ref=e873]:
-                - img "Kizen logo" [ref=e874]
-                - paragraph [ref=e876]: "\"It only took our team a day or two to evaluate Checkly and determine if it was the right fit for us. It only took me a few minutes to get a login check working and determine if we could login and validate that the CDN was up.\""
-              - generic [ref=e877]:
-                - paragraph [ref=e879]: Keegan Donley
-                - paragraph [ref=e881]: Senior Front-End Engineer
-          - generic [ref=e882]:
-            - button "scroll to previous card" [ref=e883] [cursor=pointer]:
-              - generic [ref=e884]: scroll to previous card
-              - img [ref=e885]
-            - button "scroll to next card" [ref=e887] [cursor=pointer]:
-              - generic [ref=e888]: scroll to next card
-              - img [ref=e889]
-      - generic [ref=e892]:
-        - generic [ref=e893]:
-          - heading "Confidence in what your ship, unified in a single platform" [level=2] [ref=e894]
-          - generic [ref=e895]:
-            - generic [ref=e896] [cursor=pointer]:
-              - heading "Testing" [level=3] [ref=e897]
-              - link [ref=e898]:
+          - paragraph [ref=e799]: Transform your development workflow with a code-based monitoring process that's programmable, fast, and dependable.
+        - generic [ref=e800]:
+          - generic [ref=e801]:
+            - generic [ref=e802]:
+              - paragraph [ref=e805]: "\"Checkly CLI has enhanced our engineering team's ability to quickly build, validate and deploy an entire suite of checks from their local development environment.\""
+              - generic [ref=e806]:
+                - paragraph [ref=e808]: Tavares Chambless
+                - paragraph [ref=e810]: Manager, Quality Assurance, Loyal Health
+            - generic [ref=e811]:
+              - generic [ref=e812]:
+                - img "Railway logo" [ref=e813]
+                - paragraph [ref=e815]: "\"We've been using Checkly for the past months. It's been phenomenal. Super easy to get setup, works flawlessly and intuitively. The team are super receptive & quick to help\""
+              - generic [ref=e816]:
+                - img "Jake Cooper" [ref=e817]
+                - paragraph [ref=e819]: Jake Cooper
+                - paragraph [ref=e821]: Founder / Engineer railway.app
+            - generic [ref=e822]:
+              - generic [ref=e823]:
+                - img "1Password logo" [ref=e824]
+                - paragraph [ref=e826]: "\"Checkly is a fabulous developer tool! The flexible features and developer-friendly API made the integration super easy. Bonus: their support is super friendly and knowledgeable!\""
+              - generic [ref=e827]:
+                - paragraph [ref=e829]: Connor Hicks
+                - paragraph [ref=e831]: Lead Developer 1password.com
+            - generic [ref=e832]:
+              - generic [ref=e833]:
+                - img "Vercel logo" [ref=e834]
+                - paragraph [ref=e836]: "\"Checkly is incredible: It combines Pingdom, Ghost Inspector and Assertible all in the same app, and the insights are much more detailed.\""
+              - generic [ref=e837]:
+                - paragraph [ref=e839]: Leo Lamprecht
+                - paragraph [ref=e841]: SVP Product vercel.com
+            - generic [ref=e842]:
+              - paragraph [ref=e845]: "\"Checkly has helped us save engineering resources and expenses. The number of our customer support tickets are then reduced because the customer is already proactively informed about problems without having to report the issues themselves.\""
+              - generic [ref=e846]:
+                - paragraph [ref=e848]: Aliasger Kiranawala
+                - paragraph [ref=e850]: Lead Software Development Engineer in Test (SDET) at Locus
+            - generic [ref=e851]:
+              - paragraph [ref=e854]: "\"A real advantage that Checkly gives us is that we’re not waiting for our users to report an issue with a product, or waiting on a staff member to file a ticket—Checkly gives us real-time feedback on what is and isn’t working.\""
+              - generic [ref=e855]:
+                - paragraph [ref=e857]: Thomas Reither
+                - paragraph [ref=e859]: Associate Consultant
+            - generic [ref=e860]:
+              - generic [ref=e861]:
+                - img "commercetools" [ref=e862]
+                - paragraph [ref=e864]: "\"With the Checkly CLI... not only has the check administration become easier, but more people feel empowered to add and edit more checks, which has ultimately improved our monitoring efforts.\""
+              - generic [ref=e865]:
+                - img "Tobias Deekens" [ref=e866]
+                - paragraph [ref=e868]: Tobias Deekens
+                - paragraph [ref=e870]: Principal Engineer
+            - generic [ref=e871]:
+              - generic [ref=e872]:
+                - img "Kizen logo" [ref=e873]
+                - paragraph [ref=e875]: "\"It only took our team a day or two to evaluate Checkly and determine if it was the right fit for us. It only took me a few minutes to get a login check working and determine if we could login and validate that the CDN was up.\""
+              - generic [ref=e876]:
+                - paragraph [ref=e878]: Keegan Donley
+                - paragraph [ref=e880]: Senior Front-End Engineer
+          - generic [ref=e881]:
+            - button "scroll to previous card" [ref=e882] [cursor=pointer]:
+              - generic [ref=e883]: scroll to previous card
+              - img [ref=e884]
+            - button "scroll to next card" [ref=e886] [cursor=pointer]:
+              - generic [ref=e887]: scroll to next card
+              - img [ref=e888]
+      - generic [ref=e891]:
+        - generic [ref=e892]:
+          - heading "Confidence in what your ship, unified in a single platform" [level=2] [ref=e893]
+          - generic [ref=e894]:
+            - generic [ref=e895] [cursor=pointer]:
+              - heading "Testing" [level=3] [ref=e896]
+              - link [ref=e897]:
                 - /url: "#"
-                - img [ref=e899]
-            - generic [ref=e901] [cursor=pointer]:
-              - heading "Monitoring" [level=3] [ref=e902]
-              - link [ref=e903]:
+                - img [ref=e898]
+            - generic [ref=e900] [cursor=pointer]:
+              - heading "Monitoring" [level=3] [ref=e901]
+              - link [ref=e902]:
                 - /url: "#"
-                - img [ref=e904]
-            - generic [ref=e906] [cursor=pointer]:
-              - heading "Observability" [level=3] [ref=e907]
-              - link [ref=e908]:
+                - img [ref=e903]
+            - generic [ref=e905] [cursor=pointer]:
+              - heading "Observability" [level=3] [ref=e906]
+              - link [ref=e907]:
                 - /url: "#"
-                - img [ref=e909]
-            - generic [ref=e911] [cursor=pointer]:
-              - heading "Incident Management" [level=3] [ref=e912]
-              - link [ref=e913]:
+                - img [ref=e908]
+            - generic [ref=e910] [cursor=pointer]:
+              - heading "Incident Management" [level=3] [ref=e911]
+              - link [ref=e912]:
                 - /url: "#"
-                - img [ref=e914]
-          - paragraph [ref=e917]: Get started with the entire Checkly platform today for free.
-          - link "Get Started" [ref=e919] [cursor=pointer]:
+                - img [ref=e913]
+          - paragraph [ref=e916]: Get started with the entire Checkly platform today for free.
+          - link "Get Started" [ref=e918] [cursor=pointer]:
             - /url: https://app.checklyhq.com/signup
-        - generic [ref=e923]:
-          - generic [ref=e929]:
-            - img [ref=e930]
-            - generic [ref=e933]: https://app.checklyhq.com
-          - img [ref=e935]
-    - contentinfo [ref=e949]:
-      - generic [ref=e950]:
-        - generic [ref=e951]:
-          - generic [ref=e952]:
-            - paragraph [ref=e954]: Product
-            - link "Monitoring as code" [ref=e955] [cursor=pointer]:
+        - generic [ref=e922]:
+          - generic [ref=e928]:
+            - img [ref=e929]
+            - generic [ref=e932]: https://app.checklyhq.com
+          - img [ref=e934]
+    - contentinfo [ref=e948]:
+      - generic [ref=e949]:
+        - generic [ref=e950]:
+          - generic [ref=e951]:
+            - paragraph [ref=e953]: Product
+            - link "Monitoring as code" [ref=e954] [cursor=pointer]:
               - /url: /product/monitoring-as-code/
-            - link "Synthetic monitoring" [ref=e956] [cursor=pointer]:
+            - link "Synthetic monitoring" [ref=e955] [cursor=pointer]:
               - /url: /product/synthetic-monitoring/
-            - link "API monitoring" [ref=e957] [cursor=pointer]:
+            - link "API monitoring" [ref=e956] [cursor=pointer]:
               - /url: /product/api-monitoring/
-            - link "Alerting" [ref=e958] [cursor=pointer]:
+            - link "Alerting" [ref=e957] [cursor=pointer]:
               - /url: /product/alerting/
-            - link "Private locations" [ref=e959] [cursor=pointer]:
+            - link "Private locations" [ref=e958] [cursor=pointer]:
               - /url: /product/private-locations/
-            - link "Integrations" [ref=e960] [cursor=pointer]:
+            - link "Integrations" [ref=e959] [cursor=pointer]:
               - /url: /integrations/
-            - link "Dashboards" [ref=e961] [cursor=pointer]:
+            - link "Dashboards" [ref=e960] [cursor=pointer]:
               - /url: /product/dashboards/
-            - link "Live Checkly dashboard" [ref=e962] [cursor=pointer]:
+            - link "Live Checkly dashboard" [ref=e961] [cursor=pointer]:
               - /url: https://status.checklyhq.com/
-            - link "Changelog" [ref=e963] [cursor=pointer]:
+            - link "Changelog" [ref=e962] [cursor=pointer]:
               - /url: https://feedback.checklyhq.com/changelog
-            - link "Pricing" [ref=e964] [cursor=pointer]:
+            - link "Pricing" [ref=e963] [cursor=pointer]:
               - /url: /pricing/
-            - link "Status" [ref=e965] [cursor=pointer]:
+            - link "Status" [ref=e964] [cursor=pointer]:
               - /url: https://is.checkly.online/
-          - generic [ref=e966]:
-            - paragraph [ref=e968]: Company
-            - link "About" [ref=e969] [cursor=pointer]:
+          - generic [ref=e965]:
+            - paragraph [ref=e967]: Company
+            - link "About" [ref=e968] [cursor=pointer]:
               - /url: /about/
-            - link "Careers" [ref=e970] [cursor=pointer]:
+            - link "Careers" [ref=e969] [cursor=pointer]:
               - /url: /careers/
-            - link "Blog" [ref=e971] [cursor=pointer]:
+            - link "Blog" [ref=e970] [cursor=pointer]:
               - /url: /blog/
-            - link "Security" [ref=e972] [cursor=pointer]:
+            - link "Security" [ref=e971] [cursor=pointer]:
               - /url: /security/
-            - link "Terms of use" [ref=e973] [cursor=pointer]:
+            - link "Terms of use" [ref=e972] [cursor=pointer]:
               - /url: /terms/
-            - link "Privacy" [ref=e974] [cursor=pointer]:
+            - link "Privacy" [ref=e973] [cursor=pointer]:
               - /url: /privacy/
-          - generic [ref=e975]:
-            - paragraph [ref=e977]: Monitoring as code
-            - link "Checkly CLI" [ref=e978] [cursor=pointer]:
+          - generic [ref=e974]:
+            - paragraph [ref=e976]: Monitoring as code
+            - link "Checkly CLI" [ref=e977] [cursor=pointer]:
               - /url: /product/cli/
-            - link "Pulumi Provider" [ref=e979] [cursor=pointer]:
+            - link "Pulumi Provider" [ref=e978] [cursor=pointer]:
               - /url: /product/pulumi-provider/
-            - link "Terraform Provider" [ref=e980] [cursor=pointer]:
+            - link "Terraform Provider" [ref=e979] [cursor=pointer]:
               - /url: /product/terraform-provider/
-          - generic [ref=e981]:
-            - paragraph [ref=e983]: Connect
-            - link "Contact Us" [ref=e984] [cursor=pointer]:
+          - generic [ref=e980]:
+            - paragraph [ref=e982]: Connect
+            - link "Contact Us" [ref=e983] [cursor=pointer]:
               - /url: /contact-sales/
-            - link "Support" [ref=e985] [cursor=pointer]:
+            - link "Support" [ref=e984] [cursor=pointer]:
               - /url: mailto:support@checklyhq.com
-            - link "Slack Community" [ref=e986] [cursor=pointer]:
+            - link "Slack Community" [ref=e985] [cursor=pointer]:
               - /url: /slack/
-            - link "Twitter @ChecklyHQ" [ref=e987] [cursor=pointer]:
+            - link "Twitter @ChecklyHQ" [ref=e986] [cursor=pointer]:
               - /url: https://twitter.com/checklyhq
-            - link "YouTube" [ref=e988] [cursor=pointer]:
+            - link "YouTube" [ref=e987] [cursor=pointer]:
               - /url: https://youtube.com/checklyhq
-            - link "LinkedIn" [ref=e989] [cursor=pointer]:
+            - link "LinkedIn" [ref=e988] [cursor=pointer]:
               - /url: https://linkedin.com/company/checkly
-            - link "Public roadmap" [ref=e990] [cursor=pointer]:
+            - link "Public roadmap" [ref=e989] [cursor=pointer]:
               - /url: https://feedback.checklyhq.com
-          - generic [ref=e991]:
-            - paragraph [ref=e993]: Learn
-            - link "Docs" [ref=e994] [cursor=pointer]:
+          - generic [ref=e990]:
+            - paragraph [ref=e992]: Learn
+            - link "Docs" [ref=e993] [cursor=pointer]:
               - /url: /docs/
-            - link "Checkly Guides" [ref=e995] [cursor=pointer]:
+            - link "Checkly Guides" [ref=e994] [cursor=pointer]:
               - /url: /guides/
-            - link "Playwright Tips" [ref=e996] [cursor=pointer]:
+            - link "Playwright Tips" [ref=e995] [cursor=pointer]:
               - /url: /learn/playwright/
-          - generic [ref=e997]:
-            - paragraph [ref=e999]: How we compare
-            - link "Alternative to Datadog" [ref=e1000] [cursor=pointer]:
+          - generic [ref=e996]:
+            - paragraph [ref=e998]: How we compare
+            - link "Alternative to Datadog" [ref=e999] [cursor=pointer]:
               - /url: /datadog-alternative/
-            - link "Alternative to New Relic" [ref=e1001] [cursor=pointer]:
+            - link "Alternative to New Relic" [ref=e1000] [cursor=pointer]:
               - /url: /new-relic-alternative/
-            - link "Alternative to Dynatrace" [ref=e1002] [cursor=pointer]:
+            - link "Alternative to Dynatrace" [ref=e1001] [cursor=pointer]:
               - /url: /dynatrace-alternative/
-            - link "Alternative to Pingdom" [ref=e1003] [cursor=pointer]:
+            - link "Alternative to Pingdom" [ref=e1002] [cursor=pointer]:
               - /url: /alternative-pingdom/
-            - link "Alternative to Runscope" [ref=e1004] [cursor=pointer]:
+            - link "Alternative to Runscope" [ref=e1003] [cursor=pointer]:
               - /url: /alternative-runscope/
-          - generic [ref=e1005]:
-            - paragraph [ref=e1007]: Articles
-            - link "What is Synthetic Monitoring?" [ref=e1008] [cursor=pointer]:
+          - generic [ref=e1004]:
+            - paragraph [ref=e1006]: Articles
+            - link "What is Synthetic Monitoring?" [ref=e1007] [cursor=pointer]:
               - /url: /learn/monitoring/synthetic-monitoring/
-            - link "What is API monitoring?" [ref=e1009] [cursor=pointer]:
+            - link "What is API monitoring?" [ref=e1008] [cursor=pointer]:
               - /url: /learn/monitoring/api-monitoring/
-            - link "What is Playwright?" [ref=e1010] [cursor=pointer]:
+            - link "What is Playwright?" [ref=e1009] [cursor=pointer]:
               - /url: /learn/playwright/what-is-playwright/
-            - link "A guide to Monitoring as Code" [ref=e1011] [cursor=pointer]:
+            - link "A guide to Monitoring as Code" [ref=e1010] [cursor=pointer]:
               - /url: /learn/monitoring/monitoring-as-code/
-            - link "Why Monitoring as Code?" [ref=e1012] [cursor=pointer]:
+            - link "Why Monitoring as Code?" [ref=e1011] [cursor=pointer]:
               - /url: /product/monitoring-as-code/
-            - link "Playwright vs other frameworks" [ref=e1013] [cursor=pointer]:
+            - link "Playwright vs other frameworks" [ref=e1012] [cursor=pointer]:
               - /url: /learn/playwright/playwright-vs-others/
-        - generic [ref=e1014]:
-          - generic [ref=e1015]:
-            - generic [ref=e1016]:
-              - link "Hi!" [ref=e1017] [cursor=pointer]:
+        - generic [ref=e1013]:
+          - generic [ref=e1014]:
+            - generic [ref=e1015]:
+              - link "Hi!" [ref=e1016] [cursor=pointer]:
                 - /url: /
-                - img [ref=e1018]
-              - link "Available in AWS Marketplace" [ref=e1023] [cursor=pointer]:
+                - img [ref=e1017]
+              - link "Available in AWS Marketplace" [ref=e1022] [cursor=pointer]:
                 - /url: https://aws.amazon.com/marketplace/pp/prodview-cntlyhi5si6ka?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
-                - img "Available in AWS Marketplace" [ref=e1024]
-            - generic [ref=e1025]:
-              - link "Learn more about Checkly’s Gartner Cool Vendor recognition" [ref=e1026] [cursor=pointer]:
+                - img "Available in AWS Marketplace" [ref=e1023]
+            - generic [ref=e1024]:
+              - link "Learn more about Checkly’s Gartner Cool Vendor recognition" [ref=e1025] [cursor=pointer]:
                 - /url: /checkly-and-monitoring-as-code-mac-earn-third-gartner/
-                - img "Learn more about Checkly’s Gartner Cool Vendor recognition" [ref=e1027]
-              - link "SOC Certification" [ref=e1028] [cursor=pointer]:
+                - img "Learn more about Checkly’s Gartner Cool Vendor recognition" [ref=e1026]
+              - link "SOC Certification" [ref=e1027] [cursor=pointer]:
                 - /url: /security/
-                - img "SOC Certification" [ref=e1029]
-          - generic [ref=e1030]: Copyright © 2026 Checkly Inc. All rights reserved.
-  - alert [ref=e1031]
-  - generic [ref=e1033]:
-    - button "×" [ref=e1035] [cursor=pointer]
-    - generic [ref=e1036]:
-      - heading "Introducing Rocky AI" [level=4] [ref=e1037]
-      - paragraph [ref=e1038]: Rocky AI is now available for all Checkly users to analyze and investigate failures as they happen with the power of AI.
-      - link "Learn More" [ref=e1039] [cursor=pointer]:
+                - img "SOC Certification" [ref=e1028]
+          - generic [ref=e1029]: Copyright © 2026 Checkly Inc. All rights reserved.
+  - alert [ref=e1030]
+  - generic [ref=e1032]:
+    - button "×" [ref=e1034] [cursor=pointer]
+    - generic [ref=e1035]:
+      - heading "Introducing Rocky AI" [level=4] [ref=e1036]
+      - paragraph [ref=e1037]: Rocky AI is now available for all Checkly users to analyze and investigate failures as they happen with the power of AI.
+      - link "Learn More" [ref=e1038] [cursor=pointer]:
         - /url: https://www.checklyhq.com/product/ai-analysis/
-  - button [ref=e1040] [cursor=pointer]:
-    - img [ref=e1041]
+  - button [ref=e1039] [cursor=pointer]:
+    - img [ref=e1040]
 ```

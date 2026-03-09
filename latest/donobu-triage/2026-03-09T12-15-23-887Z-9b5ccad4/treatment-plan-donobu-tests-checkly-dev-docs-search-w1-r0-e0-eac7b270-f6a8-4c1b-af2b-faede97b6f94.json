@@ -1,0 +1,65 @@
+{
+  "generatedAtIso": "2026-03-09T12:19:04.365Z",
+  "plan": {
+    "failureSummary": "The AI agent used a stale deterministic cache to interact with the page. Although it reported success, the click on the 'Documentation' link used a negative Y-coordinate (-247px), which failed to trigger navigation. Consequently, the test remained on the homepage, causing the URL assertion to fail.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "negative coordinate in click tool call (-247px)",
+      "assertionsFailedAfterSuccessfulPageAi === true",
+      "URL did not change after reported click on link"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Delete the test cache and retry the test.",
+        "details": "Remove the cached .cache-lock/<spec-file>.cache.js entry so page.ai regenerates selectors against the live DOM,\nthen rerun the automation to confirm recovery before escalating."
+      },
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Retry with cleared page.ai cache",
+        "details": "Execute the test with the 'clearPageAiCache' directive to force the agent to re-evaluate the page structure."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Verify dropdown interaction logic",
+        "details": "If a fresh run still fails, manually inspect the 'Resources' dropdown behavior to ensure the 'Documentation' link is visible and interactable."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The negative coordinate in tool call adhoc_768f0f936a504253b30ae1ab0b020985 is a definitive indicator of stale cache/miscalculated positioning. Clearing the cache should allow the agent to re-analyze the page and find the correct element.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/checkly.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/advanced/checkly.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 16164,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-09T12-15-23-887Z-9b5ccad4",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-09T12-15-23-887Z-9b5ccad4",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-09T12-15-23-887Z-9b5ccad4/failure-evidence-donobu-tests-checkly-dev-docs-search-w1-r0-e0-eac7b270-f6a8-4c1b-af2b-faede97b6f94.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-09T12-15-23-887Z-9b5ccad4/initial-playwright-report.json"
+}
