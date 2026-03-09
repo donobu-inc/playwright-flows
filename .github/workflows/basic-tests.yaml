@@ -23,12 +23,7 @@ jobs:
         continue-on-error: true
         env:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
-          USER_NAME: ${{ secrets.USER_NAME }}
-          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-          CARD_NUMBER: ${{ secrets.CARD_NUMBER }}
-          CARD_EXPIRY: ${{ secrets.CARD_EXPIRY }}
-          CARD_CVC: ${{ secrets.CARD_CVC }}
-        run: npx donobu test tests/basic --auto-heal
+        run: npx donobu test tests/basic
 
       - name: Generate Test Reports
         if: always()
@@ -56,15 +51,3 @@ jobs:
           else
             echo "SLACK_WEBHOOK_URL secret not present, skipping Slack notification."
           fi
-
-      # Create a self-healing PR only when this workflow was not triggered by a pull-request.
-      - name: Automatically create a pull request for fixing failed tests (if any)
-        if: ${{ github.event_name != 'pull_request' }}
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Fix failing Playwright tests'
-          title: '[Fixed] Playwright tests'
-          body: 'Fix failing Playwright tests'
-          branch: fix-playwright-tests-for-${{ github.ref_name }}
-          base: ${{ github.ref_name }}
