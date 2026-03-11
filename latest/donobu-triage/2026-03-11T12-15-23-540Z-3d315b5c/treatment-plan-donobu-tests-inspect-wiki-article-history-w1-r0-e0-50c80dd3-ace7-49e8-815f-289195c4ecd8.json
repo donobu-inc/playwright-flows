@@ -1,0 +1,64 @@
+{
+  "generatedAtIso": "2026-03-11T12:19:24.458Z",
+  "plan": {
+    "failureSummary": "The 'page.ai' operation timed out during the extraction phase (60000ms) despite the autonomous agent successfully completing the navigation and interaction steps.",
+    "failureReason": "TIMING_OR_SYNCHRONISATION",
+    "confidence": 0.85,
+    "observedIndicators": [
+      "Extract operation timed out after 60000 milliseconds",
+      "markObjectiveComplete success: true",
+      "usedDeterministicMode: true"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Retry with cleared page.ai cache",
+        "details": "Execute the test again with 'clearPageAiCache: true'. This will force a fresh analysis of the page state and may bypass an inefficient cached extraction path."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Decouple navigation from data extraction",
+        "details": "The instruction combines navigation, sorting, and extraction. If the timeout persists, separate the navigation/sorting into a standard page.ai action or scripted steps, and use a dedicated page.ai call or standard Playwright locator for the extraction of the specific date."
+      },
+      {
+        "category": "ADJUST_TIMING",
+        "summary": "Increase page.ai extraction timeout",
+        "details": "If the Wikipedia history page is exceptionally large, the extraction process may legitimately require more than 60 seconds. Consider increasing the timeout for the page.ai call."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The donobuFlow logs show that 'markObjectiveComplete' was successfully reached, but the final data extraction to match the Zod schema timed out. Wikipedia history pages can be extremely large, which may overwhelm the extraction engine's parsing logic or exceed the default timeout when in DETERMINISTIC mode if the cached extraction path is no longer optimal.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "wikipedia-assert.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Inspect Wiki article history",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/wikipedia-assert.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 76496,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-11T12-15-23-540Z-3d315b5c",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-11T12-15-23-540Z-3d315b5c",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-11T12-15-23-540Z-3d315b5c/failure-evidence-donobu-tests-inspect-wiki-article-history-w1-r0-e0-50c80dd3-ace7-49e8-815f-289195c4ecd8.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-11T12-15-23-540Z-3d315b5c/initial-playwright-report.json"
+}
