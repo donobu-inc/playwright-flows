@@ -1,0 +1,55 @@
+{
+  "generatedAtIso": "2026-03-12T19:56:20.821Z",
+  "plan": {
+    "failureSummary": "The test failed during a deterministic execution because it attempted to click a close button (×) that could not be resolved on the current page. This element was likely part of a cached interaction (e.g., dismissing a banner) that is no longer present or has changed structure.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === false (incorrectly reported by heuristic, actually failed in tool call)",
+      "Failure screenshot shows homepage but tool call attempted interaction with a likely transient element (× button)",
+      "History shows a mixed pass rate, suggesting intermittent UI elements or stale cache issues"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear cache and retry automation.",
+        "details": "Clear the page.ai cache for this test and re-run. The autonomous agent should naturally navigate the updated UI or ignore the missing close button."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot shows the homepage with a banner, but the cached sequence tried to click an '×' button that isn't findable. Clearing the cache will allow the autonomous agent to re-evaluate the page and proceed with the 'Resources' menu navigation.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 7417,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-12T19-52-59-129Z-320675c1",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-12T19-52-59-129Z-320675c1",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-12T19-52-59-129Z-320675c1/failure-evidence-donobu-tests-checkly-dev-docs-search-w1-r0-e0-255919bd-0018-41b3-8a02-4f070a98e774.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
