@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-03-12T18:32:11.714Z",
+  "plan": {
+    "failureSummary": "The test failed during a deterministic (cached) run while attempting to click a 'close' button (×) that was not present on the page. This is a stale cache scenario where the previous run encountered a modal or banner that no longer exists.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "Deterministic mode (cached) was active",
+      "Instruction was to click 'Resources', but tool attempted to click '×' button",
+      "Failure screenshot does not show the '×' button or any modal/banner",
+      "Pass rate is 50%, suggesting environmental or cache volatility"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear AI cache and retry test",
+        "details": "Clear the page.ai cache for this test and re-run. This will force the autonomous agent to re-scan the page and generate fresh instructions that ignore the missing close button."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Add explicit handling for intermittent UI elements if retry fails",
+        "details": "If the '×' button belongs to a cookie banner that is inconsistent, consider adding a global handler or updating the AI instruction to 'Handle any popups then go to developer docs'."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot shows the Checkly homepage without any visible modals or cookie banners. However, the tool call logs show the automation attempted to click './/button[normalize-space(.)=\"×\"]'. This indicates the cached sequence of actions contains a step for an element that has since been removed or is no longer appearing, causing the deterministic playback to fail.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 8926,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-12T18-29-13-066Z-d7cdc17b",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-12T18-29-13-066Z-d7cdc17b",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-12T18-29-13-066Z-d7cdc17b/failure-evidence-donobu-tests-checkly-dev-docs-search-w1-r0-e0-67b83786-e85a-40db-8df9-3b668c2efbb4.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}

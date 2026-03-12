@@ -18,7 +18,7 @@
   - generic [ref=e24]:
     - generic [ref=e25]: "Current Time:"
     - generic [ref=e26]:
-      - generic [ref=e27]: 17:44:27
+      - generic [ref=e27]: 18:30:50
       - generic [ref=e28]: Set 1
   - generic [ref=e29]:
     - heading "Tell us about yourself" [level=2] [ref=e30]
@@ -32,7 +32,7 @@
         - generic [ref=e36]: Email Address *
         - textbox "Email Address *" [active] [ref=e37]:
           - /placeholder: Enter your email address
-          - text: johndoe+6yJPNEXH5I@example.com
+          - text: johndoe+FATIxN1QBU@example.com
       - generic [ref=e38]:
         - generic [ref=e39]: Age Group *
         - radiogroup [ref=e40]:
