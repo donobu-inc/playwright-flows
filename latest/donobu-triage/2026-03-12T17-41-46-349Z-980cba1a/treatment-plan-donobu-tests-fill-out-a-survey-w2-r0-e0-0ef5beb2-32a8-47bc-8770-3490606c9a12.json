@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-03-12T17:45:27.528Z",
+  "plan": {
+    "failureSummary": "The test failed because the deterministic cache contains stale selectors (IDs like ':rl:') that do not match the current page state (where IDs like ':r0:' and ':r1:' are observed). Additionally, the cached flow expects a 'Select your occupation' field which is not immediately visible or has been replaced by 'Age Group'.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "isRetryAttempt === false",
+      "selectorFailedDuringPageAi === true",
+      "Dynamic ID mismatch (cached :rj: vs actual :r0:)",
+      "Semantic intent 'Fill out survey' is highly flexible"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry test.",
+        "details": "Execute the test again with the 'clearPageAiCache' directive enabled to force the AI to re-scan the form and generate fresh, valid selectors."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Review form structure for missing fields.",
+        "details": "If the issue persists after clearing the cache, review the survey form to ensure the 'Select your occupation' field exists or update the test expectations if the form structure has fundamentally changed."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The application name 'unstable-survey' suggests frequent UI changes. The mismatch between cached selectors and the actual DOM IDs confirms the cache is stale. Since the semantic intent is broad ('Fill out all survey questions'), clearing the cache and allowing the AI to re-analyze the form should resolve the issue.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 19462,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-12T17-41-46-349Z-980cba1a",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-12T17-41-46-349Z-980cba1a",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-12T17-41-46-349Z-980cba1a/failure-evidence-donobu-tests-fill-out-a-survey-w2-r0-e0-0ef5beb2-32a8-47bc-8770-3490606c9a12.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
