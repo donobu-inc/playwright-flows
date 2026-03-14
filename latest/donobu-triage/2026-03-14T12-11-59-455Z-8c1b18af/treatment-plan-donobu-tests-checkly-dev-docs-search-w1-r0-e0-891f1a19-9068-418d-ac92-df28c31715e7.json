@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-03-14T12:14:46.338Z",
+  "plan": {
+    "failureSummary": "The test failed during a cached 'click' action on a '×' (close) button that no longer exists or has changed on the homepage.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "isRetryAttempt === false",
+      "Failure on '×' button click which is not part of the explicit test instructions but likely a cached interstitial action",
+      "History shows alternating SUCCESS/FAILED pattern, suggesting a recurring cache staleness or UI flakiness issue",
+      "Failure screenshot shows the homepage where the action was attempted, but the target element is missing or changed compared to what the deterministic cache expects"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry.",
+        "details": "Execute the test again with the 'clearPageAiCache' directive. This will force the autonomous agent to re-scan the page and ignore the stale cached selector for the '×' button."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Allow AI to self-heal the selector during retry.",
+        "details": "If the '×' button is a persistent banner that changed its DOM structure, the AI will naturally pick up the new selector during the retry. No manual code change is expected to be necessary."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The failure occurred in DETERMINISTIC mode. The recorded flow attempted to click a 'close' button (selector: //button[normalize-space(.)='×']), likely associated with a promotional banner or popup present in previous runs. The failure screenshot shows the Checkly homepage with a 'Rocky AI' banner but no obvious '×' button matching the cached selector. Because this is the first attempt (not a retry), clearing the cache to allow the AI to re-evaluate the page structure is the most effective fix.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 8768,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-14T12-11-59-455Z-8c1b18af",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-14T12-11-59-455Z-8c1b18af",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-14T12-11-59-455Z-8c1b18af/failure-evidence-donobu-tests-checkly-dev-docs-search-w1-r0-e0-891f1a19-9068-418d-ac92-df28c31715e7.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
