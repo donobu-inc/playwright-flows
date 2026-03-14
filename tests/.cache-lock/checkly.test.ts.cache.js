@@ -15,17 +15,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Closing the promotional modal to reveal the main navigation menu and access the 'Resources' dropdown.
-        await page
-          .find(".//button[normalize-space(.)='×']", {
-            failover: [
-              'html > body > div:nth-of-type(2) > div > div:nth-of-type(1) > button',
-              'body > div:nth-of-type(2) > div > div:nth-of-type(1) > button',
-            ],
-          })
-          .click('left');
-
-        // Opening the 'Resources' dropdown menu to find the 'developer docs' option.
+        // Clicking on the 'Resources' dropdown menu to reveal the developer docs option.
         await page
           .find(
             '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)',
@@ -38,9 +28,9 @@ module.exports = {
           )
           .click('left');
 
-        // Clicking on the 'Documentation' link within the 'Resources' dropdown, which represents the developer docs.
+        // Clicking on the 'Documentation' link under the 'DEVELOPERS' section as it corresponds to the 'developer docs' option.
         await page
-          .find(".//a[normalize-space(.)='Documentation']", {
+          .find("(.//a[normalize-space(.)='Documentation'])[1]", {
             failover: [
               "li:nth-of-type(1) > [href='/docs/']",
               'div:nth-of-type(1) > ul > li:nth-of-type(1) > a.text-base',
@@ -48,10 +38,10 @@ module.exports = {
           })
           .click('left');
 
-        // The objective was to click on the Resources dropdown and then the developer docs option. I have reached the Checkly Documentation page, which is the developer docs.
+        // The objective was to navigate to the developer docs from the Resources dropdown menu. This has been achieved as the browser is now on the documentation page.
         await page.run('markObjectiveComplete', {
           details:
-            "I have successfully navigated to the developer documentation by clicking on the 'Resources' dropdown menu and then selecting 'Documentation'. The browser is now at 'https://www.checklyhq.com/docs/'.",
+            "The 'Resources' dropdown menu was clicked, followed by the 'Documentation' link within the 'DEVELOPERS' section, leading to the Checkly Documentation page.",
         });
       },
     },
@@ -63,24 +53,24 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the search bar to initiate the search for "Playwright check suite".
+        // Clicking the search bar to initiate the search for "Playwright check suite" as per the objective.
         await page
           .find('#search-bar-entry', {
             failover: [
               "div:nth-of-type(2) > [aria-label='Open search']",
-              ".//button[normalize-space(.)='Search...⌘K']",
+              ".//button[normalize-space(.)='Search...Ctrl K']",
             ],
           })
           .click('left');
 
-        // Typing the search query "Playwright check suite" to generate search suggestions. Enter is not pressed to allow for typeahead selection.
+        // Typing "Playwright check suite" into the search field to trigger the typeahead search suggestions, as instructed by the objective.
         await page
           .find('#search-input', {
             failover: ["[placeholder='Search...']", "[role='combobox']"],
           })
           .inputText('Playwright check suite');
 
-        // Selecting the search suggestion for "Constructs > DETECT" as per the objective.
+        // Choosing the "Constructs > DETECT" match for "Playwright check suite" from the search suggestions dropdown as specified in the objective.
         await page
           .find(
             "[href='/docs/constructs/playwright-check#playwright-check-suite']",
@@ -93,10 +83,10 @@ module.exports = {
           )
           .click('left');
 
-        // The objective has been met: the search was performed, and the specific suggestion "Constructs > DETECT" was chosen from the typeahead dropdown without submitting via Enter.
+        // The objective has been fulfilled by navigating to the specific documentation page requested via the search suggestions.
         await page.run('markObjectiveComplete', {
           details:
-            'I searched for "Playwright check suite", and selected the "Constructs > DETECT" suggestion from the dropdown, which navigated to the "Playwright Check Suites" documentation page.',
+            'I have successfully searched for "Playwright check suite" and selected the "Constructs > DETECT" match from the search suggestions, which led to the "Playwright Check Suites" documentation page.',
         });
       },
     },
