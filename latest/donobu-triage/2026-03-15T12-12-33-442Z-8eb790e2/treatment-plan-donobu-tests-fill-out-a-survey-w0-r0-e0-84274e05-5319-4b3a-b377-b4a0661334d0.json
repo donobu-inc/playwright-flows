@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-03-15T12:16:05.590Z",
+  "plan": {
+    "failureSummary": "The test failed because it attempted to click a 'Select your occupation' button that does not exist in the current page state, likely due to a stale AI cache or a dynamic form variation.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "usedDeterministicMode === true (Stale cache likely)",
+      "selectorFailedDuringPageAi === true",
+      "Visual mismatch: Element 'Select your occupation' is missing from the failure screenshot",
+      "UI contains 'Set 1' button, suggesting dynamic or A/B tested content",
+      "Historical pass rate is 66%, indicating intermittent layout changes or flakiness"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear AI cache and retry test autonomous mode.",
+        "details": "Clear the Donobu AI cache for this test and retry. This will allow the autonomous agent to re-examine the page and adapt to the current form structure (e.g., selecting Age Group instead of Occupation)."
+      },
+      {
+        "category": "STABILIZE_DEPENDENCIES",
+        "summary": "Investigate if 'Set 1' indicates a dynamic form variation.",
+        "details": "If the application intentionally rotates form fields (A/B testing), consider providing more generic instructions to the AI or ensuring the test handles all possible variations."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot shows a form with 'Last Name', 'Email Address', and 'Age Group', but no 'Occupation' field. The presence of a 'Set 1' button suggests the page might have multiple form variations. Since deterministic mode was used, the automation tried to apply a selector from a previous successful run that doesn't match the current UI.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 22759,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-15T12-12-33-442Z-8eb790e2",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-15T12-12-33-442Z-8eb790e2",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-15T12-12-33-442Z-8eb790e2/failure-evidence-donobu-tests-fill-out-a-survey-w0-r0-e0-84274e05-5319-4b3a-b377-b4a0661334d0.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
