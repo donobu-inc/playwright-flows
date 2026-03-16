@@ -1,13 +1,11 @@
-import { defineConfig, devices } from 'donobu';
+import { defineConfig } from 'donobu';
 
 export default defineConfig({
   testDir: './tests',
   projects: [
     {
-      name: 'Donobu Tests',
-      testMatch: '**/*.test.ts',
-      use: { ...devices['Desktop Chromium'] },
-      timeout: 240000,
+      name: 'Donobu-based Tests',
+      testMatch: 'tests/**/*.test.ts',
     },
   ],
   use: {
@@ -18,4 +16,5 @@ export default defineConfig({
     ['github'],
     ['json', { outputFile: 'test-results/playwright-report.json' }],
   ],
+  timeout: 240000
 });
