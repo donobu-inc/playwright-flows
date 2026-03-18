@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 2,
+  "evidenceId": "84b40c1a-f257-4265-8c49-7bab93220600",
+  "runId": "2026-03-18T12-20-57-945Z-63c42229",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-18T12-20-57-945Z-63c42229",
+  "collectedAtIso": "2026-03-18T12:22:46.550Z",
+  "failureContext": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 24846,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "failure": {
+      "errors": [
+        {
+          "message": "Error: click execution failed: {\n  \"isSuccessful\": false,\n  \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\",\n  \"metadata\": {\n    \"selector\": {\n      \"element\": [\n        \"#\\\\:rl\\\\:-form-item\",\n        \".//button[normalize-space(.)='Select your occupation']\",\n        \"[role='combobox']\"\n      ]\n    }\n  }\n}",
+          "stack": "Error: click execution failed: {\n  \"isSuccessful\": false,\n  \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\",\n  \"metadata\": {\n    \"selector\": {\n      \"element\": [\n        \"#\\\\:rl\\\\:-form-item\",\n        \".//button[normalize-space(.)='Select your occupation']\",\n        \"[role='combobox']\"\n      ]\n    }\n  }\n}\n    at Page.page.run (/home/runner/work/playwright-flows/playwright-flows/node_modules/donobu/src/lib/page/extendPage.ts:636:13)\n    at SmartSelectorImpl.click (/home/runner/work/playwright-flows/playwright-flows/node_modules/donobu/src/lib/page/SmartSelector.ts:123:5)\n    at Object.run (/home/runner/work/playwright-flows/playwright-flows/tests/.cache-lock/unstable-survey.test.ts.cache.js:58:9)\n    at PageAi.ai (/home/runner/work/playwright-flows/playwright-flows/node_modules/donobu/src/lib/ai/PageAi.ts:358:9)\n    at /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts:6:22"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/unstable-survey-Fill-out-a-survey-Donobu-based-Tests/test-failed-1.png"
+        },
+        {
+          "name": "test-flow-metadata.json",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-step-0-goToWebpage",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-1-inputText",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-2-inputRandomizedEmailAddress",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-3-click",
+          "contentType": "image/jpeg",
+          "path": null
+        },
+        {
+          "name": "donobu-step-summary",
+          "contentType": "application/json",
+          "path": null
+        }
+      ]
+    },
+    "donobuFlow": {
+      "metadata": {
+        "id": "7f4c5892-4db7-4aa7-bda2-f938d5b80669",
+        "name": "unstable-survey.test.ts > Fill out a survey",
+        "runMode": "DETERMINISTIC",
+        "state": "FAILED",
+        "targetWebsite": "https://unstable-survey-dinoer.replit.app",
+        "overallObjective": null,
+        "allowedTools": [],
+        "envVars": [],
+        "startedAt": 1773836537243,
+        "completedAt": 1773836562079,
+        "maxToolCalls": null,
+        "gptConfigName": null,
+        "defaultMessageDuration": 250,
+        "resultSummary": null
+      },
+      "recentToolCalls": [
+        {
+          "id": "adhoc_efe71164f9a14722bba8f729c2d070ce",
+          "toolName": "goToWebpage",
+          "success": true,
+          "outcomeSummary": "Successfully navigated to https://unstable-survey-dinoer.replit.app",
+          "durationMs": 7059,
+          "page": "https://unstable-survey-dinoer.replit.app",
+          "startedAtIso": "2026-03-18T12:22:17.544Z",
+          "completedAtIso": "2026-03-18T12:22:24.603Z",
+          "parameters": "{\n  \"url\": \"https://unstable-survey-dinoer.replit.app\"\n}"
+        },
+        {
+          "id": "adhoc_19472201e6a2452b844a9d517d654302",
+          "toolName": "inputText",
+          "success": true,
+          "outcomeSummary": "Inputted text 'John Doe' into: <label class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\" for=\":r0:-form-item\">Last Name *</label>",
+          "durationMs": 4998,
+          "page": "https://unstable-survey-dinoer.replit.app/",
+          "startedAtIso": "2026-03-18T12:22:24.961Z",
+          "completedAtIso": "2026-03-18T12:22:29.959Z",
+          "parameters": "{\n  \"text\": \"John Doe\",\n  \"finalizeWithSubmit\": false,\n  \"selector\": {\n    \"element\": [\n      \"#\\\\:rj\\\\:-form-item\",\n      \".//label[normalize-space()='Your Name *']/following-sibling::input\",\n      \"[name='name']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        },
+        {
+          "id": "adhoc_c797e26f51c64a8596eb4eaf683e34b0",
+          "toolName": "inputRandomizedEmailAddress",
+          "success": true,
+          "outcomeSummary": "Inputted email: \"johndoe+zb0pm4DzWF@example.com\" at: <label class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\" for=\":r1:-form-item\">Email Address *</label>",
+          "durationMs": 7273,
+          "page": "https://unstable-survey-dinoer.replit.app/",
+          "startedAtIso": "2026-03-18T12:22:30.751Z",
+          "completedAtIso": "2026-03-18T12:22:38.024Z",
+          "parameters": "{\n  \"baseEmail\": \"johndoe@example.com\",\n  \"finalizeWithSubmit\": false,\n  \"selector\": {\n    \"element\": [\n      \"#\\\\:rk\\\\:-form-item\",\n      \".//label[normalize-space()='Contact Email *']/following-sibling::input\",\n      \"[name='email']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        },
+        {
+          "id": "adhoc_4761c27970ec4ddb8e0821a3cf230216",
+          "toolName": "click",
+          "success": false,
+          "outcomeSummary": "FAILED! Unable to resolve HTML element to operate with.",
+          "durationMs": 2611,
+          "page": "https://unstable-survey-dinoer.replit.app/",
+          "startedAtIso": "2026-03-18T12:22:38.700Z",
+          "completedAtIso": "2026-03-18T12:22:41.311Z",
+          "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"#\\\\:rl\\\\:-form-item\",\n      \".//button[normalize-space(.)='Select your occupation']\",\n      \"[role='combobox']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        }
+      ]
+    },
+    "testSnippet": "test('Fill out a survey', async ({ page }) => {\n  await page.goto('https://unstable-survey-dinoer.replit.app');\n  const surveyData = await page.ai(\n    `Fill out the all of the survey questions with fake data go through\nthe submission process until you get to a \"Thank You\" page.`,\n    {\n      schema: z.object({\n        surveyData: z.array(\n          z.object({\n            question: z.string(),\n            response: z.string(),\n          }),\n        ),\n      }),\n    },\n  );\n  console.log(\n    `Completed the survey! Survey data: ${JSON.stringify(surveyData, null, 2)}`,\n  );\n  await expect(page).toHaveURL(/thank-you/);\n});",
+    "heuristics": {
+      "failureReason": "AUTOMATION_SCRIPT_ISSUE",
+      "evidence": [
+        "Falling back to automation script issue from generic error content.",
+        "Overriding shouldRetryAutomation to true based on prior self-heal success."
+      ],
+      "confidence": 0.4,
+      "failureSummary": "Error: click execution failed: {\n  \"isSuccessful\": false,\n  \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\",\n  \"metadata\": {\n    \"selector\": {\n      \"element\": [\n        \"#\\\\:rl\\\\:-form-item\",\n        \".//button[normalize-space(.)='Select your occupation']\",\n        \"[role='combobox']\"\n      ]\n    }\n  }\n}",
+      "shouldRetryAutomation": true,
+      "requiresCodeChange": true,
+      "requiresProductFix": false,
+      "remediationSteps": [
+        {
+          "category": "UPDATE_TEST_LOGIC",
+          "summary": "Inspect the failing automation logic.",
+          "details": "Review the Playwright test and any Donobu tool invocations around the failure.\nAlign the scripted steps with the intended business flow."
+        },
+        {
+          "category": "RETRY_AUTOMATION",
+          "summary": "Retry after updating the automation.",
+          "details": "Re-run the test or Donobu flow once the script adjustments are in place to validate the fix."
+        }
+      ],
+      "additionalDataRequests": [
+        {
+          "description": "Review Playwright trace, Donobu flow metadata, and browser console logs.",
+          "suggestedSources": [
+            "Playwright trace viewer",
+            "Donobu persistence layer"
+          ]
+        }
+      ],
+      "notes": "Historical data shows a prior run recovered on retry. Automated retry has high likelihood of success.",
+      "occurredDuringPageAi": false,
+      "staleCacheIndicators": {
+        "usedDeterministicMode": true,
+        "selectorFailedDuringPageAi": false,
+        "failedAfterPageAiCompleted": false,
+        "isRetryAttempt": false,
+        "quickFailurePattern": false,
+        "toolCallsShowSelectorIssues": false,
+        "assertionsFailedAfterSuccessfulPageAi": false
+      },
+      "historicalSignals": {
+        "flakinessScore": 0.8888888888888888,
+        "regressionLikelihood": 0,
+        "recentPassRate": 0.625,
+        "priorSelfHealSuccess": true,
+        "cacheWasRecentlyValid": true
+      }
+    },
+    "flowHistory": {
+      "flowName": "unstable-survey.test.ts > Fill out a survey",
+      "totalRuns": 16,
+      "successCount": 10,
+      "failureCount": 6,
+      "otherCount": 0,
+      "passRate": 0.625,
+      "recentRuns": [
+        {
+          "id": "aacbddea-027f-42df-a2bd-b8b0e2c94a9b",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773750203429,
+          "completedAt": 1773750274106,
+          "durationMs": 70677
+        },
+        {
+          "id": "9eb8054a-9a87-408b-833e-2168c9fc8cd0",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773750109376,
+          "completedAt": 1773750132944,
+          "durationMs": 23568
+        },
+        {
+          "id": "3a4d83de-5423-4d15-8b4a-c22f1ac5c1ae",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773703031373,
+          "completedAt": 1773703074616,
+          "durationMs": 43243
+        },
+        {
+          "id": "f4384c55-4b20-407e-8425-4dc880bda3b2",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773663882931,
+          "completedAt": 1773664026334,
+          "durationMs": 143403
+        },
+        {
+          "id": "da296d1e-07c7-4da1-aff7-4474d91cad1f",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773663798392,
+          "completedAt": 1773663822891,
+          "durationMs": 24499
+        },
+        {
+          "id": "119c222f-4b6f-40a8-b986-b444426fd86b",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773576969672,
+          "completedAt": 1773577071883,
+          "durationMs": 102211
+        },
+        {
+          "id": "b4cf4803-d6b5-4971-bdd0-8d406a3e9bb3",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773576870211,
+          "completedAt": 1773576892959,
+          "durationMs": 22748
+        },
+        {
+          "id": "f4ff0b92-6947-4476-9403-54be84b7ae3e",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773490504526,
+          "completedAt": 1773490602660,
+          "durationMs": 98134
+        },
+        {
+          "id": "83fb55b0-8866-4cb8-aa83-b7ba5c8a9d31",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773490422759,
+          "completedAt": 1773490446130,
+          "durationMs": 23371
+        },
+        {
+          "id": "02a1636f-c1fc-4312-8e7a-ae1f38e7496f",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1773404192547,
+          "completedAt": 1773404236612,
+          "durationMs": 44065
+        }
+      ],
+      "currentStreak": {
+        "state": "SUCCESS",
+        "length": 1
+      },
+      "lastSuccessfulRunId": "aacbddea-027f-42df-a2bd-b8b0e2c94a9b",
+      "queryWindowDays": 14,
+      "queriedAt": "2026-03-18T12:22:45.445Z"
+    }
+  },
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-18T12-20-57-945Z-63c42229/failure-screenshot-84b40c1a-f257-4265-8c49-7bab93220600.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-18T12-20-57-945Z-63c42229/baseline-screenshot-84b40c1a-f257-4265-8c49-7bab93220600.png"
+}
