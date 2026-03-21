@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-03-21T12:13:49.218Z",
+  "plan": {
+    "failureSummary": "The test failed during a deterministic (cached) run because it attempted to click a 'Select your occupation' element which is no longer present on the page. The current UI shows an 'Age Group' section instead.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "heuristics.staleCacheIndicators.usedDeterministicMode === true",
+      "heuristics.staleCacheIndicators.selectorFailedDuringPageAi === true",
+      "Visual mismatch: Failure screenshot shows 'Age Group' radio buttons where the cached selector expected 'Select your occupation' combobox.",
+      "Flow history shows intermittent failures, suggesting the application UI ('Set 1' vs others) may be dynamic."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry the test.",
+        "details": "Execute the test with the 'clearPageAiCache' directive. This will force the autonomous agent to re-analyze the page and adapt to the 'Age Group' field instead of looking for the 'Occupation' field."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Assess the need for non-deterministic mode for dynamic surveys.",
+        "details": "If the survey frequently changes its fields (e.g., 'Set 1' vs 'Set 2'), consider disabling deterministic mode for this specific test or using more robust semantic instructions that don't rely on specific field order."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot shows 'Set 1' of the survey, which contains 'Age Group' radio buttons. The cached instructions (from a previous successful run) were expecting an occupation combobox (#\\:rl\\:-form-item). This mismatch confirms a stale cache/UI change. Clearing the cache will allow the AI to adapt to the current form structure.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 25906,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-21T12-10-54-276Z-e279e7e1",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-21T12-10-54-276Z-e279e7e1",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-21T12-10-54-276Z-e279e7e1/failure-evidence-donobu-based-tests-fill-out-a-survey-w0-r0-e0-095c6d0c-0f47-4bf1-8253-6072fcc43239.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
