@@ -15,6 +15,7 @@ export default defineConfig({
   reporter: [
     ['github'],
     ['json', { outputFile: 'test-results/playwright-report.json' }],
+    ['donobu/reporters/html'],
   ],
   timeout: 240000
 });
