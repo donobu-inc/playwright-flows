@@ -1,0 +1,66 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - heading "Survey Form" [level=1] [ref=e6]
+    - paragraph [ref=e7]: Please complete this short survey
+  - generic [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]: "1"
+      - generic [ref=e16]: Survey
+    - generic [ref=e17]:
+      - generic [ref=e18]: "2"
+      - generic [ref=e19]: Selection
+    - generic [ref=e20]:
+      - generic [ref=e21]: "3"
+      - generic [ref=e22]: Thank You
+  - generic [ref=e24]:
+    - generic [ref=e25]: "Current Time:"
+    - generic [ref=e26]:
+      - generic [ref=e27]: 05:08:26
+      - generic [ref=e28]: Set 2
+  - generic [ref=e29]:
+    - heading "Tell us about yourself" [level=2] [ref=e30]
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: Your Name *
+        - textbox "Your Name *" [ref=e34]:
+          - /placeholder: Enter your name
+      - generic [ref=e35]:
+        - generic [ref=e36]: Contact Email *
+        - textbox "Contact Email *" [ref=e37]:
+          - /placeholder: Enter your contact email
+      - generic [ref=e38]:
+        - generic [ref=e39]: Occupation *
+        - combobox "Occupation *" [ref=e40] [cursor=pointer]:
+          - generic: Select your occupation
+          - img [ref=e41]
+        - combobox [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e46]: What interests you? *
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - checkbox "Technology" [ref=e49] [cursor=pointer]
+            - checkbox
+            - generic [ref=e50]: Technology
+          - generic [ref=e51]:
+            - checkbox "Science" [ref=e52] [cursor=pointer]
+            - checkbox
+            - generic [ref=e53]: Science
+          - generic [ref=e54]:
+            - checkbox "Arts & Culture" [ref=e55] [cursor=pointer]
+            - checkbox
+            - generic [ref=e56]: Arts & Culture
+          - generic [ref=e57]:
+            - checkbox "Sports & Fitness" [ref=e58] [cursor=pointer]
+            - checkbox
+            - generic [ref=e59]: Sports & Fitness
+      - generic [ref=e60]:
+        - text: Suggestions (Optional)
+        - textbox "Suggestions (Optional)" [ref=e61]:
+          - /placeholder: Share any suggestions
+      - button "Next" [ref=e63] [cursor=pointer]
+  - region "Notifications (F8)":
+    - list
+```
