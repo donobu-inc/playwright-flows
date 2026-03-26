@@ -15,10 +15,13 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
 
       - name: Install Donobu dependencies
-        run: npm install && npx playwright install --with-deps
+        run: npm ci && npx playwright install --with-deps
 
       - name: Run Playwright tests
         id: run_tests
@@ -33,7 +36,7 @@ jobs:
           npm exec playwright-json-to-markdown test-results/playwright-report.json >> $GITHUB_STEP_SUMMARY
 
       - name: Save Test Reports as Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: always()
         with:
           name: test-results
@@ -71,7 +74,7 @@ jobs:
       # Create a self-healing PR only when this workflow was not triggered by a pull-request.
       - name: Automatically create a pull request for fixing failed tests (if any)
         if: ${{ github.event_name != 'pull_request' && steps.check-fixes-for-tests.outputs.has_fixes == 'true' }}
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'Fix failing Playwright tests'
