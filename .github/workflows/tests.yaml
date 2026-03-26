@@ -49,7 +49,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./test-results
-          destination_dir: latest
 
       - name: Post to Slack
         if: always()
