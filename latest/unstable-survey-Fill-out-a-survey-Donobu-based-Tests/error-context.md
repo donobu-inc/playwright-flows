@@ -18,66 +18,49 @@
   - generic [ref=e24]:
     - generic [ref=e25]: "Current Time:"
     - generic [ref=e26]:
-      - generic [ref=e27]: 02:20:09
-      - generic [ref=e28]: Set 1
+      - generic [ref=e27]: 02:27:20
+      - generic [ref=e28]: Set 2
   - generic [ref=e29]:
     - heading "Tell us about yourself" [level=2] [ref=e30]
     - generic [ref=e31]:
       - generic [ref=e32]:
-        - generic [ref=e33]: Last Name *
-        - textbox "Last Name *" [ref=e34]:
-          - /placeholder: Enter your last name
+        - generic [ref=e33]: Your Name *
+        - textbox "Your Name *" [ref=e34]:
+          - /placeholder: Enter your name
       - generic [ref=e35]:
-        - generic [ref=e36]: Email Address *
-        - textbox "Email Address *" [ref=e37]:
-          - /placeholder: Enter your email address
+        - generic [ref=e36]: Contact Email *
+        - textbox "Contact Email *" [ref=e37]:
+          - /placeholder: Enter your contact email
       - generic [ref=e38]:
-        - generic [ref=e39]: Age Group *
-        - radiogroup [ref=e40]:
-          - generic [ref=e41]:
-            - radio "18-24" [ref=e42] [cursor=pointer]
-            - radio
-            - generic [ref=e43]: 18-24
-          - generic [ref=e44]:
-            - radio "25-34" [ref=e45] [cursor=pointer]
-            - radio
-            - generic [ref=e46]: 25-34
-          - generic [ref=e47]:
-            - radio "35-44" [ref=e48] [cursor=pointer]
-            - radio
-            - generic [ref=e49]: 35-44
-          - generic [ref=e50]:
-            - radio "45-54" [ref=e51] [cursor=pointer]
-            - radio
-            - generic [ref=e52]: 45-54
-          - generic [ref=e53]:
-            - radio "55+" [ref=e54] [cursor=pointer]
-            - radio
-            - generic [ref=e55]: 55+
-      - generic [ref=e56]:
-        - generic [ref=e58]: How did you hear about us? *
-        - generic [ref=e59]:
-          - generic [ref=e60]:
-            - checkbox "Social Media" [ref=e61] [cursor=pointer]
+        - generic [ref=e39]: Occupation *
+        - combobox "Occupation *" [ref=e40] [cursor=pointer]:
+          - generic: Select your occupation
+          - img [ref=e41]
+        - combobox [ref=e43]
+      - generic [ref=e44]:
+        - generic [ref=e46]: What interests you? *
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - checkbox "Technology" [ref=e49] [cursor=pointer]
             - checkbox
-            - generic [ref=e62]: Social Media
-          - generic [ref=e63]:
-            - checkbox "Search Engine" [ref=e64] [cursor=pointer]
+            - generic [ref=e50]: Technology
+          - generic [ref=e51]:
+            - checkbox "Science" [ref=e52] [cursor=pointer]
             - checkbox
-            - generic [ref=e65]: Search Engine
-          - generic [ref=e66]:
-            - checkbox "Friend Referral" [ref=e67] [cursor=pointer]
+            - generic [ref=e53]: Science
+          - generic [ref=e54]:
+            - checkbox "Arts & Culture" [ref=e55] [cursor=pointer]
             - checkbox
-            - generic [ref=e68]: Friend Referral
-          - generic [ref=e69]:
-            - checkbox "Other" [ref=e70] [cursor=pointer]
+            - generic [ref=e56]: Arts & Culture
+          - generic [ref=e57]:
+            - checkbox "Sports & Fitness" [ref=e58] [cursor=pointer]
             - checkbox
-            - generic [ref=e71]: Other
-      - generic [ref=e72]:
-        - text: Additional Comments (Optional)
-        - textbox "Additional Comments (Optional)" [ref=e73]:
-          - /placeholder: Share any additional thoughts or comments
-      - button "Next" [ref=e75] [cursor=pointer]
+            - generic [ref=e59]: Sports & Fitness
+      - generic [ref=e60]:
+        - text: Suggestions (Optional)
+        - textbox "Suggestions (Optional)" [ref=e61]:
+          - /placeholder: Share any suggestions
+      - button "Next" [ref=e63] [cursor=pointer]
   - region "Notifications (F8)":
     - list
 ```
