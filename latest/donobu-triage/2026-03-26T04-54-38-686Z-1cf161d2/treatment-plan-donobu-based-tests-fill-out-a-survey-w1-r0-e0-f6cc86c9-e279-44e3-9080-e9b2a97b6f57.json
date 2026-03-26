@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-03-26T04:57:55.312Z",
+  "plan": {
+    "failureSummary": "The test failed because the deterministic cache attempted to use a selector for 'Last Name' which is no longer present on the page. The failure screenshot shows the first field is now 'Your Name'.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "heuristics.staleCacheIndicators.usedDeterministicMode === true",
+      "heuristics.staleCacheIndicators.selectorFailedDuringPageAi === true",
+      "Field mismatch: tool called for 'Last Name' but screenshot shows 'Your Name'",
+      "Quick failure pattern: 6s vs ~150s for successful runs"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry the test.",
+        "details": "Execute the test again with 'clearPageAiCache' set to true to force a fresh autonomous discovery of the survey form."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Evaluate if deterministic mode is suitable for this unstable page.",
+        "details": "If the survey form frequently changes its field names or structure, consider using a more robust prompt or checking if the 'DETERMINISTIC' mode is appropriate for this specific unstable UI."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The 'inputText' tool failed while attempting to use cached selectors (e.g., [data-testid='input-lastname']) in DETERMINISTIC mode. Visual evidence confirms the field labels have changed ('Your Name' vs 'Last Name'), causing the cached sequence to break. Since the overall objective is semantically flexible ('Fill out all survey questions'), clearing the cache and allowing the AI to re-discover the form should resolve the issue.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 5952,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-26T04-54-38-686Z-1cf161d2",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-26T04-54-38-686Z-1cf161d2",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-26T04-54-38-686Z-1cf161d2/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-f6cc86c9-e279-44e3-9080-e9b2a97b6f57.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
