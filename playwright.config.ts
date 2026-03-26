@@ -30,7 +30,6 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   reporter: [
-    ['github'],
     ['json', { outputFile: 'test-results/playwright-report.json' }],
     ['donobu/reporter/html'],
   ],
