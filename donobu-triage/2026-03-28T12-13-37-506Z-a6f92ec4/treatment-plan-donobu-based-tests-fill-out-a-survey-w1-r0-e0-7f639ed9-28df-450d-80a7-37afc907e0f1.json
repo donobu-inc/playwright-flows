@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-03-28T12:17:24.279Z",
+  "plan": {
+    "failureSummary": "The test failed while executing in DETERMINISTIC mode because it attempted to interact with a 'Last Name' field that is not present in the current UI. The failure screenshot shows a different form layout ('Set 2') containing a 'Your Name' field instead of 'Last Name'. This indicates the page structure has changed since the cache was recorded.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Cached selector for 'Last Name' failed to resolve to an element.",
+      "Failure screenshot shows 'Your Name' field instead of 'Last Name'.",
+      "Failure screenshot contains a 'Set 2' badge, suggesting a layout variation.",
+      "Deterministic mode was used, but the UI structure no longer matches the cached instructions.",
+      "High historical flakiness (0.77) suggests the form layout might be rotating or changing frequently."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear AI cache and retry the test.",
+        "details": "Execute the test with the 'clearPageAiCache' directive enabled. This will force the AI to re-analyze the page and adapt to the current form structure ('Set 2')."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Assess form rotation logic for long-term stability.",
+        "details": "If the form variations are intentional and random, consider disabling deterministic mode for this specific test or using a more robust way to handle form rotations if the AI continues to struggle with caching."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The flexible nature of the AI instruction ('Fill out all of the survey questions') means the agent can easily adapt to this new form layout once the stale cache is cleared. The 'Set 2' badge in the screenshot strongly suggests the application serves different versions of the form.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 11706,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-03-28T12-13-37-506Z-a6f92ec4",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-28T12-13-37-506Z-a6f92ec4",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-03-28T12-13-37-506Z-a6f92ec4/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-7f639ed9-28df-450d-80a7-37afc907e0f1.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
