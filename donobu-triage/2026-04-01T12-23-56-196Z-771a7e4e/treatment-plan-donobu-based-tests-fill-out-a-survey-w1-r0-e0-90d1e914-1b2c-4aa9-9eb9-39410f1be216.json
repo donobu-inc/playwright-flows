@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-04-01T12:27:38.205Z",
+  "plan": {
+    "failureSummary": "The test failed because it attempted to interact with a 'Last Name' field that was not present on the page. Visually, the form currently displays 'Your Name' and 'Contact Email' (Set 2), whereas the cached instructions (Deterministic Mode) were expecting a different field structure.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "Visual mismatch: Failure screenshot shows 'Your Name' but tool call attempted 'Last Name'",
+      "Application name and 'Set 2' badge suggest dynamic UI changes",
+      "High historical flakiness (pass rate 58%) consistent with dynamic UI vs static cache"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry test.",
+        "details": "Execute the test with the 'clearPageAiCache' directive. This will force page.ai to re-analyze the page structure instead of using the stale 'Last Name' selectors."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Consider disabling deterministic mode if UI instability is a feature.",
+        "details": "If the website frequently rotates between different form sets (Set 1, Set 2, etc.), consider disabling deterministic mode for this specific test or increasing the frequency of cache invalidation to ensure the autonomous agent always sees the current UI state."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The 'unstable-survey' name and visual 'Set 2' badge suggest the application intentionally varies its form fields. Since the instruction 'Fill out the all of the survey questions' is semantically flexible, clearing the cache will allow the AI to adapt to the current form version.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 11800,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-04-01T12-23-56-196Z-771a7e4e",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-01T12-23-56-196Z-771a7e4e",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-01T12-23-56-196Z-771a7e4e/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-90d1e914-1b2c-4aa9-9eb9-39410f1be216.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
