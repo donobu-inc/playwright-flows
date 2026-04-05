@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-04-05T12:17:33.861Z",
+  "plan": {
+    "failureSummary": "The deterministic automation failed because it attempted to interact with a 'Last Name' field that did not exist in the current UI state ('Set 2'). The cached instructions from a previous successful run are likely for a different version of the survey form.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === true",
+      "UI shows 'Set 2' badge which differs from the 'Set 1' expectation in cache",
+      "Historical flakiness (alternating SUCCESS/FAILED) suggests unstable UI structure",
+      "Overall objective is semantically flexible and should adapt if cache is cleared"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear cache and retry automation.",
+        "details": "Clear the page.ai cache and retry the test. Since the objective 'Fill out all survey questions' is semantically flexible, a fresh autonomous run will adapt to the 'Set 2' form structure."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Consider disabling deterministic mode for unstable UI.",
+        "details": "If the application is intentionally non-deterministic (as the test name 'unstable-survey' suggests), consider disabling deterministic mode for this specific test or using a more robust cache key that accounts for the form version."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot explicitly shows a 'Set 2' badge and a 'Your Name' field, whereas the failing tool call was looking for 'Last Name *' or 'data-testid=input-lastname'. This confirms a UI mismatch with the deterministic cache. The high flakiness score and alternating pass/fail history support the conclusion that the application serves different form versions, causing cached steps to fail.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 10222,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-04-05T12-13-56-670Z-9d633910",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-05T12-13-56-670Z-9d633910",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-05T12-13-56-670Z-9d633910/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-3f07b546-a58c-45ad-998c-17c1b18a2341.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
