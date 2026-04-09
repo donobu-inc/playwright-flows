@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-04-09T12:30:51.752Z",
+  "plan": {
+    "failureSummary": "The test failed because the survey form structure changed, but the automation was using cached (deterministic) instructions that expected a 'Last Name' field. Visual evidence shows the current form has a 'Your Name' field instead.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "The application appears to be serving different form versions (failure screenshot shows 'Set 2' and 'Your Name', while cache expected 'Last Name')",
+      "DETERMINISTIC mode was active (using stale cache)",
+      "Failure duration (~10s) is much shorter than successful runs (~90s), indicating an early exit due to missing elements",
+      "The failure screenshot confirms the 'Last Name' field is missing and replaced by 'Your Name'"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Retry with cleared AI cache to adapt to form changes.",
+        "details": "The failure is due to a stale AI cache that doesn't match the current form layout ('Set 2'). Re-running with the 'clearPageAiCache' directive will allow the autonomous agent to re-scan the page and adapt to the 'Your Name' field."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Monitor for persistent form variations (A/B testing).",
+        "details": "If the application continues to flip between different form versions, consider making the underlying automation more resilient or updating the baseline cache to handle both variations if they are part of a persistent A/B test."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot explicitly shows a 'Your Name' field and a 'Set 2' indicator, while the attempted tool call was looking for 'Last Name'. The historical data shows an alternating pattern of success and failure with significantly different durations, suggesting the application serves different form versions (A/B testing or dynamic layouts). Since the instruction 'Fill out the all of the survey questions' is semantically flexible, clearing the cache will allow the autonomous agent to adapt to the current form version.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 10746,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-04-09T12-26-32-510Z-690bbd3b",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-09T12-26-32-510Z-690bbd3b",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-09T12-26-32-510Z-690bbd3b/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-48660173-be75-48b5-bc44-b7e4125cd1bf.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
