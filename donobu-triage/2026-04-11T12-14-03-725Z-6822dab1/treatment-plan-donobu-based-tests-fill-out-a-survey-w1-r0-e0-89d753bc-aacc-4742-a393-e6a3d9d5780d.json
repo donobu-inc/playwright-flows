@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-04-11T12:17:19.788Z",
+  "plan": {
+    "failureSummary": "The test failed because the 'Last Name' input field expected by the deterministic cache was missing from the page. The UI appears to have changed from separate name fields to a single 'Your Name' field.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === true (via inputText)",
+      "UI layout mismatch: 'Last Name' field missing in failure screenshot vs cached selectors",
+      "Historical pass rate is ~58%, indicating frequent environment or UI changes"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Donobu cache and retry the test.",
+        "details": "The failure was caused by stale cached selectors that no longer match the current page layout. Re-running the test with the cache cleared will allow the AI to re-examine the page and find the new 'Your Name' field."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Update cached selectors to match the new UI structure.",
+        "details": "If the UI change is permanent, the deterministic cache must be updated. If the UI is dynamic/randomized, ensure the autonomous agent is allowed to handle the variance without being locked to a specific stale cache."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The application name 'unstable-survey' and the 'Set 2' badge in the screenshot suggest this application intentionally rotates UI layouts. The failure occurred in DETERMINISTIC mode using stale selectors. Clearing the cache will allow the autonomous agent to adapt to the current layout.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 6370,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-04-11T12-14-03-725Z-6822dab1",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-11T12-14-03-725Z-6822dab1",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-11T12-14-03-725Z-6822dab1/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-89d753bc-aacc-4742-a393-e6a3d9d5780d.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
