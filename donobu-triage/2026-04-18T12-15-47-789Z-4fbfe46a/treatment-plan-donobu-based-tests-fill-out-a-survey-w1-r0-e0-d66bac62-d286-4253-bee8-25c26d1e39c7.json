@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-04-18T12:19:30.719Z",
+  "plan": {
+    "failureSummary": "The test failed in DETERMINISTIC mode because the cached selectors for 'Last Name' (e.g., [data-testid='input-lastname']) could not be found. Visual evidence shows the application rendered a different form variant ('Set 2') containing a 'Your Name' field instead of 'Last Name'.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === true",
+      "failure screenshot shows 'Your Name' while selectors expected 'Last Name'",
+      "UI contains 'Set 2' badge, suggesting dynamic content variants",
+      "History shows alternating success/failure pattern, typical of dynamic UI vs static cache"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry the test.",
+        "details": "The failure is due to a stale or layout-specific cache in DETERMINISTIC mode. Deleting the cache will allow page.ai to perform a fresh autonomous crawl and adapt to the 'Set 2' form layout."
+      },
+      {
+        "category": "STABILIZE_DEPENDENCIES",
+        "summary": "Investigate form randomization logic in the target application.",
+        "details": "The application intentionally varies its UI (e.g., 'Set 1' vs 'Set 2'). Ensure the test environment is configured to serve a consistent version if deterministic performance is required, or rely on non-deterministic mode for this specific test."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The 'unstable-survey' application appears to rotate between different form layouts ('Set 1', 'Set 2', etc.). The deterministic cache recorded a path for one layout which is invalid for the current one. page.ai's semantic intent 'Fill out all of the survey questions' is flexible enough to handle this if the cache is cleared.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 10524,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-04-18T12-15-47-789Z-4fbfe46a",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-18T12-15-47-789Z-4fbfe46a",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-18T12-15-47-789Z-4fbfe46a/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-d66bac62-d286-4253-bee8-25c26d1e39c7.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
