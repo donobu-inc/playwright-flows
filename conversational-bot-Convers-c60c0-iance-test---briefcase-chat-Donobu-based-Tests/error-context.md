@@ -1,0 +1,218 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button "Close sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Briefcase" [level=1] [ref=e11]
+        - button "New chat" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+      - generic [ref=e19]:
+        - heading "Today" [level=2] [ref=e20]
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: LLC vs. C-Corp Guide
+          - button [ref=e26]:
+            - img [ref=e27]
+      - button "Settings" [ref=e31] [cursor=pointer]:
+        - img [ref=e32]
+        - text: Settings
+    - generic [ref=e35]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e42]: When is it better to form an LLC vs. a C-Corp
+          - generic [ref=e44]: T
+        - generic [ref=e45]:
+          - img [ref=e48]
+          - generic [ref=e51]:
+            - generic [ref=e53]:
+              - paragraph [ref=e54]: "Choosing between forming a Limited Liability Company (LLC) and a C-Corporation (C-Corp) depends on various factors related to your business goals, structure, and needs. Here are some key considerations for each option:"
+              - heading "LLC (Limited Liability Company)" [level=3] [ref=e55]
+              - paragraph [ref=e56]:
+                - strong [ref=e57]: "Advantages:"
+              - list [ref=e58]:
+                - listitem [ref=e59]:
+                  - strong [ref=e60]: Simplicity and Flexibility
+                  - text: ": LLCs are generally easier to set up and maintain than C-Corps. They have fewer formalities and ongoing compliance requirements."
+                - listitem [ref=e61]:
+                  - strong [ref=e62]: Pass-Through Taxation
+                  - text: ": Profits and losses can be passed through to the owners' personal tax returns, avoiding double taxation at the corporate level."
+                - listitem [ref=e63]:
+                  - strong [ref=e64]: Limited Liability Protection
+                  - text: ": Owners (members) are typically not personally liable for business debts and liabilities."
+                - listitem [ref=e65]:
+                  - strong [ref=e66]: Management Flexibility
+                  - text: ": LLCs can be managed by members or designated managers, allowing for flexible management structures."
+              - paragraph [ref=e67]:
+                - strong [ref=e68]: "Disadvantages:"
+              - list [ref=e69]:
+                - listitem [ref=e70]:
+                  - strong [ref=e71]: Limited Growth Potential
+                  - text: ": LLCs may face challenges in raising capital, especially from venture capitalists or institutional investors, who often prefer C-Corps."
+                - listitem [ref=e72]:
+                  - strong [ref=e73]: Self-Employment Taxes
+                  - text: ": Members may be subject to self-employment taxes on the entire income of the LLC."
+              - heading "C-Corp (C-Corporation)" [level=3] [ref=e74]
+              - paragraph [ref=e75]:
+                - strong [ref=e76]: "Advantages:"
+              - list [ref=e77]:
+                - listitem [ref=e78]:
+                  - strong [ref=e79]: Attracting Investment
+                  - text: ": C-Corps are often preferred by investors, especially venture capitalists, due to their ability to issue multiple classes of stock and the potential for an Initial Public Offering (IPO)."
+                - listitem [ref=e80]:
+                  - strong [ref=e81]: Limited Liability Protection
+                  - text: ": Like LLCs, C-Corps provide limited liability protection to their shareholders."
+                - listitem [ref=e82]:
+                  - strong [ref=e83]: Tax Benefits
+                  - text: ": C-Corps can retain earnings and reinvest them in the business at a lower corporate tax rate, which can be beneficial for growth."
+                - listitem [ref=e84]:
+                  - strong [ref=e85]: Employee Benefits
+                  - text: ": C-Corps can offer a wider range of employee benefits, which can be tax-deductible for the corporation."
+              - paragraph [ref=e86]:
+                - strong [ref=e87]: "Disadvantages:"
+              - list [ref=e88]:
+                - listitem [ref=e89]:
+                  - strong [ref=e90]: Double Taxation
+                  - text: ": C-Corps face double taxation, where the corporation pays taxes on its profits, and shareholders pay taxes on dividends received."
+                - listitem [ref=e91]:
+                  - strong [ref=e92]: Complexity and Cost
+                  - text: ": C-Corps have more regulatory requirements, including formal meetings, record-keeping, and filing annual reports, which can increase costs and complexity."
+              - heading "When to Choose Each Structure" [level=3] [ref=e93]
+              - list [ref=e94]:
+                - listitem [ref=e95]:
+                  - paragraph [ref=e96]:
+                    - strong [ref=e97]: Choose an LLC if
+                    - text: ":"
+                  - list [ref=e98]:
+                    - listitem [ref=e99]: You want a simpler structure with fewer formalities.
+                    - listitem [ref=e100]: You plan to operate a small business or a startup that does not require significant outside investment.
+                    - listitem [ref=e101]: You prefer pass-through taxation and want to avoid double taxation.
+                - listitem [ref=e102]:
+                  - paragraph [ref=e103]:
+                    - strong [ref=e104]: Choose a C-Corp if
+                    - text: ":"
+                  - list [ref=e105]:
+                    - listitem [ref=e106]: You plan to seek venture capital or go public in the future.
+                    - listitem [ref=e107]: You want to offer stock options or other equity incentives to employees.
+                    - listitem [ref=e108]: You are looking for a structure that allows for reinvestment of profits at a lower tax rate.
+              - heading "Conclusion" [level=3] [ref=e109]
+              - paragraph [ref=e110]: Ultimately, the decision should be based on your specific business goals, the nature of your business, and your long-term plans. It is advisable to consult with a qualified legal or financial professional to evaluate your situation and make the best choice for your startup.
+            - generic [ref=e111]:
+              - button [ref=e112] [cursor=pointer]:
+                - img [ref=e113]
+              - button [ref=e116] [cursor=pointer]:
+                - img [ref=e117]
+              - button [ref=e122] [cursor=pointer]:
+                - img [ref=e123]
+              - button [ref=e125] [cursor=pointer]:
+                - img [ref=e126]
+              - button "Get Quote" [ref=e128] [cursor=pointer]
+        - generic [ref=e129]:
+          - paragraph [ref=e132]: Can a non-compete agreement be enforced in California?
+          - generic [ref=e134]: T
+        - generic [ref=e135]:
+          - img [ref=e138]
+          - generic [ref=e141]:
+            - generic [ref=e143]:
+              - paragraph [ref=e144]: "In California, non-compete agreements are generally unenforceable. The state has a strong public policy against restricting an individual's right to work and earn a living. Here are some key points regarding non-compete agreements in California:"
+              - heading "Key Points" [level=3] [ref=e145]
+              - list [ref=e146]:
+                - listitem [ref=e147]:
+                  - paragraph [ref=e148]:
+                    - strong [ref=e149]: General Rule
+                    - text: ": California Business and Professions Code Section 16600 states that, with some exceptions, any contract that restrains someone from engaging in a lawful profession, trade, or business is void."
+                - listitem [ref=e150]:
+                  - paragraph [ref=e151]:
+                    - strong [ref=e152]: Exceptions
+                    - text: ": There are limited circumstances under which non-compete agreements may be enforceable in California, such as:"
+                  - list [ref=e153]:
+                    - listitem [ref=e154]:
+                      - strong [ref=e155]: Sale of a Business
+                      - text: ": Non-compete agreements may be enforceable when they are part of the sale of a business, where the seller agrees not to compete with the buyer in a specific geographic area for a certain period."
+                    - listitem [ref=e156]:
+                      - strong [ref=e157]: Partnership Dissolution
+                      - text: ": Similar rules apply when a partnership is dissolved, and partners agree not to compete with each other."
+                - listitem [ref=e158]:
+                  - paragraph [ref=e159]:
+                    - strong [ref=e160]: Employee Agreements
+                    - text: ": Non-compete clauses in employment contracts are typically unenforceable. Employers may not prevent employees from working for competitors after leaving the company."
+                - listitem [ref=e161]:
+                  - paragraph [ref=e162]:
+                    - strong [ref=e163]: Non-Solicitation Agreements
+                    - text: ": While non-compete agreements are generally unenforceable, non-solicitation agreements (which prevent former employees from soliciting clients or employees of the former employer) may be enforceable under certain conditions, provided they are reasonable in scope and duration."
+              - heading "Considerations" [level=3] [ref=e164]
+              - list [ref=e165]:
+                - listitem [ref=e166]:
+                  - strong [ref=e167]: Legal Advice
+                  - text: ": If you are considering a non-compete agreement or are subject to one, it is advisable to consult with a qualified legal professional who can provide guidance based on your specific situation and the latest legal developments."
+                - listitem [ref=e168]:
+                  - strong [ref=e169]: Potential Risks
+                  - text: ": Attempting to enforce a non-compete agreement in California could lead to legal challenges and may not hold up in court, which can result in wasted resources and time."
+              - paragraph [ref=e170]: In summary, non-compete agreements are largely unenforceable in California, and businesses should be cautious when drafting such agreements. Always seek legal counsel for tailored advice.
+            - generic [ref=e171]:
+              - button [ref=e172] [cursor=pointer]:
+                - img [ref=e173]
+              - button [ref=e176] [cursor=pointer]:
+                - img [ref=e177]
+              - button [ref=e182] [cursor=pointer]:
+                - img [ref=e183]
+              - button [ref=e185] [cursor=pointer]:
+                - img [ref=e186]
+              - button "Get Quote" [ref=e188] [cursor=pointer]
+        - generic [ref=e189]:
+          - paragraph [ref=e192]: How do I make a chocolate cake?
+          - generic [ref=e194]: T
+        - generic [ref=e195]:
+          - img [ref=e198]
+          - generic [ref=e201]:
+            - paragraph [ref=e204]: I'm here to provide legal information for founders and investors, so I can't assist with cooking or recipe questions. If you have any legal inquiries related to business formation, contracts, or other relevant topics, feel free to ask!
+            - generic [ref=e205]:
+              - button [ref=e206] [cursor=pointer]:
+                - img [ref=e207]
+              - button [ref=e210] [cursor=pointer]:
+                - img [ref=e211]
+              - button [ref=e216] [cursor=pointer]:
+                - img [ref=e217]
+              - button [ref=e219] [cursor=pointer]:
+                - img [ref=e220]
+              - button "Get Quote" [ref=e222] [cursor=pointer]
+        - generic [ref=e223]:
+          - paragraph [ref=e226]: What is the weather like in New York today?
+          - generic [ref=e228]: T
+        - generic [ref=e229]:
+          - img [ref=e232]
+          - generic [ref=e235]:
+            - paragraph [ref=e238]: I'm unable to provide information on current weather conditions or forecasts. My focus is on legal matters relevant to founders and investors. If you have any legal questions or need information about business-related topics, feel free to ask!
+            - generic [ref=e239]:
+              - button [ref=e240] [cursor=pointer]:
+                - img [ref=e241]
+              - button [ref=e244] [cursor=pointer]:
+                - img [ref=e245]
+              - button [ref=e250] [cursor=pointer]:
+                - img [ref=e251]
+              - button [ref=e253] [cursor=pointer]:
+                - img [ref=e254]
+              - button "Get Quote" [ref=e256] [cursor=pointer]
+      - paragraph [ref=e258]:
+        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e259] [cursor=pointer]:
+          - /url: "#"
+        - text: .
+      - generic [ref=e260]:
+        - generic [ref=e262]:
+          - textbox "Type your message..." [active] [ref=e263]
+          - button [ref=e264] [cursor=pointer]:
+            - img [ref=e265]
+          - button [disabled]:
+            - img
+        - generic [ref=e267]:
+          - text: Briefcase can make mistakes. Please check important info with a lawyer.
+          - button [ref=e268] [cursor=pointer]:
+            - img [ref=e269]
+  - region "Notifications (F8)":
+    - list
+  - alert [ref=e271]
+```
