@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-04-24T04:59:07.569Z",
+  "plan": {
+    "failureSummary": "The test failed in DETERMINISTIC mode because the cached selectors for 'Last Name' (e.g., [data-testid='input-lastname']) could not be found on the current page. The UI has changed or is dynamic; the failure screenshot shows a 'Your Name' field instead of 'Last Name'.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === true",
+      "Failure screenshot shows 'Your Name' field while cached selector looks for 'Last Name'",
+      "History shows a flip-flop pattern of SUCCESS/FAILED, suggesting a dynamic UI or A/B testing (Set 1 vs Set 2)"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry the test.",
+        "details": "The failure is due to a stale cache. Retrying with a cleared cache will allow the autonomous agent to re-scan the page and identify the correct fields (e.g., 'Your Name' instead of 'Last Name')."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Investigate dynamic form variations.",
+        "details": "If this survey frequently changes between different 'Sets' (as indicated by the 'Set 2' badge), ensure that the cache is not overly aggressive or that the test is prepared for multiple UI variations."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "Visual comparison confirms the UI fields have changed since the last successful run (Baseline shows Thank You, but failure screenshot shows the form with 'Your Name' instead of 'Last Name'). The 'Set 2' badge in the screenshot suggests the application may serve different form versions. Clearing the cache will allow the AI to adapt to the current UI structure.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 6915,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-04-24T04-55-10-738Z-0fea3d9c",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-24T04-55-10-738Z-0fea3d9c",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-04-24T04-55-10-738Z-0fea3d9c/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-bc98a2cd-2ff2-482f-8d95-2c5373c48fea.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/playwright-report.json"
+}
