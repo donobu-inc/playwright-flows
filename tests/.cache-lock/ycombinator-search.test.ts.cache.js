@@ -36,4 +36,20 @@ module.exports = {
       },
     },
   ],
+  assertions: [
+    {
+      pageUrl: 'hn.algolia.com',
+      assertion: 'Donobu appears among the top search results',
+      steps: [
+        {
+          locator: 'role',
+          role: 'link',
+          value: 'Show HN: Donobu – Mac App for Web Automation and Testing',
+          valueIsRegex: false,
+          assertion: 'toBeVisible',
+          attributeValue: null,
+        },
+      ],
+    },
+  ],
 };

@@ -32,4 +32,20 @@ module.exports = {
       },
     },
   ],
+  assertions: [
+    {
+      pageUrl: 'www.starbucks.com',
+      assertion: 'Ensure there is a CTA for joining the rewards program.',
+      steps: [
+        {
+          locator: 'role',
+          role: 'link',
+          value: 'Join now',
+          valueIsRegex: false,
+          assertion: 'toBeVisible',
+          attributeValue: null,
+        },
+      ],
+    },
+  ],
 };
