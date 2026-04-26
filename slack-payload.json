@@ -1,0 +1,111 @@
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "🐵 Donobu Test Summary"
+      }
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "✅ Passed"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "7"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "❤️‍🩹 Self-Healed"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "❌ Failed"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "⏰ Timed Out"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "⏭️ Skipped"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "⚡ Interrupted"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/24946388127|View Full Report>"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "context",
+      "elements": [
+        {
+          "type": "mrkdwn",
+          "text": "Report generated on 4/26/2026, 2:44:24 AM by Donobu"
+        }
+      ]
+    }
+  ]
+}
