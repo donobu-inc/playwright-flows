@@ -28,12 +28,16 @@ jobs:
         continue-on-error: true
         env:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
+          DONOBU_SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DONOBU_REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: npx donobu test --auto-heal
 
-      - name: Generate GitHub Workflow Summary
+      - name: Append Markdown report to GitHub Actions summary
         if: always()
         run: |
-          npm exec playwright-json-to-markdown test-results/playwright-report.json >> $GITHUB_STEP_SUMMARY
+          if [ -f test-results/report.md ]; then
+            cat test-results/report.md >> $GITHUB_STEP_SUMMARY
+          fi
 
       - name: Save Test Reports as Artifacts
         uses: actions/upload-artifact@v6
@@ -49,19 +53,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./test-results
-
-      - name: Post to Slack
-        if: always()
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          if [ -n "$SLACK_WEBHOOK_URL" ]; then
-            WORKFLOW_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
-            SLACK_PAYLOAD=$(npm exec playwright-json-to-slack-json -- --report-url "$WORKFLOW_URL" < "test-results/playwright-report.json")
-            curl --header 'Content-type: application/json' --data "$SLACK_PAYLOAD" "$SLACK_WEBHOOK_URL"
-          else
-            echo "SLACK_WEBHOOK_URL secret not present, skipping Slack notification."
-          fi
 
       # Create a self-healing PR only when this workflow was not triggered by a pull-request.
       - name: Create Pull Request for Test Fixes (if any)
