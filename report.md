@@ -6,23 +6,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| /home/runner/work/playwright-flows/playwright-flows/tests/auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 21s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts | 1 ✅ |  |  |  |  |  | 39s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 19s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/starbucks.test.ts | 1 ✅ |  |  |  |  |  | 15s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 39s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 34s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts | 1 ✅ |  |  |  |  |  | 2m 5s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 34s |
-| **TOTAL** | **8 ✅** | **1 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 50s** |
+| /home/runner/work/playwright-flows/playwright-flows/tests/auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts | 1 ✅ |  |  |  |  |  | 34s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 11s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/starbucks.test.ts | 1 ✅ |  |  |  |  |  | 13s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 2m 55s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 27s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts | 1 ✅ |  |  |  |  |  | 1m 28s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 16s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 28s |
+| **TOTAL** | **8 ✅** | **1 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 56s** |
 
 ## /home/runner/work/playwright-flows/playwright-flows/tests/auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 19s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 39s  
+**Duration**: 34s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 19s  
+**Duration**: 1m 11s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 15s  
+**Duration**: 13s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 39s  
+**Duration**: 2m 55s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,16 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 34s  
-
----
-
-## /home/runner/work/playwright-flows/playwright-flows/tests/ycombinator-search.test.ts
-
-### Hackernews search
-
-**Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 27s  
 
 ---
 
@@ -87,7 +78,16 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ✅ Passed  
-**Duration**: 2m 5s  
+**Duration**: 1m 28s  
+
+---
+
+## /home/runner/work/playwright-flows/playwright-flows/tests/ycombinator-search.test.ts
+
+### Hackernews search
+
+**Status**: ✅ Passed  
+**Duration**: 16s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 34s  
+**Duration**: 28s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts::Donobu-based Tests::
 
-_Report generated on 4/30/2026, 12:43:22 PM by Donobu_
+_Report generated on 5/1/2026, 12:31:43 PM by Donobu_
