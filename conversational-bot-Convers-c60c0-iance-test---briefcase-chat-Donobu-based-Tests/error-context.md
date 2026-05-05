@@ -1,0 +1,265 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: conversational-bot.test.ts >> Conversational bot compliance test - briefcase.chat
+- Location: tests/conversational-bot.test.ts:4:5
+
+# Error details
+
+```
+Test timeout of 240000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button "Close sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Briefcase" [level=1] [ref=e11]
+        - button "New chat" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+      - generic [ref=e19]:
+        - heading "Today" [level=2] [ref=e20]
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: Patents vs. Trademarks
+          - button [ref=e26]:
+            - img [ref=e27]
+      - button "Settings" [ref=e31] [cursor=pointer]:
+        - img [ref=e32]
+        - text: Settings
+    - generic [ref=e35]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e42]: What are the key differences between a patent and a trademark?
+          - generic [ref=e44]: D
+        - generic [ref=e45]:
+          - img [ref=e48]
+          - generic [ref=e51]:
+            - generic [ref=e53]:
+              - paragraph [ref=e54]: "Patents and trademarks are both forms of intellectual property protection, but they serve different purposes and protect different types of assets. Here are the key differences:"
+              - heading "1. Purpose" [level=3] [ref=e55]:
+                - text: "1."
+                - strong [ref=e56]: Purpose
+              - list [ref=e57]:
+                - listitem [ref=e58]:
+                  - strong [ref=e59]: Patent
+                  - text: ": A patent protects inventions or processes that provide a new way of doing something or offer a new technical solution to a problem. It grants the inventor exclusive rights to use, make, sell, and distribute the invention for a limited time, typically 20 years from the filing date."
+                - listitem [ref=e60]:
+                  - strong [ref=e61]: Trademark
+                  - text: ": A trademark protects symbols, names, phrases, logos, or designs that distinguish goods or services of one party from those of others. It helps consumers identify the source of a product or service and can last indefinitely as long as it is in use and properly maintained."
+              - heading "2. Types of Protection" [level=3] [ref=e62]:
+                - text: "2."
+                - strong [ref=e63]: Types of Protection
+              - list [ref=e64]:
+                - listitem [ref=e65]:
+                  - strong [ref=e66]: Patent
+                  - text: ": There are three main types of patents:"
+                  - list [ref=e67]:
+                    - listitem [ref=e68]:
+                      - strong [ref=e69]: Utility patents
+                      - text: ": For new and useful processes, machines, articles of manufacture, or compositions of matter."
+                    - listitem [ref=e70]:
+                      - strong [ref=e71]: Design patents
+                      - text: ": For new, original, and ornamental designs for an article of manufacture."
+                    - listitem [ref=e72]:
+                      - strong [ref=e73]: Plant patents
+                      - text: ": For new and distinct varieties of plants."
+                - listitem [ref=e74]:
+                  - strong [ref=e75]: Trademark
+                  - text: ": Trademarks can include:"
+                  - list [ref=e76]:
+                    - listitem [ref=e77]:
+                      - strong [ref=e78]: Word marks
+                      - text: ": Brand names or slogans."
+                    - listitem [ref=e79]:
+                      - strong [ref=e80]: Design marks
+                      - text: ": Logos or symbols."
+                    - listitem [ref=e81]:
+                      - strong [ref=e82]: Service marks
+                      - text: ": Similar to trademarks but specifically for services rather than goods."
+              - heading "3. Duration of Protection" [level=3] [ref=e83]:
+                - text: "3."
+                - strong [ref=e84]: Duration of Protection
+              - list [ref=e85]:
+                - listitem [ref=e86]:
+                  - strong [ref=e87]: Patent
+                  - text: ": Generally lasts for 20 years from the filing date for utility and plant patents, and 15 years for design patents (in the U.S.)."
+                - listitem [ref=e88]:
+                  - strong [ref=e89]: Trademark
+                  - text: ": Can last indefinitely as long as the trademark is in use and the owner continues to renew it (typically every 10 years in the U.S.)."
+              - heading "4. Application Process" [level=3] [ref=e90]:
+                - text: "4."
+                - strong [ref=e91]: Application Process
+              - list [ref=e92]:
+                - listitem [ref=e93]:
+                  - strong [ref=e94]: Patent
+                  - text: ": The application process is complex, requiring a detailed description of the invention, claims defining the scope of protection, and often a review process by the patent office."
+                - listitem [ref=e95]:
+                  - strong [ref=e96]: Trademark
+                  - text: ": The application process is generally simpler, focusing on the distinctiveness of the mark and its use in commerce. It may involve a search for existing trademarks to avoid conflicts."
+              - heading "5. Enforcement" [level=3] [ref=e97]:
+                - text: "5."
+                - strong [ref=e98]: Enforcement
+              - list [ref=e99]:
+                - listitem [ref=e100]:
+                  - strong [ref=e101]: Patent
+                  - text: ": The patent holder has the right to enforce their patent against unauthorized use, which may involve litigation."
+                - listitem [ref=e102]:
+                  - strong [ref=e103]: Trademark
+                  - text: ": Trademark owners must actively monitor and enforce their rights against infringement to maintain their trademark protection."
+              - heading "Considerations" [level=3] [ref=e104]
+              - list [ref=e105]:
+                - listitem [ref=e106]:
+                  - strong [ref=e107]: Cost
+                  - text: ": Obtaining a patent can be more expensive and time-consuming than registering a trademark."
+                - listitem [ref=e108]:
+                  - strong [ref=e109]: Scope of Protection
+                  - text: ": Patents protect inventions, while trademarks protect brand identity."
+              - paragraph [ref=e110]: In summary, patents and trademarks serve different functions in protecting intellectual property. If you are considering applying for either, it may be beneficial to consult with an intellectual property attorney to understand the best strategy for your specific situation.
+            - generic [ref=e111]:
+              - button [ref=e112] [cursor=pointer]:
+                - img [ref=e113]
+              - button [ref=e116] [cursor=pointer]:
+                - img [ref=e117]
+              - button [ref=e122] [cursor=pointer]:
+                - img [ref=e123]
+              - button [ref=e125] [cursor=pointer]:
+                - img [ref=e126]
+              - button "Get Quote" [ref=e128] [cursor=pointer]
+        - generic [ref=e129]:
+          - paragraph [ref=e132]: How do I make a chocolate cake?
+          - generic [ref=e134]: D
+        - generic [ref=e135]:
+          - img [ref=e138]
+          - generic [ref=e141]:
+            - paragraph [ref=e144]: I'm here to provide legal information for founders and investors, so I can't assist with cooking or recipe questions. If you have any legal inquiries related to business formation, intellectual property, or other relevant topics, feel free to ask!
+            - generic [ref=e145]:
+              - button [ref=e146] [cursor=pointer]:
+                - img [ref=e147]
+              - button [ref=e150] [cursor=pointer]:
+                - img [ref=e151]
+              - button [ref=e156] [cursor=pointer]:
+                - img [ref=e157]
+              - button [ref=e159] [cursor=pointer]:
+                - img [ref=e160]
+              - button "Get Quote" [ref=e162] [cursor=pointer]
+        - generic [ref=e163]:
+          - paragraph [ref=e166]: What is the purpose of a non-disclosure agreement (NDA)?
+          - generic [ref=e168]: D
+        - generic [ref=e169]:
+          - img [ref=e172]
+          - generic [ref=e175]:
+            - generic [ref=e177]:
+              - paragraph [ref=e178]: "A Non-Disclosure Agreement (NDA) is a legal contract designed to protect confidential information shared between parties. Here are the key purposes and features of an NDA:"
+              - heading "1. Protection of Confidential Information" [level=3] [ref=e179]:
+                - text: "1."
+                - strong [ref=e180]: Protection of Confidential Information
+              - list [ref=e181]:
+                - listitem [ref=e182]: The primary purpose of an NDA is to safeguard sensitive information from being disclosed to unauthorized third parties. This can include trade secrets, business plans, financial data, customer lists, and proprietary technology.
+              - heading "2. Establishing Trust" [level=3] [ref=e183]:
+                - text: "2."
+                - strong [ref=e184]: Establishing Trust
+              - list [ref=e185]:
+                - listitem [ref=e186]: NDAs help establish a level of trust between parties, especially in business relationships where sensitive information is exchanged. By signing an NDA, parties demonstrate their commitment to confidentiality.
+              - heading "3. Defining Confidential Information" [level=3] [ref=e187]:
+                - text: "3."
+                - strong [ref=e188]: Defining Confidential Information
+              - list [ref=e189]:
+                - listitem [ref=e190]: An NDA typically outlines what constitutes confidential information. This can include specific documents, verbal communications, or any other data deemed confidential by the disclosing party.
+              - heading "4. Limiting Use of Information" [level=3] [ref=e191]:
+                - text: "4."
+                - strong [ref=e192]: Limiting Use of Information
+              - list [ref=e193]:
+                - listitem [ref=e194]: The agreement restricts the receiving party from using the confidential information for any purpose other than the one specified in the NDA. This ensures that the information is not exploited for competitive advantage.
+              - heading "5. Legal Recourse" [level=3] [ref=e195]:
+                - text: "5."
+                - strong [ref=e196]: Legal Recourse
+              - list [ref=e197]:
+                - listitem [ref=e198]: If a party breaches the NDA, the disclosing party has legal grounds to seek remedies, which may include damages or injunctive relief. This provides a level of security for the party sharing sensitive information.
+              - heading "6. Duration of Confidentiality" [level=3] [ref=e199]:
+                - text: "6."
+                - strong [ref=e200]: Duration of Confidentiality
+              - list [ref=e201]:
+                - listitem [ref=e202]: NDAs often specify the duration of the confidentiality obligation, which can vary depending on the nature of the information and the agreement between the parties. Some NDAs may have a fixed term, while others may last indefinitely.
+              - heading "7. Applicability in Various Contexts" [level=3] [ref=e203]:
+                - text: "7."
+                - strong [ref=e204]: Applicability in Various Contexts
+              - list [ref=e205]:
+                - listitem [ref=e206]:
+                  - text: "NDAs are commonly used in various business contexts, including:"
+                  - list [ref=e207]:
+                    - listitem [ref=e208]:
+                      - strong [ref=e209]: Partnerships
+                      - text: ": When two businesses collaborate and share sensitive information."
+                    - listitem [ref=e210]:
+                      - strong [ref=e211]: Employment
+                      - text: ": When hiring employees who will have access to confidential company information."
+                    - listitem [ref=e212]:
+                      - strong [ref=e213]: Investments
+                      - text: ": When discussing potential investments or partnerships with investors."
+              - heading "Considerations" [level=3] [ref=e214]
+              - list [ref=e215]:
+                - listitem [ref=e216]:
+                  - strong [ref=e217]: Mutual vs. Unilateral
+                  - text: ": NDAs can be mutual (both parties share confidential information) or unilateral (only one party discloses information)."
+                - listitem [ref=e218]:
+                  - strong [ref=e219]: Enforceability
+                  - text: ": The enforceability of an NDA can depend on its clarity, reasonableness, and compliance with applicable laws."
+              - paragraph [ref=e220]: In summary, an NDA is a crucial tool for protecting sensitive information in business relationships. If you are considering using an NDA, it may be beneficial to consult with a qualified legal professional to ensure that it meets your specific needs and complies with relevant laws.
+            - generic [ref=e221]:
+              - button [ref=e222] [cursor=pointer]:
+                - img [ref=e223]
+              - button [ref=e226] [cursor=pointer]:
+                - img [ref=e227]
+              - button [ref=e232] [cursor=pointer]:
+                - img [ref=e233]
+              - button [ref=e235] [cursor=pointer]:
+                - img [ref=e236]
+              - button "Get Quote" [ref=e238] [cursor=pointer]
+        - generic [ref=e239]:
+          - paragraph [ref=e242]: Who won the World Series in 2023?
+          - generic [ref=e244]: D
+        - generic [ref=e245]:
+          - img [ref=e248]
+          - generic [ref=e251]:
+            - paragraph [ref=e254]: I'm here to provide legal information for founders and investors, so I can't assist with sports-related questions. If you have any legal inquiries related to business formation, intellectual property, or other relevant topics, feel free to ask!
+            - generic [ref=e255]:
+              - button [ref=e256] [cursor=pointer]:
+                - img [ref=e257]
+              - button [ref=e260] [cursor=pointer]:
+                - img [ref=e261]
+              - button [ref=e266] [cursor=pointer]:
+                - img [ref=e267]
+              - button [ref=e269] [cursor=pointer]:
+                - img [ref=e270]
+              - button "Get Quote" [ref=e272] [cursor=pointer]
+      - paragraph [ref=e274]:
+        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e275] [cursor=pointer]:
+          - /url: "#"
+        - text: .
+      - generic [ref=e276]:
+        - generic [ref=e278]:
+          - textbox "Type your message..." [active] [ref=e279]
+          - button [ref=e280] [cursor=pointer]:
+            - img [ref=e281]
+          - button [disabled]:
+            - img
+        - generic [ref=e283]:
+          - text: Briefcase can make mistakes. Please check important info with a lawyer.
+          - button [ref=e284] [cursor=pointer]:
+            - img [ref=e285]
+  - region "Notifications (F8)":
+    - list
+  - alert [ref=e287]
+```
