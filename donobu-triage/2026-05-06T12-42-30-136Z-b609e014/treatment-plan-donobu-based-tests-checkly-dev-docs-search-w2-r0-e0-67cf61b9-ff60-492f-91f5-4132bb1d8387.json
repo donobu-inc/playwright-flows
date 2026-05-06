@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-05-06T12:47:04.687Z",
+  "plan": {
+    "failureSummary": "The test assertion failed because the actual URL included a fragment (#playwright-check-suite) which was not present in the expected URL string. The AI correctly selected the search result 'Constructs > DETECT' for the query 'Playwright check suite', but that specific result links directly to a section of the page via a fragment.",
+    "failureReason": "ASSERTION_DRIFT",
+    "confidence": 1,
+    "observedIndicators": [
+      "Assertion mismatch detected in error details.",
+      "page.ai tool calls succeeded but the following Playwright assertion failed.",
+      "The clicked search result contained a URL fragment (#playwright-check-suite)."
+    ],
+    "remediationSteps": [
+      {
+        "category": "REFINE_ASSERTIONS",
+        "summary": "Relax or update the URL assertion to account for URL fragments.",
+        "details": "Update the assertion on line 13 of checkly.test.ts to either expect the URL with the fragment 'https://www.checklyhq.com/docs/constructs/playwright-check/#playwright-check-suite' or use a more flexible matcher like .toContain()."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": false,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The AI performed the search and selection correctly. The failure is purely in the test's deterministic assertion logic which is too rigid regarding the URL structure.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 22396,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-05-06T12-42-30-136Z-b609e014",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-06T12-42-30-136Z-b609e014",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-06T12-42-30-136Z-b609e014/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-67cf61b9-ff60-492f-91f5-4132bb1d8387.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
