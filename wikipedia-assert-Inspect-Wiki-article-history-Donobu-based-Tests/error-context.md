@@ -1,0 +1,4598 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: wikipedia-assert.test.ts >> Inspect Wiki article history
+- Location: tests/wikipedia-assert.test.ts:4:5
+
+# Error details
+
+```
+Test timeout of 240000ms exceeded.
+```
+
+```
+Error: page.goto: Test timeout of 240000ms exceeded.
+Call log:
+  - navigating to "https://en.wikipedia.org/wiki/Software_testing", waiting until "load"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikipedia The Free Encyclopedia" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - generic [ref=e13]:
+          - img "Wikipedia" [ref=e14]
+          - img "The Free Encyclopedia" [ref=e15]
+    - generic [ref=e16]:
+      - search [ref=e17]:
+        - generic [ref=e20]:
+          - searchbox "Search Wikipedia" [ref=e23]
+          - button "Search" [ref=e25]
+      - navigation "Personal tools" [ref=e26]:
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - link "Donate" [ref=e32] [cursor=pointer]:
+              - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+              - generic [ref=e34]: Donate
+          - listitem [ref=e35]:
+            - link "Create account" [ref=e36] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:CreateAccount&returnto=Software+testing
+          - listitem [ref=e37]:
+            - link "Log in" [ref=e38] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:UserLogin&returnto=Software+testing
+  - generic [ref=e40]:
+    - navigation "Contents" [ref=e44]:
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - heading "Contents" [level=2] [ref=e48]
+          - button "hide" [ref=e49] [cursor=pointer]
+        - list [ref=e50]:
+          - listitem [ref=e51]:
+            - link "(Top)" [ref=e52] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e53]: (Top)
+          - listitem [ref=e54]:
+            - link "Economics" [ref=e55] [cursor=pointer]:
+              - /url: "#Economics"
+              - generic [ref=e56]: Economics
+            - list
+          - listitem [ref=e57]:
+            - link "History" [ref=e58] [cursor=pointer]:
+              - /url: "#History"
+              - generic [ref=e59]: History
+            - list
+          - listitem [ref=e60]:
+            - link "Goals" [ref=e61] [cursor=pointer]:
+              - /url: "#Goals"
+              - generic [ref=e62]: Goals
+            - button "Toggle Goals subsection" [ref=e63]:
+              - generic [ref=e65]: Toggle Goals subsection
+            - list
+          - listitem [ref=e66]:
+            - link "Categories" [ref=e67] [cursor=pointer]:
+              - /url: "#Categories"
+              - generic [ref=e68]: Categories
+            - button "Toggle Categories subsection" [ref=e69]:
+              - generic [ref=e71]: Toggle Categories subsection
+            - list
+          - listitem [ref=e72]:
+            - link "Teamwork" [ref=e73] [cursor=pointer]:
+              - /url: "#Teamwork"
+              - generic [ref=e74]: Teamwork
+            - button "Toggle Teamwork subsection" [ref=e75]:
+              - generic [ref=e77]: Toggle Teamwork subsection
+            - list
+          - listitem [ref=e78]:
+            - link "Quality" [ref=e79] [cursor=pointer]:
+              - /url: "#Quality"
+              - generic [ref=e80]: Quality
+            - button "Toggle Quality subsection" [ref=e81]:
+              - generic [ref=e83]: Toggle Quality subsection
+            - list
+          - listitem [ref=e84]:
+            - link "Controversy" [ref=e85] [cursor=pointer]:
+              - /url: "#Controversy"
+              - generic [ref=e86]: Controversy
+            - list
+          - listitem [ref=e87]:
+            - link "See also" [ref=e88] [cursor=pointer]:
+              - /url: "#See_also"
+              - generic [ref=e89]: See also
+            - list
+          - listitem [ref=e90]:
+            - link "References" [ref=e91] [cursor=pointer]:
+              - /url: "#References"
+              - generic [ref=e92]: References
+            - list
+          - listitem [ref=e93]:
+            - link "Further reading" [ref=e94] [cursor=pointer]:
+              - /url: "#Further_reading"
+              - generic [ref=e95]: Further reading
+            - list
+          - listitem [ref=e96]:
+            - link "External links" [ref=e97] [cursor=pointer]:
+              - /url: "#External_links"
+              - generic [ref=e98]: External links
+            - list
+    - main [ref=e100]:
+      - generic [ref=e101]:
+        - heading "Software testing" [level=1] [ref=e102]:
+          - generic [ref=e103]: Software testing
+        - generic [ref=e104]:
+          - button "Go to an article in another language. Available in 49 languages" [ref=e105] [cursor=pointer]
+          - generic [ref=e108]: 49 languages
+      - generic [ref=e110]:
+        - navigation "Namespaces" [ref=e112]:
+          - generic [ref=e113]:
+            - generic:
+              - list:
+                - listitem [ref=e114]:
+                  - link "Article" [ref=e115] [cursor=pointer]:
+                    - /url: /wiki/Software_testing
+                    - generic [ref=e116]: Article
+                - listitem [ref=e117]:
+                  - link "Talk" [ref=e118] [cursor=pointer]:
+                    - /url: /wiki/Talk:Software_testing
+                    - generic [ref=e119]: Talk
+        - generic [ref=e120]:
+          - navigation "Views" [ref=e121]:
+            - generic [ref=e122]:
+              - generic:
+                - list:
+                  - listitem [ref=e123]:
+                    - link "Read" [ref=e124] [cursor=pointer]:
+                      - /url: /wiki/Software_testing
+                      - generic [ref=e125]: Read
+                  - listitem [ref=e126]:
+                    - link "Edit" [ref=e127] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit
+                      - generic [ref=e128]: Edit
+                  - listitem [ref=e129]:
+                    - link "View history" [ref=e130] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=history
+                      - generic [ref=e131]: View history
+          - navigation "Page tools" [ref=e132]:
+            - generic [ref=e133]:
+              - button "Tools" [ref=e134] [cursor=pointer]
+              - generic [ref=e136] [cursor=pointer]: Tools
+      - navigation "Appearance" [ref=e139]:
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: Appearance
+            - button "hide" [ref=e144] [cursor=pointer]
+          - generic [ref=e145]:
+            - generic [ref=e146]: Text
+            - list [ref=e148]:
+              - listitem [ref=e149]:
+                - generic [ref=e151]:
+                  - generic [ref=e152]:
+                    - radio "Small" [ref=e153]
+                    - generic [ref=e156]: Small
+                  - generic [ref=e157]:
+                    - radio "Standard" [checked] [ref=e158]
+                    - generic [ref=e161]: Standard
+                  - generic [ref=e162]:
+                    - radio "Large" [ref=e163]
+                    - generic [ref=e166]: Large
+          - generic [ref=e167]:
+            - generic [ref=e168]: Width
+            - list [ref=e170]:
+              - listitem [ref=e171]:
+                - generic [ref=e173]:
+                  - generic [ref=e174]:
+                    - radio "Standard" [checked] [ref=e175]
+                    - generic [ref=e178]: Standard
+                  - generic [ref=e179]:
+                    - radio "Wide" [ref=e180]
+                    - generic [ref=e183]: Wide
+          - generic [ref=e184]:
+            - generic [ref=e185]: Color
+            - list [ref=e187]:
+              - listitem [ref=e188]:
+                - generic [ref=e190]:
+                  - generic [ref=e191]:
+                    - radio "Automatic" [ref=e192]
+                    - generic [ref=e195]: Automatic
+                  - generic [ref=e196]:
+                    - radio "Light" [checked] [ref=e197]
+                    - generic [ref=e200]: Light
+                  - generic [ref=e201]:
+                    - radio "Dark" [ref=e202]
+                    - generic [ref=e205]: Dark
+      - generic "Software testing" [ref=e206]:
+        - generic [ref=e208]: From Wikipedia, the free encyclopedia
+        - generic [ref=e210]:
+          - navigation [ref=e211]:
+            - rowgroup [ref=e212]:
+              - row "Part of a series on" [ref=e213]:
+                - cell "Part of a series on" [ref=e214]
+              - row "Software development" [ref=e215]:
+                - columnheader "Software development" [ref=e216]:
+                  - link "Software development" [ref=e217] [cursor=pointer]:
+                    - /url: /wiki/Software_development
+              - row "[hide] Core activities Data modeling · Processes · Requirements · Design · Construction · Engineering · Testing · Debugging · Deployment · Maintenance" [ref=e218]:
+                - cell "[hide] Core activities Data modeling · Processes · Requirements · Design · Construction · Engineering · Testing · Debugging · Deployment · Maintenance" [ref=e219]:
+                  - generic [ref=e220]:
+                    - button "[hide]" [expanded] [ref=e221] [cursor=pointer]
+                    - generic [ref=e222]: Core activities
+                    - list [ref=e224]:
+                      - listitem [ref=e225]:
+                        - link "Data modeling" [ref=e226] [cursor=pointer]:
+                          - /url: /wiki/Data_modeling
+                        - text: ·
+                      - listitem [ref=e227]:
+                        - link "Processes" [ref=e228] [cursor=pointer]:
+                          - /url: /wiki/Software_development_process
+                        - text: ·
+                      - listitem [ref=e229]:
+                        - link "Requirements" [ref=e230] [cursor=pointer]:
+                          - /url: /wiki/Requirements_analysis
+                        - text: ·
+                      - listitem [ref=e231]:
+                        - link "Design" [ref=e232] [cursor=pointer]:
+                          - /url: /wiki/Software_design
+                        - text: ·
+                      - listitem [ref=e233]:
+                        - link "Construction" [ref=e234] [cursor=pointer]:
+                          - /url: /wiki/Software_construction
+                        - text: ·
+                      - listitem [ref=e235]:
+                        - link "Engineering" [ref=e236] [cursor=pointer]:
+                          - /url: /wiki/Software_engineering
+                        - text: ·
+                      - listitem [ref=e237]: Testing ·
+                      - listitem [ref=e238]:
+                        - link "Debugging" [ref=e239] [cursor=pointer]:
+                          - /url: /wiki/Debugging
+                        - text: ·
+                      - listitem [ref=e240]:
+                        - link "Deployment" [ref=e241] [cursor=pointer]:
+                          - /url: /wiki/Software_deployment
+                        - text: ·
+                      - listitem [ref=e242]:
+                        - link "Maintenance" [ref=e243] [cursor=pointer]:
+                          - /url: /wiki/Software_maintenance
+              - row "[show] Paradigms and models" [ref=e244]:
+                - cell "[show] Paradigms and models" [ref=e245]:
+                  - generic [ref=e246]:
+                    - button "[show]" [ref=e247] [cursor=pointer]
+                    - generic [ref=e248]: Paradigms and models
+                    - generic: · · · · · ·
+              - row "[show] Methodologies and frameworks" [ref=e249]:
+                - cell "[show] Methodologies and frameworks" [ref=e250]:
+                  - generic [ref=e251]:
+                    - button "[show]" [ref=e252] [cursor=pointer]
+                    - generic [ref=e253]:
+                      - link "Methodologies" [ref=e254] [cursor=pointer]:
+                        - /url: /wiki/Software_development_methodology
+                      - text: and frameworks
+                    - generic: · · · · · · · · · · · · · · · · · · · ·
+              - row "[show] Supporting disciplines" [ref=e255]:
+                - cell "[show] Supporting disciplines" [ref=e256]:
+                  - generic [ref=e257]:
+                    - button "[show]" [ref=e258] [cursor=pointer]
+                    - generic [ref=e259]: Supporting disciplines
+                    - generic: · · · · ·
+              - row "[show] Practices" [ref=e260]:
+                - cell "[show] Practices" [ref=e261]:
+                  - generic [ref=e262]:
+                    - button "[show]" [ref=e263] [cursor=pointer]
+                    - generic [ref=e264]: Practices
+                    - generic: · · · · · · · · ·
+              - row "[show] Tools" [ref=e265]:
+                - cell "[show] Tools" [ref=e266]:
+                  - generic [ref=e267]:
+                    - button "[show]" [ref=e268] [cursor=pointer]
+                    - link "Tools" [ref=e270] [cursor=pointer]:
+                      - /url: /wiki/Programming_tool
+                    - generic: · · · · · · · ·
+              - row "[show] Standards and bodies of knowledge" [ref=e271]:
+                - cell "[show] Standards and bodies of knowledge" [ref=e272]:
+                  - generic [ref=e273]:
+                    - button "[show]" [ref=e274] [cursor=pointer]
+                    - generic [ref=e275]: Standards and bodies of knowledge
+                    - generic: · · · · · · · ·
+              - row "[show] Glossaries" [ref=e276]:
+                - cell "[show] Glossaries" [ref=e277]:
+                  - generic [ref=e278]:
+                    - button "[show]" [ref=e279] [cursor=pointer]
+                    - generic [ref=e280]: Glossaries
+                    - generic: · ·
+              - row "[show] Outlines" [ref=e281]:
+                - cell "[show] Outlines" [ref=e282]:
+                  - generic [ref=e283]:
+                    - button "[show]" [ref=e284] [cursor=pointer]
+                    - generic [ref=e285]: Outlines
+                    - generic: · · · · · · ·
+              - row "v · t · e" [ref=e286]:
+                - cell "v · t · e" [ref=e287]:
+                  - list [ref=e289]:
+                    - listitem [ref=e290]:
+                      - link "v" [ref=e291] [cursor=pointer]:
+                        - /url: /wiki/Template:Software_development_process
+                      - text: ·
+                    - listitem [ref=e292]:
+                      - link "t" [ref=e293] [cursor=pointer]:
+                        - /url: /wiki/Template_talk:Software_development_process
+                      - text: ·
+                    - listitem [ref=e294]:
+                      - link "e" [ref=e295] [cursor=pointer]:
+                        - /url: /wiki/Special:EditPage/Template:Software_development_process
+          - figure "TestingCup – Polish Championship in Software Testing, Katowice, May 2016" [ref=e296]:
+            - link [ref=e297] [cursor=pointer]:
+              - /url: /wiki/File:TestingCup-Polish-Championship-in-Software-Testing-Katowice-2016.jpg
+              - img [ref=e298]
+            - generic [ref=e299]:
+              - text: TestingCup – Polish Championship in Software Testing,
+              - link "Katowice" [ref=e300] [cursor=pointer]:
+                - /url: /wiki/Katowice
+              - text: ", May 2016"
+          - paragraph [ref=e301]:
+            - text: Software testing is the act of checking whether
+            - link "software" [ref=e302] [cursor=pointer]:
+              - /url: /wiki/Software
+            - text: meets its intended objectives and satisfies expectations.
+          - paragraph [ref=e303]:
+            - text: Software testing can provide objective, independent information about the
+            - link "quality" [ref=e304] [cursor=pointer]:
+              - /url: /wiki/Quality_(business)
+            - text: of software and the
+            - link "risk" [ref=e305] [cursor=pointer]:
+              - /url: /wiki/Risk
+            - text: of its failure to a
+            - link "user" [ref=e306] [cursor=pointer]:
+              - /url: /wiki/User_(computing)
+            - text: or sponsor or any other stakeholder.
+            - superscript [ref=e307]:
+              - link "[1]" [ref=e308] [cursor=pointer]:
+                - /url: "#cite_note-Kaner_1-1"
+          - paragraph [ref=e309]:
+            - text: Software testing can determine the
+            - link "correctness" [ref=e310] [cursor=pointer]:
+              - /url: /wiki/Correctness_(computer_science)
+            - text: of software for specific
+            - link "scenarios" [ref=e311] [cursor=pointer]:
+              - /url: /wiki/Scenario_(computing)
+            - text: but cannot determine correctness for all scenarios.
+            - superscript [ref=e312]:
+              - link "[2]" [ref=e313] [cursor=pointer]:
+                - /url: "#cite_note-pan-2"
+            - superscript [ref=e314]:
+              - link "[3]" [ref=e315] [cursor=pointer]:
+                - /url: "#cite_note-Kaner2-3"
+            - text: It cannot find all
+            - link "bugs" [ref=e316] [cursor=pointer]:
+              - /url: /wiki/Software_bug
+            - text: .
+          - paragraph [ref=e317]:
+            - text: Based on the criteria for measuring correctness from an
+            - link "oracle" [ref=e318] [cursor=pointer]:
+              - /url: /wiki/Test_oracle
+            - text: ", software testing employs principles and mechanisms that might recognize a problem. Examples of oracles include"
+            - link "specifications" [ref=e319] [cursor=pointer]:
+              - /url: /wiki/Specification
+            - text: ","
+            - link "contracts" [ref=e320] [cursor=pointer]:
+              - /url: /wiki/Design_by_Contract
+            - text: ","
+            - superscript [ref=e321]:
+              - link "[4]" [ref=e322] [cursor=pointer]:
+                - /url: "#cite_note-4"
+            - text: comparable products, past versions of the same product, inferences about intended or expected purpose, user or customer expectations, relevant standards, and applicable laws.
+          - paragraph [ref=e323]: Software testing can be functional or non-functional in nature.
+          - paragraph [ref=e324]:
+            - text: Software testing is often
+            - link "dynamic" [ref=e325] [cursor=pointer]:
+              - /url: /wiki/Dynamic_testing
+            - text: "in nature: running the software to verify actual output matches expected. It can also be"
+            - link "static" [ref=e326] [cursor=pointer]:
+              - /url: /wiki/Static_testing
+            - text: "in nature: reviewing"
+            - link "code" [ref=e327] [cursor=pointer]:
+              - /url: /wiki/Source_code
+            - text: and its associated
+            - link "documentation" [ref=e328] [cursor=pointer]:
+              - /url: /wiki/Documentation
+            - text: .
+          - paragraph [ref=e329]: "Software testing is often used to answer the question: Does the software do what it is supposed to do and what it needs to do?"
+          - paragraph [ref=e330]:
+            - text: Information learned from software testing may be used to improve the process by which software is developed.
+            - superscript [ref=e331]:
+              - link "[5]" [ref=e332] [cursor=pointer]:
+                - /url: "#cite_note-kolawa-5"
+            - superscript [ref=e333]: ": 41–43"
+          - paragraph [ref=e334]:
+            - text: A commonly suggested approach to automated testing is the "test pyramid," wherein most of the tests are
+            - link "unit tests" [ref=e335] [cursor=pointer]:
+              - /url: /wiki/Unit_tests
+            - text: ", followed by a smaller set of"
+            - link "integration tests" [ref=e336] [cursor=pointer]:
+              - /url: /wiki/Integration_testing
+            - text: and finally a few
+            - link "end-to-end (e2e) tests" [ref=e337] [cursor=pointer]:
+              - /url: /wiki/End-to-end_testing
+            - text: .
+            - superscript [ref=e338]:
+              - link "[6]" [ref=e339] [cursor=pointer]:
+                - /url: "#cite_note-6"
+            - superscript [ref=e340]:
+              - link "[7]" [ref=e341] [cursor=pointer]:
+                - /url: "#cite_note-7"
+            - superscript [ref=e342]:
+              - link "[8]" [ref=e343] [cursor=pointer]:
+                - /url: "#cite_note-8"
+          - generic [ref=e344]:
+            - heading "Economics" [level=2] [ref=e345]
+            - generic [ref=e346]:
+              - text: "["
+              - link "edit" [ref=e347] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=1
+              - text: "]"
+          - paragraph [ref=e348]:
+            - text: A study conducted by
+            - link "NIST" [ref=e349] [cursor=pointer]:
+              - /url: /wiki/NIST
+            - text: in 2002 reported that software bugs cost the U.S. economy $59.5 billion annually. More than a third of this cost could be avoided if better software testing was performed.
+            - superscript [ref=e350]:
+              - link "[9]" [ref=e351] [cursor=pointer]:
+                - /url: "#cite_note-9"
+            - superscript [ref=e352]:
+              - text: "["
+              - generic [ref=e353]:
+                - link "dubious" [ref=e354] [cursor=pointer]:
+                  - /url: /wiki/Wikipedia:Accuracy_dispute#Disputed_statement
+                - text: –
+                - link "discuss" [ref=e355] [cursor=pointer]:
+                  - /url: /wiki/Talk:Software_testing#NIST_study
+              - text: "]"
+          - paragraph [ref=e356]:
+            - link "Outsourcing" [ref=e357] [cursor=pointer]:
+              - /url: /wiki/Outsourcing
+            - text: software testing because of costs is very common, with China, the Philippines, India and Pakistan being preferred destinations.
+            - superscript [ref=e358]:
+              - link "[10]" [ref=e359] [cursor=pointer]:
+                - /url: "#cite_note-Tholons_report-10"
+          - generic [ref=e360]:
+            - heading "History" [level=2] [ref=e361]
+            - generic [ref=e362]:
+              - text: "["
+              - link "edit" [ref=e363] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=2
+              - text: "]"
+          - paragraph [ref=e364]:
+            - link "Glenford J. Myers" [ref=e365] [cursor=pointer]:
+              - /url: /wiki/Glenford_J._Myers
+            - text: initially introduced the separation of
+            - link "debugging" [ref=e366] [cursor=pointer]:
+              - /url: /wiki/Debugging
+            - text: from testing in 1979.
+            - superscript [ref=e367]:
+              - link "[11]" [ref=e368] [cursor=pointer]:
+                - /url: "#cite_note-Myers_1979-11"
+            - text: Although his attention was on breakage testing ("A successful test case is one that detects an as-yet undiscovered error."
+            - superscript [ref=e369]:
+              - link "[11]" [ref=e370] [cursor=pointer]:
+                - /url: "#cite_note-Myers_1979-11"
+            - superscript [ref=e371]: ": 16"
+            - text: ), it illustrated the desire of the software engineering community to separate fundamental development activities, such as debugging, from that of verification. Software testing typically includes handling software bugs – a defect in the
+            - link "code" [ref=e372] [cursor=pointer]:
+              - /url: /wiki/Source_code
+            - text: that causes an undesirable result.
+            - superscript [ref=e373]:
+              - link "[12]" [ref=e374] [cursor=pointer]:
+                - /url: "#cite_note-IEEEglossary-12"
+            - superscript [ref=e375]: ": 31"
+            - text: Bugs generally slow testing progress and involve
+            - link "programmer" [ref=e376] [cursor=pointer]:
+              - /url: /wiki/Programmer
+            - text: assistance to
+            - link "debug" [ref=e377] [cursor=pointer]:
+              - /url: /wiki/Debug
+            - text: and fix.
+          - paragraph [ref=e378]:
+            - text: Not all defects cause a failure. For example, a defect in
+            - link "dead code" [ref=e379] [cursor=pointer]:
+              - /url: /wiki/Dead_code
+            - text: will not be considered a failure.
+          - paragraph [ref=e380]:
+            - text: A defect that does not cause failure at one point in time may lead to failure later due to environmental changes. Examples of environment change include running on new
+            - link "computer hardware" [ref=e381] [cursor=pointer]:
+              - /url: /wiki/Computer_hardware
+            - text: ", changes in"
+            - link "data" [ref=e382] [cursor=pointer]:
+              - /url: /wiki/Source_data
+            - text: ", and interacting with different software."
+            - superscript [ref=e383]:
+              - link "[13]" [ref=e384] [cursor=pointer]:
+                - /url: "#cite_note-13"
+          - generic [ref=e385]:
+            - heading "Goals" [level=2] [ref=e386]
+            - generic [ref=e387]:
+              - text: "["
+              - link "edit" [ref=e388] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=3
+              - text: "]"
+          - paragraph [ref=e389]: Software testing is typically goal driven.
+          - generic [ref=e390]:
+            - heading "Finding bugs" [level=3] [ref=e391]
+            - generic [ref=e392]:
+              - text: "["
+              - link "edit" [ref=e393] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=4
+              - text: "]"
+          - paragraph [ref=e394]:
+            - text: Software testing typically includes handling software bugs – a defect in the
+            - link "code" [ref=e395] [cursor=pointer]:
+              - /url: /wiki/Source_code
+            - text: that causes an undesirable result.
+            - superscript [ref=e396]:
+              - link "[12]" [ref=e397] [cursor=pointer]:
+                - /url: "#cite_note-IEEEglossary-12"
+            - superscript [ref=e398]: ": 31"
+            - text: Bugs generally slow testing progress and involve
+            - link "programmer" [ref=e399] [cursor=pointer]:
+              - /url: /wiki/Programmer
+            - text: assistance to
+            - link "debug" [ref=e400] [cursor=pointer]:
+              - /url: /wiki/Debug
+            - text: and fix.
+          - paragraph [ref=e401]:
+            - text: Not all defects cause a failure. For example, a defect in
+            - link "dead code" [ref=e402] [cursor=pointer]:
+              - /url: /wiki/Dead_code
+            - text: will not be considered a failure.
+          - paragraph [ref=e403]:
+            - text: A defect that does not cause failure at one point in time may lead to failure later due to environmental changes. Examples of environment change include running on new
+            - link "computer hardware" [ref=e404] [cursor=pointer]:
+              - /url: /wiki/Computer_hardware
+            - text: ", changes in"
+            - link "data" [ref=e405] [cursor=pointer]:
+              - /url: /wiki/Source_data
+            - text: ", and interacting with different software."
+            - superscript [ref=e406]:
+              - link "[14]" [ref=e407] [cursor=pointer]:
+                - /url: "#cite_note-14"
+          - paragraph [ref=e408]: A single defect may result in multiple failure symptoms.
+          - generic [ref=e409]:
+            - heading "Ensuring requirements are satisfied" [level=3] [ref=e410]
+            - generic [ref=e411]:
+              - text: "["
+              - link "edit" [ref=e412] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=5
+              - text: "]"
+          - paragraph [ref=e413]:
+            - text: Software testing may involve a Requirements gap – omission from the design for a requirement.
+            - superscript [ref=e414]:
+              - link "[5]" [ref=e415] [cursor=pointer]:
+                - /url: "#cite_note-kolawa-5"
+            - superscript [ref=e416]: ": 426"
+            - text: Requirement gaps can often be
+            - link "non-functional requirements" [ref=e417] [cursor=pointer]:
+              - /url: /wiki/Non-functional_requirements
+            - text: such as
+            - link "testability" [ref=e418] [cursor=pointer]:
+              - /url: /wiki/Software_testability
+            - text: ","
+            - link "scalability" [ref=e419] [cursor=pointer]:
+              - /url: /wiki/Scalability
+            - text: ","
+            - link "maintainability" [ref=e420] [cursor=pointer]:
+              - /url: /wiki/Maintainability
+            - text: ","
+            - link "performance" [ref=e421] [cursor=pointer]:
+              - /url: /wiki/Computer_performance
+            - text: ", and"
+            - link "security" [ref=e422] [cursor=pointer]:
+              - /url: /wiki/Computer_security
+            - text: .
+          - generic [ref=e423]:
+            - heading "Code coverage" [level=3] [ref=e424]
+            - generic [ref=e425]:
+              - text: "["
+              - link "edit" [ref=e426] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=6
+              - text: "]"
+          - paragraph [ref=e427]:
+            - text: A fundamental limitation of software testing is that testing under all combinations of inputs and preconditions (initial state) is not feasible, even with a simple product.
+            - superscript [ref=e428]:
+              - link "[3]" [ref=e429] [cursor=pointer]:
+                - /url: "#cite_note-Kaner2-3"
+            - superscript [ref=e430]: ": 17–18"
+            - superscript [ref=e431]:
+              - link "[15]" [ref=e432] [cursor=pointer]:
+                - /url: "#cite_note-15"
+            - text: Defects that manifest in unusual conditions are difficult to find in testing. Also,
+            - link "non-functional" [ref=e433] [cursor=pointer]:
+              - /url: /wiki/Non-functional_requirements
+            - text: dimensions of quality (how it is supposed to be versus what it is supposed to do) –
+            - link "usability" [ref=e434] [cursor=pointer]:
+              - /url: /wiki/Usability
+            - text: ","
+            - link "scalability" [ref=e435] [cursor=pointer]:
+              - /url: /wiki/Scalability
+            - text: ","
+            - link "performance" [ref=e436] [cursor=pointer]:
+              - /url: /wiki/Computer_performance
+            - text: ","
+            - link "compatibility" [ref=e437] [cursor=pointer]:
+              - /url: /wiki/Backward_compatibility
+            - text: ", and"
+            - link "reliability" [ref=e438] [cursor=pointer]:
+              - /url: /wiki/Reliability_(engineering)
+            - text: – can be subjective; something that constitutes sufficient value to one person may not to another.
+          - paragraph [ref=e439]:
+            - text: Although testing for every possible input is not feasible, testing can use
+            - link "combinatorics" [ref=e440] [cursor=pointer]:
+              - /url: /wiki/Combinatorics
+            - text: to maximize coverage while minimizing tests.
+            - superscript [ref=e441]:
+              - link "[16]" [ref=e442] [cursor=pointer]:
+                - /url: "#cite_note-16"
+          - generic [ref=e443]:
+            - heading "Categories" [level=2] [ref=e444]
+            - generic [ref=e445]:
+              - text: "["
+              - link "edit" [ref=e446] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=7
+              - text: "]"
+          - paragraph
+          - note [ref=e447]:
+            - text: "Main article:"
+            - link "Software testing tactics" [ref=e448] [cursor=pointer]:
+              - /url: /wiki/Software_testing_tactics
+          - paragraph [ref=e449]:
+            - text: Testing can be categorized many ways.
+            - superscript [ref=e450]:
+              - link "[17]" [ref=e451] [cursor=pointer]:
+                - /url: "#cite_note-17"
+          - generic [ref=e452]:
+            - heading "Automated testing" [level=3] [ref=e453]
+            - generic [ref=e454]:
+              - text: "["
+              - link "edit" [ref=e455] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=8
+              - text: "]"
+          - generic [ref=e456]:
+            - note [ref=e457]:
+              - text: This paragraph is an excerpt from
+              - link "Test automation" [ref=e458] [cursor=pointer]:
+                - /url: /wiki/Test_automation
+              - text: .
+              - generic [ref=e459]:
+                - text: "["
+                - link "edit" [ref=e460] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Test_automation&action=edit
+                - text: "]"
+            - paragraph [ref=e462]:
+              - link "Test automation" [ref=e463] [cursor=pointer]:
+                - /url: /wiki/Test_automation
+              - text: is the use of
+              - link "software" [ref=e464] [cursor=pointer]:
+                - /url: /wiki/Software
+              - text: (separate from the software being tested) for controlling the execution of tests and comparing actual outcome with predicted.
+              - superscript [ref=e465]:
+                - link "[18]" [ref=e466] [cursor=pointer]:
+                  - /url: "#cite_note-18"
+              - text: Test automation supports testing the
+              - link "system under test" [ref=e467] [cursor=pointer]:
+                - /url: /wiki/System_under_test
+              - text: (SUT) without
+              - link "manual interaction" [ref=e468] [cursor=pointer]:
+                - /url: /wiki/Manual_testing
+              - text: which can lead to faster test execution and testing more often. Test automation is a key aspect of
+              - link "continuous testing" [ref=e469] [cursor=pointer]:
+                - /url: /wiki/Continuous_testing
+              - text: and often for
+              - link "continuous integration" [ref=e470] [cursor=pointer]:
+                - /url: /wiki/Continuous_integration
+              - text: and
+              - link "continuous delivery" [ref=e471] [cursor=pointer]:
+                - /url: /wiki/Continuous_delivery
+              - text: (CI/CD).
+              - superscript [ref=e472]:
+                - link "[19]" [ref=e473] [cursor=pointer]:
+                  - /url: "#cite_note-19"
+          - generic [ref=e474]:
+            - heading "Levels" [level=3] [ref=e475]
+            - generic [ref=e476]:
+              - text: "["
+              - link "edit" [ref=e477] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=9
+              - text: "]"
+          - paragraph [ref=e478]:
+            - text: Software testing can be categorized into levels based on how much of the
+            - link "software system" [ref=e479] [cursor=pointer]:
+              - /url: /wiki/Software_system
+            - text: is the focus of a test.
+            - superscript [ref=e480]:
+              - link "[20]" [ref=e481] [cursor=pointer]:
+                - /url: "#cite_note-Computer.org-20"
+            - superscript [ref=e482]:
+              - link "[21]" [ref=e483] [cursor=pointer]:
+                - /url: "#cite_note-BourqueSWEBOK14-4-21"
+            - superscript [ref=e484]:
+              - link "[22]" [ref=e485] [cursor=pointer]:
+                - /url: "#cite_note-DooleySoftware11-22"
+            - superscript [ref=e486]:
+              - link "[23]" [ref=e487] [cursor=pointer]:
+                - /url: "#cite_note-WiegersCreating13-23"
+          - generic [ref=e488]:
+            - heading "Unit testing" [level=4] [ref=e489]
+            - generic [ref=e490]:
+              - text: "["
+              - link "edit" [ref=e491] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=10
+              - text: "]"
+          - generic [ref=e492]:
+            - note [ref=e493]:
+              - text: This paragraph is an excerpt from
+              - link "Unit testing" [ref=e494] [cursor=pointer]:
+                - /url: /wiki/Unit_testing
+              - text: .
+              - generic [ref=e495]:
+                - text: "["
+                - link "edit" [ref=e496] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Unit_testing&action=edit
+                - text: "]"
+            - paragraph [ref=e498]:
+              - link "Unit testing" [ref=e499] [cursor=pointer]:
+                - /url: /wiki/Unit_testing
+              - text: ", a.k.a. component or module testing, is a form of software testing by which isolated"
+              - link "source code" [ref=e500] [cursor=pointer]:
+                - /url: /wiki/Source_code
+              - text: is tested to validate expected behavior.
+              - superscript [ref=e501]:
+                - link "[24]" [ref=e502] [cursor=pointer]:
+                  - /url: "#cite_note-Unit_testing_kolawa-24"
+          - generic [ref=e503]:
+            - heading "Integration testing" [level=4] [ref=e504]
+            - generic [ref=e505]:
+              - text: "["
+              - link "edit" [ref=e506] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=11
+              - text: "]"
+          - generic [ref=e507]:
+            - note [ref=e508]:
+              - text: This paragraph is an excerpt from
+              - link "Integration testing" [ref=e509] [cursor=pointer]:
+                - /url: /wiki/Integration_testing
+              - text: .
+              - generic [ref=e510]:
+                - text: "["
+                - link "edit" [ref=e511] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Integration_testing&action=edit
+                - text: "]"
+            - paragraph [ref=e513]:
+              - link "Integration testing" [ref=e514] [cursor=pointer]:
+                - /url: /wiki/Integration_testing
+              - text: is a form of software testing in which multiple software components, modules, or services are tested together to verify they work as expected when combined. The focus is on testing the interactions and data exchange between integrated parts, rather than testing components in isolation.
+          - generic [ref=e515]:
+            - heading "System testing" [level=4] [ref=e516]
+            - generic [ref=e517]:
+              - text: "["
+              - link "edit" [ref=e518] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=12
+              - text: "]"
+          - generic [ref=e519]:
+            - note [ref=e520]:
+              - text: This paragraph is an excerpt from
+              - link "System testing" [ref=e521] [cursor=pointer]:
+                - /url: /wiki/System_testing
+              - text: .
+              - generic [ref=e522]:
+                - text: "["
+                - link "edit" [ref=e523] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=System_testing&action=edit
+                - text: "]"
+            - paragraph [ref=e525]:
+              - link "System testing" [ref=e526] [cursor=pointer]:
+                - /url: /wiki/System_testing
+              - text: ", a.k.a. end-to-end (E2E) testing, is testing conducted on a complete"
+              - link "software system" [ref=e527] [cursor=pointer]:
+                - /url: /wiki/Software_system
+              - text: .
+          - generic [ref=e528]:
+            - heading "Static, dynamic, and passive testing" [level=3] [ref=e529]: Static, dynamic, and passive testing
+            - generic [ref=e530]:
+              - text: "["
+              - link "edit" [ref=e531] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=13
+              - text: "]"
+          - paragraph [ref=e532]:
+            - text: There are many approaches to software testing.
+            - link "Reviews" [ref=e533] [cursor=pointer]:
+              - /url: /wiki/Code_review
+            - text: ","
+            - link "walkthroughs" [ref=e534] [cursor=pointer]:
+              - /url: /wiki/Software_walkthrough
+            - text: ", or"
+            - link "inspections" [ref=e535] [cursor=pointer]:
+              - /url: /wiki/Software_inspection
+            - text: are referred to as static testing, whereas executing programmed code with a given set of
+            - link "test cases" [ref=e536] [cursor=pointer]:
+              - /url: /wiki/Test_case_(software)
+            - text: is referred to as
+            - link "dynamic testing" [ref=e537] [cursor=pointer]:
+              - /url: /wiki/Dynamic_testing
+            - text: .
+            - superscript [ref=e538]:
+              - link "[25]" [ref=e539] [cursor=pointer]:
+                - /url: "#cite_note-GrahamFoundations08-25"
+            - superscript [ref=e540]:
+              - link "[26]" [ref=e541] [cursor=pointer]:
+                - /url: "#cite_note-OberkampfVerif10-26"
+          - paragraph [ref=e542]:
+            - text: Static testing is often implicit, like proofreading, plus when programming tools/text editors check source code structure or compilers (precompilers) check syntax and data flow as
+            - link "static program analysis" [ref=e543] [cursor=pointer]:
+              - /url: /wiki/Static_program_analysis
+            - text: . Dynamic testing takes place when the program itself is run. Dynamic testing may begin before the program is 100% complete in order to test particular sections of code and are applied to discrete
+            - link "functions" [ref=e544] [cursor=pointer]:
+              - /url: /wiki/Function_(computer_science)
+            - text: or modules.
+            - superscript [ref=e545]:
+              - link "[25]" [ref=e546] [cursor=pointer]:
+                - /url: "#cite_note-GrahamFoundations08-25"
+            - superscript [ref=e547]:
+              - link "[26]" [ref=e548] [cursor=pointer]:
+                - /url: "#cite_note-OberkampfVerif10-26"
+            - text: Typical techniques for these are either using
+            - link "stubs" [ref=e549] [cursor=pointer]:
+              - /url: /wiki/Method_stub
+            - text: /drivers or execution from a
+            - link "debugger" [ref=e550] [cursor=pointer]:
+              - /url: /wiki/Debugger
+            - text: environment.
+            - superscript [ref=e551]:
+              - link "[26]" [ref=e552] [cursor=pointer]:
+                - /url: "#cite_note-OberkampfVerif10-26"
+          - paragraph [ref=e553]:
+            - text: Static testing involves
+            - link "verification" [ref=e554] [cursor=pointer]:
+              - /url: /wiki/Software_verification
+            - text: ", whereas dynamic testing also involves"
+            - link "validation" [ref=e555] [cursor=pointer]:
+              - /url: /wiki/Software_validation
+            - text: .
+            - superscript [ref=e556]:
+              - link "[26]" [ref=e557] [cursor=pointer]:
+                - /url: "#cite_note-OberkampfVerif10-26"
+          - paragraph [ref=e558]:
+            - text: Passive testing means verifying the system's behavior without any interaction with the software product. Contrary to active testing, testers do not provide any test data but look at system logs and traces. They mine for patterns and specific behavior in order to make some kind of decisions.
+            - superscript [ref=e559]:
+              - link "[27]" [ref=e560] [cursor=pointer]:
+                - /url: "#cite_note-27"
+            - text: This is related to offline
+            - link "runtime verification" [ref=e561] [cursor=pointer]:
+              - /url: /wiki/Runtime_verification
+            - text: and
+            - link "log analysis" [ref=e562] [cursor=pointer]:
+              - /url: /wiki/Log_analysis
+            - text: .
+          - generic [ref=e563]:
+            - heading "Exploratory" [level=3] [ref=e564]
+            - generic [ref=e565]:
+              - text: "["
+              - link "edit" [ref=e566] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=14
+              - text: "]"
+          - generic [ref=e567]:
+            - note [ref=e568]:
+              - text: This section is an excerpt from
+              - link "Exploratory testing" [ref=e569] [cursor=pointer]:
+                - /url: /wiki/Exploratory_testing
+              - text: .
+              - generic [ref=e570]:
+                - text: "["
+                - link "edit" [ref=e571] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Exploratory_testing&action=edit
+                - text: "]"
+            - paragraph [ref=e573]:
+              - link "Exploratory testing" [ref=e574] [cursor=pointer]:
+                - /url: /wiki/Exploratory_testing
+              - text: is an approach to software testing that is concisely described as simultaneous learning,
+              - link "test design" [ref=e575] [cursor=pointer]:
+                - /url: /wiki/Test_design
+              - text: and test execution.
+              - link "Cem Kaner" [ref=e576] [cursor=pointer]:
+                - /url: /wiki/Cem_Kaner
+              - text: ", who coined the term in 1984,"
+              - superscript [ref=e577]:
+                - link "[28]" [ref=e578] [cursor=pointer]:
+                  - /url: "#cite_note-28"
+              - text: defines exploratory testing as "a style of software testing that emphasizes the personal freedom and responsibility of the individual tester to continually optimize the quality of his/her work by treating test-related learning, test design, test execution, and test result interpretation as mutually supportive activities that run in parallel throughout the project."
+              - superscript [ref=e579]:
+                - link "[29]" [ref=e580] [cursor=pointer]:
+                  - /url: "#cite_note-29"
+          - generic [ref=e581]:
+            - heading "Preset testing vs adaptive testing" [level=3] [ref=e582]
+            - generic [ref=e583]:
+              - text: "["
+              - link "edit" [ref=e584] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=15
+              - text: "]"
+          - paragraph [ref=e585]:
+            - text: The type of testing strategy to be performed depends on whether the tests to be applied to the IUT should be decided before the testing plan starts to be executed (preset testing
+            - superscript [ref=e586]:
+              - link "[30]" [ref=e587] [cursor=pointer]:
+                - /url: "#cite_note-30"
+            - text: ) or whether each input to be applied to the IUT can be dynamically dependent on the outputs obtained during the application of the previous tests (adaptive testing
+            - superscript [ref=e588]:
+              - link "[31]" [ref=e589] [cursor=pointer]:
+                - /url: "#cite_note-31"
+            - superscript [ref=e590]:
+              - link "[32]" [ref=e591] [cursor=pointer]:
+                - /url: "#cite_note-32"
+            - text: ).
+          - generic [ref=e592]:
+            - heading "Black/white box" [level=3] [ref=e593]: Black/white box
+            - generic [ref=e594]:
+              - text: "["
+              - link "edit" [ref=e595] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=16
+              - text: "]"
+          - paragraph [ref=e596]:
+            - text: Software testing can often be divided into white-box and black-box. These two approaches are used to describe the point of view that the tester takes when designing test cases. A hybrid approach called grey-box that includes aspects of both boxes may also be applied to software testing methodology.
+            - superscript [ref=e597]:
+              - link "[33]" [ref=e598] [cursor=pointer]:
+                - /url: "#cite_note-LimayeSoftware09-33"
+            - superscript [ref=e599]:
+              - link "[34]" [ref=e600] [cursor=pointer]:
+                - /url: "#cite_note-SalehSoftware09-34"
+          - generic [ref=e601]:
+            - heading "White-box testing" [level=4] [ref=e602]
+            - generic [ref=e603]:
+              - text: "["
+              - link "edit" [ref=e604] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=17
+              - text: "]"
+          - note [ref=e605]:
+            - text: "Main article:"
+            - link "White-box testing" [ref=e606] [cursor=pointer]:
+              - /url: /wiki/White-box_testing
+          - figure "White box testing diagram" [ref=e607]:
+            - link "White Box Testing Diagram" [ref=e608] [cursor=pointer]:
+              - /url: /wiki/File:White_Box_Testing_Approach.png
+              - img "White Box Testing Diagram" [ref=e609]
+            - generic [ref=e610]: White box testing diagram
+          - paragraph [ref=e611]:
+            - text: White-box testing (also known as clear box testing, glass box testing, transparent box testing, and structural testing) verifies the internal structures or workings of a program, as opposed to the functionality exposed to the end-user. In white-box testing, an internal perspective of the system (the source code), as well as programming skills are used to design test cases. The tester chooses inputs to exercise paths through the code and determines the appropriate outputs.
+            - superscript [ref=e612]:
+              - link "[33]" [ref=e613] [cursor=pointer]:
+                - /url: "#cite_note-LimayeSoftware09-33"
+            - superscript [ref=e614]:
+              - link "[34]" [ref=e615] [cursor=pointer]:
+                - /url: "#cite_note-SalehSoftware09-34"
+            - text: This is analogous to testing nodes in a circuit, e.g.,
+            - link "in-circuit testing" [ref=e616] [cursor=pointer]:
+              - /url: /wiki/In-circuit_test
+            - text: (ICT).
+          - paragraph [ref=e617]:
+            - text: While white-box testing can be applied at the
+            - link "unit" [ref=e618] [cursor=pointer]:
+              - /url: /wiki/Unit_testing
+            - text: ","
+            - link "integration" [ref=e619] [cursor=pointer]:
+              - /url: /wiki/Integration_testing
+            - text: ", and"
+            - link "system" [ref=e620] [cursor=pointer]:
+              - /url: /wiki/System_testing
+            - text: levels of the software testing process, it is usually done at the unit level.
+            - superscript [ref=e621]:
+              - link "[35]" [ref=e622] [cursor=pointer]:
+                - /url: "#cite_note-AmmannIntro16-35"
+            - text: It can test paths within a unit, paths between units during integration, and between subsystems during a system–level test. Though this method of test design can uncover many errors or problems, it might not detect unimplemented parts of the specification or missing requirements.
+          - paragraph [ref=e623]:
+            - text: "Techniques used in white-box testing include:"
+            - superscript [ref=e624]:
+              - link "[34]" [ref=e625] [cursor=pointer]:
+                - /url: "#cite_note-SalehSoftware09-34"
+            - superscript [ref=e626]:
+              - link "[36]" [ref=e627] [cursor=pointer]:
+                - /url: "#cite_note-EverettSoftware07-36"
+          - list [ref=e628]:
+            - listitem [ref=e629]:
+              - link "API testing" [ref=e630] [cursor=pointer]:
+                - /url: /wiki/API_testing
+              - text: – testing of the application using public and private
+              - link "APIs" [ref=e631] [cursor=pointer]:
+                - /url: /wiki/Application_programming_interfaces
+              - text: (application programming interfaces)
+            - listitem [ref=e632]:
+              - link "Code coverage" [ref=e633] [cursor=pointer]:
+                - /url: /wiki/Code_coverage
+              - text: – creating tests to satisfy some criteria of code coverage (for example, the test designer can create tests to cause all statements in the program to be executed at least once)
+            - listitem [ref=e634]:
+              - link "Fault injection" [ref=e635] [cursor=pointer]:
+                - /url: /wiki/Fault_injection
+              - text: methods – intentionally introducing faults to gauge the efficacy of testing strategies
+            - listitem [ref=e636]:
+              - link "Mutation testing" [ref=e637] [cursor=pointer]:
+                - /url: /wiki/Mutation_testing
+              - text: methods
+            - listitem [ref=e638]:
+              - link "Static testing" [ref=e639] [cursor=pointer]:
+                - /url: /wiki/Static_testing
+              - text: methods
+          - paragraph [ref=e640]:
+            - text: Code coverage tools can evaluate the completeness of a test suite that was created with any method, including black-box testing. This allows the software team to examine parts of a system that are rarely tested and ensures that the most important
+            - link "function points" [ref=e641] [cursor=pointer]:
+              - /url: /wiki/Function_points
+            - text: have been tested.
+            - superscript [ref=e642]:
+              - link "[37]" [ref=e643] [cursor=pointer]:
+                - /url: "#cite_note-CornettCode96-37"
+            - text: Code coverage as a
+            - link "software metric" [ref=e644] [cursor=pointer]:
+              - /url: /wiki/Software_metric
+            - text: "can be reported as a percentage for:"
+            - superscript [ref=e645]:
+              - link "[33]" [ref=e646] [cursor=pointer]:
+                - /url: "#cite_note-LimayeSoftware09-33"
+            - superscript [ref=e647]:
+              - link "[37]" [ref=e648] [cursor=pointer]:
+                - /url: "#cite_note-CornettCode96-37"
+            - superscript [ref=e649]:
+              - link "[38]" [ref=e650] [cursor=pointer]:
+                - /url: "#cite_note-BlackPragmatic11-38"
+          - definition [ref=e652]:
+            - list [ref=e653]:
+              - listitem [ref=e654]: Function coverage, which reports on functions executed
+              - listitem [ref=e655]: Statement coverage, which reports on the number of lines executed to complete the test
+              - listitem [ref=e656]: Decision coverage, which reports on whether both the True and the False branch of a given test has been executed
+          - paragraph [ref=e657]:
+            - text: 100% statement coverage ensures that all code paths or branches (in terms of
+            - link "control flow" [ref=e658] [cursor=pointer]:
+              - /url: /wiki/Control_flow
+            - text: ) are executed at least once. This is helpful in ensuring correct functionality, but not sufficient since the same code may process different inputs correctly or incorrectly.
+            - superscript [ref=e659]:
+              - link "[39]" [ref=e660] [cursor=pointer]:
+                - /url: "#cite_note-39"
+          - generic [ref=e661]:
+            - heading "Black-box testing" [level=4] [ref=e662]
+            - generic [ref=e663]:
+              - text: "["
+              - link "edit" [ref=e664] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=18
+              - text: "]"
+          - note [ref=e665]:
+            - text: "Main article:"
+            - link "Black-box testing" [ref=e666] [cursor=pointer]:
+              - /url: /wiki/Black-box_testing
+          - figure "Black box diagram" [ref=e667]:
+            - link [ref=e668] [cursor=pointer]:
+              - /url: /wiki/File:Black_box_diagram.svg
+              - img [ref=e669]
+            - generic [ref=e670]: Black box diagram
+          - paragraph [ref=e671]:
+            - text: Black-box testing (also known as functional testing) describes designing test cases without knowledge of the implementation, without reading the source code. The testers are only aware of what the software is supposed to do, not how it does it.
+            - superscript [ref=e672]:
+              - link "[40]" [ref=e673] [cursor=pointer]:
+                - /url: "#cite_note-Patton-40"
+            - text: "Black-box testing methods include:"
+            - link "equivalence partitioning" [ref=e674] [cursor=pointer]:
+              - /url: /wiki/Equivalence_partitioning
+            - text: ","
+            - link "boundary value analysis" [ref=e675] [cursor=pointer]:
+              - /url: /wiki/Boundary_value_analysis
+            - text: ","
+            - link "all-pairs testing" [ref=e676] [cursor=pointer]:
+              - /url: /wiki/All-pairs_testing
+            - text: ","
+            - link "state transition tables" [ref=e677] [cursor=pointer]:
+              - /url: /wiki/State_transition_table
+            - text: ","
+            - link "decision table" [ref=e678] [cursor=pointer]:
+              - /url: /wiki/Decision_table
+            - text: testing,
+            - link "fuzz testing" [ref=e679] [cursor=pointer]:
+              - /url: /wiki/Fuzz_testing
+            - text: ","
+            - link "model-based testing" [ref=e680] [cursor=pointer]:
+              - /url: /wiki/Model-based_testing
+            - text: ","
+            - link "use case" [ref=e681] [cursor=pointer]:
+              - /url: /wiki/Use_case
+            - text: testing,
+            - link "exploratory testing" [ref=e682] [cursor=pointer]:
+              - /url: /wiki/Exploratory_testing
+            - text: ", and specification-based testing."
+            - superscript [ref=e683]:
+              - link "[33]" [ref=e684] [cursor=pointer]:
+                - /url: "#cite_note-LimayeSoftware09-33"
+            - superscript [ref=e685]:
+              - link "[34]" [ref=e686] [cursor=pointer]:
+                - /url: "#cite_note-SalehSoftware09-34"
+            - superscript [ref=e687]:
+              - link "[38]" [ref=e688] [cursor=pointer]:
+                - /url: "#cite_note-BlackPragmatic11-38"
+          - paragraph [ref=e689]:
+            - text: Specification-based testing aims to test the functionality of software according to the applicable requirements.
+            - superscript [ref=e690]:
+              - link "[41]" [ref=e691] [cursor=pointer]:
+                - /url: "#cite_note-41"
+            - text: This level of testing usually requires thorough
+            - link "test cases" [ref=e692] [cursor=pointer]:
+              - /url: /wiki/Test_case_(software)
+            - text: to be provided to the tester, who then can simply verify that for a given input, the output value (or behavior), either "is" or "is not" the same as the expected value specified in the test case. Test cases are built around specifications and requirements, i.e., what the application is supposed to do. It uses external descriptions of the software, including specifications, requirements, and designs, to derive test cases. These tests can be
+            - link "functional" [ref=e693] [cursor=pointer]:
+              - /url: /wiki/Functional_testing
+            - text: or
+            - link "non-functional" [ref=e694] [cursor=pointer]:
+              - /url: /wiki/Non-functional_testing
+            - text: ", though usually functional. Specification-based testing may be necessary to assure correct functionality, but it is insufficient to guard against complex or high-risk situations."
+            - superscript [ref=e695]:
+              - link "[42]" [ref=e696] [cursor=pointer]:
+                - /url: "#cite_note-42"
+          - paragraph [ref=e697]:
+            - text: Black box testing can be used to any level of testing although usually not at the unit level.
+            - superscript [ref=e698]:
+              - link "[35]" [ref=e699] [cursor=pointer]:
+                - /url: "#cite_note-AmmannIntro16-35"
+          - paragraph [ref=e700]: Component interface testing
+          - paragraph [ref=e701]:
+            - text: Component interface testing is a variation of
+            - link "black-box testing" [ref=e702] [cursor=pointer]:
+              - /url: /wiki/Black-box_testing
+            - text: ", with the focus on the data values beyond just the related actions of a subsystem component."
+            - superscript [ref=e703]:
+              - link "[43]" [ref=e704] [cursor=pointer]:
+                - /url: "#cite_note-MathurFound11-63-43"
+            - text: The practice of component interface testing can be used to check the handling of data passed between various units, or subsystem components, beyond full integration testing between those units.
+            - superscript [ref=e705]:
+              - link "[44]" [ref=e706] [cursor=pointer]:
+                - /url: "#cite_note-Clapp-44"
+            - superscript [ref=e707]:
+              - link "[45]" [ref=e708] [cursor=pointer]:
+                - /url: "#cite_note-Mathur-45"
+            - text: The data being passed can be considered as "message packets" and the range or data types can be checked for data generated from one unit and tested for validity before being passed into another unit. One option for interface testing is to keep a separate log file of data items being passed, often with a timestamp logged to allow analysis of thousands of cases of data passed between units for days or weeks. Tests can include checking the handling of some extreme data values while other interface variables are passed as normal values.
+            - superscript [ref=e709]:
+              - link "[44]" [ref=e710] [cursor=pointer]:
+                - /url: "#cite_note-Clapp-44"
+            - text: Unusual data values in an interface can help explain unexpected performance in the next unit.
+          - generic [ref=e711]:
+            - heading "Visual testing" [level=5] [ref=e712]
+            - generic [ref=e713]:
+              - text: "["
+              - link "edit" [ref=e714] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=19
+              - text: "]"
+          - paragraph [ref=e715]:
+            - text: The aim of visual testing is to provide developers with the ability to examine what was happening at the point of software failure by presenting the data in such a way that the developer can easily find the information he or she requires, and the information is expressed clearly.
+            - superscript [ref=e716]:
+              - link "[46]" [ref=e717] [cursor=pointer]:
+                - /url: "#cite_note-46"
+            - superscript [ref=e718]:
+              - link "[47]" [ref=e719] [cursor=pointer]:
+                - /url: "#cite_note-47"
+          - paragraph [ref=e720]: At the core of visual testing is the idea that showing someone a problem (or a test failure), rather than just describing it, greatly increases clarity and understanding. Visual testing, therefore, requires the recording of the entire test process – capturing everything that occurs on the test system in video format. Output videos are supplemented by real-time tester input via picture-in-a-picture webcam and audio commentary from microphones.
+          - paragraph [ref=e721]: Visual testing provides a number of advantages. The quality of communication is increased drastically because testers can show the problem (and the events leading up to it) to the developer as opposed to just describing it, and the need to replicate test failures will cease to exist in many cases. The developer will have all the evidence he or she requires of a test failure and can instead focus on the cause of the fault and how it should be fixed.
+          - paragraph [ref=e722]:
+            - link "Ad hoc testing" [ref=e723] [cursor=pointer]:
+              - /url: /wiki/Ad_hoc_testing
+            - text: and
+            - link "exploratory testing" [ref=e724] [cursor=pointer]:
+              - /url: /wiki/Exploratory_testing
+            - text: are important methodologies for checking software integrity because they require less preparation time to implement, while the important bugs can be found quickly.
+            - superscript [ref=e725]:
+              - link "[48]" [ref=e726] [cursor=pointer]:
+                - /url: "#cite_note-LewisSoftware16-48"
+            - text: In ad hoc testing, where testing takes place in an improvised impromptu way, the ability of the tester(s) to base testing off documented methods and then improvise variations of those tests can result in a more rigorous examination of defect fixes.
+            - superscript [ref=e727]:
+              - link "[48]" [ref=e728] [cursor=pointer]:
+                - /url: "#cite_note-LewisSoftware16-48"
+            - text: However, unless strict documentation of the procedures is maintained, one of the limits of ad hoc testing is lack of repeatability.
+            - superscript [ref=e729]:
+              - link "[48]" [ref=e730] [cursor=pointer]:
+                - /url: "#cite_note-LewisSoftware16-48"
+          - note [ref=e731]:
+            - text: "Further information:"
+            - link "Graphical user interface testing" [ref=e732] [cursor=pointer]:
+              - /url: /wiki/Graphical_user_interface_testing
+          - generic [ref=e733]:
+            - heading "Grey-box testing" [level=4] [ref=e734]
+            - generic [ref=e735]:
+              - text: "["
+              - link "edit" [ref=e736] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=20
+              - text: "]"
+          - note [ref=e737]:
+            - text: "Main article:"
+            - link "Gray box testing" [ref=e738] [cursor=pointer]:
+              - /url: /wiki/Gray_box_testing
+          - paragraph [ref=e739]:
+            - text: "Grey-box testing (American spelling: gray-box testing) involves using knowledge of internal data structures and algorithms for purposes of designing tests while executing those tests at the user, or black-box level. The tester will often have access to both \"the source code and the executable binary.\""
+            - superscript [ref=e740]:
+              - link "[49]" [ref=e741] [cursor=pointer]:
+                - /url: "#cite_note-RansomeCore13-49"
+            - text: Grey-box testing may also include
+            - link "reverse engineering" [ref=e742] [cursor=pointer]:
+              - /url: /wiki/Reverse_coding
+            - text: (using dynamic code analysis) to determine, for instance, boundary values or error messages.
+            - superscript [ref=e743]:
+              - link "[49]" [ref=e744] [cursor=pointer]:
+                - /url: "#cite_note-RansomeCore13-49"
+            - text: Manipulating input data and formatting output do not qualify as grey-box, as the input and output are clearly outside of the "black box" that we are calling the system under test. This distinction is particularly important when conducting
+            - link "integration testing" [ref=e745] [cursor=pointer]:
+              - /url: /wiki/Integration_testing
+            - text: between two modules of code written by two different developers, where only the interfaces are exposed for the test.
+          - paragraph [ref=e746]:
+            - text: By knowing the underlying concepts of how the software works, the tester makes better-informed testing choices while testing the software from outside. Typically, a grey-box tester will be permitted to set up an isolated testing environment with activities, such as seeding a
+            - link "database" [ref=e747] [cursor=pointer]:
+              - /url: /wiki/Database
+            - text: . The tester can observe the state of the product being tested after performing certain actions such as executing
+            - link "SQL" [ref=e748] [cursor=pointer]:
+              - /url: /wiki/SQL
+            - text: statements against the database and then executing queries to ensure that the expected changes have been reflected. Grey-box testing implements intelligent test scenarios based on limited information. This will particularly apply to data type handling,
+            - link "exception handling" [ref=e749] [cursor=pointer]:
+              - /url: /wiki/Exception_handling
+            - text: ", and so on."
+            - superscript [ref=e750]:
+              - link "[50]" [ref=e751] [cursor=pointer]:
+                - /url: "#cite_note-ref4-50"
+          - paragraph [ref=e752]:
+            - text: With the concept of grey-box testing, this "arbitrary distinction" between black- and white-box testing has faded somewhat.
+            - superscript [ref=e753]:
+              - link "[35]" [ref=e754] [cursor=pointer]:
+                - /url: "#cite_note-AmmannIntro16-35"
+          - generic [ref=e755]:
+            - heading "Installation testing" [level=3] [ref=e756]
+            - generic [ref=e757]:
+              - text: "["
+              - link "edit" [ref=e758] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=21
+              - text: "]"
+          - generic [ref=e759]:
+            - note [ref=e760]:
+              - text: This section is an excerpt from
+              - link "Installation testing" [ref=e761] [cursor=pointer]:
+                - /url: /wiki/Installation_testing
+              - text: .
+              - generic [ref=e762]:
+                - text: "["
+                - link "edit" [ref=e763] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Installation_testing&action=edit
+                - text: "]"
+            - generic [ref=e764]:
+              - paragraph [ref=e765]:
+                - link "Installation testing" [ref=e766] [cursor=pointer]:
+                  - /url: /wiki/Installation_testing
+                - text: is a type of software testing that verifies that
+                - link "users" [ref=e767] [cursor=pointer]:
+                  - /url: /wiki/User_(computing)
+                - text: can successfully install and set up software in its intended environments (e.g.,
+                - link "operating systems" [ref=e768] [cursor=pointer]:
+                  - /url: /wiki/Operating_system
+                - text: ","
+                - link "computer hardware" [ref=e769] [cursor=pointer]:
+                  - /url: /wiki/Computer_hardware
+                - text: ). Most software systems have installation procedures that are needed before they can be used for their main purpose. Installation testing focuses on these procedures and whether they're sufficient for achieving an installed, usable software system.
+                - superscript [ref=e770]:
+                  - link "[51]" [ref=e771] [cursor=pointer]:
+                    - /url: "#cite_note-Installation_testing_Myers_2004-51"
+                - superscript [ref=e772]: ": 139"
+                - text: Procedures of this kind may involve full or partial upgrades, and install/uninstall processes.
+              - list [ref=e773]:
+                - listitem [ref=e774]: A user must select a variety of options.
+                - listitem [ref=e775]: Dependent files and libraries must be allocated, loaded or located.
+                - listitem [ref=e776]: Valid hardware configurations must be present.
+                - listitem [ref=e777]:
+                  - text: Software systems may need connectivity to connect to other software systems.
+                  - superscript [ref=e778]:
+                    - link "[51]" [ref=e779] [cursor=pointer]:
+                      - /url: "#cite_note-Installation_testing_Myers_2004-51"
+                  - superscript [ref=e780]: ": 145"
+                - listitem [ref=e781]:
+                  - text: Valid, accurate, and sufficient documentation (e.g., installation guide,
+                  - link "user manual" [ref=e782] [cursor=pointer]:
+                    - /url: /wiki/User_guide
+                  - text: ", quick reference,"
+                  - link "README" [ref=e783] [cursor=pointer]:
+                    - /url: /wiki/README
+                  - text: file, etc.) must be present and accessible.
+                  - superscript [ref=e784]:
+                    - link "[52]" [ref=e785] [cursor=pointer]:
+                      - /url: "#cite_note-52"
+          - generic [ref=e786]:
+            - heading "Compatibility testing" [level=3] [ref=e787]
+            - generic [ref=e788]:
+              - text: "["
+              - link "edit" [ref=e789] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=22
+              - text: "]"
+          - note [ref=e790]:
+            - text: "Main article:"
+            - link "Compatibility testing" [ref=e791] [cursor=pointer]:
+              - /url: /wiki/Compatibility_testing
+          - paragraph [ref=e792]:
+            - text: A common cause of software failure (real or perceived) is a lack of its
+            - link "compatibility" [ref=e793] [cursor=pointer]:
+              - /url: /wiki/Computer_compatibility
+            - text: with other
+            - link "application software" [ref=e794] [cursor=pointer]:
+              - /url: /wiki/Application_software
+            - text: ","
+            - link "operating systems" [ref=e795] [cursor=pointer]:
+              - /url: /wiki/Operating_system
+            - text: (or operating system
+            - link "versions" [ref=e796] [cursor=pointer]:
+              - /url: /wiki/Software_versioning
+            - text: ", old or new), or target environments that differ greatly from the original (such as a"
+            - link "terminal" [ref=e797] [cursor=pointer]:
+              - /url: /wiki/Computer_terminal
+            - text: or
+            - link "GUI" [ref=e798] [cursor=pointer]:
+              - /url: /wiki/GUI
+            - text: application intended to be run on the
+            - link "desktop" [ref=e799] [cursor=pointer]:
+              - /url: /wiki/Desktop_metaphor
+            - text: now being required to become a
+            - link "Web application" [ref=e800] [cursor=pointer]:
+              - /url: /wiki/Web_application
+            - text: ", which must render in a"
+            - link "Web browser" [ref=e801] [cursor=pointer]:
+              - /url: /wiki/Web_browser
+            - text: ). For example, in the case of a lack of
+            - link "backward compatibility" [ref=e802] [cursor=pointer]:
+              - /url: /wiki/Backward_compatibility
+            - text: ", this can occur because the programmers develop and test software only on the latest version of the target environment, which not all users may be running. This results in the unintended consequence that the latest work may not function on earlier versions of the target environment, or on older hardware that earlier versions of the target environment were capable of using. Sometimes such issues can be fixed by proactively"
+            - link "abstracting" [ref=e803] [cursor=pointer]:
+              - /url: /wiki/Abstraction_(computer_science)
+            - text: operating system functionality into a separate program
+            - link "module" [ref=e804] [cursor=pointer]:
+              - /url: /wiki/Modular_programming
+            - text: or
+            - link "library" [ref=e805] [cursor=pointer]:
+              - /url: /wiki/Library_(computing)
+            - text: .
+          - generic [ref=e806]:
+            - heading "Smoke and sanity testing" [level=3] [ref=e807]
+            - generic [ref=e808]:
+              - text: "["
+              - link "edit" [ref=e809] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=23
+              - text: "]"
+          - note [ref=e810]:
+            - text: "Main article:"
+            - link "Smoke testing (software)" [ref=e811] [cursor=pointer]:
+              - /url: /wiki/Smoke_testing_(software)
+          - paragraph [ref=e812]:
+            - link "Sanity testing" [ref=e813] [cursor=pointer]:
+              - /url: /wiki/Sanity_testing
+            - text: determines whether it is reasonable to proceed with further testing.
+          - paragraph [ref=e814]:
+            - link "Smoke testing" [ref=e815] [cursor=pointer]:
+              - /url: /wiki/Smoke_testing_(software)
+            - text: consists of minimal attempts to operate the software, designed to determine whether there are any basic problems that will prevent it from working at all. Such tests can be used as
+            - link "build verification test" [ref=e816] [cursor=pointer]:
+              - /url: /wiki/Build_verification_test
+            - text: .
+          - generic [ref=e817]:
+            - heading "Regression testing" [level=3] [ref=e818]
+            - generic [ref=e819]:
+              - text: "["
+              - link "edit" [ref=e820] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=24
+              - text: "]"
+          - note [ref=e821]:
+            - text: "Main article:"
+            - link "Regression testing" [ref=e822] [cursor=pointer]:
+              - /url: /wiki/Regression_testing
+          - paragraph [ref=e823]:
+            - text: Regression testing focuses on finding defects after a major code change has occurred. Specifically, it seeks to uncover
+            - link "software regressions" [ref=e824] [cursor=pointer]:
+              - /url: /wiki/Software_regression
+            - text: ", as degraded or lost features, including old bugs that have come back. Such regressions occur whenever software functionality that was previously working correctly, stops working as intended. Typically, regressions occur as an"
+            - link "unintended consequence" [ref=e825] [cursor=pointer]:
+              - /url: /wiki/Unintended_consequence
+            - text: of program changes, when the newly developed part of the software collides with the previously existing code. Regression testing is typically the largest test effort in commercial software development,
+            - superscript [ref=e826]:
+              - link "[53]" [ref=e827] [cursor=pointer]:
+                - /url: "#cite_note-53"
+            - text: due to checking numerous details in prior software features, and even new software can be developed while using some old test cases to test parts of the new design to ensure prior functionality is still supported.
+          - paragraph [ref=e828]:
+            - text: Common methods of regression testing include re-running previous sets of test cases and checking whether previously fixed faults have re-emerged. The depth of testing depends on the phase in the release process and the
+            - link "risk" [ref=e829] [cursor=pointer]:
+              - /url: /wiki/Risk_management
+            - text: of the added features. They can either be complete, for changes added late in the release or deemed to be risky, or be very shallow, consisting of positive tests on each feature, if the changes are early in the release or deemed to be of low risk.
+          - generic [ref=e830]:
+            - heading "Acceptance testing" [level=3] [ref=e831]
+            - generic [ref=e832]:
+              - text: "["
+              - link "edit" [ref=e833] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=25
+              - text: "]"
+          - note [ref=e834]:
+            - text: "Main article:"
+            - link "Acceptance testing" [ref=e835] [cursor=pointer]:
+              - /url: /wiki/Acceptance_testing
+          - paragraph [ref=e836]:
+            - text: Acceptance testing is system-level testing to ensure the software meets customer expectations.
+            - superscript [ref=e837]:
+              - link "[54]" [ref=e838] [cursor=pointer]:
+                - /url: "#cite_note-LewisSoftware16-2-54"
+            - superscript [ref=e839]:
+              - link "[55]" [ref=e840] [cursor=pointer]:
+                - /url: "#cite_note-BorbaTesting10-55"
+            - superscript [ref=e841]:
+              - link "[56]" [ref=e842] [cursor=pointer]:
+                - /url: "#cite_note-ClappSoftware95-56"
+            - superscript [ref=e843]:
+              - link "[57]" [ref=e844] [cursor=pointer]:
+                - /url: "#cite_note-:0-57"
+          - paragraph [ref=e845]:
+            - text: Acceptance testing may be performed as part of the hand-off process between any two phases of development.
+            - superscript [ref=e846]:
+              - text: "["
+              - link "citation needed" [ref=e848] [cursor=pointer]:
+                - /url: /wiki/Wikipedia:Citation_needed
+              - text: "]"
+          - paragraph [ref=e849]:
+            - text: Tests are frequently grouped into these levels by where they are performed in the software development process, or by the level of specificity of the test.
+            - superscript [ref=e850]:
+              - link "[57]" [ref=e851] [cursor=pointer]:
+                - /url: "#cite_note-:0-57"
+          - list [ref=e852]:
+            - listitem [ref=e853]: User acceptance testing (UAT)
+            - listitem [ref=e854]: Operational acceptance testing (OAT)
+            - listitem [ref=e855]: Contractual and regulatory acceptance testing
+            - listitem [ref=e856]: Alpha and beta testing
+          - paragraph [ref=e857]: Sometimes, UAT is performed by the customer, in their environment and on their own hardware.
+          - paragraph [ref=e858]:
+            - text: OAT is used to conduct operational readiness (prerelease) of a product, service or system as part of a
+            - link "quality management system" [ref=e859] [cursor=pointer]:
+              - /url: /wiki/Quality_management_system
+            - text: . OAT is a common type of non-functional software testing, used mainly in
+            - link "software development" [ref=e860] [cursor=pointer]:
+              - /url: /wiki/Software_development
+            - text: and
+            - link "software maintenance" [ref=e861] [cursor=pointer]:
+              - /url: /wiki/Software_maintenance
+            - text: projects. This type of testing focuses on the operational readiness of the system to be supported, or to become part of the production environment. Hence, it is also known as operational readiness testing (ORT) or
+            - link "operations readiness and assurance" [ref=e862] [cursor=pointer]:
+              - /url: /wiki/Operations_readiness_and_assurance
+            - text: (OR&A) testing.
+            - link "Functional testing" [ref=e863] [cursor=pointer]:
+              - /url: /wiki/Functional_testing
+            - text: within OAT is limited to those tests that are required to verify the non-functional aspects of the system.
+          - paragraph [ref=e864]:
+            - text: In addition, the software testing should ensure that the portability of the system, as well as working as expected, does not also damage or partially corrupt its operating environment or cause other processes within that environment to become inoperative.
+            - superscript [ref=e865]:
+              - link "[58]" [ref=e866] [cursor=pointer]:
+                - /url: "#cite_note-58"
+          - paragraph [ref=e867]:
+            - text: Contractual acceptance testing is performed based on the contract's acceptance criteria defined during the agreement of the contract, while regulatory acceptance testing is performed based on the relevant regulations to the software product. Both of these two tests can be performed by users or independent testers. Regulation acceptance testing sometimes involves the regulatory agencies auditing the test results.
+            - superscript [ref=e868]:
+              - link "[57]" [ref=e869] [cursor=pointer]:
+                - /url: "#cite_note-:0-57"
+          - generic [ref=e870]:
+            - heading "Alpha testing" [level=3] [ref=e871]
+            - generic [ref=e872]:
+              - text: "["
+              - link "edit" [ref=e873] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=26
+              - text: "]"
+          - paragraph [ref=e874]:
+            - text: Alpha testing is simulated or actual operational testing by potential users/customers or an independent test team at the developers' site. Alpha testing is often employed for off-the-shelf software as a form of internal acceptance testing before the software goes to beta testing.
+            - superscript [ref=e875]:
+              - link "[59]" [ref=e876] [cursor=pointer]:
+                - /url: "#cite_note-59"
+          - generic [ref=e877]:
+            - heading "Beta testing" [level=3] [ref=e878]
+            - generic [ref=e879]:
+              - text: "["
+              - link "edit" [ref=e880] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=27
+              - text: "]"
+          - note [ref=e881]:
+            - text: "See also:"
+            - link "Software release life cycle § Beta" [ref=e882] [cursor=pointer]:
+              - /url: /wiki/Software_release_life_cycle#Beta
+          - paragraph [ref=e883]:
+            - text: Beta testing comes after alpha testing and can be considered a form of external
+            - link "user acceptance testing" [ref=e884] [cursor=pointer]:
+              - /url: /wiki/User_acceptance_testing
+            - text: . Versions of the software, known as
+            - link "beta versions" [ref=e885] [cursor=pointer]:
+              - /url: /wiki/Beta_version
+            - text: ", are released to a limited audience outside of the programming team known as beta testers. The software is released to groups of people so that further testing can ensure the product has few faults or"
+            - link "bugs" [ref=e886] [cursor=pointer]:
+              - /url: /wiki/Computer_bug
+            - text: . Beta versions can be made available to the open public to increase the
+            - link "feedback" [ref=e887] [cursor=pointer]:
+              - /url: /wiki/Feedback#In_organizations
+            - text: field to a maximal number of future users and to deliver value earlier, for an extended or even indefinite period of time (
+            - link "perpetual beta" [ref=e888] [cursor=pointer]:
+              - /url: /wiki/Perpetual_beta
+            - text: ).
+            - superscript [ref=e889]:
+              - link "[60]" [ref=e890] [cursor=pointer]:
+                - /url: "#cite_note-60"
+          - generic [ref=e891]:
+            - heading "Functional vs non-functional testing" [level=3] [ref=e892]
+            - generic [ref=e893]:
+              - text: "["
+              - link "edit" [ref=e894] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=28
+              - text: "]"
+          - paragraph [ref=e895]:
+            - link "Functional testing" [ref=e896] [cursor=pointer]:
+              - /url: /wiki/Functional_testing
+            - text: refers to activities that verify a specific action or function of the code. These are usually found in the code requirements documentation, although some development methodologies work from use cases or user stories. Functional tests tend to answer the question of "can the user do this" or "does this particular feature work."
+          - paragraph [ref=e897]:
+            - link "Non-functional testing" [ref=e898] [cursor=pointer]:
+              - /url: /wiki/Non-functional_testing
+            - text: refers to aspects of the software that may not be related to a specific function or user action, such as
+            - link "scalability" [ref=e899] [cursor=pointer]:
+              - /url: /wiki/Scalability
+            - text: or other
+            - link "performance" [ref=e900] [cursor=pointer]:
+              - /url: /wiki/Performance
+            - text: ", behavior under certain"
+            - link "constraints" [ref=e901] [cursor=pointer]:
+              - /url: /wiki/Constraint_(mathematics)
+            - text: ", or"
+            - link "security" [ref=e902] [cursor=pointer]:
+              - /url: /wiki/Computer_security
+            - text: . Testing will determine the breaking point, the point at which extremes of scalability or performance leads to unstable execution. Non-functional requirements tend to be those that reflect the quality of the product, particularly in the context of the suitability perspective of its users.
+          - generic [ref=e903]:
+            - heading "Continuous testing" [level=3] [ref=e904]
+            - generic [ref=e905]:
+              - text: "["
+              - link "edit" [ref=e906] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=29
+              - text: "]"
+          - note [ref=e907]:
+            - text: "Main article:"
+            - link "Continuous testing" [ref=e908] [cursor=pointer]:
+              - /url: /wiki/Continuous_testing
+          - paragraph [ref=e909]:
+            - text: Continuous testing is the process of executing
+            - link "automated tests" [ref=e910] [cursor=pointer]:
+              - /url: /wiki/Test_automation
+            - text: as part of the software delivery pipeline to obtain immediate feedback on the business risks associated with a software release candidate.
+            - superscript [ref=e911]:
+              - link "[61]" [ref=e912] [cursor=pointer]:
+                - /url: "#cite_note-essential-61"
+            - superscript [ref=e913]:
+              - link "[62]" [ref=e914] [cursor=pointer]:
+                - /url: "#cite_note-stickym-62"
+            - text: Continuous testing includes the validation of both
+            - link "functional requirements" [ref=e915] [cursor=pointer]:
+              - /url: /wiki/Functional_requirements
+            - text: and
+            - link "non-functional requirements" [ref=e916] [cursor=pointer]:
+              - /url: /wiki/Non-functional_requirements
+            - text: ; the scope of testing extends from validating bottom-up requirements or user stories to assessing the system requirements associated with overarching business goals.
+            - superscript [ref=e917]:
+              - link "[63]" [ref=e918] [cursor=pointer]:
+                - /url: "#cite_note-pnsqc-63"
+            - superscript [ref=e919]:
+              - link "[64]" [ref=e920] [cursor=pointer]:
+                - /url: "#cite_note-shift-64"
+          - generic [ref=e921]:
+            - heading "Destructive testing" [level=3] [ref=e922]
+            - generic [ref=e923]:
+              - text: "["
+              - link "edit" [ref=e924] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=30
+              - text: "]"
+          - note [ref=e925]:
+            - text: "Main article:"
+            - link "Destructive testing" [ref=e926] [cursor=pointer]:
+              - /url: /wiki/Destructive_testing
+          - paragraph [ref=e927]:
+            - text: Destructive testing attempts to cause the software or a sub-system to fail. It verifies whether the software functions properly when it receives invalid or unexpected inputs, thereby assessing the
+            - link "robustness" [ref=e928] [cursor=pointer]:
+              - /url: /wiki/Robustness_(computer_science)
+            - text: of input validation and error-management routines.
+            - superscript [ref=e929]:
+              - link "[65]" [ref=e930] [cursor=pointer]:
+                - /url: "#cite_note-65"
+            - link "Software fault injection" [ref=e931] [cursor=pointer]:
+              - /url: /wiki/Fault_injection
+            - text: ", in the form of"
+            - link "fuzzing" [ref=e932] [cursor=pointer]:
+              - /url: /wiki/Fuzz_testing
+            - text: ", is an example of failure testing. Various commercial non-functional testing tools are linked from the"
+            - link "software fault injection" [ref=e933] [cursor=pointer]:
+              - /url: /wiki/Fault_injection
+            - text: page; there are also numerous open-source and free software tools available that perform destructive testing.
+          - note [ref=e934]:
+            - text: "Further information:"
+            - link "Exception handling" [ref=e935] [cursor=pointer]:
+              - /url: /wiki/Exception_handling
+            - text: and
+            - link "Recovery testing" [ref=e936] [cursor=pointer]:
+              - /url: /wiki/Recovery_testing
+          - generic [ref=e937]:
+            - heading "Software performance testing" [level=3] [ref=e938]
+            - generic [ref=e939]:
+              - text: "["
+              - link "edit" [ref=e940] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=31
+              - text: "]"
+          - note [ref=e941]:
+            - text: "Main article:"
+            - link "Software performance testing" [ref=e942] [cursor=pointer]:
+              - /url: /wiki/Software_performance_testing
+          - paragraph [ref=e943]: Performance testing is generally executed to determine how a system or sub-system performs in terms of responsiveness and stability under a particular workload. It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage.
+          - paragraph [ref=e944]:
+            - link "Load testing" [ref=e946] [cursor=pointer]:
+              - /url: /wiki/Load_testing#Software_load_testing
+            - text: is primarily concerned with testing that the system can continue to operate under a specific load, whether that be large quantities of data or a large number of
+            - link "users" [ref=e947] [cursor=pointer]:
+              - /url: /wiki/Load_testing
+            - text: . This is generally referred to as software
+            - link "scalability" [ref=e948] [cursor=pointer]:
+              - /url: /wiki/Scalability
+            - text: . The related load testing activity of when performed as a non-functional activity is often referred to as endurance testing.
+            - link "Volume testing" [ref=e950] [cursor=pointer]:
+              - /url: /wiki/Volume_testing
+            - text: is a way to test software functions even when certain components (for example a file or database) increase radically in size.
+            - link "Stress testing" [ref=e952] [cursor=pointer]:
+              - /url: /wiki/Stress_testing
+            - text: is a way to test reliability under unexpected or rare workloads. Stability testing (often referred to as load or endurance testing) checks to see if the software can continuously function well in or above an acceptable period.
+          - paragraph [ref=e953]:
+            - text: There is little agreement on what the specific goals of performance testing are. The terms load testing, performance testing,
+            - link "scalability testing" [ref=e954] [cursor=pointer]:
+              - /url: /wiki/Scalability_testing
+            - text: ", and volume testing, are often used interchangeably."
+          - paragraph [ref=e955]:
+            - link "Real-time software" [ref=e956] [cursor=pointer]:
+              - /url: /wiki/Real-time_computing
+            - text: systems have strict timing constraints. To test if timing constraints are met,
+            - link "real-time testing" [ref=e957] [cursor=pointer]:
+              - /url: /wiki/Real-time_testing
+            - text: is used.
+          - generic [ref=e958]:
+            - heading "Usability testing" [level=3] [ref=e959]
+            - generic [ref=e960]:
+              - text: "["
+              - link "edit" [ref=e961] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=32
+              - text: "]"
+          - paragraph [ref=e962]:
+            - link "Usability testing" [ref=e963] [cursor=pointer]:
+              - /url: /wiki/Usability_testing
+            - text: is to check if the user interface is easy to use and understand. It is concerned mainly with the use of the application. This is not a kind of testing that can be automated; actual human users are needed, being monitored by skilled
+            - link "UI designers" [ref=e964] [cursor=pointer]:
+              - /url: /wiki/User_experience_design#Interaction_designers
+            - text: . Usability testing can use structured models to check how well an interface works. The Stanton, Theofanos, and Joshi (2015) model looks at user experience, and the Al-Sharafat and Qadoumi (2016) model is for expert evaluation, helping to assess usability in digital applications.
+            - superscript [ref=e965]:
+              - link "[66]" [ref=e966] [cursor=pointer]:
+                - /url: "#cite_note-66"
+          - generic [ref=e967]:
+            - heading "Accessibility testing" [level=3] [ref=e968]
+            - generic [ref=e969]:
+              - text: "["
+              - link "edit" [ref=e970] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=33
+              - text: "]"
+          - paragraph [ref=e971]:
+            - link "Accessibility" [ref=e972] [cursor=pointer]:
+              - /url: /wiki/Accessibility
+            - text: testing is done to ensure that the software is accessible to persons with disabilities. Some of the common web accessibility tests are
+          - list [ref=e973]:
+            - listitem [ref=e974]: Ensuring that the color contrast between the font and the background color is appropriate
+            - listitem [ref=e975]: Font Size
+            - listitem [ref=e976]: Alternate Texts for multimedia content
+            - listitem [ref=e977]: Ability to use the system using the computer keyboard in addition to the mouse.
+          - generic [ref=e978]:
+            - heading "Common standards for compliance" [level=4] [ref=e979]
+            - generic [ref=e980]:
+              - text: "["
+              - link "edit" [ref=e981] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=34
+              - text: "]"
+          - list [ref=e982]:
+            - listitem [ref=e983]:
+              - link "Americans with Disabilities Act of 1990" [ref=e984] [cursor=pointer]:
+                - /url: /wiki/Americans_with_Disabilities_Act_of_1990
+            - listitem [ref=e985]:
+              - link "Section 508 Amendment to the Rehabilitation Act of 1973" [ref=e986] [cursor=pointer]:
+                - /url: /wiki/Section_508_Amendment_to_the_Rehabilitation_Act_of_1973
+            - listitem [ref=e987]:
+              - link "Web Accessibility Initiative" [ref=e988] [cursor=pointer]:
+                - /url: /wiki/Web_Accessibility_Initiative
+              - text: (WAI) of the
+              - link "World Wide Web Consortium" [ref=e989] [cursor=pointer]:
+                - /url: /wiki/World_Wide_Web_Consortium
+              - text: (W3C)
+          - generic [ref=e990]:
+            - heading "Security testing" [level=3] [ref=e991]
+            - generic [ref=e992]:
+              - text: "["
+              - link "edit" [ref=e993] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=35
+              - text: "]"
+          - paragraph [ref=e994]:
+            - link "Security testing" [ref=e995] [cursor=pointer]:
+              - /url: /wiki/Security_testing
+            - text: is essential for software that processes confidential data to prevent
+            - link "system intrusion" [ref=e996] [cursor=pointer]:
+              - /url: /wiki/Backdoor_(computing)
+            - text: by
+            - link "hackers" [ref=e997] [cursor=pointer]:
+              - /url: /wiki/Hacker_(computer_security)
+            - text: .
+          - paragraph [ref=e998]:
+            - text: The International Organization for Standardization (ISO) defines this as a "type of testing conducted to evaluate the degree to which a test item, and associated data and information, are protected so that unauthorised persons or systems cannot use, read or modify them, and authorized persons or systems are not denied access to them."
+            - superscript [ref=e999]:
+              - link "[67]" [ref=e1000] [cursor=pointer]:
+                - /url: "#cite_note-67"
+          - generic [ref=e1001]:
+            - heading "Internationalization and localization" [level=3] [ref=e1002]
+            - generic [ref=e1003]:
+              - text: "["
+              - link "edit" [ref=e1004] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=36
+              - text: "]"
+          - paragraph [ref=e1005]:
+            - text: Testing for
+            - link "internationalization and localization" [ref=e1006] [cursor=pointer]:
+              - /url: /wiki/Internationalization_and_localization
+            - text: validates that the software can be used with different languages and geographic regions. The process of
+            - link "pseudolocalization" [ref=e1007] [cursor=pointer]:
+              - /url: /wiki/Pseudolocalization
+            - text: is used to test the ability of an application to be translated to another language, and make it easier to identify when the localization process may introduce new bugs into the product.
+          - paragraph [ref=e1008]:
+            - text: Globalization testing verifies that the software is adapted for a new culture, such as different currencies or time zones.
+            - superscript [ref=e1009]:
+              - link "[68]" [ref=e1010] [cursor=pointer]:
+                - /url: "#cite_note-68"
+          - paragraph [ref=e1011]: "Actual translation to human languages must be tested, too. Possible localization and globalization failures include:"
+          - list [ref=e1012]:
+            - listitem [ref=e1013]: Some messages may be untranslated.
+            - listitem [ref=e1014]:
+              - text: Software is often localized by translating a list of
+              - link "strings" [ref=e1015] [cursor=pointer]:
+                - /url: /wiki/String_(computer_science)
+              - text: out of context, and the translator may choose the wrong translation for an ambiguous source string.
+            - listitem [ref=e1016]: Technical terminology may become inconsistent, if the project is translated by several people without proper coordination or if the translator is imprudent.
+            - listitem [ref=e1017]: Literal word-for-word translations may sound inappropriate, artificial or too technical in the target language.
+            - listitem [ref=e1018]:
+              - text: Untranslated messages in the original language may be
+              - link "hard coded" [ref=e1019] [cursor=pointer]:
+                - /url: /wiki/Hard_coding
+              - text: in the source code, and thus untranslatable.
+            - listitem [ref=e1020]:
+              - text: Some messages may be created automatically at
+              - link "run time" [ref=e1021] [cursor=pointer]:
+                - /url: /wiki/Run_time_(program_lifecycle_phase)
+              - text: and the resulting string may be ungrammatical, functionally incorrect, misleading or confusing.
+            - listitem [ref=e1022]:
+              - text: Software may use a
+              - link "keyboard shortcut" [ref=e1023] [cursor=pointer]:
+                - /url: /wiki/Keyboard_shortcut
+              - text: that has no function on the source language's
+              - link "keyboard layout" [ref=e1024] [cursor=pointer]:
+                - /url: /wiki/Keyboard_layout
+              - text: ", but is used for typing characters in the layout of the target language."
+            - listitem [ref=e1025]:
+              - text: Software may lack support for the
+              - link "character encoding" [ref=e1026] [cursor=pointer]:
+                - /url: /wiki/Character_encoding
+              - text: of the target language.
+            - listitem [ref=e1027]:
+              - text: Fonts and font sizes that are appropriate in the source language may be inappropriate in the target language; for example,
+              - link "CJK characters" [ref=e1028] [cursor=pointer]:
+                - /url: /wiki/CJK_characters
+              - text: may become unreadable if the font is too small.
+            - listitem [ref=e1029]: A string in the target language may be longer than the software can handle. This may make the string partly invisible to the user or cause the software to crash or malfunction.
+            - listitem [ref=e1030]:
+              - text: Software may lack proper support for reading or writing
+              - link "bi-directional text" [ref=e1031] [cursor=pointer]:
+                - /url: /wiki/Bi-directional_text
+              - text: .
+            - listitem [ref=e1032]: Software may display images with text that was not localized.
+            - listitem [ref=e1033]:
+              - text: Localized operating systems may have differently named system
+              - link "configuration files" [ref=e1034] [cursor=pointer]:
+                - /url: /wiki/Configuration_file
+              - text: and
+              - link "environment variables" [ref=e1035] [cursor=pointer]:
+                - /url: /wiki/Environment_variable
+              - text: and different
+              - link "formats for date" [ref=e1036] [cursor=pointer]:
+                - /url: /wiki/Date_and_time_notation_by_country
+              - text: and
+              - link "currency" [ref=e1037] [cursor=pointer]:
+                - /url: /wiki/Currency
+              - text: .
+          - generic [ref=e1038]:
+            - heading "Development testing" [level=3] [ref=e1039]
+            - generic [ref=e1040]:
+              - text: "["
+              - link "edit" [ref=e1041] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=37
+              - text: "]"
+          - note [ref=e1042]:
+            - text: "Main article:"
+            - link "Development testing" [ref=e1043] [cursor=pointer]:
+              - /url: /wiki/Development_testing
+          - paragraph [ref=e1044]: Development testing is a software development process that involves the synchronized application of a broad spectrum of defect prevention and detection strategies in order to reduce software development risks, time, and costs. It is performed by the software developer or engineer during the construction phase of the software development lifecycle. Development testing aims to eliminate construction errors before code is promoted to other testing; this strategy is intended to increase the quality of the resulting software as well as the efficiency of the overall development process.
+          - paragraph [ref=e1045]:
+            - text: Depending on the organization's expectations for software development, development testing might include
+            - link "static code analysis" [ref=e1046] [cursor=pointer]:
+              - /url: /wiki/Static_code_analysis
+            - text: ", data flow analysis, metrics analysis, peer code reviews, unit testing, code coverage analysis,"
+            - link "traceability" [ref=e1047] [cursor=pointer]:
+              - /url: /wiki/Requirements_traceability
+            - text: ", and other software testing practices."
+          - generic [ref=e1048]:
+            - heading "A/B testing" [level=3] [ref=e1049]: A/B testing
+            - generic [ref=e1050]:
+              - text: "["
+              - link "edit" [ref=e1051] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=38
+              - text: "]"
+          - note [ref=e1052]:
+            - text: "Main article:"
+            - link "A/B testing" [ref=e1053] [cursor=pointer]:
+              - /url: /wiki/A/B_testing
+          - paragraph [ref=e1054]: A/B testing is a method of running a controlled experiment to determine if a proposed change is more effective than the current approach. Customers are routed to either a current version (control) of a feature, or to a modified version (treatment) and data is collected to determine which version is better at achieving the desired outcome.
+          - generic [ref=e1055]:
+            - heading "Concurrent testing" [level=3] [ref=e1056]
+            - generic [ref=e1057]:
+              - text: "["
+              - link "edit" [ref=e1058] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=39
+              - text: "]"
+          - note [ref=e1059]:
+            - text: "Main article:"
+            - link "Concurrent testing" [ref=e1060] [cursor=pointer]:
+              - /url: /wiki/Concurrent_testing
+          - paragraph [ref=e1061]:
+            - text: Concurrent or concurrency testing assesses the behaviour and performance of software and systems that use
+            - link "concurrent computing" [ref=e1062] [cursor=pointer]:
+              - /url: /wiki/Concurrent_computing
+            - text: ", generally under normal usage conditions. Typical problems this type of testing will expose are deadlocks, race conditions and problems with shared memory/resource handling."
+          - generic [ref=e1063]:
+            - heading "Conformance testing or type testing" [level=3] [ref=e1064]
+            - generic [ref=e1065]:
+              - text: "["
+              - link "edit" [ref=e1066] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=40
+              - text: "]"
+          - note [ref=e1067]:
+            - text: "Main article:"
+            - link "Conformance testing" [ref=e1068] [cursor=pointer]:
+              - /url: /wiki/Conformance_testing
+          - paragraph [ref=e1069]: In software testing, conformance testing verifies that a product performs according to its specified standards. Compilers, for instance, are extensively tested to determine whether they meet the recognized standard for that language.
+          - generic [ref=e1070]:
+            - heading "Output comparison testing" [level=3] [ref=e1071]
+            - generic [ref=e1072]:
+              - text: "["
+              - link "edit" [ref=e1073] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=41
+              - text: "]"
+          - paragraph [ref=e1074]:
+            - text: Creating a display expected output, whether as
+            - link "data comparison" [ref=e1075] [cursor=pointer]:
+              - /url: /wiki/File_comparison
+            - text: of text or screenshots of the UI,
+            - superscript [ref=e1076]:
+              - link "[3]" [ref=e1077] [cursor=pointer]:
+                - /url: "#cite_note-Kaner2-3"
+            - superscript [ref=e1078]: ": 195"
+            - text: is sometimes called snapshot testing or Golden Master Testing unlike many other forms of testing, this cannot detect failures automatically and instead requires that a human evaluate the output for inconsistencies.
+          - generic [ref=e1079]:
+            - heading "Property testing" [level=3] [ref=e1080]
+            - generic [ref=e1081]:
+              - text: "["
+              - link "edit" [ref=e1082] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=42
+              - text: "]"
+          - note [ref=e1083]:
+            - text: Not to be confused with
+            - link "property testing algorithms" [ref=e1084] [cursor=pointer]:
+              - /url: /wiki/Property_testing
+            - text: .
+          - paragraph [ref=e1085]: Property testing is a testing technique where, instead of asserting that specific inputs produce specific expected outputs, the practitioner randomly generates many inputs, runs the program on all of them, and asserts the truth of some "property" that should be true for every pair of input and output. For example, every output from a serialization function should be accepted by the corresponding deserialization function, and every output from a sort function should be a monotonically increasing list containing exactly the same elements as its input.
+          - paragraph [ref=e1086]: Property testing libraries allow the user to control the strategy by which random inputs are constructed, to ensure coverage of degenerate cases, or inputs featuring specific patterns that are needed to fully exercise aspects of the implementation under test.
+          - paragraph [ref=e1087]:
+            - text: Property testing is also sometimes known as "generative testing" or "QuickCheck testing" since it was introduced and popularized by the Haskell library
+            - link "QuickCheck" [ref=e1088] [cursor=pointer]:
+              - /url: /wiki/QuickCheck
+            - text: .
+            - superscript [ref=e1089]:
+              - link "[69]" [ref=e1090] [cursor=pointer]:
+                - /url: "#cite_note-69"
+          - generic [ref=e1091]:
+            - heading "Metamorphic testing" [level=3] [ref=e1092]
+            - generic [ref=e1093]:
+              - text: "["
+              - link "edit" [ref=e1094] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=43
+              - text: "]"
+          - note [ref=e1095]:
+            - text: "Main article:"
+            - link "Metamorphic testing" [ref=e1096] [cursor=pointer]:
+              - /url: /wiki/Metamorphic_testing
+          - paragraph [ref=e1097]: Metamorphic testing (MT) is a property-based software testing technique, which can be an effective approach for addressing the test oracle problem and test case generation problem. The test oracle problem is the difficulty of determining the expected outcomes of selected test cases or to determine whether the actual outputs agree with the expected outcomes.
+          - generic [ref=e1098]:
+            - heading "VCR testing" [level=3] [ref=e1099]
+            - generic [ref=e1100]:
+              - text: "["
+              - link "edit" [ref=e1101] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=44
+              - text: "]"
+          - paragraph [ref=e1102]: VCR testing, also known as "playback testing" or "record/replay" testing, is a testing technique for increasing the reliability and speed of regression tests that involve a component that is slow or unreliable to communicate with, often a third-party API outside of the tester's control. It involves making a recording ("cassette") of the system's interactions with the external component, and then replaying the recorded interactions as a substitute for communicating with the external system on subsequent runs of the test.
+          - paragraph [ref=e1103]:
+            - text: The technique was popularized in web development by the Ruby library
+            - link "vcr" [ref=e1104] [cursor=pointer]:
+              - /url: https://github.com/vcr/vcr
+            - text: .
+          - generic [ref=e1105]:
+            - heading "Contract Testing" [level=3] [ref=e1106]
+            - generic [ref=e1107]:
+              - text: "["
+              - link "edit" [ref=e1108] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=45
+              - text: "]"
+          - paragraph [ref=e1109]:
+            - link "Contract" [ref=e1110] [cursor=pointer]:
+              - /url: /wiki/Design_by_contract
+            - text: testing, not to be confused with the aforementioned legally-motivated contractual acceptance testing, is a methodology consisting of testing the integration point between any two software services by checking if the requests and responses sent between each conform to a shared set of expectations commonly referred to as a contract. It is often used in the context of
+            - link "distributed systems" [ref=e1111] [cursor=pointer]:
+              - /url: /wiki/Distributed_computing
+            - text: ","
+            - link "service-oriented software architectures" [ref=e1112] [cursor=pointer]:
+              - /url: /wiki/Service-oriented_architecture
+            - text: ", and"
+            - link "microservices" [ref=e1113] [cursor=pointer]:
+              - /url: /wiki/Microservices
+            - text: .
+            - superscript [ref=e1114]:
+              - link "[70]" [ref=e1115] [cursor=pointer]:
+                - /url: "#cite_note-70"
+            - superscript [ref=e1116]:
+              - link "[71]" [ref=e1117] [cursor=pointer]:
+                - /url: "#cite_note-71"
+          - generic [ref=e1118]:
+            - heading "Teamwork" [level=2] [ref=e1119]
+            - generic [ref=e1120]:
+              - text: "["
+              - link "edit" [ref=e1121] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=46
+              - text: "]"
+          - generic [ref=e1122]:
+            - heading "Roles" [level=3] [ref=e1123]
+            - generic [ref=e1124]:
+              - text: "["
+              - link "edit" [ref=e1125] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=47
+              - text: "]"
+          - paragraph [ref=e1126]:
+            - text: In an organization, testers may be in a separate team from the rest of the
+            - link "software development" [ref=e1127] [cursor=pointer]:
+              - /url: /wiki/Software_development
+            - text: team or they may be integrated into one team. Software testing can also be performed by non-dedicated software testers.
+          - paragraph [ref=e1128]: In the 1980s, the term software tester started to be used to denote a separate profession.
+          - paragraph [ref=e1129]:
+            - text: "Notable software testing roles and titles include:"
+            - superscript [ref=e1130]:
+              - link "[72]" [ref=e1131] [cursor=pointer]:
+                - /url: "#cite_note-72"
+            - text: test manager, test lead, test analyst, test designer, tester, automation developer, and test administrator.
+            - superscript [ref=e1132]:
+              - link "[73]" [ref=e1133] [cursor=pointer]:
+                - /url: "#cite_note-73"
+          - generic [ref=e1134]:
+            - heading "Processes" [level=3] [ref=e1135]
+            - generic [ref=e1136]:
+              - text: "["
+              - link "edit" [ref=e1137] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=48
+              - text: "]"
+          - paragraph [ref=e1138]:
+            - text: Organizations that develop software, perform testing differently, but there are common patterns.
+            - superscript [ref=e1139]:
+              - link "[2]" [ref=e1140] [cursor=pointer]:
+                - /url: "#cite_note-pan-2"
+          - generic [ref=e1141]:
+            - heading "Waterfall development" [level=4] [ref=e1142]
+            - generic [ref=e1143]:
+              - text: "["
+              - link "edit" [ref=e1144] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=49
+              - text: "]"
+          - note [ref=e1145]:
+            - text: "Further information:"
+            - link "Capability Maturity Model Integration" [ref=e1146] [cursor=pointer]:
+              - /url: /wiki/Capability_Maturity_Model_Integration
+            - text: and
+            - link "Waterfall model" [ref=e1147] [cursor=pointer]:
+              - /url: /wiki/Waterfall_model
+          - paragraph [ref=e1148]:
+            - text: In
+            - link "waterfall development" [ref=e1149] [cursor=pointer]:
+              - /url: /wiki/Waterfall_model
+            - text: ", testing is generally performed after the code is completed, but before the product is shipped to the customer."
+            - superscript [ref=e1150]:
+              - link "[74]" [ref=e1151] [cursor=pointer]:
+                - /url: "#cite_note-74"
+            - text: This practice often results in the testing phase being used as a
+            - link "project" [ref=e1152] [cursor=pointer]:
+              - /url: /wiki/Project_management
+            - text: buffer to compensate for project delays, thereby compromising the time devoted to testing.
+            - superscript [ref=e1153]:
+              - link "[11]" [ref=e1154] [cursor=pointer]:
+                - /url: "#cite_note-Myers_1979-11"
+            - superscript [ref=e1155]: ": 145–146"
+          - paragraph [ref=e1156]:
+            - text: Some contend that the waterfall process allows for testing to start when the development project starts and to be a continuous process until the project finishes.
+            - superscript [ref=e1157]:
+              - link "[75]" [ref=e1158] [cursor=pointer]:
+                - /url: "#cite_note-75"
+          - generic [ref=e1159]:
+            - heading "Agile development" [level=4] [ref=e1160]
+            - generic [ref=e1161]:
+              - text: "["
+              - link "edit" [ref=e1162] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=50
+              - text: "]"
+          - paragraph [ref=e1163]:
+            - link "Agile software development" [ref=e1164] [cursor=pointer]:
+              - /url: /wiki/Agile_software_development
+            - text: commonly involves testing while the code is being written and organizing teams with both programmers and testers and with team members performing both programming and testing.
+          - paragraph [ref=e1165]:
+            - text: One agile practice,
+            - link "test-driven software development" [ref=e1166] [cursor=pointer]:
+              - /url: /wiki/Test-driven_development
+            - text: (TDD), is a way of
+            - link "unit testing" [ref=e1167] [cursor=pointer]:
+              - /url: /wiki/Unit_testing
+            - text: such that unit-level testing is performed while writing the product code.
+            - superscript [ref=e1168]:
+              - link "[76]" [ref=e1169] [cursor=pointer]:
+                - /url: "#cite_note-AgileAllianceTDD-76"
+            - text: Test code is updated as new features are added and failure conditions are discovered (bugs fixed). Commonly, the unit test code is maintained with the project code, integrated in the build process, and run on each build and as part of regression testing. Goals of this
+            - link "continuous integration" [ref=e1170] [cursor=pointer]:
+              - /url: /wiki/Continuous_integration
+            - text: is to support development and reduce defects.
+            - superscript [ref=e1171]:
+              - link "[77]" [ref=e1172] [cursor=pointer]:
+                - /url: "#cite_note-77"
+            - superscript [ref=e1173]:
+              - link "[76]" [ref=e1174] [cursor=pointer]:
+                - /url: "#cite_note-AgileAllianceTDD-76"
+          - paragraph [ref=e1175]:
+            - text: Even in organizations that separate teams by programming and testing functions, many often have the programmers perform
+            - link "unit testing" [ref=e1176] [cursor=pointer]:
+              - /url: /wiki/Unit_testing
+            - text: .
+            - superscript [ref=e1177]:
+              - link "[78]" [ref=e1178] [cursor=pointer]:
+                - /url: "#cite_note-78"
+          - generic [ref=e1179]:
+            - heading "Sample process" [level=4] [ref=e1180]
+            - generic [ref=e1181]:
+              - text: "["
+              - link "edit" [ref=e1182] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=51
+              - text: "]"
+          - paragraph [ref=e1183]: The sample below is common for waterfall development. The same activities are commonly found in other development models, but might be described differently.
+          - list [ref=e1184]:
+            - listitem [ref=e1185]:
+              - link "Requirements analysis" [ref=e1186] [cursor=pointer]:
+                - /url: /wiki/Requirements_analysis
+              - text: ": testing should begin in the requirements phase of the"
+              - link "software development life cycle" [ref=e1187] [cursor=pointer]:
+                - /url: /wiki/Software_development_life_cycle
+              - text: . During the design phase, testers work to determine what aspects of a design are testable and with what parameters those tests work.
+            - listitem [ref=e1188]:
+              - text: "Test planning:"
+              - link "test strategy" [ref=e1189] [cursor=pointer]:
+                - /url: /wiki/Test_strategy
+              - text: ","
+              - link "test plan" [ref=e1190] [cursor=pointer]:
+                - /url: /wiki/Test_plan
+              - text: ","
+              - link "testbed" [ref=e1191] [cursor=pointer]:
+                - /url: /wiki/Testbed
+              - text: creation. Since many activities will be carried out during testing, a plan is needed.
+            - listitem [ref=e1192]:
+              - text: "Test development: test procedures,"
+              - link "test scenarios" [ref=e1193] [cursor=pointer]:
+                - /url: /wiki/Scenario_test
+              - text: ","
+              - link "test cases" [ref=e1194] [cursor=pointer]:
+                - /url: /wiki/Test_case_(software)
+              - text: ", test datasets, test scripts to use in testing software."
+            - listitem [ref=e1195]: "Test execution: testers execute the software based on the plans and test documents then report any errors found to the development team. This part could be complex when running tests with a lack of programming knowledge."
+            - listitem [ref=e1196]:
+              - text: "Test reporting: once testing is completed, testers generate metrics and make final reports on their"
+              - link "test effort" [ref=e1197] [cursor=pointer]:
+                - /url: /wiki/Test_effort
+              - text: and whether the software tested is ready for release.
+            - listitem [ref=e1198]: "Test result analysis: or defect analysis, is done by the development team usually along with the client, in order to decide what defects should be assigned, fixed, rejected (i.e. found software working properly) or deferred to be dealt with later."
+            - listitem [ref=e1199]: "Defect retesting: once a defect has been dealt with by the development team, it is retested by the testing team."
+            - listitem [ref=e1200]:
+              - link "Regression testing" [ref=e1201] [cursor=pointer]:
+                - /url: /wiki/Regression_testing
+              - text: ": it is common to have a small test program built of a subset of tests, for each integration of new, modified, or fixed software, in order to ensure that the latest delivery has not ruined anything and that the software product as a whole is still working correctly."
+            - listitem [ref=e1202]: "Test closure: once the test meets the exit criteria, the activities such as capturing the key outputs, lessons learned, results, logs, documents related to the project are archived and used as a reference for future projects."
+          - generic [ref=e1203]:
+            - heading "Quality" [level=2] [ref=e1204]
+            - generic [ref=e1205]:
+              - text: "["
+              - link "edit" [ref=e1206] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=52
+              - text: "]"
+          - note [ref=e1207]:
+            - text: "Main article:"
+            - link "Software quality" [ref=e1208] [cursor=pointer]:
+              - /url: /wiki/Software_quality
+          - generic [ref=e1209]:
+            - heading "Software verification and validation" [level=3] [ref=e1210]
+            - generic [ref=e1211]:
+              - text: "["
+              - link "edit" [ref=e1212] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=53
+              - text: "]"
+          - note [ref=e1213]:
+            - text: "Main articles:"
+            - link "Verification and validation (software)" [ref=e1214] [cursor=pointer]:
+              - /url: /wiki/Verification_and_validation_(software)
+            - text: and
+            - link "Software quality control" [ref=e1215] [cursor=pointer]:
+              - /url: /wiki/Software_quality_control
+          - paragraph [ref=e1216]:
+            - text: Software testing is used in association with
+            - link "verification and validation" [ref=e1217] [cursor=pointer]:
+              - /url: /wiki/Verification_and_validation_(software)
+            - text: ":"
+            - superscript [ref=e1218]:
+              - link "[79]" [ref=e1219] [cursor=pointer]:
+                - /url: "#cite_note-tran-79"
+          - list [ref=e1220]:
+            - listitem [ref=e1221]: "Verification: Have we built the software right? (i.e., does it implement the requirements)."
+            - listitem [ref=e1222]: "Validation: Have we built the right software? (i.e., do the deliverables satisfy the customer)."
+          - paragraph [ref=e1223]:
+            - text: The terms verification and validation are commonly used interchangeably in the industry; it is also common to see these two terms defined with contradictory definitions. According to the
+            - generic [ref=e1224]:
+              - link "IEEE Standard" [ref=e1225] [cursor=pointer]:
+                - /url: /wiki/IEEE_Standards_Association
+              - text: Glossary of Software Engineering Terminology
+            - text: ":"
+            - superscript [ref=e1226]:
+              - link "[12]" [ref=e1227] [cursor=pointer]:
+                - /url: "#cite_note-IEEEglossary-12"
+            - superscript [ref=e1228]: ": 80–81"
+          - generic [ref=e1229]:
+            - definition [ref=e1230]: Verification is the process of evaluating a system or component to determine whether the products of a given development phase satisfy the conditions imposed at the start of that phase.
+            - definition [ref=e1231]: Validation is the process of evaluating a system or component during or at the end of the development process to determine whether it satisfies specified requirements.
+          - paragraph [ref=e1232]: "And, according to the ISO 9000 standard:"
+          - generic [ref=e1233]:
+            - definition [ref=e1234]: Verification is confirmation by examination and through provision of objective evidence that specified requirements have been fulfilled.
+            - definition [ref=e1235]: Validation is confirmation by examination and through provision of objective evidence that the requirements for a specific intended use or application have been fulfilled.
+          - paragraph [ref=e1236]: The contradiction is caused by the use of the concepts of requirements and specified requirements but with different meanings.
+          - paragraph [ref=e1237]: In the case of IEEE standards, the specified requirements, mentioned in the definition of validation, are the set of problems, needs and wants of the stakeholders that the software must solve and satisfy. Such requirements are documented in a Software Requirements Specification (SRS). And, the products mentioned in the definition of verification, are the output artifacts of every phase of the software development process. These products are, in fact, specifications such as Architectural Design Specification, Detailed Design Specification, etc. The SRS is also a specification, but it cannot be verified (at least not in the sense used here – more on this subject below).
+          - paragraph [ref=e1238]: But, for the ISO 9000, the specified requirements are the set of specifications, as just mentioned above, that must be verified. A specification, as previously explained, is the product of a software development process phase that receives another specification as input. A specification is verified successfully when it correctly implements its input specification. All the specifications can be verified except the SRS because it is the first one (it can be validated, though). An example scenario be that the Design Specification must implement the SRS, and the Construction phase artifacts must implement the Design Specification.
+          - paragraph [ref=e1239]: So, when these words are defined in common terms, the apparent contradiction disappears.
+          - paragraph [ref=e1240]: Both the SRS and the software must be validated. The SRS can be validated statically by consulting with the stakeholders. Nevertheless, running some partial implementation of the software or a prototype of any kind (dynamic testing) and obtaining positive feedback from them, can further increase the certainty that the SRS is correctly formulated. On the other hand, the software, as a final and running product (not its artifacts and documents, including the source code) must be validated dynamically with the stakeholders by executing the software and having them to try it.
+          - paragraph [ref=e1241]: Some might argue that, for SRS, the input is the words of stakeholders and, therefore, SRS validation is the same as SRS verification. Thinking this way is not advisable as it only causes more confusion. It is better to think of verification as a process involving a formal and technical input document.
+          - generic [ref=e1242]:
+            - heading "Software quality assurance" [level=3] [ref=e1243]
+            - generic [ref=e1244]:
+              - text: "["
+              - link "edit" [ref=e1245] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=54
+              - text: "]"
+          - paragraph [ref=e1246]:
+            - text: In some organizations, software testing is part of a
+            - link "software quality assurance" [ref=e1247] [cursor=pointer]:
+              - /url: /wiki/Software_quality_assurance
+            - text: (SQA) process.
+            - superscript [ref=e1248]:
+              - link "[3]" [ref=e1249] [cursor=pointer]:
+                - /url: "#cite_note-Kaner2-3"
+            - superscript [ref=e1250]: ": 347"
+            - text: In SQA, software process specialists and auditors are concerned with the software development process rather than just the artifacts such as documentation, code and systems. They examine and change the
+            - link "software engineering" [ref=e1251] [cursor=pointer]:
+              - /url: /wiki/Software_engineering
+            - text: "process itself to reduce the number of faults that end up in the delivered software: the so-called defect rate. What constitutes an acceptable defect rate depends on the nature of the software; a flight simulator video game would have much higher defect tolerance than software for an actual airplane. Although there are close links with SQA, testing departments often exist independently, and there may be no SQA function in some companies."
+          - paragraph [ref=e1252]:
+            - text: Software testing is an activity to investigate software under test in order to provide quality-related information to stakeholders. By contrast, QA (
+            - link "quality assurance" [ref=e1253] [cursor=pointer]:
+              - /url: /wiki/Quality_assurance
+            - text: ) is the implementation of policies and procedures intended to prevent defects from reaching customers.
+          - generic [ref=e1254]:
+            - heading "Measures" [level=3] [ref=e1255]
+            - generic [ref=e1256]:
+              - text: "["
+              - link "edit" [ref=e1257] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=55
+              - text: "]"
+          - paragraph [ref=e1258]:
+            - text: Quality measures include such topics as
+            - link "correctness" [ref=e1259] [cursor=pointer]:
+              - /url: /wiki/Correctness_(computer_science)
+            - text: ", completeness,"
+            - link "security" [ref=e1260] [cursor=pointer]:
+              - /url: /wiki/Computer_security_audit
+            - text: and
+            - link "ISO/IEC 9126" [ref=e1261] [cursor=pointer]:
+              - /url: /wiki/ISO/IEC_9126
+            - text: requirements such as capability,
+            - link "reliability" [ref=e1262] [cursor=pointer]:
+              - /url: /wiki/Reliability_engineering
+            - text: ","
+            - link "efficiency" [ref=e1263] [cursor=pointer]:
+              - /url: /wiki/Algorithmic_efficiency
+            - text: ","
+            - link "portability" [ref=e1264] [cursor=pointer]:
+              - /url: /wiki/Porting
+            - text: ","
+            - link "maintainability" [ref=e1265] [cursor=pointer]:
+              - /url: /wiki/Maintainability
+            - text: ", compatibility, and"
+            - link "usability" [ref=e1266] [cursor=pointer]:
+              - /url: /wiki/Usability
+            - text: .
+          - paragraph [ref=e1267]:
+            - text: There are a number of frequently used
+            - link "software metrics" [ref=e1268] [cursor=pointer]:
+              - /url: /wiki/Software_metric
+            - text: ", or measures, which are used to assist in determining the state of the software or the adequacy of the testing."
+          - generic [ref=e1269]:
+            - heading "Artifacts" [level=3] [ref=e1270]
+            - generic [ref=e1271]:
+              - text: "["
+              - link "edit" [ref=e1272] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=56
+              - text: "]"
+          - paragraph [ref=e1273]:
+            - text: A software testing process can produce several
+            - link "artifacts" [ref=e1274] [cursor=pointer]:
+              - /url: /wiki/Artifact_(software_development)
+            - text: . The actual artifacts produced are a factor of the software development model used, stakeholder and organisational needs.
+          - generic [ref=e1275]:
+            - heading "Test plan" [level=4] [ref=e1276]
+            - generic [ref=e1277]:
+              - text: "["
+              - link "edit" [ref=e1278] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=57
+              - text: "]"
+          - note [ref=e1279]:
+            - text: "Main article:"
+            - link "Test plan" [ref=e1280] [cursor=pointer]:
+              - /url: /wiki/Test_plan
+          - paragraph [ref=e1281]:
+            - text: A
+            - link "test plan" [ref=e1282] [cursor=pointer]:
+              - /url: /wiki/Test_plan
+            - text: is a document detailing the approach that will be taken for intended test activities. The plan may include aspects such as objectives, scope, processes and procedures, personnel requirements, and contingency plans.
+            - superscript [ref=e1283]:
+              - link "[54]" [ref=e1284] [cursor=pointer]:
+                - /url: "#cite_note-LewisSoftware16-2-54"
+            - text: The test plan could come in the form of a single plan that includes all test types (like an acceptance or system test plan) and planning considerations, or it may be issued as a master test plan that provides an overview of more than one detailed test plan (a plan of a plan).
+            - superscript [ref=e1285]:
+              - link "[54]" [ref=e1286] [cursor=pointer]:
+                - /url: "#cite_note-LewisSoftware16-2-54"
+            - text: A test plan can be, in some cases, part of a wide "
+            - link "test strategy" [ref=e1287] [cursor=pointer]:
+              - /url: /wiki/Test_strategy
+            - text: "\" which documents overall testing approaches, which may itself be a master test plan or even a separate artifact."
+          - generic [ref=e1288]:
+            - heading "Traceability matrix" [level=4] [ref=e1289]
+            - generic [ref=e1290]:
+              - text: "["
+              - link "edit" [ref=e1291] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=58
+              - text: "]"
+          - generic [ref=e1292]:
+            - note [ref=e1293]:
+              - text: These paragraphs are an excerpt from
+              - link "Traceability matrix" [ref=e1294] [cursor=pointer]:
+                - /url: /wiki/Traceability_matrix
+              - text: .
+              - generic [ref=e1295]:
+                - text: "["
+                - link "edit" [ref=e1296] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Traceability_matrix&action=edit
+                - text: "]"
+            - paragraph [ref=e1298]:
+              - text: In
+              - link "software development" [ref=e1299] [cursor=pointer]:
+                - /url: /wiki/Software_development
+              - text: ", a"
+              - link "traceability matrix" [ref=e1300] [cursor=pointer]:
+                - /url: /wiki/Traceability_matrix
+              - text: (TM)
+              - superscript [ref=e1301]:
+                - link "[80]" [ref=e1302] [cursor=pointer]:
+                  - /url: "#cite_note-Traceability_matrix_SST-80"
+              - superscript [ref=e1303]: ": 244"
+              - text: is a document, usually in the form of a table, used to assist in determining the completeness of a relationship by correlating any two
+              - link "baselined documents" [ref=e1304] [cursor=pointer]:
+                - /url: /wiki/Baseline_(configuration_management)
+              - text: using a many-to-many relationship comparison.
+              - superscript [ref=e1305]:
+                - link "[80]" [ref=e1306] [cursor=pointer]:
+                  - /url: "#cite_note-Traceability_matrix_SST-80"
+              - superscript [ref=e1307]: ": 3–22"
+              - text: It is often used with high-level
+              - link "requirements" [ref=e1308] [cursor=pointer]:
+                - /url: /wiki/Requirement
+              - text: (these often consist of marketing requirements) and detailed requirements of the product to the matching parts of
+              - link "high-level design" [ref=e1309] [cursor=pointer]:
+                - /url: /wiki/High-level_design
+              - text: ", detailed design,"
+              - link "test plan" [ref=e1310] [cursor=pointer]:
+                - /url: /wiki/Test_plan
+              - text: ", and"
+              - link "test cases" [ref=e1311] [cursor=pointer]:
+                - /url: /wiki/Test_case_(software)
+              - text: .
+          - generic [ref=e1312]:
+            - heading "Test case" [level=4] [ref=e1313]
+            - generic [ref=e1314]:
+              - text: "["
+              - link "edit" [ref=e1315] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=59
+              - text: "]"
+          - note [ref=e1316]:
+            - text: "Main article:"
+            - link "Test case (software)" [ref=e1317] [cursor=pointer]:
+              - /url: /wiki/Test_case_(software)
+          - paragraph [ref=e1318]:
+            - text: A
+            - link "test case" [ref=e1319] [cursor=pointer]:
+              - /url: /wiki/Test_case_(software)
+            - text: normally consists of a unique identifier, requirement references from a design specification, preconditions, events, a series of steps (also known as actions) to follow, input, output, expected result, and the actual result. Clinically defined, a test case is an input and an expected result.
+            - superscript [ref=e1320]:
+              - link "[81]" [ref=e1321] [cursor=pointer]:
+                - /url: "#cite_note-81"
+            - text: This can be as terse as "for condition x your derived result is y", although normally test cases describe in more detail the input scenario and what results might be expected. It can occasionally be a series of steps (but often steps are contained in a separate test procedure that can be exercised against multiple test cases, as a matter of economy) but with one expected result or expected outcome. The optional fields are a test case ID, test step, or order of execution number, related requirement(s), depth, test category, author, and check boxes for whether the test is automatable and has been automated. Larger test cases may also contain prerequisite states or steps, and descriptions. A test case should also contain a place for the actual result. These steps can be stored in a word processor document, spreadsheet, database, or other common repositories. In a database system, you may also be able to see past test results, who generated the results, and what system configuration was used to generate those results. These past results would usually be stored in a separate table.
+          - generic [ref=e1322]:
+            - heading "Test script" [level=4] [ref=e1323]
+            - generic [ref=e1324]:
+              - text: "["
+              - link "edit" [ref=e1325] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=60
+              - text: "]"
+          - paragraph [ref=e1326]:
+            - text: A
+            - link "test script" [ref=e1327] [cursor=pointer]:
+              - /url: /wiki/Test_script
+            - text: is a procedure or programming code that replicates user actions. Initially, the term was derived from the product of work created by automated regression test tools. A test case will be a baseline to create test scripts using a tool or a program.
+          - generic [ref=e1328]:
+            - heading "Test suite" [level=4] [ref=e1329]
+            - generic [ref=e1330]:
+              - text: "["
+              - link "edit" [ref=e1331] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=61
+              - text: "]"
+          - generic [ref=e1332]:
+            - note [ref=e1333]:
+              - text: This section is an excerpt from
+              - link "Test suite" [ref=e1334] [cursor=pointer]:
+                - /url: /wiki/Test_suite
+              - text: .
+              - generic [ref=e1335]:
+                - text: "["
+                - link "edit" [ref=e1336] [cursor=pointer]:
+                  - /url: https://en.wikipedia.org/w/index.php?title=Test_suite&action=edit
+                - text: "]"
+            - paragraph [ref=e1338]:
+              - text: In
+              - link "software development" [ref=e1339] [cursor=pointer]:
+                - /url: /wiki/Software_development
+              - text: ", a"
+              - link "test suite" [ref=e1340] [cursor=pointer]:
+                - /url: /wiki/Test_suite
+              - text: ", less commonly known as a validation suite, is a collection of"
+              - link "test cases" [ref=e1341] [cursor=pointer]:
+                - /url: /wiki/Test_case_(software)
+              - text: that are intended to be used to test a software program to show that it has some specified set of behaviors.
+              - superscript [ref=e1342]:
+                - link "[82]" [ref=e1343] [cursor=pointer]:
+                  - /url: "#cite_note-82"
+              - text: A test suite often contains detailed instructions or goals for each collection of test cases and information on the system configuration to be used during testing. A group of test cases may also contain prerequisite states or steps and descriptions of the following tests.
+          - generic [ref=e1344]:
+            - heading "Test fixture or test data" [level=4] [ref=e1345]
+            - generic [ref=e1346]:
+              - text: "["
+              - link "edit" [ref=e1347] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=62
+              - text: "]"
+          - note [ref=e1348]:
+            - text: "Main article:"
+            - link "Test fixture" [ref=e1349] [cursor=pointer]:
+              - /url: /wiki/Test_fixture
+          - paragraph [ref=e1350]: In most cases, multiple sets of values or data are used to test the same functionality of a particular feature. All the test values and changeable environmental components are collected in separate files and stored as test data. It is also useful to provide this data to the client and with the product or a project. There are techniques to generate Test data.
+          - generic [ref=e1351]:
+            - heading "Test harness" [level=4] [ref=e1352]
+            - generic [ref=e1353]:
+              - text: "["
+              - link "edit" [ref=e1354] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=63
+              - text: "]"
+          - note [ref=e1355]:
+            - text: "Main article:"
+            - link "Test harness" [ref=e1356] [cursor=pointer]:
+              - /url: /wiki/Test_harness
+          - paragraph [ref=e1357]:
+            - text: The software, tools, samples of data input and output, and configurations are all referred to collectively as a
+            - link "test harness" [ref=e1358] [cursor=pointer]:
+              - /url: /wiki/Test_harness
+            - text: .
+          - generic [ref=e1359]:
+            - heading "Test run" [level=4] [ref=e1360]
+            - generic [ref=e1361]:
+              - text: "["
+              - link "edit" [ref=e1362] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=64
+              - text: "]"
+          - paragraph [ref=e1363]: A test run is a collection of test cases or test suites that the user is executing and comparing the expected with the actual results. Once complete, a report or all executed tests may be generated.
+          - generic [ref=e1364]:
+            - heading "Certifications" [level=3] [ref=e1365]
+            - generic [ref=e1366]:
+              - text: "["
+              - link "edit" [ref=e1367] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=65
+              - text: "]"
+          - note [ref=e1368]:
+            - text: "Further information:"
+            - link "Certification § In software testing" [ref=e1369] [cursor=pointer]:
+              - /url: /wiki/Certification#In_software_testing
+          - paragraph [ref=e1370]:
+            - text: Several certification programs exist to support the professional aspirations of software testers and quality assurance specialists. A few practitioners argue that the testing field is not ready for certification, as mentioned in the
+            - link "controversy" [ref=e1371] [cursor=pointer]:
+              - /url: "#Controversy"
+            - text: section.
+          - generic [ref=e1372]:
+            - heading "Controversy" [level=2] [ref=e1373]
+            - generic [ref=e1374]:
+              - text: "["
+              - link "edit" [ref=e1375] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=66
+              - text: "]"
+          - paragraph [ref=e1376]:
+            - text: Some of the major
+            - link "software testing controversies" [ref=e1377] [cursor=pointer]:
+              - /url: /wiki/Software_testing_controversies
+            - text: "include:"
+          - generic [ref=e1378]:
+            - term [ref=e1379]: Agile vs. traditional
+            - definition [ref=e1380]:
+              - text: Should testers learn to work under conditions of uncertainty and constant change or should they aim at
+              - link "process \"maturity\"" [ref=e1381] [cursor=pointer]:
+                - /url: /wiki/Capability_Maturity_Model
+              - text: "? The"
+              - link "agile testing" [ref=e1382] [cursor=pointer]:
+                - /url: /wiki/Agile_testing
+              - text: movement has received growing popularity since the early 2000s mainly in commercial circles,
+              - superscript [ref=e1383]:
+                - link "[83]" [ref=e1384] [cursor=pointer]:
+                  - /url: "#cite_note-83"
+              - superscript [ref=e1385]:
+                - link "[84]" [ref=e1386] [cursor=pointer]:
+                  - /url: "#cite_note-84"
+              - text: whereas government and military
+              - superscript [ref=e1387]:
+                - link "[85]" [ref=e1388] [cursor=pointer]:
+                  - /url: "#cite_note-85"
+              - text: software providers use this methodology but also the traditional test-last models (e.g., in the
+              - link "Waterfall model" [ref=e1389] [cursor=pointer]:
+                - /url: /wiki/Waterfall_model
+              - text: ).
+              - superscript [ref=e1390]:
+                - text: "["
+                - link "citation needed" [ref=e1392] [cursor=pointer]:
+                  - /url: /wiki/Wikipedia:Citation_needed
+                - text: "]"
+            - term [ref=e1393]: Manual vs. automated testing
+            - definition [ref=e1394]:
+              - text: Some writers believe that
+              - link "test automation" [ref=e1395] [cursor=pointer]:
+                - /url: /wiki/Test_automation
+              - text: is so expensive relative to its value that it should be used sparingly.
+              - superscript [ref=e1396]:
+                - link "[86]" [ref=e1397] [cursor=pointer]:
+                  - /url: "#cite_note-86"
+              - text: The test automation then can be considered as a way to capture and implement the requirements. As a general rule, the larger the system and the greater the complexity, the greater the ROI in test automation. Also, the investment in tools and expertise can be amortized over multiple projects with the right level of knowledge sharing within an organization.
+            - term [ref=e1398]:
+              - text: Is the existence of the
+              - link "ISO 29119" [ref=e1399] [cursor=pointer]:
+                - /url: /wiki/ISO/IEC_29119
+              - text: software testing standard justified?
+            - definition [ref=e1400]:
+              - text: Significant opposition has formed out of the ranks of the context-driven school of software testing about the ISO 29119 standard. Professional testing associations, such as the International Society for Software Testing, have attempted to have the standard withdrawn.
+              - superscript [ref=e1401]:
+                - link "[87]" [ref=e1402] [cursor=pointer]:
+                  - /url: "#cite_note-87"
+              - superscript [ref=e1403]:
+                - link "[88]" [ref=e1404] [cursor=pointer]:
+                  - /url: "#cite_note-88"
+            - term [ref=e1405]: Some practitioners declare that the testing field is not ready for certification
+            - definition [ref=e1406]:
+              - superscript [ref=e1407]:
+                - link "[89]" [ref=e1408] [cursor=pointer]:
+                  - /url: "#cite_note-89"
+              - text: No certification now offered actually requires the applicant to show their ability to test software. No certification is based on a widely accepted body of knowledge. Certification itself cannot measure an individual's productivity, their skill, or practical knowledge, and cannot guarantee their competence, or professionalism as a tester.
+              - superscript [ref=e1409]:
+                - link "[90]" [ref=e1410] [cursor=pointer]:
+                  - /url: "#cite_note-90"
+            - term [ref=e1411]: Studies used to show the relative expense of fixing defects
+            - definition [ref=e1412]: "There are opposing views on the applicability of studies used to show the relative expense of fixing defects depending on their introduction and detection. For example:"
+          - blockquote [ref=e1413]:
+            - paragraph [ref=e1414]:
+              - text: It is commonly believed that the earlier a defect is found, the cheaper it is to fix it. The following table shows the cost of fixing the defect depending on the stage it was found.
+              - superscript [ref=e1415]:
+                - link "[91]" [ref=e1416] [cursor=pointer]:
+                  - /url: "#cite_note-91"
+              - text: For example, if a problem in the requirements is found only post-release, then it would cost 10–100 times more to fix than if it had already been found by the requirements review. With the advent of modern
+              - link "continuous deployment" [ref=e1417] [cursor=pointer]:
+                - /url: /wiki/Continuous_deployment
+              - text: practices and cloud-based services, the cost of re-deployment and maintenance may lessen over time.
+            - table [ref=e1418]:
+              - rowgroup [ref=e1419]:
+                - row "Cost to fix a defect Time detected" [ref=e1420]:
+                  - columnheader "Cost to fix a defect" [ref=e1421]
+                  - columnheader "Time detected" [ref=e1422]
+                - row "Requirements Architecture Construction System test Post-release" [ref=e1423]:
+                  - columnheader "Requirements" [ref=e1424]
+                  - columnheader "Architecture" [ref=e1425]
+                  - columnheader "Construction" [ref=e1426]
+                  - columnheader "System test" [ref=e1427]
+                  - columnheader "Post-release" [ref=e1428]
+                - row "Time introduced Requirements 1× 3× 5–10× 10× 10–100×" [ref=e1429]:
+                  - columnheader "Time introduced" [ref=e1430]
+                  - rowheader "Requirements" [ref=e1431]
+                  - cell "1×" [ref=e1432]
+                  - cell "3×" [ref=e1433]
+                  - cell "5–10×" [ref=e1434]
+                  - cell "10×" [ref=e1435]
+                  - cell "10–100×" [ref=e1436]
+                - row "Architecture – 1× 10× 15× 25–100×" [ref=e1437]:
+                  - rowheader "Architecture" [ref=e1438]
+                  - cell "–" [ref=e1439]
+                  - cell "1×" [ref=e1440]
+                  - cell "10×" [ref=e1441]
+                  - cell "15×" [ref=e1442]
+                  - cell "25–100×" [ref=e1443]
+                - row "Construction – – 1× 10× 10–25×" [ref=e1444]:
+                  - rowheader "Construction" [ref=e1445]
+                  - cell "–" [ref=e1446]
+                  - cell "–" [ref=e1447]
+                  - cell "1×" [ref=e1448]
+                  - cell "10×" [ref=e1449]
+                  - cell "10–25×" [ref=e1450]
+          - blockquote [ref=e1451]:
+            - paragraph [ref=e1452]: "The data from which this table is extrapolated is scant. Laurent Bossavit says in his analysis:"
+            - blockquote [ref=e1453]:
+              - paragraph [ref=e1454]: The "smaller projects" curve turns out to be from only two teams of first-year students, a sample size so small that extrapolating to "smaller projects in general" is totally indefensible. The GTE study does not explain its data, other than to say it came from two projects, one large and one small. The paper cited for the Bell Labs "Safeguard" project specifically disclaims having collected the fine-grained data that Boehm's data points suggest. The IBM study (Fagan's paper) contains claims that seem to contradict Boehm's graph and no numerical results that clearly correspond to his data points.
+              - paragraph [ref=e1455]:
+                - text: Boehm doesn't even cite a paper for the TRW data, except when writing for "Making Software" in 2010, and there he cited the original 1976 article. There exists a large study conducted at TRW at the right time for Boehm to cite it, but that paper doesn't contain the sort of data that would support Boehm's claims.
+                - superscript [ref=e1456]:
+                  - link "[92]" [ref=e1457] [cursor=pointer]:
+                    - /url: "#cite_note-Bossavit-Leprechauns-92"
+          - generic [ref=e1458]:
+            - heading "See also" [level=2] [ref=e1459]
+            - generic [ref=e1460]:
+              - text: "["
+              - link "edit" [ref=e1461] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=67
+              - text: "]"
+          - list [ref=e1463]:
+            - listitem [ref=e1464]:
+              - link "Data validation" [ref=e1465] [cursor=pointer]:
+                - /url: /wiki/Data_validation
+              - text: – Process of ensuring computer data is both correct and useful
+            - listitem [ref=e1466]:
+              - link "Cross-browser testing" [ref=e1467] [cursor=pointer]:
+                - /url: /wiki/Cross-browser_testing
+              - text: – Checking web applications in various browsers
+            - listitem [ref=e1468]:
+              - link "Database testing" [ref=e1469] [cursor=pointer]:
+                - /url: /wiki/Database_testing
+              - text: – testing of databases
+            - listitem [ref=e1470]:
+              - link "Domain testing" [ref=e1471] [cursor=pointer]:
+                - /url: /wiki/Domain_testing
+            - listitem [ref=e1472]:
+              - link "Dynamic program analysis" [ref=e1473] [cursor=pointer]:
+                - /url: /wiki/Dynamic_program_analysis
+              - text: – Analysis of software performed when running a program
+            - listitem [ref=e1474]:
+              - link "Formal verification" [ref=e1475] [cursor=pointer]:
+                - /url: /wiki/Formal_verification
+              - text: – Proving or disproving the correctness of certain intended algorithms
+            - listitem [ref=e1476]:
+              - link "Graphical user interface testing" [ref=e1477] [cursor=pointer]:
+                - /url: /wiki/Graphical_user_interface_testing
+            - listitem [ref=e1478]:
+              - link "Independent test organization" [ref=e1479] [cursor=pointer]:
+                - /url: /wiki/Independent_test_organization
+              - text: – Organization that tests according to agreed requirements
+            - listitem [ref=e1480]:
+              - link "Manual testing" [ref=e1481] [cursor=pointer]:
+                - /url: /wiki/Manual_testing
+              - text: – Testing software without automation
+            - listitem [ref=e1482]:
+              - link "Orthogonal array testing" [ref=e1483] [cursor=pointer]:
+                - /url: /wiki/Orthogonal_array_testing
+              - text: – Software testing technique
+            - listitem [ref=e1484]:
+              - link "Pair testing" [ref=e1485] [cursor=pointer]:
+                - /url: /wiki/Pair_testing
+              - text: – Software testing technique
+            - listitem [ref=e1486]:
+              - link "Reverse semantic traceability" [ref=e1487] [cursor=pointer]:
+                - /url: /wiki/Reverse_semantic_traceability
+              - text: – Quality control technique
+            - listitem [ref=e1488]:
+              - link "Software testing tactics" [ref=e1489] [cursor=pointer]:
+                - /url: /wiki/Software_testing_tactics
+            - listitem [ref=e1490]:
+              - link "Test management tool" [ref=e1491] [cursor=pointer]:
+                - /url: /wiki/Test_management_tool
+              - text: – Stores test steps, test planning and reporting
+            - listitem [ref=e1492]:
+              - link "Trace table" [ref=e1493] [cursor=pointer]:
+                - /url: /wiki/Trace_table
+              - text: – Software testing technique
+            - listitem [ref=e1494]:
+              - link "Web testing" [ref=e1495] [cursor=pointer]:
+                - /url: /wiki/Web_testing
+              - text: – Software testing that focuses on web applications
+            - listitem [ref=e1496]:
+              - link "SDET" [ref=e1497] [cursor=pointer]:
+                - /url: /wiki/SDET
+              - text: – Software Development Engineer in Test
+          - generic [ref=e1498]:
+            - heading "References" [level=2] [ref=e1499]
+            - generic [ref=e1500]:
+              - text: "["
+              - link "edit" [ref=e1501] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=68
+              - text: "]"
+          - list [ref=e1504]:
+            - listitem [ref=e1505]:
+              - link "Jump up" [ref=e1508] [cursor=pointer]:
+                - /url: "#cite_ref-Kaner_1_1-0"
+                - text: ^
+              - generic [ref=e1509]:
+                - generic [ref=e1510]:
+                  - link "Kaner, Cem" [ref=e1511] [cursor=pointer]:
+                    - /url: /wiki/Cem_Kaner
+                  - text: (November 17, 2006).
+                  - link "Exploratory Testing" [ref=e1512] [cursor=pointer]:
+                    - /url: https://kaner.com/pdfs/ETatQAI.pdf
+                  - text: (PDF). Quality Assurance Institute Worldwide Annual Software Testing Conference. Orlando, FL
+                  - generic [ref=e1513]: . Retrieved November 22, 2014
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=conference&rft.btitle=Exploratory+Testing&rft.place=Orlando%2C+FL&rft.date=2006-11-17&rft.aulast=Kaner&rft.aufirst=Cem&rft_id=https%3A%2F%2Fkaner.com%2Fpdfs%2FETatQAI.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1514]:
+              - generic [ref=e1515]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1516] [cursor=pointer]':
+                  - /url: "#cite_ref-pan_2-0"
+                  - generic [ref=e1517]: "Jump up to:"
+                  - superscript [ref=e1518]:
+                    - generic [ref=e1519]: a
+                - link "b" [ref=e1520] [cursor=pointer]:
+                  - /url: "#cite_ref-pan_2-1"
+                  - superscript [ref=e1521]:
+                    - generic [ref=e1522]: b
+              - generic [ref=e1523]:
+                - generic [ref=e1524]:
+                  - text: Pan, Jiantao (Spring 1999).
+                  - link "\"Software Testing\"" [ref=e1525] [cursor=pointer]:
+                    - /url: https://www.ece.cmu.edu/~koopman/des_s99/sw_testing/
+                  - text: (coursework). Carnegie Mellon University
+                  - generic [ref=e1526]: . Retrieved November 21, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Software+Testing&rft.pub=Carnegie+Mellon+University&rft.date=1999&rft.aulast=Pan&rft.aufirst=Jiantao&rft_id=https%3A%2F%2Fwww.ece.cmu.edu%2F~koopman%2Fdes_s99%2Fsw_testing%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1527]:
+              - generic [ref=e1528]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1529] [cursor=pointer]':
+                  - /url: "#cite_ref-Kaner2_3-0"
+                  - generic [ref=e1530]: "Jump up to:"
+                  - superscript [ref=e1531]:
+                    - generic [ref=e1532]: a
+                - link "b" [ref=e1533] [cursor=pointer]:
+                  - /url: "#cite_ref-Kaner2_3-1"
+                  - superscript [ref=e1534]:
+                    - generic [ref=e1535]: b
+                - link "c" [ref=e1536] [cursor=pointer]:
+                  - /url: "#cite_ref-Kaner2_3-2"
+                  - superscript [ref=e1537]:
+                    - generic [ref=e1538]: c
+                - link "d" [ref=e1539] [cursor=pointer]:
+                  - /url: "#cite_ref-Kaner2_3-3"
+                  - superscript [ref=e1540]:
+                    - generic [ref=e1541]: d
+              - generic [ref=e1542]:
+                - generic [ref=e1543]:
+                  - link "Kaner, Cem" [ref=e1544] [cursor=pointer]:
+                    - /url: /wiki/Cem_Kaner
+                  - text: "; Falk, Jack; Nguyen, Hung Quoc (1999). Testing Computer Software (2nd ed.). New York: John Wiley and Sons."
+                  - link "ISBN" [ref=e1545] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-471-35846-6" [ref=e1546] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-471-35846-6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Testing+Computer+Software&rft.place=New+York&rft.edition=2nd&rft.pub=John+Wiley+and+Sons&rft.date=1999&rft.isbn=978-0-471-35846-6&rft.aulast=Kaner&rft.aufirst=Cem&rft.au=Falk%2C+Jack&rft.au=Nguyen%2C+Hung+Quoc&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1547]:
+              - link "Jump up" [ref=e1550] [cursor=pointer]:
+                - /url: "#cite_ref-4"
+                - text: ^
+              - generic [ref=e1551]:
+                - generic [ref=e1552]:
+                  - text: Leitner, Andreas; Ciupa, Ilinca; Oriol, Manuel;
+                  - link "Meyer, Bertrand" [ref=e1553] [cursor=pointer]:
+                    - /url: /wiki/Bertrand_Meyer
+                  - text: ; Fiva, Arno (September 2007).
+                  - link "Contract Driven Development = Test Driven Development – Writing Test Cases" [ref=e1554] [cursor=pointer]:
+                    - /url: https://se.inf.ethz.ch/people/leitner/publications/cdd_leitner_esec_fse_2007.pdf
+                  - text: "(PDF). ESEC/FSE'07: European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering 2007. Dubrovnik, Croatia"
+                  - generic [ref=e1555]: . Retrieved December 8, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=conference&rft.btitle=Contract+Driven+Development+%3D+Test+Driven+Development+%E2%80%93+Writing+Test+Cases&rft.place=Dubrovnik%2C+Croatia&rft.date=2007-09&rft.aulast=Leitner&rft.aufirst=Andreas&rft.au=Ciupa%2C+Ilinca&rft.au=Oriol%2C+Manuel&rft.au=Meyer%2C+Bertrand&rft.au=Fiva%2C+Arno&rft_id=https%3A%2F%2Fse.inf.ethz.ch%2Fpeople%2Fleitner%2Fpublications%2Fcdd_leitner_esec_fse_2007.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1556]:
+              - generic [ref=e1557]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1558] [cursor=pointer]':
+                  - /url: "#cite_ref-kolawa_5-0"
+                  - generic [ref=e1559]: "Jump up to:"
+                  - superscript [ref=e1560]:
+                    - generic [ref=e1561]: a
+                - link "b" [ref=e1562] [cursor=pointer]:
+                  - /url: "#cite_ref-kolawa_5-1"
+                  - superscript [ref=e1563]:
+                    - generic [ref=e1564]: b
+              - generic [ref=e1565]:
+                - generic [ref=e1566]:
+                  - text: Kolawa, Adam; Huizinga, Dorota (2007).
+                  - 'link "Automated Defect Prevention: Best Practices in Software Management" [ref=e1567] [cursor=pointer]':
+                    - /url: http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470042125.html
+                  - text: . Wiley-IEEE Computer Society Press.
+                  - link "ISBN" [ref=e1568] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-470-04212-0" [ref=e1569] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-470-04212-0
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Automated+Defect+Prevention%3A+Best+Practices+in+Software+Management&rft.pub=Wiley-IEEE+Computer+Society+Press&rft.date=2007&rft.isbn=978-0-470-04212-0&rft.aulast=Kolawa&rft.aufirst=Adam&rft.au=Huizinga%2C+Dorota&rft_id=http%3A%2F%2Fwww.wiley.com%2FWileyCDA%2FWileyTitle%2FproductCd-0470042125.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1570]:
+              - link "Jump up" [ref=e1573] [cursor=pointer]:
+                - /url: "#cite_ref-6"
+                - text: ^
+              - generic [ref=e1574]:
+                - generic [ref=e1575]:
+                  - text: "Cohn, Mike (2009). Succeeding with Agile: Software Development Using Scrum. Addison-Wesley Professional."
+                  - link "ISBN" [ref=e1576] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0321579362" [ref=e1577] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0321579362
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Succeeding+with+Agile%3A+Software+Development+Using+Scrum&rft.pub=Addison-Wesley+Professional&rft.date=2009&rft.isbn=978-0321579362&rft.aulast=Cohn&rft.aufirst=Mike&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1578]:
+              - link "Jump up" [ref=e1581] [cursor=pointer]:
+                - /url: "#cite_ref-7"
+                - text: ^
+              - generic [ref=e1582]:
+                - generic [ref=e1583]:
+                  - text: "Molina, Alessandro (2021). Crafting Test-Driven Software with Python: Write test suites that scale with your applications' needs and complexity using Python and PyTest. Packt Publishing."
+                  - link "ISBN" [ref=e1584] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1838642655" [ref=e1585] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1838642655
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Crafting+Test-Driven+Software+with+Python%3A+Write+test+suites+that+scale+with+your+applications%27+needs+and+complexity+using+Python+and+PyTest&rft.pub=Packt+Publishing&rft.date=2021&rft.isbn=978-1838642655&rft.aulast=Molina&rft.aufirst=Alessandro&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1586]:
+              - link "Jump up" [ref=e1589] [cursor=pointer]:
+                - /url: "#cite_ref-8"
+                - text: ^
+              - generic [ref=e1590]:
+                - generic [ref=e1591]:
+                  - text: Fernandes da Costa, Lucas (2021). Testing JavaScript Applications. Manning.
+                  - link "ISBN" [ref=e1592] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1617297915" [ref=e1593] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1617297915
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Testing+JavaScript+Applications&rft.pub=Manning&rft.date=2021&rft.isbn=978-1617297915&rft.aulast=Fernandes+da+Costa&rft.aufirst=Lucas&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1594]:
+              - link "Jump up" [ref=e1597] [cursor=pointer]:
+                - /url: "#cite_ref-9"
+                - text: ^
+              - generic [ref=e1598]:
+                - generic [ref=e1599]:
+                  - link "\"The Economic Impacts of Inadequate Infrastructure for Software Testing\"" [ref=e1600] [cursor=pointer]:
+                    - /url: https://www.nist.gov/director/planning/upload/report02-3.pdf
+                  - text: (PDF).
+                  - link "National Institute of Standards and Technology" [ref=e1601] [cursor=pointer]:
+                    - /url: /wiki/National_Institute_of_Standards_and_Technology
+                  - text: . May 2002
+                  - generic [ref=e1602]: . Retrieved December 19, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=The+Economic+Impacts+of+Inadequate+Infrastructure+for+Software+Testing&rft.pub=National+Institute+of+Standards+and+Technology&rft.date=2002-05&rft_id=https%3A%2F%2Fwww.nist.gov%2Fdirector%2Fplanning%2Fupload%2Freport02-3.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1603]:
+              - link "Jump up" [ref=e1606] [cursor=pointer]:
+                - /url: "#cite_ref-Tholons_report_10-0"
+                - text: ^
+              - generic [ref=e1607]:
+                - generic [ref=e1608]:
+                  - text: Vashistha, Avinash; Khan, Imrana (October 2009).
+                  - 'link "\"Top 50 Emerging Global Outsourcing Cities: A Global Services-Tholons Study\"" [ref=e1609] [cursor=pointer]':
+                    - /url: https://www.yumpu.com/en/document/read/48694384/top-50-emerging-global-outsourcing-cities-tholons
+                  - generic [ref=e1610]: . Retrieved October 25, 2025
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Top+50+Emerging+Global+Outsourcing+Cities%3A+A+Global+Services-Tholons+Study&rft.date=2009-10&rft.aulast=Vashistha&rft.aufirst=Avinash&rft.au=Khan%2C+Imrana&rft_id=https%3A%2F%2Fwww.yumpu.com%2Fen%2Fdocument%2Fread%2F48694384%2Ftop-50-emerging-global-outsourcing-cities-tholons&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1611]:
+              - generic [ref=e1612]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1613] [cursor=pointer]':
+                  - /url: "#cite_ref-Myers_1979_11-0"
+                  - generic [ref=e1614]: "Jump up to:"
+                  - superscript [ref=e1615]:
+                    - generic [ref=e1616]: a
+                - link "b" [ref=e1617] [cursor=pointer]:
+                  - /url: "#cite_ref-Myers_1979_11-1"
+                  - superscript [ref=e1618]:
+                    - generic [ref=e1619]: b
+                - link "c" [ref=e1620] [cursor=pointer]:
+                  - /url: "#cite_ref-Myers_1979_11-2"
+                  - superscript [ref=e1621]:
+                    - generic [ref=e1622]: c
+              - generic [ref=e1623]:
+                - generic [ref=e1624]:
+                  - link "Myers, Glenford J." [ref=e1625] [cursor=pointer]:
+                    - /url: /wiki/Glenford_Myers
+                  - text: (1979).
+                  - link "The Art of Software Testing" [ref=e1626] [cursor=pointer]:
+                    - /url: https://archive.org/details/artofsoftwaretes00myer
+                  - text: . John Wiley and Sons.
+                  - link "ISBN" [ref=e1627] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-471-04328-7" [ref=e1628] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-471-04328-7
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Art+of+Software+Testing&rft.pub=John+Wiley+and+Sons&rft.date=1979&rft.isbn=978-0-471-04328-7&rft.aulast=Myers&rft.aufirst=Glenford+J.&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fartofsoftwaretes00myer&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1629]:
+              - generic [ref=e1630]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1631] [cursor=pointer]':
+                  - /url: "#cite_ref-IEEEglossary_12-0"
+                  - generic [ref=e1632]: "Jump up to:"
+                  - superscript [ref=e1633]:
+                    - generic [ref=e1634]: a
+                - link "b" [ref=e1635] [cursor=pointer]:
+                  - /url: "#cite_ref-IEEEglossary_12-1"
+                  - superscript [ref=e1636]:
+                    - generic [ref=e1637]: b
+                - link "c" [ref=e1638] [cursor=pointer]:
+                  - /url: "#cite_ref-IEEEglossary_12-2"
+                  - superscript [ref=e1639]:
+                    - generic [ref=e1640]: c
+              - generic [ref=e1641]:
+                - generic [ref=e1642]:
+                  - text: IEEE Standard Glossary of Software Engineering Terminology, IEEE, 1990,
+                  - link "doi" [ref=e1643] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1109/IEEESTD.1990.101064" [ref=e1644] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109%2FIEEESTD.1990.101064
+                  - text: ","
+                  - link "ISBN" [ref=e1645] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-55937-067-7" [ref=e1646] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-55937-067-7
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=IEEE+Standard+Glossary+of+Software+Engineering+Terminology&rft.pub=IEEE&rft.date=1990&rft_id=info%3Adoi%2F10.1109%2FIEEESTD.1990.101064&rft.isbn=978-1-55937-067-7&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1647]:
+              - link "Jump up" [ref=e1650] [cursor=pointer]:
+                - /url: "#cite_ref-13"
+                - text: ^
+              - generic [ref=e1651]:
+                - generic [ref=e1652]:
+                  - link "\"Certified Tester Foundation Level Syllabus\"" [ref=e1653] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20171028051659/http://www.istqb.org/downloads/send/2-foundation-level-documents/3-foundation-level-syllabus-2011.html
+                  - text: .
+                  - link "International Software Testing Qualifications Board" [ref=e1654] [cursor=pointer]:
+                    - /url: /wiki/International_Software_Testing_Qualifications_Board
+                  - text: . March 31, 2011. Section 1.1.2. Archived from
+                  - link "the original" [ref=e1655] [cursor=pointer]:
+                    - /url: https://www.istqb.org/downloads/send/2-foundation-level-documents/3-foundation-level-syllabus-2011.html
+                  - text: (pdf) on October 28, 2017
+                  - generic [ref=e1656]: . Retrieved December 15, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Certified+Tester+Foundation+Level+Syllabus&rft.pages=Section+1.1.2&rft.pub=International+Software+Testing+Qualifications+Board&rft.date=2011-03-31&rft_id=https%3A%2F%2Fwww.istqb.org%2Fdownloads%2Fsend%2F2-foundation-level-documents%2F3-foundation-level-syllabus-2011.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1657]:
+              - link "Jump up" [ref=e1660] [cursor=pointer]:
+                - /url: "#cite_ref-14"
+                - text: ^
+              - generic [ref=e1661]:
+                - generic [ref=e1662]:
+                  - link "\"Certified Tester Foundation Level Syllabus\"" [ref=e1663] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20171028051659/http://www.istqb.org/downloads/send/2-foundation-level-documents/3-foundation-level-syllabus-2011.html
+                  - text: .
+                  - link "International Software Testing Qualifications Board" [ref=e1664] [cursor=pointer]:
+                    - /url: /wiki/International_Software_Testing_Qualifications_Board
+                  - text: . March 31, 2011. Section 1.1.2. Archived from
+                  - link "the original" [ref=e1665] [cursor=pointer]:
+                    - /url: https://www.istqb.org/downloads/send/2-foundation-level-documents/3-foundation-level-syllabus-2011.html
+                  - text: (pdf) on October 28, 2017
+                  - generic [ref=e1666]: . Retrieved December 15, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Certified+Tester+Foundation+Level+Syllabus&rft.pages=Section+1.1.2&rft.pub=International+Software+Testing+Qualifications+Board&rft.date=2011-03-31&rft_id=https%3A%2F%2Fwww.istqb.org%2Fdownloads%2Fsend%2F2-foundation-level-documents%2F3-foundation-level-syllabus-2011.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1667]:
+              - link "Jump up" [ref=e1670] [cursor=pointer]:
+                - /url: "#cite_ref-15"
+                - text: ^
+              - generic [ref=e1671]:
+                - generic [ref=e1672]:
+                  - link "\"Certified Tester Foundation Level Syllabus\"" [ref=e1673] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20081217060536/http://www.bcs.org/upload/pdf/istqbsyll.pdf
+                  - text: (PDF).
+                  - link "International Software Testing Qualifications Board" [ref=e1674] [cursor=pointer]:
+                    - /url: /wiki/International_Software_Testing_Qualifications_Board
+                  - text: . July 1, 2005. Principle 2, Section 1.3. Archived from
+                  - link "the original" [ref=e1675] [cursor=pointer]:
+                    - /url: http://www.bcs.org/upload/pdf/istqbsyll.pdf
+                  - text: (PDF) on December 17, 2008
+                  - generic [ref=e1676]: . Retrieved December 15, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Certified+Tester+Foundation+Level+Syllabus&rft.pages=Principle+2%2C+Section+1.3&rft.pub=International+Software+Testing+Qualifications+Board&rft.date=2005-07-01&rft_id=http%3A%2F%2Fwww.bcs.org%2Fupload%2Fpdf%2Fistqbsyll.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1677]:
+              - link "Jump up" [ref=e1680] [cursor=pointer]:
+                - /url: "#cite_ref-16"
+                - text: ^
+              - generic [ref=e1681]:
+                - generic [ref=e1682]:
+                  - text: "Ramler, Rudolf; Kopetzky, Theodorich; Platz, Wolfgang (April 17, 2012). Combinatorial Test Design in the TOSCA Testsuite: Lessons Learned and Practical Implications. IEEE Fifth International Conference on Software Testing and Validation (ICST). Montreal, QC, Canada."
+                  - link "doi" [ref=e1683] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1109/ICST.2012.142" [ref=e1684] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109%2FICST.2012.142
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=conference&rft.btitle=Combinatorial+Test+Design+in+the+TOSCA+Testsuite%3A+Lessons+Learned+and+Practical+Implications&rft.place=Montreal%2C+QC%2C+Canada&rft.date=2012-04-17&rft_id=info%3Adoi%2F10.1109%2FICST.2012.142&rft.aulast=Ramler&rft.aufirst=Rudolf&rft.au=Kopetzky%2C+Theodorich&rft.au=Platz%2C+Wolfgang&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1685]:
+              - link "Jump up" [ref=e1688] [cursor=pointer]:
+                - /url: "#cite_ref-17"
+                - text: ^
+              - generic [ref=e1689]:
+                - generic [ref=e1690]:
+                  - text: Kaner, Cem; Bach, James; Pettichord, Bret (2001).
+                  - generic "Free access subject to limited trial, subscription normally required" [ref=e1691]:
+                    - 'link "Lessons Learned in Software Testing: A Context-Driven Approach" [ref=e1692] [cursor=pointer]':
+                      - /url: https://archive.org/details/lessonslearnedso00kane
+                  - text: . Wiley. pp.
+                  - link "31" [ref=e1693] [cursor=pointer]:
+                    - /url: https://archive.org/details/lessonslearnedso00kane/page/n55
+                  - text: –43.
+                  - link "ISBN" [ref=e1694] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-471-08112-8" [ref=e1695] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-471-08112-8
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Lessons+Learned+in+Software+Testing%3A+A+Context-Driven+Approach&rft.pages=31-43&rft.pub=Wiley&rft.date=2001&rft.isbn=978-0-471-08112-8&rft.aulast=Kaner&rft.aufirst=Cem&rft.au=Bach%2C+James&rft.au=Pettichord%2C+Bret&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Flessonslearnedso00kane&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1696]:
+              - link "Jump up" [ref=e1699] [cursor=pointer]:
+                - /url: "#cite_ref-18"
+                - text: ^
+              - generic [ref=e1700]:
+                - generic [ref=e1701]:
+                  - text: "Kolawa, Adam; Huizinga, Dorota (2007). Automated Defect Prevention: Best Practices in Software Management. Wiley-IEEE Computer Society Press. p. 74."
+                  - link "ISBN" [ref=e1702] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-470-04212-0" [ref=e1703] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-470-04212-0
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Automated+Defect+Prevention%3A+Best+Practices+in+Software+Management&rft.pages=74&rft.pub=Wiley-IEEE+Computer+Society+Press&rft.date=2007&rft.isbn=978-0-470-04212-0&rft.aulast=Kolawa&rft.aufirst=Adam&rft.au=Huizinga%2C+Dorota&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1704]:
+              - link "Jump up" [ref=e1707] [cursor=pointer]:
+                - /url: "#cite_ref-19"
+                - text: ^
+              - generic [ref=e1708]:
+                - generic [ref=e1709]:
+                  - text: O’Connor, Rory V.; Akkaya, Mariye Umay; Kemaneci, Kerem; Yilmaz, Murat; Poth, Alexander; Messnarz, Richard (October 15, 2015).
+                  - 'link "Systems, Software and Services Process Improvement: 22nd European Conference, EuroSPI 2015, Ankara, Turkey, September 30 -- October 2, 2015. Proceedings" [ref=e1710] [cursor=pointer]':
+                    - /url: https://books.google.com/books?id=2xOcCgAAQBAJ&q=Systems%2C+Software+and+Services+Process+Improvement%3A+27th+European+Conference&pg=PA71
+                  - text: . Springer.
+                  - link "ISBN" [ref=e1711] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-3-319-24647-5" [ref=e1712] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-3-319-24647-5
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Systems%2C+Software+and+Services+Process+Improvement%3A+22nd+European+Conference%2C+EuroSPI+2015%2C+Ankara%2C+Turkey%2C+September+30+--+October+2%2C+2015.+Proceedings&rft.pub=Springer&rft.date=2015-10-15&rft.isbn=978-3-319-24647-5&rft.aulast=O%E2%80%99Connor&rft.aufirst=Rory+V.&rft.au=Akkaya%2C+Mariye+Umay&rft.au=Kemaneci%2C+Kerem&rft.au=Yilmaz%2C+Murat&rft.au=Poth%2C+Alexander&rft.au=Messnarz%2C+Richard&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D2xOcCgAAQBAJ%26q%3DSystems%252C%2BSoftware%2Band%2BServices%2BProcess%2BImprovement%253A%2B27th%2BEuropean%2BConference%26pg%3DPA71&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1713]:
+              - link "Jump up" [ref=e1716] [cursor=pointer]:
+                - /url: "#cite_ref-Computer.org_20-0"
+                - text: ^
+              - generic [ref=e1717]:
+                - generic [ref=e1718]:
+                  - text: Bourque, Pierre; Fairley, Richard E., eds. (2014).
+                  - link "\"Chapter 5\"" [ref=e1719] [cursor=pointer]:
+                    - /url: https://www.computer.org/web/swebok/v3
+                  - text: . Guide to the Software Engineering Body of Knowledge. 3.0. IEEE Computer Society.
+                  - link "ISBN" [ref=e1720] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-7695-5166-1" [ref=e1721] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-7695-5166-1
+                  - generic [ref=e1722]: . Retrieved January 2, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Chapter+5&rft.btitle=Guide+to+the+Software+Engineering+Body+of+Knowledge&rft.series=3.0&rft.pub=IEEE+Computer+Society&rft.date=2014&rft.isbn=978-0-7695-5166-1&rft_id=https%3A%2F%2Fwww.computer.org%2Fweb%2Fswebok%2Fv3&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1723]:
+              - link "Jump up" [ref=e1726] [cursor=pointer]:
+                - /url: "#cite_ref-BourqueSWEBOK14-4_21-0"
+                - text: ^
+              - generic [ref=e1727]:
+                - generic [ref=e1728]:
+                  - text: Bourque, P.; Fairley, R.D., eds. (2014).
+                  - 'link "\"Chapter 4: Software Testing\"" [ref=e1729] [cursor=pointer]':
+                    - /url: https://web.archive.org/web/20180619003324/http://www4.ncsu.edu/~tjmenzie/cs510/pdf/SWEBOKv3.pdf
+                  - text: "(PDF). SWEBOK v3.0: Guide to the Software Engineering Body of Knowledge. IEEE. pp. 4–1–4–17."
+                  - link "ISBN" [ref=e1730] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-7695-5166-1" [ref=e1731] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-7695-5166-1
+                  - text: . Archived from
+                  - link "the original" [ref=e1732] [cursor=pointer]:
+                    - /url: http://www4.ncsu.edu/~tjmenzie/cs510/pdf/SWEBOKv3.pdf
+                  - text: (PDF) on June 19, 2018
+                  - generic [ref=e1733]: . Retrieved July 13, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Chapter+4%3A+Software+Testing&rft.btitle=SWEBOK+v3.0%3A+Guide+to+the+Software+Engineering+Body+of+Knowledge&rft.pages=4-1-4-17&rft.pub=IEEE&rft.date=2014&rft.isbn=978-0-7695-5166-1&rft_id=http%3A%2F%2Fwww4.ncsu.edu%2F~tjmenzie%2Fcs510%2Fpdf%2FSWEBOKv3.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1734]:
+              - link "Jump up" [ref=e1737] [cursor=pointer]:
+                - /url: "#cite_ref-DooleySoftware11_22-0"
+                - text: ^
+              - generic [ref=e1738]:
+                - generic [ref=e1739]:
+                  - text: Dooley, J. (2011).
+                  - link "Software Development and Professional Practice" [ref=e1740] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=iOqP9_6w-18C&pg=PA193
+                  - text: . APress. pp. 193–4.
+                  - link "ISBN" [ref=e1741] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-4302-3801-0" [ref=e1742] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-4302-3801-0
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Development+and+Professional+Practice&rft.pages=193-4&rft.pub=APress&rft.date=2011&rft.isbn=978-1-4302-3801-0&rft.au=Dooley%2C+J.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DiOqP9_6w-18C%26pg%3DPA193&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1743]:
+              - link "Jump up" [ref=e1746] [cursor=pointer]:
+                - /url: "#cite_ref-WiegersCreating13_23-0"
+                - text: ^
+              - generic [ref=e1747]:
+                - generic [ref=e1748]:
+                  - text: Wiegers, K. (2013).
+                  - link "Creating a Software Engineering Culture" [ref=e1749] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=uVsUAAAAQBAJ&pg=PA212
+                  - text: . Addison-Wesley. pp. 211–2.
+                  - link "ISBN" [ref=e1750] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-13-348929-3" [ref=e1751] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-13-348929-3
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Creating+a+Software+Engineering+Culture&rft.pages=211-2&rft.pub=Addison-Wesley&rft.date=2013&rft.isbn=978-0-13-348929-3&rft.au=Wiegers%2C+K.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DuVsUAAAAQBAJ%26pg%3DPA212&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1752]:
+              - link "Jump up" [ref=e1755] [cursor=pointer]:
+                - /url: "#cite_ref-Unit_testing_kolawa_24-0"
+                - text: ^
+              - generic [ref=e1756]:
+                - generic [ref=e1757]:
+                  - text: "Kolawa, Adam; Huizinga, Dorota (2007). Automated Defect Prevention: Best Practices in Software Management. Wiley-IEEE Computer Society Press. p. 75."
+                  - link "ISBN" [ref=e1758] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-470-04212-0" [ref=e1759] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-470-04212-0
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Automated+Defect+Prevention%3A+Best+Practices+in+Software+Management&rft.pages=75&rft.pub=Wiley-IEEE+Computer+Society+Press&rft.date=2007&rft.isbn=978-0-470-04212-0&rft.aulast=Kolawa&rft.aufirst=Adam&rft.au=Huizinga%2C+Dorota&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1760]:
+              - generic [ref=e1761]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1762] [cursor=pointer]':
+                  - /url: "#cite_ref-GrahamFoundations08_25-0"
+                  - generic [ref=e1763]: "Jump up to:"
+                  - superscript [ref=e1764]:
+                    - generic [ref=e1765]: a
+                - link "b" [ref=e1766] [cursor=pointer]:
+                  - /url: "#cite_ref-GrahamFoundations08_25-1"
+                  - superscript [ref=e1767]:
+                    - generic [ref=e1768]: b
+              - generic [ref=e1769]:
+                - generic [ref=e1770]:
+                  - text: Graham, D.; Van Veenendaal, E.; Evans, I. (2008).
+                  - link "Foundations of Software Testing" [ref=e1771] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=Ss62LSqCa1MC&pg=PA57
+                  - text: . Cengage Learning. pp. 57–58.
+                  - link "ISBN" [ref=e1772] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-84480-989-9" [ref=e1773] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-84480-989-9
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Foundations+of+Software+Testing&rft.pages=57-58&rft.pub=Cengage+Learning&rft.date=2008&rft.isbn=978-1-84480-989-9&rft.au=Graham%2C+D.&rft.au=Van+Veenendaal%2C+E.&rft.au=Evans%2C+I.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DSs62LSqCa1MC%26pg%3DPA57&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1774]:
+              - generic [ref=e1775]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1776] [cursor=pointer]':
+                  - /url: "#cite_ref-OberkampfVerif10_26-0"
+                  - generic [ref=e1777]: "Jump up to:"
+                  - superscript [ref=e1778]:
+                    - generic [ref=e1779]: a
+                - link "b" [ref=e1780] [cursor=pointer]:
+                  - /url: "#cite_ref-OberkampfVerif10_26-1"
+                  - superscript [ref=e1781]:
+                    - generic [ref=e1782]: b
+                - link "c" [ref=e1783] [cursor=pointer]:
+                  - /url: "#cite_ref-OberkampfVerif10_26-2"
+                  - superscript [ref=e1784]:
+                    - generic [ref=e1785]: c
+                - link "d" [ref=e1786] [cursor=pointer]:
+                  - /url: "#cite_ref-OberkampfVerif10_26-3"
+                  - superscript [ref=e1787]:
+                    - generic [ref=e1788]: d
+              - generic [ref=e1789]:
+                - generic [ref=e1790]:
+                  - text: Oberkampf, W.L.; Roy, C.J. (2010).
+                  - link "Verification and Validation in Scientific Computing" [ref=e1791] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=7d26zLEJ1FUC&pg=PA155
+                  - text: . Cambridge University Press. pp. 154–5.
+                  - link "ISBN" [ref=e1792] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-139-49176-1" [ref=e1793] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-139-49176-1
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Verification+and+Validation+in+Scientific+Computing&rft.pages=154-5&rft.pub=Cambridge+University+Press&rft.date=2010&rft.isbn=978-1-139-49176-1&rft.au=Oberkampf%2C+W.L.&rft.au=Roy%2C+C.J.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D7d26zLEJ1FUC%26pg%3DPA155&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1794]:
+              - link "Jump up" [ref=e1797] [cursor=pointer]:
+                - /url: "#cite_ref-27"
+                - text: ^
+              - generic [ref=e1798]:
+                - generic [ref=e1799]:
+                  - text: Lee, D.; Netravali, A.N.; Sabnani, K.K.; Sugla, B.; John, A. (1997). "Passive testing and applications to network management". Proceedings 1997 International Conference on Network Protocols. IEEE Comput. Soc. pp. 113–122.
+                  - link "doi" [ref=e1800] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1109/icnp.1997.643699" [ref=e1801] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109%2Ficnp.1997.643699
+                  - text: .
+                  - link "ISBN" [ref=e1802] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-8186-8061-8" [ref=e1803] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-8186-8061-8
+                  - text: .
+                  - link "S2CID" [ref=e1804] [cursor=pointer]:
+                    - /url: /wiki/S2CID_(identifier)
+                  - link "42596126" [ref=e1805] [cursor=pointer]:
+                    - /url: https://api.semanticscholar.org/CorpusID:42596126
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Passive+testing+and+applications+to+network+management&rft.btitle=Proceedings+1997+International+Conference+on+Network+Protocols&rft.pages=113-122&rft.pub=IEEE+Comput.+Soc&rft.date=1997&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A42596126%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1109%2Ficnp.1997.643699&rft.isbn=978-0-8186-8061-8&rft.aulast=Lee&rft.aufirst=D.&rft.au=Netravali%2C+A.N.&rft.au=Sabnani%2C+K.K.&rft.au=Sugla%2C+B.&rft.au=John%2C+A.&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1806]:
+              - link "Jump up" [ref=e1809] [cursor=pointer]:
+                - /url: "#cite_ref-28"
+                - text: ^
+              - generic [ref=e1810]:
+                - text: Cem Kaner, "
+                - link "A Tutorial in Exploratory Testing" [ref=e1811] [cursor=pointer]:
+                  - /url: http://www.kaner.com/pdfs/QAIExploring.pdf
+                - link "Archived" [ref=e1812] [cursor=pointer]:
+                  - /url: https://web.archive.org/web/20130612043734/http://www.kaner.com/pdfs/QAIExploring.pdf
+                - text: 2013-06-12 at the
+                - link "Wayback Machine" [ref=e1813] [cursor=pointer]:
+                  - /url: /wiki/Wayback_Machine
+                - text: "\", p.2"
+            - listitem [ref=e1814]:
+              - link "Jump up" [ref=e1817] [cursor=pointer]:
+                - /url: "#cite_ref-29"
+                - text: ^
+              - generic [ref=e1818]:
+                - text: Cem Kaner,
+                - generic [ref=e1819]:
+                  - link "A Tutorial in Exploratory Testing" [ref=e1820] [cursor=pointer]:
+                    - /url: http://www.kaner.com/pdfs/QAIExploring.pdf
+                  - link "Archived" [ref=e1821] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20130612043734/http://www.kaner.com/pdfs/QAIExploring.pdf
+                  - text: 2013-06-12 at the
+                  - link "Wayback Machine" [ref=e1822] [cursor=pointer]:
+                    - /url: /wiki/Wayback_Machine
+                - text: ", p. 36."
+            - listitem [ref=e1823]:
+              - link "Jump up" [ref=e1826] [cursor=pointer]:
+                - /url: "#cite_ref-30"
+                - text: ^
+              - generic [ref=e1827]:
+                - generic [ref=e1828]:
+                  - text: Lee, D.; Yannakakis, M. (1996).
+                  - generic "Paid subscription required" [ref=e1829]:
+                    - link "\"Principles and methods of testing finite state machines-a survey\"" [ref=e1830] [cursor=pointer]:
+                      - /url: https://doi.org/10.1109/5.533956
+                  - text: ". Proceedings of the IEEE. 84 (8): 1090–1123."
+                  - link "doi" [ref=e1831] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1109/5.533956" [ref=e1832] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109%2F5.533956
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Proceedings+of+the+IEEE&rft.atitle=Principles+and+methods+of+testing+finite+state+machines-a+survey&rft.volume=84&rft.issue=8&rft.pages=1090-1123&rft.date=1996&rft_id=info%3Adoi%2F10.1109%2F5.533956&rft.aulast=Lee&rft.aufirst=D.&rft.au=Yannakakis%2C+M.&rft_id=https%3A%2F%2Fdoi.org%2F10.1109%2F5.533956&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1833]:
+              - link "Jump up" [ref=e1836] [cursor=pointer]:
+                - /url: "#cite_ref-31"
+                - text: ^
+              - generic [ref=e1837]:
+                - generic [ref=e1838]:
+                  - text: Petrenko, A.; Yevtushenko, N. (2011).
+                  - link "\"Adaptive testing of deterministic implementations specified by nondeterministic FSMs\"" [ref=e1839] [cursor=pointer]:
+                    - /url: https://hal.inria.fr/hal-01583921
+                  - text: ". In Testing Software and Systems: 23rd IFIP WG 6.1 International Conference, ICTSS 2011, Paris, France, November 7-10. Lecture Notes in Computer Science. Vol. 7019. Springer Berlin Heidelberg. pp. 162–178."
+                  - link "doi" [ref=e1840] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1007/978-3-642-24580-0_12" [ref=e1841] [cursor=pointer]:
+                    - /url: https://doi.org/10.1007%2F978-3-642-24580-0_12
+                  - text: .
+                  - link "ISBN" [ref=e1842] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-3-642-24579-4" [ref=e1843] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-3-642-24579-4
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Adaptive+testing+of+deterministic+implementations+specified+by+nondeterministic+FSMs&rft.btitle=In+Testing+Software+and+Systems%3A+23rd+IFIP+WG+6.1+International+Conference%2C+ICTSS+2011%2C+Paris%2C+France%2C+November+7-10&rft.series=Lecture+Notes+in+Computer+Science&rft.pages=162-178&rft.pub=Springer+Berlin+Heidelberg&rft.date=2011&rft_id=info%3Adoi%2F10.1007%2F978-3-642-24580-0_12&rft.isbn=978-3-642-24579-4&rft.aulast=Petrenko&rft.aufirst=A.&rft.au=Yevtushenko%2C+N.&rft_id=https%3A%2F%2Fhal.inria.fr%2Fhal-01583921&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1844]:
+              - link "Jump up" [ref=e1847] [cursor=pointer]:
+                - /url: "#cite_ref-32"
+                - text: ^
+              - generic [ref=e1848]:
+                - generic [ref=e1849]:
+                  - text: Petrenko, A.; Yevtushenko, N. (2014). "Adaptive testing of nondeterministic systems with FSM".
+                  - link "In 2014 IEEE 15th International Symposium on High-Assurance Systems Engineering" [ref=e1850] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109/HASE.2014.39
+                  - text: . IEEE. pp. 224–228.
+                  - link "doi" [ref=e1851] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1109/HASE.2014.39" [ref=e1852] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109%2FHASE.2014.39
+                  - text: .
+                  - link "ISBN" [ref=e1853] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-4799-3466-9" [ref=e1854] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-4799-3466-9
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Adaptive+testing+of+nondeterministic+systems+with+FSM&rft.btitle=In+2014+IEEE+15th+International+Symposium+on+High-Assurance+Systems+Engineering&rft.pages=224-228&rft.pub=IEEE&rft.date=2014&rft_id=info%3Adoi%2F10.1109%2FHASE.2014.39&rft.isbn=978-1-4799-3466-9&rft.aulast=Petrenko&rft.aufirst=A.&rft.au=Yevtushenko%2C+N.&rft_id=https%3A%2F%2Fdoi.org%2F10.1109%2FHASE.2014.39&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1855]:
+              - generic [ref=e1856]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1857] [cursor=pointer]':
+                  - /url: "#cite_ref-LimayeSoftware09_33-0"
+                  - generic [ref=e1858]: "Jump up to:"
+                  - superscript [ref=e1859]:
+                    - generic [ref=e1860]: a
+                - link "b" [ref=e1861] [cursor=pointer]:
+                  - /url: "#cite_ref-LimayeSoftware09_33-1"
+                  - superscript [ref=e1862]:
+                    - generic [ref=e1863]: b
+                - link "c" [ref=e1864] [cursor=pointer]:
+                  - /url: "#cite_ref-LimayeSoftware09_33-2"
+                  - superscript [ref=e1865]:
+                    - generic [ref=e1866]: c
+                - link "d" [ref=e1867] [cursor=pointer]:
+                  - /url: "#cite_ref-LimayeSoftware09_33-3"
+                  - superscript [ref=e1868]:
+                    - generic [ref=e1869]: d
+              - generic [ref=e1870]:
+                - generic [ref=e1871]:
+                  - text: Limaye, M.G. (2009).
+                  - link "Software Testing" [ref=e1872] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=zUm8My7SiakC&pg=PA108
+                  - text: . Tata McGraw-Hill Education. pp. 108–11.
+                  - link "ISBN" [ref=e1873] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-07-013990-9" [ref=e1874] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-07-013990-9
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Testing&rft.pages=108-11&rft.pub=Tata+McGraw-Hill+Education&rft.date=2009&rft.isbn=978-0-07-013990-9&rft.au=Limaye%2C+M.G.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DzUm8My7SiakC%26pg%3DPA108&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1875]:
+              - generic [ref=e1876]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1877] [cursor=pointer]':
+                  - /url: "#cite_ref-SalehSoftware09_34-0"
+                  - generic [ref=e1878]: "Jump up to:"
+                  - superscript [ref=e1879]:
+                    - generic [ref=e1880]: a
+                - link "b" [ref=e1881] [cursor=pointer]:
+                  - /url: "#cite_ref-SalehSoftware09_34-1"
+                  - superscript [ref=e1882]:
+                    - generic [ref=e1883]: b
+                - link "c" [ref=e1884] [cursor=pointer]:
+                  - /url: "#cite_ref-SalehSoftware09_34-2"
+                  - superscript [ref=e1885]:
+                    - generic [ref=e1886]: c
+                - link "d" [ref=e1887] [cursor=pointer]:
+                  - /url: "#cite_ref-SalehSoftware09_34-3"
+                  - superscript [ref=e1888]:
+                    - generic [ref=e1889]: d
+              - generic [ref=e1890]:
+                - generic [ref=e1891]:
+                  - text: Saleh, K.A. (2009).
+                  - link "Software Engineering" [ref=e1892] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=N69KPjBEWygC&pg=PA224
+                  - text: . J. Ross Publishing. pp. 224–41.
+                  - link "ISBN" [ref=e1893] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-932159-94-3" [ref=e1894] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-932159-94-3
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Engineering&rft.pages=224-41&rft.pub=J.+Ross+Publishing&rft.date=2009&rft.isbn=978-1-932159-94-3&rft.au=Saleh%2C+K.A.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DN69KPjBEWygC%26pg%3DPA224&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1895]:
+              - generic [ref=e1896]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1897] [cursor=pointer]':
+                  - /url: "#cite_ref-AmmannIntro16_35-0"
+                  - generic [ref=e1898]: "Jump up to:"
+                  - superscript [ref=e1899]:
+                    - generic [ref=e1900]: a
+                - link "b" [ref=e1901] [cursor=pointer]:
+                  - /url: "#cite_ref-AmmannIntro16_35-1"
+                  - superscript [ref=e1902]:
+                    - generic [ref=e1903]: b
+                - link "c" [ref=e1904] [cursor=pointer]:
+                  - /url: "#cite_ref-AmmannIntro16_35-2"
+                  - superscript [ref=e1905]:
+                    - generic [ref=e1906]: c
+              - generic [ref=e1907]:
+                - generic [ref=e1908]:
+                  - text: Ammann, P.; Offutt, J. (2016).
+                  - link "Introduction to Software Testing" [ref=e1909] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=58LeDQAAQBAJ&pg=PA26
+                  - text: . Cambridge University Press. p. 26.
+                  - link "ISBN" [ref=e1910] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-316-77312-3" [ref=e1911] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-316-77312-3
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Introduction+to+Software+Testing&rft.pages=26&rft.pub=Cambridge+University+Press&rft.date=2016&rft.isbn=978-1-316-77312-3&rft.au=Ammann%2C+P.&rft.au=Offutt%2C+J.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3D58LeDQAAQBAJ%26pg%3DPA26&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1912]:
+              - link "Jump up" [ref=e1915] [cursor=pointer]:
+                - /url: "#cite_ref-EverettSoftware07_36-0"
+                - text: ^
+              - generic [ref=e1916]:
+                - generic [ref=e1917]:
+                  - text: "Everatt, G.D.; McLeod Jr., R. (2007). \"Chapter 7: Functional Testing\". Software Testing: Testing Across the Entire Software Development Life Cycle. John Wiley & Sons. pp. 99–121."
+                  - link "ISBN" [ref=e1918] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-470-14634-7" [ref=e1919] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-470-14634-7
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Chapter+7%3A+Functional+Testing&rft.btitle=Software+Testing%3A+Testing+Across+the+Entire+Software+Development+Life+Cycle&rft.pages=99-121&rft.pub=John+Wiley+%26+Sons&rft.date=2007&rft.isbn=978-0-470-14634-7&rft.au=Everatt%2C+G.D.&rft.au=McLeod+Jr.%2C+R.&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1920]:
+              - generic [ref=e1921]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1922] [cursor=pointer]':
+                  - /url: "#cite_ref-CornettCode96_37-0"
+                  - generic [ref=e1923]: "Jump up to:"
+                  - superscript [ref=e1924]:
+                    - generic [ref=e1925]: a
+                - link "b" [ref=e1926] [cursor=pointer]:
+                  - /url: "#cite_ref-CornettCode96_37-1"
+                  - superscript [ref=e1927]:
+                    - generic [ref=e1928]: b
+              - generic [ref=e1929]:
+                - generic [ref=e1930]:
+                  - text: Cornett, Steve (c. 1996).
+                  - link "\"Code Coverage Analysis\"" [ref=e1931] [cursor=pointer]:
+                    - /url: https://www.bullseye.com/coverage.html#intro
+                  - text: . Bullseye Testing Technology. Introduction
+                  - generic [ref=e1932]: . Retrieved November 21, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Code+Coverage+Analysis&rft.pages=Introduction&rft.pub=Bullseye+Testing+Technology&rft.aulast=Cornett&rft.aufirst=Steve&rft_id=https%3A%2F%2Fwww.bullseye.com%2Fcoverage.html%23intro&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1933]:
+              - generic [ref=e1934]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1935] [cursor=pointer]':
+                  - /url: "#cite_ref-BlackPragmatic11_38-0"
+                  - generic [ref=e1936]: "Jump up to:"
+                  - superscript [ref=e1937]:
+                    - generic [ref=e1938]: a
+                - link "b" [ref=e1939] [cursor=pointer]:
+                  - /url: "#cite_ref-BlackPragmatic11_38-1"
+                  - superscript [ref=e1940]:
+                    - generic [ref=e1941]: b
+              - generic [ref=e1942]:
+                - generic [ref=e1943]:
+                  - text: Black, R. (2011).
+                  - 'link "Pragmatic Software Testing: Becoming an Effective and Efficient Test Professional" [ref=e1944] [cursor=pointer]':
+                    - /url: https://books.google.com/books?id=n-bTHNW97kYC&pg=PA44
+                  - text: . John Wiley & Sons. pp. 44–6.
+                  - link "ISBN" [ref=e1945] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-118-07938-6" [ref=e1946] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-118-07938-6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Pragmatic+Software+Testing%3A+Becoming+an+Effective+and+Efficient+Test+Professional&rft.pages=44-6&rft.pub=John+Wiley+%26+Sons&rft.date=2011&rft.isbn=978-1-118-07938-6&rft.au=Black%2C+R.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3Dn-bTHNW97kYC%26pg%3DPA44&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1947]:
+              - link "Jump up" [ref=e1950] [cursor=pointer]:
+                - /url: "#cite_ref-39"
+                - text: ^
+              - generic [ref=e1951]:
+                - text: As a simple example, the
+                - link "C" [ref=e1952] [cursor=pointer]:
+                  - /url: /wiki/C_(programming_language)
+                - text: function
+                - code [ref=e1953]: "int f(int x){return x*x-6*x+8;}"
+                - text: consists of only one statement. All tests against a specification
+                - code [ref=e1954]: f(x)>=0
+                - text: will succeed, except if
+                - code [ref=e1955]: x=3
+                - text: happens to be chosen.
+            - listitem [ref=e1956]:
+              - link "Jump up" [ref=e1959] [cursor=pointer]:
+                - /url: "#cite_ref-Patton_40-0"
+                - text: ^
+              - generic [ref=e1960]:
+                - generic [ref=e1961]:
+                  - text: Patton, Ron (2005).
+                  - link "Software Testing" [ref=e1962] [cursor=pointer]:
+                    - /url: https://archive.org/details/softwaretesting0000patt
+                  - text: "(2nd ed.). Indianapolis: Sams Publishing."
+                  - link "ISBN" [ref=e1963] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-672-32798-8" [ref=e1964] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-672-32798-8
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Testing&rft.place=Indianapolis&rft.edition=2nd&rft.pub=Sams+Publishing&rft.date=2005&rft.isbn=978-0-672-32798-8&rft.aulast=Patton&rft.aufirst=Ron&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fsoftwaretesting0000patt&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1965]:
+              - link "Jump up" [ref=e1968] [cursor=pointer]:
+                - /url: "#cite_ref-41"
+                - text: ^
+              - generic [ref=e1969]:
+                - generic [ref=e1970]:
+                  - text: Laycock, Gilbert T. (1993).
+                  - link "The Theory and Practice of Specification Based Software Testing" [ref=e1971] [cursor=pointer]:
+                    - /url: https://www.cs.le.ac.uk/people/glaycock/thesis.pdf
+                  - text: (PDF) (dissertation thesis). Department of Computer Science,
+                  - link "University of Sheffield" [ref=e1972] [cursor=pointer]:
+                    - /url: /wiki/University_of_Sheffield
+                  - generic [ref=e1973]: . Retrieved January 2, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&rft.title=The+Theory+and+Practice+of+Specification+Based+Software+Testing&rft.degree=dissertation&rft.inst=Department+of+Computer+Science%2C+University+of+Sheffield&rft.date=1993&rft.aulast=Laycock&rft.aufirst=Gilbert+T.&rft_id=https%3A%2F%2Fwww.cs.le.ac.uk%2Fpeople%2Fglaycock%2Fthesis.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1974]:
+              - link "Jump up" [ref=e1977] [cursor=pointer]:
+                - /url: "#cite_ref-42"
+                - text: ^
+              - generic [ref=e1978]:
+                - generic [ref=e1979]:
+                  - link "Bach, James" [ref=e1980] [cursor=pointer]:
+                    - /url: /wiki/James_Bach
+                  - text: (June 1999).
+                  - link "\"Risk and Requirements-Based Testing\"" [ref=e1981] [cursor=pointer]:
+                    - /url: https://www.satisfice.com/articles/requirements_based_testing.pdf
+                  - text: "(PDF). Computer. 32 (6): 113–114"
+                  - generic [ref=e1982]: . Retrieved August 19, 2008
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Computer&rft.atitle=Risk+and+Requirements-Based+Testing&rft.volume=32&rft.issue=6&rft.pages=113-114&rft.date=1999-06&rft.aulast=Bach&rft.aufirst=James&rft_id=https%3A%2F%2Fwww.satisfice.com%2Farticles%2Frequirements_based_testing.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1983]:
+              - link "Jump up" [ref=e1986] [cursor=pointer]:
+                - /url: "#cite_ref-MathurFound11-63_43-0"
+                - text: ^
+              - generic [ref=e1987]:
+                - generic [ref=e1988]:
+                  - text: Mathur, A.P. (2011).
+                  - link "Foundations of Software Testing" [ref=e1989] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=hyaQobu44xUC&pg=PA18
+                  - text: . Pearson Education India. p. 63.
+                  - link "ISBN" [ref=e1990] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-81-317-5908-0" [ref=e1991] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-81-317-5908-0
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Foundations+of+Software+Testing&rft.pages=63&rft.pub=Pearson+Education+India&rft.date=2011&rft.isbn=978-81-317-5908-0&rft.au=Mathur%2C+A.P.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DhyaQobu44xUC%26pg%3DPA18&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e1992]:
+              - generic [ref=e1993]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e1994] [cursor=pointer]':
+                  - /url: "#cite_ref-Clapp_44-0"
+                  - generic [ref=e1995]: "Jump up to:"
+                  - superscript [ref=e1996]:
+                    - generic [ref=e1997]: a
+                - link "b" [ref=e1998] [cursor=pointer]:
+                  - /url: "#cite_ref-Clapp_44-1"
+                  - superscript [ref=e1999]:
+                    - generic [ref=e2000]: b
+              - generic [ref=e2001]:
+                - generic [ref=e2002]:
+                  - text: Clapp, Judith A. (1995).
+                  - link "Software Quality Control, Error Analysis, and Testing" [ref=e2003] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=wAq0rnyiGMEC&pg=PA313
+                  - text: . William Andrew. p. 313.
+                  - link "ISBN" [ref=e2004] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-8155-1363-6" [ref=e2005] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-8155-1363-6
+                  - generic [ref=e2006]: . Retrieved January 5, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Quality+Control%2C+Error+Analysis%2C+and+Testing&rft.pages=313&rft.pub=William+Andrew&rft.date=1995&rft.isbn=978-0-8155-1363-6&rft.aulast=Clapp&rft.aufirst=Judith+A.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DwAq0rnyiGMEC%26pg%3DPA313&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2007]:
+              - link "Jump up" [ref=e2010] [cursor=pointer]:
+                - /url: "#cite_ref-Mathur_45-0"
+                - text: ^
+              - generic [ref=e2011]:
+                - generic [ref=e2012]:
+                  - text: Mathur, Aditya P. (2007).
+                  - link "Foundations of Software Testing" [ref=e2013] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=yU-rTcurys8C&pg=PR38
+                  - text: . Pearson Education India. p. 18.
+                  - link "ISBN" [ref=e2014] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-81-317-1660-1" [ref=e2015] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-81-317-1660-1
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Foundations+of+Software+Testing&rft.pages=18&rft.pub=Pearson+Education+India&rft.date=2007&rft.isbn=978-81-317-1660-1&rft.aulast=Mathur&rft.aufirst=Aditya+P.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DyU-rTcurys8C%26pg%3DPR38&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2016]:
+              - link "Jump up" [ref=e2019] [cursor=pointer]:
+                - /url: "#cite_ref-46"
+                - text: ^
+              - generic [ref=e2020]:
+                - generic [ref=e2021]:
+                  - text: Lönnberg, Jan (October 7, 2003).
+                  - link "Visual testing of software" [ref=e2022] [cursor=pointer]:
+                    - /url: https://www.cs.hut.fi/~jlonnber/VisualTesting.pdf
+                  - text: (PDF) (MSc thesis). Helsinki University of Technology
+                  - generic [ref=e2023]: . Retrieved January 13, 2012
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adissertation&rft.title=Visual+testing+of+software&rft.degree=MSc&rft.inst=Helsinki+University+of+Technology&rft.date=2003-10-07&rft.aulast=L%C3%B6nnberg&rft.aufirst=Jan&rft_id=https%3A%2F%2Fwww.cs.hut.fi%2F~jlonnber%2FVisualTesting.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2024]:
+              - link "Jump up" [ref=e2027] [cursor=pointer]:
+                - /url: "#cite_ref-47"
+                - text: ^
+              - generic [ref=e2028]:
+                - generic [ref=e2029]:
+                  - text: Chima, Raspal.
+                  - link "\"Visual testing\"" [ref=e2030] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20120724162657/http://www.testmagazine.co.uk/2011/04/visual-testing/
+                  - text: . TEST Magazine. Archived from
+                  - link "the original" [ref=e2031] [cursor=pointer]:
+                    - /url: http://www.testmagazine.co.uk/2011/04/visual-testing
+                  - text: on July 24, 2012
+                  - generic [ref=e2032]: . Retrieved January 13, 2012
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=TEST+Magazine&rft.atitle=Visual+testing&rft.aulast=Chima&rft.aufirst=Raspal&rft_id=http%3A%2F%2Fwww.testmagazine.co.uk%2F2011%2F04%2Fvisual-testing&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2033]:
+              - generic [ref=e2034]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2035] [cursor=pointer]':
+                  - /url: "#cite_ref-LewisSoftware16_48-0"
+                  - generic [ref=e2036]: "Jump up to:"
+                  - superscript [ref=e2037]:
+                    - generic [ref=e2038]: a
+                - link "b" [ref=e2039] [cursor=pointer]:
+                  - /url: "#cite_ref-LewisSoftware16_48-1"
+                  - superscript [ref=e2040]:
+                    - generic [ref=e2041]: b
+                - link "c" [ref=e2042] [cursor=pointer]:
+                  - /url: "#cite_ref-LewisSoftware16_48-2"
+                  - superscript [ref=e2043]:
+                    - generic [ref=e2044]: c
+              - generic [ref=e2045]:
+                - generic [ref=e2046]:
+                  - text: Lewis, W.E. (2016).
+                  - link "Software Testing and Continuous Quality Improvement" [ref=e2047] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=fgaBDd0TfT8C&pg=PA68
+                  - text: (3rd ed.). CRC Press. pp. 68–73.
+                  - link "ISBN" [ref=e2048] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-4398-3436-7" [ref=e2049] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-4398-3436-7
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Testing+and+Continuous+Quality+Improvement&rft.pages=68-73&rft.edition=3rd&rft.pub=CRC+Press&rft.date=2016&rft.isbn=978-1-4398-3436-7&rft.au=Lewis%2C+W.E.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DfgaBDd0TfT8C%26pg%3DPA68&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2050]:
+              - generic [ref=e2051]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2052] [cursor=pointer]':
+                  - /url: "#cite_ref-RansomeCore13_49-0"
+                  - generic [ref=e2053]: "Jump up to:"
+                  - superscript [ref=e2054]:
+                    - generic [ref=e2055]: a
+                - link "b" [ref=e2056] [cursor=pointer]:
+                  - /url: "#cite_ref-RansomeCore13_49-1"
+                  - superscript [ref=e2057]:
+                    - generic [ref=e2058]: b
+              - generic [ref=e2059]:
+                - generic [ref=e2060]:
+                  - text: Ransome, J.; Misra, A. (2013).
+                  - 'link "Core Software Security: Security at the Source" [ref=e2061] [cursor=pointer]':
+                    - /url: https://books.google.com/books?id=MX5cAgAAQBAJ&pg=PA140
+                  - text: . CRC Press. pp. 140–3.
+                  - link "ISBN" [ref=e2062] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-4665-6095-6" [ref=e2063] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-4665-6095-6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Core+Software+Security%3A+Security+at+the+Source&rft.pages=140-3&rft.pub=CRC+Press&rft.date=2013&rft.isbn=978-1-4665-6095-6&rft.au=Ransome%2C+J.&rft.au=Misra%2C+A.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DMX5cAgAAQBAJ%26pg%3DPA140&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2064]:
+              - link "Jump up" [ref=e2067] [cursor=pointer]:
+                - /url: "#cite_ref-ref4_50-0"
+                - text: ^
+              - generic [ref=e2068]:
+                - generic [ref=e2069]:
+                  - link "\"SOA Testing Tools for Black, White and Gray Box\"" [ref=e2070] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20181001010542/http://www.crosschecknet.com:80/soa_testing_black_white_gray_box.php
+                  - text: (white paper). Crosscheck Networks. Archived from
+                  - link "the original" [ref=e2071] [cursor=pointer]:
+                    - /url: http://www.crosschecknet.com/soa_testing_black_white_gray_box.php
+                  - text: on October 1, 2018
+                  - generic [ref=e2072]: . Retrieved December 10, 2012
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=SOA+Testing+Tools+for+Black%2C+White+and+Gray+Box&rft.pub=Crosscheck+Networks&rft_id=http%3A%2F%2Fwww.crosschecknet.com%2Fsoa_testing_black_white_gray_box.php&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2073]:
+              - generic [ref=e2074]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2075] [cursor=pointer]':
+                  - /url: "#cite_ref-Installation_testing_Myers_2004_51-0"
+                  - generic [ref=e2076]: "Jump up to:"
+                  - superscript [ref=e2077]:
+                    - generic [ref=e2078]: a
+                - link "b" [ref=e2079] [cursor=pointer]:
+                  - /url: "#cite_ref-Installation_testing_Myers_2004_51-1"
+                  - superscript [ref=e2080]:
+                    - generic [ref=e2081]: b
+              - generic [ref=e2082]:
+                - generic [ref=e2083]:
+                  - text: Myers, G. (2004). Sandler, C; Badgett, T; Thomas, M. (eds.). The Art of Software Testing (2 ed.). Wiley.
+                  - link "ISBN" [ref=e2084] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "9780471469124" [ref=e2085] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/9780471469124
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=The+Art+of+Software+Testing&rft.edition=2&rft.pub=Wiley&rft.date=2004&rft.isbn=9780471469124&rft.au=Myers%2C+G.&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2086]:
+              - link "Jump up" [ref=e2089] [cursor=pointer]:
+                - /url: "#cite_ref-52"
+                - text: ^
+              - generic [ref=e2090]:
+                - generic [ref=e2091]:
+                  - text: Kaner, Cem; Falk, Jack; Nguyen, Hung Q. (1999). Testing Computer Software (2nd ed.). Wiley.
+                  - link "ISBN" [ref=e2092] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "0471358460" [ref=e2093] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/0471358460
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Testing+Computer+Software&rft.edition=2nd&rft.pub=Wiley&rft.date=1999&rft.isbn=0471358460&rft.aulast=Kaner&rft.aufirst=Cem&rft.au=Falk%2C+Jack&rft.au=Nguyen%2C+Hung+Q.&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2094]:
+              - link "Jump up" [ref=e2097] [cursor=pointer]:
+                - /url: "#cite_ref-53"
+                - text: ^
+              - generic [ref=e2098]:
+                - generic [ref=e2099]:
+                  - text: Ammann, Paul; Offutt, Jeff (January 28, 2008).
+                  - link "Introduction to Software Testing" [ref=e2100] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=leokXF8pLY0C&pg=PA215
+                  - text: .
+                  - link "Cambridge University Press" [ref=e2101] [cursor=pointer]:
+                    - /url: /wiki/Cambridge_University_Press
+                  - text: . p. 215.
+                  - link "ISBN" [ref=e2102] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-521-88038-1" [ref=e2103] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-521-88038-1
+                  - generic [ref=e2104]: . Retrieved November 29, 2017
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Introduction+to+Software+Testing&rft.pages=215&rft.pub=Cambridge+University+Press&rft.date=2008-01-28&rft.isbn=978-0-521-88038-1&rft.aulast=Ammann&rft.aufirst=Paul&rft.au=Offutt%2C+Jeff&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DleokXF8pLY0C%26pg%3DPA215&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2105]:
+              - generic [ref=e2106]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2107] [cursor=pointer]':
+                  - /url: "#cite_ref-LewisSoftware16-2_54-0"
+                  - generic [ref=e2108]: "Jump up to:"
+                  - superscript [ref=e2109]:
+                    - generic [ref=e2110]: a
+                - link "b" [ref=e2111] [cursor=pointer]:
+                  - /url: "#cite_ref-LewisSoftware16-2_54-1"
+                  - superscript [ref=e2112]:
+                    - generic [ref=e2113]: b
+                - link "c" [ref=e2114] [cursor=pointer]:
+                  - /url: "#cite_ref-LewisSoftware16-2_54-2"
+                  - superscript [ref=e2115]:
+                    - generic [ref=e2116]: c
+              - generic [ref=e2117]:
+                - generic [ref=e2118]:
+                  - text: Lewis, W.E. (2016).
+                  - link "Software Testing and Continuous Quality Improvement" [ref=e2119] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=fgaBDd0TfT8C&pg=PA92
+                  - text: (3rd ed.). CRC Press. pp. 92–6.
+                  - link "ISBN" [ref=e2120] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-4398-3436-7" [ref=e2121] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-4398-3436-7
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Testing+and+Continuous+Quality+Improvement&rft.pages=92-6&rft.edition=3rd&rft.pub=CRC+Press&rft.date=2016&rft.isbn=978-1-4398-3436-7&rft.au=Lewis%2C+W.E.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DfgaBDd0TfT8C%26pg%3DPA92&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2122]:
+              - link "Jump up" [ref=e2125] [cursor=pointer]:
+                - /url: "#cite_ref-BorbaTesting10_55-0"
+                - text: ^
+              - generic [ref=e2126]:
+                - generic [ref=e2127]:
+                  - text: Machado, P.; Vincenzi, A.; Maldonado, J.C. (2010).
+                  - 'link "\"Chapter 1: Software Testing: An Overview\"" [ref=e2128] [cursor=pointer]':
+                    - /url: https://books.google.com/books?id=ZOHrm02GFCEC&pg=PA13
+                  - text: . In Borba, P.; Cavalcanti, A.; Sampaio, A.; Woodcook, J. (eds.). Testing Techniques in Software Engineering. Springer Science & Business Media. pp. 13–14.
+                  - link "ISBN" [ref=e2129] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-3-642-14334-2" [ref=e2130] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-3-642-14334-2
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Chapter+1%3A+Software+Testing%3A+An+Overview&rft.btitle=Testing+Techniques+in+Software+Engineering&rft.pages=13-14&rft.pub=Springer+Science+%26+Business+Media&rft.date=2010&rft.isbn=978-3-642-14334-2&rft.au=Machado%2C+P.&rft.au=Vincenzi%2C+A.&rft.au=Maldonado%2C+J.C.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DZOHrm02GFCEC%26pg%3DPA13&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2131]:
+              - link "Jump up" [ref=e2134] [cursor=pointer]:
+                - /url: "#cite_ref-ClappSoftware95_56-0"
+                - text: ^
+              - generic [ref=e2135]:
+                - generic [ref=e2136]:
+                  - text: Clapp, J.A.; Stanten, S.F.; Peng, W.W.; et al. (1995).
+                  - link "Software Quality Control, Error Analysis, and Testing" [ref=e2137] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=wAq0rnyiGMEC&pg=PA254
+                  - text: . Nova Data Corporation. p. 254.
+                  - link "ISBN" [ref=e2138] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-8155-1363-6" [ref=e2139] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-8155-1363-6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+Quality+Control%2C+Error+Analysis%2C+and+Testing&rft.pages=254&rft.pub=Nova+Data+Corporation&rft.date=1995&rft.isbn=978-0-8155-1363-6&rft.au=Clapp%2C+J.A.&rft.au=Stanten%2C+S.F.&rft.au=Peng%2C+W.W.&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DwAq0rnyiGMEC%26pg%3DPA254&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2140]:
+              - generic [ref=e2141]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2142] [cursor=pointer]':
+                  - /url: "#cite_ref-:0_57-0"
+                  - generic [ref=e2143]: "Jump up to:"
+                  - superscript [ref=e2144]:
+                    - generic [ref=e2145]: a
+                - link "b" [ref=e2146] [cursor=pointer]:
+                  - /url: "#cite_ref-:0_57-1"
+                  - superscript [ref=e2147]:
+                    - generic [ref=e2148]: b
+                - link "c" [ref=e2149] [cursor=pointer]:
+                  - /url: "#cite_ref-:0_57-2"
+                  - superscript [ref=e2150]:
+                    - generic [ref=e2151]: c
+              - generic [ref=e2152]:
+                - generic [ref=e2153]:
+                  - link "\"ISTQB CTFL Syllabus 2018\"" [ref=e2154] [cursor=pointer]:
+                    - /url: https://istqb-main-web-prod.s3.amazonaws.com/media/documents/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf
+                  - text: (PDF). ISTQB - International Software Testing Qualifications Board.
+                  - link "Archived" [ref=e2155] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20220324091506/https://istqb-main-web-prod.s3.amazonaws.com/media/documents/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf
+                  - text: (PDF) from the original on March 24, 2022
+                  - generic [ref=e2156]: . Retrieved April 11, 2022
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=ISTQB+-+International+Software+Testing+Qualifications+Board&rft.atitle=ISTQB+CTFL+Syllabus+2018&rft_id=https%3A%2F%2Fistqb-main-web-prod.s3.amazonaws.com%2Fmedia%2Fdocuments%2FISTQB-CTFL_Syllabus_2018_v3.1.1.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2157]:
+              - link "Jump up" [ref=e2160] [cursor=pointer]:
+                - /url: "#cite_ref-58"
+                - text: ^
+              - generic [ref=e2161]:
+                - generic [ref=e2162]:
+                  - text: Woods, Anthony J. (June 5, 2015).
+                  - link "\"Operational Acceptance – an application of the ISO 29119 Software Testing standard\"" [ref=e2163] [cursor=pointer]:
+                    - /url: https://www.scribd.com/document/257086897/Operational-Acceptance-Test-White-Paper-2015-Capgemini
+                  - text: (Whitepaper). Capgemini Australia
+                  - generic [ref=e2164]: . Retrieved January 9, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Operational+Acceptance+%E2%80%93+an+application+of+the+ISO+29119+Software+Testing+standard&rft.pub=Capgemini+Australia&rft.date=2015-06-05&rft.aulast=Woods&rft.aufirst=Anthony+J.&rft_id=https%3A%2F%2Fwww.scribd.com%2Fdocument%2F257086897%2FOperational-Acceptance-Test-White-Paper-2015-Capgemini&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2165]:
+              - link "Jump up" [ref=e2168] [cursor=pointer]:
+                - /url: "#cite_ref-59"
+                - text: ^
+              - generic [ref=e2169]:
+                - generic [ref=e2170]:
+                  - link "\"Standard Glossary of Terms used in Software Testing\"" [ref=e2171] [cursor=pointer]:
+                    - /url: https://www.astqb.org/documents/Glossary-of-Software-Testing-Terms-v3.pdf
+                  - text: (PDF). Version 3.1. International Software Testing Qualifications Board
+                  - generic [ref=e2172]: . Retrieved January 9, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Standard+Glossary+of+Terms+used+in+Software+Testing&rft.series=Version+3.1&rft.pub=International+Software+Testing+Qualifications+Board&rft_id=https%3A%2F%2Fwww.astqb.org%2Fdocuments%2FGlossary-of-Software-Testing-Terms-v3.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2173]:
+              - link "Jump up" [ref=e2176] [cursor=pointer]:
+                - /url: "#cite_ref-60"
+                - text: ^
+              - generic [ref=e2177]:
+                - generic [ref=e2178]:
+                  - text: O'Reilly, Tim (September 30, 2005).
+                  - link "\"What is Web 2.0\"" [ref=e2179] [cursor=pointer]:
+                    - /url: https://www.oreilly.com/pub/a/web2/archive/what-is-web-20.html?page=4
+                  - text: . O'Reilly Media. Section 4. End of the Software Release Cycle
+                  - generic [ref=e2180]: . Retrieved January 11, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=What+is+Web+2.0&rft.pages=Section+4.+End+of+the+Software+Release+Cycle&rft.pub=O%27Reilly+Media&rft.date=2005-09-30&rft.aulast=O%27Reilly&rft.aufirst=Tim&rft_id=https%3A%2F%2Fwww.oreilly.com%2Fpub%2Fa%2Fweb2%2Farchive%2Fwhat-is-web-20.html%3Fpage%3D4&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2181]:
+              - link "Jump up" [ref=e2184] [cursor=pointer]:
+                - /url: "#cite_ref-essential_61-0"
+                - text: ^
+              - generic [ref=e2185]:
+                - generic [ref=e2186]:
+                  - text: Auerbach, Adam (August 3, 2015).
+                  - 'link "\"Part of the Pipeline: Why Continuous Testing Is Essential\"" [ref=e2187] [cursor=pointer]':
+                    - /url: https://www.techwell.com/techwell-insights/2015/08/part-pipeline-why-continuous-testing-essential
+                  - text: . TechWell Insights. TechWell Corp
+                  - generic [ref=e2188]: . Retrieved January 12, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=TechWell+Insights&rft.atitle=Part+of+the+Pipeline%3A+Why+Continuous+Testing+Is+Essential&rft.date=2015-08-03&rft.aulast=Auerbach&rft.aufirst=Adam&rft_id=https%3A%2F%2Fwww.techwell.com%2Ftechwell-insights%2F2015%2F08%2Fpart-pipeline-why-continuous-testing-essential&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2189]:
+              - link "Jump up" [ref=e2192] [cursor=pointer]:
+                - /url: "#cite_ref-stickym_62-0"
+                - text: ^
+              - generic [ref=e2193]:
+                - generic [ref=e2194]:
+                  - text: Philipp-Edmonds, Cameron (December 5, 2014).
+                  - 'link "\"The Relationship between Risk and Continuous Testing: An Interview with Wayne Ariola\"" [ref=e2195] [cursor=pointer]':
+                    - /url: http://www.stickyminds.com/interview/relationship-between-risk-and-continuous-testing-interview-wayne-ariola
+                  - text: . Stickyminds
+                  - generic [ref=e2196]: . Retrieved January 16, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Stickyminds&rft.atitle=The+Relationship+between+Risk+and+Continuous+Testing%3A+An+Interview+with+Wayne+Ariola&rft.date=2014-12-05&rft.aulast=Philipp-Edmonds&rft.aufirst=Cameron&rft_id=http%3A%2F%2Fwww.stickyminds.com%2Finterview%2Frelationship-between-risk-and-continuous-testing-interview-wayne-ariola&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2197]:
+              - link "Jump up" [ref=e2200] [cursor=pointer]:
+                - /url: "#cite_ref-pnsqc_63-0"
+                - text: ^
+              - generic [ref=e2201]:
+                - generic [ref=e2202]:
+                  - text: Ariola, Wayne; Dunlop, Cynthia (October 2015).
+                  - 'link "DevOps: Are You Pushing Bugs to Clients Faster?" [ref=e2203] [cursor=pointer]':
+                    - /url: https://web.archive.org/web/20250214134913/http://uploads.pnsqc.org/2015/papers/t-007_Ariola_paper.pdf
+                  - text: (PDF). Pacific Northwest Software Quality Conference. Archived from
+                  - link "the original" [ref=e2204] [cursor=pointer]:
+                    - /url: http://uploads.pnsqc.org/2015/papers/t-007_Ariola_paper.pdf
+                  - text: (PDF) on February 14, 2025
+                  - generic [ref=e2205]: . Retrieved January 16, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=conference&rft.btitle=DevOps%3A+Are+You+Pushing+Bugs+to+Clients+Faster%3F&rft.date=2015-10&rft.aulast=Ariola&rft.aufirst=Wayne&rft.au=Dunlop%2C+Cynthia&rft_id=http%3A%2F%2Fuploads.pnsqc.org%2F2015%2Fpapers%2Ft-007_Ariola_paper.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2206]:
+              - link "Jump up" [ref=e2209] [cursor=pointer]:
+                - /url: "#cite_ref-shift_64-0"
+                - text: ^
+              - generic [ref=e2210]:
+                - generic [ref=e2211]:
+                  - text: Auerbach, Adam (October 2, 2014).
+                  - link "\"Shift Left and Put Quality First\"" [ref=e2212] [cursor=pointer]:
+                    - /url: https://www.techwell.com/techwell-insights/2014/10/shift-left-and-put-quality-first
+                  - text: . TechWell Insights. TechWell Corp
+                  - generic [ref=e2213]: . Retrieved January 16, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=TechWell+Insights&rft.atitle=Shift+Left+and+Put+Quality+First&rft.date=2014-10-02&rft.aulast=Auerbach&rft.aufirst=Adam&rft_id=https%3A%2F%2Fwww.techwell.com%2Ftechwell-insights%2F2014%2F10%2Fshift-left-and-put-quality-first&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2214]:
+              - link "Jump up" [ref=e2217] [cursor=pointer]:
+                - /url: "#cite_ref-65"
+                - text: ^
+              - generic [ref=e2218]:
+                - generic [ref=e2219]:
+                  - text: "Miller, Barton P.; Fredriksen, Lars; So, Bryan (1990). \"An empirical study of the reliability of UNIX utilities\". Communications of the ACM. 33 (12): 32–44."
+                  - link "doi" [ref=e2220] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1145/96267.96279" [ref=e2221] [cursor=pointer]:
+                    - /url: https://doi.org/10.1145%2F96267.96279
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Communications+of+the+ACM&rft.atitle=An+empirical+study+of+the+reliability+of+UNIX+utilities&rft.volume=33&rft.issue=12&rft.pages=32-44&rft.date=1990&rft_id=info%3Adoi%2F10.1145%2F96267.96279&rft.aulast=Miller&rft.aufirst=Barton+P.&rft.au=Fredriksen%2C+Lars&rft.au=So%2C+Bryan&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2222]:
+              - link "Jump up" [ref=e2225] [cursor=pointer]:
+                - /url: "#cite_ref-66"
+                - text: ^
+              - generic [ref=e2226]:
+                - generic [ref=e2227]:
+                  - text: Taqi, Farwa; Batool, Syeda Hina; Arshad, Alia (May 23, 2024).
+                  - generic "Paid subscription required" [ref=e2228]:
+                    - link "\"Development and Validation of Cloud Applications Usability Development Scale\"" [ref=e2229] [cursor=pointer]:
+                      - /url: https://www.tandfonline.com/doi/full/10.1080/10447318.2024.2351715
+                  - text: ". International Journal of Human–Computer Interaction: 1–16."
+                  - link "doi" [ref=e2230] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1080/10447318.2024.2351715" [ref=e2231] [cursor=pointer]:
+                    - /url: https://doi.org/10.1080%2F10447318.2024.2351715
+                  - text: .
+                  - link "ISSN" [ref=e2232] [cursor=pointer]:
+                    - /url: /wiki/ISSN_(identifier)
+                  - link "1044-7318" [ref=e2233] [cursor=pointer]:
+                    - /url: https://search.worldcat.org/issn/1044-7318
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=International+Journal+of+Human%E2%80%93Computer+Interaction&rft.atitle=Development+and+Validation+of+Cloud+Applications+Usability+Development+Scale&rft.pages=1-16&rft.date=2024-05-23&rft_id=info%3Adoi%2F10.1080%2F10447318.2024.2351715&rft.issn=1044-7318&rft.aulast=Taqi&rft.aufirst=Farwa&rft.au=Batool%2C+Syeda+Hina&rft.au=Arshad%2C+Alia&rft_id=https%3A%2F%2Fwww.tandfonline.com%2Fdoi%2Ffull%2F10.1080%2F10447318.2024.2351715&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2234]:
+              - link "Jump up" [ref=e2237] [cursor=pointer]:
+                - /url: "#cite_ref-67"
+                - text: ^
+              - generic [ref=e2238]:
+                - generic [ref=e2239]:
+                  - text: "\"Section 4.38\"."
+                  - link "ISO/IEC/IEEE 29119-1:2013 – Software and Systems Engineering – Software Testing – Part 1 – Concepts and Definitions" [ref=e2240] [cursor=pointer]:
+                    - /url: https://www.iso.org/standard/45142.html
+                  - text: . International Organization for Standardization
+                  - generic [ref=e2241]: . Retrieved January 17, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Section+4.38&rft.btitle=ISO%2FIEC%2FIEEE+29119-1%3A2013+%E2%80%93+Software+and+Systems+Engineering+%E2%80%93+Software+Testing+%E2%80%93+Part+1+%E2%80%93+Concepts+and+Definitions&rft.pub=International+Organization+for+Standardization&rft_id=https%3A%2F%2Fwww.iso.org%2Fstandard%2F45142.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2242]:
+              - link "Jump up" [ref=e2245] [cursor=pointer]:
+                - /url: "#cite_ref-68"
+                - text: ^
+              - generic [ref=e2246]:
+                - generic [ref=e2247]:
+                  - 'link "\"Globalization Step-by-Step: The World-Ready Approach to Testing. Microsoft Developer Network\"" [ref=e2248] [cursor=pointer]':
+                    - /url: https://web.archive.org/web/20120623050851/https://msdn.microsoft.com/en-us/goglobal/bb688148
+                  - text: . Microsoft Developer Network. Archived from
+                  - link "the original" [ref=e2249] [cursor=pointer]:
+                    - /url: https://msdn.microsoft.com/en-us/goglobal/bb688148
+                  - text: on June 23, 2012
+                  - generic [ref=e2250]: . Retrieved January 13, 2012
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Globalization+Step-by-Step%3A+The+World-Ready+Approach+to+Testing.+Microsoft+Developer+Network&rft.pub=Microsoft+Developer+Network&rft_id=https%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Fgoglobal%2Fbb688148&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2251]:
+              - link "Jump up" [ref=e2254] [cursor=pointer]:
+                - /url: "#cite_ref-69"
+                - text: ^
+              - generic [ref=e2255]:
+                - generic [ref=e2256]:
+                  - text: Claessen, Koen; Hughes, John (2000).
+                  - link "\"QuickCheck\"" [ref=e2257] [cursor=pointer]:
+                    - /url: https://dl.acm.org/doi/abs/10.1145/351240.351266
+                  - text: . Proceedings of the fifth ACM SIGPLAN international conference on Functional programming. Icfp '00. pp. 268–279.
+                  - link "doi" [ref=e2258] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1145/351240.351266" [ref=e2259] [cursor=pointer]:
+                    - /url: https://doi.org/10.1145%2F351240.351266
+                  - text: .
+                  - link "ISBN" [ref=e2260] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-1-58113-202-1" [ref=e2261] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-1-58113-202-1
+                  - text: .
+                  - link "S2CID" [ref=e2262] [cursor=pointer]:
+                    - /url: /wiki/S2CID_(identifier)
+                  - link "5668071" [ref=e2263] [cursor=pointer]:
+                    - /url: https://api.semanticscholar.org/CorpusID:5668071
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=QuickCheck&rft.btitle=Proceedings+of+the+fifth+ACM+SIGPLAN+international+conference+on+Functional+programming&rft.series=Icfp+%2700&rft.pages=268-279&rft.date=2000&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A5668071%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1145%2F351240.351266&rft.isbn=978-1-58113-202-1&rft.aulast=Claessen&rft.aufirst=Koen&rft.au=Hughes%2C+John&rft_id=https%3A%2F%2Fdl.acm.org%2Fdoi%2Fabs%2F10.1145%2F351240.351266&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2264]:
+              - link "Jump up" [ref=e2267] [cursor=pointer]:
+                - /url: "#cite_ref-70"
+                - text: ^
+              - generic [ref=e2268]:
+                - generic [ref=e2269]:
+                  - link "\"What is Contract Testing and its Significance?\"" [ref=e2270] [cursor=pointer]:
+                    - /url: https://browserstack.wpengine.com/guide/contract-testing/
+                  - text: . BrowserStack
+                  - generic [ref=e2271]: . Retrieved November 15, 2025
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=BrowserStack&rft.atitle=What+is+Contract+Testing+and+its+Significance%3F&rft_id=https%3A%2F%2Fbrowserstack.wpengine.com%2Fguide%2Fcontract-testing%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2272]:
+              - link "Jump up" [ref=e2275] [cursor=pointer]:
+                - /url: "#cite_ref-71"
+                - text: ^
+              - generic [ref=e2276]:
+                - generic [ref=e2277]:
+                  - text: Fowler, Martin.
+                  - 'link "\"bliki: Contract Test\"" [ref=e2278] [cursor=pointer]':
+                    - /url: https://martinfowler.com/bliki/ContractTest.html
+                  - text: . martinfowler.com
+                  - generic [ref=e2279]: . Retrieved November 15, 2025
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=martinfowler.com&rft.atitle=bliki%3A+Contract+Test&rft.aulast=Fowler&rft.aufirst=Martin&rft_id=https%3A%2F%2Fmartinfowler.com%2Fbliki%2FContractTest.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2280]:
+              - link "Jump up" [ref=e2283] [cursor=pointer]:
+                - /url: "#cite_ref-72"
+                - text: ^
+              - generic [ref=e2284]:
+                - generic [ref=e2285]:
+                  - link "Gelperin, David" [ref=e2286] [cursor=pointer]:
+                    - /url: /wiki/Dave_Gelperin
+                  - text: ;
+                  - link "Hetzel, Bill" [ref=e2287] [cursor=pointer]:
+                    - /url: /wiki/William_C._Hetzel
+                  - text: (June 1, 1988).
+                  - link "\"The growth of software testing\"" [ref=e2288] [cursor=pointer]:
+                    - /url: https://doi.org/10.1145%2F62959.62965
+                  - text: ". Communications of the ACM. 31 (6): 687–695."
+                  - link "doi" [ref=e2289] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - generic "Freely accessible" [ref=e2290]:
+                    - link "10.1145/62959.62965" [ref=e2291] [cursor=pointer]:
+                      - /url: https://doi.org/10.1145%2F62959.62965
+                  - text: .
+                  - link "S2CID" [ref=e2292] [cursor=pointer]:
+                    - /url: /wiki/S2CID_(identifier)
+                  - link "14731341" [ref=e2293] [cursor=pointer]:
+                    - /url: https://api.semanticscholar.org/CorpusID:14731341
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Communications+of+the+ACM&rft.atitle=The+growth+of+software+testing&rft.volume=31&rft.issue=6&rft.pages=687-695&rft.date=1988-06-01&rft_id=info%3Adoi%2F10.1145%2F62959.62965&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A14731341%23id-name%3DS2CID&rft.aulast=Gelperin&rft.aufirst=David&rft.au=Hetzel%2C+Bill&rft_id=https%3A%2F%2Fdoi.org%2F10.1145%252F62959.62965&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2294]:
+              - link "Jump up" [ref=e2297] [cursor=pointer]:
+                - /url: "#cite_ref-73"
+                - text: ^
+              - generic [ref=e2298]:
+                - generic [ref=e2299]:
+                  - text: Gregory, Janet; Crispin, Lisa (2014). More Agile Testing. Addison-Wesley Professional. pp. 23–39.
+                  - link "ISBN" [ref=e2300] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-13-374956-4" [ref=e2301] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-13-374956-4
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=More+Agile+Testing&rft.pages=23-39&rft.pub=Addison-Wesley+Professional&rft.date=2014&rft.isbn=978-0-13-374956-4&rft.aulast=Gregory&rft.aufirst=Janet&rft.au=Crispin%2C+Lisa&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2302]:
+              - link "Jump up" [ref=e2305] [cursor=pointer]:
+                - /url: "#cite_ref-74"
+                - text: ^
+              - generic [ref=e2306]:
+                - generic [ref=e2307]:
+                  - link "\"Software Testing Lifecycle\"" [ref=e2308] [cursor=pointer]:
+                    - /url: http://www.etestinghub.com/testing_lifecycles.php#2
+                  - text: . etestinghub. Testing Phase in Software Testing
+                  - generic [ref=e2309]: . Retrieved January 13, 2012
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=etestinghub&rft.atitle=Software+Testing+Lifecycle&rft.pages=Testing+Phase+in+Software+Testing&rft_id=http%3A%2F%2Fwww.etestinghub.com%2Ftesting_lifecycles.php%232&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2310]:
+              - link "Jump up" [ref=e2313] [cursor=pointer]:
+                - /url: "#cite_ref-75"
+                - text: ^
+              - generic [ref=e2314]:
+                - generic [ref=e2315]:
+                  - text: Dustin, Elfriede (2002).
+                  - link "Effective Software Testing" [ref=e2316] [cursor=pointer]:
+                    - /url: https://books.google.com/books?id=K0qWBUOAf6IC&pg=PA3
+                  - text: . Addison-Wesley Professional. p. 3.
+                  - link "ISBN" [ref=e2317] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-201-79429-8" [ref=e2318] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-201-79429-8
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Effective+Software+Testing&rft.pages=3&rft.pub=Addison-Wesley+Professional&rft.date=2002&rft.isbn=978-0-201-79429-8&rft.aulast=Dustin&rft.aufirst=Elfriede&rft_id=https%3A%2F%2Fbooks.google.com%2Fbooks%3Fid%3DK0qWBUOAf6IC%26pg%3DPA3&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2319]:
+              - generic [ref=e2320]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2321] [cursor=pointer]':
+                  - /url: "#cite_ref-AgileAllianceTDD_76-0"
+                  - generic [ref=e2322]: "Jump up to:"
+                  - superscript [ref=e2323]:
+                    - generic [ref=e2324]: a
+                - link "b" [ref=e2325] [cursor=pointer]:
+                  - /url: "#cite_ref-AgileAllianceTDD_76-1"
+                  - superscript [ref=e2326]:
+                    - generic [ref=e2327]: b
+              - generic [ref=e2328]:
+                - generic [ref=e2329]:
+                  - link "\"What is Test Driven Development (TDD)?\"" [ref=e2330] [cursor=pointer]:
+                    - /url: https://www.agilealliance.org/glossary/tdd/
+                  - text: . Agile Alliance. December 5, 2015
+                  - generic [ref=e2331]: . Retrieved March 17, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Agile+Alliance&rft.atitle=What+is+Test+Driven+Development+%28TDD%29%3F&rft.date=2015-12-05&rft_id=https%3A%2F%2Fwww.agilealliance.org%2Fglossary%2Ftdd%2F&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2332]:
+              - link "Jump up" [ref=e2335] [cursor=pointer]:
+                - /url: "#cite_ref-77"
+                - text: ^
+              - generic [ref=e2336]:
+                - generic [ref=e2337]:
+                  - link "\"Test-Driven Development and Continuous Integration for Mobile Applications\"" [ref=e2338] [cursor=pointer]:
+                    - /url: https://msdn.microsoft.com/en-us/library/bb985498.aspx#_Continuous_Integration
+                  - text: . Microsoft Developer Network. January 14, 2009
+                  - generic [ref=e2339]: . Retrieved March 17, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=Microsoft+Developer+Network&rft.atitle=Test-Driven+Development+and+Continuous+Integration+for+Mobile+Applications&rft.date=2009-01-14&rft_id=https%3A%2F%2Fmsdn.microsoft.com%2Fen-us%2Flibrary%2Fbb985498.aspx%23_Continuous_Integration&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2340]:
+              - link "Jump up" [ref=e2343] [cursor=pointer]:
+                - /url: "#cite_ref-78"
+                - text: ^
+              - generic [ref=e2344]:
+                - generic [ref=e2345]:
+                  - text: Brown, Chris; Cobb, Gary; Culbertson, Robert (April 12, 2002).
+                  - link "Introduction to Rapid Software Testing" [ref=e2346] [cursor=pointer]:
+                    - /url: http://www.informit.com/articles/article.aspx?p=26320&seqNum=6
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Introduction+to+Rapid+Software+Testing&rft.date=2002-04-12&rft.aulast=Brown&rft.aufirst=Chris&rft.au=Cobb%2C+Gary&rft.au=Culbertson%2C+Robert&rft_id=http%3A%2F%2Fwww.informit.com%2Farticles%2Farticle.aspx%3Fp%3D26320%26seqNum%3D6&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2347]:
+              - link "Jump up" [ref=e2350] [cursor=pointer]:
+                - /url: "#cite_ref-tran_79-0"
+                - text: ^
+              - generic [ref=e2351]:
+                - generic [ref=e2352]:
+                  - text: Tran, Eushiuan (1999).
+                  - link "\"Verification/Validation/Certification\"" [ref=e2353] [cursor=pointer]:
+                    - /url: https://www.ece.cmu.edu/~koopman/des_s99/verification/index.html
+                  - text: (coursework). Carnegie Mellon University
+                  - generic [ref=e2354]: . Retrieved August 13, 2008
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=Verification%2FValidation%2FCertification&rft.pub=Carnegie+Mellon+University&rft.date=1999&rft.aulast=Tran&rft.aufirst=Eushiuan&rft_id=https%3A%2F%2Fwww.ece.cmu.edu%2F~koopman%2Fdes_s99%2Fverification%2Findex.html&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2355]:
+              - generic [ref=e2356]:
+                - text: ^
+                - 'link "Jump up to: a" [ref=e2357] [cursor=pointer]':
+                  - /url: "#cite_ref-Traceability_matrix_SST_80-0"
+                  - generic [ref=e2358]: "Jump up to:"
+                  - superscript [ref=e2359]:
+                    - generic [ref=e2360]: a
+                - link "b" [ref=e2361] [cursor=pointer]:
+                  - /url: "#cite_ref-Traceability_matrix_SST_80-1"
+                  - superscript [ref=e2362]:
+                    - generic [ref=e2363]: b
+              - generic [ref=e2364]:
+                - generic [ref=e2365]:
+                  - text: Gotel, Orlena;
+                  - link "Cleland-Huang, Jane" [ref=e2366] [cursor=pointer]:
+                    - /url: /wiki/Jane_Cleland-Huang
+                  - text: ; Hayes, Jane Huffman; Zisman, Andrea; Egyed, Alexander; Grünbacher, Paul; Dekhtyar, Alex; Antoniol, Giuliano; Maletic, Jonathan (January 1, 2012). Cleland-Huang, Jane; Gotel, Orlena; Zisman, Andrea (eds.). Software and Systems Traceability. Springer London.
+                  - link "doi" [ref=e2367] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1007/978-1-4471-2239-5_1" [ref=e2368] [cursor=pointer]:
+                    - /url: https://doi.org/10.1007%2F978-1-4471-2239-5_1
+                  - text: .
+                  - link "ISBN" [ref=e2369] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "9781447122388" [ref=e2370] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/9781447122388
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Software+and+Systems+Traceability&rft.pub=Springer+London&rft.date=2012-01-01&rft_id=info%3Adoi%2F10.1007%2F978-1-4471-2239-5_1&rft.isbn=9781447122388&rft.aulast=Gotel&rft.aufirst=Orlena&rft.au=Cleland-Huang%2C+Jane&rft.au=Hayes%2C+Jane+Huffman&rft.au=Zisman%2C+Andrea&rft.au=Egyed%2C+Alexander&rft.au=Gr%C3%BCnbacher%2C+Paul&rft.au=Dekhtyar%2C+Alex&rft.au=Antoniol%2C+Giuliano&rft.au=Maletic%2C+Jonathan&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2371]:
+              - link "Jump up" [ref=e2374] [cursor=pointer]:
+                - /url: "#cite_ref-81"
+                - text: ^
+              - generic [ref=e2375]:
+                - generic [ref=e2376]:
+                  - text: IEEE (1998).
+                  - link "IEEE standard for software test documentation" [ref=e2377] [cursor=pointer]:
+                    - /url: /wiki/IEEE_829
+                  - text: ". New York: IEEE."
+                  - link "ISBN" [ref=e2378] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-7381-1443-9" [ref=e2379] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-7381-1443-9
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=IEEE+standard+for+software+test+documentation&rft.place=New+York&rft.pub=IEEE&rft.date=1998&rft.isbn=978-0-7381-1443-9&rft.au=IEEE&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2380]:
+              - link "Jump up" [ref=e2383] [cursor=pointer]:
+                - /url: "#cite_ref-82"
+                - text: ^
+              - generic [ref=e2384]:
+                - generic [ref=e2385]:
+                  - text: Pinto, Leandro Sales; Sinha, Saurabh; Orso, Alessandro (November 11, 2012).
+                  - link "\"Understanding myths and realities of test-suite evolution\"" [ref=e2386] [cursor=pointer]:
+                    - /url: https://dl.acm.org/doi/abs/10.1145/2393596.2393634
+                  - text: . Proceedings of the ACM SIGSOFT 20th International Symposium on the Foundations of Software Engineering. Association for Computing Machinery. pp. 1–11.
+                  - link "doi" [ref=e2387] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1145/2393596.2393634" [ref=e2388] [cursor=pointer]:
+                    - /url: https://doi.org/10.1145%2F2393596.2393634
+                  - text: .
+                  - link "ISBN" [ref=e2389] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "9781450316149" [ref=e2390] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/9781450316149
+                  - text: .
+                  - link "S2CID" [ref=e2391] [cursor=pointer]:
+                    - /url: /wiki/S2CID_(identifier)
+                  - link "9072512" [ref=e2392] [cursor=pointer]:
+                    - /url: https://api.semanticscholar.org/CorpusID:9072512
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Understanding+myths+and+realities+of+test-suite+evolution&rft.btitle=Proceedings+of+the+ACM+SIGSOFT+20th+International+Symposium+on+the+Foundations+of+Software+Engineering&rft.pages=1-11&rft.pub=Association+for+Computing+Machinery&rft.date=2012-11-11&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A9072512%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1145%2F2393596.2393634&rft.isbn=9781450316149&rft.aulast=Pinto&rft.aufirst=Leandro+Sales&rft.au=Sinha%2C+Saurabh&rft.au=Orso%2C+Alessandro&rft_id=https%3A%2F%2Fdl.acm.org%2Fdoi%2Fabs%2F10.1145%2F2393596.2393634&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2393]:
+              - link "Jump up" [ref=e2396] [cursor=pointer]:
+                - /url: "#cite_ref-83"
+                - text: ^
+              - generic [ref=e2397]:
+                - generic [ref=e2398]:
+                  - text: Strom, David (July 1, 2009).
+                  - link "\"We're All Part of the Story\"" [ref=e2399] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20090831182649/http://stpcollaborative.com/knowledge/272-were-all-part-of-the-story
+                  - text: . Software Test & Performance Collaborative. Archived from
+                  - link "the original" [ref=e2400] [cursor=pointer]:
+                    - /url: http://stpcollaborative.com/knowledge/272-were-all-part-of-the-story
+                  - text: on August 31, 2009.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=We%27re+All+Part+of+the+Story&rft.pub=Software+Test+%26+Performance+Collaborative&rft.date=2009-07-01&rft.aulast=Strom&rft.aufirst=David&rft_id=http%3A%2F%2Fstpcollaborative.com%2Fknowledge%2F272-were-all-part-of-the-story&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2401]:
+              - link "Jump up" [ref=e2404] [cursor=pointer]:
+                - /url: "#cite_ref-84"
+                - text: ^
+              - generic [ref=e2405]:
+                - generic [ref=e2406]:
+                  - text: Griffiths, M. (2005). "Teaching agile project management to the PMI". Agile Development Conference (ADC'05). ieee.org. pp. 318–322.
+                  - link "doi" [ref=e2407] [cursor=pointer]:
+                    - /url: /wiki/Doi_(identifier)
+                  - text: ":"
+                  - link "10.1109/ADC.2005.45" [ref=e2408] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109%2FADC.2005.45
+                  - text: .
+                  - link "ISBN" [ref=e2409] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-7695-2487-0" [ref=e2410] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-7695-2487-0
+                  - text: .
+                  - link "S2CID" [ref=e2411] [cursor=pointer]:
+                    - /url: /wiki/S2CID_(identifier)
+                  - link "30322339" [ref=e2412] [cursor=pointer]:
+                    - /url: https://api.semanticscholar.org/CorpusID:30322339
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=Teaching+agile+project+management+to+the+PMI&rft.btitle=Agile+Development+Conference+%28ADC%2705%29&rft.pages=318-322&rft.pub=ieee.org&rft.date=2005&rft_id=https%3A%2F%2Fapi.semanticscholar.org%2FCorpusID%3A30322339%23id-name%3DS2CID&rft_id=info%3Adoi%2F10.1109%2FADC.2005.45&rft.isbn=978-0-7695-2487-0&rft.aulast=Griffiths&rft.aufirst=M.&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2413]:
+              - link "Jump up" [ref=e2416] [cursor=pointer]:
+                - /url: "#cite_ref-85"
+                - text: ^
+              - generic [ref=e2417]:
+                - generic [ref=e2418]:
+                  - text: Willison, John S. (April 2004).
+                  - link "\"Agile Software Development for an Agile Force\"" [ref=e2419] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20051029135922/http://www.stsc.hill.af.mil/crosstalk/2004/04/0404willison.html
+                  - text: . CrossTalk (April 2004). STSC. Archived from
+                  - link "the original" [ref=e2420] [cursor=pointer]:
+                    - /url: http://www.stsc.hill.af.mil/crosstalk/2004/04/0404willison.htm
+                  - text: on October 29, 2005.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=CrossTalk&rft.atitle=Agile+Software+Development+for+an+Agile+Force&rft.issue=April+2004&rft.date=2004-04&rft.au=Willison%2C+John+S.&rft_id=http%3A%2F%2Fwww.stsc.hill.af.mil%2Fcrosstalk%2F2004%2F04%2F0404willison.htm&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2421]:
+              - link "Jump up" [ref=e2424] [cursor=pointer]:
+                - /url: "#cite_ref-86"
+                - text: ^
+              - generic [ref=e2425]:
+                - text: "An example is Mark Fewster, Dorothy Graham: Software Test Automation. Addison Wesley, 1999,"
+                - link "ISBN" [ref=e2426] [cursor=pointer]:
+                  - /url: /wiki/ISBN_(identifier)
+                - link "978-0-201-33140-0" [ref=e2427] [cursor=pointer]:
+                  - /url: /wiki/Special:BookSources/978-0-201-33140-0
+                - text: .
+            - listitem [ref=e2428]:
+              - link "Jump up" [ref=e2431] [cursor=pointer]:
+                - /url: "#cite_ref-87"
+                - text: ^
+              - generic [ref=e2432]:
+                - generic [ref=e2433]:
+                  - link "\"stop29119\"" [ref=e2434] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20141002033046/http://commonsensetesting.org/stop29119
+                  - text: . commonsensetesting.org. Archived from
+                  - link "the original" [ref=e2435] [cursor=pointer]:
+                    - /url: http://commonsensetesting.org/stop29119
+                  - text: on October 2, 2014.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=commonsensetesting.org&rft.atitle=stop29119&rft_id=http%3A%2F%2Fcommonsensetesting.org%2Fstop29119&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2436]:
+              - link "Jump up" [ref=e2439] [cursor=pointer]:
+                - /url: "#cite_ref-88"
+                - text: ^
+              - generic [ref=e2440]:
+                - generic [ref=e2441]:
+                  - text: Paul Krill (August 22, 2014).
+                  - link "\"Software testers balk at ISO 29119 standards proposal\"" [ref=e2442] [cursor=pointer]:
+                    - /url: http://www.infoworld.com/t/application-development/software-testers-balk-iso-29119-standards-proposal-249031
+                  - text: . InfoWorld.
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=unknown&rft.jtitle=InfoWorld&rft.atitle=Software+testers+balk+at+ISO+29119+standards+proposal&rft.date=2014-08-22&rft.au=Paul+Krill&rft_id=http%3A%2F%2Fwww.infoworld.com%2Ft%2Fapplication-development%2Fsoftware-testers-balk-iso-29119-standards-proposal-249031&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2443]:
+              - link "Jump up" [ref=e2446] [cursor=pointer]:
+                - /url: "#cite_ref-89"
+                - text: ^
+              - generic [ref=e2447]:
+                - generic [ref=e2448]:
+                  - link "Kaner, Cem" [ref=e2449] [cursor=pointer]:
+                    - /url: /wiki/Cem_Kaner
+                  - text: (2001).
+                  - link "\"NSF grant proposal to 'lay a foundation for significant improvements in the quality of academic and commercial courses in software testing'\"" [ref=e2450] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20091127210430/http://www.testingeducation.org/general/nsf_grant.pdf
+                    - text: "\"NSF grant proposal to 'lay a foundation for significant improvements in the quality of academic and commercial courses in software testing'"
+                    - text: "\""
+                  - text: (PDF). Archived from
+                  - link "the original" [ref=e2452] [cursor=pointer]:
+                    - /url: http://www.testingeducation.org/general/nsf_grant.pdf
+                  - text: (PDF) on November 27, 2009
+                  - generic [ref=e2453]: . Retrieved October 13, 2006
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=unknown&rft.btitle=NSF+grant+proposal+to+%27lay+a+foundation+for+significant+improvements+in+the+quality+of+academic+and+commercial+courses+in+software+testing%27&rft.date=2001&rft.aulast=Kaner&rft.aufirst=Cem&rft_id=http%3A%2F%2Fwww.testingeducation.org%2Fgeneral%2Fnsf_grant.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2454]:
+              - link "Jump up" [ref=e2457] [cursor=pointer]:
+                - /url: "#cite_ref-90"
+                - text: ^
+              - generic [ref=e2458]:
+                - generic [ref=e2459]:
+                  - link "Kaner, Cem" [ref=e2460] [cursor=pointer]:
+                    - /url: /wiki/Cem_Kaner
+                  - text: (2003).
+                  - link "Measuring the Effectiveness of Software Testers" [ref=e2461] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20100326042728/http://www.testingeducation.org/a/mest.pdf
+                  - text: (PDF). STAR East. Archived from
+                  - link "the original" [ref=e2462] [cursor=pointer]:
+                    - /url: http://www.testingeducation.org/a/mest.pdf
+                  - text: (PDF) on March 26, 2010
+                  - generic [ref=e2463]: . Retrieved January 18, 2018
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=conference&rft.btitle=Measuring+the+Effectiveness+of+Software+Testers&rft.date=2003&rft.aulast=Kaner&rft.aufirst=Cem&rft_id=http%3A%2F%2Fwww.testingeducation.org%2Fa%2Fmest.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2464]:
+              - link "Jump up" [ref=e2467] [cursor=pointer]:
+                - /url: "#cite_ref-91"
+                - text: ^
+              - generic [ref=e2468]:
+                - generic [ref=e2469]:
+                  - text: McConnell, Steve (2004).
+                  - generic "Free registration required" [ref=e2470]:
+                    - link "Code Complete" [ref=e2471] [cursor=pointer]:
+                      - /url: https://archive.org/details/codecomplete0000mcco
+                  - text: (2nd ed.). Microsoft Press. p.
+                  - link "29" [ref=e2472] [cursor=pointer]:
+                    - /url: https://archive.org/details/codecomplete0000mcco/page/29
+                  - text: .
+                  - link "ISBN" [ref=e2473] [cursor=pointer]:
+                    - /url: /wiki/ISBN_(identifier)
+                  - link "978-0-7356-1967-8" [ref=e2474] [cursor=pointer]:
+                    - /url: /wiki/Special:BookSources/978-0-7356-1967-8
+                  - text: .
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=book&rft.btitle=Code+Complete&rft.pages=29&rft.edition=2nd&rft.pub=Microsoft+Press&rft.date=2004&rft.isbn=978-0-7356-1967-8&rft.aulast=McConnell&rft.aufirst=Steve&rft_id=https%3A%2F%2Farchive.org%2Fdetails%2Fcodecomplete0000mcco&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+            - listitem [ref=e2475]:
+              - link "Jump up" [ref=e2478] [cursor=pointer]:
+                - /url: "#cite_ref-Bossavit-Leprechauns_92-0"
+                - text: ^
+              - generic [ref=e2479]:
+                - generic [ref=e2480]: "Bossavit, Laurent (November 20, 2013). \"The cost of defects: an illustrated history\". The Leprechauns of Software Engineering: How folklore turns into fact and what to do about it. leanpub."
+                - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Abook&rft.genre=bookitem&rft.atitle=The+cost+of+defects%3A+an+illustrated+history&rft.btitle=The+Leprechauns+of+Software+Engineering%3A+How+folklore+turns+into+fact+and+what+to+do+about+it&rft.pub=leanpub&rft.date=2013-11-20&rft.aulast=Bossavit&rft.aufirst=Laurent&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+          - generic [ref=e2481]:
+            - heading "Further reading" [level=2] [ref=e2482]
+            - generic [ref=e2483]:
+              - text: "["
+              - link "edit" [ref=e2484] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=69
+              - text: "]"
+          - list [ref=e2485]:
+            - listitem [ref=e2486]:
+              - generic [ref=e2487]:
+                - text: Meyer, Bertrand (August 2008).
+                - link "\"Seven Principles of Software Testing\"" [ref=e2488] [cursor=pointer]:
+                  - /url: https://se.ethz.ch/~meyer/publications/testing/principles.pdf
+                - text: (PDF). Computer. Vol. 41, no. 8. pp. 99–101.
+                - link "doi" [ref=e2489] [cursor=pointer]:
+                  - /url: /wiki/Doi_(identifier)
+                - text: ":"
+                - link "10.1109/MC.2008.306" [ref=e2490] [cursor=pointer]:
+                  - /url: https://doi.org/10.1109%2FMC.2008.306
+                - generic [ref=e2491]: . Retrieved November 21, 2017
+                - text: .
+              - generic "ctx_ver=Z39.88-2004&rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Ajournal&rft.genre=article&rft.jtitle=Computer&rft.atitle=Seven+Principles+of+Software+Testing&rft.volume=41&rft.issue=8&rft.pages=99-101&rft.date=2008-08&rft_id=info%3Adoi%2F10.1109%2FMC.2008.306&rft.aulast=Meyer&rft.aufirst=Bertrand&rft_id=https%3A%2F%2Fse.ethz.ch%2F~meyer%2Fpublications%2Ftesting%2Fprinciples.pdf&rfr_id=info%3Asid%2Fen.wikipedia.org%3ASoftware+testing"
+          - generic [ref=e2492]:
+            - heading "External links" [level=2] [ref=e2493]
+            - generic [ref=e2494]:
+              - text: "["
+              - link "edit" [ref=e2495] [cursor=pointer]:
+                - /url: /w/index.php?title=Software_testing&action=edit&section=70
+              - text: "]"
+          - generic [ref=e2497]:
+            - link "Wikimedia Commons logo" [ref=e2500] [cursor=pointer]:
+              - /url: /wiki/File:Commons-logo.svg
+              - img "Wikimedia Commons logo" [ref=e2501]
+            - generic [ref=e2502]:
+              - text: Wikimedia Commons has media related to
+              - link "Software testing" [ref=e2504] [cursor=pointer]:
+                - /url: https://commons.wikimedia.org/wiki/Category:Software_testing
+              - text: .
+          - generic [ref=e2506]:
+            - link "Wikiversity logo" [ref=e2509] [cursor=pointer]:
+              - /url: /wiki/File:Wikiversity_logo_2017.svg
+              - img "Wikiversity logo" [ref=e2510]
+            - generic [ref=e2511]:
+              - text: At
+              - link "Wikiversity" [ref=e2512] [cursor=pointer]:
+                - /url: /wiki/Wikiversity
+              - text: ", you can learn more and teach others about Software testing at the"
+              - link "Department of Software testing" [ref=e2513] [cursor=pointer]:
+                - /url: https://en.wikiversity.org/wiki/Topic:Software_testing
+          - list [ref=e2514]:
+            - listitem [ref=e2515]:
+              - link "\"Software that makes Software better\" Economist.com" [ref=e2516] [cursor=pointer]:
+                - /url: https://www.economist.com/technology-quarterly/2008/03/08/software-that-makes-software-better
+            - listitem [ref=e2517]:
+              - 'link "Software Testing With Large Language Models: Survey, Landscape, and Vision" [ref=e2518] [cursor=pointer]':
+                - /url: //doi.org/10.1109/TSE.2024.3368208
+          - navigation "Computer science" [ref=e2519]:
+            - table [ref=e2520]:
+              - rowgroup [ref=e2521]:
+                - row "[show] v · t · e Computer science" [ref=e2522]:
+                  - columnheader "[show] v · t · e Computer science" [ref=e2523]:
+                    - button "[show]" [ref=e2524] [cursor=pointer]
+                    - list [ref=e2526]:
+                      - listitem [ref=e2527]:
+                        - link "v" [ref=e2528] [cursor=pointer]:
+                          - /url: /wiki/Template:Computer_science
+                        - text: ·
+                      - listitem [ref=e2529]:
+                        - link "t" [ref=e2530] [cursor=pointer]:
+                          - /url: /wiki/Template_talk:Computer_science
+                        - text: ·
+                      - listitem [ref=e2531]:
+                        - link "e" [ref=e2532] [cursor=pointer]:
+                          - /url: /wiki/Special:EditPage/Template:Computer_science
+                    - link "Computer science" [ref=e2534] [cursor=pointer]:
+                      - /url: /wiki/Computer_science
+                - row
+                - row: · · · · · · · · ·
+                - row: · · · · · · ·
+                - row: · · · · ·
+                - row: · · · ·
+                - row: · · · · · · · · ·
+                - row: · · · · · · · · ·
+                - row: () · · · · · ·
+                - row: · · · ·
+                - row: · · · · · · · ()
+                - row: · · · · · · · · · · · · ·
+                - row: · · · · · · · ·
+                - row: · ( · ) · · · · · ·
+                - row: · · · ·
+                - row: · · · · · · · · · · · ·
+                - row: · · · · ·
+                - row: · · · · · · · · · · · · · · · · · · ·
+                - row: · ·
+          - navigation "Software engineering" [ref=e2535]:
+            - table [ref=e2536]:
+              - rowgroup [ref=e2537]:
+                - row "[show] v · t · e Software engineering" [ref=e2538]:
+                  - columnheader "[show] v · t · e Software engineering" [ref=e2539]:
+                    - button "[show]" [ref=e2540] [cursor=pointer]
+                    - list [ref=e2542]:
+                      - listitem [ref=e2543]:
+                        - link "v" [ref=e2544] [cursor=pointer]:
+                          - /url: /wiki/Template:Software_engineering
+                        - text: ·
+                      - listitem [ref=e2545]:
+                        - link "t" [ref=e2546] [cursor=pointer]:
+                          - /url: /wiki/Template_talk:Software_engineering
+                        - text: ·
+                      - listitem [ref=e2547]:
+                        - link "e" [ref=e2548] [cursor=pointer]:
+                          - /url: /wiki/Special:EditPage/Template:Software_engineering
+                    - link "Software engineering" [ref=e2550] [cursor=pointer]:
+                      - /url: /wiki/Software_engineering
+                - row: · · · · · · · · · · · · ·
+                - row: · · ( · · · · ) · · · · · · · · · · · · · · · · ()
+                - row: · · · · ·
+                - row: · · · · · · · · · · · · · · · · · · · · · · · · · ·
+                - row: · · · · ·
+                - row: ·
+          - navigation "Software testing" [ref=e2551]:
+            - table [ref=e2552]:
+              - rowgroup [ref=e2553]:
+                - row "[show] v · t · e Software testing" [ref=e2554]:
+                  - columnheader "[show] v · t · e Software testing" [ref=e2555]:
+                    - button "[show]" [ref=e2556] [cursor=pointer]
+                    - list [ref=e2558]:
+                      - listitem [ref=e2559]:
+                        - link "v" [ref=e2560] [cursor=pointer]:
+                          - /url: /wiki/Template:Software_testing
+                        - text: ·
+                      - listitem [ref=e2561]:
+                        - link "t" [ref=e2562] [cursor=pointer]:
+                          - /url: /wiki/Template_talk:Software_testing
+                        - text: ·
+                      - listitem [ref=e2563]:
+                        - link "e" [ref=e2564] [cursor=pointer]:
+                          - /url: /wiki/Special:EditPage/Template:Software_testing
+                    - generic [ref=e2565]: Software testing
+                - row: · · · ·
+                - row: · · · · · · · · · · · · · · · · · · · · · ( · · · · ) · · ( · · )
+                - row: · · · · · · ·
+          - navigation "Navbox730" [ref=e2566]:
+            - table [ref=e2567]:
+              - rowgroup [ref=e2568]:
+                - 'row "Authority control databases: National Edit this at Wikidata Czech Republic · Latvia" [ref=e2569]':
+                  - 'rowheader "Authority control databases: National Edit this at Wikidata" [ref=e2570]':
+                    - link "Authority control databases" [ref=e2571] [cursor=pointer]:
+                      - /url: /wiki/Help:Authority_control
+                    - text: ": National"
+                    - link "Edit this at Wikidata" [ref=e2573] [cursor=pointer]:
+                      - /url: https://www.wikidata.org/wiki/Q188522#identifiers
+                      - img "Edit this at Wikidata" [ref=e2574]
+                  - cell "Czech Republic · Latvia" [ref=e2575]:
+                    - list [ref=e2577]:
+                      - listitem [ref=e2578]:
+                        - generic "testování softwaru" [ref=e2580]:
+                          - link "Czech Republic" [ref=e2581] [cursor=pointer]:
+                            - /url: https://aleph.nkp.cz/F/?func=find-c&local_base=aut&ccl_term=ica=ph173828&CON_LNG=ENG
+                        - text: ·
+                      - listitem [ref=e2582]:
+                        - link "Latvia" [ref=e2584] [cursor=pointer]:
+                          - /url: https://kopkatalogs.lv/F?func=direct&local_base=lnc10&doc_number=000199710&P_CON_LNG=ENG
+        - generic [ref=e2586]:
+          - link "Categories" [ref=e2587] [cursor=pointer]:
+            - /url: /wiki/Help:Category
+          - text: ":"
+          - list [ref=e2588]:
+            - listitem [ref=e2589]:
+              - link "Software testing" [ref=e2590] [cursor=pointer]:
+                - /url: /wiki/Category:Software_testing
+            - listitem [ref=e2591]:
+              - link "Software engineering terminology" [ref=e2592] [cursor=pointer]:
+                - /url: /wiki/Category:Software_engineering_terminology
+    - contentinfo [ref=e2594]:
+      - list [ref=e2595]:
+        - listitem [ref=e2596]: This page was last edited on 5 May 2026, at 22:15 (UTC).
+        - listitem [ref=e2597]:
+          - text: Text is available under the
+          - link "Creative Commons Attribution-ShareAlike 4.0 License" [ref=e2598] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License
+          - text: ; additional terms may apply. By using this site, you agree to the
+          - link "Terms of Use" [ref=e2599] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use
+          - text: and
+          - link "Privacy Policy" [ref=e2600] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+          - text: . Wikipedia® is a registered trademark of the
+          - link "Wikimedia Foundation, Inc." [ref=e2601] [cursor=pointer]:
+            - /url: https://wikimediafoundation.org/
+          - text: ", a non-profit organization."
+      - list:
+        - listitem [ref=e2602]:
+          - link "Privacy policy" [ref=e2603] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e2604]:
+          - link "About Wikipedia" [ref=e2605] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:About
+        - listitem [ref=e2606]:
+          - link "Disclaimers" [ref=e2607] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:General_disclaimer
+        - listitem [ref=e2608]:
+          - link "Contact Wikipedia" [ref=e2609] [cursor=pointer]:
+            - /url: //en.wikipedia.org/wiki/Wikipedia:Contact_us
+        - listitem [ref=e2610]:
+          - link "Legal & safety contacts" [ref=e2611] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+        - listitem [ref=e2612]:
+          - link "Code of Conduct" [ref=e2613] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e2614]:
+          - link "Developers" [ref=e2615] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e2616]:
+          - link "Statistics" [ref=e2617] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/en.wikipedia.org
+        - listitem [ref=e2618]:
+          - link "Cookie statement" [ref=e2619] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e2620]:
+          - link "Mobile view" [ref=e2621] [cursor=pointer]:
+            - /url: //en.wikipedia.org/w/index.php?title=Software_testing&mobileaction=toggle_view_mobile
+      - list [ref=e2622]:
+        - listitem [ref=e2623]:
+          - link "Wikimedia Foundation" [ref=e2624] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e2626]
+        - listitem [ref=e2627]:
+          - link "Powered by MediaWiki" [ref=e2628] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e2630]
+  - generic [ref=e2631]:
+    - list
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test } from 'donobu';
+  2  | import { z } from 'zod/v4';
+  3  | 
+  4  | test('Inspect Wiki article history', async ({ page }) => {
+> 5  |   await page.goto('https://en.wikipedia.org/wiki/Software_testing');
+     |   ^ Error: page.goto: Test timeout of 240000ms exceeded.
+  6  |   const oldestRevision = await page.ai(
+  7  |     'View the page history, sort by oldest, and find the earliest (oldest) revision shown in the list (the history page displays in "time, day month year format").',
+  8  |     {
+  9  |       schema: z.object({
+  10 |         day: z.number(),
+  11 |         month: z.number(),
+  12 |         year: z.number(),
+  13 |       }),
+  14 |     },
+  15 |   );
+  16 |   expect(oldestRevision.day).toEqual(5);
+  17 |   expect(oldestRevision.month).toEqual(12);
+  18 |   expect(oldestRevision.year).toEqual(2001);
+  19 | });
+  20 | 
+```
