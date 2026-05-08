@@ -32,13 +32,6 @@ jobs:
           DONOBU_REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: npx donobu test --auto-heal
 
-      - name: Append Markdown report to GitHub Actions summary
-        if: always()
-        run: |
-          if [ -f test-results/report.md ]; then
-            cat test-results/report.md >> $GITHUB_STEP_SUMMARY
-          fi
-
       - name: Save Test Reports as Artifacts
         uses: actions/upload-artifact@v6
         if: always()
