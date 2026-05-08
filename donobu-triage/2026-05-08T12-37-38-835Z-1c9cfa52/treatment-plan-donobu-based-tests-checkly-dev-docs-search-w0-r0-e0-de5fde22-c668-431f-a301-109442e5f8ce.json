@@ -1,0 +1,66 @@
+{
+  "generatedAtIso": "2026-05-08T12:39:33.352Z",
+  "plan": {
+    "failureSummary": "The test failed because of a strict URL assertion mismatch. The expected URL was 'https://www.checklyhq.com/docs/constructs/playwright-check/', but the actual URL reached was 'https://www.checklyhq.com/docs/constructs/playwright-check/#playwright-check-suite'.",
+    "failureReason": "ASSERTION_DRIFT",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Assertion failed after page.ai completed successfully",
+      "Deterministic URL check failed on fragment mismatch",
+      "Consistent failure streak of 3 runs",
+      "Baseline and failure screenshots show identical UI state at the end of the flow"
+    ],
+    "remediationSteps": [
+      {
+        "category": "REFINE_ASSERTIONS",
+        "summary": "Update URL assertion to handle fragments",
+        "details": "Update the assertion on line 13 of checkly.test.ts to either include the fragment '#playwright-check-suite' or use a more flexible matcher like '.toContain()' or a regular expression."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Review suite for strict URL assertions",
+        "details": "Review other URL assertions in the test suite for similar fragility regarding anchors/fragments."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The page.ai step successfully fulfilled the semantic intent of searching for 'Playwright check suite' and selecting the suggested match. The resulting navigation included a URL fragment (#playwright-check-suite) which the test's deterministic assertion did not expect. The current 3-run failure streak suggests a stable change in site behavior or search indexing.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 77491,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-05-08T12-37-38-835Z-1c9cfa52",
+    "runDirectory": "/tmp/donobu-auto-heal-uK42iW/triage/2026-05-08T12-37-38-835Z-1c9cfa52",
+    "evidencePath": "/tmp/donobu-auto-heal-uK42iW/triage/2026-05-08T12-37-38-835Z-1c9cfa52/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w0-r0-e0-de5fde22-c668-431f-a301-109442e5f8ce.json"
+  },
+  "originalPlaywrightArgs": [
+    "test",
+    "tests/checkly.test.ts",
+    "tests/unstable-survey.test.ts",
+    "--project=Donobu-based Tests",
+    "--grep",
+    "Checkly dev docs search|Fill out a survey",
+    "--output",
+    "/tmp/donobu-auto-heal-uK42iW/playwright-output"
+  ]
+}
