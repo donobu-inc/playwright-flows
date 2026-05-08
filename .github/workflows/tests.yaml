@@ -47,14 +47,18 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./test-results
 
-      # Create a self-healing PR only when this workflow was not triggered by a pull-request.
+      # Open a self-healing PR with whatever auto-heal changed. Donobu writes
+      # the PR body to test-results/auto-heal-pr-body.md when it heals tests;
+      # the hashFiles() guard skips PR creation when no body is present.
       - name: Create Pull Request for Test Fixes (if any)
-        if: ${{ github.event_name != 'pull_request' }}
+        if: ${{ github.event_name != 'pull_request' && hashFiles('test-results/auto-heal-pr-body.md') }}
         uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Fix failing Playwright tests'
-          title: '[Fixed] Playwright tests'
-          body: 'Fix failing Playwright tests'
+          commit-message: "Donobu auto-heal: fix failing tests"
+          title: "Donobu auto-heal: Test fixes for ${{ github.ref_name }}"
+          body-path: test-results/auto-heal-pr-body.md
           branch: fix-playwright-tests-for-${{ github.ref_name }}
           base: ${{ github.ref_name }}
+          labels: donobu, auto-heal
+          delete-branch: true
