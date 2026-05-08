@@ -1,0 +1,1972 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: wikipedia-assert.test.ts >> Inspect Wiki article history
+- Location: tests/wikipedia-assert.test.ts:4:5
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "Jump to content" [ref=e2] [cursor=pointer]:
+    - /url: "#bodyContent"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - navigation "Site" [ref=e6]:
+        - generic "Main menu" [ref=e7]:
+          - button "Main menu" [ref=e8] [cursor=pointer]
+          - generic [ref=e11]: Main menu
+      - link "Wikipedia The Free Encyclopedia" [ref=e12] [cursor=pointer]:
+        - /url: /wiki/Main_Page
+        - generic [ref=e13]:
+          - img "Wikipedia" [ref=e14]
+          - img "The Free Encyclopedia" [ref=e15]
+    - generic [ref=e16]:
+      - search [ref=e17]:
+        - generic [ref=e20]:
+          - searchbox "Search Wikipedia" [ref=e23]
+          - button "Search" [ref=e25]
+      - navigation "Personal tools" [ref=e26]:
+        - list [ref=e30]:
+          - listitem [ref=e31]:
+            - link "Donate" [ref=e32] [cursor=pointer]:
+              - /url: https://donate.wikimedia.org/?wmf_source=donate&wmf_medium=sidebar&wmf_campaign=en.wikipedia.org&uselang=en
+              - generic [ref=e34]: Donate
+          - listitem [ref=e35]:
+            - link "Create account" [ref=e36] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:CreateAccount&returnto=Software+testing&returntoquery=action%3Dhistory%26dir%3Dprev
+          - listitem [ref=e37]:
+            - link "Log in" [ref=e38] [cursor=pointer]:
+              - /url: /w/index.php?title=Special:UserLogin&returnto=Software+testing&returntoquery=action%3Dhistory%26dir%3Dprev
+  - generic [ref=e40]:
+    - main [ref=e44]:
+      - generic [ref=e45]:
+        - 'heading "Software testing: Revision history" [level=1] [ref=e46]':
+          - generic [ref=e47]: Software testing
+          - text: ": Revision history"
+        - link "Help" [ref=e50] [cursor=pointer]:
+          - /url: https://www.mediawiki.org/wiki/Special:MyLanguage/Help:History
+          - text: Help
+      - generic [ref=e53]:
+        - navigation "Namespaces" [ref=e55]:
+          - generic [ref=e56]:
+            - generic:
+              - list:
+                - listitem [ref=e57]:
+                  - link "Article" [ref=e58] [cursor=pointer]:
+                    - /url: /wiki/Software_testing
+                    - generic [ref=e59]: Article
+                - listitem [ref=e60]:
+                  - link "Talk" [ref=e61] [cursor=pointer]:
+                    - /url: /wiki/Talk:Software_testing
+                    - generic [ref=e62]: Talk
+        - generic [ref=e63]:
+          - navigation "Views" [ref=e64]:
+            - generic [ref=e65]:
+              - generic:
+                - list:
+                  - listitem [ref=e66]:
+                    - link "Read" [ref=e67] [cursor=pointer]:
+                      - /url: /wiki/Software_testing
+                      - generic [ref=e68]: Read
+                  - listitem [ref=e69]:
+                    - link "Edit" [ref=e70] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit
+                      - generic [ref=e71]: Edit
+                  - listitem [ref=e72]:
+                    - link "View history" [ref=e73] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=history
+                      - generic [ref=e74]: View history
+          - navigation "Page tools" [ref=e75]:
+            - generic [ref=e76]:
+              - button "Tools" [ref=e77] [cursor=pointer]
+              - generic [ref=e79] [cursor=pointer]: Tools
+      - navigation "Appearance" [ref=e82]:
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: Appearance
+            - button "hide" [ref=e87] [cursor=pointer]
+          - generic [ref=e88]:
+            - generic [ref=e89]: Text
+            - list [ref=e91]:
+              - listitem [ref=e92]:
+                - generic [ref=e93]:
+                  - generic [ref=e94]:
+                    - generic [ref=e95]:
+                      - radio "Small" [disabled] [ref=e96]
+                      - generic [ref=e99]: Small
+                    - generic [ref=e100]:
+                      - radio "Standard" [disabled] [ref=e101]
+                      - generic [ref=e104]: Standard
+                    - generic [ref=e105]:
+                      - radio "Large" [disabled] [ref=e106]
+                      - generic [ref=e109]: Large
+                  - paragraph [ref=e110]: This page always uses small font size
+          - generic [ref=e111]:
+            - generic [ref=e112]: Width
+            - list [ref=e114]:
+              - listitem [ref=e115]:
+                - generic [ref=e117]:
+                  - generic [ref=e118]:
+                    - radio "Standard" [checked] [ref=e119]
+                    - generic [ref=e122]: Standard
+                  - generic [ref=e123]:
+                    - radio "Wide" [ref=e124]
+                    - generic [ref=e127]: Wide
+          - generic [ref=e128]:
+            - generic [ref=e129]: Color
+            - list [ref=e131]:
+              - listitem [ref=e132]:
+                - generic [ref=e134]:
+                  - generic [ref=e135]:
+                    - radio "Automatic" [ref=e136]
+                    - generic [ref=e139]: Automatic
+                  - generic [ref=e140]:
+                    - radio "Light" [checked] [ref=e141]
+                    - generic [ref=e144]: Light
+                  - generic [ref=e145]:
+                    - radio "Dark" [ref=e146]
+                    - generic [ref=e149]: Dark
+      - 'generic "Software testing: Revision history" [ref=e150]':
+        - generic [ref=e153]:
+          - link "View logs for this page" [ref=e154] [cursor=pointer]:
+            - /url: /w/index.php?title=Special:Log&page=Software+testing
+          - text: (
+          - link "view filter log" [ref=e155] [cursor=pointer]:
+            - /url: /w/index.php?title=Special:AbuseLog&wpSearchTitle=Software+testing
+          - text: )
+        - generic [ref=e156]:
+          - group "Filter revisions show" [ref=e159]:
+            - button "Filter revisions show" [ref=e160] [cursor=pointer]:
+              - generic [ref=e161]: Filter revisions
+              - generic [ref=e162]: show
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - text: "External tools:"
+              - list [ref=e166]:
+                - listitem [ref=e167]:
+                  - link "Find addition/removal" [ref=e168] [cursor=pointer]:
+                    - /url: https://wikipedia.ramselehof.de/wikiblame.php?lang=en&article=Software_testing
+                  - superscript [ref=e169]:
+                    - text: (
+                    - link "Alternate" [ref=e170] [cursor=pointer]:
+                      - /url: https://xtools.wmcloud.org/blame/en.wikipedia.org?page=Software_testing
+                    - text: )
+                  - text: ·
+                - listitem [ref=e171]:
+                  - link "Find edits by user" [ref=e172] [cursor=pointer]:
+                    - /url: https://sigma.toolforge.org/usersearch.py?page=Software+testing&server=enwiki
+                  - superscript [ref=e173]:
+                    - text: (
+                    - link "Alternate" [ref=e174] [cursor=pointer]:
+                      - /url: https://xtools.wmcloud.org/topedits/en.wikipedia.org?namespace=0&page=Software_testing&focus=username
+                    - text: )
+                  - text: ·
+                - listitem [ref=e175]:
+                  - link "Page statistics" [ref=e176] [cursor=pointer]:
+                    - /url: https://xtools.wmcloud.org/articleinfo/en.wikipedia.org/Software_testing
+                  - text: ·
+                - listitem [ref=e177]:
+                  - link "Pageviews" [ref=e178] [cursor=pointer]:
+                    - /url: https://pageviews.wmcloud.org/?pages=Software_testing&project=en.wikipedia.org
+                  - text: ·
+                - listitem [ref=e179]:
+                  - link "Fix dead links" [ref=e180] [cursor=pointer]:
+                    - /url: https://iabot.wmcloud.org/index.php?page=runbotsingle&pagesearch=Software_testing&wiki=enwiki
+                  - text: ·
+                - listitem [ref=e181]:
+                  - link "Copyvio detector" [ref=e182] [cursor=pointer]:
+                    - /url: https://copyvios.toolforge.org/?lang=en&project=wikipedia&title=Software_testing
+            - separator [ref=e183]
+            - paragraph [ref=e184]:
+              - text: For any version listed below, click on its date to view it. For more help, see
+              - link "Help:Page history" [ref=e185] [cursor=pointer]:
+                - /url: /wiki/Help:Page_history
+              - text: and
+              - link "Help:Edit summary" [ref=e186] [cursor=pointer]:
+                - /url: /wiki/Help:Edit_summary
+              - text: . (cur) = difference from current version, (prev) = difference from preceding version,
+              - generic [ref=e187]:
+                - text: m =
+                - link "minor edit" [ref=e188] [cursor=pointer]:
+                  - /url: /wiki/Help:Minor_edit
+              - text: ","
+              - generic [ref=e189]:
+                - text: → =
+                - link "section edit" [ref=e190] [cursor=pointer]:
+                  - /url: /wiki/Help:Section#Section_editing
+              - text: ","
+              - generic [ref=e191]:
+                - text: ← =
+                - link "automatic edit summary" [ref=e192] [cursor=pointer]:
+                  - /url: /wiki/Help:Automatic_edit_summaries
+          - generic [ref=e193]:
+            - text: (
+            - link "newest" [ref=e194] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history
+            - text: "| oldest) View ("
+            - link "newer 50" [ref=e195] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&dir=prev&offset=20040416134446%7C3211748
+            - text: "| older 50) ("
+            - link "20" [ref=e196] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=20
+            - text: "| 50 |"
+            - link "100" [ref=e197] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=100
+            - text: "|"
+            - link "250" [ref=e198] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=250
+            - text: "|"
+            - link "500" [ref=e199] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=500
+            - text: )
+          - generic [ref=e200]:
+            - button "Compare selected revisions" [ref=e202]
+            - generic [ref=e203]:
+              - heading "16 April 2004" [level=4] [ref=e204]
+              - list [ref=e205]:
+                - listitem [ref=e206]:
+                  - generic [ref=e207]:
+                    - text: (
+                    - link "cur" [ref=e209] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=3211748
+                    - generic [ref=e210]:
+                      - text: "|"
+                      - link "prev" [ref=e211] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=3211748
+                    - text: )
+                  - radio [checked] [ref=e212]
+                  - link "13:44, 16 April 2004" [ref=e215] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=3211748
+                  - generic [ref=e216]:
+                    - link "MrJones" [ref=e217] [cursor=pointer]:
+                      - /url: /wiki/User:MrJones
+                    - generic [ref=e218]:
+                      - text: (
+                      - link "talk" [ref=e220] [cursor=pointer]:
+                        - /url: /wiki/User_talk:MrJones
+                      - generic [ref=e221]:
+                        - text: "|"
+                        - link "contribs" [ref=e222] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/MrJones
+                      - text: )
+                  - text: m
+                  - generic [ref=e223]: . .
+                  - text: (5,919 bytes) (−1)
+                  - generic [ref=e224]: . .
+                  - text: (=Alpha testing= Paras.)
+                  - generic [ref=e225]:
+                    - text: (
+                    - link "undo" [ref=e228] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=3211741&undo=3211748
+                    - text: )
+              - heading "31 March 2004" [level=4] [ref=e229]
+              - list [ref=e230]:
+                - listitem [ref=e231]:
+                  - generic [ref=e232]:
+                    - text: (
+                    - link "cur" [ref=e234] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=3211741
+                    - generic [ref=e235]:
+                      - text: "|"
+                      - link "prev" [ref=e236] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=3211741
+                    - text: )
+                  - radio [checked] [ref=e237]
+                  - link "09:01, 31 March 2004" [ref=e240] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=3211741
+                  - generic [ref=e241]:
+                    - link "64.217.81.37" [ref=e242] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/64.217.81.37
+                    - generic [ref=e243]:
+                      - text: (
+                      - link "talk" [ref=e245] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:64.217.81.37&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e246]: . .
+                  - text: (5,920 bytes) (+133)
+                  - generic [ref=e247]: . .
+                  - generic [ref=e248]: No edit summary
+                  - generic [ref=e249]:
+                    - text: (
+                    - link "undo" [ref=e252] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2992270&undo=3211741
+                    - text: )
+              - heading "10 March 2004" [level=4] [ref=e253]
+              - list [ref=e254]:
+                - listitem [ref=e255]:
+                  - generic [ref=e256]:
+                    - text: (
+                    - link "cur" [ref=e258] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2992270
+                    - generic [ref=e259]:
+                      - text: "|"
+                      - link "prev" [ref=e260] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2992270
+                    - text: )
+                  - radio [ref=e261]
+                  - link "01:26, 10 March 2004" [ref=e264] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2992270
+                  - generic [ref=e265]:
+                    - link "67.170.59.87" [ref=e266] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/67.170.59.87
+                    - generic [ref=e267]:
+                      - text: (
+                      - link "talk" [ref=e269] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:67.170.59.87&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e270]: . .
+                  - text: (5,787 bytes) (+98)
+                  - generic [ref=e271]: . .
+                  - generic [ref=e272]: No edit summary
+                  - generic [ref=e273]:
+                    - text: (
+                    - link "undo" [ref=e276] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2700660&undo=2992270
+                    - text: )
+              - heading "4 March 2004" [level=4] [ref=e277]
+              - list [ref=e278]:
+                - listitem [ref=e279]:
+                  - generic [ref=e280]:
+                    - text: (
+                    - link "cur" [ref=e282] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2700660
+                    - generic [ref=e283]:
+                      - text: "|"
+                      - link "prev" [ref=e284] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2700660
+                    - text: )
+                  - radio [ref=e285]
+                  - link "16:26, 4 March 2004" [ref=e288] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2700660
+                  - generic [ref=e289]:
+                    - link "204.134.9.1" [ref=e290] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/204.134.9.1
+                    - generic [ref=e291]:
+                      - text: (
+                      - link "talk" [ref=e293] [cursor=pointer]:
+                        - /url: /wiki/User_talk:204.134.9.1
+                      - text: )
+                  - generic [ref=e294]: . .
+                  - text: (5,689 bytes) (+18)
+                  - generic [ref=e295]: . .
+                  - generic [ref=e296]: No edit summary
+                  - generic [ref=e297]:
+                    - text: (
+                    - link "undo" [ref=e300] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2626548&undo=2700660
+                    - text: )
+              - heading "2 March 2004" [level=4] [ref=e301]
+              - list [ref=e302]:
+                - listitem [ref=e303]:
+                  - generic [ref=e304]:
+                    - text: (
+                    - link "cur" [ref=e306] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2626548
+                    - generic [ref=e307]:
+                      - text: "|"
+                      - link "prev" [ref=e308] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2626548
+                    - text: )
+                  - radio [ref=e309]
+                  - link "21:34, 2 March 2004" [ref=e312] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2626548
+                  - generic [ref=e313]:
+                    - link "81.131.231.52" [ref=e314] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/81.131.231.52
+                    - generic [ref=e315]:
+                      - text: (
+                      - link "talk" [ref=e317] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:81.131.231.52&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e318]: . .
+                  - text: (5,671 bytes) (+145)
+                  - generic [ref=e319]: . .
+                  - generic [ref=e320]: No edit summary
+                  - generic [ref=e321]:
+                    - text: (
+                    - link "undo" [ref=e324] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2602808&undo=2626548
+                    - text: )
+                - listitem [ref=e325]:
+                  - generic [ref=e326]:
+                    - text: (
+                    - link "cur" [ref=e328] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2602808
+                    - generic [ref=e329]:
+                      - text: "|"
+                      - link "prev" [ref=e330] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2602808
+                    - text: )
+                  - radio [ref=e331]
+                  - link "15:12, 2 March 2004" [ref=e334] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2602808
+                  - generic [ref=e335]:
+                    - link "Pcb21" [ref=e336] [cursor=pointer]:
+                      - /url: /wiki/User:Pcb21
+                    - generic [ref=e337]:
+                      - text: (
+                      - link "talk" [ref=e339] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Pcb21
+                      - generic [ref=e340]:
+                        - text: "|"
+                        - link "contribs" [ref=e341] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Pcb21
+                      - text: )
+                  - generic [ref=e342]: . .
+                  - text: (5,526 bytes) (−6)
+                  - generic [ref=e343]: . .
+                  - text: (de-bold second mention)
+                  - generic [ref=e344]:
+                    - text: (
+                    - link "undo" [ref=e347] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2598176&undo=2602808
+                    - text: )
+                - listitem [ref=e348]:
+                  - generic [ref=e349]:
+                    - text: (
+                    - link "cur" [ref=e351] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2598176
+                    - generic [ref=e352]:
+                      - text: "|"
+                      - link "prev" [ref=e353] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2598176
+                    - text: )
+                  - radio [ref=e354]
+                  - link "15:11, 2 March 2004" [ref=e357] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2598176
+                  - generic [ref=e358]:
+                    - link "Pcb21" [ref=e359] [cursor=pointer]:
+                      - /url: /wiki/User:Pcb21
+                    - generic [ref=e360]:
+                      - text: (
+                      - link "talk" [ref=e362] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Pcb21
+                      - generic [ref=e363]:
+                        - text: "|"
+                        - link "contribs" [ref=e364] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Pcb21
+                      - text: )
+                  - text: m
+                  - generic [ref=e365]: . .
+                  - text: (5,532 bytes) (0)
+                  - generic [ref=e366]: . .
+                  - text: (T --> t)
+                  - generic [ref=e367]:
+                    - text: (
+                    - link "undo" [ref=e370] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2598160&undo=2598176
+                    - text: )
+              - heading "18 February 2004" [level=4] [ref=e371]
+              - list [ref=e372]:
+                - listitem [ref=e373]:
+                  - generic [ref=e374]:
+                    - text: (
+                    - link "cur" [ref=e376] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2598160
+                    - generic [ref=e377]:
+                      - text: "|"
+                      - link "prev" [ref=e378] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2598160
+                    - text: )
+                  - radio [ref=e379]
+                  - link "00:00, 18 February 2004" [ref=e382] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2598160
+                  - generic [ref=e383]:
+                    - link "Brequinda" [ref=e384] [cursor=pointer]:
+                      - /url: /wiki/User:Brequinda
+                    - generic [ref=e385]:
+                      - text: (
+                      - link "talk" [ref=e387] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Brequinda
+                      - generic [ref=e388]:
+                        - text: "|"
+                        - link "contribs" [ref=e389] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Brequinda
+                      - text: )
+                  - text: m
+                  - generic [ref=e390]: . .
+                  - text: (5,532 bytes) (−4)
+                  - generic [ref=e391]: . .
+                  - text: ('User Acceptance Testing' v. 'Customer Acceptance Testing'. Anyone want to argue this with me? I think the former preferable, and more widely used.)
+                  - generic [ref=e392]:
+                    - text: (
+                    - link "undo" [ref=e395] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2427574&undo=2598160
+                    - text: )
+              - heading "17 February 2004" [level=4] [ref=e396]
+              - list [ref=e397]:
+                - listitem [ref=e398]:
+                  - generic [ref=e399]:
+                    - text: (
+                    - link "cur" [ref=e401] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2427574
+                    - generic [ref=e402]:
+                      - text: "|"
+                      - link "prev" [ref=e403] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2427574
+                    - text: )
+                  - radio [ref=e404]
+                  - link "23:55, 17 February 2004" [ref=e407] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2427574
+                  - generic [ref=e408]:
+                    - link "Brequinda" [ref=e409] [cursor=pointer]:
+                      - /url: /wiki/User:Brequinda
+                    - generic [ref=e410]:
+                      - text: (
+                      - link "talk" [ref=e412] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Brequinda
+                      - generic [ref=e413]:
+                        - text: "|"
+                        - link "contribs" [ref=e414] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Brequinda
+                      - text: )
+                  - text: m
+                  - generic [ref=e415]: . .
+                  - text: (5,536 bytes) (−2)
+                  - generic [ref=e416]: . .
+                  - text: (correct English)
+                  - generic [ref=e417]:
+                    - text: (
+                    - link "undo" [ref=e420] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2427512&undo=2427574
+                    - text: )
+              - heading "13 January 2004" [level=4] [ref=e421]
+              - list [ref=e422]:
+                - listitem [ref=e423]:
+                  - generic [ref=e424]:
+                    - text: (
+                    - link "cur" [ref=e426] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2427512
+                    - generic [ref=e427]:
+                      - text: "|"
+                      - link "prev" [ref=e428] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2427512
+                    - text: )
+                  - radio [ref=e429]
+                  - link "19:35, 13 January 2004" [ref=e432] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2427512
+                  - generic [ref=e433]:
+                    - link "62.134.127.68" [ref=e434] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/62.134.127.68
+                    - generic [ref=e435]:
+                      - text: (
+                      - link "talk" [ref=e437] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:62.134.127.68&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e438]: . .
+                  - text: (5,538 bytes)
+                  - strong [ref=e439]: (+529)
+                  - generic [ref=e440]: . .
+                  - generic [ref=e441]: No edit summary
+                  - generic [ref=e442]:
+                    - text: (
+                    - link "undo" [ref=e445] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2146965&undo=2427512
+                    - text: )
+              - heading "12 January 2004" [level=4] [ref=e446]
+              - list [ref=e447]:
+                - listitem [ref=e448]:
+                  - generic [ref=e449]:
+                    - text: (
+                    - link "cur" [ref=e451] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2146965
+                    - generic [ref=e452]:
+                      - text: "|"
+                      - link "prev" [ref=e453] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2146965
+                    - text: )
+                  - radio [ref=e454]
+                  - link "13:59, 12 January 2004" [ref=e457] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2146965
+                  - generic [ref=e458]:
+                    - link "195.71.53.61" [ref=e459] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/195.71.53.61
+                    - generic [ref=e460]:
+                      - text: (
+                      - link "talk" [ref=e462] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:195.71.53.61&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e463]: . .
+                  - text: (5,009 bytes) (+140)
+                  - generic [ref=e464]: . .
+                  - generic [ref=e465]: No edit summary
+                  - generic [ref=e466]:
+                    - text: (
+                    - link "undo" [ref=e469] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2138538&undo=2146965
+                    - text: )
+              - heading "9 January 2004" [level=4] [ref=e470]
+              - list [ref=e471]:
+                - listitem [ref=e472]:
+                  - generic [ref=e473]:
+                    - text: (
+                    - link "cur" [ref=e475] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2138538
+                    - generic [ref=e476]:
+                      - text: "|"
+                      - link "prev" [ref=e477] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2138538
+                    - text: )
+                  - radio [ref=e478]
+                  - link "13:28, 9 January 2004" [ref=e481] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2138538
+                  - generic [ref=e482]:
+                    - link "ReneS~enwiki" [ref=e483] [cursor=pointer]:
+                      - /url: /wiki/User:ReneS~enwiki
+                    - generic [ref=e484]:
+                      - text: (
+                      - link "talk" [ref=e486] [cursor=pointer]:
+                        - /url: /wiki/User_talk:ReneS~enwiki
+                      - generic [ref=e487]:
+                        - text: "|"
+                        - link "contribs" [ref=e488] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/ReneS~enwiki
+                      - text: )
+                  - generic [ref=e489]: . .
+                  - text: (4,869 bytes)
+                  - strong [ref=e490]: (+554)
+                  - generic [ref=e491]: . .
+                  - text: (Paragraph about late testing added)
+                  - generic [ref=e492]:
+                    - text: (
+                    - link "undo" [ref=e495] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2118761&undo=2138538
+                    - text: )
+              - heading "7 January 2004" [level=4] [ref=e496]
+              - list [ref=e497]:
+                - listitem [ref=e498]:
+                  - generic [ref=e499]:
+                    - text: (
+                    - link "cur" [ref=e501] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2118761
+                    - generic [ref=e502]:
+                      - text: "|"
+                      - link "prev" [ref=e503] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2118761
+                    - text: )
+                  - radio [ref=e504]
+                  - link "22:13, 7 January 2004" [ref=e507] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2118761
+                  - generic [ref=e508]:
+                    - link "Smack" [ref=e509] [cursor=pointer]:
+                      - /url: /wiki/User:Smack
+                    - generic [ref=e510]:
+                      - text: (
+                      - link "talk" [ref=e512] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Smack
+                      - generic [ref=e513]:
+                        - text: "|"
+                        - link "contribs" [ref=e514] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Smack
+                      - text: )
+                  - generic [ref=e515]: . .
+                  - text: (4,315 bytes)
+                  - strong [ref=e516]: (+1,070)
+                  - generic [ref=e517]: . .
+                  - generic [ref=e518]:
+                    - text: (moving text from
+                    - link "test" [ref=e519] [cursor=pointer]:
+                      - /url: /wiki/Test
+                    - text: )
+                  - generic [ref=e520]:
+                    - text: (
+                    - link "undo" [ref=e523] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2108105&undo=2118761
+                    - text: )
+              - heading "31 December 2003" [level=4] [ref=e524]
+              - list [ref=e525]:
+                - listitem [ref=e526]:
+                  - generic [ref=e527]:
+                    - text: (
+                    - link "cur" [ref=e529] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2108105
+                    - generic [ref=e530]:
+                      - text: "|"
+                      - link "prev" [ref=e531] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2108105
+                    - text: )
+                  - radio [ref=e532]
+                  - link "07:21, 31 December 2003" [ref=e535] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2108105
+                  - generic [ref=e536]:
+                    - link "RedWolf" [ref=e537] [cursor=pointer]:
+                      - /url: /wiki/User:RedWolf
+                    - generic [ref=e538]:
+                      - text: (
+                      - link "talk" [ref=e540] [cursor=pointer]:
+                        - /url: /wiki/User_talk:RedWolf
+                      - generic [ref=e541]:
+                        - text: "|"
+                        - link "contribs" [ref=e542] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/RedWolf
+                      - text: )
+                  - text: m
+                  - generic [ref=e543]: . .
+                  - text: (3,245 bytes) (−13)
+                  - generic [ref=e544]: . .
+                  - text: (fixed Kernighan name)
+                  - generic [ref=e545]:
+                    - text: (
+                    - link "undo" [ref=e548] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2056237&undo=2108105
+                    - text: )
+                - listitem [ref=e549]:
+                  - generic [ref=e550]:
+                    - text: (
+                    - link "cur" [ref=e552] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2056237
+                    - generic [ref=e553]:
+                      - text: "|"
+                      - link "prev" [ref=e554] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2056237
+                    - text: )
+                  - radio [ref=e555]
+                  - link "07:16, 31 December 2003" [ref=e558] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2056237
+                  - generic [ref=e559]:
+                    - link "RedWolf" [ref=e560] [cursor=pointer]:
+                      - /url: /wiki/User:RedWolf
+                    - generic [ref=e561]:
+                      - text: (
+                      - link "talk" [ref=e563] [cursor=pointer]:
+                        - /url: /wiki/User_talk:RedWolf
+                      - generic [ref=e564]:
+                        - text: "|"
+                        - link "contribs" [ref=e565] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/RedWolf
+                      - text: )
+                  - text: m
+                  - generic [ref=e566]: . .
+                  - text: (3,258 bytes) (+19)
+                  - generic [ref=e567]: . .
+                  - text: (links)
+                  - generic [ref=e568]:
+                    - text: (
+                    - link "undo" [ref=e571] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=2056216&undo=2056237
+                    - text: )
+              - heading "19 September 2003" [level=4] [ref=e572]
+              - list [ref=e573]:
+                - listitem [ref=e574]:
+                  - generic [ref=e575]:
+                    - text: (
+                    - link "cur" [ref=e577] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=2056216
+                    - generic [ref=e578]:
+                      - text: "|"
+                      - link "prev" [ref=e579] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=2056216
+                    - text: )
+                  - radio [ref=e580]
+                  - link "23:30, 19 September 2003" [ref=e583] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=2056216
+                  - generic [ref=e584]:
+                    - link "203.54.40.166" [ref=e585] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/203.54.40.166
+                    - generic [ref=e586]:
+                      - text: (
+                      - link "talk" [ref=e588] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:203.54.40.166&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e589]: . .
+                  - text: (3,239 bytes) (+133)
+                  - generic [ref=e590]: . .
+                  - generic [ref=e591]: No edit summary
+                  - generic [ref=e592]:
+                    - text: (
+                    - link "undo" [ref=e595] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=1454482&undo=2056216
+                    - text: )
+              - heading "14 May 2003" [level=4] [ref=e596]
+              - list [ref=e597]:
+                - listitem [ref=e598]:
+                  - generic [ref=e599]:
+                    - text: (
+                    - link "cur" [ref=e601] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=1454482
+                    - generic [ref=e602]:
+                      - text: "|"
+                      - link "prev" [ref=e603] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=1454482
+                    - text: )
+                  - radio [ref=e604]
+                  - link "14:45, 14 May 2003" [ref=e607] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=1454482
+                  - generic [ref=e608]:
+                    - link "128.100.151.11" [ref=e609] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/128.100.151.11
+                    - generic [ref=e610]:
+                      - text: (
+                      - link "talk" [ref=e612] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:128.100.151.11&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e613]: . .
+                  - text: (3,106 bytes) (+47)
+                  - generic [ref=e614]: . .
+                  - text: (common terms)
+                  - generic [ref=e615]:
+                    - text: (
+                    - link "undo" [ref=e618] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=920200&undo=1454482
+                    - text: )
+                - listitem [ref=e619]:
+                  - generic [ref=e620]:
+                    - text: (
+                    - link "cur" [ref=e622] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=920200
+                    - generic [ref=e623]:
+                      - text: "|"
+                      - link "prev" [ref=e624] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=920200
+                    - text: )
+                  - radio [ref=e625]
+                  - link "06:36, 14 May 2003" [ref=e628] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=920200
+                  - generic [ref=e629]:
+                    - link "Infrogmation" [ref=e630] [cursor=pointer]:
+                      - /url: /wiki/User:Infrogmation
+                    - generic [ref=e631]:
+                      - text: (
+                      - link "talk" [ref=e633] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Infrogmation
+                      - generic [ref=e634]:
+                        - text: "|"
+                        - link "contribs" [ref=e635] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Infrogmation
+                      - text: )
+                  - text: m
+                  - generic [ref=e636]: . .
+                  - text: (3,059 bytes) (−16)
+                  - generic [ref=e637]: . .
+                  - text: (Reverted to last edit by 12.234.17.34)
+                  - generic [ref=e638]:
+                    - text: (
+                    - link "undo" [ref=e641] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=918850&undo=920200
+                    - text: )
+                - listitem [ref=e642]:
+                  - generic [ref=e643]:
+                    - text: (
+                    - link "cur" [ref=e645] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=918850
+                    - generic [ref=e646]:
+                      - text: "|"
+                      - link "prev" [ref=e647] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=918850
+                    - text: )
+                  - radio [ref=e648]
+                  - link "06:29, 14 May 2003" [ref=e651] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=918850
+                  - generic [ref=e652]:
+                    - link "12.64.66.244" [ref=e653] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/12.64.66.244
+                    - generic [ref=e654]:
+                      - text: (
+                      - link "talk" [ref=e656] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:12.64.66.244&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e657]: . .
+                  - text: (3,075 bytes) (+16)
+                  - generic [ref=e658]: . .
+                  - generic [ref=e659]: No edit summary
+                  - generic [ref=e660]:
+                    - text: (
+                    - link "undo" [ref=e663] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=918820&undo=918850
+                    - text: )
+              - heading "14 January 2003" [level=4] [ref=e664]
+              - list [ref=e665]:
+                - listitem [ref=e666]:
+                  - generic [ref=e667]:
+                    - text: (
+                    - link "cur" [ref=e669] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=918820
+                    - generic [ref=e670]:
+                      - text: "|"
+                      - link "prev" [ref=e671] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=918820
+                    - text: )
+                  - radio [ref=e672]
+                  - link "17:32, 14 January 2003" [ref=e675] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=918820
+                  - generic [ref=e676]:
+                    - link "12.234.17.34" [ref=e677] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/12.234.17.34
+                    - generic [ref=e678]:
+                      - text: (
+                      - link "talk" [ref=e680] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:12.234.17.34&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e681]: . .
+                  - text: (3,059 bytes) (+25)
+                  - generic [ref=e682]: . .
+                  - generic [ref=e683]: No edit summary
+                  - generic [ref=e684]:
+                    - text: (
+                    - link "undo" [ref=e687] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=586563&undo=918820
+                    - text: )
+              - heading "26 December 2002" [level=4] [ref=e688]
+              - list [ref=e689]:
+                - listitem [ref=e690]:
+                  - generic [ref=e691]:
+                    - text: (
+                    - link "cur" [ref=e693] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=586563
+                    - generic [ref=e694]:
+                      - text: "|"
+                      - link "prev" [ref=e695] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=586563
+                    - text: )
+                  - radio [ref=e696]
+                  - link "21:59, 26 December 2002" [ref=e699] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=586563
+                  - generic [ref=e700]:
+                    - link "Brooke Vibber" [ref=e701] [cursor=pointer]:
+                      - /url: /wiki/User:Brooke_Vibber
+                    - generic [ref=e702]:
+                      - text: (
+                      - link "talk" [ref=e704] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Brooke_Vibber
+                      - generic [ref=e705]:
+                        - text: "|"
+                        - link "contribs" [ref=e706] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Brooke_Vibber
+                      - text: )
+                  - text: m
+                  - generic [ref=e707]: . .
+                  - text: (3,034 bytes) (−48)
+                  - generic [ref=e708]: . .
+                  - text: ((tweak format))
+                  - generic [ref=e709]:
+                    - text: (
+                    - link "undo" [ref=e712] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=538720&undo=586563
+                    - text: )
+              - heading "22 December 2002" [level=4] [ref=e713]
+              - list [ref=e714]:
+                - listitem [ref=e715]:
+                  - generic [ref=e716]:
+                    - text: (
+                    - link "cur" [ref=e718] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=538720
+                    - generic [ref=e719]:
+                      - text: "|"
+                      - link "prev" [ref=e720] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=538720
+                    - text: )
+                  - radio [ref=e721]
+                  - link "03:06, 22 December 2002" [ref=e724] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=538720
+                  - generic [ref=e725]:
+                    - link "Phoe6" [ref=e726] [cursor=pointer]:
+                      - /url: /wiki/User:Phoe6
+                    - generic [ref=e727]:
+                      - text: (
+                      - link "talk" [ref=e729] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Phoe6
+                      - generic [ref=e730]:
+                        - text: "|"
+                        - link "contribs" [ref=e731] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Phoe6
+                      - text: )
+                  - text: m
+                  - generic [ref=e732]: . .
+                  - text: (3,082 bytes) (+158)
+                  - generic [ref=e733]: . .
+                  - generic [ref=e734]: No edit summary
+                  - generic [ref=e735]:
+                    - text: (
+                    - link "undo" [ref=e738] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=529787&undo=538720
+                    - text: )
+              - heading "26 September 2002" [level=4] [ref=e739]
+              - list [ref=e740]:
+                - listitem [ref=e741]:
+                  - generic [ref=e742]:
+                    - text: (
+                    - link "cur" [ref=e744] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=529787
+                    - generic [ref=e745]:
+                      - text: "|"
+                      - link "prev" [ref=e746] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=529787
+                    - text: )
+                  - radio [ref=e747]
+                  - link "23:31, 26 September 2002" [ref=e750] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=529787
+                  - generic [ref=e751]:
+                    - link "80.117.205.128" [ref=e752] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/80.117.205.128
+                    - generic [ref=e753]:
+                      - text: (
+                      - link "talk" [ref=e755] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:80.117.205.128&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e756]: . .
+                  - text: (2,924 bytes) (+60)
+                  - generic [ref=e757]: . .
+                  - generic [ref=e758]: No edit summary
+                  - generic [ref=e759]:
+                    - text: (
+                    - link "undo" [ref=e762] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=317136&undo=529787
+                    - text: )
+              - heading "13 June 2002" [level=4] [ref=e763]
+              - list [ref=e764]:
+                - listitem [ref=e765]:
+                  - generic [ref=e766]:
+                    - text: (
+                    - link "cur" [ref=e768] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=317136
+                    - generic [ref=e769]:
+                      - text: "|"
+                      - link "prev" [ref=e770] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=317136
+                    - text: )
+                  - radio [ref=e771]
+                  - link "11:31, 13 June 2002" [ref=e774] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=317136
+                  - generic [ref=e775]:
+                    - link "66.163.2.249" [ref=e776] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/66.163.2.249
+                    - generic [ref=e777]:
+                      - text: (
+                      - link "talk" [ref=e779] [cursor=pointer]:
+                        - /url: /wiki/User_talk:66.163.2.249
+                      - text: )
+                  - generic [ref=e780]: . .
+                  - text: (2,864 bytes) (+4)
+                  - generic [ref=e781]: . .
+                  - generic [ref=e782]: No edit summary
+                  - generic [ref=e783]:
+                    - text: (
+                    - link "undo" [ref=e786] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=93370&undo=317136
+                    - text: )
+              - heading "10 June 2002" [level=4] [ref=e787]
+              - list [ref=e788]:
+                - listitem [ref=e789]:
+                  - generic [ref=e790]:
+                    - text: (
+                    - link "cur" [ref=e792] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=93370
+                    - generic [ref=e793]:
+                      - text: "|"
+                      - link "prev" [ref=e794] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=93370
+                    - text: )
+                  - radio [ref=e795]
+                  - link "09:48, 10 June 2002" [ref=e798] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=93370
+                  - generic [ref=e799]:
+                    - link "213.253.40.133" [ref=e800] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/213.253.40.133
+                    - generic [ref=e801]:
+                      - text: (
+                      - link "talk" [ref=e803] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:213.253.40.133&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e804]: . .
+                  - text: (2,860 bytes) (+482)
+                  - generic [ref=e805]: . .
+                  - text: ( A rule of thumb is that a system that is expected to function without faults for a certain length of time must have already been tested for at least that length of time.)
+                  - generic [ref=e806]:
+                    - text: (
+                    - link "undo" [ref=e809] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=90356&undo=93370
+                    - text: )
+                - listitem [ref=e810]:
+                  - generic [ref=e811]:
+                    - text: (
+                    - link "cur" [ref=e813] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=90356
+                    - generic [ref=e814]:
+                      - text: "|"
+                      - link "prev" [ref=e815] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=90356
+                    - text: )
+                  - radio [ref=e816]
+                  - link "09:27, 10 June 2002" [ref=e819] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=90356
+                  - generic [ref=e820]:
+                    - link "Stephen Gilbert" [ref=e821] [cursor=pointer]:
+                      - /url: /wiki/User:Stephen_Gilbert
+                    - generic [ref=e822]:
+                      - text: (
+                      - link "talk" [ref=e824] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Stephen_Gilbert
+                      - generic [ref=e825]:
+                        - text: "|"
+                        - link "contribs" [ref=e826] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Stephen_Gilbert
+                      - text: )
+                  - text: m
+                  - generic [ref=e827]: . .
+                  - text: (2,378 bytes) (+26)
+                  - generic [ref=e828]: . .
+                  - text: (links and editing)
+                  - generic [ref=e829]:
+                    - text: (
+                    - link "undo" [ref=e832] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=90344&undo=90356
+                    - text: )
+              - heading "15 April 2002" [level=4] [ref=e833]
+              - list [ref=e834]:
+                - listitem [ref=e835]:
+                  - generic [ref=e836]:
+                    - text: (
+                    - link "cur" [ref=e838] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=90344
+                    - generic [ref=e839]:
+                      - text: "|"
+                      - link "prev" [ref=e840] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=90344
+                    - text: )
+                  - radio [ref=e841]
+                  - link "08:30, 15 April 2002" [ref=e844] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=90344
+                  - generic [ref=e845]:
+                    - link "Bryan Derksen" [ref=e846] [cursor=pointer]:
+                      - /url: /wiki/User:Bryan_Derksen
+                    - generic [ref=e847]:
+                      - text: (
+                      - link "talk" [ref=e849] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Bryan_Derksen
+                      - generic [ref=e850]:
+                        - text: "|"
+                        - link "contribs" [ref=e851] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Bryan_Derksen
+                      - text: )
+                  - text: m
+                  - generic [ref=e852]: . .
+                  - text: (2,352 bytes) (−30)
+                  - generic [ref=e853]: . .
+                  - text: (-/Talk)
+                  - generic [ref=e854]:
+                    - text: (
+                    - link "undo" [ref=e857] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=53044&undo=90344
+                    - text: )
+              - heading "25 February 2002" [level=4] [ref=e858]
+              - list [ref=e859]:
+                - listitem [ref=e860]:
+                  - generic [ref=e861]:
+                    - text: (
+                    - link "cur" [ref=e863] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=53044
+                    - generic [ref=e864]:
+                      - text: "|"
+                      - link "prev" [ref=e865] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=53044
+                    - text: )
+                  - radio [ref=e866]
+                  - link "15:51, 25 February 2002" [ref=e869] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=53044
+                  - generic [ref=e870]:
+                    - link "203.10.76.38" [ref=e871] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/203.10.76.38
+                    - generic [ref=e872]:
+                      - text: (
+                      - link "talk" [ref=e874] [cursor=pointer]:
+                        - /url: /wiki/User_talk:203.10.76.38
+                      - text: )
+                  - generic [ref=e875]: . .
+                  - text: (2,382 bytes) (+25)
+                  - generic [ref=e876]: . .
+                  - text: (link to software engineering)
+                  - generic [ref=e877]:
+                    - text: (
+                    - link "undo" [ref=e880] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=10561&undo=53044
+                    - text: )
+              - heading "14 February 2002" [level=4] [ref=e881]
+              - list [ref=e882]:
+                - listitem [ref=e883]:
+                  - generic [ref=e884]:
+                    - text: (
+                    - link "cur" [ref=e886] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=10561
+                    - generic [ref=e887]:
+                      - text: "|"
+                      - link "prev" [ref=e888] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=10561
+                    - text: )
+                  - radio [ref=e889]
+                  - link "03:01, 14 February 2002" [ref=e892] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=10561
+                  - generic [ref=e893]:
+                    - link "203.10.76.38" [ref=e894] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/203.10.76.38
+                    - generic [ref=e895]:
+                      - text: (
+                      - link "talk" [ref=e897] [cursor=pointer]:
+                        - /url: /wiki/User_talk:203.10.76.38
+                      - text: )
+                  - generic [ref=e898]: . .
+                  - text: (2,357 bytes) (−3)
+                  - generic [ref=e899]: . .
+                  - text: "(copyedit: remove redundant \"the\")"
+                  - generic [ref=e900]:
+                    - text: (
+                    - link "undo" [ref=e903] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=10560&undo=10561
+                    - text: )
+                - listitem [ref=e904]:
+                  - generic [ref=e905]:
+                    - text: (
+                    - link "cur" [ref=e907] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=10560
+                    - generic [ref=e908]:
+                      - text: "|"
+                      - link "prev" [ref=e909] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=10560
+                    - text: )
+                  - radio [ref=e910]
+                  - link "02:59, 14 February 2002" [ref=e913] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=10560
+                  - generic [ref=e914]:
+                    - link "24.93.53.199" [ref=e915] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/24.93.53.199
+                    - generic [ref=e916]:
+                      - text: (
+                      - link "talk" [ref=e918] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:24.93.53.199&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e919]: . .
+                  - text: (2,360 bytes) (+1)
+                  - generic [ref=e920]: . .
+                  - generic [ref=e921]: No edit summary
+                  - generic [ref=e922]:
+                    - text: (
+                    - link "undo" [ref=e925] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=10515&undo=10560
+                    - text: )
+                - listitem [ref=e926]:
+                  - generic [ref=e927]:
+                    - text: (
+                    - link "cur" [ref=e929] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=10515
+                    - generic [ref=e930]:
+                      - text: "|"
+                      - link "prev" [ref=e931] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=10515
+                    - text: )
+                  - radio [ref=e932]
+                  - link "00:34, 14 February 2002" [ref=e935] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=10515
+                  - generic [ref=e936]:
+                    - link "24.93.53.199" [ref=e937] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/24.93.53.199
+                    - generic [ref=e938]:
+                      - text: (
+                      - link "talk" [ref=e940] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:24.93.53.199&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e941]: . .
+                  - text: (2,359 bytes) (+32)
+                  - generic [ref=e942]: . .
+                  - generic [ref=e943]: No edit summary
+                  - generic [ref=e944]:
+                    - text: (
+                    - link "undo" [ref=e947] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=10513&undo=10515
+                    - text: )
+                - listitem [ref=e948]:
+                  - generic [ref=e949]:
+                    - text: (
+                    - link "cur" [ref=e951] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=10513
+                    - generic [ref=e952]:
+                      - text: "|"
+                      - link "prev" [ref=e953] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=10513
+                    - text: )
+                  - radio [ref=e954]
+                  - link "00:29, 14 February 2002" [ref=e957] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=10513
+                  - generic [ref=e958]:
+                    - link "Robert Merkel" [ref=e959] [cursor=pointer]:
+                      - /url: /wiki/User:Robert_Merkel
+                    - generic [ref=e960]:
+                      - text: (
+                      - link "talk" [ref=e962] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Robert_Merkel
+                      - generic [ref=e963]:
+                        - text: "|"
+                        - link "contribs" [ref=e964] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Robert_Merkel
+                      - text: )
+                  - generic [ref=e965]: . .
+                  - text: (2,327 bytes) (+25)
+                  - generic [ref=e966]: . .
+                  - text: (added automated testing)
+                  - generic [ref=e967]:
+                    - text: (
+                    - link "undo" [ref=e970] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=5733&undo=10513
+                    - text: )
+              - heading "6 February 2002" [level=4] [ref=e971]
+              - list [ref=e972]:
+                - listitem [ref=e973]:
+                  - generic [ref=e974]:
+                    - text: (
+                    - link "cur" [ref=e976] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=5733
+                    - generic [ref=e977]:
+                      - text: "|"
+                      - link "prev" [ref=e978] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=5733
+                    - text: )
+                  - radio [ref=e979]
+                  - link "00:45, 6 February 2002" [ref=e982] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=5733
+                  - generic [ref=e983]:
+                    - link "Conversion script" [ref=e984] [cursor=pointer]:
+                      - /url: /wiki/User:Conversion_script
+                    - generic [ref=e985]:
+                      - text: (
+                      - link "talk" [ref=e987] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Conversion_script
+                      - generic [ref=e988]:
+                        - text: "|"
+                        - link "contribs" [ref=e989] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Conversion_script
+                      - text: )
+                  - text: m
+                  - generic [ref=e990]: . .
+                  - text: (2,302 bytes) (−7)
+                  - generic [ref=e991]: . .
+                  - text: (Automated conversion)
+                  - generic [ref=e992]:
+                    - text: (
+                    - link "undo" [ref=e995] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284896&undo=5733
+                    - text: )
+              - heading "20 December 2001" [level=4] [ref=e996]
+              - list [ref=e997]:
+                - listitem [ref=e998]:
+                  - generic [ref=e999]:
+                    - text: (
+                    - link "cur" [ref=e1001] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284896
+                    - generic [ref=e1002]:
+                      - text: "|"
+                      - link "prev" [ref=e1003] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284896
+                    - text: )
+                  - radio [ref=e1004]
+                  - link "12:43, 20 December 2001" [ref=e1007] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284896
+                  - generic [ref=e1008]:
+                    - link "192.193.196.xxx" [ref=e1009] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/192.193.196.xxx
+                    - generic [ref=e1010]:
+                      - text: (
+                      - link "talk" [ref=e1012] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:192.193.196.xxx&action=edit&redlink=1
+                      - text: )
+                  - text: m
+                  - generic [ref=e1013]: . .
+                  - text: (2,309 bytes) (0)
+                  - generic [ref=e1014]: . .
+                  - generic [ref=e1015]: No edit summary
+                  - generic [ref=e1016]:
+                    - text: (
+                    - link "undo" [ref=e1019] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284895&undo=284896
+                    - text: )
+              - heading "17 December 2001" [level=4] [ref=e1020]
+              - list [ref=e1021]:
+                - listitem [ref=e1022]:
+                  - generic [ref=e1023]:
+                    - text: (
+                    - link "cur" [ref=e1025] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284895
+                    - generic [ref=e1026]:
+                      - text: "|"
+                      - link "prev" [ref=e1027] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284895
+                    - text: )
+                  - radio [ref=e1028]
+                  - link "15:12, 17 December 2001" [ref=e1031] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284895
+                  - generic [ref=e1032]:
+                    - link "Verloren" [ref=e1033] [cursor=pointer]:
+                      - /url: /wiki/User:Verloren
+                    - generic [ref=e1034]:
+                      - text: (
+                      - link "talk" [ref=e1036] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Verloren
+                      - generic [ref=e1037]:
+                        - text: "|"
+                        - link "contribs" [ref=e1038] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Verloren
+                      - text: )
+                  - generic [ref=e1039]: . .
+                  - text: (2,309 bytes) (+14)
+                  - generic [ref=e1040]: . .
+                  - text: (added alpha)
+                  - generic [ref=e1041]:
+                    - text: (
+                    - link "undo" [ref=e1044] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284894&undo=284895
+                    - text: )
+                - listitem [ref=e1045]:
+                  - generic [ref=e1046]:
+                    - text: (
+                    - link "cur" [ref=e1048] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284894
+                    - generic [ref=e1049]:
+                      - text: "|"
+                      - link "prev" [ref=e1050] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284894
+                    - text: )
+                  - radio [ref=e1051]
+                  - link "09:54, 17 December 2001" [ref=e1054] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284894
+                  - generic [ref=e1055]:
+                    - link "KamikazeArchon" [ref=e1056] [cursor=pointer]:
+                      - /url: /wiki/User:KamikazeArchon
+                    - generic [ref=e1057]:
+                      - text: (
+                      - link "talk" [ref=e1059] [cursor=pointer]:
+                        - /url: /wiki/User_talk:KamikazeArchon
+                      - generic [ref=e1060]:
+                        - text: "|"
+                        - link "contribs" [ref=e1061] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/KamikazeArchon
+                      - text: )
+                  - text: m
+                  - generic [ref=e1062]: . .
+                  - text: (2,295 bytes) (+13)
+                  - generic [ref=e1063]: . .
+                  - text: (added beta)
+                  - generic [ref=e1064]:
+                    - text: (
+                    - link "undo" [ref=e1067] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284893&undo=284894
+                    - text: )
+                - listitem [ref=e1068]:
+                  - generic [ref=e1069]:
+                    - text: (
+                    - link "cur" [ref=e1071] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284893
+                    - generic [ref=e1072]:
+                      - text: "|"
+                      - link "prev" [ref=e1073] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284893
+                    - text: )
+                  - radio [ref=e1074]
+                  - link "09:49, 17 December 2001" [ref=e1077] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284893
+                  - generic [ref=e1078]:
+                    - link "212.153.190.xxx" [ref=e1079] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/212.153.190.xxx
+                    - generic [ref=e1080]:
+                      - text: (
+                      - link "talk" [ref=e1082] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:212.153.190.xxx&action=edit&redlink=1
+                      - text: )
+                  - text: m
+                  - generic [ref=e1083]: . .
+                  - text: (2,282 bytes) (−1)
+                  - generic [ref=e1084]: . .
+                  - generic [ref=e1085]: No edit summary
+                  - generic [ref=e1086]:
+                    - text: (
+                    - link "undo" [ref=e1089] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284892&undo=284893
+                    - text: )
+                - listitem [ref=e1090]:
+                  - generic [ref=e1091]:
+                    - text: (
+                    - link "cur" [ref=e1093] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284892
+                    - generic [ref=e1094]:
+                      - text: "|"
+                      - link "prev" [ref=e1095] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284892
+                    - text: )
+                  - radio [ref=e1096]
+                  - link "09:48, 17 December 2001" [ref=e1099] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284892
+                  - generic [ref=e1100]:
+                    - link "212.153.190.xxx" [ref=e1101] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/212.153.190.xxx
+                    - generic [ref=e1102]:
+                      - text: (
+                      - link "talk" [ref=e1104] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:212.153.190.xxx&action=edit&redlink=1
+                      - text: )
+                  - text: m
+                  - generic [ref=e1105]: . .
+                  - text: (2,283 bytes) (−164)
+                  - generic [ref=e1106]: . .
+                  - generic [ref=e1107]: No edit summary
+                  - generic [ref=e1108]:
+                    - text: (
+                    - link "undo" [ref=e1111] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284891&undo=284892
+                    - text: )
+              - heading "14 December 2001" [level=4] [ref=e1112]
+              - list [ref=e1113]:
+                - listitem [ref=e1114]:
+                  - generic [ref=e1115]:
+                    - text: (
+                    - link "cur" [ref=e1117] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284891
+                    - generic [ref=e1118]:
+                      - text: "|"
+                      - link "prev" [ref=e1119] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284891
+                    - text: )
+                  - radio [ref=e1120]
+                  - link "00:22, 14 December 2001" [ref=e1123] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284891
+                  - generic [ref=e1124]:
+                    - link "152.98.195.xxx" [ref=e1125] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/152.98.195.xxx
+                    - generic [ref=e1126]:
+                      - text: (
+                      - link "talk" [ref=e1128] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:152.98.195.xxx&action=edit&redlink=1
+                      - text: )
+                  - text: m
+                  - generic [ref=e1129]: . .
+                  - text: (2,447 bytes) (+13)
+                  - generic [ref=e1130]: . .
+                  - generic [ref=e1131]: No edit summary
+                  - generic [ref=e1132]:
+                    - text: (
+                    - link "undo" [ref=e1135] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284890&undo=284891
+                    - text: )
+                - listitem [ref=e1136]:
+                  - generic [ref=e1137]:
+                    - text: (
+                    - link "cur" [ref=e1139] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284890
+                    - generic [ref=e1140]:
+                      - text: "|"
+                      - link "prev" [ref=e1141] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284890
+                    - text: )
+                  - radio [ref=e1142]
+                  - link "00:21, 14 December 2001" [ref=e1145] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284890
+                  - generic [ref=e1146]:
+                    - link "152.98.195.xxx" [ref=e1147] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/152.98.195.xxx
+                    - generic [ref=e1148]:
+                      - text: (
+                      - link "talk" [ref=e1150] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:152.98.195.xxx&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e1151]: . .
+                  - text: (2,434 bytes)
+                  - strong [ref=e1152]: (+660)
+                  - generic [ref=e1153]: . .
+                  - text: (Altered consept definition, added ref to standards)
+                  - generic [ref=e1154]:
+                    - text: (
+                    - link "undo" [ref=e1157] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284889&undo=284890
+                    - text: )
+              - heading "13 December 2001" [level=4] [ref=e1158]
+              - list [ref=e1159]:
+                - listitem [ref=e1160]:
+                  - generic [ref=e1161]:
+                    - text: (
+                    - link "cur" [ref=e1163] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284889
+                    - generic [ref=e1164]:
+                      - text: "|"
+                      - link "prev" [ref=e1165] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284889
+                    - text: )
+                  - radio [ref=e1166]
+                  - link "17:08, 13 December 2001" [ref=e1169] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284889
+                  - generic [ref=e1170]:
+                    - link "Verloren" [ref=e1171] [cursor=pointer]:
+                      - /url: /wiki/User:Verloren
+                    - generic [ref=e1172]:
+                      - text: (
+                      - link "talk" [ref=e1174] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Verloren
+                      - generic [ref=e1175]:
+                        - text: "|"
+                        - link "contribs" [ref=e1176] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Verloren
+                      - text: )
+                  - generic [ref=e1177]: . .
+                  - text: (1,774 bytes) (+255)
+                  - generic [ref=e1178]: . .
+                  - text: (Expanded internal consistency/conformance to spec)
+                  - generic [ref=e1179]:
+                    - text: (
+                    - link "undo" [ref=e1182] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284888&undo=284889
+                    - text: )
+              - heading "6 December 2001" [level=4] [ref=e1183]
+              - list [ref=e1184]:
+                - listitem [ref=e1185]:
+                  - generic [ref=e1186]:
+                    - text: (
+                    - link "cur" [ref=e1188] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284888
+                    - generic [ref=e1189]:
+                      - text: "|"
+                      - link "prev" [ref=e1190] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284888
+                    - text: )
+                  - radio [ref=e1191]
+                  - link "06:33, 6 December 2001" [ref=e1194] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284888
+                  - generic [ref=e1195]:
+                    - link "144.132.75.xxx" [ref=e1196] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/144.132.75.xxx
+                    - generic [ref=e1197]:
+                      - text: (
+                      - link "talk" [ref=e1199] [cursor=pointer]:
+                        - /url: /wiki/User_talk:144.132.75.xxx
+                      - text: )
+                  - generic [ref=e1200]: . .
+                  - text: (1,519 bytes) (+304)
+                  - generic [ref=e1201]: . .
+                  - text: (contrast with verification)
+                  - generic [ref=e1202]:
+                    - text: (
+                    - link "undo" [ref=e1205] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284887&undo=284888
+                    - text: )
+              - heading "5 December 2001" [level=4] [ref=e1206]
+              - list [ref=e1207]:
+                - listitem [ref=e1208]:
+                  - generic [ref=e1209]:
+                    - text: (
+                    - link "cur" [ref=e1211] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284887
+                    - generic [ref=e1212]:
+                      - text: "|"
+                      - link "prev" [ref=e1213] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284887
+                    - text: )
+                  - radio [ref=e1214]
+                  - link "20:38, 5 December 2001" [ref=e1217] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284887
+                  - generic [ref=e1218]:
+                    - link "62.163.16.xxx" [ref=e1219] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/62.163.16.xxx
+                    - generic [ref=e1220]:
+                      - text: (
+                      - link "talk" [ref=e1222] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:62.163.16.xxx&action=edit&redlink=1
+                      - text: )
+                  - text: m
+                  - generic [ref=e1223]: . .
+                  - text: (1,215 bytes) (−3)
+                  - generic [ref=e1224]: . .
+                  - generic [ref=e1225]: No edit summary
+                  - generic [ref=e1226]:
+                    - text: (
+                    - link "undo" [ref=e1229] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284886&undo=284887
+                    - text: )
+                - listitem [ref=e1230]:
+                  - generic [ref=e1231]:
+                    - text: (
+                    - link "cur" [ref=e1233] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284886
+                    - generic [ref=e1234]:
+                      - text: "|"
+                      - link "prev" [ref=e1235] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284886
+                    - text: )
+                  - radio [ref=e1236]
+                  - link "20:37, 5 December 2001" [ref=e1239] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284886
+                  - generic [ref=e1240]:
+                    - link "62.163.16.xxx" [ref=e1241] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/62.163.16.xxx
+                    - generic [ref=e1242]:
+                      - text: (
+                      - link "talk" [ref=e1244] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:62.163.16.xxx&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e1245]: . .
+                  - text: (1,218 bytes)
+                  - strong [ref=e1246]: (+628)
+                  - generic [ref=e1247]: . .
+                  - text: (expanded)
+                  - generic [ref=e1248]:
+                    - text: (
+                    - link "undo" [ref=e1251] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284885&undo=284886
+                    - text: )
+                - listitem [ref=e1252]:
+                  - generic [ref=e1253]:
+                    - text: (
+                    - link "cur" [ref=e1255] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284885
+                    - generic [ref=e1256]:
+                      - text: "|"
+                      - link "prev" [ref=e1257] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284885
+                    - text: )
+                  - radio [ref=e1258]
+                  - link "16:49, 5 December 2001" [ref=e1261] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284885
+                  - generic [ref=e1262]:
+                    - link "Lee Daniel Crocker" [ref=e1263] [cursor=pointer]:
+                      - /url: /wiki/User:Lee_Daniel_Crocker
+                    - generic [ref=e1264]:
+                      - text: (
+                      - link "talk" [ref=e1266] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Lee_Daniel_Crocker
+                      - generic [ref=e1267]:
+                        - text: "|"
+                        - link "contribs" [ref=e1268] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Lee_Daniel_Crocker
+                      - text: )
+                  - generic [ref=e1269]: . .
+                  - text: (590 bytes) (+107)
+                  - generic [ref=e1270]: . .
+                  - generic [ref=e1271]: No edit summary
+                  - generic [ref=e1272]:
+                    - text: (
+                    - link "undo" [ref=e1275] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284884&undo=284885
+                    - text: )
+                - listitem [ref=e1276]:
+                  - generic [ref=e1277]:
+                    - text: (
+                    - link "cur" [ref=e1279] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284884
+                    - generic [ref=e1280]:
+                      - text: "|"
+                      - link "prev" [ref=e1281] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284884
+                    - text: )
+                  - radio [ref=e1282]
+                  - link "14:57, 5 December 2001" [ref=e1285] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284884
+                  - generic [ref=e1286]:
+                    - link "Ed Poor" [ref=e1287] [cursor=pointer]:
+                      - /url: /wiki/User:Ed_Poor
+                    - generic [ref=e1288]:
+                      - text: (
+                      - link "talk" [ref=e1290] [cursor=pointer]:
+                        - /url: /wiki/User_talk:Ed_Poor
+                      - generic [ref=e1291]:
+                        - text: "|"
+                        - link "contribs" [ref=e1292] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/Ed_Poor
+                      - text: )
+                  - generic [ref=e1293]: . .
+                  - text: (483 bytes) (+139)
+                  - generic [ref=e1294]: . .
+                  - generic [ref=e1295]: No edit summary
+                  - generic [ref=e1296]:
+                    - text: (
+                    - link "undo" [ref=e1299] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284883&undo=284884
+                    - text: )
+                - listitem [ref=e1300]:
+                  - generic [ref=e1301]:
+                    - text: (
+                    - link "cur" [ref=e1303] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284883
+                    - generic [ref=e1304]:
+                      - text: "|"
+                      - link "prev" [ref=e1305] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284883
+                    - text: )
+                  - radio [ref=e1306]
+                  - link "14:09, 5 December 2001" [ref=e1309] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284883
+                  - generic [ref=e1310]:
+                    - link "The Anome" [ref=e1311] [cursor=pointer]:
+                      - /url: /wiki/User:The_Anome
+                    - generic [ref=e1312]:
+                      - text: (
+                      - link "talk" [ref=e1314] [cursor=pointer]:
+                        - /url: /wiki/User_talk:The_Anome
+                      - generic [ref=e1315]:
+                        - text: "|"
+                        - link "contribs" [ref=e1316] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/The_Anome
+                      - text: )
+                  - text: m
+                  - generic [ref=e1317]: . .
+                  - text: (344 bytes) (+29)
+                  - generic [ref=e1318]: . .
+                  - text: (added another see also)
+                  - generic [ref=e1319]:
+                    - text: (
+                    - link "undo" [ref=e1322] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284882&undo=284883
+                    - text: )
+                - listitem [ref=e1323]:
+                  - generic [ref=e1324]:
+                    - text: (
+                    - link "cur" [ref=e1326] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284882
+                    - generic [ref=e1327]:
+                      - text: "|"
+                      - link "prev" [ref=e1328] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284882
+                    - text: )
+                  - radio [ref=e1329]
+                  - link "14:08, 5 December 2001" [ref=e1332] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284882
+                  - generic [ref=e1333]:
+                    - link "The Anome" [ref=e1334] [cursor=pointer]:
+                      - /url: /wiki/User:The_Anome
+                    - generic [ref=e1335]:
+                      - text: (
+                      - link "talk" [ref=e1337] [cursor=pointer]:
+                        - /url: /wiki/User_talk:The_Anome
+                      - generic [ref=e1338]:
+                        - text: "|"
+                        - link "contribs" [ref=e1339] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/The_Anome
+                      - text: )
+                  - generic [ref=e1340]: . .
+                  - text: (315 bytes) (+37)
+                  - generic [ref=e1341]: . .
+                  - text: (added see also)
+                  - generic [ref=e1342]:
+                    - text: (
+                    - link "undo" [ref=e1345] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284881&undo=284882
+                    - text: )
+                - listitem [ref=e1346]:
+                  - generic [ref=e1347]:
+                    - text: (
+                    - link "cur" [ref=e1349] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284881
+                    - generic [ref=e1350]:
+                      - text: "|"
+                      - link "prev" [ref=e1351] [cursor=pointer]:
+                        - /url: /w/index.php?title=Software_testing&diff=prev&oldid=284881
+                    - text: )
+                  - radio [ref=e1352]
+                  - link "14:02, 5 December 2001" [ref=e1355] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284881
+                  - generic [ref=e1356]:
+                    - link "The Anome" [ref=e1357] [cursor=pointer]:
+                      - /url: /wiki/User:The_Anome
+                    - generic [ref=e1358]:
+                      - text: (
+                      - link "talk" [ref=e1360] [cursor=pointer]:
+                        - /url: /wiki/User_talk:The_Anome
+                      - generic [ref=e1361]:
+                        - text: "|"
+                        - link "contribs" [ref=e1362] [cursor=pointer]:
+                          - /url: /wiki/Special:Contributions/The_Anome
+                      - text: )
+                  - generic [ref=e1363]: . .
+                  - text: (278 bytes) (+52)
+                  - generic [ref=e1364]: . .
+                  - text: (added comment)
+                  - generic [ref=e1365]:
+                    - text: (
+                    - link "undo" [ref=e1368] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&action=edit&undoafter=284880&undo=284881
+                    - text: )
+                - listitem [ref=e1369]:
+                  - generic [ref=e1370]:
+                    - text: (
+                    - link "cur" [ref=e1372] [cursor=pointer]:
+                      - /url: /w/index.php?title=Software_testing&diff=1352724193&oldid=284880
+                    - generic [ref=e1373]: "| prev"
+                    - text: )
+                  - radio [ref=e1374]
+                  - link "13:57, 5 December 2001" [ref=e1377] [cursor=pointer]:
+                    - /url: /w/index.php?title=Software_testing&oldid=284880
+                  - generic [ref=e1378]:
+                    - link "166.46.99.xxx" [ref=e1379] [cursor=pointer]:
+                      - /url: /wiki/Special:Contributions/166.46.99.xxx
+                    - generic [ref=e1380]:
+                      - text: (
+                      - link "talk" [ref=e1382] [cursor=pointer]:
+                        - /url: /w/index.php?title=User_talk:166.46.99.xxx&action=edit&redlink=1
+                      - text: )
+                  - generic [ref=e1383]: . .
+                  - text: (226 bytes) (+226)
+                  - generic [ref=e1384]: . .
+                  - generic [ref=e1385]: No edit summary
+              - button "Compare selected revisions" [ref=e1387]
+          - generic [ref=e1388]:
+            - text: (
+            - link "newest" [ref=e1389] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history
+            - text: "| oldest) View ("
+            - link "newer 50" [ref=e1390] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&dir=prev&offset=20040416134446%7C3211748
+            - text: "| older 50) ("
+            - link "20" [ref=e1391] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=20
+            - text: "| 50 |"
+            - link "100" [ref=e1392] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=100
+            - text: "|"
+            - link "250" [ref=e1393] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=250
+            - text: "|"
+            - link "500" [ref=e1394] [cursor=pointer]:
+              - /url: /w/index.php?title=Software_testing&action=history&offset=20040416134552%7C3211757&limit=500
+            - text: )
+    - contentinfo [ref=e1396]:
+      - list
+      - list:
+        - listitem [ref=e1397]:
+          - link "Privacy policy" [ref=e1398] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy
+        - listitem [ref=e1399]:
+          - link "About Wikipedia" [ref=e1400] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:About
+        - listitem [ref=e1401]:
+          - link "Disclaimers" [ref=e1402] [cursor=pointer]:
+            - /url: /wiki/Wikipedia:General_disclaimer
+        - listitem [ref=e1403]:
+          - link "Contact Wikipedia" [ref=e1404] [cursor=pointer]:
+            - /url: //en.wikipedia.org/wiki/Wikipedia:Contact_us
+        - listitem [ref=e1405]:
+          - link "Legal & safety contacts" [ref=e1406] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information
+        - listitem [ref=e1407]:
+          - link "Code of Conduct" [ref=e1408] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct
+        - listitem [ref=e1409]:
+          - link "Developers" [ref=e1410] [cursor=pointer]:
+            - /url: https://developer.wikimedia.org
+        - listitem [ref=e1411]:
+          - link "Statistics" [ref=e1412] [cursor=pointer]:
+            - /url: https://stats.wikimedia.org/#/en.wikipedia.org
+        - listitem [ref=e1413]:
+          - link "Cookie statement" [ref=e1414] [cursor=pointer]:
+            - /url: https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement
+        - listitem [ref=e1415]:
+          - link "Mobile view" [ref=e1416] [cursor=pointer]:
+            - /url: //en.wikipedia.org/w/index.php?title=Software_testing&action=history&dir=prev&mobileaction=toggle_view_mobile
+      - list [ref=e1417]:
+        - listitem [ref=e1418]:
+          - link "Wikimedia Foundation" [ref=e1419] [cursor=pointer]:
+            - /url: https://www.wikimedia.org/
+            - img "Wikimedia Foundation" [ref=e1421]
+        - listitem [ref=e1422]:
+          - link "Powered by MediaWiki" [ref=e1423] [cursor=pointer]:
+            - /url: https://www.mediawiki.org/
+            - img "Powered by MediaWiki" [ref=e1425]
+  - generic [ref=e1426]:
+    - list
+```

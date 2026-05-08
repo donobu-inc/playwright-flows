@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 2,
+  "evidenceId": "f499ae1d-5167-4425-b0e4-4a2076ce33fb",
+  "runId": "2026-05-08T02-52-01-895Z-5265630a",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-08T02-52-01-895Z-5265630a",
+  "collectedAtIso": "2026-05-08T02:56:25.479Z",
+  "failureContext": {
+    "testCase": {
+      "title": "Inspect Wiki article history",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/wikipedia-assert.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 74277,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "failure": {
+      "errors": [
+        {
+          "value": "\"'Extract operation timed out after 60000 milliseconds'\""
+        }
+      ],
+      "attachments": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/test-failed-1.png"
+        },
+        {
+          "name": "test-flow-metadata.json",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-step-0-goToWebpage",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/attachments/donobu-step-0-goToWebpage-be7c3c60aba0ee7379216dea381cf0214618b43c.jpg"
+        },
+        {
+          "name": "donobu-step-1-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/attachments/donobu-step-1-click-f8e817c641f4e696f968166ccb1c545fe2f8874d.jpg"
+        },
+        {
+          "name": "donobu-step-2-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/attachments/donobu-step-2-click-faa0d1a35759e6e7bfad14fe90821a82ec81a3d0.jpg"
+        },
+        {
+          "name": "donobu-step-3-scrollPage",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/attachments/donobu-step-3-scrollPage-ffee06c5fb2ea74364610fa0cf00d3ae23eb89f6.jpg"
+        },
+        {
+          "name": "donobu-step-4-scrollPage",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/attachments/donobu-step-4-scrollPage-af90369b368fb0fb68f10b74687f20559b662387.jpg"
+        },
+        {
+          "name": "donobu-step-5-markObjectiveComplete",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/wikipedia-assert-Inspect-Wiki-article-history-Donobu-based-Tests/attachments/donobu-step-5-markObjectiveComplete-35270efdf5177e53034cce11871acecd4d9ffbc6.jpg"
+        },
+        {
+          "name": "donobu-step-summary",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-ai-invocations",
+          "contentType": "application/json",
+          "path": null
+        }
+      ]
+    },
+    "donobuFlow": {
+      "metadata": {
+        "id": "99bc754d-a4df-4aad-8e14-12466a8b3bae",
+        "name": "wikipedia-assert.test.ts > Inspect Wiki article history",
+        "runMode": "DETERMINISTIC",
+        "state": "FAILED",
+        "targetWebsite": "https://en.wikipedia.org/wiki/Software_testing",
+        "overallObjective": null,
+        "allowedTools": [],
+        "envVars": [],
+        "startedAt": 1778208908162,
+        "completedAt": 1778208982459,
+        "maxToolCalls": null,
+        "gptConfigName": null,
+        "defaultMessageDuration": 250,
+        "resultSummary": null
+      },
+      "recentToolCalls": [
+        {
+          "id": "adhoc_e1df3274e49a46a2b34b249898e54350",
+          "toolName": "goToWebpage",
+          "success": true,
+          "outcomeSummary": "Successfully navigated to https://en.wikipedia.org/wiki/Software_testing",
+          "durationMs": 1621,
+          "page": "https://en.wikipedia.org/wiki/Software_testing",
+          "startedAtIso": "2026-05-08T02:55:08.887Z",
+          "completedAtIso": "2026-05-08T02:55:10.508Z",
+          "parameters": "{\n  \"url\": \"https://en.wikipedia.org/wiki/Software_testing\"\n}"
+        },
+        {
+          "id": "adhoc_7e35ccd20d784d42a6a8e33194fef90a",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <a href=\"/w/index.php?title=Software_testing&amp;action=history\" title=\"Past revisions of this page [alt-h]\" accesskey=\"h\">View history</a>",
+          "durationMs": 2518,
+          "page": "https://en.wikipedia.org/wiki/Software_testing",
+          "startedAtIso": "2026-05-08T02:55:10.814Z",
+          "completedAtIso": "2026-05-08T02:55:13.332Z",
+          "parameters": "{\n  \"selector\": {\n    \"element\": [\n      \"(.//a[normalize-space(.)='View history'])[1]\",\n      \"[title='Past revisions of this page [ctrl-option-h]']\",\n      \"nav:nth-of-type(1) > div > div > ul > li:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        },
+        {
+          "id": "adhoc_cd01ff8430cb4e799202bc1158854e52",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <a href=\"/w/index.php?title=Software_testing&amp;action=history&amp;dir=prev\" class=\"mw-lastlink\">oldest</a>",
+          "durationMs": 2297,
+          "page": "https://en.wikipedia.org/w/index.php?title=Software_testing&action=history",
+          "startedAtIso": "2026-05-08T02:55:13.965Z",
+          "completedAtIso": "2026-05-08T02:55:16.262Z",
+          "parameters": "{\n  \"selector\": {\n    \"element\": [\n      \"(.//a[normalize-space(.)='oldest'])[1]\",\n      \"div:nth-of-type(3) > [href='/w/index.php?title=Software_testing&action=history&dir=prev']\",\n      \"div:nth-of-type(3) > a.mw-lastlink\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        },
+        {
+          "id": "adhoc_37e9cb9f3a1a4fd096387c681cc313c9",
+          "toolName": "scrollPage",
+          "success": true,
+          "outcomeSummary": "Scrolled DOWN  for <html class=\"client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-disabled vector-feature-custom-font-size-clientpref--excluded vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-toc-not-available skin-theme-clientpref-thumb-standard vector-animations-ready ve-available\" lang=\"en\" dir=\"ltr\">Software testing: Revision histo...</html>",
+          "durationMs": 1462,
+          "page": "https://en.wikipedia.org/w/index.php?title=Software_testing&action=history&dir=prev",
+          "startedAtIso": "2026-05-08T02:55:16.875Z",
+          "completedAtIso": "2026-05-08T02:55:18.337Z",
+          "parameters": "{\n  \"direction\": \"DOWN\",\n  \"selector\": {\n    \"element\": [\n      \"html.client-js\",\n      \"html\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        },
+        {
+          "id": "adhoc_e2c251e7304645deb8069d0ac4bd0828",
+          "toolName": "scrollPage",
+          "success": true,
+          "outcomeSummary": "Scrolled DOWN (maximum amount scrolled) for <html class=\"client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-disabled vector-feature-custom-font-size-clientpref--excluded vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-toc-not-available skin-theme-clientpref-thumb-standard vector-animations-ready ve-available\" lang=\"en\" dir=\"ltr\">Software testing: Revision histo...</html>",
+          "durationMs": 1434,
+          "page": "https://en.wikipedia.org/w/index.php?title=Software_testing&action=history&dir=prev",
+          "startedAtIso": "2026-05-08T02:55:18.932Z",
+          "completedAtIso": "2026-05-08T02:55:20.366Z",
+          "parameters": "{\n  \"direction\": \"DOWN\",\n  \"selector\": {\n    \"element\": [\n      \"html.client-js\",\n      \"html\"\n    ]\n  },\n  \"maxScroll\": true,\n  \"rationale\": \"\"\n}"
+        },
+        {
+          "id": "adhoc_c246b987e79f4ef5ad1c74f0f25ed9bd",
+          "toolName": "markObjectiveComplete",
+          "success": true,
+          "outcomeSummary": "Objective has been marked as complete.",
+          "durationMs": 389,
+          "page": "https://en.wikipedia.org/w/index.php?title=Software_testing&action=history&dir=prev",
+          "startedAtIso": "2026-05-08T02:55:20.962Z",
+          "completedAtIso": "2026-05-08T02:55:21.351Z",
+          "parameters": "{\n  \"details\": \"The earliest (oldest) revision of the 'Software testing' article is 13:57, 5 December 2001.\",\n  \"rationale\": \"\"\n}"
+        }
+      ]
+    },
+    "testSnippet": "test('Inspect Wiki article history', async ({ page }) => {\n  await page.goto('https://en.wikipedia.org/wiki/Software_testing');\n  const oldestRevision = await page.ai(\n    'View the page history, sort by oldest, and find the earliest (oldest) revision shown in the list (the history page displays in \"time, day month year format\").',\n    {\n      schema: z.object({\n        day: z.number(),\n        month: z.number(),\n        year: z.number(),\n      }),\n    },\n  );\n  expect(oldestRevision.day).toEqual(5);\n  expect(oldestRevision.month).toEqual(12);\n  expect(oldestRevision.year).toEqual(2001);\n});",
+    "heuristics": {
+      "failureReason": "AUTOMATION_SCRIPT_ISSUE",
+      "evidence": [
+        "Falling back to automation script issue from generic error content.",
+        "Overriding shouldRetryAutomation to true based on prior self-heal success."
+      ],
+      "confidence": 0.4,
+      "failureSummary": "Test \"Inspect Wiki article history\" failed without an explicit error message.",
+      "shouldRetryAutomation": true,
+      "requiresCodeChange": true,
+      "requiresProductFix": false,
+      "remediationSteps": [
+        {
+          "category": "UPDATE_TEST_LOGIC",
+          "summary": "Inspect the failing automation logic.",
+          "details": "Review the Playwright test and any Donobu tool invocations around the failure.\nAlign the scripted steps with the intended business flow."
+        },
+        {
+          "category": "RETRY_AUTOMATION",
+          "summary": "Retry after updating the automation.",
+          "details": "Re-run the test or Donobu flow once the script adjustments are in place to validate the fix."
+        }
+      ],
+      "additionalDataRequests": [
+        {
+          "description": "Review Playwright trace, Donobu flow metadata, and browser console logs.",
+          "suggestedSources": [
+            "Playwright trace viewer",
+            "Donobu persistence layer"
+          ]
+        }
+      ],
+      "notes": "Historical data shows a prior run recovered on retry. Automated retry has high likelihood of success.",
+      "occurredDuringPageAi": true,
+      "staleCacheIndicators": {
+        "usedDeterministicMode": true,
+        "selectorFailedDuringPageAi": false,
+        "failedAfterPageAiCompleted": false,
+        "isRetryAttempt": false,
+        "quickFailurePattern": false,
+        "toolCallsShowSelectorIssues": false,
+        "assertionsFailedAfterSuccessfulPageAi": false
+      },
+      "historicalSignals": {
+        "flakinessScore": 0.2222222222222222,
+        "regressionLikelihood": 0,
+        "recentPassRate": 0.9473684210526315,
+        "priorSelfHealSuccess": true,
+        "cacheWasRecentlyValid": true
+      }
+    },
+    "flowHistory": {
+      "flowName": "wikipedia-assert.test.ts > Inspect Wiki article history",
+      "totalRuns": 19,
+      "successCount": 18,
+      "failureCount": 1,
+      "otherCount": 0,
+      "passRate": 0.9473684210526315,
+      "recentRuns": [
+        {
+          "id": "99d6b268-87d4-4a8b-bf82-3fd0425db92f",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1778173316672,
+          "completedAt": 1778173334665,
+          "durationMs": 17993
+        },
+        {
+          "id": "e63e395f-0f1e-4f87-baee-907be91f8316",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1778157927630,
+          "completedAt": 1778158167178,
+          "durationMs": 239548
+        },
+        {
+          "id": "84e3bdca-415d-4a95-a904-d4a33f87fde9",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1778071505692,
+          "completedAt": 1778071533768,
+          "durationMs": 28076
+        },
+        {
+          "id": "97424cae-b29f-4f85-ab2d-0caba6a381ac",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1778029544423,
+          "completedAt": 1778029564713,
+          "durationMs": 20290
+        },
+        {
+          "id": "a58df125-976d-46a1-98f9-71a431ebbd8c",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1778021968058,
+          "completedAt": 1778021989068,
+          "durationMs": 21010
+        },
+        {
+          "id": "a785a010-c3fe-4845-aef7-a13dff954fea",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1777984406331,
+          "completedAt": 1777984430800,
+          "durationMs": 24469
+        },
+        {
+          "id": "80631d24-726d-41cc-9344-223225146d32",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1777898506349,
+          "completedAt": 1777898530681,
+          "durationMs": 24332
+        },
+        {
+          "id": "0daba5bf-39e5-4141-9a97-3f1392cd00e6",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1777811053134,
+          "completedAt": 1777811077085,
+          "durationMs": 23951
+        },
+        {
+          "id": "8b42aec4-aa8d-45fe-8189-02b123cf8867",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1777724661469,
+          "completedAt": 1777724681916,
+          "durationMs": 20447
+        },
+        {
+          "id": "78430123-1153-4b99-81b9-3a5eaef86a65",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1777638430544,
+          "completedAt": 1777638451875,
+          "durationMs": 21331
+        }
+      ],
+      "currentStreak": {
+        "state": "SUCCESS",
+        "length": 1
+      },
+      "lastSuccessfulRunId": "99d6b268-87d4-4a8b-bf82-3fd0425db92f",
+      "queryWindowDays": 14,
+      "queriedAt": "2026-05-08T02:56:24.296Z"
+    }
+  },
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-08T02-52-01-895Z-5265630a/failure-screenshot-f499ae1d-5167-4425-b0e4-4a2076ce33fb.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-08T02-52-01-895Z-5265630a/baseline-screenshot-f499ae1d-5167-4425-b0e4-4a2076ce33fb.png"
+}
