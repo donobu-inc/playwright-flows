@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "evidenceId": "52e0ec0a-24e3-4497-8cf6-edac5ba2b382",
-  "runId": "2026-05-08T19-36-16-054Z-71e407f0",
-  "runDirectory": "/tmp/donobu-auto-heal-b5gRo2/triage/2026-05-08T19-36-16-054Z-71e407f0",
-  "collectedAtIso": "2026-05-08T19:36:44.140Z",
+  "evidenceId": "39336d09-2496-4c6d-93ad-35e41f3c6622",
+  "runId": "2026-05-09T12-23-56-585Z-a3e2767f",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-09T12-23-56-585Z-a3e2767f",
+  "collectedAtIso": "2026-05-09T12:24:41.261Z",
   "failureContext": {
     "testCase": {
       "title": "Checkly dev docs search",
@@ -13,9 +13,9 @@
       "expectedStatus": "passed",
       "retry": 0,
       "repeatEachIndex": 0,
-      "workerIndex": 0,
+      "workerIndex": 2,
       "timeout": 240000,
-      "duration": 22836,
+      "duration": 21769,
       "annotations": [],
       "autoHealEnabled": true
     },
@@ -30,7 +30,7 @@
         {
           "name": "screenshot",
           "contentType": "image/png",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/test-failed-1.png"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/test-failed-1.png"
         },
         {
           "name": "test-flow-metadata.json",
@@ -40,42 +40,42 @@
         {
           "name": "donobu-step-0-goToWebpage",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-0-goToWebpage-87752fa6d5c2d4548c6ab1e394e9bff69fccea1f.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-0-goToWebpage-5d3397703446d3891542f12f63a0dae3b0107d76.jpg"
         },
         {
           "name": "donobu-step-1-click",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-1-click-feddfb4fc36684cb304a555ed21ed6e2e17fb8a0.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-1-click-242f05fad9da526f00e5a9e2bc1710764ec86963.jpg"
         },
         {
           "name": "donobu-step-2-click",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-2-click-aa95b7202f26ed45db42aaf73dbc6296ff5761c8.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-2-click-fe8792f6dbe86d7b9a74e90effee266306c506ab.jpg"
         },
         {
           "name": "donobu-step-3-markObjectiveComplete",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-3-markObjectiveComplete-b89bdcd6743ecd64c34395cccf8a5458f2a41df8.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-3-markObjectiveComplete-2222bba37e1df1fbfc108e9a1a2198361c907685.jpg"
         },
         {
           "name": "donobu-step-4-click",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-4-click-11e74c7f8d39b1e486f5f02193baf51982ace3c1.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-4-click-bb51f074a3b0fb5e84fe1f2cd6f9e156621c8652.jpg"
         },
         {
           "name": "donobu-step-5-inputText",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-5-inputText-8c5fb8ab1315cf21867cf53a7142f5320177995f.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-5-inputText-490844045d01df49a0b5b993c6a9a63861fa99a4.jpg"
         },
         {
           "name": "donobu-step-6-click",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-6-click-a7617c8dd9371f12e3297fe14b46618f98c14d5f.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-6-click-07fac7b34ab073895a6c95cbefd9e14da882003d.jpg"
         },
         {
           "name": "donobu-step-7-markObjectiveComplete",
           "contentType": "image/jpeg",
-          "path": "/tmp/donobu-auto-heal-b5gRo2/playwright-output/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-7-markObjectiveComplete-d54ef44d266e7646f1cd5800fe67a986464b6b9b.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/checkly-Checkly-dev-docs-search-Donobu-based-Tests/attachments/donobu-step-7-markObjectiveComplete-22c4a9d35ea10597162022907472e4a84191b87e.jpg"
         },
         {
           "name": "donobu-step-summary",
@@ -96,7 +96,7 @@
     },
     "donobuFlow": {
       "metadata": {
-        "id": "eb81f0a7-1dfb-4e1f-96c6-6aa134249935",
+        "id": "7e3aff24-177a-43c9-9466-2d073a1bc4c8",
         "name": "checkly.test.ts > Checkly dev docs search",
         "runMode": "DETERMINISTIC",
         "state": "FAILED",
@@ -104,8 +104,8 @@
         "overallObjective": null,
         "allowedTools": [],
         "envVars": [],
-        "startedAt": 1778268979651,
-        "completedAt": 1778269002007,
+        "startedAt": 1778329457474,
+        "completedAt": 1778329478749,
         "maxToolCalls": null,
         "gptConfigName": null,
         "defaultMessageDuration": 250,
@@ -113,91 +113,91 @@
       },
       "recentToolCalls": [
         {
-          "id": "adhoc_182410a9ae3441f9a9cc25d530b1ed3c",
+          "id": "adhoc_d7b9dcf726d94029bc109821767ca35f",
           "toolName": "goToWebpage",
           "success": true,
           "outcomeSummary": "Successfully navigated to https://checklyhq.com",
-          "durationMs": 1805,
+          "durationMs": 2242,
           "page": "https://checklyhq.com",
-          "startedAtIso": "2026-05-08T19:36:20.437Z",
-          "completedAtIso": "2026-05-08T19:36:22.242Z",
+          "startedAtIso": "2026-05-09T12:24:18.159Z",
+          "completedAtIso": "2026-05-09T12:24:20.401Z",
           "parameters": "{\n  \"url\": \"https://checklyhq.com\"\n}"
         },
         {
-          "id": "adhoc_33022374029648f5a2753316cd7fbc01",
+          "id": "adhoc_842725705fe24bd2841eb540f6c51d98",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button class=\"nav-item\">Resources</button>",
-          "durationMs": 2793,
+          "durationMs": 2608,
           "page": "https://www.checklyhq.com/",
-          "startedAtIso": "2026-05-08T19:36:22.592Z",
-          "completedAtIso": "2026-05-08T19:36:25.385Z",
+          "startedAtIso": "2026-05-09T12:24:20.807Z",
+          "completedAtIso": "2026-05-09T12:24:23.415Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)\",\n      \"(.//button[normalize-space(.)='Resources'])[1]\",\n      \"nav.container > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_7f2bd934987c4c53af5034024c5fb66c",
+          "id": "adhoc_1960afa48afe484cb6b304a58f00d38c",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <a class=\"text-base font-medium text-gray-700 transition-colors hover:text-checkly-blue\" href=\"/docs/\">Documentation</a>",
-          "durationMs": 3632,
+          "durationMs": 2654,
           "page": "https://www.checklyhq.com/",
-          "startedAtIso": "2026-05-08T19:36:26.068Z",
-          "completedAtIso": "2026-05-08T19:36:29.700Z",
+          "startedAtIso": "2026-05-09T12:24:24.020Z",
+          "completedAtIso": "2026-05-09T12:24:26.674Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"(.//a[normalize-space(.)='Documentation'])[1]\",\n      \"li:nth-of-type(1) > [href='/docs/']\",\n      \"div:nth-of-type(1) > ul > li:nth-of-type(1) > a.text-base\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_71ba285800d147b8850b30b25c435d6e",
+          "id": "adhoc_8cbe8a8c37cc4b5fbfbae7128db1e932",
           "toolName": "markObjectiveComplete",
           "success": true,
           "outcomeSummary": "Objective has been marked as complete.",
-          "durationMs": 378,
+          "durationMs": 402,
           "page": "https://www.checklyhq.com/docs/",
-          "startedAtIso": "2026-05-08T19:36:30.330Z",
-          "completedAtIso": "2026-05-08T19:36:30.708Z",
+          "startedAtIso": "2026-05-09T12:24:27.381Z",
+          "completedAtIso": "2026-05-09T12:24:27.783Z",
           "parameters": "{\n  \"details\": \"I have successfully clicked on the 'Resources' dropdown menu and then clicked on the 'Documentation' option, which led to the developer documentation page at https://www.checklyhq.com/docs/.\",\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_f4153733dfe54fd190639f26d34f1e78",
+          "id": "adhoc_472840c865604aea9c32e4e1ff9f8f79",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button type=\"button\" class=\"group/search flex pointer-events-auto w-full items-center text-sm leading-6 h-9 pl-3.5 pr-3 text-gray-500 dark:text-white/50 dark:brightness-[1.1] dark:hover:brightness-[1.25] ring-gray-400/30 hover:ring-gray-600/30 dark:ring-gray-600/30 dark:hover:ring-gray-500/30 justify-between truncate gap-2 max-w-sm bg-gray-950/[0.03] dark:bg-white/[0.03] hover:bg-gray-950/10 dark:hover:bg-white/10 rounded-full shadow-none border-none ring-0 dark:ring-0\" id=\"search-bar-entry\" aria-label=\"Open search\">Search...Ctrl K</button>",
-          "durationMs": 1883,
+          "durationMs": 1936,
           "page": "https://www.checklyhq.com/docs/",
-          "startedAtIso": "2026-05-08T19:36:31.433Z",
-          "completedAtIso": "2026-05-08T19:36:33.316Z",
+          "startedAtIso": "2026-05-09T12:24:28.378Z",
+          "completedAtIso": "2026-05-09T12:24:30.314Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"#search-bar-entry\",\n      \"div:nth-of-type(2) > [aria-label='Open search']\",\n      \".//button[normalize-space(.)='Search...⌘K']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_9abfe309e230499ca0907196d1690a30",
+          "id": "adhoc_407c1b7c467b48efabc03c0e10459253",
           "toolName": "inputText",
           "success": true,
           "outcomeSummary": "Inputted text 'Playwright check suite' into: <input class=\"peer rounded-xl border outline-none border-gray-200 dark:border-white/10 bg-background-light dark:bg-background-dark h-full w-full outline-0 text-gray-950 dark:text-white placeholder:text-gray-400 placeholder:dark:text-white/50 tracking-tight pr-14 focus:border-slate-950 dark:focus:border-white transition\" placeholder=\"Search...\" autocomplete=\"off\" id=\"search-input\" role=\"combobox\" aria-expanded=\"false\" aria-autocomplete=\"list\" data-headlessui-state=\"focus autofocus\" data-autofocus=\"\" type=\"text\" aria-controls=\"headlessui-combobox-options-_r_a_\" style=\"padding-left: 44px;\" data-focus=\"\">",
-          "durationMs": 3970,
+          "durationMs": 3817,
           "page": "https://www.checklyhq.com/docs/",
-          "startedAtIso": "2026-05-08T19:36:33.915Z",
-          "completedAtIso": "2026-05-08T19:36:37.885Z",
+          "startedAtIso": "2026-05-09T12:24:30.881Z",
+          "completedAtIso": "2026-05-09T12:24:34.698Z",
           "parameters": "{\n  \"text\": \"Playwright check suite\",\n  \"finalizeWithSubmit\": false,\n  \"selector\": {\n    \"element\": [\n      \"#search-input\",\n      \"[placeholder='Search...']\",\n      \"[role='combobox']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_3c5d615ed3cb44a1a504de2576034c7d",
+          "id": "adhoc_5cd48c70d386418b9cee2b45670486d2",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <a href=\"/docs/constructs/playwright-check#playwright-check-suite\" class=\"cursor-pointer relative rounded-xl flex gap-3 px-2.5 py-2 items-center\">ConstructsDETECTPlaywright Check...</a>",
-          "durationMs": 1812,
+          "durationMs": 1855,
           "page": "https://www.checklyhq.com/docs/?search=Playwright+check+suite",
-          "startedAtIso": "2026-05-08T19:36:38.544Z",
-          "completedAtIso": "2026-05-08T19:36:40.356Z",
+          "startedAtIso": "2026-05-09T12:24:35.290Z",
+          "completedAtIso": "2026-05-09T12:24:37.145Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"[href='/docs/constructs/playwright-check#playwright-check-suite']\",\n      \"div:nth-of-type(2) > div > a.cursor-pointer\",\n      \"[role='listbox'] > div:nth-of-type(2) > div > a\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_7d24399823e349c5a5d3369d749bbf13",
+          "id": "adhoc_9630923b1aba4c7ebca65f238696adae",
           "toolName": "markObjectiveComplete",
           "success": true,
           "outcomeSummary": "Objective has been marked as complete.",
-          "durationMs": 353,
+          "durationMs": 457,
           "page": "https://www.checklyhq.com/docs/constructs/playwright-check/#playwright-check-suite",
-          "startedAtIso": "2026-05-08T19:36:41.013Z",
-          "completedAtIso": "2026-05-08T19:36:41.366Z",
+          "startedAtIso": "2026-05-09T12:24:37.681Z",
+          "completedAtIso": "2026-05-09T12:24:38.138Z",
           "parameters": "{\n  \"details\": \"I searched for \\\"Playwright check suite\\\" and selected the \\\"Constructs > DETECT\\\" suggestion. This navigated me to the \\\"Playwright Check Suites\\\" documentation page under the Constructs section.\",\n  \"rationale\": \"\"\n}"
         }
       ]
@@ -248,9 +248,9 @@
         "assertionsFailedAfterSuccessfulPageAi": true
       },
       "historicalSignals": {
-        "flakinessScore": 0.3333333333333333,
-        "regressionLikelihood": 0.7789473684210526,
-        "recentPassRate": 0.631578947368421,
+        "flakinessScore": 0.2222222222222222,
+        "regressionLikelihood": 0.7473684210526317,
+        "recentPassRate": 0.5789473684210527,
         "priorSelfHealSuccess": true,
         "cacheWasRecentlyValid": true
       }
@@ -258,11 +258,19 @@
     "flowHistory": {
       "flowName": "checkly.test.ts > Checkly dev docs search",
       "totalRuns": 19,
-      "successCount": 12,
-      "failureCount": 7,
+      "successCount": 11,
+      "failureCount": 8,
       "otherCount": 0,
-      "passRate": 0.631578947368421,
+      "passRate": 0.5789473684210527,
       "recentRuns": [
+        {
+          "id": "eb81f0a7-1dfb-4e1f-96c6-6aa134249935",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1778268979651,
+          "completedAt": 1778269002007,
+          "durationMs": 22356
+        },
         {
           "id": "6db3e328-3126-491c-89b3-eec5616839d3",
           "state": "FAILED",
@@ -334,25 +342,17 @@
           "startedAt": 1778029484558,
           "completedAt": 1778029507747,
           "durationMs": 23189
-        },
-        {
-          "id": "4ce3eb43-7a33-4584-81c3-142e4bc5066c",
-          "state": "SUCCESS",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1778021898247,
-          "completedAt": 1778021920775,
-          "durationMs": 22528
         }
       ],
       "currentStreak": {
         "state": "FAILED",
-        "length": 5
+        "length": 6
       },
       "lastSuccessfulRunId": "5808224a-26cb-458b-a1b5-8598e94c31f1",
       "queryWindowDays": 14,
-      "queriedAt": "2026-05-08T19:36:43.636Z"
+      "queriedAt": "2026-05-09T12:24:40.215Z"
     }
   },
-  "failureScreenshotPath": "/tmp/donobu-auto-heal-b5gRo2/triage/2026-05-08T19-36-16-054Z-71e407f0/failure-screenshot-52e0ec0a-24e3-4497-8cf6-edac5ba2b382.png",
-  "baselineScreenshotPath": "/tmp/donobu-auto-heal-b5gRo2/triage/2026-05-08T19-36-16-054Z-71e407f0/baseline-screenshot-52e0ec0a-24e3-4497-8cf6-edac5ba2b382.png"
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-09T12-23-56-585Z-a3e2767f/failure-screenshot-39336d09-2496-4c6d-93ad-35e41f3c6622.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-09T12-23-56-585Z-a3e2767f/baseline-screenshot-39336d09-2496-4c6d-93ad-35e41f3c6622.png"
 }

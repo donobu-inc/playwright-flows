@@ -6,23 +6,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| /home/runner/work/playwright-flows/playwright-flows/tests/auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts |  |  | 1 ❌ |  |  |  | 25s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 36s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 15s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts |  |  | 1 ❌ |  |  |  | 1m 0s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/account-signup.test.ts | 1 ✅ |  |  |  |  |  | 51s |
 | /home/runner/work/playwright-flows/playwright-flows/tests/starbucks.test.ts | 1 ✅ |  |  |  |  |  | 9s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 38s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts | 1 ✅ |  |  |  |  |  | 2m 0s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 21s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 18s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 19s |
 | /home/runner/work/playwright-flows/playwright-flows/tests/ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
-| /home/runner/work/playwright-flows/playwright-flows/tests/shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **5m 58s** |
+| /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts | 1 ✅ |  |  |  |  |  | 1m 35s |
+| /home/runner/work/playwright-flows/playwright-flows/tests/shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 1s** |
 
 ## /home/runner/work/playwright-flows/playwright-flows/tests/auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 15s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ❌ Failed  
-**Duration**: 25s  
+**Duration**: 1m 0s  
 
 <details>
 <summary>⚠️ Error Details</summary>
@@ -64,7 +64,7 @@ Received: "https://www.checklyhq.com/docs/constructs/playwright-check/#playwrigh
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 36s  
+**Duration**: 51s  
 
 ---
 
@@ -81,17 +81,10 @@ Received: "https://www.checklyhq.com/docs/constructs/playwright-check/#playwrigh
 
 ### Fill out a survey
 
-**Status**: ✅ Passed  
-**Duration**: 38s  
+**Status**: ❤️‍🩹 Healed  
+**Duration**: 1m 18s  
+> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
----
-
-## /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts
-
-### Conversational bot compliance test - briefcase.chat
-
-**Status**: ✅ Passed  
-**Duration**: 2m 0s  
 
 ---
 
@@ -100,7 +93,7 @@ Received: "https://www.checklyhq.com/docs/constructs/playwright-check/#playwrigh
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 19s  
 
 ---
 
@@ -113,13 +106,26 @@ Received: "https://www.checklyhq.com/docs/constructs/playwright-check/#playwrigh
 
 ---
 
+## /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts
+
+### Conversational bot compliance test - briefcase.chat
+
+**Status**: ✅ Passed  
+**Duration**: 1m 35s  
+
+---
+
 ## /home/runner/work/playwright-flows/playwright-flows/tests/shopping/cart-checkout.test.ts
 
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
-_Report generated on 5/8/2026, 7:37:02 PM by Donobu_
+### Auto-Healed Tests
+
+- ❤️‍🩹 /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts::Donobu-based Tests::
+
+_Report generated on 5/9/2026, 12:28:32 PM by Donobu_
