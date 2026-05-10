@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-05-10T12:26:44.650Z",
+  "plan": {
+    "failureSummary": "The AI agent failed to find the 'Submit' button because the page layout and field labels have changed, making the cached deterministic instructions stale.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Deterministic mode used with stale cache (usedDeterministicMode: true)",
+      "UI redesign detected: 'Last Name' label changed to 'Your Name' in failure screenshot",
+      "Required field validation errors visible for fields the AI attempted to fill with outdated selectors",
+      "Step 8 'click' on Submit failed because the button was likely not rendered or identified correctly due to prior validation failures",
+      "Flexible semantic intent ('Fill out all survey questions') suggests recovery is likely with a fresh AI run"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear AI cache and retry test",
+        "details": "Delete the local AI cache for this test and re-run. This will force the agent to re-map the form fields and adapt to the new 'Occupation' and 'Interests' fields."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Review and refine AI prompt for new form structure",
+        "details": "If the AI still struggles after a cache clear, update the prompt to explicitly mention the new fields if they require specific data formats."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "Visual comparison between the tool call parameters and the failure screenshot confirms a UI redesign: 'Last Name' changed to 'Your Name', 'Email Address' to 'Contact Email', and new required fields like 'Occupation' appeared. The deterministic cache is pointing to non-existent or incorrect elements.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 30765,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-05-10T12-23-35-985Z-059b9600",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-10T12-23-35-985Z-059b9600",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-10T12-23-35-985Z-059b9600/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-350fdde6-89c7-459f-9cc8-53d1b72c1442.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

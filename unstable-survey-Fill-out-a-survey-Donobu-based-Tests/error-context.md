@@ -12,15 +12,15 @@
 # Error details
 
 ```
-Error: inputText execution failed: {
+Error: click execution failed: {
   "isSuccessful": false,
   "forLlm": "FAILED! Unable to resolve HTML element to operate with.",
   "metadata": {
     "selector": {
       "element": [
-        "#\\:r0\\:-form-item",
-        "[data-testid='input-lastname']",
-        ".//label[normalize-space()='Last Name *']/following-sibling::input"
+        ".//button[normalize-space(.)='Submit']",
+        "div.mt-8 > button:nth-of-type(2)",
+        "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)"
       ]
     }
   }
@@ -47,49 +47,54 @@ Error: inputText execution failed: {
   - generic [ref=e24]:
     - generic [ref=e25]: "Current Time:"
     - generic [ref=e26]:
-      - generic [ref=e27]: 12:25:13
+      - generic [ref=e27]: 12:25:15
       - generic [ref=e28]: Set 2
   - generic [ref=e29]:
     - heading "Tell us about yourself" [level=2] [ref=e30]
     - generic [ref=e31]:
       - generic [ref=e32]:
         - generic [ref=e33]: Your Name *
-        - textbox "Your Name *" [ref=e34]:
+        - textbox "Your Name *" [active] [ref=e34]:
           - /placeholder: Enter your name
-      - generic [ref=e35]:
-        - generic [ref=e36]: Contact Email *
-        - textbox "Contact Email *" [ref=e37]:
+        - paragraph [ref=e35]: Name is required
+      - generic [ref=e36]:
+        - generic [ref=e37]: Contact Email *
+        - textbox "Contact Email *" [ref=e38]:
           - /placeholder: Enter your contact email
-      - generic [ref=e38]:
-        - generic [ref=e39]: Occupation *
-        - combobox "Occupation *" [ref=e40] [cursor=pointer]:
+        - paragraph [ref=e39]: Please enter a valid email
+      - generic [ref=e40]:
+        - generic [ref=e41]: Occupation *
+        - combobox "Occupation *" [ref=e42] [cursor=pointer]:
           - generic: Select your occupation
-          - img [ref=e41]
-        - combobox [ref=e43]
-      - generic [ref=e44]:
-        - generic [ref=e46]: What interests you? *
-        - generic [ref=e47]:
-          - generic [ref=e48]:
-            - checkbox "Technology" [ref=e49] [cursor=pointer]
-            - checkbox
-            - generic [ref=e50]: Technology
+          - img [ref=e43]
+        - combobox [ref=e45]
+        - paragraph [ref=e46]: Occupation is required
+      - generic [ref=e47]:
+        - generic [ref=e49]: What interests you? *
+        - generic [ref=e50]:
           - generic [ref=e51]:
-            - checkbox "Science" [ref=e52] [cursor=pointer]
+            - checkbox "Technology" [ref=e52] [cursor=pointer]
             - checkbox
-            - generic [ref=e53]: Science
+            - generic [ref=e53]: Technology
           - generic [ref=e54]:
-            - checkbox "Arts & Culture" [ref=e55] [cursor=pointer]
+            - checkbox "Science" [ref=e55] [cursor=pointer]
             - checkbox
-            - generic [ref=e56]: Arts & Culture
+            - generic [ref=e56]: Science
           - generic [ref=e57]:
-            - checkbox "Sports & Fitness" [ref=e58] [cursor=pointer]
+            - checkbox "Arts & Culture" [ref=e58] [cursor=pointer]
             - checkbox
-            - generic [ref=e59]: Sports & Fitness
-      - generic [ref=e60]:
+            - generic [ref=e59]: Arts & Culture
+          - generic [ref=e60]:
+            - checkbox "Sports & Fitness" [ref=e61] [cursor=pointer]
+            - checkbox
+            - generic [ref=e62]: Sports & Fitness
+        - paragraph [ref=e63]: Please select at least one interest
+      - generic [ref=e64]:
         - text: Suggestions (Optional)
-        - textbox "Suggestions (Optional)" [ref=e61]:
+        - textbox "Suggestions (Optional)" [ref=e65]:
           - /placeholder: Share any suggestions
-      - button "Next" [ref=e63] [cursor=pointer]
+          - text: This is a great survey experience!
+      - button "Next" [ref=e67] [cursor=pointer]
   - region "Notifications (F8)":
     - list
 ```
@@ -134,8 +139,7 @@ Error: inputText execution failed: {
   35  |       maxToolCalls: 50,
   36  |       run: async ({ page }) => {
   37  |         // Entering a fake last name to progress through the survey.
-> 38  |         await page
-      |         ^ Error: inputText execution failed: {
+  38  |         await page
   39  |           .find('#\\:r0\\:-form-item', {
   40  |             failover: [
   41  |               "[data-testid='input-lastname']",
@@ -195,7 +199,8 @@ Error: inputText execution failed: {
   95  |           .click('left');
   96  | 
   97  |         // Clicking the 'Submit' button to finalize the survey submission and reach the 'Thank You' page.
-  98  |         await page
+> 98  |         await page
+      |         ^ Error: click execution failed: {
   99  |           .find(".//button[normalize-space(.)='Submit']", {
   100 |             failover: [
   101 |               'div.mt-8 > button:nth-of-type(2)',
