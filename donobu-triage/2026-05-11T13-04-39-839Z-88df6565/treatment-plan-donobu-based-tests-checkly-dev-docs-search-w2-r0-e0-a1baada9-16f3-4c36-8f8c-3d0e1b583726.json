@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-05-11T13:07:47.076Z",
+  "plan": {
+    "failureSummary": "The test failed because the page URL included a hash fragment (#playwright-check-suite) which was not expected by the strict equality assertion. The AI correctly selected the search result 'Constructs > DETECT', which links directly to that section.",
+    "failureReason": "ASSERTION_DRIFT",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Assertion mismatch: Expected URL without hash, Received URL with hash #playwright-check-suite",
+      "AI successfully completed its objective of selecting the specific search match",
+      "Recent history shows a persistent failure streak (9 runs), indicating a regression in test expectations or stable app change"
+    ],
+    "remediationSteps": [
+      {
+        "category": "REFINE_ASSERTIONS",
+        "summary": "Relax the URL assertion to accommodate hash fragments.",
+        "details": "Update the assertion at line 13 of checkly.test.ts to use .toContain('https://www.checklyhq.com/docs/constructs/playwright-check/') or to explicitly expect the hash fragment if that specific section is always the target."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": false,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The application's search functionality is providing deep links to specific sections within the documentation. The test assertion expect(page.url()).toEqual(...) is too brittle for this behavior. Converting the assertion to use .toContain() or allowing the hash would resolve the issue. History shows a 9-run failure streak, confirming this is a persistent mismatch between test expectations and current app behavior.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 23794,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-05-11T13-04-39-839Z-88df6565",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-11T13-04-39-839Z-88df6565",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-11T13-04-39-839Z-88df6565/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-a1baada9-16f3-4c36-8f8c-3d0e1b583726.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
