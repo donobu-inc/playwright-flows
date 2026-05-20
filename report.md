@@ -4,23 +4,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 15s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  | 25s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 0s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 9s |
-| conversational-bot.test.ts | 1 ✅ |  |  |  |  |  | 1m 11s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 46s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 58s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 10s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 47s |
+| conversational-bot.test.ts | 1 ✅ |  |  |  |  |  | 1m 30s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 22s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 12s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 21s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| **TOTAL** | **9 ✅** | **0 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **4m 42s** |
+| **TOTAL** | **9 ✅** | **0 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **5m 2s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 15s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 0s  
+**Duration**: 58s  
 
 ---
 
@@ -47,16 +47,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
-
----
-
-## conversational-bot.test.ts
-
-### Conversational bot compliance test - briefcase.chat
-
-**Status**: ✅ Passed  
-**Duration**: 1m 11s  
+**Duration**: 10s  
 
 ---
 
@@ -65,7 +56,25 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 46s  
+**Duration**: 47s  
+
+---
+
+## conversational-bot.test.ts
+
+### Conversational bot compliance test - briefcase.chat
+
+**Status**: ✅ Passed  
+**Duration**: 1m 30s  
+
+---
+
+## wikipedia-assert.test.ts
+
+### Inspect Wiki article history
+
+**Status**: ✅ Passed  
+**Duration**: 22s  
 
 ---
 
@@ -78,15 +87,6 @@
 
 ---
 
-## wikipedia-assert.test.ts
-
-### Inspect Wiki article history
-
-**Status**: ✅ Passed  
-**Duration**: 21s  
-
----
-
 ## shopping/cart-checkout.test.ts
 
 ### Test for https://www.saucedemo.com/cart.html
@@ -96,4 +96,4 @@
 
 ---
 
-_Report generated on 5/20/2026, 3:00:16 AM by Donobu_
+_Report generated on 5/20/2026, 1:00:14 PM by Donobu_
