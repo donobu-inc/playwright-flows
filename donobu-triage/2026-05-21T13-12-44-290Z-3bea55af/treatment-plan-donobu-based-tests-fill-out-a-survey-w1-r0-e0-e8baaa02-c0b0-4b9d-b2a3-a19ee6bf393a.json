@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-05-21T13:15:54.818Z",
+  "plan": {
+    "failureSummary": "The deterministic page.ai cache attempted to interact with a 'Select your occupation' combobox, which does not exist on the current version of the dynamic survey page (Set 1 contains 'Age Group' instead), resulting in a selector resolution failure.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "Selector './/button[normalize-space(.)=\\'Select your occupation\\']' failed to resolve",
+      "Failure screenshot shows 'Set 1' containing 'Age Group' instead of an occupation selector",
+      "Historical run pattern shows alternating successes and quick failures, typical of dynamic page variations invalidating cached steps",
+      "The semantic intent of the AI prompt ('Fill out the all of the survey questions...') is highly flexible and can easily adapt on retry if cache is cleared"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and re-run automation",
+        "details": "Clear the Page AI cache and retry the test execution. This forces the agent to run autonomously and adapt to the current layout/questions instead of using the stale/mismatched cache."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Disable deterministic/cached mode for this test case",
+        "details": "Since this survey application is dynamically changing by design, disable deterministic caching/runMode for this specific test so that page.ai always evaluates the form fields autonomously on every execution."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The 'unstable-survey' application serves dynamic sets of questions (as indicated by 'Set 1' and 'unstable-survey' name). Running in DETERMINISTIC mode forces the test to replay cached steps from previous sets, causing it to fail when a different form layout loads. Clearing the cache allows the autonomous agent to dynamically adapt to the currently visible questions. For a permanent fix, deterministic mode/caching should be disabled for this test.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 26831,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-05-21T13-12-44-290Z-3bea55af",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-21T13-12-44-290Z-3bea55af",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-05-21T13-12-44-290Z-3bea55af/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-e8baaa02-c0b0-4b9d-b2a3-a19ee6bf393a.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
