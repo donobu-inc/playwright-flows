@@ -4,23 +4,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 13s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  | 23s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 0s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 54s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  | 8s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 46s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 44s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 10s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
-| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 25s** |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 18s |
+| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 15s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 14s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 0s  
+**Duration**: 54s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 46s  
+**Duration**: 44s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
@@ -74,7 +74,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 10s  
 
 ---
 
@@ -92,8 +92,8 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 19s  
+**Duration**: 18s  
 
 ---
 
-_Report generated on 5/22/2026, 12:58:55 PM by Donobu_
+_Report generated on 5/23/2026, 12:30:04 PM by Donobu_
