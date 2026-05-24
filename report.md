@@ -4,23 +4,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  | 23s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 54s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 8s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 44s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 19s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 10s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 13s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  | 24s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 56s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 7s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 42s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 21s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 18s |
-| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 15s** |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 19s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 13s  
 
 ---
 
@@ -29,7 +29,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 23s  
+**Duration**: 24s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 54s  
+**Duration**: 56s  
 
 ---
 
@@ -47,7 +47,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 8s  
+**Duration**: 7s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 44s  
+**Duration**: 42s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 19s  
+**Duration**: 21s  
 
 ---
 
@@ -74,7 +74,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 10s  
+**Duration**: 11s  
 
 ---
 
@@ -92,8 +92,8 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 18s  
+**Duration**: 19s  
 
 ---
 
-_Report generated on 5/23/2026, 12:30:04 PM by Donobu_
+_Report generated on 5/24/2026, 12:32:53 PM by Donobu_
