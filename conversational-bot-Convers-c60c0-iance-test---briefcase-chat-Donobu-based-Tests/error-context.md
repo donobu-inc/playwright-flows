@@ -30,43 +30,34 @@ Test timeout of 240000ms exceeded.
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e21]:
-          - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: What is the difference between...
-            - button [ref=e26]:
-              - img [ref=e27]
-          - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: New Chat
-            - button [ref=e34]:
-              - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: What is a non-disclosure agree...
+          - button [ref=e26]:
+            - img [ref=e27]
+      - button "Settings" [ref=e31] [cursor=pointer]:
+        - img [ref=e32]
         - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e46]:
-        - generic [ref=e47]:
-          - paragraph [ref=e50]: What is the difference between an LLC and a C-Corp?
-          - generic [ref=e52]: T
-        - generic [ref=e53]:
-          - paragraph [ref=e56]: When is it better to form an LLC vs. a C-Corp
-          - generic [ref=e58]: T
-      - paragraph [ref=e60]:
-        - text: You have 3 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e61] [cursor=pointer]:
+    - generic [ref=e35]:
+      - generic [ref=e39]:
+        - paragraph [ref=e42]: What is a non-disclosure agreement (NDA) used for?
+        - generic [ref=e44]: T
+      - paragraph [ref=e46]:
+        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e47] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e62]:
-        - generic [ref=e64]:
-          - textbox "Type your message..." [active] [ref=e65]
-          - button [ref=e66] [cursor=pointer]:
-            - img [ref=e67]
+      - generic [ref=e48]:
+        - generic [ref=e50]:
+          - textbox "Type your message..." [active] [ref=e51]: What is a contract?
+          - button [ref=e52] [cursor=pointer]:
+            - img [ref=e53]
           - button [disabled]:
             - img
-        - generic [ref=e69]:
+        - generic [ref=e55]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e70] [cursor=pointer]:
-            - img [ref=e71]
+          - button [ref=e56] [cursor=pointer]:
+            - img [ref=e57]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e73]
+  - alert [ref=e59]
 ```

@@ -4,23 +4,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  | 24s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 56s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 12s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  | 23s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 2s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  | 7s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 42s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 21s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 48s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 18s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 10s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
-| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 19s** |
+| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 25s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 12s  
 
 ---
 
@@ -29,7 +29,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 24s  
+**Duration**: 23s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 56s  
+**Duration**: 1m 2s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 42s  
+**Duration**: 48s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 18s  
 
 ---
 
@@ -74,7 +74,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 10s  
 
 ---
 
@@ -96,4 +96,4 @@
 
 ---
 
-_Report generated on 5/24/2026, 12:32:53 PM by Donobu_
+_Report generated on 5/25/2026, 1:19:06 PM by Donobu_
