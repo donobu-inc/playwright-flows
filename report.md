@@ -4,23 +4,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 12s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  | 23s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 2s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 7s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 48s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 18s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 10s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  | 22s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 56s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 10s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 42s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 20s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
-| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 25s** |
+| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 17s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 14s  
 
 ---
 
@@ -29,7 +29,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 23s  
+**Duration**: 22s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 2s  
+**Duration**: 56s  
 
 ---
 
@@ -47,7 +47,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 7s  
+**Duration**: 10s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 48s  
+**Duration**: 42s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 18s  
+**Duration**: 20s  
 
 ---
 
@@ -74,7 +74,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 10s  
+**Duration**: 11s  
 
 ---
 
@@ -96,4 +96,4 @@
 
 ---
 
-_Report generated on 5/25/2026, 1:19:06 PM by Donobu_
+_Report generated on 5/26/2026, 1:09:51 PM by Donobu_

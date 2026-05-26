@@ -31,7 +31,7 @@ Test timeout of 240000ms exceeded.
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What is a non-disclosure agree...
+          - generic [ref=e24]: What is the difference between...
           - button [ref=e26]:
             - img [ref=e27]
       - button "Settings" [ref=e31] [cursor=pointer]:
@@ -39,7 +39,7 @@ Test timeout of 240000ms exceeded.
         - text: Settings
     - generic [ref=e35]:
       - generic [ref=e39]:
-        - paragraph [ref=e42]: What is a non-disclosure agreement (NDA) used for?
+        - paragraph [ref=e42]: What is the difference between an LLC and a C-Corp?
         - generic [ref=e44]: T
       - paragraph [ref=e46]:
         - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
@@ -48,7 +48,7 @@ Test timeout of 240000ms exceeded.
         - text: .
       - generic [ref=e48]:
         - generic [ref=e50]:
-          - textbox "Type your message..." [active] [ref=e51]: What is a contract?
+          - textbox "Type your message..." [active] [ref=e51]: What are the requirements to form an LLC?
           - button [ref=e52] [cursor=pointer]:
             - img [ref=e53]
           - button [disabled]:
