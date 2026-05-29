@@ -6,23 +6,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 12s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  | 24s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 2s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 8s |
-| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 26s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 22s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 12s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 57s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 9s |
+| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 19s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 20s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 11s** |
+| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 57s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 12s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 2s  
+**Duration**: 57s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 8s  
+**Duration**: 9s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 26s  
+**Duration**: 1m 19s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 22s  
+**Duration**: 20s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 11s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::
 
-_Report generated on 5/28/2026, 1:26:21 PM by Donobu_
+_Report generated on 5/29/2026, 1:17:04 PM by Donobu_

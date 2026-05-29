@@ -38,26 +38,39 @@ Test timeout of 240000ms exceeded.
         - img [ref=e32]
         - text: Settings
     - generic [ref=e35]:
-      - generic [ref=e39]:
-        - paragraph [ref=e42]: What is the difference between a trademark and a copyright?
-        - generic [ref=e44]: A
-      - paragraph [ref=e46]:
-        - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e47] [cursor=pointer]:
+      - generic [ref=e38]:
+        - heading "Welcome to Briefcase" [level=2] [ref=e39]
+        - paragraph [ref=e40]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e41]:
+          - generic [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]: Explain the difference between RSUs and ISOs
+            - img [ref=e44]
+          - generic [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e49]
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: Summarize the terms of this SAFE agreement
+            - img [ref=e54]
+          - generic [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: How does non-solicitation work in California
+            - img [ref=e59]
+      - paragraph [ref=e63]:
+        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e64] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e48]:
-        - generic [ref=e50]:
-          - textbox "Type your message..." [active] [ref=e51]
-          - button [ref=e52] [cursor=pointer]:
-            - img [ref=e53]
+      - generic [ref=e65]:
+        - generic [ref=e67]:
+          - textbox "Type your message..." [active] [ref=e68]
+          - button [ref=e69] [cursor=pointer]:
+            - img [ref=e70]
           - button [disabled]:
             - img
-        - generic [ref=e55]:
+        - generic [ref=e72]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e56] [cursor=pointer]:
-            - img [ref=e57]
+          - button [ref=e73] [cursor=pointer]:
+            - img [ref=e74]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e59]
+  - alert [ref=e76]
 ```
