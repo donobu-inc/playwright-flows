@@ -6,23 +6,23 @@
 
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 12s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  | 24s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 57s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 19s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 14s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  | 23s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 36s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 8s |
+| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 32s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 10s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 57s** |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 48s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 14s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 24s  
+**Duration**: 23s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 57s  
+**Duration**: 1m 36s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 8s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 19s  
+**Duration**: 1m 32s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 10s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::
 
-_Report generated on 5/29/2026, 1:17:04 PM by Donobu_
+_Report generated on 5/30/2026, 12:37:14 PM by Donobu_
