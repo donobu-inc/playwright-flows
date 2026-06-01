@@ -18,7 +18,7 @@ Test timeout of 240000ms exceeded.
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
+- generic [ref=e1]:
   - generic [ref=e2]:
     - generic [ref=e4]:
       - generic [ref=e5]:
@@ -36,7 +36,7 @@ Test timeout of 240000ms exceeded.
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
+            - generic [ref=e32]: What are the requirements for ...
             - button [ref=e34]:
               - img [ref=e35]
       - button "Settings" [ref=e39] [cursor=pointer]:
@@ -60,13 +60,13 @@ Test timeout of 240000ms exceeded.
             - generic [ref=e66]: How does non-solicitation work in California
             - img [ref=e67]
       - paragraph [ref=e71]:
-        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
         - link "settings" [ref=e72] [cursor=pointer]:
           - /url: "#"
         - text: .
       - generic [ref=e73]:
         - generic [ref=e75]:
-          - textbox "Type your message..." [ref=e76]
+          - textbox "Type your message..." [active] [ref=e76]
           - button [ref=e77] [cursor=pointer]:
             - img [ref=e78]
           - button [disabled]:
