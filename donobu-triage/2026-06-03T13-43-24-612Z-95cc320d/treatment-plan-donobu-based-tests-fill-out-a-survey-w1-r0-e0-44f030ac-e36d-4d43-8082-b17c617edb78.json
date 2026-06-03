@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-06-03T13:49:02.250Z",
+  "plan": {
+    "failureSummary": "The deterministic cache contains actions and selectors (such as matching 'Last Name *') that do not match the current survey layout ('Your Name *'). This caused the Name field to remain unfilled, triggering a validation error ('Name is required') and preventing the form from proceeding to the next step. Consequently, the subsequent 'Submit' button could not be resolved.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "The test failed because the 'Submit' button was not found, as the form was stuck on the first step due to 'Name is required' validation error.",
+      "The deterministic cache tried to fill 'Last Name *' but the current page displays 'Your Name *'.",
+      "This is an unstable/dynamic survey application that alters its form structure or field labels between loads.",
+      "Deterministic execution fails because it relies on cached selectors and field structures that are no longer valid for the current page variation."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page AI cache and retry the test",
+        "details": "Trigger a retry with 'clearPageAiCache' set to true. This forces page.ai to run in autonomous mode, allowing the LLM to dynamically inspect the current form fields and adapt to the 'Your Name *' layout rather than relying on stale cached steps."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Disable deterministic caching/runMode for this highly dynamic test",
+        "details": "Since this application ('unstable-survey') is designed to have dynamic/changing form layouts, deterministic caching should be disabled for this test to ensure it always runs autonomously and adapts to UI changes."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The survey application dynamically alters its fields (e.g., 'Your Name' vs 'Last Name') between sessions. Clearing the page.ai cache is highly likely to fix the immediate run, but disabling deterministic mode for this test is recommended for long-term stability.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 43926,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-06-03T13-43-24-612Z-95cc320d",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-03T13-43-24-612Z-95cc320d",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-03T13-43-24-612Z-95cc320d/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-44f030ac-e36d-4d43-8082-b17c617edb78.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
