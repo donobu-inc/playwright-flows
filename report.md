@@ -8,14 +8,14 @@
 | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 12s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  | 22s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 4s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 2m 6s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 21s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 6s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 8s |
+| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 29s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 22s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
-| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 49s** |
+| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 15s** |
 
 ## auth/sauce-login.test.ts
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 4s  
+**Duration**: 1m 6s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 8s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 2m 6s  
+**Duration**: 1m 29s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 22s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::
 
-_Report generated on 6/3/2026, 1:51:12 PM by Donobu_
+_Report generated on 6/4/2026, 1:16:50 PM by Donobu_
