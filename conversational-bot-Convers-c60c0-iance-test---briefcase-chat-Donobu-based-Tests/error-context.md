@@ -32,11 +32,11 @@ Test timeout of 240000ms exceeded.
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e21]:
           - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: Explain the difference between...
+            - generic [ref=e24]: New Chat
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: New Chat
+            - generic [ref=e32]: What is the difference between...
             - button [ref=e34]:
               - img [ref=e35]
       - button "Settings" [ref=e39] [cursor=pointer]:
@@ -60,7 +60,7 @@ Test timeout of 240000ms exceeded.
             - generic [ref=e66]: How does non-solicitation work in California
             - img [ref=e67]
       - paragraph [ref=e71]:
-        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
         - link "settings" [ref=e72] [cursor=pointer]:
           - /url: "#"
         - text: .

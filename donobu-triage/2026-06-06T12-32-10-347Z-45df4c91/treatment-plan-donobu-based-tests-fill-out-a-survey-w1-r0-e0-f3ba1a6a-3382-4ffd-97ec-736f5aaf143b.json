@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-06-06T12:37:32.621Z",
+  "plan": {
+    "failureSummary": "The deterministic page.ai run failed because it attempted to use cached selectors for a different form layout variation. The page contains dynamic sets of questions (this run showed Set 1 with Last Name, Email, and Age Group), whereas the cache expected 'Select your occupation' combobox.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "deterministic_mode_used",
+      "cached_selector_not_found_on_dynamic_form",
+      "form_fields_variation_between_runs"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry automation",
+        "details": "Clear the page.ai cache for this test file so that the autonomous agent can freshly inspect the active form fields and dynamically fill out the survey questions presented in this run."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The 'unstable-survey' application presents different form fields dynamically. Running in DETERMINISTIC mode replays cached actions which fail when the form structure changes. Clearing the page.ai cache and running in active/autonomous mode allows page.ai to dynamically inspect and fill the fields presented.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 24533,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-06-06T12-32-10-347Z-45df4c91",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-06T12-32-10-347Z-45df4c91",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-06T12-32-10-347Z-45df4c91/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-f3ba1a6a-3382-4ffd-97ec-736f5aaf143b.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
