@@ -30,39 +30,38 @@ Test timeout of 240000ms exceeded.
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e21]:
-          - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: What is the difference between...
-            - button [ref=e26]:
-              - img [ref=e27]
-          - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
-            - button [ref=e34]:
-              - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: What is a SAFE agreement?
+          - button [ref=e26]:
+            - img [ref=e27]
+      - button "Settings" [ref=e31] [cursor=pointer]:
+        - img [ref=e32]
         - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e47]:
-        - paragraph [ref=e50]: What is the difference between a trademark and a copyright?
-        - generic [ref=e52]: T
-      - paragraph [ref=e54]:
-        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e55] [cursor=pointer]:
+    - generic [ref=e35]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e42]: What is a SAFE agreement?
+          - generic [ref=e44]: T
+        - generic [ref=e45]:
+          - paragraph [ref=e48]: What is a SAFE agreement?
+          - generic [ref=e50]: T
+      - paragraph [ref=e52]:
+        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e53] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e56]:
-        - generic [ref=e58]:
-          - textbox "Type your message..." [active] [ref=e59]
-          - button [ref=e60] [cursor=pointer]:
-            - img [ref=e61]
+      - generic [ref=e54]:
+        - generic [ref=e56]:
+          - textbox "Type your message..." [active] [ref=e57]
+          - button [ref=e58] [cursor=pointer]:
+            - img [ref=e59]
           - button [disabled]:
             - img
-        - generic [ref=e63]:
+        - generic [ref=e61]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e64] [cursor=pointer]:
-            - img [ref=e65]
+          - button [ref=e62] [cursor=pointer]:
+            - img [ref=e63]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e67]
+  - alert [ref=e65]
 ```
