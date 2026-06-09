@@ -31,37 +31,33 @@ Test timeout of 240000ms exceeded.
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What is a SAFE agreement?
+          - generic [ref=e24]: What is the difference between...
           - button [ref=e26]:
             - img [ref=e27]
       - button "Settings" [ref=e31] [cursor=pointer]:
         - img [ref=e32]
         - text: Settings
     - generic [ref=e35]:
-      - generic [ref=e38]:
-        - generic [ref=e39]:
-          - paragraph [ref=e42]: What is a SAFE agreement?
-          - generic [ref=e44]: T
-        - generic [ref=e45]:
-          - paragraph [ref=e48]: What is a SAFE agreement?
-          - generic [ref=e50]: T
-      - paragraph [ref=e52]:
-        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e53] [cursor=pointer]:
+      - generic [ref=e39]:
+        - paragraph [ref=e42]: What is the difference between a trademark and a patent?
+        - generic [ref=e44]: T
+      - paragraph [ref=e46]:
+        - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e47] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e54]:
-        - generic [ref=e56]:
-          - textbox "Type your message..." [active] [ref=e57]
-          - button [ref=e58] [cursor=pointer]:
-            - img [ref=e59]
+      - generic [ref=e48]:
+        - generic [ref=e50]:
+          - textbox "Type your message..." [active] [ref=e51]
+          - button [ref=e52] [cursor=pointer]:
+            - img [ref=e53]
           - button [disabled]:
             - img
-        - generic [ref=e61]:
+        - generic [ref=e55]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e62] [cursor=pointer]:
-            - img [ref=e63]
+          - button [ref=e56] [cursor=pointer]:
+            - img [ref=e57]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e65]
+  - alert [ref=e59]
 ```
