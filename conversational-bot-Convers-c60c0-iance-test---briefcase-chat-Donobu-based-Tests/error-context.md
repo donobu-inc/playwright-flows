@@ -30,34 +30,39 @@ Test timeout of 240000ms exceeded.
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What is the difference between...
-          - button [ref=e26]:
-            - img [ref=e27]
-      - button "Settings" [ref=e31] [cursor=pointer]:
-        - img [ref=e32]
+        - generic [ref=e21]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e24]: New Chat
+            - button [ref=e26]:
+              - img [ref=e27]
+          - generic [ref=e30] [cursor=pointer]:
+            - generic [ref=e32]: What is the difference between...
+            - button [ref=e34]:
+              - img [ref=e35]
+      - button "Settings" [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
         - text: Settings
-    - generic [ref=e35]:
-      - generic [ref=e39]:
-        - paragraph [ref=e42]: What is the difference between a trademark and a patent?
-        - generic [ref=e44]: T
-      - paragraph [ref=e46]:
-        - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e47] [cursor=pointer]:
+    - generic [ref=e43]:
+      - generic [ref=e47]:
+        - paragraph [ref=e50]: What is the difference between a trademark and a patent?
+        - generic [ref=e52]: E
+      - paragraph [ref=e54]:
+        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e55] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e48]:
-        - generic [ref=e50]:
-          - textbox "Type your message..." [active] [ref=e51]
-          - button [ref=e52] [cursor=pointer]:
-            - img [ref=e53]
-          - button [disabled]:
-            - img
-        - generic [ref=e55]:
+      - generic [ref=e56]:
+        - generic [ref=e58]:
+          - textbox "Type your message..." [active] [ref=e59]: What is the difference between a trademark and a patent?
+          - button [ref=e60] [cursor=pointer]:
+            - img [ref=e61]
+          - button [ref=e63] [cursor=pointer]:
+            - img [ref=e64]
+        - generic [ref=e67]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e56] [cursor=pointer]:
-            - img [ref=e57]
+          - button [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e59]
+  - alert [ref=e71]
 ```
