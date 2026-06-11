@@ -5,15 +5,15 @@
 | File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  | 24s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 1m 5s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  | 23s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 59s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  | 8s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 50s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  | 53s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 19s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 12s |
 | conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 19s |
-| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 34s** |
+| **TOTAL** | **8 ✅** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 33s** |
 
 ## auth/sauce-login.test.ts
 
@@ -29,7 +29,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 24s  
+**Duration**: 23s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 5s  
+**Duration**: 59s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 50s  
+**Duration**: 53s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
@@ -74,7 +74,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -96,4 +96,4 @@
 
 ---
 
-_Report generated on 6/10/2026, 1:20:20 PM by Donobu_
+_Report generated on 6/11/2026, 1:28:55 PM by Donobu_
