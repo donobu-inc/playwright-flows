@@ -32,37 +32,54 @@ Test timeout of 240000ms exceeded.
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e21]:
           - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: New Chat
+            - generic [ref=e24]: What is a SAFE agreement?
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
+            - generic [ref=e32]: New Chat
             - button [ref=e34]:
               - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e40]: New Chat
+            - button [ref=e42]:
+              - img [ref=e43]
+      - button "Settings" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
         - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e47]:
-        - paragraph [ref=e50]: What is the difference between an LLC and a C-Corp?
-        - generic [ref=e52]: T
-      - paragraph [ref=e54]:
-        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e55] [cursor=pointer]:
+    - generic [ref=e51]:
+      - generic [ref=e54]:
+        - heading "Welcome to Briefcase" [level=2] [ref=e55]
+        - paragraph [ref=e56]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e57]:
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: Explain the difference between RSUs and ISOs
+            - img [ref=e60]
+          - generic [ref=e63] [cursor=pointer]:
+            - generic [ref=e64]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e65]
+          - generic [ref=e68] [cursor=pointer]:
+            - generic [ref=e69]: Summarize the terms of this SAFE agreement
+            - img [ref=e70]
+          - generic [ref=e73] [cursor=pointer]:
+            - generic [ref=e74]: How does non-solicitation work in California
+            - img [ref=e75]
+      - paragraph [ref=e79]:
+        - text: You have 5 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e80] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e56]:
-        - generic [ref=e58]:
-          - textbox "Type your message..." [active] [ref=e59]: What is the difference between an LLC and a C-Corp?
-          - button [ref=e60] [cursor=pointer]:
-            - img [ref=e61]
+      - generic [ref=e81]:
+        - generic [ref=e83]:
+          - textbox "Type your message..." [active] [ref=e84]
+          - button [ref=e85] [cursor=pointer]:
+            - img [ref=e86]
           - button [disabled]:
             - img
-        - generic [ref=e63]:
+        - generic [ref=e88]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e64] [cursor=pointer]:
-            - img [ref=e65]
+          - button [ref=e89] [cursor=pointer]:
+            - img [ref=e90]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e67]
+  - alert [ref=e92]
 ```
