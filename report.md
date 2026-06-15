@@ -4,25 +4,25 @@
 
 ## Summary
 
-| File | Passed | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
-| - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  | 24s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  | 57s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  | 10s |
-| unstable-survey.test.ts |  | 1 ❤️‍🩹 |  |  |  |  | 1m 14s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  | 11s |
-| conversational-bot.test.ts |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  | 20s |
-| **TOTAL** | **7 ✅** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 54s** |
+| File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
+| - | - | - | - | - | - | - | - | - |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 14s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 25s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 57s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 17s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 59s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 57s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 14s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 24s  
+**Duration**: 25s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 10s  
+**Duration**: 9s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 14s  
+**Duration**: 1m 17s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -86,8 +86,37 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❌ Failed  
+**Duration**: 3m 59s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The chatbot is completely non-responsive and does not return or display any replies to both user-entered legal questions and pre-defined suggested options, making it impossible to evaluate for topic compliance."
+}
+```
+
+**Code Snippet**:
+```
+   7 |   await page.goto('https://briefcase.chat');
+   8 |
+>  9 |   const aiResponse = await page.ai(
+     |                      ^
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+```
+
+</details>
+
 
 ---
 
@@ -102,6 +131,6 @@
 
 ### Auto-Healed Tests
 
-- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::
+- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 6/15/2026, 2:18:16 PM by Donobu_
+_Report generated on 6/15/2026, 11:39:02 PM by Donobu_

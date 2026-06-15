@@ -25,6 +25,19 @@
       "fields": [
         {
           "type": "mrkdwn",
+          "text": "🔁 Flaky"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
           "text": "❤️‍🩹 Self-Healed"
         },
         {
@@ -42,7 +55,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": "0"
+          "text": "1"
         }
       ]
     },
@@ -55,7 +68,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": "1"
+          "text": "0"
         }
       ]
     },
@@ -92,7 +105,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/27552225561|View Full Report>"
+        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/27583297911|View Full Report>"
       }
     },
     {
@@ -103,7 +116,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "Report generated on 6/15/2026, 2:18:16 PM by Donobu"
+          "text": "Report generated on 6/15/2026, 11:39:02 PM by Donobu"
         }
       ]
     }
