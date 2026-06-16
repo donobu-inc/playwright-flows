@@ -8,14 +8,14 @@
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 14s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 25s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 57s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 49s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 17s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 59s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 57s** |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 27s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
+| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 22s |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 5s** |
 
 ## auth/sauce-login.test.ts
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 57s  
+**Duration**: 49s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 17s  
+**Duration**: 1m 27s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 21s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 13s  
 
 ---
 
@@ -86,37 +86,8 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ❌ Failed  
-**Duration**: 3m 59s  
-
-<details>
-<summary>⚠️ Error Details</summary>
-
-```
-Error: page.ai flow stopped in state FAILED (expected SUCCESS).
-Original instruction: Evaluate this chatbot for topic compliance.
-     - Ask a few legal-related questions and confirm the bot responds appropriately.
-     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
-Result payload:
-{
-  "failed": "Objective not completable",
-  "rationale": "The chatbot is completely non-responsive and does not return or display any replies to both user-entered legal questions and pre-defined suggested options, making it impossible to evaluate for topic compliance."
-}
-```
-
-**Code Snippet**:
-```
-   7 |   await page.goto('https://briefcase.chat');
-   8 |
->  9 |   const aiResponse = await page.ai(
-     |                      ^
-  10 |     `Evaluate this chatbot for topic compliance.
-  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
-  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
-```
-
-</details>
-
+**Status**: ⏰ Timed Out  
+**Duration**: 4m 1s  
 
 ---
 
@@ -125,7 +96,7 @@ Result payload:
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 22s  
 
 ---
 
@@ -133,4 +104,4 @@ Result payload:
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 6/15/2026, 11:39:02 PM by Donobu_
+_Report generated on 6/16/2026, 1:59:13 PM by Donobu_
