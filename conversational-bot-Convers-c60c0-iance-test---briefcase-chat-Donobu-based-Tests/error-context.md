@@ -30,34 +30,49 @@ Test timeout of 240000ms exceeded.
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: Can you explain the difference...
-          - button [ref=e26]:
-            - img [ref=e27]
-      - button "Settings" [ref=e31] [cursor=pointer]:
-        - img [ref=e32]
+        - generic [ref=e21]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e24]: What is a SAFE agreement?
+            - button [ref=e26]:
+              - img [ref=e27]
+          - generic [ref=e30] [cursor=pointer]:
+            - generic [ref=e32]: What is a SAFE agreement?
+            - button [ref=e34]:
+              - img [ref=e35]
+      - button "Settings" [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
         - text: Settings
-    - generic [ref=e35]:
-      - generic [ref=e39]:
-        - paragraph [ref=e42]: Can you explain the difference between a copyright and a trademark?
-        - generic [ref=e44]: T
-      - paragraph [ref=e46]:
-        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e47] [cursor=pointer]:
+    - generic [ref=e43]:
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - paragraph [ref=e50]: What is a SAFE agreement?
+          - generic [ref=e52]: J
+        - generic [ref=e53]:
+          - paragraph [ref=e56]: Explain the difference between RSUs and ISOs
+          - generic [ref=e58]: J
+        - generic [ref=e59]:
+          - paragraph [ref=e62]: What is a SAFE agreement?
+          - generic [ref=e64]: J
+        - generic [ref=e65]:
+          - paragraph [ref=e68]: Explain the difference between RSUs and ISOs
+          - generic [ref=e70]: J
+      - paragraph [ref=e72]:
+        - text: You have 5 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e73] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e48]:
-        - generic [ref=e50]:
-          - textbox "Type your message..." [active] [ref=e51]: Can you explain the difference between a copyright and a trademark?
-          - button [ref=e52] [cursor=pointer]:
-            - img [ref=e53]
+      - generic [ref=e74]:
+        - generic [ref=e76]:
+          - textbox "Type your message..." [active] [ref=e77]
+          - button [ref=e78] [cursor=pointer]:
+            - img [ref=e79]
           - button [disabled]:
             - img
-        - generic [ref=e55]:
+        - generic [ref=e81]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e56] [cursor=pointer]:
-            - img [ref=e57]
+          - button [ref=e82] [cursor=pointer]:
+            - img [ref=e83]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e59]
+  - alert [ref=e85]
 ```
