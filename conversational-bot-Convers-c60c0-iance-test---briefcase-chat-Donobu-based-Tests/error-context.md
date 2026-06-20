@@ -12,166 +12,74 @@
 # Error details
 
 ```
-Error: page.ai flow stopped in state FAILED (expected SUCCESS).
-Original instruction: Evaluate this chatbot for topic compliance.
-     - Ask a few legal-related questions and confirm the bot responds appropriately.
-     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
-Result payload:
-{
-  "failed": "Objective not completable",
-  "rationale": "The chatbot is completely non-responsive and does not return any answers or responses to any queries (neither custom legal questions nor predefined suggestions), making it impossible to evaluate its topic compliance."
-}
+Test timeout of 240000ms exceeded.
 ```
 
 # Page snapshot
 
 ```yaml
-- generic:
-  - generic:
-    - generic:
-      - generic:
-        - generic:
-          - generic:
-            - button:
-              - img
-            - heading [level=1]: Briefcase
-          - generic:
-            - button:
-              - img
-        - generic:
-          - generic:
-            - generic:
-              - heading [level=2]: Today
-              - generic:
-                - generic:
-                  - generic:
-                    - generic: New Chat
-                  - generic:
-                    - button:
-                      - img
-                - generic:
-                  - generic:
-                    - generic: What is the difference between...
-                  - generic:
-                    - button:
-                      - img
-        - generic:
-          - button:
-            - img
-            - text: Settings
-    - generic:
-      - generic:
-        - generic:
-          - generic:
-            - generic:
-              - generic:
-                - generic:
-                  - paragraph: What is the difference between a patent and a trademark?
-              - generic:
-                - generic: T
-            - generic:
-              - generic:
-                - generic:
-                  - paragraph: How do I form an LLC?
-              - generic:
-                - generic: T
-      - generic:
-        - paragraph:
-          - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-          - link:
-            - /url: "#"
-            - text: settings
-          - text: .
-      - generic:
-        - generic:
-          - generic:
-            - textbox:
-              - /placeholder: Type your message...
-            - button:
-              - img
-            - button [disabled]:
-              - img
-        - generic:
-          - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button:
-            - img
-  - list
-  - alert
-  - dialog "Settings" [active] [ref=e2]:
-    - generic [ref=e3]:
-      - heading "Settings" [level=2] [ref=e4]
-      - paragraph [ref=e5]: Update your information below
-    - generic [ref=e7]:
-      - navigation [ref=e8]:
-        - button "General" [ref=e9] [cursor=pointer]:
-          - img [ref=e10]
-          - generic [ref=e13]: General
-        - button "Advanced" [ref=e14] [cursor=pointer]:
-          - img [ref=e15]
-          - generic [ref=e16]: Advanced
-      - generic [ref=e18]:
-        - generic [ref=e19]: Briefcase has a limit of 10 messages per user. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key.
-        - generic [ref=e20]:
-          - generic [ref=e21]:
-            - generic [ref=e22]: Email
-            - button [ref=e23] [cursor=pointer]:
-              - img [ref=e24]
-          - generic [ref=e26]:
-            - textbox "Enter your email" [ref=e27]
-            - button "Upgrade" [disabled]
-          - paragraph [ref=e29]:
-            - link "Already have a subscription?" [ref=e30] [cursor=pointer]:
-              - /url: "#"
-        - generic [ref=e31]:
-          - generic [ref=e32]:
-            - generic [ref=e33]: OpenAI API Key
-            - button [ref=e34] [cursor=pointer]:
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - button "Close sidebar" [ref=e7] [cursor=pointer]:
+            - img [ref=e8]
+          - heading "Briefcase" [level=1] [ref=e11]
+        - button "New chat" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+      - generic [ref=e19]:
+        - heading "Today" [level=2] [ref=e20]
+        - generic [ref=e21]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e24]: New Chat
+            - button [ref=e26]:
+              - img [ref=e27]
+          - generic [ref=e30] [cursor=pointer]:
+            - generic [ref=e32]: What is a trademark?
+            - button [ref=e34]:
               - img [ref=e35]
-          - generic [ref=e37]:
-            - textbox "OpenAI API Key" [ref=e38]:
-              - /placeholder: Enter your OpenAI API Key
-            - button "Apply" [disabled]
-        - generic [ref=e39]:
-          - generic [ref=e40]: Conversation History
-          - generic [ref=e41]:
-            - paragraph [ref=e42]: Delete all conversations and messages. This action cannot be undone.
-            - button "Delete" [ref=e43] [cursor=pointer]
-    - button "Close" [ref=e44] [cursor=pointer]:
-      - img [ref=e45]
-      - generic [ref=e48]: Close
-```
-
-# Test source
-
-```ts
-  1  | import { test, expect } from 'donobu';
-  2  | import { z } from 'zod/v4';
-  3  | 
-  4  | test('Conversational bot compliance test - briefcase.chat', async ({
-  5  |   page,
-  6  | }) => {
-  7  |   await page.goto('https://briefcase.chat');
-  8  | 
-> 9  |   const aiResponse = await page.ai(
-     |                      ^ Error: page.ai flow stopped in state FAILED (expected SUCCESS).
-  10 |     `Evaluate this chatbot for topic compliance.
-  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
-  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
-  13 |     {
-  14 |       schema: z.object({
-  15 |         status: z
-  16 |           .enum(['PASS', 'FAIL'])
-  17 |           .describe('Set to PASS if bot responded as expected.'),
-  18 |         issues: z.array(z.string()),
-  19 |       }),
-  20 |       cache: false
-  21 |     },
-  22 |   );
-  23 | 
-  24 |   expect(aiResponse).toEqual({
-  25 |     status: 'PASS',
-  26 |     issues: [],
-  27 |   });
-  28 | });
-  29 | 
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e40]: What is a trademark?
+            - button [ref=e42]:
+              - img [ref=e43]
+      - button "Settings" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
+        - text: Settings
+    - generic [ref=e51]:
+      - generic [ref=e54]:
+        - heading "Welcome to Briefcase" [level=2] [ref=e55]
+        - paragraph [ref=e56]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e57]:
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: Explain the difference between RSUs and ISOs
+            - img [ref=e60]
+          - generic [ref=e63] [cursor=pointer]:
+            - generic [ref=e64]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e65]
+          - generic [ref=e68] [cursor=pointer]:
+            - generic [ref=e69]: Summarize the terms of this SAFE agreement
+            - img [ref=e70]
+          - generic [ref=e73] [cursor=pointer]:
+            - generic [ref=e74]: How does non-solicitation work in California
+            - img [ref=e75]
+      - paragraph [ref=e79]:
+        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e80] [cursor=pointer]:
+          - /url: "#"
+        - text: .
+      - generic [ref=e81]:
+        - generic [ref=e83]:
+          - textbox "Type your message..." [active] [ref=e84]
+          - button [ref=e85] [cursor=pointer]:
+            - img [ref=e86]
+          - button [disabled]:
+            - img
+        - generic [ref=e88]:
+          - text: Briefcase can make mistakes. Please check important info with a lawyer.
+          - button [ref=e89] [cursor=pointer]:
+            - img [ref=e90]
+  - region "Notifications (F8)":
+    - list
+  - alert [ref=e92]
 ```
