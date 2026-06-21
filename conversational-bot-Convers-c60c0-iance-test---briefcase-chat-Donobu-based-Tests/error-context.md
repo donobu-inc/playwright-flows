@@ -32,54 +32,50 @@ Test timeout of 240000ms exceeded.
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e21]:
           - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: New Chat
+            - generic [ref=e24]: How do I form an LLC in Delawa...
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is a trademark?
+            - generic [ref=e32]: How can I form a C-Corp in Del...
             - button [ref=e34]:
               - img [ref=e35]
-          - generic [ref=e38] [cursor=pointer]:
-            - generic [ref=e40]: What is a trademark?
-            - button [ref=e42]:
-              - img [ref=e43]
-      - button "Settings" [ref=e47] [cursor=pointer]:
-        - img [ref=e48]
+      - button "Settings" [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
         - text: Settings
-    - generic [ref=e51]:
-      - generic [ref=e54]:
-        - heading "Welcome to Briefcase" [level=2] [ref=e55]
-        - paragraph [ref=e56]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
-        - generic [ref=e57]:
-          - generic [ref=e58] [cursor=pointer]:
-            - generic [ref=e59]: Explain the difference between RSUs and ISOs
-            - img [ref=e60]
-          - generic [ref=e63] [cursor=pointer]:
-            - generic [ref=e64]: When is it better to form an LLC vs. a C-Corp
-            - img [ref=e65]
-          - generic [ref=e68] [cursor=pointer]:
-            - generic [ref=e69]: Summarize the terms of this SAFE agreement
-            - img [ref=e70]
-          - generic [ref=e73] [cursor=pointer]:
-            - generic [ref=e74]: How does non-solicitation work in California
-            - img [ref=e75]
-      - paragraph [ref=e79]:
+    - generic [ref=e43]:
+      - generic [ref=e46]:
+        - heading "Welcome to Briefcase" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e49]:
+          - generic [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]: Explain the difference between RSUs and ISOs
+            - img [ref=e52]
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e57]
+          - generic [ref=e60] [cursor=pointer]:
+            - generic [ref=e61]: Summarize the terms of this SAFE agreement
+            - img [ref=e62]
+          - generic [ref=e65] [cursor=pointer]:
+            - generic [ref=e66]: How does non-solicitation work in California
+            - img [ref=e67]
+      - paragraph [ref=e71]:
         - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e80] [cursor=pointer]:
+        - link "settings" [ref=e72] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e81]:
-        - generic [ref=e83]:
-          - textbox "Type your message..." [active] [ref=e84]
-          - button [ref=e85] [cursor=pointer]:
-            - img [ref=e86]
+      - generic [ref=e73]:
+        - generic [ref=e75]:
+          - textbox "Type your message..." [ref=e76]: How do I form an LLC in Delaware?
+          - button [active] [ref=e77] [cursor=pointer]:
+            - img [ref=e78]
           - button [disabled]:
             - img
-        - generic [ref=e88]:
+        - generic [ref=e80]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e89] [cursor=pointer]:
-            - img [ref=e90]
+          - button [ref=e81] [cursor=pointer]:
+            - img [ref=e82]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e92]
+  - alert [ref=e84]
 ```
