@@ -1,0 +1,61 @@
+{
+  "generatedAtIso": "2026-06-23T13:08:44.323Z",
+  "plan": {
+    "failureSummary": "The test failed during a click action because the cached deterministic selector for 'Select your occupation' could not be resolved on the page. The application is a dynamic/unstable survey that changes form fields and layout sets (e.g., 'Set 1' vs other sets) dynamically, causing the cached React/Radix dynamic element IDs and labels to mismatch.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === true",
+      "page.ai cached step attempted to click non-existent element 'Select your occupation'",
+      "the app 'unstable-survey' has dynamic layout variations (currently 'Set 1')",
+      "dynamic React form IDs (e.g., #\\:rl\\:-form-item) mismatched across runs"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry the test",
+        "details": "Clear the page.ai deterministic cache and retry the test to let page.ai dynamically analyze the current layout set and find the correct inputs."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Disable selector caching for inherently dynamic/unstable pages",
+        "details": "If the application changes its layout dynamically across runs, deterministic caching is inherently unstable. Consider disabling caching for this specific test block if the framework supports it, allowing page.ai to run autonomously on every execution."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The failure screenshot shows the form is currently in 'Set 1' containing 'Last Name', 'Email Address', and 'Age Group'. However, the cached deterministic steps attempted to fill 'Your Name', 'Contact Email', and click 'Select your occupation' using dynamic IDs like '#\\:rl\\:-form-item'. Since the semantic intent is highly flexible ('Fill out the all of the survey questions with fake data'), clearing the page.ai cache and retrying will allow the agent to adapt successfully to the current form layout.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 27930,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-06-23T13-03-14-076Z-26d8a8b9",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-23T13-03-14-076Z-26d8a8b9",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-23T13-03-14-076Z-26d8a8b9/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-6d9bef5a-5793-4ee8-ba98-0d5526d5a65a.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
