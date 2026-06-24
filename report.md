@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 23s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 57s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 25s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 1m 0s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
 | unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 14s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
 | conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 54s** |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 57s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 12s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 23s  
+**Duration**: 25s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 57s  
+**Duration**: 1m 0s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 8s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 20s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 6/23/2026, 1:10:01 PM by Donobu_
+_Report generated on 6/24/2026, 12:56:24 PM by Donobu_

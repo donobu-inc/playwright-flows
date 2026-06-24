@@ -18,64 +18,106 @@ Test timeout of 240000ms exceeded.
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
-  - generic [ref=e2]:
-    - generic [ref=e4]:
-      - generic [ref=e5]:
-        - generic [ref=e6]:
-          - button "Close sidebar" [ref=e7] [cursor=pointer]:
-            - img [ref=e8]
-          - heading "Briefcase" [level=1] [ref=e11]
-        - button "New chat" [ref=e13] [cursor=pointer]:
-          - img [ref=e14]
-      - generic [ref=e19]:
-        - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e21]:
-          - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: New Chat
-            - button [ref=e26]:
-              - img [ref=e27]
-          - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is a SAFE agreement and h...
-            - button [ref=e34]:
-              - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
-        - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e46]:
-        - heading "Welcome to Briefcase" [level=2] [ref=e47]
-        - paragraph [ref=e48]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
-        - generic [ref=e49]:
-          - generic [ref=e50] [cursor=pointer]:
-            - generic [ref=e51]: Explain the difference between RSUs and ISOs
-            - img [ref=e52]
-          - generic [ref=e55] [cursor=pointer]:
-            - generic [ref=e56]: When is it better to form an LLC vs. a C-Corp
-            - img [ref=e57]
-          - generic [ref=e60] [cursor=pointer]:
-            - generic [ref=e61]: Summarize the terms of this SAFE agreement
-            - img [ref=e62]
-          - generic [ref=e65] [cursor=pointer]:
-            - generic [ref=e66]: How does non-solicitation work in California
-            - img [ref=e67]
-      - paragraph [ref=e71]:
-        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e72] [cursor=pointer]:
-          - /url: "#"
-        - text: .
-      - generic [ref=e73]:
-        - generic [ref=e75]:
-          - textbox "Type your message..." [ref=e76]
-          - button [ref=e77] [cursor=pointer]:
-            - img [ref=e78]
-          - button [disabled]:
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - button:
+              - img
+            - heading [level=1]: Briefcase
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - heading [level=2]: Today
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: New Chat
+                  - generic:
+                    - button:
+                      - img
+                - generic:
+                  - generic:
+                    - generic: What is the difference between...
+                  - generic:
+                    - button:
+                      - img
+        - generic:
+          - button:
             - img
-        - generic [ref=e80]:
+            - text: Settings
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: When is it better to form an LLC vs. a C-Corp
+              - generic:
+                - generic: A
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: What is the capital of France?
+              - generic:
+                - generic: A
+      - generic:
+        - paragraph:
+          - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+          - link:
+            - /url: "#"
+            - text: settings
+          - text: .
+      - generic:
+        - generic:
+          - generic:
+            - textbox:
+              - /placeholder: Type your message...
+            - button:
+              - img
+            - button [disabled]:
+              - img
+        - generic:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e81] [cursor=pointer]:
-            - img [ref=e82]
-  - region "Notifications (F8)":
-    - list
-  - alert [ref=e84]
+          - button:
+            - img
+  - list
+  - alert
+  - dialog "Settings" [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Settings" [level=2] [ref=e4]
+      - paragraph [ref=e5]: Update your information below
+    - generic [ref=e7]:
+      - navigation [ref=e8]:
+        - button "General" [active] [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - generic [ref=e13]: General
+        - button "Advanced" [ref=e14] [cursor=pointer]:
+          - img [ref=e15]
+          - generic [ref=e16]: Advanced
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - text: Name
+          - textbox "Name" [ref=e20]:
+            - /placeholder: Enter your name
+            - text: Alice
+        - generic [ref=e21]:
+          - text: Theme
+          - combobox "Theme" [ref=e22] [cursor=pointer]:
+            - generic: Light
+            - img [ref=e23]
+        - generic [ref=e25]:
+          - text: Language
+          - combobox "Language" [ref=e26] [cursor=pointer]:
+            - generic: Auto-detect
+            - img [ref=e27]
+    - button "Close" [ref=e29] [cursor=pointer]:
+      - img [ref=e30]
+      - generic [ref=e33]: Close
 ```
