@@ -1,0 +1,59 @@
+{
+  "generatedAtIso": "2026-06-27T12:37:28.023Z",
+  "plan": {
+    "failureSummary": "The deterministic execution failed because the cached selectors (specifically targeting the combobox 'Select your occupation') do not match the current form layout, which instead contains an 'Age Group' radio group.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "stale_cache_or_selector_mismatch",
+      "alternating_success_failure_history",
+      "dynamic_ui_variation"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear the page.ai cache and retry the test",
+        "details": "Clear the deterministic cache to force the autonomous page.ai agent to inspect the current DOM and correctly fill out the 'Age Group' form."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Disable deterministic cache/mode for this dynamic test",
+        "details": "Disable deterministic execution mode or cache for this test. Since the survey alternates form layouts dynamically, it requires autonomous evaluation on every run rather than relying on cached selectors."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The website (unstable-survey) dynamically alternates form fields between runs. This explains the alternating SUCCESS/FAILED pattern in the run history (approx 63% pass rate). Deterministic mode is fundamentally unsuitable for forms with alternating layouts, as the cached actions cannot adapt to the structural changes. Disabling deterministic mode/cache for this specific test will allow the autonomous agent to successfully fill out whichever form variant is presented.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 27228,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-06-27T12-32-04-485Z-043e8a22",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-27T12-32-04-485Z-043e8a22",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-06-27T12-32-04-485Z-043e8a22/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-fa4b93a7-223f-442e-8cdc-a82ec10a1429.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
