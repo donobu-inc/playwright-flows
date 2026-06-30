@@ -1,0 +1,1707 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: checkly.test.ts >> Checkly dev docs search
+- Location: tests/checkly.test.ts:3:5
+
+# Error details
+
+```
+Error: click execution failed: {
+  "isSuccessful": false,
+  "forLlm": "FAILED! Unable to resolve HTML element to operate with.",
+  "metadata": {
+    "selector": {
+      "element": [
+        "(.//a[normalize-space(.)='Documentation'])[1]",
+        "li:nth-of-type(1) > [href='/docs/']",
+        "div:nth-of-type(1) > ul > li:nth-of-type(1) > a.text-base"
+      ]
+    }
+  }
+}
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - navigation [ref=e5]:
+        - link "Checkly - Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: Checkly - Home
+          - img [ref=e8]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]:
+              - button "Product" [ref=e20] [cursor=pointer]
+              - region "Product":
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading "Detect" [level=3]
+                        - generic:
+                          - link "Uptime Monitoring Measure the availability of your digital footprint":
+                            - /url: /product/uptime-monitoring/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Uptime Monitoring
+                            - generic: Measure the availability of your digital footprint
+                          - link "Synthetic Monitoring Simulate real user interactions across your stack":
+                            - /url: /product/synthetic-monitoring/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Synthetic Monitoring
+                            - generic: Simulate real user interactions across your stack
+                          - link "Testing Catch issues before production with an AI-powered test reporter":
+                            - /url: /product/testing/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Testing
+                            - generic: Catch issues before production with an AI-powered test reporter
+                      - generic:
+                        - heading "Communicate" [level=3]
+                        - generic:
+                          - link "Status Pages Communicate app availability to your customers":
+                            - /url: /product/status-pages/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Status Pages
+                            - generic: Communicate app availability to your customers
+                          - link "Alerts Contextual alerting to notify the team right away":
+                            - /url: /product/alerting/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Alerts
+                            - generic: Contextual alerting to notify the team right away
+                      - generic:
+                        - heading "Resolve" [level=3]
+                        - generic:
+                          - link "AI Root Cause Analysis Automated root cause analysis powered by AI agents":
+                            - /url: /product/ai-analysis/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: AI Root Cause Analysis
+                            - generic: Automated root cause analysis powered by AI agents
+                          - link "Traces Powerful OTel tracing for deeper insights":
+                            - /url: /product/traces/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Traces
+                            - generic: Powerful OTel tracing for deeper insights
+                    - generic:
+                      - heading "Getting Started" [level=3]
+                      - generic:
+                        - link "Free Trial":
+                          - /url: https://app.checklyhq.com/signup/
+                        - link "See a Demo":
+                          - /url: /demo-request/
+                        - link "Talk to Sales":
+                          - /url: /contact-sales/
+                        - link "Monitoring as Code":
+                          - /url: /product/monitoring-as-code/
+            - generic [ref=e21]:
+              - button "Developers" [ref=e22] [cursor=pointer]
+              - region "Developers":
+                - generic:
+                  - generic:
+                    - heading "Developers" [level=3]
+                    - generic:
+                      - generic:
+                        - link "Documentation Learn key concepts and features":
+                          - /url: /docs/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: Documentation
+                          - generic: Learn key concepts and features
+                        - link "API Docs Build on the Checkly REST API":
+                          - /url: https://www.checklyhq.com/docs/api-reference/overview
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: API Docs
+                          - generic: Build on the Checkly REST API
+                        - link "CLI Docs Bring monitoring to your terminal":
+                          - /url: /cli/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: CLI Docs
+                          - generic: Bring monitoring to your terminal
+                      - generic:
+                        - link "Quickstart Set up your first check fast":
+                          - /url: /docs/quickstart/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: Quickstart
+                          - generic: Set up your first check fast
+                        - link "Guides In-depth Playwright & OTel guides":
+                          - /url: /guides/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: Guides
+                          - generic: In-depth Playwright & OTel guides
+                        - link "MCP Server Connect Checkly to your AI tools":
+                          - /url: /docs/ai/mcp-server/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: MCP Server
+                          - generic: Connect Checkly to your AI tools
+                    - generic:
+                      - heading "Reference" [level=3]
+                      - generic:
+                        - link "Agent Skills":
+                          - /url: /docs/ai/skills/
+                          - generic:
+                            - img
+                          - text: Agent Skills
+                        - link "Terraform":
+                          - /url: /product/terraform-provider/
+                          - text: Terraform
+                        - link "Pulumi":
+                          - /url: /product/pulumi-provider/
+                          - text: Pulumi
+                        - link "All Integrations":
+                          - /url: /integrations/
+                          - generic:
+                            - img
+                          - text: All Integrations
+                        - link "Changelog":
+                          - /url: https://feedback.checklyhq.com/changelog
+                          - generic:
+                            - img
+                          - text: Changelog
+            - generic [ref=e23]:
+              - button "Resources" [active] [ref=e24] [cursor=pointer]
+              - region "Resources":
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading "Resources" [level=3]
+                        - generic:
+                          - link "Blog Read about the latest news at Checkly":
+                            - /url: /blog/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Blog
+                            - generic: Read about the latest news at Checkly
+                          - link "Learn Tips and best practices for learning Playwright and more":
+                            - /url: /learn/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Learn
+                            - generic: Tips and best practices for learning Playwright and more
+                          - link "Webinars Register or view webinars on-demand":
+                            - /url: /webinars/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Webinars
+                            - generic: Register or view webinars on-demand
+                          - link "Events Meet the team in person":
+                            - /url: /events/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Events
+                            - generic: Meet the team in person
+                      - generic:
+                        - heading "Community" [level=3]
+                        - generic:
+                          - link "Public Roadmap Read, vote, or add on features in a public roadmap":
+                            - /url: https://feedback.checklyhq.com/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Public Roadmap
+                            - generic: Read, vote, or add on features in a public roadmap
+                          - link "Community Slack Connect with the Checkly Community":
+                            - /url: /slack/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Community Slack
+                            - generic: Connect with the Checkly Community
+            - link "Customers" [ref=e25] [cursor=pointer]:
+              - /url: /customers/
+            - link "Pricing" [ref=e26] [cursor=pointer]:
+              - /url: /pricing/
+          - generic [ref=e27]:
+            - link "Login" [ref=e28] [cursor=pointer]:
+              - /url: https://app.checklyhq.com/
+            - link "Start for free" [ref=e29] [cursor=pointer]:
+              - /url: https://app.checklyhq.com/signup
+        - generic:
+          - navigation:
+            - generic:
+              - button "Product":
+                - generic: Product
+                - img
+              - button "Developers":
+                - generic: Developers
+                - img
+              - button "Resources":
+                - generic: Resources
+                - img
+              - link "Customers":
+                - /url: /customers/
+              - link "Pricing":
+                - /url: /pricing/
+    - main [ref=e30]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - heading "The active reliability layer for developers & agents." [level=1] [ref=e35]
+          - paragraph [ref=e36]: Create and manage tests, monitors, alerts, status pages and more in a AI-native workflow. Let your agents own reliability.
+          - generic [ref=e37]:
+            - link "Book a demo" [ref=e38] [cursor=pointer]:
+              - /url: /demo-request/
+            - link "Start for free" [ref=e39] [cursor=pointer]:
+              - /url: https://app.checklyhq.com/signup
+          - generic [ref=e41]:
+            - code [ref=e44]: npx checkly init
+            - button "Copy code to clipboard" [ref=e45] [cursor=pointer]:
+              - img [ref=e46]
+              - img [ref=e48]
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: Works with
+            - generic [ref=e56]:
+              - img "Cursor" [ref=e57]
+              - img "Claude" [ref=e58]
+              - img "Windsurf" [ref=e59]
+              - img "OpenAI" [ref=e60]
+              - img "Mistral" [ref=e61]
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - generic [ref=e68]:
+                - img [ref=e69]
+                - generic [ref=e71]: Claude Code
+              - generic [ref=e72]: claude-opus-4
+            - generic [ref=e73]:
+              - generic [ref=e75]: Monitor our checkout flow from 4 global regions
+              - generic [ref=e76]:
+                - img [ref=e78]
+                - generic [ref=e80]: I'll create a Playwright check and deploy it to all 4 regions.
+              - generic [ref=e84]: Write(__checks__/checkout.check.ts)
+              - generic [ref=e86]:
+                - generic [ref=e87]: "import { PlaywrightCheck, Frequency } from 'checkly/constructs'"
+                - generic [ref=e89]: "new PlaywrightCheck('checkout', {"
+                - generic [ref=e90]: "name: 'Checkout Flow',"
+                - generic [ref=e91]: "frequency: Frequency.EVERY_5M,"
+                - generic [ref=e92]: "locations: ["
+                - generic [ref=e93]: "'us-east-1', 'eu-west-1', 'ap-south-1', 'ap-northeast-1',"
+                - generic [ref=e94]: "],"
+                - generic [ref=e95]: "code: { entrypoint: './checkout.spec.ts' },"
+                - generic [ref=e96]: "})"
+          - img [ref=e98]
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - generic [ref=e105]: checkly
+                - generic [ref=e106]: / __checks__/checkout.check.ts
+              - generic [ref=e107]: ts
+            - generic [ref=e108]:
+              - generic [ref=e109]: $ npx checkly test
+              - generic [ref=e110]:
+                - generic [ref=e111]: Running 1 checks in eu-central-1.
+                - generic [ref=e112]: __checks__/checkout.check.ts
+                - generic [ref=e113]: ✔ Checkout Flow (4s)
+                - generic [ref=e114]: 1 passed, 1 total
+            - generic [ref=e115]:
+              - generic [ref=e116]: $ npx checkly deploy
+              - generic [ref=e117]: ✓ Successfully deployed to 4 locations
+          - img [ref=e119]
+          - generic [ref=e121]:
+            - generic [ref=e123]:
+              - generic [ref=e124]: 🇺🇸
+              - generic [ref=e125]: us-east-1
+              - generic [ref=e126]:
+                - generic [ref=e129]: 124ms
+                - generic [ref=e132]: checking
+                - generic [ref=e137]: fail
+            - generic [ref=e139]:
+              - generic [ref=e140]: 🇮🇪
+              - generic [ref=e141]: eu-west-1
+              - generic [ref=e142]:
+                - generic [ref=e145]: 98ms
+                - generic [ref=e148]: checking
+                - generic [ref=e153]: fail
+            - generic [ref=e155]:
+              - generic [ref=e156]: 🇮🇳
+              - generic [ref=e157]: ap-south-1
+              - generic [ref=e158]:
+                - generic [ref=e161]: 201ms
+                - generic [ref=e164]: checking
+                - generic [ref=e169]: fail
+            - generic [ref=e171]:
+              - generic [ref=e172]: 🇯🇵
+              - generic [ref=e173]: ap-northeast-1
+              - generic [ref=e174]:
+                - generic [ref=e177]: 187ms
+                - generic [ref=e180]: checking
+                - generic [ref=e185]: fail
+      - link "Agent view" [ref=e187] [cursor=pointer]:
+        - /url: /index.md
+        - img [ref=e188]
+        - text: Agent view
+      - generic [ref=e191]:
+        - heading "Trusted to keep test, staging, and prod continuously Available" [level=3] [ref=e193]:
+          - text: Trusted to keep
+          - code [ref=e194]: test
+          - text: ","
+          - code [ref=e195]: staging
+          - text: ", and"
+          - code [ref=e196]: prod
+          - text: continuously
+          - generic [ref=e197]: Available
+        - generic [ref=e202]:
+          - img "Vercel" [ref=e204]
+          - img "Carhartt" [ref=e206]
+          - img "CrowdStrike" [ref=e208]
+          - img "Airbus" [ref=e210]
+          - img "Fanatics" [ref=e212]
+          - img "Mistral" [ref=e214]
+          - img "ServiceNow" [ref=e216]
+          - img "GoFundMe" [ref=e218]
+          - img "Hopper" [ref=e220]
+          - img "1Password" [ref=e222]
+          - img "Fastly" [ref=e224]
+          - img "Total Wine" [ref=e226]
+      - generic [ref=e227]:
+        - generic [ref=e229]:
+          - heading "Testing & monitoring reimagined for a new era of software development" [level=2] [ref=e230]
+          - paragraph [ref=e231]: From prompt to production monitoring in seconds. Write test and monitors with AI, deploy as code, and monitor from 20+ global locations.
+        - generic [ref=e233]:
+          - generic [ref=e236]:
+            - generic [ref=e237]:
+              - heading "Detect, communicate, & resolve with AI." [level=3] [ref=e238]
+              - paragraph [ref=e239]: Add Checkly to your agents to test, monitor, and respond to incidents with your favorite model.
+            - generic [ref=e240]:
+              - heading "Code-first by default." [level=3] [ref=e241]
+              - paragraph [ref=e242]: Write, test, and version monitors as JS/TS, Terraform, or Pulumi.
+            - generic [ref=e243]:
+              - heading "Test & monitor globally in seconds." [level=3] [ref=e244]
+              - paragraph [ref=e245]: Deploy monitors to 20+ locations worldwide with a single command.
+          - generic [ref=e248]:
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - paragraph [ref=e254]: Add monitors to all API routes for the new routing service.
+                - paragraph [ref=e257]: Done! I created 12 URL monitors across your /api/v2 routes with 30s intervals from 4 regions.
+              - generic [ref=e258]:
+                - paragraph [ref=e260]: "Set up heartbeat checks for the nightly ETL pipeline and alert #data-eng on failure."
+                - paragraph [ref=e263]: Created heartbeat monitors for all 3 ETL stages with a 15-minute grace period and Slack alerts.
+              - generic [ref=e264]:
+                - paragraph [ref=e266]: Create a browser check that monitors our checkout flow for our top selling item, from
+                - generic [ref=e268]:
+                  - generic [ref=e269]:
+                    - generic [ref=e270]: Press
+                    - generic [ref=e271]: Enter
+                    - generic [ref=e272]: to send
+                  - button [ref=e273] [cursor=pointer]:
+                    - img [ref=e274]
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - generic [ref=e281]:
+                  - generic [ref=e282]: "1"
+                  - text: "import { BrowserCheck, Frequency } from \"checkly/constructs\""
+                - generic [ref=e284]: "2"
+                - generic [ref=e285]:
+                  - generic [ref=e286]: "3"
+                  - text: "const check = new BrowserCheck(\"checkout-flow\", {"
+                - generic [ref=e287]:
+                  - generic [ref=e288]: "4"
+                  - generic [ref=e289]: "name: \"Checkout Flow Monitor\","
+                - generic [ref=e290]:
+                  - generic [ref=e291]: "5"
+                  - generic [ref=e292]: "activated: true,"
+                - generic [ref=e293]:
+                  - generic [ref=e294]: "6"
+                  - generic [ref=e295]: "frequency: Frequency.EVERY_10M,"
+                - generic [ref=e296]:
+                  - generic [ref=e297]: "7"
+                  - generic [ref=e298]: "locations: ["
+                - generic [ref=e299]:
+                  - generic [ref=e300]: "8"
+                  - generic [ref=e301]: "\"us-east-1\","
+                - generic [ref=e302]:
+                  - generic [ref=e303]: "9"
+                  - generic [ref=e304]: "\"eu-west-1\","
+                - generic [ref=e305]:
+                  - generic [ref=e306]: "10"
+                  - generic [ref=e307]: "\"ap-southeast-1\","
+                - generic [ref=e308]:
+                  - generic [ref=e309]: "11"
+                  - generic [ref=e310]: "],"
+                - generic [ref=e311]:
+                  - generic [ref=e312]: "12"
+                  - generic [ref=e313]: "alertChannels: [slackChannel, pagerDuty],"
+                - generic [ref=e314]:
+                  - generic [ref=e315]: "13"
+                  - text: "})"
+                - generic [ref=e317]:
+                  - generic [ref=e318]: "1"
+                  - text: "import { test, expect } from \"@playwright/test\""
+                - generic [ref=e320]: "2"
+                - generic [ref=e321]:
+                  - generic [ref=e322]: "3"
+                  - text: "test(\"user completes checkout\", async ({ page }) => {"
+                - generic [ref=e323]:
+                  - generic [ref=e324]: "4"
+                  - generic [ref=e325]: await page.goto("https://app.acme.com")
+                - generic [ref=e327]: "5"
+                - generic [ref=e328]:
+                  - generic [ref=e329]: "6"
+                  - generic [ref=e330]: // Add item to cart
+                - generic [ref=e331]:
+                  - generic [ref=e332]: "7"
+                  - generic [ref=e333]: "await page.getByRole(\"button\", {"
+                - generic [ref=e334]:
+                  - generic [ref=e335]: "8"
+                  - generic [ref=e336]: "name: \"Add to cart\""
+                - generic [ref=e337]:
+                  - generic [ref=e338]: "9"
+                  - generic [ref=e339]: "}).click()"
+                - generic [ref=e341]: "10"
+                - generic [ref=e342]:
+                  - generic [ref=e343]: "11"
+                  - generic [ref=e344]: // Navigate to checkout
+                - generic [ref=e345]:
+                  - generic [ref=e346]: "12"
+                  - generic [ref=e347]: "await page.getByRole(\"link\", {"
+                - generic [ref=e348]:
+                  - generic [ref=e349]: "13"
+                  - generic [ref=e350]: "name: \"Checkout\""
+                - generic [ref=e351]:
+                  - generic [ref=e352]: "14"
+                  - generic [ref=e353]: "}).click()"
+                - generic [ref=e355]: "15"
+                - generic [ref=e356]:
+                  - generic [ref=e357]: "16"
+                  - generic [ref=e358]: // Fill payment details
+                - generic [ref=e359]:
+                  - generic [ref=e360]: "17"
+                  - generic [ref=e361]: await page.getByLabel("Email")
+                - generic [ref=e362]:
+                  - generic [ref=e363]: "18"
+                  - generic [ref=e364]: .fill("user@acme.com")
+                - generic [ref=e365]:
+                  - generic [ref=e366]: "19"
+                  - generic [ref=e367]: await page.getByLabel("Card number")
+                - generic [ref=e368]:
+                  - generic [ref=e369]: "20"
+                  - generic [ref=e370]: .fill("4242424242424242")
+                - generic [ref=e372]: "21"
+                - generic [ref=e373]:
+                  - generic [ref=e374]: "22"
+                  - generic [ref=e375]: // Submit order
+                - generic [ref=e376]:
+                  - generic [ref=e377]: "23"
+                  - generic [ref=e378]: "await page.getByRole(\"button\", {"
+                - generic [ref=e379]:
+                  - generic [ref=e380]: "24"
+                  - generic [ref=e381]: "name: \"Pay now\""
+                - generic [ref=e382]:
+                  - generic [ref=e383]: "25"
+                  - generic [ref=e384]: "}).click()"
+                - generic [ref=e386]: "26"
+                - generic [ref=e387]:
+                  - generic [ref=e388]: "27"
+                  - generic [ref=e389]: // Verify confirmation
+                - generic [ref=e390]:
+                  - generic [ref=e391]: "28"
+                  - generic [ref=e392]: await expect(
+                - generic [ref=e393]:
+                  - generic [ref=e394]: "29"
+                  - generic [ref=e395]: page.getByText("Order confirmed")
+                - generic [ref=e396]:
+                  - generic [ref=e397]: "30"
+                  - generic [ref=e398]: ).toBeVisible()
+                - generic [ref=e400]: "31"
+                - generic [ref=e401]:
+                  - generic [ref=e402]: "32"
+                  - generic [ref=e403]: // Check response time
+                - generic [ref=e404]:
+                  - generic [ref=e405]: "33"
+                  - generic [ref=e406]: const timing = await page.evaluate(
+                - generic [ref=e407]:
+                  - generic [ref=e408]: "34"
+                  - generic [ref=e409]: () => performance.now()
+                - generic [ref=e410]:
+                  - generic [ref=e411]: "35"
+                  - generic [ref=e412]: )
+                - generic [ref=e413]:
+                  - generic [ref=e414]: "36"
+                  - generic [ref=e415]: expect(timing).toBeLessThan(5000)
+                - generic [ref=e416]:
+                  - generic [ref=e417]: "37"
+                  - text: "})"
+              - generic [ref=e418]:
+                - generic [ref=e419]:
+                  - generic [ref=e420]: "1"
+                  - text: "import { BrowserCheck, Frequency } from \"checkly/constructs\""
+                - generic [ref=e422]: "2"
+                - generic [ref=e423]:
+                  - generic [ref=e424]: "3"
+                  - text: "const check = new BrowserCheck(\"checkout-flow\", {"
+                - generic [ref=e425]:
+                  - generic [ref=e426]: "4"
+                  - generic [ref=e427]: "name: \"Checkout Flow Monitor\","
+                - generic [ref=e428]:
+                  - generic [ref=e429]: "5"
+                  - generic [ref=e430]: "activated: true,"
+                - generic [ref=e431]:
+                  - generic [ref=e432]: "6"
+                  - generic [ref=e433]: "frequency: Frequency.EVERY_10M,"
+                - generic [ref=e434]:
+                  - generic [ref=e435]: "7"
+                  - generic [ref=e436]: "locations: ["
+                - generic [ref=e437]:
+                  - generic [ref=e438]: "8"
+                  - generic [ref=e439]: "\"us-east-1\","
+                - generic [ref=e440]:
+                  - generic [ref=e441]: "9"
+                  - generic [ref=e442]: "\"eu-west-1\","
+                - generic [ref=e443]:
+                  - generic [ref=e444]: "10"
+                  - generic [ref=e445]: "\"ap-southeast-1\","
+                - generic [ref=e446]:
+                  - generic [ref=e447]: "11"
+                  - generic [ref=e448]: "],"
+                - generic [ref=e449]:
+                  - generic [ref=e450]: "12"
+                  - generic [ref=e451]: "alertChannels: [slackChannel, pagerDuty],"
+                - generic [ref=e452]:
+                  - generic [ref=e453]: "13"
+                  - text: "})"
+                - generic [ref=e455]:
+                  - generic [ref=e456]: "1"
+                  - text: "import { test, expect } from \"@playwright/test\""
+                - generic [ref=e458]: "2"
+                - generic [ref=e459]:
+                  - generic [ref=e460]: "3"
+                  - text: "test(\"user completes checkout\", async ({ page }) => {"
+                - generic [ref=e461]:
+                  - generic [ref=e462]: "4"
+                  - generic [ref=e463]: await page.goto("https://app.acme.com")
+                - generic [ref=e465]: "5"
+                - generic [ref=e466]:
+                  - generic [ref=e467]: "6"
+                  - generic [ref=e468]: // Add item to cart
+                - generic [ref=e469]:
+                  - generic [ref=e470]: "7"
+                  - generic [ref=e471]: "await page.getByRole(\"button\", {"
+                - generic [ref=e472]:
+                  - generic [ref=e473]: "8"
+                  - generic [ref=e474]: "name: \"Add to cart\""
+                - generic [ref=e475]:
+                  - generic [ref=e476]: "9"
+                  - generic [ref=e477]: "}).click()"
+                - generic [ref=e479]: "10"
+                - generic [ref=e480]:
+                  - generic [ref=e481]: "11"
+                  - generic [ref=e482]: // Navigate to checkout
+                - generic [ref=e483]:
+                  - generic [ref=e484]: "12"
+                  - generic [ref=e485]: "await page.getByRole(\"link\", {"
+                - generic [ref=e486]:
+                  - generic [ref=e487]: "13"
+                  - generic [ref=e488]: "name: \"Checkout\""
+                - generic [ref=e489]:
+                  - generic [ref=e490]: "14"
+                  - generic [ref=e491]: "}).click()"
+                - generic [ref=e493]: "15"
+                - generic [ref=e494]:
+                  - generic [ref=e495]: "16"
+                  - generic [ref=e496]: // Fill payment details
+                - generic [ref=e497]:
+                  - generic [ref=e498]: "17"
+                  - generic [ref=e499]: await page.getByLabel("Email")
+                - generic [ref=e500]:
+                  - generic [ref=e501]: "18"
+                  - generic [ref=e502]: .fill("user@acme.com")
+                - generic [ref=e503]:
+                  - generic [ref=e504]: "19"
+                  - generic [ref=e505]: await page.getByLabel("Card number")
+                - generic [ref=e506]:
+                  - generic [ref=e507]: "20"
+                  - generic [ref=e508]: .fill("4242424242424242")
+                - generic [ref=e510]: "21"
+                - generic [ref=e511]:
+                  - generic [ref=e512]: "22"
+                  - generic [ref=e513]: // Submit order
+                - generic [ref=e514]:
+                  - generic [ref=e515]: "23"
+                  - generic [ref=e516]: "await page.getByRole(\"button\", {"
+                - generic [ref=e517]:
+                  - generic [ref=e518]: "24"
+                  - generic [ref=e519]: "name: \"Pay now\""
+                - generic [ref=e520]:
+                  - generic [ref=e521]: "25"
+                  - generic [ref=e522]: "}).click()"
+                - generic [ref=e524]: "26"
+                - generic [ref=e525]:
+                  - generic [ref=e526]: "27"
+                  - generic [ref=e527]: // Verify confirmation
+                - generic [ref=e528]:
+                  - generic [ref=e529]: "28"
+                  - generic [ref=e530]: await expect(
+                - generic [ref=e531]:
+                  - generic [ref=e532]: "29"
+                  - generic [ref=e533]: page.getByText("Order confirmed")
+                - generic [ref=e534]:
+                  - generic [ref=e535]: "30"
+                  - generic [ref=e536]: ).toBeVisible()
+                - generic [ref=e538]: "31"
+                - generic [ref=e539]:
+                  - generic [ref=e540]: "32"
+                  - generic [ref=e541]: // Check response time
+                - generic [ref=e542]:
+                  - generic [ref=e543]: "33"
+                  - generic [ref=e544]: const timing = await page.evaluate(
+                - generic [ref=e545]:
+                  - generic [ref=e546]: "34"
+                  - generic [ref=e547]: () => performance.now()
+                - generic [ref=e548]:
+                  - generic [ref=e549]: "35"
+                  - generic [ref=e550]: )
+                - generic [ref=e551]:
+                  - generic [ref=e552]: "36"
+                  - generic [ref=e553]: expect(timing).toBeLessThan(5000)
+                - generic [ref=e554]:
+                  - generic [ref=e555]: "37"
+                  - text: "})"
+            - generic [ref=e557]:
+              - generic [ref=e563]: All passing
+              - img [ref=e565]:
+                - generic [ref=e1055]: Virginia
+                - generic [ref=e1059]: N. California
+                - generic [ref=e1063]: Ireland
+                - generic [ref=e1067]: Frankfurt
+                - generic [ref=e1071]: Mumbai
+                - generic [ref=e1075]: Singapore
+                - generic [ref=e1079]: Tokyo
+                - generic [ref=e1083]: São Paulo
+                - generic [ref=e1087]: Cape Town
+                - generic [ref=e1091]: Sydney
+      - generic [ref=e1094]:
+        - generic [ref=e1095]:
+          - heading "Keep up with the speed of development" [level=2] [ref=e1096]
+          - paragraph [ref=e1097]: Connect Checkly to any AI agent or coding assistant via your CLI to start testing and monitoring your code in just minutes.
+        - generic [ref=e1098]:
+          - generic [ref=e1099]:
+            - generic [ref=e1100]:
+              - generic [ref=e1105]:
+                - img [ref=e1106]
+                - generic [ref=e1108]: Claude Code
+              - generic [ref=e1109]: claude-opus-4
+            - generic [ref=e1111]:
+              - generic [ref=e1113]: Add uptime monitoring for all /api routes
+              - generic [ref=e1114]:
+                - img [ref=e1116]
+                - paragraph [ref=e1119]: ✓ Created 8 URL monitors across your /api routes with 5-minute intervals from 3 regions.
+            - generic [ref=e1121]:
+              - textbox "Ask Checkly to create a monitor..." [ref=e1122]: Create a Playwright check for /payments, run every 5m from us-east-1 and eu-west-1
+              - generic [ref=e1123]:
+                - generic [ref=e1124]:
+                  - generic [ref=e1125]: Press
+                  - generic [ref=e1126]: Enter
+                  - generic [ref=e1127]: to send
+                - button [ref=e1128] [cursor=pointer]:
+                  - img [ref=e1129]
+          - generic [ref=e1132]:
+            - generic [ref=e1133]:
+              - generic [ref=e1134]:
+                - img [ref=e1135]
+                - img [ref=e1138]
+              - generic [ref=e1141]:
+                - generic [ref=e1142]:
+                  - paragraph [ref=e1143]: Detect
+                  - generic [ref=e1146]: Home
+                  - generic [ref=e1149]: Heartbeats
+                  - generic [ref=e1152]: Test sessions
+                  - generic [ref=e1155]: Events
+                  - generic [ref=e1158]: Reporting
+                - generic [ref=e1159]:
+                  - paragraph [ref=e1160]: Communicate
+                  - generic [ref=e1163]: Alert channels
+                  - generic [ref=e1166]: Status pages
+                  - generic [ref=e1169]: Services
+                  - generic [ref=e1172]: Dashboards
+                - generic [ref=e1173]:
+                  - paragraph [ref=e1174]: Resolve
+                  - generic [ref=e1177]: Traces
+                - generic [ref=e1178]:
+                  - paragraph [ref=e1179]: Configuration
+                  - generic [ref=e1182]: Rocky AI
+                  - generic [ref=e1185]: Private locations
+                  - generic [ref=e1188]: Env variables
+                  - generic [ref=e1191]: Maintenance
+                  - generic [ref=e1194]: Code snippets
+            - generic [ref=e1195]:
+              - generic [ref=e1196]:
+                - generic [ref=e1197]:
+                  - generic [ref=e1198]: Production E2E Mac
+                  - img [ref=e1199]
+                - generic [ref=e1201]:
+                  - generic [ref=e1202]: Changelog
+                  - generic [ref=e1203]: Support
+                  - generic [ref=e1204]: Docs
+                  - generic [ref=e1205]: D
+              - generic [ref=e1206]:
+                - generic [ref=e1207]:
+                  - paragraph [ref=e1208]: Passing
+                  - paragraph [ref=e1209]: "325"
+                - generic [ref=e1210]:
+                  - paragraph [ref=e1211]: Degraded
+                  - paragraph [ref=e1212]: "10"
+                - generic [ref=e1213]:
+                  - paragraph [ref=e1214]: Failing
+                  - paragraph [ref=e1215]: "68"
+              - generic [ref=e1217]:
+                - img [ref=e1218]
+                - generic [ref=e1221]: Search by name, request url...
+                - generic [ref=e1222]: /
+              - generic [ref=e1223]:
+                - generic [ref=e1224]:
+                  - img [ref=e1225]
+                  - text: Last 24 hours
+                  - img [ref=e1227]
+                - generic [ref=e1229]:
+                  - text: Status
+                  - img [ref=e1230]
+                - generic [ref=e1232]:
+                  - text: Check type
+                  - img [ref=e1233]
+                - generic [ref=e1235]:
+                  - text: Tags
+                  - img [ref=e1236]
+                - generic [ref=e1238]:
+                  - text: Traces
+                  - img [ref=e1239]
+              - generic [ref=e1241]:
+                - img [ref=e1242]
+                - generic [ref=e1245]: + Save
+              - generic [ref=e1246]:
+                - generic [ref=e1247]: Showing 1–25 of 93 items
+                - generic [ref=e1248]:
+                  - button "1" [ref=e1249] [cursor=pointer]
+                  - button "2" [ref=e1250] [cursor=pointer]
+                  - button "3" [ref=e1251] [cursor=pointer]
+                  - button "4" [ref=e1252] [cursor=pointer]
+                  - img [ref=e1253]
+              - generic [ref=e1255]:
+                - generic [ref=e1256]:
+                  - generic [ref=e1257]: Name
+                  - img [ref=e1258]
+                - generic [ref=e1260]: Last results
+                - generic [ref=e1261]: AVA
+                - generic [ref=e1262]: AVG
+                - generic [ref=e1263]: P95
+                - generic [ref=e1264]:
+                  - generic [ref=e1265]: ΔT
+                  - img [ref=e1266]
+              - generic [ref=e1268]:
+                - generic [ref=e1269]:
+                  - img [ref=e1271]
+                  - generic [ref=e1274]:
+                    - generic [ref=e1275]: /analytics
+                    - generic [ref=e1276]: 1 check
+                    - generic [ref=e1277]:
+                      - generic [ref=e1278]: public-api
+                      - generic [ref=e1279]: mac
+                    - generic [ref=e1280]: 30 minutes ago
+                  - img [ref=e1282]
+                - generic [ref=e1286]:
+                  - img [ref=e1288]
+                  - generic [ref=e1291]:
+                    - generic [ref=e1292]: /check-groups
+                    - generic [ref=e1293]: 1 check
+                    - generic [ref=e1294]:
+                      - generic [ref=e1295]: public-api
+                      - generic [ref=e1296]: mac
+                      - generic [ref=e1297]: parallel
+                    - generic [ref=e1298]: just now
+                  - img [ref=e1300]
+                - generic [ref=e1304]:
+                  - generic [ref=e1305]:
+                    - img [ref=e1307]
+                    - generic [ref=e1310]:
+                      - generic [ref=e1311]: /checks
+                      - generic [ref=e1312]: 3 checks
+                      - generic [ref=e1313]:
+                        - generic [ref=e1314]: public-api
+                        - generic [ref=e1315]: mac
+                        - generic [ref=e1316]: parallel
+                      - generic [ref=e1317]: 1 minute ago
+                    - img [ref=e1319]
+                  - generic [ref=e1323] [cursor=pointer]:
+                    - img [ref=e1325]
+                    - generic [ref=e1328]:
+                      - generic [ref=e1329]: Browser check CRUD
+                      - generic [ref=e1330]: 6 minutes ago •
+                      - generic [ref=e1331]:
+                        - generic [ref=e1332]: mac
+                        - generic [ref=e1333]: checkly-backend
+                    - img [ref=e1335]
+                    - img [ref=e1338]
+                    - generic [ref=e1356]: 100 %
+                    - generic [ref=e1357]: 4.67 s
+                    - generic [ref=e1358]: 5.99 s
+                    - generic [ref=e1359]: 10 min
+                    - img [ref=e1361]
+                  - generic [ref=e1365] [cursor=pointer]:
+                    - img [ref=e1367]
+                    - generic [ref=e1370]:
+                      - generic [ref=e1371]: GET /checks
+                      - generic [ref=e1372]: 18 minutes ago •
+                      - generic [ref=e1373]:
+                        - generic [ref=e1374]: mac
+                        - generic [ref=e1375]: checkly-backend
+                    - img [ref=e1377]
+                    - img [ref=e1381]
+                    - generic [ref=e1399]: 100 %
+                    - generic [ref=e1400]: 220 ms
+                    - generic [ref=e1401]: 652 ms
+                    - generic [ref=e1402]: 30 min
+                    - img [ref=e1404]
+                  - generic [ref=e1408] [cursor=pointer]:
+                    - img [ref=e1410]
+                    - generic [ref=e1413]:
+                      - generic [ref=e1414]: Multistep check CRUD
+                      - generic [ref=e1415]: 2 minutes ago •
+                      - generic [ref=e1416]:
+                        - generic [ref=e1417]: mac
+                        - generic [ref=e1418]: checkly-backend
+                    - img [ref=e1420]
+                    - img [ref=e1423]
+                    - generic [ref=e1441]: 100 %
+                    - generic [ref=e1442]: 4.64 s
+                    - generic [ref=e1443]: 6.18 s
+                    - generic [ref=e1444]: 10 min
+                    - img [ref=e1446]
+      - generic [ref=e1450]:
+        - generic [ref=e1452]:
+          - paragraph [ref=e1453]: What Customers Say
+          - heading "Don't take our word for it." [level=2] [ref=e1454]
+        - generic [ref=e1455]:
+          - generic [ref=e1458]:
+            - button "Finn.auto" [ref=e1460] [cursor=pointer]:
+              - img "Finn.auto" [ref=e1461]
+            - button "Vercel" [ref=e1463] [cursor=pointer]:
+              - img "Vercel" [ref=e1464]
+            - button "1Password" [ref=e1466] [cursor=pointer]:
+              - img "1Password" [ref=e1467]
+            - button "Loyal Health" [ref=e1469] [cursor=pointer]:
+              - img "Loyal Health" [ref=e1470]
+            - button "Railway" [ref=e1472] [cursor=pointer]:
+              - img "Railway" [ref=e1473]
+            - button "Locus" [ref=e1475] [cursor=pointer]:
+              - img "Locus" [ref=e1476]
+            - button "Solutia" [ref=e1478] [cursor=pointer]:
+              - img "Solutia" [ref=e1479]
+          - generic [ref=e1483]:
+            - blockquote [ref=e1484]:
+              - paragraph [ref=e1485]: “Checkly is super easy to use and fits perfectly in our toolchain. We monitor our Vercel projects on preview and production to catch issues earlier and we can trust that we are the first ones to know about problems in production.”
+            - generic [ref=e1486]:
+              - generic [ref=e1487]:
+                - paragraph [ref=e1488]: Andreas Wixler
+                - paragraph [ref=e1489]: CTO & Founder - Finn.auto
+              - link "Read Case Study" [ref=e1490] [cursor=pointer]:
+                - /url: /customers/finn-auto/
+      - generic [ref=e1492]:
+        - generic [ref=e1494]:
+          - paragraph [ref=e1495]: The Problem
+          - heading "Your monitoring tools were built for a legacy tech stack" [level=2] [ref=e1496]
+          - paragraph [ref=e1497]: AI agents now write, ship, and operate production code at a pace humans never could. The observability tools they inherited weren't designed for them.
+        - generic [ref=e1501]:
+          - generic [ref=e1502]:
+            - img [ref=e1506]
+            - generic [ref=e1507]:
+              - heading "The blast radius has expanded" [level=3] [ref=e1508]
+              - paragraph [ref=e1509]: AI agents ship faster than anyone can verify. When something breaks, it's becoming increasingly difficult to pinpoint the root cause.
+          - generic [ref=e1510]:
+            - generic [ref=e1513]:
+              - generic [ref=e1514]:
+                - generic [ref=e1515]:
+                  - generic [ref=e1516]: 8 Open
+                  - generic [ref=e1518]: 2 Merged
+                - generic [ref=e1520]: LIVE
+              - generic [ref=e1522]:
+                - generic [ref=e1523]:
+                  - generic [ref=e1525]: "#4822"
+                  - generic [ref=e1526]: "feat: agent monitoring hooks"
+                  - generic [ref=e1527]: 4h
+                - generic [ref=e1528]:
+                  - generic [ref=e1530]: "#4823"
+                  - generic [ref=e1531]: "fix: concurrent write conflict"
+                  - generic [ref=e1532]: 3h
+                - generic [ref=e1533]:
+                  - generic [ref=e1535]: "#4824"
+                  - generic [ref=e1536]: "feat: smart alert routing"
+                  - generic [ref=e1537]: 2h
+                - generic [ref=e1538]:
+                  - generic [ref=e1540]: "#4825"
+                  - generic [ref=e1541]: "fix: DNS resolution fallback"
+                  - generic [ref=e1542]: 82m
+                - generic [ref=e1543]:
+                  - generic [ref=e1545]: "#4826"
+                  - generic [ref=e1546]: "feat: trace sampling config"
+                  - generic [ref=e1547]: 61m
+                - generic [ref=e1548]:
+                  - generic [ref=e1550]: "#4827"
+                  - generic [ref=e1551]: "chore: rotate service accounts"
+                  - generic [ref=e1552]: 44m
+                - generic [ref=e1553]:
+                  - generic [ref=e1555]: "#4828"
+                  - generic [ref=e1556]: "feat: canary deployment logic"
+                  - generic [ref=e1557]: 27m
+                - generic [ref=e1558]:
+                  - generic [ref=e1560]: "#4829"
+                  - generic [ref=e1561]: "fix: session cookie samesite"
+                  - generic [ref=e1562]: 14m
+                - generic [ref=e1563]:
+                  - generic [ref=e1565]: "#4830"
+                  - generic [ref=e1566]: "feat: adaptive checkout flow"
+                  - generic [ref=e1567]: 6m
+                - generic [ref=e1568]:
+                  - generic [ref=e1570]: "#4831"
+                  - generic [ref=e1571]: "fix: payment processor timeout"
+                  - generic [ref=e1572]: 2m
+            - generic [ref=e1573]:
+              - heading "Agentic code velocity is relentless" [level=3] [ref=e1574]
+              - paragraph [ref=e1575]: Changes are getting pushed at a pace no ops or SRE team can match manually. Without automated monitoring creation, coverage gaps compound with every commit.
+          - generic [ref=e1576]:
+            - generic [ref=e1579]:
+              - generic [ref=e1580]:
+                - generic [ref=e1581]: Acme
+                - generic [ref=e1583]: "# general"
+                - generic [ref=e1585]: "# deploys"
+                - generic [ref=e1587]: "# incidents"
+                - generic [ref=e1589]: "# engineering"
+                - generic [ref=e1591]: "# on-call"
+              - generic [ref=e1592]:
+                - generic [ref=e1593]: "# incidents"
+                - generic [ref=e1594]:
+                  - generic [ref=e1595]:
+                    - generic [ref=e1596]: C
+                    - generic [ref=e1597]:
+                      - generic [ref=e1598]:
+                        - generic [ref=e1599]: Alerts
+                        - generic [ref=e1600]: 2:03 AM
+                      - generic [ref=e1601]:
+                        - generic [ref=e1602]: "ALERT: Auth service check failed"
+                        - generic [ref=e1603]: us-east-1, eu-west-1 · 2 locations down
+                  - generic [ref=e1604]:
+                    - generic [ref=e1605]: DR
+                    - generic [ref=e1606]:
+                      - generic [ref=e1607]:
+                        - generic [ref=e1608]: Dan R.
+                        - generic [ref=e1609]: 2:04 AM
+                      - generic [ref=e1610]: "@here does anyone know how our auth service works. Looks like it's down."
+            - generic [ref=e1611]:
+              - heading "Incident management can't keep up" [level=3] [ref=e1612]
+              - paragraph [ref=e1613]: 2 AM wakeups filled with faulty alerts and incomplete context. The tools that worked when humans shipped three times a week weren't built for the pace agents move at now.
+      - generic [ref=e1616]:
+        - generic [ref=e1617]:
+          - generic [ref=e1618]:
+            - paragraph [ref=e1619]: The Solution
+            - heading "Power your reliability with an AI-native workflow" [level=2] [ref=e1620]
+          - link "Get started with the CLI" [ref=e1621] [cursor=pointer]:
+            - /url: /cli/
+            - text: Get started with the CLI
+            - img [ref=e1622]
+        - generic [ref=e1624]:
+          - navigation [ref=e1625]:
+            - button "Go to Create" [ref=e1626] [cursor=pointer]:
+              - generic [ref=e1627]: "01"
+              - generic [ref=e1628]:
+                - generic [ref=e1629]: Create
+                - generic: Create
+            - button "Go to Investigate" [ref=e1630] [cursor=pointer]:
+              - generic [ref=e1631]: "02"
+              - generic [ref=e1633]: Investigate
+            - button "Go to Communicate" [ref=e1634] [cursor=pointer]:
+              - generic [ref=e1635]: "03"
+              - generic [ref=e1637]: Communicate
+            - button "Go to Resolve" [ref=e1638] [cursor=pointer]:
+              - generic [ref=e1639]: "04"
+              - generic [ref=e1641]: Resolve
+          - generic [ref=e1642]:
+            - generic [ref=e1643]:
+              - heading "Go from prompt to monitor in seconds." [level=3] [ref=e1644]
+              - paragraph [ref=e1645]: Checkly communicates with your agents to turn natural language prompts into fully configured tests and monitors. Describe what you want to check, and AI generates the code, picks the regions, wires up the alerts, then deploys them to Checkly
+            - generic [ref=e1646]:
+              - generic [ref=e1647]:
+                - paragraph [ref=e1648]: 10x
+                - paragraph [ref=e1649]: Faster monitor creation
+              - generic [ref=e1650]:
+                - paragraph [ref=e1651]: 20+
+                - paragraph [ref=e1652]: Global regions
+              - generic [ref=e1653]:
+                - paragraph [ref=e1654]: < 30s
+                - paragraph [ref=e1655]: Prompt to deploy
+          - generic [ref=e1656]:
+            - generic [ref=e1657]:
+              - generic [ref=e1658]: Works with
+              - generic [ref=e1659]:
+                - img "Cursor" [ref=e1661]
+                - img "Claude" [ref=e1663]
+                - img "Windsurf" [ref=e1665]
+                - img "OpenAI" [ref=e1667]
+                - img "Mistral" [ref=e1669]
+            - generic [ref=e1670]:
+              - generic [ref=e1671]:
+                - generic [ref=e1676]:
+                  - img [ref=e1677]
+                  - generic [ref=e1679]: Claude Code
+                - generic [ref=e1680]: claude-opus-4
+              - generic [ref=e1681]:
+                - generic [ref=e1683]: Create a browser check that monitors our checkout flow for our top selling item, from our ten most active regions.
+                - generic [ref=e1684]:
+                  - img [ref=e1686]
+                  - generic [ref=e1689]: I'll create a Playwright browser check for your checkout flow. I pulled your 10 highest-traffic regions from analytics and configured them automatically. Created checkout-flow.spec.ts The check navigates to your product page, adds the top-selling item to cart, proceeds through checkout, and verifies the order confirmation. $ npx checkly deploy Deploying 1 new check... ✓ checkout-flow-top-item deployed to 10 regions.
+              - generic [ref=e1691]:
+                - paragraph [ref=e1692]
+                - generic [ref=e1693]:
+                  - generic [ref=e1694]:
+                    - generic [ref=e1695]: Press
+                    - generic [ref=e1696]: Enter
+                    - generic [ref=e1697]: to send
+                  - button "Send" [ref=e1698] [cursor=pointer]:
+                    - img [ref=e1699]
+      - generic [ref=e1702]:
+        - generic [ref=e1703]:
+          - paragraph [ref=e1704]: Unified Reliability
+          - heading "Everything you need to catch issues before they impact your customers." [level=2] [ref=e1705]
+          - paragraph [ref=e1706]: Checkly brings together testing, monitoring, incident management, and observability in a single platform to give your team one clear signal of application health.
+        - generic [ref=e1707]:
+          - tablist "Product features" [ref=e1708]:
+            - generic [ref=e1709]:
+              - generic [ref=e1710]:
+                - generic [ref=e1711]: Detect
+                - generic [ref=e1712]:
+                  - tab "Uptime Monitoring" [ref=e1713] [cursor=pointer]
+                  - tab "Synthetic Monitoring" [ref=e1714] [cursor=pointer]
+              - generic [ref=e1715]:
+                - generic [ref=e1717]: Communicate
+                - generic [ref=e1718]:
+                  - tab "Alerts" [ref=e1719] [cursor=pointer]
+                  - tab "Status Pages" [ref=e1720] [cursor=pointer]
+              - generic [ref=e1721]:
+                - generic [ref=e1723]: Resolve
+                - generic [ref=e1724]:
+                  - tab "Traces" [ref=e1725] [cursor=pointer]
+                  - tab "Root Cause Analysis" [selected] [ref=e1726] [cursor=pointer]
+          - generic [ref=e1728]:
+            - generic [ref=e1729]:
+              - heading "Get fast, actionable insights & get it fixed faster" [level=3] [ref=e1730]
+              - paragraph [ref=e1731]: Quickly identify and fix errors with detailed summaries and analysis of your check runs from Rocky AI.
+              - link "Learn more" [ref=e1732] [cursor=pointer]:
+                - /url: /product/root-cause-analysis
+                - text: Learn more
+                - img [ref=e1733]
+            - img "Get fast, actionable insights & get it fixed faster" [ref=e1740]
+      - generic [ref=e1741]:
+        - generic [ref=e1743]:
+          - heading "Let your agents own reliability." [level=2] [ref=e1744]
+          - paragraph [ref=e1745]: Connect Checkly to any AI agent or coding assistant via CLI. Create monitors, trigger runs, and fetch results — all through natural language.
+        - generic [ref=e1749]:
+          - generic [ref=e1750]:
+            - heading "CLI. TypeScript-native. Test and deploy your entire monitoring setup from a terminal — or your agent." [level=3] [ref=e1751]
+            - generic [ref=e1752]:
+              - generic [ref=e1757]: terminal
+              - generic [ref=e1759]:
+                - generic [ref=e1760]:
+                  - generic [ref=e1761]: $ npx checkly test
+                  - generic [ref=e1762]:
+                    - generic [ref=e1763]:
+                      - generic [ref=e1764]: PASS
+                      - generic [ref=e1765]: api
+                      - generic [ref=e1766]: /
+                      - generic [ref=e1767]: health-check
+                      - generic [ref=e1768]: 245ms
+                    - generic [ref=e1769]:
+                      - generic [ref=e1770]: PASS
+                      - generic [ref=e1771]: browser
+                      - generic [ref=e1772]: /
+                      - generic [ref=e1773]: checkout
+                      - generic [ref=e1774]: 1.2s
+                    - generic [ref=e1775]:
+                      - generic [ref=e1776]: PASS
+                      - generic [ref=e1777]: api
+                      - generic [ref=e1778]: /
+                      - generic [ref=e1779]: auth-endpoint
+                      - generic [ref=e1780]: 198ms
+                  - generic [ref=e1781]:
+                    - generic [ref=e1782]: 3 passed
+                    - generic [ref=e1783]: 0 failed
+                    - generic [ref=e1784]: 2 regions
+                - generic [ref=e1785]:
+                  - generic [ref=e1786]: $ npx checkly deploy
+                  - generic [ref=e1787]:
+                    - generic [ref=e1788]: ✓
+                    - generic [ref=e1789]: Deployed
+                    - generic [ref=e1790]: 12 checks
+                    - generic [ref=e1791]: to production
+            - generic [ref=e1792]:
+              - generic [ref=e1793]: checkly
+              - link "Read CLI docs" [ref=e1794] [cursor=pointer]:
+                - /url: https://www.checklyhq.com/docs/cli/
+                - text: Read CLI docs
+                - img [ref=e1795]
+          - generic [ref=e1797]:
+            - 'heading "Constructs. Strongly-typed classes for every resource: ApiCheck, BrowserCheck, Dashboard, StatusPage…" [level=3] [ref=e1798]'
+            - generic [ref=e1799]:
+              - generic [ref=e1804]: checkly.config.ts
+              - generic [ref=e1807]:
+                - generic [ref=e1808]:
+                  - generic [ref=e1809]: "1"
+                  - generic [ref=e1810]: "2"
+                  - generic [ref=e1811]: "3"
+                  - generic [ref=e1812]: "4"
+                  - generic [ref=e1813]: "5"
+                  - generic [ref=e1814]: "6"
+                  - generic [ref=e1815]: "7"
+                  - generic [ref=e1816]: "8"
+                  - generic [ref=e1817]: "9"
+                - generic [ref=e1818]:
+                  - generic [ref=e1819]: "import { ApiCheck } from 'checkly/constructs'"
+                  - generic [ref=e1820]: "import { slackChannel } from './alert-channels'"
+                  - generic [ref=e1822]:
+                    - text: new ApiCheck('homepage'
+                    - generic [ref=e1823]: ", {"
+                  - generic [ref=e1824]: "url: 'https://app.acme.com',"
+                  - generic [ref=e1825]: "tags: ['critical', 'api'],"
+                  - generic [ref=e1826]: "alertChannels: [slackChannel],"
+                  - generic [ref=e1827]: "})"
+            - generic [ref=e1828]:
+              - generic [ref=e1829]: checkly/constructs
+              - link "Browse all constructs" [ref=e1830] [cursor=pointer]:
+                - /url: https://www.checklyhq.com/docs/constructs/
+                - text: Browse all constructs
+                - img [ref=e1831]
+          - generic [ref=e1833]:
+            - heading "REST API. Build custom integrations, dashboards, and automations. Everything the UI can do, the API can do." [level=3] [ref=e1834]
+            - generic [ref=e1835]:
+              - generic [ref=e1840]: api-reference
+              - generic [ref=e1842]:
+                - generic [ref=e1843]:
+                  - generic [ref=e1844]: GET
+                  - generic [ref=e1845]: /v1/checks
+                  - generic [ref=e1846]: 200 OK
+                - generic [ref=e1847]:
+                  - generic [ref=e1848]: POST
+                  - generic [ref=e1849]: /v1/checks
+                  - generic [ref=e1850]: 201 Created
+                - generic [ref=e1851]:
+                  - generic [ref=e1852]: PATCH
+                  - generic [ref=e1853]: /v1/checks/
+                  - generic [ref=e1854]: :id
+                  - generic [ref=e1855]: 200 OK
+                - generic [ref=e1856]:
+                  - generic [ref=e1857]: DELETE
+                  - generic [ref=e1858]: /v1/checks/
+                  - generic [ref=e1859]: :id
+                  - generic [ref=e1860]: "204"
+            - generic [ref=e1861]:
+              - generic [ref=e1862]: api.checklyhq.com
+              - link "Open API reference" [ref=e1863] [cursor=pointer]:
+                - /url: https://developers.checklyhq.com/
+                - text: Open API reference
+                - img [ref=e1864]
+          - generic [ref=e1866]:
+            - heading "Agent Skills. The open-standard skills package. Claude, Cursor, Codex — they all get Checkly context on demand." [level=3] [ref=e1867]
+            - generic [ref=e1868]:
+              - generic [ref=e1873]: terminal
+              - generic [ref=e1875]:
+                - generic [ref=e1876]: $ npx checkly skills install
+                - generic [ref=e1877]:
+                  - generic [ref=e1878]:
+                    - generic [ref=e1879]: ✓
+                    - generic [ref=e1880]: Claude
+                    - generic [ref=e1881]: .claude/skills/checkly/
+                  - generic [ref=e1882]:
+                    - generic [ref=e1883]: ✓
+                    - generic [ref=e1884]: Cursor
+                    - generic [ref=e1885]: .cursor/skills/checkly/
+                  - generic [ref=e1886]:
+                    - generic [ref=e1887]: ✓
+                    - generic [ref=e1888]: Codex
+                    - generic [ref=e1889]: .agents/skills/checkly/
+            - generic [ref=e1890]:
+              - generic [ref=e1891]: checkly skills
+              - link "Install skills" [ref=e1892] [cursor=pointer]:
+                - /url: https://www.checklyhq.com/docs/agent-skills/
+                - text: Install skills
+                - img [ref=e1893]
+      - generic [ref=e1896]:
+        - generic [ref=e1898]:
+          - paragraph [ref=e1899]: Integrations
+          - heading "Integrates with your development and agentic workflow" [level=2] [ref=e1900]
+          - paragraph [ref=e1901]: Connect Checkly to your existing tools. Get alerts where your team already works and manage monitoring through your existing workflows.
+        - generic [ref=e1902]:
+          - generic [ref=e1904]:
+            - link "Slack Slack Real-time alerts in your team channels with rich context and actionable details." [ref=e1905] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/slack/
+              - generic [ref=e1906]:
+                - img "Slack" [ref=e1908]
+                - heading "Slack" [level=3] [ref=e1909]
+              - paragraph [ref=e1910]: Real-time alerts in your team channels with rich context and actionable details.
+            - link "PagerDuty PagerDuty Trigger incidents and manage on-call rotations seamlessly." [ref=e1911] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/pagerduty/
+              - generic [ref=e1912]:
+                - img "PagerDuty" [ref=e1914]
+                - heading "PagerDuty" [level=3] [ref=e1915]
+              - paragraph [ref=e1916]: Trigger incidents and manage on-call rotations seamlessly.
+            - link "OpsGenie OpsGenie Route alerts to the right team automatically based on your escalation policies." [ref=e1917] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/opsgenie/
+              - generic [ref=e1918]:
+                - img "OpsGenie" [ref=e1920]
+                - heading "OpsGenie" [level=3] [ref=e1921]
+              - paragraph [ref=e1922]: Route alerts to the right team automatically based on your escalation policies.
+            - generic [ref=e1923]:
+              - generic [ref=e1924]:
+                - img "Datadog" [ref=e1926]
+                - heading "Datadog" [level=3] [ref=e1927]
+              - paragraph [ref=e1928]: Forward metrics to your observability platform for unified dashboards.
+            - link "Grafana Grafana Visualize monitoring data in Grafana dashboards for comprehensive observability." [ref=e1929] [cursor=pointer]:
+              - /url: /docs/resolve/traces/export/grafana-tempo/
+              - generic [ref=e1930]:
+                - img "Grafana" [ref=e1932]
+                - heading "Grafana" [level=3] [ref=e1933]
+              - paragraph [ref=e1934]: Visualize monitoring data in Grafana dashboards for comprehensive observability.
+            - link "Discord Discord Get instant alerts in your Discord servers for real-time team notifications." [ref=e1935] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/discord/
+              - generic [ref=e1936]:
+                - img "Discord" [ref=e1938]
+                - heading "Discord" [level=3] [ref=e1939]
+              - paragraph [ref=e1940]: Get instant alerts in your Discord servers for real-time team notifications.
+            - link "Coralogix Coralogix Stream monitoring data to Coralogix for advanced log analytics and insights." [ref=e1941] [cursor=pointer]:
+              - /url: /docs/integrations/observability/coralogix/
+              - generic [ref=e1942]:
+                - img "Coralogix" [ref=e1944]
+                - heading "Coralogix" [level=3] [ref=e1945]
+              - paragraph [ref=e1946]: Stream monitoring data to Coralogix for advanced log analytics and insights.
+            - link "Slack Slack Real-time alerts in your team channels with rich context and actionable details." [ref=e1947] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/slack/
+              - generic [ref=e1948]:
+                - img "Slack" [ref=e1950]
+                - heading "Slack" [level=3] [ref=e1951]
+              - paragraph [ref=e1952]: Real-time alerts in your team channels with rich context and actionable details.
+            - link "PagerDuty PagerDuty Trigger incidents and manage on-call rotations seamlessly." [ref=e1953] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/pagerduty/
+              - generic [ref=e1954]:
+                - img "PagerDuty" [ref=e1956]
+                - heading "PagerDuty" [level=3] [ref=e1957]
+              - paragraph [ref=e1958]: Trigger incidents and manage on-call rotations seamlessly.
+            - link "OpsGenie OpsGenie Route alerts to the right team automatically based on your escalation policies." [ref=e1959] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/opsgenie/
+              - generic [ref=e1960]:
+                - img "OpsGenie" [ref=e1962]
+                - heading "OpsGenie" [level=3] [ref=e1963]
+              - paragraph [ref=e1964]: Route alerts to the right team automatically based on your escalation policies.
+            - generic [ref=e1965]:
+              - generic [ref=e1966]:
+                - img "Datadog" [ref=e1968]
+                - heading "Datadog" [level=3] [ref=e1969]
+              - paragraph [ref=e1970]: Forward metrics to your observability platform for unified dashboards.
+            - link "Grafana Grafana Visualize monitoring data in Grafana dashboards for comprehensive observability." [ref=e1971] [cursor=pointer]:
+              - /url: /docs/resolve/traces/export/grafana-tempo/
+              - generic [ref=e1972]:
+                - img "Grafana" [ref=e1974]
+                - heading "Grafana" [level=3] [ref=e1975]
+              - paragraph [ref=e1976]: Visualize monitoring data in Grafana dashboards for comprehensive observability.
+            - link "Discord Discord Get instant alerts in your Discord servers for real-time team notifications." [ref=e1977] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/discord/
+              - generic [ref=e1978]:
+                - img "Discord" [ref=e1980]
+                - heading "Discord" [level=3] [ref=e1981]
+              - paragraph [ref=e1982]: Get instant alerts in your Discord servers for real-time team notifications.
+            - link "Coralogix Coralogix Stream monitoring data to Coralogix for advanced log analytics and insights." [ref=e1983] [cursor=pointer]:
+              - /url: /docs/integrations/observability/coralogix/
+              - generic [ref=e1984]:
+                - img "Coralogix" [ref=e1986]
+                - heading "Coralogix" [level=3] [ref=e1987]
+              - paragraph [ref=e1988]: Stream monitoring data to Coralogix for advanced log analytics and insights.
+          - generic [ref=e1990]:
+            - link "Terraform Terraform Manage your monitoring infrastructure as code with our Terraform provider." [ref=e1991] [cursor=pointer]:
+              - /url: /docs/integrations/iac/terraform/overview
+              - generic [ref=e1992]:
+                - img "Terraform" [ref=e1994]
+                - heading "Terraform" [level=3] [ref=e1995]
+              - paragraph [ref=e1996]: Manage your monitoring infrastructure as code with our Terraform provider.
+            - link "Honeycomb Honeycomb Send monitoring events to Honeycomb for deep observability and debugging." [ref=e1997] [cursor=pointer]:
+              - /url: /docs/resolve/traces/export/honeycomb/
+              - generic [ref=e1998]:
+                - img "Honeycomb" [ref=e2000]
+                - heading "Honeycomb" [level=3] [ref=e2001]
+              - paragraph [ref=e2002]: Send monitoring events to Honeycomb for deep observability and debugging.
+            - link "Pulumi Pulumi Define monitors using your favorite programming language with Pulumi." [ref=e2003] [cursor=pointer]:
+              - /url: /docs/integrations/iac/pulumi/overview
+              - generic [ref=e2004]:
+                - img "Pulumi" [ref=e2006]
+                - heading "Pulumi" [level=3] [ref=e2007]
+              - paragraph [ref=e2008]: Define monitors using your favorite programming language with Pulumi.
+            - link "MS Teams MS Teams Receive alerts directly in Microsoft Teams channels for seamless collaboration." [ref=e2009] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/msteams/
+              - generic [ref=e2010]:
+                - img "MS Teams" [ref=e2012]
+                - heading "MS Teams" [level=3] [ref=e2013]
+              - paragraph [ref=e2014]: Receive alerts directly in Microsoft Teams channels for seamless collaboration.
+            - link "FireHydrant FireHydrant Trigger incidents in FireHydrant for streamlined incident management." [ref=e2015] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/firehydrant/
+              - generic [ref=e2016]:
+                - img "FireHydrant" [ref=e2018]
+                - heading "FireHydrant" [level=3] [ref=e2019]
+              - paragraph [ref=e2020]: Trigger incidents in FireHydrant for streamlined incident management.
+            - link "Rootly Rootly Connect to Rootly for automated incident response and resolution tracking." [ref=e2021] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/rootly/
+              - generic [ref=e2022]:
+                - img "Rootly" [ref=e2024]
+                - heading "Rootly" [level=3] [ref=e2025]
+              - paragraph [ref=e2026]: Connect to Rootly for automated incident response and resolution tracking.
+            - link "Telegram Telegram Receive instant alerts via Telegram for mobile-first notifications." [ref=e2027] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/telegram/
+              - generic [ref=e2028]:
+                - img "Telegram" [ref=e2030]
+                - heading "Telegram" [level=3] [ref=e2031]
+              - paragraph [ref=e2032]: Receive instant alerts via Telegram for mobile-first notifications.
+            - link "Terraform Terraform Manage your monitoring infrastructure as code with our Terraform provider." [ref=e2033] [cursor=pointer]:
+              - /url: /docs/integrations/iac/terraform/overview
+              - generic [ref=e2034]:
+                - img "Terraform" [ref=e2036]
+                - heading "Terraform" [level=3] [ref=e2037]
+              - paragraph [ref=e2038]: Manage your monitoring infrastructure as code with our Terraform provider.
+            - link "Honeycomb Honeycomb Send monitoring events to Honeycomb for deep observability and debugging." [ref=e2039] [cursor=pointer]:
+              - /url: /docs/resolve/traces/export/honeycomb/
+              - generic [ref=e2040]:
+                - img "Honeycomb" [ref=e2042]
+                - heading "Honeycomb" [level=3] [ref=e2043]
+              - paragraph [ref=e2044]: Send monitoring events to Honeycomb for deep observability and debugging.
+            - link "Pulumi Pulumi Define monitors using your favorite programming language with Pulumi." [ref=e2045] [cursor=pointer]:
+              - /url: /docs/integrations/iac/pulumi/overview
+              - generic [ref=e2046]:
+                - img "Pulumi" [ref=e2048]
+                - heading "Pulumi" [level=3] [ref=e2049]
+              - paragraph [ref=e2050]: Define monitors using your favorite programming language with Pulumi.
+            - link "MS Teams MS Teams Receive alerts directly in Microsoft Teams channels for seamless collaboration." [ref=e2051] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/msteams/
+              - generic [ref=e2052]:
+                - img "MS Teams" [ref=e2054]
+                - heading "MS Teams" [level=3] [ref=e2055]
+              - paragraph [ref=e2056]: Receive alerts directly in Microsoft Teams channels for seamless collaboration.
+            - link "FireHydrant FireHydrant Trigger incidents in FireHydrant for streamlined incident management." [ref=e2057] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/firehydrant/
+              - generic [ref=e2058]:
+                - img "FireHydrant" [ref=e2060]
+                - heading "FireHydrant" [level=3] [ref=e2061]
+              - paragraph [ref=e2062]: Trigger incidents in FireHydrant for streamlined incident management.
+            - link "Rootly Rootly Connect to Rootly for automated incident response and resolution tracking." [ref=e2063] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/rootly/
+              - generic [ref=e2064]:
+                - img "Rootly" [ref=e2066]
+                - heading "Rootly" [level=3] [ref=e2067]
+              - paragraph [ref=e2068]: Connect to Rootly for automated incident response and resolution tracking.
+            - link "Telegram Telegram Receive instant alerts via Telegram for mobile-first notifications." [ref=e2069] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/telegram/
+              - generic [ref=e2070]:
+                - img "Telegram" [ref=e2072]
+                - heading "Telegram" [level=3] [ref=e2073]
+              - paragraph [ref=e2074]: Receive instant alerts via Telegram for mobile-first notifications.
+      - generic [ref=e2076]:
+        - generic [ref=e2077]:
+          - generic [ref=e2078]:
+            - heading "From signup to first check in an afternoon." [level=2] [ref=e2079]:
+              - text: From signup to first check
+              - text: in an afternoon.
+            - paragraph [ref=e2080]: Install the CLI, write checks in code, and deploy monitors to 20+ regions. No lengthy setup, no infrastructure to manage.
+          - link "Get started" [ref=e2082] [cursor=pointer]:
+            - /url: https://app.checklyhq.com/signup
+        - generic [ref=e2157]:
+          - generic [ref=e2158]:
+            - paragraph [ref=e2159]: Day 1 0:00
+            - heading "Sign up" [level=3] [ref=e2160]
+            - paragraph [ref=e2161]: Create a free Checkly account with GitHub, GitLab, or email. No credit card required.
+          - generic [ref=e2162]:
+            - paragraph [ref=e2163]: Day 1 0:05
+            - heading "Install" [level=3] [ref=e2164]
+            - paragraph [ref=e2165]: Run npx checkly init to scaffold your first project and connect your repo.
+          - generic [ref=e2166]:
+            - paragraph [ref=e2167]: Day 1 0:15
+            - heading "Deploy" [level=3] [ref=e2168]
+            - paragraph [ref=e2169]: Ship checks as code and monitor your app from 20+ global regions.
+          - generic [ref=e2170]:
+            - paragraph [ref=e2171]: Ongoing
+            - heading "Improve" [level=3] [ref=e2172]
+            - paragraph [ref=e2173]: Review runs, let Rocky AI surface root causes, and your monitors get better over time.
+        - generic [ref=e2174]:
+          - button "$ npx checkly init" [ref=e2175] [cursor=pointer]:
+            - generic [ref=e2176]: $
+            - code [ref=e2177]: npx checkly init
+            - img [ref=e2179]
+          - link "Or start for free" [ref=e2182] [cursor=pointer]:
+            - /url: https://app.checklyhq.com/signup
+            - text: Or start for free
+            - img [ref=e2183]
+    - contentinfo [ref=e2185]:
+      - generic [ref=e2186]:
+        - generic [ref=e2187]:
+          - generic [ref=e2188]:
+            - generic [ref=e2189]:
+              - paragraph [ref=e2191]: Detect
+              - link "Uptime Monitoring" [ref=e2192] [cursor=pointer]:
+                - /url: /product/uptime-monitoring/
+              - link "Synthetic Monitoring" [ref=e2193] [cursor=pointer]:
+                - /url: /product/synthetic-monitoring/
+              - link "Testing" [ref=e2194] [cursor=pointer]:
+                - /url: /product/testing/
+              - link "API Monitoring" [ref=e2195] [cursor=pointer]:
+                - /url: /product/api-monitoring/
+              - link "Playwright Checks" [ref=e2196] [cursor=pointer]:
+                - /url: /product/playwright-check-suites/
+            - generic [ref=e2197]:
+              - paragraph [ref=e2199]: Communicate
+              - link "Status Pages" [ref=e2200] [cursor=pointer]:
+                - /url: /product/status-pages/
+              - link "Alerts" [ref=e2201] [cursor=pointer]:
+                - /url: /product/alerting/
+            - generic [ref=e2202]:
+              - paragraph [ref=e2204]: Resolve
+              - link "AI Root Cause Analysis" [ref=e2205] [cursor=pointer]:
+                - /url: /product/ai-analysis/
+              - link "Traces" [ref=e2206] [cursor=pointer]:
+                - /url: /product/traces/
+          - generic [ref=e2207]:
+            - generic [ref=e2208]:
+              - paragraph [ref=e2210]: Monitoring as Code
+              - link "What is Monitoring as Code?" [ref=e2211] [cursor=pointer]:
+                - /url: /product/monitoring-as-code/
+              - link "Checkly CLI" [ref=e2212] [cursor=pointer]:
+                - /url: /cli/
+              - link "Agent Skills" [ref=e2213] [cursor=pointer]:
+                - /url: /docs/ai/skills/
+              - link "Terraform Provider" [ref=e2214] [cursor=pointer]:
+                - /url: /product/terraform-provider/
+              - link "All Integrations" [ref=e2215] [cursor=pointer]:
+                - /url: /integrations/
+              - link "Pulumi Provider" [ref=e2216] [cursor=pointer]:
+                - /url: /product/pulumi-provider/
+            - generic [ref=e2217]:
+              - paragraph [ref=e2219]: Company
+              - link "About" [ref=e2220] [cursor=pointer]:
+                - /url: /about/
+              - link "Careers" [ref=e2221] [cursor=pointer]:
+                - /url: /careers/
+              - link "Security" [ref=e2222] [cursor=pointer]:
+                - /url: /security/
+              - link "Pricing" [ref=e2223] [cursor=pointer]:
+                - /url: /pricing/
+              - link "Customers" [ref=e2224] [cursor=pointer]:
+                - /url: /customers/
+              - link "Terms of use" [ref=e2225] [cursor=pointer]:
+                - /url: /terms/
+              - link "Privacy" [ref=e2226] [cursor=pointer]:
+                - /url: /privacy/
+          - generic [ref=e2227]:
+            - generic [ref=e2228]:
+              - paragraph [ref=e2230]: Developers
+              - link "Blog" [ref=e2231] [cursor=pointer]:
+                - /url: /blog/
+              - link "Learn" [ref=e2232] [cursor=pointer]:
+                - /url: /learn/
+              - link "Webinars" [ref=e2233] [cursor=pointer]:
+                - /url: /webinars/
+              - link "Events" [ref=e2234] [cursor=pointer]:
+                - /url: /events/
+            - generic [ref=e2235]:
+              - paragraph [ref=e2237]: Resources
+              - link "Public Roadmap" [ref=e2238] [cursor=pointer]:
+                - /url: https://feedback.checklyhq.com/
+              - link "Community Slack" [ref=e2239] [cursor=pointer]:
+                - /url: /slack/
+            - generic [ref=e2240]:
+              - paragraph [ref=e2242]: Connect
+              - link "Contact Us" [ref=e2243] [cursor=pointer]:
+                - /url: /contact-sales/
+              - link "Support" [ref=e2244] [cursor=pointer]:
+                - /url: mailto:support@checklyhq.com
+              - link "Twitter @ChecklyHQ" [ref=e2245] [cursor=pointer]:
+                - /url: https://twitter.com/checklyhq
+              - link "YouTube" [ref=e2246] [cursor=pointer]:
+                - /url: https://youtube.com/checklyhq
+              - link "LinkedIn" [ref=e2247] [cursor=pointer]:
+                - /url: https://linkedin.com/company/checkly
+          - generic [ref=e2248]:
+            - generic [ref=e2249]:
+              - paragraph [ref=e2251]: Community
+              - link "About" [ref=e2252] [cursor=pointer]:
+                - /url: /about/
+              - link "Careers" [ref=e2253] [cursor=pointer]:
+                - /url: /careers/
+            - generic [ref=e2254]:
+              - paragraph [ref=e2256]: How we compare
+              - link "Alternative to Datadog" [ref=e2257] [cursor=pointer]:
+                - /url: /datadog-alternative/
+              - link "Alternative to New Relic" [ref=e2258] [cursor=pointer]:
+                - /url: /new-relic-alternative/
+              - link "Alternative to Dynatrace" [ref=e2259] [cursor=pointer]:
+                - /url: /dynatrace-alternative/
+              - link "Alternative to Pingdom" [ref=e2260] [cursor=pointer]:
+                - /url: /alternative-pingdom/
+              - link "Alternative to Runscope" [ref=e2261] [cursor=pointer]:
+                - /url: /alternative-runscope/
+            - generic [ref=e2262]:
+              - paragraph [ref=e2264]: Articles
+              - link "What is Synthetic Monitoring?" [ref=e2265] [cursor=pointer]:
+                - /url: /learn/monitoring/synthetic-monitoring/
+              - link "What is API monitoring?" [ref=e2266] [cursor=pointer]:
+                - /url: /learn/monitoring/api-monitoring/
+              - link "What is Playwright?" [ref=e2267] [cursor=pointer]:
+                - /url: /learn/playwright/what-is-playwright/
+              - link "A guide to Monitoring as Code" [ref=e2268] [cursor=pointer]:
+                - /url: /learn/monitoring/monitoring-as-code/
+              - link "Playwright vs other frameworks" [ref=e2269] [cursor=pointer]:
+                - /url: /learn/playwright/playwright-vs-others/
+        - generic [ref=e2270]:
+          - generic [ref=e2271]:
+            - generic [ref=e2272]:
+              - link "Hi!" [ref=e2273] [cursor=pointer]:
+                - /url: /
+                - img [ref=e2274]
+              - link "Available in AWS Marketplace" [ref=e2279] [cursor=pointer]:
+                - /url: https://aws.amazon.com/marketplace/pp/prodview-cntlyhi5si6ka?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
+                - img "Available in AWS Marketplace" [ref=e2280]
+            - generic [ref=e2281]:
+              - link "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2282] [cursor=pointer]:
+                - /url: /checkly-and-monitoring-as-code-mac-earn-third-gartner/
+                - img "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2283]
+              - link "SOC Certification" [ref=e2284] [cursor=pointer]:
+                - /url: /security/
+                - img "SOC Certification" [ref=e2285]
+          - generic [ref=e2286]: Copyright © 2026 Checkly Inc. All rights reserved.
+  - alert [ref=e2287]
+```
+
+# Test source
+
+```ts
+  1  | /**
+  2  |  * @generated
+  3  |  * This file was generated by Donobu; do not edit manually.
+  4  |  */
+  5  | /* eslint-disable */
+  6  | const { expect } = require('donobu');
+  7  | 
+  8  | module.exports = {
+  9  |   caches: [
+  10 |     {
+  11 |       pageUrl: 'www.checklyhq.com',
+  12 |       instruction:
+  13 |         'Click on the Resources dropdown menu, then click into to the developer docs option',
+  14 |       schema: null,
+  15 |       allowedTools: [],
+  16 |       maxToolCalls: 50,
+  17 |       run: async ({ page }) => {
+  18 |         // Clicking on the Resources dropdown menu to reveal the developer docs option.
+  19 |         await page
+  20 |           .find(
+  21 |             '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)',
+  22 |             {
+  23 |               failover: [
+  24 |                 "(.//button[normalize-space(.)='Resources'])[1]",
+  25 |                 'nav.container > div:nth-of-type(1) > div:nth-of-type(1) > button:nth-of-type(2)',
+  26 |               ],
+  27 |             },
+  28 |           )
+  29 |           .click('left');
+  30 | 
+  31 |         // Clicking on 'Documentation' under the 'DEVELOPERS' heading, which serves as the developer docs.
+> 32 |         await page
+     |         ^ Error: click execution failed: {
+  33 |           .find("(.//a[normalize-space(.)='Documentation'])[1]", {
+  34 |             failover: [
+  35 |               "li:nth-of-type(1) > [href='/docs/']",
+  36 |               'div:nth-of-type(1) > ul > li:nth-of-type(1) > a.text-base',
+  37 |             ],
+  38 |           })
+  39 |           .click('left');
+  40 | 
+  41 |         // The objective to click on the Resources dropdown and then click into the developer docs option has been fulfilled.
+  42 |         await page.run('markObjectiveComplete', {
+  43 |           details:
+  44 |             "I have successfully clicked on the 'Resources' dropdown menu and then clicked on the 'Documentation' option, which led to the developer documentation page at https://www.checklyhq.com/docs/.",
+  45 |         });
+  46 |       },
+  47 |     },
+  48 |     {
+  49 |       pageUrl: 'www.checklyhq.com',
+  50 |       instruction:
+  51 |         'Do a search for "Playwright check suite", and chose the match for "Constructs > DETECT" from the search suggestions dropdown.\n    NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".',
+  52 |       schema: null,
+  53 |       allowedTools: [],
+  54 |       maxToolCalls: 50,
+  55 |       run: async ({ page }) => {
+  56 |         // Clicking on the search bar to initiate the search for "Playwright check suite".
+  57 |         await page
+  58 |           .find('#search-bar-entry', {
+  59 |             failover: [
+  60 |               "div:nth-of-type(2) > [aria-label='Open search']",
+  61 |               ".//button[normalize-space(.)='Search...⌘K']",
+  62 |             ],
+  63 |           })
+  64 |           .click('left');
+  65 | 
+  66 |         // Typing "Playwright check suite" into the search bar to find relevant documentation matches. Not submitting via Enter to allow the typeahead suggestions to appear.
+  67 |         await page
+  68 |           .find('#search-input', {
+  69 |             failover: ["[placeholder='Search...']", "[role='combobox']"],
+  70 |           })
+  71 |           .inputText('Playwright check suite');
+  72 | 
+  73 |         // Selecting the search suggestion for "Constructs > DETECT" as requested.
+  74 |         await page
+  75 |           .find(
+  76 |             "[href='/docs/constructs/playwright-check#playwright-check-suite']",
+  77 |             {
+  78 |               failover: [
+  79 |                 'div:nth-of-type(2) > div > a.cursor-pointer',
+  80 |                 "[role='listbox'] > div:nth-of-type(2) > div > a",
+  81 |               ],
+  82 |             },
+  83 |           )
+  84 |           .click('left');
+  85 | 
+  86 |         // The objective has been met by searching for the specific term and selecting the required suggestion from the dropdown, which led to the correct documentation page.
+  87 |         await page.run('markObjectiveComplete', {
+  88 |           details:
+  89 |             'I searched for "Playwright check suite" and selected the "Constructs > DETECT" suggestion. This navigated me to the "Playwright Check Suites" documentation page under the Constructs section.',
+  90 |         });
+  91 |       },
+  92 |     },
+  93 |   ],
+  94 | };
+  95 | 
+```
