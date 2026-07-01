@@ -7,15 +7,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 2s |
+| checkly.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 53s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 43s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 21s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
 | conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **0 ❤️‍🩹** | **0 ❌** | **2 ⏰** | **0 ⏭️** | **0 ⚡** | **10m 56s** |
+| **TOTAL** | **6 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **2 ⏰** | **0 ⏭️** | **0 ⚡** | **11m 32s** |
 
 ## auth/sauce-login.test.ts
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ⏰ Timed Out  
-**Duration**: 4m 2s  
+**Duration**: 4m 1s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 8s  
 
 ---
 
@@ -57,8 +57,10 @@
 
 ### Fill out a survey
 
-**Status**: ✅ Passed  
-**Duration**: 43s  
+**Status**: ❤️‍🩹 Healed  
+**Duration**: 1m 21s  
+> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
+
 
 ---
 
@@ -98,4 +100,8 @@
 
 ---
 
-_Report generated on 6/30/2026, 12:55:26 PM by Donobu_
+### Auto-Healed Tests
+
+- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
+
+_Report generated on 7/1/2026, 1:10:50 PM by Donobu_

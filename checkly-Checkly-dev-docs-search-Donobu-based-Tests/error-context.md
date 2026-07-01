@@ -181,7 +181,7 @@ Error: click execution failed: {
                           - /url: /product/pulumi-provider/
                           - text: Pulumi
                         - link "All Integrations":
-                          - /url: /integrations/
+                          - /url: /docs/integrations/alerts/discord/
                           - generic:
                             - img
                           - text: All Integrations
@@ -195,6 +195,16 @@ Error: click execution failed: {
               - region "Resources":
                 - generic:
                   - generic:
+                    - complementary:
+                      - heading "Featured" [level=3]
+                      - link "Checkly and the Agentic Software Layer. Checkly and the Agentic Software Layer Read article":
+                        - /url: /blog/the-agentic-software-layer/
+                        - generic:
+                          - img "Checkly and the Agentic Software Layer."
+                        - generic: Checkly and the Agentic Software Layer
+                        - generic:
+                          - text: Read article
+                          - generic: →
                     - generic:
                       - generic:
                         - heading "Resources" [level=3]
@@ -1506,7 +1516,7 @@ Error: click execution failed: {
               - link "Terraform Provider" [ref=e2214] [cursor=pointer]:
                 - /url: /product/terraform-provider/
               - link "All Integrations" [ref=e2215] [cursor=pointer]:
-                - /url: /integrations/
+                - /url: /docs/integrations/alerts/discord/
               - link "Pulumi Provider" [ref=e2216] [cursor=pointer]:
                 - /url: /product/pulumi-provider/
             - generic [ref=e2217]:
