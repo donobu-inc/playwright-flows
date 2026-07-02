@@ -8,14 +8,14 @@
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
 | checkly.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 53s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 55s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 21s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 11s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 23s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
 | conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **2 ⏰** | **0 ⏭️** | **0 ⚡** | **11m 32s** |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
+| **TOTAL** | **6 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **2 ⏰** | **0 ⏭️** | **0 ⚡** | **11m 28s** |
 
 ## auth/sauce-login.test.ts
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 53s  
+**Duration**: 55s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 21s  
+**Duration**: 1m 11s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 23s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 21s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 7/1/2026, 1:10:50 PM by Donobu_
+_Report generated on 7/2/2026, 12:53:03 PM by Donobu_
