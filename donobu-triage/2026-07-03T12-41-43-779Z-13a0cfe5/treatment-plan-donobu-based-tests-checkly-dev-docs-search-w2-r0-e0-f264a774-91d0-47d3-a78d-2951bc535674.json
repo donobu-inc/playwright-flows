@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-07-03T12:46:47.038Z",
+  "plan": {
+    "failureSummary": "The cached selector for the 'Documentation' link under the 'Resources' dropdown failed to resolve. A website layout or DOM update likely changed the location, structure, or text of the documentation link, making the old cached selectors obsolete.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode",
+      "selectorFailedDuringPageAi",
+      "currentStreakOfFailures"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry the test flow.",
+        "details": "The execution failed due to a stale selector cache for the 'Documentation' link. Deleting the cache and re-running in autonomous mode will allow the agent to heal and generate the correct updated selector."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The test failed in DETERMINISTIC mode during the second click action of page.ai (intended to click 'Documentation' inside the 'Resources' dropdown). Deleting the stale cache will force the AI to autonomously scan the live DOM and generate up-to-date selectors.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 13547,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-03T12-41-43-779Z-13a0cfe5",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-03T12-41-43-779Z-13a0cfe5",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-03T12-41-43-779Z-13a0cfe5/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-f264a774-91d0-47d3-a78d-2951bc535674.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

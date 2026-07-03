@@ -1,0 +1,59 @@
+{
+  "generatedAtIso": "2026-07-03T12:46:56.971Z",
+  "plan": {
+    "failureSummary": "The test failed because the automation attempt to click on the 'Select your occupation' dropdown/combobox failed. The cached deterministic selector relied on specific ID formats (`#\\\\:rl\\\\:-form-item`) and dynamic labels. Comparing the failure screenshot with the cached targets, the form structure changed or regenerated dynamic React/Radix IDs, causing the cached selector to miss. Additionally, 'Age Group' now appears directly below the email input field in the live failure screenshot, which alters the expected layout compared to what the cached instructions assumed.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "deterministic_mode_cache_miss_on_dynamic_selectors",
+      "alternating_success_failed_history",
+      "react_dynamic_id_selectors_detected"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.ai Cache and Retry Flow",
+        "details": "Rerun the automation with clearPageAiCache set to true to force a fresh autonomous evaluation of the DOM instead of relying on the stale/broken deterministic cache selector."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Refactor Selector Strategies to Avoid Dynamic React/Radix IDs",
+        "details": "If writing deterministic code fallback, avoid using dynamic ID patterns like '#\\\\:rl\\\\:-form-item' and instead rely on stable accessible queries or text content."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The test has a high flakiness score and has repeatedly alternated between SUCCESS and FAILED states in deterministic mode, which indicates that dynamic elements (such as dynamically generated Radix UI IDs like ':rl:') are causing deterministic cache hits to fail frequently on subsequent runs. Clearing the page.ai cache is required to re-evaluate the DOM structures dynamically.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 22517,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-03T12-41-43-779Z-13a0cfe5",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-03T12-41-43-779Z-13a0cfe5",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-03T12-41-43-779Z-13a0cfe5/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-9e6504fb-391b-4f58-afa6-2cfd167348cd.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

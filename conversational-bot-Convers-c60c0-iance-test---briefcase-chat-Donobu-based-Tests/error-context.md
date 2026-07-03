@@ -12,7 +12,15 @@
 # Error details
 
 ```
-Test timeout of 240000ms exceeded.
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The chatbot requires an OpenAI API Key to generate any responses (as indicated by the blank chat and the settings banner), but no such key was provided in the instructions, making it impossible to evaluate the chatbot's compliance with topic restrictions."
+}
 ```
 
 # Page snapshot
@@ -37,7 +45,7 @@ Test timeout of 240000ms exceeded.
               - generic:
                 - generic:
                   - generic:
-                    - generic: What is the difference between...
+                    - generic: What are the main requirements...
                   - generic:
                     - button:
                       - img
@@ -52,18 +60,12 @@ Test timeout of 240000ms exceeded.
             - generic:
               - generic:
                 - generic:
-                  - paragraph: What is the difference between an LLC and a C-Corp?
+                  - paragraph: What are the main requirements to form a corporation in Delaware?
               - generic:
-                - generic: T
-            - generic:
-              - generic:
-                - generic:
-                  - paragraph: When is it better to form an LLC vs. a C-Corp
-              - generic:
-                - generic: T
+                - generic: E
       - generic:
         - paragraph:
-          - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+          - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
           - link:
             - /url: "#"
             - text: settings
@@ -125,4 +127,39 @@ Test timeout of 240000ms exceeded.
     - button "Close" [ref=e44] [cursor=pointer]:
       - img [ref=e45]
       - generic [ref=e48]: Close
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from 'donobu';
+  2  | import { z } from 'zod/v4';
+  3  | 
+  4  | test('Conversational bot compliance test - briefcase.chat', async ({
+  5  |   page,
+  6  | }) => {
+  7  |   await page.goto('https://briefcase.chat');
+  8  | 
+> 9  |   const aiResponse = await page.ai(
+     |                      ^ Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+  13 |     {
+  14 |       schema: z.object({
+  15 |         status: z
+  16 |           .enum(['PASS', 'FAIL'])
+  17 |           .describe('Set to PASS if bot responded as expected.'),
+  18 |         issues: z.array(z.string()),
+  19 |       }),
+  20 |       cache: false
+  21 |     },
+  22 |   );
+  23 | 
+  24 |   expect(aiResponse).toEqual({
+  25 |     status: 'PASS',
+  26 |     issues: [],
+  27 |   });
+  28 | });
+  29 | 
 ```

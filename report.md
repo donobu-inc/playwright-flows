@@ -7,15 +7,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
+| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 2m 40s |
 | account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 55s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
 | unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 11s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 23s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 58s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **2 ⏰** | **0 ⏭️** | **0 ⚡** | **11m 28s** |
+| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **10m 4s** |
 
 ## auth/sauce-login.test.ts
 
@@ -30,8 +30,10 @@
 
 ### Checkly dev docs search
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❤️‍🩹 Healed  
+**Duration**: 2m 40s  
+> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
+
 
 ---
 
@@ -49,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 8s  
+**Duration**: 9s  
 
 ---
 
@@ -69,7 +71,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 23s  
+**Duration**: 20s  
 
 ---
 
@@ -86,8 +88,37 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❌ Failed  
+**Duration**: 3m 58s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The chatbot requires an OpenAI API Key to generate any responses (as indicated by the blank chat and the settings banner), but no such key was provided in the instructions, making it impossible to evaluate the chatbot's compliance with topic restrictions."
+}
+```
+
+**Code Snippet**:
+```
+   7 |   await page.goto('https://briefcase.chat');
+   8 |
+>  9 |   const aiResponse = await page.ai(
+     |                      ^
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+```
+
+</details>
+
 
 ---
 
@@ -103,5 +134,6 @@
 ### Auto-Healed Tests
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
+- ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
 
-_Report generated on 7/2/2026, 12:53:03 PM by Donobu_
+_Report generated on 7/3/2026, 12:49:41 PM by Donobu_
