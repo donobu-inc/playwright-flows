@@ -956,8 +956,8 @@ Error: click execution failed: {
             - generic [ref=e1513]:
               - generic [ref=e1514]:
                 - generic [ref=e1515]:
-                  - generic [ref=e1516]: 8 Open
-                  - generic [ref=e1518]: 2 Merged
+                  - generic [ref=e1516]: 7 Open
+                  - generic [ref=e1518]: 3 Merged
                 - generic [ref=e1520]: LIVE
               - generic [ref=e1522]:
                 - generic [ref=e1523]:
