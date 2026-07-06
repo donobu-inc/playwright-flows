@@ -18,9 +18,9 @@ Error: click execution failed: {
   "metadata": {
     "selector": {
       "element": [
-        "#\\:rl\\:-form-item",
-        ".//button[normalize-space(.)='Select your occupation']",
-        "[role='combobox']"
+        ".//button[normalize-space(.)='Submit']",
+        "div.mt-8 > button:nth-of-type(2)",
+        "div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)"
       ]
     }
   }
@@ -47,68 +47,72 @@ Error: click execution failed: {
   - generic [ref=e24]:
     - generic [ref=e25]: "Current Time:"
     - generic [ref=e26]:
-      - generic [ref=e27]: 12:33:27
+      - generic [ref=e27]: 13:20:25
       - generic [ref=e28]: Set 1
   - generic [ref=e29]:
     - heading "Tell us about yourself" [level=2] [ref=e30]
     - generic [ref=e31]:
       - generic [ref=e32]:
         - generic [ref=e33]: Last Name *
-        - textbox "Last Name *" [ref=e34]:
+        - textbox "Last Name *" [active] [invalid] [ref=e34]:
           - /placeholder: Enter your last name
-          - text: Mrs. Jeanne Hartmann
-      - generic [ref=e35]:
-        - generic [ref=e36]: Email Address *
-        - textbox "Email Address *" [active] [ref=e37]:
+        - paragraph [ref=e35]: Name is required
+      - generic [ref=e36]:
+        - generic [ref=e37]: Email Address *
+        - textbox "Email Address *" [invalid] [ref=e38]:
           - /placeholder: Enter your email address
-          - text: Nellie33@gmail.com
-      - generic [ref=e38]:
-        - generic [ref=e39]: Age Group *
-        - radiogroup [ref=e40]:
-          - generic [ref=e41]:
-            - radio "18-24" [ref=e42] [cursor=pointer]
+        - paragraph [ref=e39]: Please enter a valid email
+      - generic [ref=e40]:
+        - generic [ref=e41]: Age Group *
+        - radiogroup [invalid] [ref=e42]:
+          - generic [ref=e43]:
+            - radio "18-24" [ref=e44] [cursor=pointer]
             - radio
-            - generic [ref=e43]: 18-24
-          - generic [ref=e44]:
-            - radio "25-34" [ref=e45] [cursor=pointer]
+            - generic [ref=e45]: 18-24
+          - generic [ref=e46]:
+            - radio "25-34" [ref=e47] [cursor=pointer]
             - radio
-            - generic [ref=e46]: 25-34
-          - generic [ref=e47]:
-            - radio "35-44" [ref=e48] [cursor=pointer]
+            - generic [ref=e48]: 25-34
+          - generic [ref=e49]:
+            - radio "35-44" [ref=e50] [cursor=pointer]
             - radio
-            - generic [ref=e49]: 35-44
-          - generic [ref=e50]:
-            - radio "45-54" [ref=e51] [cursor=pointer]
+            - generic [ref=e51]: 35-44
+          - generic [ref=e52]:
+            - radio "45-54" [ref=e53] [cursor=pointer]
             - radio
-            - generic [ref=e52]: 45-54
-          - generic [ref=e53]:
-            - radio "55+" [ref=e54] [cursor=pointer]
+            - generic [ref=e54]: 45-54
+          - generic [ref=e55]:
+            - radio "55+" [ref=e56] [cursor=pointer]
             - radio
-            - generic [ref=e55]: 55+
-      - generic [ref=e56]:
-        - generic [ref=e58]: How did you hear about us? *
-        - generic [ref=e59]:
-          - generic [ref=e60]:
-            - checkbox "Social Media" [ref=e61] [cursor=pointer]
-            - checkbox
-            - generic [ref=e62]: Social Media
+            - generic [ref=e57]: 55+
+        - paragraph [ref=e58]: Age group is required
+      - generic [ref=e59]:
+        - generic [ref=e61]: How did you hear about us? *
+        - generic [ref=e62]:
           - generic [ref=e63]:
-            - checkbox "Search Engine" [ref=e64] [cursor=pointer]
-            - checkbox
-            - generic [ref=e65]: Search Engine
+            - checkbox "Social Media" [checked] [ref=e64] [cursor=pointer]:
+              - generic:
+                - img
+            - checkbox [checked]
+            - generic [ref=e65]: Social Media
           - generic [ref=e66]:
-            - checkbox "Friend Referral" [ref=e67] [cursor=pointer]
+            - checkbox "Search Engine" [ref=e67] [cursor=pointer]
             - checkbox
-            - generic [ref=e68]: Friend Referral
+            - generic [ref=e68]: Search Engine
           - generic [ref=e69]:
-            - checkbox "Other" [ref=e70] [cursor=pointer]
+            - checkbox "Friend Referral" [ref=e70] [cursor=pointer]
             - checkbox
-            - generic [ref=e71]: Other
-      - generic [ref=e72]:
+            - generic [ref=e71]: Friend Referral
+          - generic [ref=e72]:
+            - checkbox "Other" [ref=e73] [cursor=pointer]
+            - checkbox
+            - generic [ref=e74]: Other
+      - generic [ref=e75]:
         - text: Additional Comments (Optional)
-        - textbox "Additional Comments (Optional)" [ref=e73]:
+        - textbox "Additional Comments (Optional)" [ref=e76]:
           - /placeholder: Share any additional thoughts or comments
-      - button "Next" [ref=e75] [cursor=pointer]
+          - text: Soluta dapifer voluptate auctus trans bellicus coadunatio vereor textus audeo.
+      - button "Next" [ref=e78] [cursor=pointer]
   - region "Notifications (F8)":
     - list
 ```
@@ -116,13 +120,6 @@ Error: click execution failed: {
 # Test source
 
 ```ts
-  1   | /**
-  2   |  * @generated
-  3   |  * This file was generated by Donobu; do not edit manually.
-  4   |  */
-  5   | /* eslint-disable */
-  6   | const { expect } = require('donobu');
-  7   | 
   8   | module.exports = {
   9   |   caches: [
   10  |     {
@@ -173,8 +170,7 @@ Error: click execution failed: {
   55  |           .inputFaker('internet.email');
   56  | 
   57  |         // Clicking the occupation dropdown to open it and select an occupation.
-> 58  |         await page
-      |         ^ Error: click execution failed: {
+  58  |         await page
   59  |           .find('#\\:rl\\:-form-item', {
   60  |             failover: [
   61  |               ".//button[normalize-space(.)='Select your occupation']",
@@ -224,7 +220,8 @@ Error: click execution failed: {
   105 |           .click('left');
   106 | 
   107 |         // Clicking the 'Submit' button to submit the survey form and proceed to the 'Thank You' page.
-  108 |         await page
+> 108 |         await page
+      |         ^ Error: click execution failed: {
   109 |           .find(".//button[normalize-space(.)='Submit']", {
   110 |             failover: [
   111 |               'div.mt-8 > button:nth-of-type(2)',

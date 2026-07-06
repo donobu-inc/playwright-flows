@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-07-06T13:22:18.917Z",
+  "plan": {
+    "failureSummary": "The test failed while trying to select and click the 'Documentation' link from the 'Resources' dropdown. Although the 'Resources' dropdown was successfully clicked, the subsequent attempt to resolve the cached selectors for the 'Documentation' link failed. Visually, the live screenshot shows the 'Resources' dropdown is not open or the menu layout has shifted. In deterministic mode, the cached selector couldn't find the target element, indicating a selector regression or stale cache state on the page redesign.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "staleCacheIndicators.usedDeterministicMode === true",
+      "staleCacheIndicators.selectorFailedDuringPageAi === false",
+      "toolCallsShowSelectorIssues === true"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear the page.ai cache and retry the automation run.",
+        "details": "Rerun the automation with the clearPageAiCache directive enabled. This forces page.ai to run in AUTONOMOUS mode and locate the correct selectors for the current state of the Checkly website dropdown layout."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The flow fails consistently in DETERMINISTIC mode every other run but has a high flakiness profile because clearing the cache (running in AUTONOMOUS/re-learning mode) heals the execution. We need to clear the stale page.ai cache to allow the selector to be regenerated.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 11494,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-06T13-18-36-093Z-4d421db2",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-6ed1a03c-4b32-4c92-839f-ad3d5eccd036.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

@@ -1,0 +1,59 @@
+{
+  "generatedAtIso": "2026-07-06T13:22:23.436Z",
+  "plan": {
+    "failureSummary": "The chatbot requires a personal OpenAI API Key or a Pro Plan subscription upgrade to respond to messages and stream replies. Without these credentials configured or provided in the test environment, the autonomous agent is blocked from completing its evaluation of topic compliance.",
+    "failureReason": "TEST_DATA_UNAVAILABLE",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "The final screenshot displays a settings modal requiring an OpenAI API Key or a Pro Plan upgrade",
+      "The agent marked the objective as not completable because it lacks the necessary credentials",
+      "100% failure rate over 14 historical runs"
+    ],
+    "remediationSteps": [
+      {
+        "category": "REFRESH_TEST_DATA",
+        "summary": "Provide a valid OpenAI API Key via environment variables",
+        "details": "Obtain a valid OpenAI API Key to use during test execution. This key should be injected into the test container as an environment variable (e.g., process.env.OPENAI_API_KEY)."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Automate setting the API key in the UI prior to chatbot evaluation",
+        "details": "Modify the Playwright test script to open the settings modal, navigate to Advanced settings, type the OpenAI API Key from the environment variables into the input field, and click Apply before calling page.ai."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": false,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The test failure history shows a 100% failure rate across all recent runs. This is because the platform limits messages or requires an API Key that is not provided by the test runner environment. To fix this, we need to inject or configure a valid OpenAI API key in the chatbot's settings within the test script before invoking the evaluation agent.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Conversational bot compliance test - briefcase.chat",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 3,
+      "timeout": 240000,
+      "duration": 162729,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-06T13-18-36-093Z-4d421db2",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2/failure-evidence-donobu-based-tests-conversational-bot-compliance-test-briefcase-cha-w3-r0-e0-7f1fdfa1-ef22-4d55-b206-88005a5c1b64.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

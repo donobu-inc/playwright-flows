@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-07-06T13:22:28.051Z",
+  "plan": {
+    "failureSummary": "The survey form layout or fields changed significantly, causing the deterministic execution mode to fill out incorrect fields and miss required fields (e.g. Last Name, Age Group). This resulted in validation errors and prevented the 'Submit' button from appearing or being resolved.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "DETERMINISTIC_CACHE_USED_DURING_FAILURE",
+      "DIVERGENT_DOM_DETECTED_FROM_FAILURE_SCREENSHOT",
+      "VALIDATION_ERRORS_VISIBLE_ON_SUBMIT_ATTEMPT"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear cached steps and retry with active AI mode",
+        "details": "Delete the cached deterministic run file for unstable-survey.test.ts so that page.ai can dynamically analyze the new page structure and fill out the updated fields (like 'Last Name' and 'Age Group')."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The page structure evolved (adding 'Last Name' and 'Age Group' validation), rendering the cached deterministic selectors and steps incorrect. The final failure screenshot clearly shows missing required fields triggering validation messages ('Name is required', 'Age group is required', and 'Please enter a valid email' because the email field likely expected email format but was mapped wrong or skipped). Clearing the page.ai cache and running with fresh semantic generation will allow the LLM to dynamically satisfy the new layout.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 45836,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-06T13-18-36-093Z-4d421db2",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-082c184e-9a16-4e4f-8cec-36ce39ad505e.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

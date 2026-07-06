@@ -7,15 +7,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 26s |
+| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 51s |
 | account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 50s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 5s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 59s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 38s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 44s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 13s** |
+| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 37s** |
 
 ## auth/sauce-login.test.ts
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 26s  
+**Duration**: 1m 51s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -51,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 8s  
 
 ---
 
@@ -60,7 +60,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 5s  
+**Duration**: 59s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -89,7 +89,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ❌ Failed  
-**Duration**: 2m 38s  
+**Duration**: 2m 44s  
 
 <details>
 <summary>⚠️ Error Details</summary>
@@ -102,7 +102,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot is completely unresponsive and does not stream any response back to our initial query. We have waited over 30 seconds and explored settings, but without a working backend connection or API response, evaluating the chatbot's topic compliance is not possible."
+  "rationale": "The chatbot cannot process or reply to messages because it requires either upgrading to a Pro Plan or setting a personal OpenAI API Key, which we do not have access to or credentials for. As such, we cannot complete the objective to evaluate the chatbot's topic compliance."
 }
 ```
 
@@ -136,4 +136,4 @@ Result payload:
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 - ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
 
-_Report generated on 7/5/2026, 12:37:18 PM by Donobu_
+_Report generated on 7/6/2026, 1:24:22 PM by Donobu_

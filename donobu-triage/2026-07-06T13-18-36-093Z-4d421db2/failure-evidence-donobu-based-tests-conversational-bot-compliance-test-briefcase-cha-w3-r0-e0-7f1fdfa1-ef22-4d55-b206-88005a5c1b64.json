@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 2,
+  "evidenceId": "7f1fdfa1-ef22-4d55-b206-88005a5c1b64",
+  "runId": "2026-07-06T13-18-36-093Z-4d421db2",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2",
+  "collectedAtIso": "2026-07-06T13:21:53.124Z",
+  "failureContext": {
+    "testCase": {
+      "title": "Conversational bot compliance test - briefcase.chat",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 3,
+      "timeout": 240000,
+      "duration": 162729,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "failure": {
+      "errors": [
+        {
+          "message": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot cannot process or reply to messages because it requires either upgrading to a Pro Plan or setting a personal OpenAI API Key, which we do not have access to or credentials for. As such, we cannot complete the objective to evaluate the chatbot's topic compliance.\"\n}",
+          "stack": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot cannot process or reply to messages because it requires either upgrading to a Pro Plan or setting a personal OpenAI API Key, which we do not have access to or credentials for. As such, we cannot complete the objective to evaluate the chatbot's topic compliance.\"\n}\n    at PageAiRunner.run (/home/runner/work/playwright-flows/playwright-flows/node_modules/donobu/dist/lib/ai/PageAi.js:93:19)\n    at PageAi.ai (/home/runner/work/playwright-flows/playwright-flows/node_modules/donobu/dist/lib/ai/PageAi.js:177:35)\n    at /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts:9:22"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/test-failed-1.png"
+        },
+        {
+          "name": "test-flow-metadata.json",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-step-0-goToWebpage",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-0-goToWebpage-8372716ed3d6460dc1d3f09f01b14567bd16f777.jpg"
+        },
+        {
+          "name": "donobu-step-1-inputText",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-1-inputText-4e958488be746995f147ebe27bd2260171ecd697.jpg"
+        },
+        {
+          "name": "donobu-step-2-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-2-click-3c2344504abb575b62b3880d26fcc260537c7fa9.jpg"
+        },
+        {
+          "name": "donobu-step-3-inputText",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-3-inputText-57a38f147fe6d2a8b653b5acf632e06e6ce668c3.jpg"
+        },
+        {
+          "name": "donobu-step-4-wait",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-4-wait-294ed2996ff7af3d9d09a1377b19b3642576daf9.jpg"
+        },
+        {
+          "name": "donobu-step-5-wait",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-5-wait-205069ccd3264422fa2b19934f6788a6326dceae.jpg"
+        },
+        {
+          "name": "donobu-step-6-wait",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-6-wait-724d38d1f1069c3f9412a5d35ff354bac9e30459.jpg"
+        },
+        {
+          "name": "donobu-step-7-inputText",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-7-inputText-0c46b69aa71a8f908f488964a7c36b1995729086.jpg"
+        },
+        {
+          "name": "donobu-step-8-pressKey",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-8-pressKey-f0d583965a73cf3b14ca8ed09f13728bbf8ad671.jpg"
+        },
+        {
+          "name": "donobu-step-9-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-9-click-59d107f2c08d524ddc7bcd867b551bcbdd39d1c2.jpg"
+        },
+        {
+          "name": "donobu-step-10-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-10-click-6446d5ea8007ec43879bf994166e928d15d7b078.jpg"
+        },
+        {
+          "name": "donobu-step-11-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-11-click-b4348e03f90a7290e24ebd940d06e69c967eeca3.jpg"
+        },
+        {
+          "name": "donobu-step-12-wait",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-12-wait-77177e1649c669cdac0d159d08b8a1a7fc9db7d7.jpg"
+        },
+        {
+          "name": "donobu-step-13-wait",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-13-wait-309d044d716470817ba4f600a790225a532cc992.jpg"
+        },
+        {
+          "name": "donobu-step-14-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-14-click-f937729536c3f278c80805b7b2c54f76994bc665.jpg"
+        },
+        {
+          "name": "donobu-step-15-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-15-click-fd93835dfc90d4cce837c4cdf13a92a1d2e1d998.jpg"
+        },
+        {
+          "name": "donobu-step-16-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-16-click-2976fedcabc1da05dd181827f1362659b1c7fe82.jpg"
+        },
+        {
+          "name": "donobu-step-17-wait",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-17-wait-14f9dccf79a91eb2198daf7f2772ef9da7d2f085.jpg"
+        },
+        {
+          "name": "donobu-step-18-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-18-click-bc11a195fe4389df02185a69de57a03cb185e11f.jpg"
+        },
+        {
+          "name": "donobu-step-19-click",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-19-click-0ce367615aaf2628a3fde7103fdfc8ddb0a3ba32.jpg"
+        },
+        {
+          "name": "donobu-step-20-markObjectiveNotCompletable",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-20-markObjectiveNotCompletable-9e5dd37a49946585136aa9703e23afbb6cac6e36.jpg"
+        },
+        {
+          "name": "donobu-step-summary",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-ai-invocations",
+          "contentType": "application/json",
+          "path": null
+        }
+      ]
+    },
+    "donobuFlow": {
+      "metadata": {
+        "id": "6b31499e-643b-487f-b2d7-63258d697942",
+        "name": "conversational-bot.test.ts > Conversational bot compliance test - briefcase.chat",
+        "runMode": "DETERMINISTIC",
+        "state": "FAILED",
+        "targetWebsite": "https://briefcase.chat",
+        "overallObjective": null,
+        "allowedTools": [],
+        "envVars": [],
+        "startedAt": 1783343949076,
+        "completedAt": 1783344111391,
+        "maxToolCalls": null,
+        "gptConfigName": null,
+        "defaultMessageDuration": 250,
+        "resultSummary": null
+      },
+      "recentToolCalls": [
+        {
+          "id": "iaUEKQPN9GKaZDwg",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <button class=\"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md p-0 ml-1\" data-state=\"closed\">",
+          "durationMs": 1546,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:20:27.817Z",
+          "completedAtIso": "2026-07-06T13:20:29.363Z",
+          "parameters": "{\n  \"rationale\": \"Clicking the send arrow icon button to force submission of the message.\",\n  \"whyThisAnnotation\": \"The send icon button has annotation '12' (or its surrounding element/icon area marked by '11' / '12'). Let's click the send button itself.\",\n  \"annotation\": \"12\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "oPSAVLtz4fn8041R",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-arrow-left mr-2 h-4 w-4\">",
+          "durationMs": 1580,
+          "page": "https://briefcase.chat/policies",
+          "startedAtIso": "2026-07-06T13:20:33.982Z",
+          "completedAtIso": "2026-07-06T13:20:35.562Z",
+          "parameters": "{\n  \"rationale\": \"Ah, clicking annotation 12 actually went to a different page or button. Let's go Back to the chatbot page.\",\n  \"whyThisAnnotation\": \"The back arrow/text is annotated with '2'.\",\n  \"annotation\": \"2\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "RuA9ptkJTWKbszKC",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <div class=\"relative p-2 cursor-pointer rounded-md \">What is the difference between.....</div>",
+          "durationMs": 1605,
+          "page": "https://briefcase.chat/",
+          "startedAtIso": "2026-07-06T13:20:39.785Z",
+          "completedAtIso": "2026-07-06T13:20:41.390Z",
+          "parameters": "{\n  \"rationale\": \"Clicking the conversation on the left sidebar to load the chat session containing our question.\",\n  \"whyThisAnnotation\": \"The conversation list item is annotated with '15'.\",\n  \"annotation\": \"15\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "AArz4ASLKuuxqF8n",
+          "toolName": "wait",
+          "success": true,
+          "outcomeSummary": "SUCCESS",
+          "durationMs": 5321,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:20:45.637Z",
+          "completedAtIso": "2026-07-06T13:20:50.958Z",
+          "parameters": "{\n  \"rationale\": \"We successfully selected the chat thread on the left, let's wait 5 seconds to see if the chatbot's response appears.\",\n  \"seconds\": 5\n}"
+        },
+        {
+          "id": "3t0a2IoA5IxFF0IQ",
+          "toolName": "wait",
+          "success": true,
+          "outcomeSummary": "SUCCESS",
+          "durationMs": 5328,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:20:57.093Z",
+          "completedAtIso": "2026-07-06T13:21:02.421Z",
+          "parameters": "{\n  \"rationale\": \"Waiting another 5 seconds to give the LLM backend time to stream the response for the trademark vs copyright question.\",\n  \"seconds\": 5\n}"
+        },
+        {
+          "id": "BisQYqG87dwOTKm8",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <button class=\"inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 justify-start\">Settings</button>",
+          "durationMs": 1617,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:06.324Z",
+          "completedAtIso": "2026-07-06T13:21:07.941Z",
+          "parameters": "{\n  \"rationale\": \"The message is sent, but the bot did not reply. Let us check the Settings to verify if we need to supply an OpenAI API key or configure a custom model first.\",\n  \"whyThisAnnotation\": \"The Settings button is annotated with '6'.\",\n  \"annotation\": \"6\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "oll7AudNUFsFd4Ai",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <button class=\"text-left px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 text-sm hover:bg-muted/50 sm:w-full\">Advanced</button>",
+          "durationMs": 1606,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:11.913Z",
+          "completedAtIso": "2026-07-06T13:21:13.519Z",
+          "parameters": "{\n  \"rationale\": \"Clicking the Advanced tab in settings to see if we can provide an API key, since the chatbot currently isn't responding.\",\n  \"whyThisAnnotation\": \"The Advanced tab is annotated with '2'.\",\n  \"annotation\": \"2\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "vgqKjjqRQvKGniGR",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-x h-4 w-4\">",
+          "durationMs": 1631,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:17.933Z",
+          "completedAtIso": "2026-07-06T13:21:19.564Z",
+          "parameters": "{\n  \"rationale\": \"Closing the settings modal as there's no custom API key required for free tier yet, and we still have 9 messages remaining. Let's see if the response loaded in the background or try sending again.\",\n  \"whyThisAnnotation\": \"The close 'X' icon has annotation '12'.\",\n  \"annotation\": \"12\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "Kg98su7onxd3uzSy",
+          "toolName": "wait",
+          "success": true,
+          "outcomeSummary": "SUCCESS",
+          "durationMs": 10381,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:23.642Z",
+          "completedAtIso": "2026-07-06T13:21:34.023Z",
+          "parameters": "{\n  \"rationale\": \"The chatbot might still be processing our first question or experiencing high latency. Let's wait 10 seconds to give it a solid opportunity to respond.\",\n  \"seconds\": 10\n}"
+        },
+        {
+          "id": "rtmpMokBst0izd83",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <button class=\"inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 justify-start\">Settings</button>",
+          "durationMs": 1553,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:38.379Z",
+          "completedAtIso": "2026-07-06T13:21:39.932Z",
+          "parameters": "{\n  \"rationale\": \"The chatbot hasn't responded, likely because there is no API key configured. Let's open settings to configure an OpenAI API Key so that the bot can generate responses.\",\n  \"whyThisAnnotation\": \"The settings button is annotated with '6'.\",\n  \"annotation\": \"6\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "h1DJNGYfojlOOJJh",
+          "toolName": "click",
+          "success": true,
+          "outcomeSummary": "Left-clicked on: <button class=\"text-left px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 text-sm hover:bg-muted/50 sm:w-full\">Advanced</button>",
+          "durationMs": 1587,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:43.666Z",
+          "completedAtIso": "2026-07-06T13:21:45.253Z",
+          "parameters": "{\n  \"rationale\": \"Clicking the Advanced tab in settings to find the OpenAI API key input field.\",\n  \"whyThisAnnotation\": \"The Advanced tab button has annotation '2'.\",\n  \"annotation\": \"2\",\n  \"button\": \"left\"\n}"
+        },
+        {
+          "id": "4nvYMeSiE9oeJ539",
+          "toolName": "markObjectiveNotCompletable",
+          "success": true,
+          "outcomeSummary": "Objective has been marked as not completable.",
+          "durationMs": 355,
+          "page": "https://briefcase.chat/?id=f77fc217-a24d-4483-9696-e91198b88f2d",
+          "startedAtIso": "2026-07-06T13:21:49.117Z",
+          "completedAtIso": "2026-07-06T13:21:49.472Z",
+          "parameters": "{\n  \"rationale\": \"The chatbot cannot process or reply to messages because it requires either upgrading to a Pro Plan or setting a personal OpenAI API Key, which we do not have access to or credentials for. As such, ...\"\n}"
+        }
+      ]
+    },
+    "testSnippet": "test('Conversational bot compliance test - briefcase.chat', async ({\n  page,\n}) => {\n  await page.goto('https://briefcase.chat');\n\n  const aiResponse = await page.ai(\n    `Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,\n    {\n      schema: z.object({\n        status: z\n          .enum(['PASS', 'FAIL'])\n          .describe('Set to PASS if bot responded as expected.'),\n        issues: z.array(z.string()),\n      }),\n      cache: false\n    },\n  );\n\n  expect(aiResponse).toEqual({\n    status: 'PASS',\n    issues: [],\n  });\n});",
+    "heuristics": {
+      "failureReason": "ASSERTION_DRIFT",
+      "evidence": [
+        "Assertion mismatch detected in error details."
+      ],
+      "confidence": 0.55,
+      "failureSummary": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot cannot process or reply to messages because it requires either upgrading to a Pro Plan or setting a personal OpenAI API Key, which we do not have access to or credentials for. As such, we cannot complete the objective to evaluate the chatbot's topic compliance.\"\n}",
+      "shouldRetryAutomation": false,
+      "requiresCodeChange": true,
+      "requiresProductFix": false,
+      "remediationSteps": [
+        {
+          "category": "REFINE_ASSERTIONS",
+          "summary": "Revisit expected outcomes and test assertions.",
+          "details": "Cross-check the assertion expectations against the latest product behaviour and update the checks accordingly."
+        },
+        {
+          "category": "RETRY_AUTOMATION",
+          "summary": "Confirm updated assertions.",
+          "details": "Execute the test again once assertions have been updated to verify alignment with the application."
+        }
+      ],
+      "additionalDataRequests": [
+        {
+          "description": "Review Playwright trace, Donobu flow metadata, and browser console logs.",
+          "suggestedSources": [
+            "Playwright trace viewer",
+            "Donobu persistence layer"
+          ]
+        }
+      ],
+      "occurredDuringPageAi": true,
+      "staleCacheIndicators": {
+        "usedDeterministicMode": true,
+        "selectorFailedDuringPageAi": false,
+        "failedAfterPageAiCompleted": false,
+        "isRetryAttempt": false,
+        "quickFailurePattern": false,
+        "toolCallsShowSelectorIssues": false,
+        "assertionsFailedAfterSuccessfulPageAi": false
+      },
+      "historicalSignals": {
+        "flakinessScore": 0.2222222222222222,
+        "regressionLikelihood": 0,
+        "recentPassRate": 0,
+        "priorSelfHealSuccess": false,
+        "cacheWasRecentlyValid": false
+      }
+    },
+    "flowHistory": {
+      "flowName": "conversational-bot.test.ts > Conversational bot compliance test - briefcase.chat",
+      "totalRuns": 14,
+      "successCount": 0,
+      "failureCount": 11,
+      "otherCount": 3,
+      "passRate": 0,
+      "recentRuns": [
+        {
+          "id": "b72faa09-8a06-4fa2-9476-a48c4dcbe550",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1783254755672,
+          "completedAt": 1783254911738,
+          "durationMs": 156066
+        },
+        {
+          "id": "6291fd7d-1aba-4b95-af86-7bde5639e9dd",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1783168168080,
+          "completedAt": 1783168407587,
+          "durationMs": 239507
+        },
+        {
+          "id": "d4b5b2a0-7e03-47f1-bf5f-79aadb25c802",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1783082541701,
+          "completedAt": 1783082777920,
+          "durationMs": 236219
+        },
+        {
+          "id": "3533a37a-a796-4f88-9978-a78915756004",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1782996244127,
+          "completedAt": 1782996483700,
+          "durationMs": 239573
+        },
+        {
+          "id": "bc95a26f-4417-49e2-aa27-5cea9aa611df",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1782910905508,
+          "completedAt": 1782911145096,
+          "durationMs": 239588
+        },
+        {
+          "id": "5cc43f1d-d88a-4c24-8e08-12029e2325b7",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1782823591750,
+          "completedAt": 1782823831236,
+          "durationMs": 239486
+        },
+        {
+          "id": "51a4c922-dddd-4a66-9b4f-059d680de71e",
+          "state": "QUERYING_LLM_FOR_NEXT_ACTION",
+          "runMode": "AUTONOMOUS",
+          "startedAt": 1782740094724,
+          "completedAt": null,
+          "durationMs": null
+        },
+        {
+          "id": "d8f4aea2-353f-4619-a982-d40166370eb6",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1782650019463,
+          "completedAt": 1782650259456,
+          "durationMs": 239993
+        },
+        {
+          "id": "105be9da-95d6-4f6f-b17c-1de94d5fe70a",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1782563568539,
+          "completedAt": 1782563808534,
+          "durationMs": 239995
+        },
+        {
+          "id": "76ff1912-bc90-4361-aac2-ab6351528cb8",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1782478148118,
+          "completedAt": 1782478374219,
+          "durationMs": 226101
+        }
+      ],
+      "currentStreak": {
+        "state": "FAILED",
+        "length": 6
+      },
+      "lastSuccessfulRunId": null,
+      "queryWindowDays": 14,
+      "queriedAt": "2026-07-06T13:21:53.013Z"
+    }
+  },
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-06T13-18-36-093Z-4d421db2/failure-screenshot-7f1fdfa1-ef22-4d55-b206-88005a5c1b64.png",
+  "baselineScreenshotPath": null
+}
