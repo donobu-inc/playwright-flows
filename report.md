@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 51s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 50s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 59s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
+| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 34s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 49s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 7s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 44s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 37s** |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 48s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 34s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 13s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 51s  
+**Duration**: 1m 34s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -42,7 +42,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 50s  
+**Duration**: 49s  
 
 ---
 
@@ -51,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 8s  
+**Duration**: 9s  
 
 ---
 
@@ -60,7 +60,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 59s  
+**Duration**: 1m 7s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -89,7 +89,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ❌ Failed  
-**Duration**: 2m 44s  
+**Duration**: 3m 48s  
 
 <details>
 <summary>⚠️ Error Details</summary>
@@ -102,7 +102,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot cannot process or reply to messages because it requires either upgrading to a Pro Plan or setting a personal OpenAI API Key, which we do not have access to or credentials for. As such, we cannot complete the objective to evaluate the chatbot's topic compliance."
+  "rationale": "The chatbot does not respond to submitted user queries, rendering it impossible to evaluate its topic compliance."
 }
 ```
 
@@ -127,7 +127,7 @@ Result payload:
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 19s  
+**Duration**: 20s  
 
 ---
 
@@ -136,4 +136,4 @@ Result payload:
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 - ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
 
-_Report generated on 7/6/2026, 1:24:22 PM by Donobu_
+_Report generated on 7/7/2026, 12:59:11 PM by Donobu_

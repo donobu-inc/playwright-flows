@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-07-07T12:57:33.495Z",
+  "plan": {
+    "failureSummary": "The cached deterministic selectors for the survey flow failed because the form fields/labels changed. The 'click' tool failed to find '#\\:rl\\:-form-item' or a combobox with 'Select your occupation' label. The live screenshot shows that the first form fields are actually 'Last Name' and 'Email Address' followed by 'Age Group' (radio buttons), instead of an occupation selection combobox. Furthermore, dynamic ID generation (e.g., '#\\:rl\\:-form-item') causes deterministic selector failures.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "usedDeterministicMode === true",
+      "selectorFailedDuringPageAi === false",
+      "failureScreenshot shows form fields 'Last Name', 'Email Address', and 'Age Group' radio buttons instead of an occupation dropdown",
+      "the cached selectors used generated dynamic IDs like #\\:rl\\:-form-item which are unstable"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear the Page AI cache and retry the test",
+        "details": "Re-run the automation with the 'clearPageAiCache' option enabled to allow Donobu to re-scan the form layout, bypass the broken cached selectors, and use its LLM mode to dynamically find the correct fields."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Avoid caching unstable dynamic element IDs",
+        "details": "If writing manual selectors in the future, avoid using auto-generated IDs (e.g., '#\\:rl\\:-form-item'). Use robust user-facing locators such as getByLabel('Last Name') or getByRole('textbox', { name: 'Email Address' })."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "By clearing the Page AI cache, the autonomous agent will re-evaluate the DOM structures dynamically and identify the correct fields (such as 'Last Name', 'Email Address', and 'Age Group') instead of relying on outdated/cached dynamic IDs and occupation dropdown selectors.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 23113,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-07T12-52-31-055Z-4457b1b1",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-07T12-52-31-055Z-4457b1b1",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-07T12-52-31-055Z-4457b1b1/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-cee70c3a-f6dd-4e33-8742-b3045a6fa866.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

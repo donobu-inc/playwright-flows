@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-07-07T12:57:24.285Z",
+  "plan": {
+    "failureSummary": "The test failed while trying to click the 'Documentation' link within the 'Resources' dropdown. Although the preceding step successfully clicked the 'Resources' dropdown button, the dropdown itself did not open, or the expected link element was not visible or resolvable. The live failure screenshot confirms that the mouse cursor hovered/clicked 'Resources', but no dropdown menu is expanded or visible on the page. This indicates a selector or timing mismatch where the menu did not toggle, or the cached DOM structure for the dropdown elements is stale.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "heuristics.staleCacheIndicators.usedDeterministicMode === true",
+      "heuristics.staleCacheIndicators.selectorFailedDuringPageAi === false",
+      "failure screenshot shows the 'Resources' dropdown closed despite mouse cursor hover"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear PageAI cache and retry the automation",
+        "details": "Clear the PageAI cache to trigger a fresh autonomous run instead of using the cached deterministic selector steps. This allows the AI agent to dynamically discover the updated locator or interaction pattern for the Resources dropdown and the Documentation link."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The deterministic run failed because the cached selectors for the 'Documentation' link could not resolve. In the live screenshot, we see the mouse cursor hovered on the 'Resources' menu, but the dropdown did not render or open. Clearing the cache and allowing the LLM to re-evaluate the interaction pattern dynamically on the live page structure should resolve the failure.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 13022,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-07T12-52-31-055Z-4457b1b1",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-07T12-52-31-055Z-4457b1b1",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-07T12-52-31-055Z-4457b1b1/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-ce2fb499-63f6-440d-af94-d998cb3fd6bf.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
