@@ -3,7 +3,7 @@ import { expect, test } from '@donobu/test';
 test('Checkly dev docs search', async ({ page }) => {
   await page.goto('https://checklyhq.com');
   await page.ai(
-    `Click on the Resources dropdown menu, then click into to the developer docs option`,
+    `Click on the Developers dropdown menu, then click into to the Documentation option`,
   );
   expect(page.url()).toEqual('https://www.checklyhq.com/docs/');
   await page.ai(
