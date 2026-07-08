@@ -1,4 +1,4 @@
-import { test, expect } from 'donobu';
+import { test, expect } from '@donobu/test';
 
 test('sauce-login', async ({ page }) => {
     await page.goto('https://www.saucedemo.com');

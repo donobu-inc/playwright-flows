@@ -1,4 +1,4 @@
-import { defineConfig, devices } from 'donobu';
+import { defineConfig, devices } from '@donobu/test';
 
 export default defineConfig({
   testDir: './tests',
@@ -30,9 +30,9 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   reporter: [
-    ['donobu/reporter/html'],
-    ['donobu/reporter/markdown'],
-    ['donobu/reporter/slack'],
+    ['@donobu/test/reporter/html'],
+    ['@donobu/test/reporter/markdown'],
+    ['@donobu/test/reporter/slack'],
   ],
   timeout: 240000
 });

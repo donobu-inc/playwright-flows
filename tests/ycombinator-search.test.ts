@@ -1,4 +1,4 @@
-import { test } from 'donobu';
+import { test } from '@donobu/test';
 
 test('Hackernews search', async ({ page }) => {
   await page.goto('https://news.ycombinator.com');

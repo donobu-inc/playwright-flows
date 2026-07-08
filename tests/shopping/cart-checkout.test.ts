@@ -1,4 +1,4 @@
-import { test } from 'donobu';
+import { test } from '@donobu/test';
 
 test('Test for https://www.saucedemo.com/cart.html', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/cart.html');

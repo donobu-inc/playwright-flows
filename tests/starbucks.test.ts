@@ -1,4 +1,4 @@
-import { test } from 'donobu';
+import { test } from '@donobu/test';
 
 test('Test survives modals and popups', async ({ page }) => {
   await page.goto('https://www.starbucks.com');

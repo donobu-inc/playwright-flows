@@ -1,4 +1,4 @@
-import { expect, test } from 'donobu';
+import { expect, test } from '@donobu/test';
 import { z } from 'zod/v4';
 
 test('Account signup for Everbutton', async ({ page }) => {

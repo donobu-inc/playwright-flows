@@ -1,4 +1,4 @@
-import { expect, test } from 'donobu';
+import { expect, test } from '@donobu/test';
 
 test('Checkly dev docs search', async ({ page }) => {
   await page.goto('https://checklyhq.com');

@@ -1,4 +1,4 @@
-import { test, expect } from 'donobu';
+import { test, expect } from '@donobu/test';
 import { z } from 'zod/v4';
 
 test('Conversational bot compliance test - briefcase.chat', async ({
