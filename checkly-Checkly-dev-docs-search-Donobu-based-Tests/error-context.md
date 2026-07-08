@@ -956,8 +956,8 @@ Error: click execution failed: {
             - generic [ref=e1513]:
               - generic [ref=e1514]:
                 - generic [ref=e1515]:
-                  - generic [ref=e1516]: 8 Open
-                  - generic [ref=e1518]: 2 Merged
+                  - generic [ref=e1516]: 9 Open
+                  - generic [ref=e1518]: 1 Merged
                 - generic [ref=e1520]: LIVE
               - generic [ref=e1522]:
                 - generic [ref=e1523]:
@@ -1047,12 +1047,12 @@ Error: click execution failed: {
           - navigation [ref=e1625]:
             - button "Go to Create" [ref=e1626] [cursor=pointer]:
               - generic [ref=e1627]: "01"
-              - generic [ref=e1628]:
-                - generic [ref=e1629]: Create
-                - generic: Create
+              - generic [ref=e1629]: Create
             - button "Go to Investigate" [ref=e1630] [cursor=pointer]:
               - generic [ref=e1631]: "02"
-              - generic [ref=e1633]: Investigate
+              - generic [ref=e1632]:
+                - generic [ref=e1633]: Investigate
+                - generic: Investigate
             - button "Go to Communicate" [ref=e1634] [cursor=pointer]:
               - generic [ref=e1635]: "03"
               - generic [ref=e1637]: Communicate
@@ -1061,18 +1061,18 @@ Error: click execution failed: {
               - generic [ref=e1641]: Resolve
           - generic [ref=e1642]:
             - generic [ref=e1643]:
-              - heading "Go from prompt to monitor in seconds." [level=3] [ref=e1644]
-              - paragraph [ref=e1645]: Checkly communicates with your agents to turn natural language prompts into fully configured tests and monitors. Describe what you want to check, and AI generates the code, picks the regions, wires up the alerts, then deploys them to Checkly
+              - heading "Investigate failures and performance issues with complete context." [level=3] [ref=e1644]
+              - paragraph [ref=e1645]: When a test or monitor fails in Checkly, your agents can be immediately informated and instantly start investigating the failure. Use traces, logs, code, docs,and more to surface the root cause. Stop digging through dashboards and alerts.
             - generic [ref=e1646]:
               - generic [ref=e1647]:
-                - paragraph [ref=e1648]: 10x
-                - paragraph [ref=e1649]: Faster monitor creation
+                - paragraph [ref=e1648]: 80%
+                - paragraph [ref=e1649]: Faster MTTR
               - generic [ref=e1650]:
-                - paragraph [ref=e1651]: 20+
-                - paragraph [ref=e1652]: Global regions
+                - paragraph [ref=e1651]: 3 min
+                - paragraph [ref=e1652]: Avg. time to root cause
               - generic [ref=e1653]:
-                - paragraph [ref=e1654]: < 30s
-                - paragraph [ref=e1655]: Prompt to deploy
+                - paragraph [ref=e1654]: 100%
+                - paragraph [ref=e1655]: Auto-correlated traces
           - generic [ref=e1656]:
             - generic [ref=e1657]:
               - generic [ref=e1658]: Works with
@@ -1092,9 +1092,9 @@ Error: click execution failed: {
                 - generic [ref=e1683]: Create a browser check that monitors our checkout flow for our top selling item, from our ten most active regions.
                 - generic [ref=e1684]:
                   - img [ref=e1686]
-                  - generic [ref=e1689]: I'll create a Playwright browser check for your checkout flow. I pulled your 10 highest-traffic regions from analytics and configured them automatically. Created checkout-flow.spec.ts The check navigates to your product page, adds the top-selling item to cart, proceeds through checkout, and verifies the order confirmation. $ npx checkly deploy Deploying 1 new check... ✓ checkout-flow-top-item deployed to 10 regio
-              - generic [ref=e1692]:
-                - paragraph [ref=e1693]
+                  - generic [ref=e1689]: I'll create a Playwright browser check for your checkout flow. I pulled your 10 highest-traffic regions from analytics and configured them automatically. Created checkout-flow.spec.ts The check navigates to your product page, adds the top-selling item to cart, proceeds through checkout, and verifies the order confirmation. $ npx checkly deploy Deploying 1 new check... ✓ checkout-flow-top-item deployed to 10 regions.
+              - generic [ref=e1691]:
+                - paragraph [ref=e1692]: The checkout browser check just failed. What happened
                 - generic [ref=e1694]:
                   - generic [ref=e1695]:
                     - generic [ref=e1696]: Press

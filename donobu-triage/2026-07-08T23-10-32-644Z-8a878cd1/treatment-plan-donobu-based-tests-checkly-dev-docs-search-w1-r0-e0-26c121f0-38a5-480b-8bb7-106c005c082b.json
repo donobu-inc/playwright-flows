@@ -1,0 +1,56 @@
+{
+  "generatedAtIso": "2026-07-08T23:12:42.375Z",
+  "plan": {
+    "failureSummary": "The test failed because the expected URL 'https://www.checklyhq.com/docs/' did not match the actually received URL 'https://www.checklyhq.com/docs/what-is-checkly/' after navigating to the documentation homepage.",
+    "failureReason": "ASSERTION_DRIFT",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Assertion mismatch detected in error details.",
+      "Assertions failed after successful page.ai execution.",
+      "Page.ai successfully completed navigation but landed on /docs/what-is-checkly/ instead of /docs/"
+    ],
+    "remediationSteps": [
+      {
+        "category": "REFINE_ASSERTIONS",
+        "summary": "Update the expected documentation landing URL assertion",
+        "details": "Update the test assertion on line 8 to expect 'https://www.checklyhq.com/docs/what-is-checkly/' instead of 'https://www.checklyhq.com/docs/'."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The page.ai instruction completed successfully and routed the user to the default developer documentation landing page. However, Checkly's main documentation URL now points to a more descriptive slug '/docs/what-is-checkly/' instead of the generic root directory '/docs/'. Updating the test assertion to accept the new URL will resolve this failure.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 113594,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-08T23-10-32-644Z-8a878cd1",
+    "runDirectory": "/tmp/donobu-auto-heal-I3oM8r/triage/2026-07-08T23-10-32-644Z-8a878cd1",
+    "evidencePath": "/tmp/donobu-auto-heal-I3oM8r/triage/2026-07-08T23-10-32-644Z-8a878cd1/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w1-r0-e0-26c121f0-38a5-480b-8bb7-106c005c082b.json"
+  },
+  "originalPlaywrightArgs": [
+    "test",
+    "--project=Donobu-based Tests",
+    "--output",
+    "/tmp/donobu-auto-heal-I3oM8r/playwright-output"
+  ]
+}

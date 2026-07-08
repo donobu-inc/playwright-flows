@@ -7,15 +7,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 31s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 59s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 8s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 3s |
+| checkly.test.ts |  |  |  | 1 ❌ |  |  |  | 1m 55s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 51s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 48s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 17s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 8s** |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 31s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| **TOTAL** | **7 ✅** | **0 🔁** | **0 ❤️‍🩹** | **2 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 24s** |
 
 ## auth/sauce-login.test.ts
 
@@ -30,9 +30,31 @@
 
 ### Checkly dev docs search
 
-**Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 31s  
-> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
+**Status**: ❌ Failed  
+**Duration**: 1m 55s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: expect(received).toEqual(expected) // deep equality
+
+Expected: "https://www.checklyhq.com/docs/"
+Received: "https://www.checklyhq.com/docs/what-is-checkly/"
+```
+
+**Code Snippet**:
+```
+   6 |     `Click on the Resources dropdown menu, then click into to the developer docs option`,
+   7 |   );
+>  8 |   expect(page.url()).toEqual('https://www.checklyhq.com/docs/');
+     |                      ^
+   9 |   await page.ai(
+  10 |     `Do a search for "Playwright check suite", and chose the match for "Constructs > DETECT" from the search suggestions dropdown.
+  11 |     NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".`,
+```
+
+</details>
 
 
 ---
@@ -42,7 +64,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 59s  
+**Duration**: 51s  
 
 ---
 
@@ -51,7 +73,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 8s  
+**Duration**: 9s  
 
 ---
 
@@ -59,10 +81,8 @@
 
 ### Fill out a survey
 
-**Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 3s  
-> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
-
+**Status**: ✅ Passed  
+**Duration**: 48s  
 
 ---
 
@@ -89,7 +109,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ❌ Failed  
-**Duration**: 3m 17s  
+**Duration**: 2m 31s  
 
 <details>
 <summary>⚠️ Error Details</summary>
@@ -102,7 +122,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot is not responding because it requires a subscription or a user-provided OpenAI API key to process questions. Since we do not have an OpenAI API key or subscription to supply, we cannot evaluate the chatbot's compliance or off-topic responses."
+  "rationale": "The chatbot appears to have failed to generate any response to the query, likely due to a back-end server error, quota limit, or missing required configuration that cannot be bypassed automatically. Thus, topic compliance evaluation is impossible."
 }
 ```
 
@@ -127,13 +147,8 @@ Result payload:
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 20s  
 
 ---
 
-### Auto-Healed Tests
-
-- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
-- ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
-
-_Report generated on 7/8/2026, 12:44:48 PM by Donobu_
+_Report generated on 7/8/2026, 11:12:42 PM by Donobu_

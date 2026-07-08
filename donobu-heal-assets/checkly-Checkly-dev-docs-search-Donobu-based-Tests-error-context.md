@@ -1,0 +1,437 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: checkly.test.ts >> Checkly dev docs search
+- Location: tests/checkly.test.ts:3:5
+
+# Error details
+
+```
+Error: expect(received).toEqual(expected) // deep equality
+
+Expected: "https://www.checklyhq.com/docs/"
+Received: "https://www.checklyhq.com/docs/what-is-checkly/"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - blockquote [ref=e2]:
+    - heading [level=2] [ref=e3]: Documentation Index
+    - paragraph [ref=e4]:
+      - text: "Fetch the complete documentation index at:"
+      - link [ref=e5] [cursor=pointer]:
+        - /url: /docs/llms.txt
+        - text: /docs/llms.txt
+    - paragraph [ref=e6]: Use this file to discover all available pages before exploring further.
+  - generic [ref=e7]:
+    - link "Skip to main content" [ref=e8] [cursor=pointer]:
+      - /url: "#content-area"
+    - generic [ref=e10]:
+      - banner [ref=e11]:
+        - generic [ref=e14]:
+          - generic [ref=e17]:
+            - link "Checkly Docs home page light logo" [ref=e19] [cursor=pointer]:
+              - /url: /docs
+              - generic [ref=e20]: Checkly Docs home page
+              - img "light logo" [ref=e21]
+            - generic [ref=e22]:
+              - button "Open search" [ref=e23] [cursor=pointer]:
+                - generic [ref=e24]:
+                  - img [ref=e25]
+                  - generic [ref=e28]: Search...
+                - generic [ref=e29]: Ctrl K
+              - button "Toggle assistant panel" [ref=e30] [cursor=pointer]:
+                - img [ref=e31]
+                - generic [ref=e34]: Ask Assistant
+            - generic [ref=e35]:
+              - navigation "Main" [ref=e37]:
+                - list [ref=e38]:
+                  - listitem [ref=e39]:
+                    - link "Home" [ref=e40] [cursor=pointer]:
+                      - /url: https://www.checklyhq.com
+                      - generic [ref=e41]: Home
+                  - listitem [ref=e42]:
+                    - link "Changelog" [ref=e43] [cursor=pointer]:
+                      - /url: https://www.checklyhq.com/docs/changelog/changelog/
+                      - generic [ref=e44]: Changelog
+                  - listitem [ref=e45]:
+                    - link "Dashboard" [ref=e46] [cursor=pointer]:
+                      - /url: https://app.checklyhq.com
+                      - generic [ref=e48]:
+                        - generic [ref=e49]: Dashboard
+                        - img [ref=e50]
+              - button "Change theme preference" [ref=e52] [cursor=pointer]:
+                - img [ref=e54]
+          - generic [ref=e59]:
+            - link "Docs" [ref=e60] [cursor=pointer]:
+              - /url: /docs/what-is-checkly
+              - text: Docs
+            - link "Constructs" [ref=e62] [cursor=pointer]:
+              - /url: /docs/constructs/overview
+              - text: Constructs
+            - link "CLI Reference" [ref=e64] [cursor=pointer]:
+              - /url: /docs/cli/overview
+              - text: CLI Reference
+            - link "API Reference" [ref=e66] [cursor=pointer]:
+              - /url: /docs/api-reference/overview
+              - text: API Reference
+            - link "Guides" [ref=e68] [cursor=pointer]:
+              - /url: /docs/guides/overview
+              - text: Guides
+            - link "Learn" [ref=e70] [cursor=pointer]:
+              - /url: /docs/learn/playwright/overview
+              - text: Learn
+            - link "Comparisons" [ref=e72] [cursor=pointer]:
+              - /url: /docs/comparisons/frameworks/playwright-vs-cypress
+              - text: Comparisons
+      - generic [ref=e74]:
+        - navigation "Pages" [ref=e75]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - heading "Getting Started" [level=3] [ref=e80]
+              - list [ref=e81]:
+                - listitem [ref=e82]:
+                  - link "What is Checkly?" [ref=e83] [cursor=pointer]:
+                    - /url: /docs/what-is-checkly
+                    - generic [ref=e86]: What is Checkly?
+                - listitem [ref=e87]:
+                  - link "Quickstart" [ref=e88] [cursor=pointer]:
+                    - /url: /docs/quickstart
+                    - generic [ref=e91]: Quickstart
+                - listitem [ref=e92]:
+                  - button "Concepts" [ref=e93] [cursor=pointer]:
+                    - generic [ref=e95]: Concepts
+                    - img [ref=e97]
+                - listitem [ref=e99]:
+                  - button "Platform" [ref=e100] [cursor=pointer]:
+                    - generic [ref=e102]: Platform
+                    - img [ref=e104]
+                - listitem [ref=e106]:
+                  - button "Admin" [ref=e107] [cursor=pointer]:
+                    - generic [ref=e109]: Admin
+                    - img [ref=e111]
+            - generic [ref=e115]:
+              - heading "Detect" [level=3] [ref=e117]
+              - list [ref=e118]:
+                - listitem [ref=e119]:
+                  - link "Overview" [ref=e120] [cursor=pointer]:
+                    - /url: /docs/detect/overview
+                    - generic [ref=e123]: Overview
+                - listitem [ref=e124]:
+                  - button "Uptime Monitoring" [ref=e125] [cursor=pointer]:
+                    - generic [ref=e127]: Uptime Monitoring
+                    - img [ref=e129]
+                - listitem [ref=e131]:
+                  - button "Synthetic Monitoring" [ref=e132] [cursor=pointer]:
+                    - generic [ref=e134]: Synthetic Monitoring
+                    - img [ref=e136]
+                - listitem [ref=e138]:
+                  - button "Testing" [ref=e139] [cursor=pointer]:
+                    - generic [ref=e141]: Testing
+                    - img [ref=e143]
+                - listitem [ref=e145]:
+                  - link "Assertions" [ref=e146] [cursor=pointer]:
+                    - /url: /docs/detect/assertions
+                    - generic [ref=e149]: Assertions
+            - generic [ref=e152]:
+              - heading "Communicate" [level=3] [ref=e154]
+              - list [ref=e155]:
+                - listitem [ref=e156]:
+                  - link "Overview" [ref=e157] [cursor=pointer]:
+                    - /url: /docs/communicate/overview
+                    - generic [ref=e160]: Overview
+                - listitem [ref=e161]:
+                  - button "Alerts" [ref=e162] [cursor=pointer]:
+                    - generic [ref=e164]: Alerts
+                    - img [ref=e166]
+                - listitem [ref=e168]:
+                  - button "Status Pages" [ref=e169] [cursor=pointer]:
+                    - generic [ref=e171]: Status Pages
+                    - img [ref=e173]
+                - listitem [ref=e175]:
+                  - button "Dashboards" [ref=e176] [cursor=pointer]:
+                    - generic [ref=e178]: Dashboards
+                    - img [ref=e180]
+                - listitem [ref=e182]:
+                  - link "Maintenance Windows" [ref=e183] [cursor=pointer]:
+                    - /url: /docs/communicate/maintenance-windows/overview
+                    - generic [ref=e186]: Maintenance Windows
+            - generic [ref=e189]:
+              - heading "Resolve" [level=3] [ref=e191]
+              - list [ref=e192]:
+                - listitem [ref=e193]:
+                  - link "Overview" [ref=e194] [cursor=pointer]:
+                    - /url: /docs/resolve/overview
+                    - generic [ref=e197]: Overview
+                - listitem [ref=e198]:
+                  - link "AI Root Cause Analysis" [ref=e199] [cursor=pointer]:
+                    - /url: /docs/resolve/ai-root-cause-analysis/overview
+                    - generic [ref=e202]: AI Root Cause Analysis
+                - listitem [ref=e203]:
+                  - button "Traces" [ref=e204] [cursor=pointer]:
+                    - generic [ref=e206]: Traces
+                    - img [ref=e208]
+            - generic [ref=e212]:
+              - heading "AI" [level=3] [ref=e214]
+              - list [ref=e215]:
+                - listitem [ref=e216]:
+                  - link "Rocky AI" [ref=e217] [cursor=pointer]:
+                    - /url: /docs/ai/rocky-ai
+                    - generic [ref=e220]: Rocky AI
+                - listitem [ref=e221]:
+                  - button "Agent Resources" [ref=e222] [cursor=pointer]:
+                    - generic [ref=e224]: Agent Resources
+                    - img [ref=e226]
+            - generic [ref=e230]:
+              - heading "Integrations" [level=3] [ref=e232]
+              - list [ref=e233]:
+                - listitem [ref=e234]:
+                  - button "Alerts & Notifications" [ref=e235] [cursor=pointer]:
+                    - generic [ref=e237]: Alerts & Notifications
+                    - img [ref=e239]
+                - listitem [ref=e241]:
+                  - button "Incident Management" [ref=e242] [cursor=pointer]:
+                    - generic [ref=e244]: Incident Management
+                    - img [ref=e246]
+                - listitem [ref=e248]:
+                  - button "CI/CD" [ref=e249] [cursor=pointer]:
+                    - generic [ref=e251]: CI/CD
+                    - img [ref=e253]
+                - listitem [ref=e255]:
+                  - button "Observability" [ref=e256] [cursor=pointer]:
+                    - generic [ref=e258]: Observability
+                    - img [ref=e260]
+                - listitem [ref=e262]:
+                  - button "Infrastructure as Code" [ref=e263] [cursor=pointer]:
+                    - generic [ref=e265]: Infrastructure as Code
+                    - img [ref=e267]
+        - main [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e273]:
+                - generic [ref=e274]: Getting Started
+                - generic [ref=e275]:
+                  - heading "What is Checkly?" [level=1] [ref=e276]
+                  - generic [ref=e277]:
+                    - button "Copy page" [ref=e278] [cursor=pointer]:
+                      - generic [ref=e279]:
+                        - img [ref=e280]
+                        - generic [ref=e283]: Copy page
+                    - button "More actions" [ref=e284] [cursor=pointer]:
+                      - img [ref=e285]
+              - paragraph [ref=e288]: The Application Reliability Platform built for modern engineering teams.
+            - generic [ref=e289]:
+              - generic [ref=e295]:
+                - img "Light mode interface" [ref=e298]
+                - generic:
+                  - 'button "Expand image: Light mode interface"'
+              - generic [ref=e299]:
+                - text: Checkly is an Application Reliability platform that enables teams to
+                - strong [ref=e300]: test, monitor, and observe
+                - text: their web applications, APIs, and other services using a developer or agentic workflow. Built for modern teams, Checkly uses combines a UI,
+                - link "APIs" [ref=e301] [cursor=pointer]:
+                  - /url: /docs/api-reference/overview
+                - text: ", and a"
+                - link "CLI" [ref=e302] [cursor=pointer]:
+                  - /url: /docs/cli/overview
+                - text: to help define your monitoring setup autonomously and integrate directly into CI/CD pipelines.
+              - heading "Navigate to header Improving reliability and stability with Checkly:" [level=3] [ref=e303]:
+                - link "Navigate to header" [ref=e304] [cursor=pointer]:
+                  - /url: "#improving-reliability-and-stability-with-checkly"
+                  - img [ref=e306]
+                - generic [ref=e308] [cursor=pointer]: "Improving reliability and stability with Checkly:"
+              - generic [ref=e309]: "Checkly has three core capabilities:"
+              - list [ref=e310]:
+                - listitem [ref=e311]:
+                  - strong [ref=e312]: Detect
+                  - text: ": Testing, Uptime Monitoring, and Synthetic Monitoring with Playwright."
+                - listitem [ref=e313]:
+                  - strong [ref=e314]: Communicate
+                  - text: ": Customizable Alerting, Dashboards, & Status Pages for clear communication."
+                - listitem [ref=e315]:
+                  - strong [ref=e316]: Resolve
+                  - text: ": Distributed full-stack tracing and AI-powered incident analysis and context."
+              - heading "Navigate to header Why Checkly?" [level=2] [ref=e317]:
+                - link "Navigate to header" [ref=e318] [cursor=pointer]:
+                  - /url: "#why-checkly"
+                  - img [ref=e320]
+                - generic [ref=e322] [cursor=pointer]: Why Checkly?
+              - generic [ref=e323]: Checkly helps developers increase uptime and reliability, improve shipping velocity, and improve incident response time through a unified workflow that’s scalable, automated, and AI-ready.
+              - generic [ref=e324]:
+                - link "Monitoring as Code" [ref=e325] [cursor=pointer]:
+                  - link [ref=e327]:
+                    - /url: /docs/concepts/monitoring-as-code
+                    - generic [ref=e328]:
+                      - heading [level=2] [ref=e329]: Monitoring as Code
+                      - generic [ref=e331]: Define your entire monitoring setup with TypeScript constructs instead of manual UI configuration.
+                      - button [ref=e333]:
+                        - text: Learn more
+                        - img [ref=e334]
+                - link "Native Playwright Support" [ref=e336] [cursor=pointer]:
+                  - link [ref=e338]:
+                    - /url: /docs/detect/synthetic-monitoring/browser-checks/overview
+                    - generic [ref=e339]:
+                      - heading [level=2] [ref=e340]: Native Playwright Support
+                      - generic [ref=e342]: Browser monitoring powered natively by Playwright for fast, reliable end-to-end scenario monitoring.
+                      - button [ref=e344]:
+                        - text: Learn more
+                        - img [ref=e345]
+                - link "Developer-First Experience" [ref=e347] [cursor=pointer]:
+                  - link [ref=e349]:
+                    - /url: /docs/cli/authentication
+                    - generic [ref=e350]:
+                      - heading [level=2] [ref=e351]: Developer-First Experience
+                      - generic [ref=e353]: Code-driven platform with constructs, APIs, and a CLI that manages the entire lifecycle of your monitors.
+                      - button [ref=e355]:
+                        - text: Learn more
+                        - img [ref=e356]
+                - link "Unified Testing, Monitoring, Tracing, and Incident Management" [ref=e358] [cursor=pointer]:
+                  - link [ref=e360]:
+                    - /url: /docs/detect/testing/overview
+                    - generic [ref=e361]:
+                      - heading [level=2] [ref=e362]: Unified Testing, Monitoring, Tracing, and Incident Management
+                      - generic [ref=e364]: Unify testing, monitoring, and observability into a single workflow using Playwright and OpenTelemetry.
+                      - button [ref=e366]:
+                        - text: Learn more
+                        - img [ref=e367]
+                - link "Reliable Error Detection" [ref=e369] [cursor=pointer]:
+                  - link [ref=e371]:
+                    - /url: /docs/concepts/results
+                    - generic [ref=e372]:
+                      - heading [level=2] [ref=e373]: Reliable Error Detection
+                      - generic [ref=e375]: Detect both functional and performance errors in pre-production and production environments.
+                      - button [ref=e377]:
+                        - text: Learn more
+                        - img [ref=e378]
+              - heading "Navigate to header Use Cases" [level=2] [ref=e380]:
+                - link "Navigate to header" [ref=e381] [cursor=pointer]:
+                  - /url: "#use-cases"
+                  - img [ref=e383]
+                - generic [ref=e385] [cursor=pointer]: Use Cases
+              - list [ref=e386]:
+                - listitem [ref=e387]:
+                  - strong [ref=e388]:
+                    - link "Pre-Production Testing" [ref=e389] [cursor=pointer]:
+                      - /url: /docs/guides/sdlc-monitoring
+                  - text: — Validate functionality and performance in staging before deployment, catching regressions early.
+                - listitem [ref=e390]:
+                  - strong [ref=e391]:
+                    - link "Production Monitoring" [ref=e392] [cursor=pointer]:
+                      - /url: /docs/learn/monitoring/api-monitoring
+                  - text: — Continuously monitor critical user journeys, API endpoints, and application performance.
+                - listitem [ref=e393]:
+                  - strong [ref=e394]:
+                    - link "Transaction Monitoring" [ref=e395] [cursor=pointer]:
+                      - /url: /docs/guides/monitoring-ecommerce-apps-using-playwright
+                  - text: — Monitor checkout flows, payment processing, and product catalog to prevent revenue loss.
+                - listitem [ref=e396]:
+                  - strong [ref=e397]:
+                    - link "API Reliability" [ref=e398] [cursor=pointer]:
+                      - /url: /docs/learn/monitoring/api-monitoring
+                  - text: — Ensure third-party integrations and internal APIs maintain expected response times and availability.
+                - listitem [ref=e399]:
+                  - strong [ref=e400]:
+                    - link "Multi-Environment Validation" [ref=e401] [cursor=pointer]:
+                      - /url: /docs/concepts/environments
+                  - text: — Test across different environments, browsers, and devices for consistent functionality.
+                - listitem [ref=e402]:
+                  - strong [ref=e403]:
+                    - link "Compliance and SLA Monitoring" [ref=e404] [cursor=pointer]:
+                      - /url: /docs/learn/incidents/slo-sla-sli
+                  - text: — Track uptime and performance metrics to meet SLAs and regulatory requirements.
+              - heading "Navigate to header Checkly Is Best Fit For" [level=2] [ref=e405]:
+                - link "Navigate to header" [ref=e406] [cursor=pointer]:
+                  - /url: "#checkly-is-best-fit-for"
+                  - img [ref=e408]
+                - generic [ref=e410] [cursor=pointer]: Checkly Is Best Fit For
+              - generic [ref=e411]:
+                - strong [ref=e412]: DevOps and SRE Teams
+                - text: looking for programmable monitoring that integrates seamlessly with their existing infrastructure-as-code and GitOps workflows.
+              - generic [ref=e413]:
+                - strong [ref=e414]: Full-Stack Engineering Teams
+                - text: who want to shift monitoring left and treat monitoring as an integral part of their development process rather than an afterthought.
+              - generic [ref=e415]:
+                - strong [ref=e416]: Engineering Teams Using Modern Web Technologies
+                - text: who want monitoring that understands modern JavaScript frameworks, SPAs, and API-first architectures.
+            - generic [ref=e418]:
+              - paragraph [ref=e419]: Was this page helpful?
+              - generic [ref=e420]:
+                - generic [ref=e421]:
+                  - button "Yes" [ref=e422] [cursor=pointer]:
+                    - img [ref=e423]
+                    - generic [ref=e425]: "Yes"
+                  - button "No" [ref=e426] [cursor=pointer]:
+                    - img [ref=e427]
+                    - generic [ref=e429]: "No"
+                - generic [ref=e430]:
+                  - link "Suggest edits" [ref=e431] [cursor=pointer]:
+                    - /url: https://github.com/checkly/docs/edit/main/what-is-checkly.mdx
+                    - img [ref=e432]
+                    - generic [ref=e434]: Suggest edits
+                  - link "Raise issue" [ref=e435] [cursor=pointer]:
+                    - /url: "https://github.com/checkly/docs/issues/new?title=Issue on docs&body=Path: /what-is-checkly"
+                    - img [ref=e436]
+                    - generic [ref=e438]: Raise issue
+            - link "Checkly Quickstart Next" [ref=e441] [cursor=pointer]:
+              - /url: /docs/quickstart
+              - generic [ref=e442]:
+                - generic [ref=e443]: Checkly Quickstart
+                - generic [ref=e444]:
+                  - img [ref=e445]
+                  - generic [ref=e447]: Next
+            - generic [ref=e449]:
+              - textbox "Ask a question..." [ref=e450]
+              - generic: Ctrl+I
+              - button "Send message" [disabled] [ref=e451]:
+                - img [ref=e452]
+            - generic [ref=e454]:
+              - generic [ref=e455]:
+                - link "x" [ref=e456] [cursor=pointer]:
+                  - /url: https://x.com/checklyhq
+                  - generic [ref=e457]: x
+                  - img [ref=e458]
+                - link "github" [ref=e459] [cursor=pointer]:
+                  - /url: https://github.com/checkly
+                  - generic [ref=e460]: github
+                  - img [ref=e461]
+                - link "linkedin" [ref=e462] [cursor=pointer]:
+                  - /url: https://linkedin.com/company/checkly
+                  - generic [ref=e463]: linkedin
+                  - img [ref=e464]
+              - link "Powered by This documentation is built and hosted on Mintlify, a developer documentation platform" [ref=e467] [cursor=pointer]:
+                - /url: https://www.mintlify.com?utm_campaign=poweredBy&utm_medium=referral&utm_source=checkly-422f444a
+                - generic [ref=e468]: Powered by
+                - img [ref=e469]
+                - generic [ref=e478]: This documentation is built and hosted on Mintlify, a developer documentation platform
+  - alert [ref=e479]: What is Checkly? - Checkly Docs
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test } from '@donobu/test';
+  2  | 
+  3  | test('Checkly dev docs search', async ({ page }) => {
+  4  |   await page.goto('https://checklyhq.com');
+  5  |   await page.ai(
+  6  |     `Click on the Resources dropdown menu, then click into to the developer docs option`,
+  7  |   );
+> 8  |   expect(page.url()).toEqual('https://www.checklyhq.com/docs/');
+     |                      ^ Error: expect(received).toEqual(expected) // deep equality
+  9  |   await page.ai(
+  10 |     `Do a search for "Playwright check suite", and chose the match for "Constructs > DETECT" from the search suggestions dropdown.
+  11 |     NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".`,
+  12 |   );
+  13 |   expect(page.url()).toEqual(
+  14 |     'https://www.checklyhq.com/docs/constructs/playwright-check/',
+  15 |   );
+  16 | });
+  17 | 
+```
