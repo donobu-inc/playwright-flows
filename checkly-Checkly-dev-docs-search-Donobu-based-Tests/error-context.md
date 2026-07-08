@@ -956,8 +956,8 @@ Error: click execution failed: {
             - generic [ref=e1513]:
               - generic [ref=e1514]:
                 - generic [ref=e1515]:
-                  - generic [ref=e1516]: 7 Open
-                  - generic [ref=e1518]: 3 Merged
+                  - generic [ref=e1516]: 8 Open
+                  - generic [ref=e1518]: 2 Merged
                 - generic [ref=e1520]: LIVE
               - generic [ref=e1522]:
                 - generic [ref=e1523]:
@@ -1092,527 +1092,527 @@ Error: click execution failed: {
                 - generic [ref=e1683]: Create a browser check that monitors our checkout flow for our top selling item, from our ten most active regions.
                 - generic [ref=e1684]:
                   - img [ref=e1686]
-                  - generic [ref=e1689]: I'll create a Playwright browser check for your checkout flow. I pulled your 10 highest-traffic regions from analytics and configured them automatically. Created checkout-flow.spec.ts The check navigates to your product page, adds the top-selling item to cart, proceeds through checkout, and verifies the order confirmation. $ npx checkly deploy Deploying 1 new check... ✓ checkout-flow-top-item deployed to 10 regions.
-              - generic [ref=e1691]:
-                - paragraph [ref=e1692]
-                - generic [ref=e1693]:
-                  - generic [ref=e1694]:
-                    - generic [ref=e1695]: Press
-                    - generic [ref=e1696]: Enter
-                    - generic [ref=e1697]: to send
-                  - button "Send" [ref=e1698] [cursor=pointer]:
-                    - img [ref=e1699]
-      - generic [ref=e1702]:
-        - generic [ref=e1703]:
-          - paragraph [ref=e1704]: Unified Reliability
-          - heading "Everything you need to catch issues before they impact your customers." [level=2] [ref=e1705]
-          - paragraph [ref=e1706]: Checkly brings together testing, monitoring, incident management, and observability in a single platform to give your team one clear signal of application health.
-        - generic [ref=e1707]:
-          - tablist "Product features" [ref=e1708]:
-            - generic [ref=e1709]:
-              - generic [ref=e1710]:
-                - generic [ref=e1711]: Detect
-                - generic [ref=e1712]:
-                  - tab "Uptime Monitoring" [ref=e1713] [cursor=pointer]
-                  - tab "Synthetic Monitoring" [ref=e1714] [cursor=pointer]
-              - generic [ref=e1715]:
-                - generic [ref=e1717]: Communicate
-                - generic [ref=e1718]:
-                  - tab "Alerts" [ref=e1719] [cursor=pointer]
-                  - tab "Status Pages" [ref=e1720] [cursor=pointer]
-              - generic [ref=e1721]:
-                - generic [ref=e1723]: Resolve
-                - generic [ref=e1724]:
-                  - tab "Traces" [ref=e1725] [cursor=pointer]
-                  - tab "Root Cause Analysis" [selected] [ref=e1726] [cursor=pointer]
-          - generic [ref=e1728]:
-            - generic [ref=e1729]:
-              - heading "Get fast, actionable insights & get it fixed faster" [level=3] [ref=e1730]
-              - paragraph [ref=e1731]: Quickly identify and fix errors with detailed summaries and analysis of your check runs from Rocky AI.
-              - link "Learn more" [ref=e1732] [cursor=pointer]:
+                  - generic [ref=e1689]: I'll create a Playwright browser check for your checkout flow. I pulled your 10 highest-traffic regions from analytics and configured them automatically. Created checkout-flow.spec.ts The check navigates to your product page, adds the top-selling item to cart, proceeds through checkout, and verifies the order confirmation. $ npx checkly deploy Deploying 1 new check... ✓ checkout-flow-top-item deployed to 10 regio
+              - generic [ref=e1692]:
+                - paragraph [ref=e1693]
+                - generic [ref=e1694]:
+                  - generic [ref=e1695]:
+                    - generic [ref=e1696]: Press
+                    - generic [ref=e1697]: Enter
+                    - generic [ref=e1698]: to send
+                  - button "Send" [ref=e1699] [cursor=pointer]:
+                    - img [ref=e1700]
+      - generic [ref=e1703]:
+        - generic [ref=e1704]:
+          - paragraph [ref=e1705]: Unified Reliability
+          - heading "Everything you need to catch issues before they impact your customers." [level=2] [ref=e1706]
+          - paragraph [ref=e1707]: Checkly brings together testing, monitoring, incident management, and observability in a single platform to give your team one clear signal of application health.
+        - generic [ref=e1708]:
+          - tablist "Product features" [ref=e1709]:
+            - generic [ref=e1710]:
+              - generic [ref=e1711]:
+                - generic [ref=e1712]: Detect
+                - generic [ref=e1713]:
+                  - tab "Uptime Monitoring" [ref=e1714] [cursor=pointer]
+                  - tab "Synthetic Monitoring" [ref=e1715] [cursor=pointer]
+              - generic [ref=e1716]:
+                - generic [ref=e1718]: Communicate
+                - generic [ref=e1719]:
+                  - tab "Alerts" [ref=e1720] [cursor=pointer]
+                  - tab "Status Pages" [ref=e1721] [cursor=pointer]
+              - generic [ref=e1722]:
+                - generic [ref=e1724]: Resolve
+                - generic [ref=e1725]:
+                  - tab "Traces" [ref=e1726] [cursor=pointer]
+                  - tab "Root Cause Analysis" [selected] [ref=e1727] [cursor=pointer]
+          - generic [ref=e1729]:
+            - generic [ref=e1730]:
+              - heading "Get fast, actionable insights & get it fixed faster" [level=3] [ref=e1731]
+              - paragraph [ref=e1732]: Quickly identify and fix errors with detailed summaries and analysis of your check runs from Rocky AI.
+              - link "Learn more" [ref=e1733] [cursor=pointer]:
                 - /url: /product/ai-analysis/
                 - text: Learn more
-                - img [ref=e1733]
-            - img "Get fast, actionable insights & get it fixed faster" [ref=e1740]
-      - generic [ref=e1741]:
-        - generic [ref=e1743]:
-          - heading "Let your agents own reliability." [level=2] [ref=e1744]
-          - paragraph [ref=e1745]: Connect Checkly to any AI agent or coding assistant via CLI. Create monitors, trigger runs, and fetch results, all through natural language.
-        - generic [ref=e1749]:
-          - generic [ref=e1750]:
-            - heading "CLI. TypeScript-native. Test and deploy your entire monitoring setup from a terminal, or your agent." [level=3] [ref=e1751]
-            - generic [ref=e1752]:
-              - generic [ref=e1757]: terminal
-              - generic [ref=e1759]:
-                - generic [ref=e1760]:
-                  - generic [ref=e1761]: $ npx checkly test
-                  - generic [ref=e1762]:
-                    - generic [ref=e1763]:
-                      - generic [ref=e1764]: PASS
-                      - generic [ref=e1765]: api
-                      - generic [ref=e1766]: /
-                      - generic [ref=e1767]: health-check
-                      - generic [ref=e1768]: 245ms
-                    - generic [ref=e1769]:
-                      - generic [ref=e1770]: PASS
-                      - generic [ref=e1771]: browser
-                      - generic [ref=e1772]: /
-                      - generic [ref=e1773]: checkout
-                      - generic [ref=e1774]: 1.2s
-                    - generic [ref=e1775]:
-                      - generic [ref=e1776]: PASS
-                      - generic [ref=e1777]: api
-                      - generic [ref=e1778]: /
-                      - generic [ref=e1779]: auth-endpoint
-                      - generic [ref=e1780]: 198ms
-                  - generic [ref=e1781]:
-                    - generic [ref=e1782]: 3 passed
-                    - generic [ref=e1783]: 0 failed
-                    - generic [ref=e1784]: 2 regions
-                - generic [ref=e1785]:
-                  - generic [ref=e1786]: $ npx checkly deploy
-                  - generic [ref=e1787]:
-                    - generic [ref=e1788]: ✓
-                    - generic [ref=e1789]: Deployed
-                    - generic [ref=e1790]: 12 checks
-                    - generic [ref=e1791]: to production
-            - generic [ref=e1792]:
-              - generic [ref=e1793]: checkly
-              - link "Read CLI docs" [ref=e1794] [cursor=pointer]:
+                - img [ref=e1734]
+            - img "Get fast, actionable insights & get it fixed faster" [ref=e1741]
+      - generic [ref=e1742]:
+        - generic [ref=e1744]:
+          - heading "Let your agents own reliability." [level=2] [ref=e1745]
+          - paragraph [ref=e1746]: Connect Checkly to any AI agent or coding assistant via CLI. Create monitors, trigger runs, and fetch results, all through natural language.
+        - generic [ref=e1750]:
+          - generic [ref=e1751]:
+            - heading "CLI. TypeScript-native. Test and deploy your entire monitoring setup from a terminal, or your agent." [level=3] [ref=e1752]
+            - generic [ref=e1753]:
+              - generic [ref=e1758]: terminal
+              - generic [ref=e1760]:
+                - generic [ref=e1761]:
+                  - generic [ref=e1762]: $ npx checkly test
+                  - generic [ref=e1763]:
+                    - generic [ref=e1764]:
+                      - generic [ref=e1765]: PASS
+                      - generic [ref=e1766]: api
+                      - generic [ref=e1767]: /
+                      - generic [ref=e1768]: health-check
+                      - generic [ref=e1769]: 245ms
+                    - generic [ref=e1770]:
+                      - generic [ref=e1771]: PASS
+                      - generic [ref=e1772]: browser
+                      - generic [ref=e1773]: /
+                      - generic [ref=e1774]: checkout
+                      - generic [ref=e1775]: 1.2s
+                    - generic [ref=e1776]:
+                      - generic [ref=e1777]: PASS
+                      - generic [ref=e1778]: api
+                      - generic [ref=e1779]: /
+                      - generic [ref=e1780]: auth-endpoint
+                      - generic [ref=e1781]: 198ms
+                  - generic [ref=e1782]:
+                    - generic [ref=e1783]: 3 passed
+                    - generic [ref=e1784]: 0 failed
+                    - generic [ref=e1785]: 2 regions
+                - generic [ref=e1786]:
+                  - generic [ref=e1787]: $ npx checkly deploy
+                  - generic [ref=e1788]:
+                    - generic [ref=e1789]: ✓
+                    - generic [ref=e1790]: Deployed
+                    - generic [ref=e1791]: 12 checks
+                    - generic [ref=e1792]: to production
+            - generic [ref=e1793]:
+              - generic [ref=e1794]: checkly
+              - link "Read CLI docs" [ref=e1795] [cursor=pointer]:
                 - /url: https://www.checklyhq.com/docs/cli/
                 - text: Read CLI docs
-                - img [ref=e1795]
-          - generic [ref=e1797]:
-            - 'heading "Constructs. Strongly-typed classes for every resource: ApiCheck, BrowserCheck, Dashboard, StatusPage…" [level=3] [ref=e1798]'
-            - generic [ref=e1799]:
-              - generic [ref=e1804]: checkly.config.ts
-              - generic [ref=e1807]:
-                - generic [ref=e1808]:
-                  - generic [ref=e1809]: "1"
-                  - generic [ref=e1810]: "2"
-                  - generic [ref=e1811]: "3"
-                  - generic [ref=e1812]: "4"
-                  - generic [ref=e1813]: "5"
-                  - generic [ref=e1814]: "6"
-                  - generic [ref=e1815]: "7"
-                  - generic [ref=e1816]: "8"
-                  - generic [ref=e1817]: "9"
-                - generic [ref=e1818]:
-                  - generic [ref=e1819]: "import { ApiCheck } from 'checkly/constructs'"
-                  - generic [ref=e1820]: "import { slackChannel } from './alert-channels'"
-                  - generic [ref=e1822]:
+                - img [ref=e1796]
+          - generic [ref=e1798]:
+            - 'heading "Constructs. Strongly-typed classes for every resource: ApiCheck, BrowserCheck, Dashboard, StatusPage…" [level=3] [ref=e1799]'
+            - generic [ref=e1800]:
+              - generic [ref=e1805]: checkly.config.ts
+              - generic [ref=e1808]:
+                - generic [ref=e1809]:
+                  - generic [ref=e1810]: "1"
+                  - generic [ref=e1811]: "2"
+                  - generic [ref=e1812]: "3"
+                  - generic [ref=e1813]: "4"
+                  - generic [ref=e1814]: "5"
+                  - generic [ref=e1815]: "6"
+                  - generic [ref=e1816]: "7"
+                  - generic [ref=e1817]: "8"
+                  - generic [ref=e1818]: "9"
+                - generic [ref=e1819]:
+                  - generic [ref=e1820]: "import { ApiCheck } from 'checkly/constructs'"
+                  - generic [ref=e1821]: "import { slackChannel } from './alert-channels'"
+                  - generic [ref=e1823]:
                     - text: new ApiCheck('homepage'
-                    - generic [ref=e1823]: ", {"
-                  - generic [ref=e1824]: "url: 'https://app.acme.com',"
-                  - generic [ref=e1825]: "tags: ['critical', 'api'],"
-                  - generic [ref=e1826]: "alertChannels: [slackChannel],"
-                  - generic [ref=e1827]: "})"
-            - generic [ref=e1828]:
-              - generic [ref=e1829]: checkly/constructs
-              - link "Browse all constructs" [ref=e1830] [cursor=pointer]:
+                    - generic [ref=e1824]: ", {"
+                  - generic [ref=e1825]: "url: 'https://app.acme.com',"
+                  - generic [ref=e1826]: "tags: ['critical', 'api'],"
+                  - generic [ref=e1827]: "alertChannels: [slackChannel],"
+                  - generic [ref=e1828]: "})"
+            - generic [ref=e1829]:
+              - generic [ref=e1830]: checkly/constructs
+              - link "Browse all constructs" [ref=e1831] [cursor=pointer]:
                 - /url: https://www.checklyhq.com/docs/constructs/
                 - text: Browse all constructs
-                - img [ref=e1831]
-          - generic [ref=e1833]:
-            - heading "REST API. Build custom integrations, dashboards, and automations. Everything the UI can do, the API can do." [level=3] [ref=e1834]
-            - generic [ref=e1835]:
-              - generic [ref=e1840]: api-reference
-              - generic [ref=e1842]:
-                - generic [ref=e1843]:
-                  - generic [ref=e1844]: GET
-                  - generic [ref=e1845]: /v1/checks
-                  - generic [ref=e1846]: 200 OK
-                - generic [ref=e1847]:
-                  - generic [ref=e1848]: POST
-                  - generic [ref=e1849]: /v1/checks
-                  - generic [ref=e1850]: 201 Created
-                - generic [ref=e1851]:
-                  - generic [ref=e1852]: PATCH
-                  - generic [ref=e1853]: /v1/checks/
-                  - generic [ref=e1854]: :id
-                  - generic [ref=e1855]: 200 OK
-                - generic [ref=e1856]:
-                  - generic [ref=e1857]: DELETE
-                  - generic [ref=e1858]: /v1/checks/
-                  - generic [ref=e1859]: :id
-                  - generic [ref=e1860]: "204"
-            - generic [ref=e1861]:
-              - generic [ref=e1862]: api.checklyhq.com
-              - link "Open API reference" [ref=e1863] [cursor=pointer]:
+                - img [ref=e1832]
+          - generic [ref=e1834]:
+            - heading "REST API. Build custom integrations, dashboards, and automations. Everything the UI can do, the API can do." [level=3] [ref=e1835]
+            - generic [ref=e1836]:
+              - generic [ref=e1841]: api-reference
+              - generic [ref=e1843]:
+                - generic [ref=e1844]:
+                  - generic [ref=e1845]: GET
+                  - generic [ref=e1846]: /v1/checks
+                  - generic [ref=e1847]: 200 OK
+                - generic [ref=e1848]:
+                  - generic [ref=e1849]: POST
+                  - generic [ref=e1850]: /v1/checks
+                  - generic [ref=e1851]: 201 Created
+                - generic [ref=e1852]:
+                  - generic [ref=e1853]: PATCH
+                  - generic [ref=e1854]: /v1/checks/
+                  - generic [ref=e1855]: :id
+                  - generic [ref=e1856]: 200 OK
+                - generic [ref=e1857]:
+                  - generic [ref=e1858]: DELETE
+                  - generic [ref=e1859]: /v1/checks/
+                  - generic [ref=e1860]: :id
+                  - generic [ref=e1861]: "204"
+            - generic [ref=e1862]:
+              - generic [ref=e1863]: api.checklyhq.com
+              - link "Open API reference" [ref=e1864] [cursor=pointer]:
                 - /url: https://developers.checklyhq.com/
                 - text: Open API reference
-                - img [ref=e1864]
-          - generic [ref=e1866]:
-            - heading "Agent Skills. The open-standard skills package. Claude, Cursor, and Codex all get Checkly context on demand." [level=3] [ref=e1867]
-            - generic [ref=e1868]:
-              - generic [ref=e1873]: terminal
-              - generic [ref=e1875]:
-                - generic [ref=e1876]: $ npx checkly skills install
-                - generic [ref=e1877]:
-                  - generic [ref=e1878]:
-                    - generic [ref=e1879]: ✓
-                    - generic [ref=e1880]: Claude
-                    - generic [ref=e1881]: .claude/skills/checkly/
-                  - generic [ref=e1882]:
-                    - generic [ref=e1883]: ✓
-                    - generic [ref=e1884]: Cursor
-                    - generic [ref=e1885]: .cursor/skills/checkly/
-                  - generic [ref=e1886]:
-                    - generic [ref=e1887]: ✓
-                    - generic [ref=e1888]: Codex
-                    - generic [ref=e1889]: .agents/skills/checkly/
-            - generic [ref=e1890]:
-              - generic [ref=e1891]: checkly skills
-              - link "Install skills" [ref=e1892] [cursor=pointer]:
+                - img [ref=e1865]
+          - generic [ref=e1867]:
+            - heading "Agent Skills. The open-standard skills package. Claude, Cursor, and Codex all get Checkly context on demand." [level=3] [ref=e1868]
+            - generic [ref=e1869]:
+              - generic [ref=e1874]: terminal
+              - generic [ref=e1876]:
+                - generic [ref=e1877]: $ npx checkly skills install
+                - generic [ref=e1878]:
+                  - generic [ref=e1879]:
+                    - generic [ref=e1880]: ✓
+                    - generic [ref=e1881]: Claude
+                    - generic [ref=e1882]: .claude/skills/checkly/
+                  - generic [ref=e1883]:
+                    - generic [ref=e1884]: ✓
+                    - generic [ref=e1885]: Cursor
+                    - generic [ref=e1886]: .cursor/skills/checkly/
+                  - generic [ref=e1887]:
+                    - generic [ref=e1888]: ✓
+                    - generic [ref=e1889]: Codex
+                    - generic [ref=e1890]: .agents/skills/checkly/
+            - generic [ref=e1891]:
+              - generic [ref=e1892]: checkly skills
+              - link "Install skills" [ref=e1893] [cursor=pointer]:
                 - /url: https://www.checklyhq.com/docs/agent-skills/
                 - text: Install skills
-                - img [ref=e1893]
-      - generic [ref=e1896]:
-        - generic [ref=e1898]:
-          - paragraph [ref=e1899]: Integrations
-          - heading "Integrates with your development and agentic workflow" [level=2] [ref=e1900]
-          - paragraph [ref=e1901]: Connect Checkly to your existing tools. Get alerts where your team already works and manage monitoring through your existing workflows.
-        - generic [ref=e1902]:
-          - generic [ref=e1904]:
-            - link "Slack Slack Real-time alerts in your team channels with rich context and actionable details." [ref=e1905] [cursor=pointer]:
+                - img [ref=e1894]
+      - generic [ref=e1897]:
+        - generic [ref=e1899]:
+          - paragraph [ref=e1900]: Integrations
+          - heading "Integrates with your development and agentic workflow" [level=2] [ref=e1901]
+          - paragraph [ref=e1902]: Connect Checkly to your existing tools. Get alerts where your team already works and manage monitoring through your existing workflows.
+        - generic [ref=e1903]:
+          - generic [ref=e1905]:
+            - link "Slack Slack Real-time alerts in your team channels with rich context and actionable details." [ref=e1906] [cursor=pointer]:
               - /url: /docs/integrations/alerts/slack/
-              - generic [ref=e1906]:
-                - img "Slack" [ref=e1908]
-                - heading "Slack" [level=3] [ref=e1909]
-              - paragraph [ref=e1910]: Real-time alerts in your team channels with rich context and actionable details.
-            - link "PagerDuty PagerDuty Trigger incidents and manage on-call rotations seamlessly." [ref=e1911] [cursor=pointer]:
+              - generic [ref=e1907]:
+                - img "Slack" [ref=e1909]
+                - heading "Slack" [level=3] [ref=e1910]
+              - paragraph [ref=e1911]: Real-time alerts in your team channels with rich context and actionable details.
+            - link "PagerDuty PagerDuty Trigger incidents and manage on-call rotations seamlessly." [ref=e1912] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/pagerduty/
-              - generic [ref=e1912]:
-                - img "PagerDuty" [ref=e1914]
-                - heading "PagerDuty" [level=3] [ref=e1915]
-              - paragraph [ref=e1916]: Trigger incidents and manage on-call rotations seamlessly.
-            - link "OpsGenie OpsGenie Route alerts to the right team automatically based on your escalation policies." [ref=e1917] [cursor=pointer]:
+              - generic [ref=e1913]:
+                - img "PagerDuty" [ref=e1915]
+                - heading "PagerDuty" [level=3] [ref=e1916]
+              - paragraph [ref=e1917]: Trigger incidents and manage on-call rotations seamlessly.
+            - link "OpsGenie OpsGenie Route alerts to the right team automatically based on your escalation policies." [ref=e1918] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/opsgenie/
-              - generic [ref=e1918]:
-                - img "OpsGenie" [ref=e1920]
-                - heading "OpsGenie" [level=3] [ref=e1921]
-              - paragraph [ref=e1922]: Route alerts to the right team automatically based on your escalation policies.
-            - generic [ref=e1923]:
-              - generic [ref=e1924]:
-                - img "Datadog" [ref=e1926]
-                - heading "Datadog" [level=3] [ref=e1927]
-              - paragraph [ref=e1928]: Forward metrics to your observability platform for unified dashboards.
-            - link "Grafana Grafana Visualize monitoring data in Grafana dashboards for comprehensive observability." [ref=e1929] [cursor=pointer]:
+              - generic [ref=e1919]:
+                - img "OpsGenie" [ref=e1921]
+                - heading "OpsGenie" [level=3] [ref=e1922]
+              - paragraph [ref=e1923]: Route alerts to the right team automatically based on your escalation policies.
+            - generic [ref=e1924]:
+              - generic [ref=e1925]:
+                - img "Datadog" [ref=e1927]
+                - heading "Datadog" [level=3] [ref=e1928]
+              - paragraph [ref=e1929]: Forward metrics to your observability platform for unified dashboards.
+            - link "Grafana Grafana Visualize monitoring data in Grafana dashboards for comprehensive observability." [ref=e1930] [cursor=pointer]:
               - /url: /docs/resolve/traces/export/grafana-tempo/
-              - generic [ref=e1930]:
-                - img "Grafana" [ref=e1932]
-                - heading "Grafana" [level=3] [ref=e1933]
-              - paragraph [ref=e1934]: Visualize monitoring data in Grafana dashboards for comprehensive observability.
-            - link "Discord Discord Get instant alerts in your Discord servers for real-time team notifications." [ref=e1935] [cursor=pointer]:
+              - generic [ref=e1931]:
+                - img "Grafana" [ref=e1933]
+                - heading "Grafana" [level=3] [ref=e1934]
+              - paragraph [ref=e1935]: Visualize monitoring data in Grafana dashboards for comprehensive observability.
+            - link "Discord Discord Get instant alerts in your Discord servers for real-time team notifications." [ref=e1936] [cursor=pointer]:
               - /url: /docs/integrations/alerts/discord/
-              - generic [ref=e1936]:
-                - img "Discord" [ref=e1938]
-                - heading "Discord" [level=3] [ref=e1939]
-              - paragraph [ref=e1940]: Get instant alerts in your Discord servers for real-time team notifications.
-            - link "Coralogix Coralogix Stream monitoring data to Coralogix for advanced log analytics and insights." [ref=e1941] [cursor=pointer]:
+              - generic [ref=e1937]:
+                - img "Discord" [ref=e1939]
+                - heading "Discord" [level=3] [ref=e1940]
+              - paragraph [ref=e1941]: Get instant alerts in your Discord servers for real-time team notifications.
+            - link "Coralogix Coralogix Stream monitoring data to Coralogix for advanced log analytics and insights." [ref=e1942] [cursor=pointer]:
               - /url: /docs/integrations/observability/coralogix/
-              - generic [ref=e1942]:
-                - img "Coralogix" [ref=e1944]
-                - heading "Coralogix" [level=3] [ref=e1945]
-              - paragraph [ref=e1946]: Stream monitoring data to Coralogix for advanced log analytics and insights.
-            - link "Slack Slack Real-time alerts in your team channels with rich context and actionable details." [ref=e1947] [cursor=pointer]:
+              - generic [ref=e1943]:
+                - img "Coralogix" [ref=e1945]
+                - heading "Coralogix" [level=3] [ref=e1946]
+              - paragraph [ref=e1947]: Stream monitoring data to Coralogix for advanced log analytics and insights.
+            - link "Slack Slack Real-time alerts in your team channels with rich context and actionable details." [ref=e1948] [cursor=pointer]:
               - /url: /docs/integrations/alerts/slack/
-              - generic [ref=e1948]:
-                - img "Slack" [ref=e1950]
-                - heading "Slack" [level=3] [ref=e1951]
-              - paragraph [ref=e1952]: Real-time alerts in your team channels with rich context and actionable details.
-            - link "PagerDuty PagerDuty Trigger incidents and manage on-call rotations seamlessly." [ref=e1953] [cursor=pointer]:
+              - generic [ref=e1949]:
+                - img "Slack" [ref=e1951]
+                - heading "Slack" [level=3] [ref=e1952]
+              - paragraph [ref=e1953]: Real-time alerts in your team channels with rich context and actionable details.
+            - link "PagerDuty PagerDuty Trigger incidents and manage on-call rotations seamlessly." [ref=e1954] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/pagerduty/
-              - generic [ref=e1954]:
-                - img "PagerDuty" [ref=e1956]
-                - heading "PagerDuty" [level=3] [ref=e1957]
-              - paragraph [ref=e1958]: Trigger incidents and manage on-call rotations seamlessly.
-            - link "OpsGenie OpsGenie Route alerts to the right team automatically based on your escalation policies." [ref=e1959] [cursor=pointer]:
+              - generic [ref=e1955]:
+                - img "PagerDuty" [ref=e1957]
+                - heading "PagerDuty" [level=3] [ref=e1958]
+              - paragraph [ref=e1959]: Trigger incidents and manage on-call rotations seamlessly.
+            - link "OpsGenie OpsGenie Route alerts to the right team automatically based on your escalation policies." [ref=e1960] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/opsgenie/
-              - generic [ref=e1960]:
-                - img "OpsGenie" [ref=e1962]
-                - heading "OpsGenie" [level=3] [ref=e1963]
-              - paragraph [ref=e1964]: Route alerts to the right team automatically based on your escalation policies.
-            - generic [ref=e1965]:
-              - generic [ref=e1966]:
-                - img "Datadog" [ref=e1968]
-                - heading "Datadog" [level=3] [ref=e1969]
-              - paragraph [ref=e1970]: Forward metrics to your observability platform for unified dashboards.
-            - link "Grafana Grafana Visualize monitoring data in Grafana dashboards for comprehensive observability." [ref=e1971] [cursor=pointer]:
+              - generic [ref=e1961]:
+                - img "OpsGenie" [ref=e1963]
+                - heading "OpsGenie" [level=3] [ref=e1964]
+              - paragraph [ref=e1965]: Route alerts to the right team automatically based on your escalation policies.
+            - generic [ref=e1966]:
+              - generic [ref=e1967]:
+                - img "Datadog" [ref=e1969]
+                - heading "Datadog" [level=3] [ref=e1970]
+              - paragraph [ref=e1971]: Forward metrics to your observability platform for unified dashboards.
+            - link "Grafana Grafana Visualize monitoring data in Grafana dashboards for comprehensive observability." [ref=e1972] [cursor=pointer]:
               - /url: /docs/resolve/traces/export/grafana-tempo/
-              - generic [ref=e1972]:
-                - img "Grafana" [ref=e1974]
-                - heading "Grafana" [level=3] [ref=e1975]
-              - paragraph [ref=e1976]: Visualize monitoring data in Grafana dashboards for comprehensive observability.
-            - link "Discord Discord Get instant alerts in your Discord servers for real-time team notifications." [ref=e1977] [cursor=pointer]:
+              - generic [ref=e1973]:
+                - img "Grafana" [ref=e1975]
+                - heading "Grafana" [level=3] [ref=e1976]
+              - paragraph [ref=e1977]: Visualize monitoring data in Grafana dashboards for comprehensive observability.
+            - link "Discord Discord Get instant alerts in your Discord servers for real-time team notifications." [ref=e1978] [cursor=pointer]:
               - /url: /docs/integrations/alerts/discord/
-              - generic [ref=e1978]:
-                - img "Discord" [ref=e1980]
-                - heading "Discord" [level=3] [ref=e1981]
-              - paragraph [ref=e1982]: Get instant alerts in your Discord servers for real-time team notifications.
-            - link "Coralogix Coralogix Stream monitoring data to Coralogix for advanced log analytics and insights." [ref=e1983] [cursor=pointer]:
+              - generic [ref=e1979]:
+                - img "Discord" [ref=e1981]
+                - heading "Discord" [level=3] [ref=e1982]
+              - paragraph [ref=e1983]: Get instant alerts in your Discord servers for real-time team notifications.
+            - link "Coralogix Coralogix Stream monitoring data to Coralogix for advanced log analytics and insights." [ref=e1984] [cursor=pointer]:
               - /url: /docs/integrations/observability/coralogix/
-              - generic [ref=e1984]:
-                - img "Coralogix" [ref=e1986]
-                - heading "Coralogix" [level=3] [ref=e1987]
-              - paragraph [ref=e1988]: Stream monitoring data to Coralogix for advanced log analytics and insights.
-          - generic [ref=e1990]:
-            - link "Terraform Terraform Manage your monitoring infrastructure as code with our Terraform provider." [ref=e1991] [cursor=pointer]:
+              - generic [ref=e1985]:
+                - img "Coralogix" [ref=e1987]
+                - heading "Coralogix" [level=3] [ref=e1988]
+              - paragraph [ref=e1989]: Stream monitoring data to Coralogix for advanced log analytics and insights.
+          - generic [ref=e1991]:
+            - link "Terraform Terraform Manage your monitoring infrastructure as code with our Terraform provider." [ref=e1992] [cursor=pointer]:
               - /url: /docs/integrations/iac/terraform/overview
-              - generic [ref=e1992]:
-                - img "Terraform" [ref=e1994]
-                - heading "Terraform" [level=3] [ref=e1995]
-              - paragraph [ref=e1996]: Manage your monitoring infrastructure as code with our Terraform provider.
-            - link "Honeycomb Honeycomb Send monitoring events to Honeycomb for deep observability and debugging." [ref=e1997] [cursor=pointer]:
+              - generic [ref=e1993]:
+                - img "Terraform" [ref=e1995]
+                - heading "Terraform" [level=3] [ref=e1996]
+              - paragraph [ref=e1997]: Manage your monitoring infrastructure as code with our Terraform provider.
+            - link "Honeycomb Honeycomb Send monitoring events to Honeycomb for deep observability and debugging." [ref=e1998] [cursor=pointer]:
               - /url: /docs/resolve/traces/export/honeycomb/
-              - generic [ref=e1998]:
-                - img "Honeycomb" [ref=e2000]
-                - heading "Honeycomb" [level=3] [ref=e2001]
-              - paragraph [ref=e2002]: Send monitoring events to Honeycomb for deep observability and debugging.
-            - link "Pulumi Pulumi Define monitors using your favorite programming language with Pulumi." [ref=e2003] [cursor=pointer]:
+              - generic [ref=e1999]:
+                - img "Honeycomb" [ref=e2001]
+                - heading "Honeycomb" [level=3] [ref=e2002]
+              - paragraph [ref=e2003]: Send monitoring events to Honeycomb for deep observability and debugging.
+            - link "Pulumi Pulumi Define monitors using your favorite programming language with Pulumi." [ref=e2004] [cursor=pointer]:
               - /url: /docs/integrations/iac/pulumi/overview
-              - generic [ref=e2004]:
-                - img "Pulumi" [ref=e2006]
-                - heading "Pulumi" [level=3] [ref=e2007]
-              - paragraph [ref=e2008]: Define monitors using your favorite programming language with Pulumi.
-            - link "MS Teams MS Teams Receive alerts directly in Microsoft Teams channels for seamless collaboration." [ref=e2009] [cursor=pointer]:
+              - generic [ref=e2005]:
+                - img "Pulumi" [ref=e2007]
+                - heading "Pulumi" [level=3] [ref=e2008]
+              - paragraph [ref=e2009]: Define monitors using your favorite programming language with Pulumi.
+            - link "MS Teams MS Teams Receive alerts directly in Microsoft Teams channels for seamless collaboration." [ref=e2010] [cursor=pointer]:
               - /url: /docs/integrations/alerts/msteams/
-              - generic [ref=e2010]:
-                - img "MS Teams" [ref=e2012]
-                - heading "MS Teams" [level=3] [ref=e2013]
-              - paragraph [ref=e2014]: Receive alerts directly in Microsoft Teams channels for seamless collaboration.
-            - link "FireHydrant FireHydrant Trigger incidents in FireHydrant for streamlined incident management." [ref=e2015] [cursor=pointer]:
+              - generic [ref=e2011]:
+                - img "MS Teams" [ref=e2013]
+                - heading "MS Teams" [level=3] [ref=e2014]
+              - paragraph [ref=e2015]: Receive alerts directly in Microsoft Teams channels for seamless collaboration.
+            - link "FireHydrant FireHydrant Trigger incidents in FireHydrant for streamlined incident management." [ref=e2016] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/firehydrant/
-              - generic [ref=e2016]:
-                - img "FireHydrant" [ref=e2018]
-                - heading "FireHydrant" [level=3] [ref=e2019]
-              - paragraph [ref=e2020]: Trigger incidents in FireHydrant for streamlined incident management.
-            - link "Rootly Rootly Connect to Rootly for automated incident response and resolution tracking." [ref=e2021] [cursor=pointer]:
+              - generic [ref=e2017]:
+                - img "FireHydrant" [ref=e2019]
+                - heading "FireHydrant" [level=3] [ref=e2020]
+              - paragraph [ref=e2021]: Trigger incidents in FireHydrant for streamlined incident management.
+            - link "Rootly Rootly Connect to Rootly for automated incident response and resolution tracking." [ref=e2022] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/rootly/
-              - generic [ref=e2022]:
-                - img "Rootly" [ref=e2024]
-                - heading "Rootly" [level=3] [ref=e2025]
-              - paragraph [ref=e2026]: Connect to Rootly for automated incident response and resolution tracking.
-            - link "Telegram Telegram Receive instant alerts via Telegram for mobile-first notifications." [ref=e2027] [cursor=pointer]:
+              - generic [ref=e2023]:
+                - img "Rootly" [ref=e2025]
+                - heading "Rootly" [level=3] [ref=e2026]
+              - paragraph [ref=e2027]: Connect to Rootly for automated incident response and resolution tracking.
+            - link "Telegram Telegram Receive instant alerts via Telegram for mobile-first notifications." [ref=e2028] [cursor=pointer]:
               - /url: /docs/integrations/alerts/telegram/
-              - generic [ref=e2028]:
-                - img "Telegram" [ref=e2030]
-                - heading "Telegram" [level=3] [ref=e2031]
-              - paragraph [ref=e2032]: Receive instant alerts via Telegram for mobile-first notifications.
-            - link "Terraform Terraform Manage your monitoring infrastructure as code with our Terraform provider." [ref=e2033] [cursor=pointer]:
+              - generic [ref=e2029]:
+                - img "Telegram" [ref=e2031]
+                - heading "Telegram" [level=3] [ref=e2032]
+              - paragraph [ref=e2033]: Receive instant alerts via Telegram for mobile-first notifications.
+            - link "Terraform Terraform Manage your monitoring infrastructure as code with our Terraform provider." [ref=e2034] [cursor=pointer]:
               - /url: /docs/integrations/iac/terraform/overview
-              - generic [ref=e2034]:
-                - img "Terraform" [ref=e2036]
-                - heading "Terraform" [level=3] [ref=e2037]
-              - paragraph [ref=e2038]: Manage your monitoring infrastructure as code with our Terraform provider.
-            - link "Honeycomb Honeycomb Send monitoring events to Honeycomb for deep observability and debugging." [ref=e2039] [cursor=pointer]:
+              - generic [ref=e2035]:
+                - img "Terraform" [ref=e2037]
+                - heading "Terraform" [level=3] [ref=e2038]
+              - paragraph [ref=e2039]: Manage your monitoring infrastructure as code with our Terraform provider.
+            - link "Honeycomb Honeycomb Send monitoring events to Honeycomb for deep observability and debugging." [ref=e2040] [cursor=pointer]:
               - /url: /docs/resolve/traces/export/honeycomb/
-              - generic [ref=e2040]:
-                - img "Honeycomb" [ref=e2042]
-                - heading "Honeycomb" [level=3] [ref=e2043]
-              - paragraph [ref=e2044]: Send monitoring events to Honeycomb for deep observability and debugging.
-            - link "Pulumi Pulumi Define monitors using your favorite programming language with Pulumi." [ref=e2045] [cursor=pointer]:
+              - generic [ref=e2041]:
+                - img "Honeycomb" [ref=e2043]
+                - heading "Honeycomb" [level=3] [ref=e2044]
+              - paragraph [ref=e2045]: Send monitoring events to Honeycomb for deep observability and debugging.
+            - link "Pulumi Pulumi Define monitors using your favorite programming language with Pulumi." [ref=e2046] [cursor=pointer]:
               - /url: /docs/integrations/iac/pulumi/overview
-              - generic [ref=e2046]:
-                - img "Pulumi" [ref=e2048]
-                - heading "Pulumi" [level=3] [ref=e2049]
-              - paragraph [ref=e2050]: Define monitors using your favorite programming language with Pulumi.
-            - link "MS Teams MS Teams Receive alerts directly in Microsoft Teams channels for seamless collaboration." [ref=e2051] [cursor=pointer]:
+              - generic [ref=e2047]:
+                - img "Pulumi" [ref=e2049]
+                - heading "Pulumi" [level=3] [ref=e2050]
+              - paragraph [ref=e2051]: Define monitors using your favorite programming language with Pulumi.
+            - link "MS Teams MS Teams Receive alerts directly in Microsoft Teams channels for seamless collaboration." [ref=e2052] [cursor=pointer]:
               - /url: /docs/integrations/alerts/msteams/
-              - generic [ref=e2052]:
-                - img "MS Teams" [ref=e2054]
-                - heading "MS Teams" [level=3] [ref=e2055]
-              - paragraph [ref=e2056]: Receive alerts directly in Microsoft Teams channels for seamless collaboration.
-            - link "FireHydrant FireHydrant Trigger incidents in FireHydrant for streamlined incident management." [ref=e2057] [cursor=pointer]:
+              - generic [ref=e2053]:
+                - img "MS Teams" [ref=e2055]
+                - heading "MS Teams" [level=3] [ref=e2056]
+              - paragraph [ref=e2057]: Receive alerts directly in Microsoft Teams channels for seamless collaboration.
+            - link "FireHydrant FireHydrant Trigger incidents in FireHydrant for streamlined incident management." [ref=e2058] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/firehydrant/
-              - generic [ref=e2058]:
-                - img "FireHydrant" [ref=e2060]
-                - heading "FireHydrant" [level=3] [ref=e2061]
-              - paragraph [ref=e2062]: Trigger incidents in FireHydrant for streamlined incident management.
-            - link "Rootly Rootly Connect to Rootly for automated incident response and resolution tracking." [ref=e2063] [cursor=pointer]:
+              - generic [ref=e2059]:
+                - img "FireHydrant" [ref=e2061]
+                - heading "FireHydrant" [level=3] [ref=e2062]
+              - paragraph [ref=e2063]: Trigger incidents in FireHydrant for streamlined incident management.
+            - link "Rootly Rootly Connect to Rootly for automated incident response and resolution tracking." [ref=e2064] [cursor=pointer]:
               - /url: /docs/integrations/incident-management/rootly/
-              - generic [ref=e2064]:
-                - img "Rootly" [ref=e2066]
-                - heading "Rootly" [level=3] [ref=e2067]
-              - paragraph [ref=e2068]: Connect to Rootly for automated incident response and resolution tracking.
-            - link "Telegram Telegram Receive instant alerts via Telegram for mobile-first notifications." [ref=e2069] [cursor=pointer]:
+              - generic [ref=e2065]:
+                - img "Rootly" [ref=e2067]
+                - heading "Rootly" [level=3] [ref=e2068]
+              - paragraph [ref=e2069]: Connect to Rootly for automated incident response and resolution tracking.
+            - link "Telegram Telegram Receive instant alerts via Telegram for mobile-first notifications." [ref=e2070] [cursor=pointer]:
               - /url: /docs/integrations/alerts/telegram/
-              - generic [ref=e2070]:
-                - img "Telegram" [ref=e2072]
-                - heading "Telegram" [level=3] [ref=e2073]
-              - paragraph [ref=e2074]: Receive instant alerts via Telegram for mobile-first notifications.
-      - generic [ref=e2076]:
-        - generic [ref=e2077]:
-          - generic [ref=e2078]:
-            - heading "From signup to first check in an afternoon." [level=2] [ref=e2079]:
+              - generic [ref=e2071]:
+                - img "Telegram" [ref=e2073]
+                - heading "Telegram" [level=3] [ref=e2074]
+              - paragraph [ref=e2075]: Receive instant alerts via Telegram for mobile-first notifications.
+      - generic [ref=e2077]:
+        - generic [ref=e2078]:
+          - generic [ref=e2079]:
+            - heading "From signup to first check in an afternoon." [level=2] [ref=e2080]:
               - text: From signup to first check
               - text: in an afternoon.
-            - paragraph [ref=e2080]: Install the CLI, write checks in code, and deploy monitors to 20+ regions. No lengthy setup, no infrastructure to manage.
-          - link "Start for free" [ref=e2082] [cursor=pointer]:
+            - paragraph [ref=e2081]: Install the CLI, write checks in code, and deploy monitors to 20+ regions. No lengthy setup, no infrastructure to manage.
+          - link "Start for free" [ref=e2083] [cursor=pointer]:
             - /url: https://app.checklyhq.com/signup
-        - generic [ref=e2157]:
-          - generic [ref=e2158]:
-            - paragraph [ref=e2159]: Day 1 0:00
-            - heading "Sign up" [level=3] [ref=e2160]
-            - paragraph [ref=e2161]: Create a free Checkly account with GitHub, GitLab, or email. No credit card required.
-          - generic [ref=e2162]:
-            - paragraph [ref=e2163]: Day 1 0:05
-            - heading "Install" [level=3] [ref=e2164]
-            - paragraph [ref=e2165]: Run npx checkly init to scaffold your first project and connect your repo.
-          - generic [ref=e2166]:
-            - paragraph [ref=e2167]: Day 1 0:15
-            - heading "Deploy" [level=3] [ref=e2168]
-            - paragraph [ref=e2169]: Ship checks as code and monitor your app from 20+ global regions.
-          - generic [ref=e2170]:
-            - paragraph [ref=e2171]: Ongoing
-            - heading "Improve" [level=3] [ref=e2172]
-            - paragraph [ref=e2173]: Review runs, let Rocky AI surface root causes, and your monitors get better over time.
-        - generic [ref=e2174]:
-          - button "$ npx checkly init" [ref=e2175] [cursor=pointer]:
-            - generic [ref=e2176]: $
-            - code [ref=e2177]: npx checkly init
-            - img [ref=e2179]
-          - link "Or start for free" [ref=e2182] [cursor=pointer]:
+        - generic [ref=e2158]:
+          - generic [ref=e2159]:
+            - paragraph [ref=e2160]: Day 1 0:00
+            - heading "Sign up" [level=3] [ref=e2161]
+            - paragraph [ref=e2162]: Create a free Checkly account with GitHub, GitLab, or email. No credit card required.
+          - generic [ref=e2163]:
+            - paragraph [ref=e2164]: Day 1 0:05
+            - heading "Install" [level=3] [ref=e2165]
+            - paragraph [ref=e2166]: Run npx checkly init to scaffold your first project and connect your repo.
+          - generic [ref=e2167]:
+            - paragraph [ref=e2168]: Day 1 0:15
+            - heading "Deploy" [level=3] [ref=e2169]
+            - paragraph [ref=e2170]: Ship checks as code and monitor your app from 20+ global regions.
+          - generic [ref=e2171]:
+            - paragraph [ref=e2172]: Ongoing
+            - heading "Improve" [level=3] [ref=e2173]
+            - paragraph [ref=e2174]: Review runs, let Rocky AI surface root causes, and your monitors get better over time.
+        - generic [ref=e2175]:
+          - button "$ npx checkly init" [ref=e2176] [cursor=pointer]:
+            - generic [ref=e2177]: $
+            - code [ref=e2178]: npx checkly init
+            - img [ref=e2180]
+          - link "Or start for free" [ref=e2183] [cursor=pointer]:
             - /url: https://app.checklyhq.com/signup
             - text: Or start for free
-            - img [ref=e2183]
-    - contentinfo [ref=e2185]:
-      - generic [ref=e2186]:
-        - generic [ref=e2187]:
-          - generic [ref=e2188]:
-            - generic [ref=e2189]:
-              - paragraph [ref=e2191]: Detect
-              - link "Uptime Monitoring" [ref=e2192] [cursor=pointer]:
+            - img [ref=e2184]
+    - contentinfo [ref=e2186]:
+      - generic [ref=e2187]:
+        - generic [ref=e2188]:
+          - generic [ref=e2189]:
+            - generic [ref=e2190]:
+              - paragraph [ref=e2192]: Detect
+              - link "Uptime Monitoring" [ref=e2193] [cursor=pointer]:
                 - /url: /product/uptime-monitoring/
-              - link "Synthetic Monitoring" [ref=e2193] [cursor=pointer]:
+              - link "Synthetic Monitoring" [ref=e2194] [cursor=pointer]:
                 - /url: /product/synthetic-monitoring/
-              - link "Testing" [ref=e2194] [cursor=pointer]:
+              - link "Testing" [ref=e2195] [cursor=pointer]:
                 - /url: /product/testing/
-              - link "API Monitoring" [ref=e2195] [cursor=pointer]:
+              - link "API Monitoring" [ref=e2196] [cursor=pointer]:
                 - /url: /product/api-monitoring/
-              - link "Playwright Checks" [ref=e2196] [cursor=pointer]:
+              - link "Playwright Checks" [ref=e2197] [cursor=pointer]:
                 - /url: /product/playwright-check-suites/
-            - generic [ref=e2197]:
-              - paragraph [ref=e2199]: Communicate
-              - link "Status Pages" [ref=e2200] [cursor=pointer]:
+            - generic [ref=e2198]:
+              - paragraph [ref=e2200]: Communicate
+              - link "Status Pages" [ref=e2201] [cursor=pointer]:
                 - /url: /product/status-pages/
-              - link "Alerts" [ref=e2201] [cursor=pointer]:
+              - link "Alerts" [ref=e2202] [cursor=pointer]:
                 - /url: /product/alerting/
-            - generic [ref=e2202]:
-              - paragraph [ref=e2204]: Resolve
-              - link "AI Root Cause Analysis" [ref=e2205] [cursor=pointer]:
+            - generic [ref=e2203]:
+              - paragraph [ref=e2205]: Resolve
+              - link "AI Root Cause Analysis" [ref=e2206] [cursor=pointer]:
                 - /url: /product/ai-analysis/
-              - link "Traces" [ref=e2206] [cursor=pointer]:
+              - link "Traces" [ref=e2207] [cursor=pointer]:
                 - /url: /product/traces/
-          - generic [ref=e2207]:
-            - generic [ref=e2208]:
-              - paragraph [ref=e2210]: Monitoring as Code
-              - link "What is Monitoring as Code?" [ref=e2211] [cursor=pointer]:
+          - generic [ref=e2208]:
+            - generic [ref=e2209]:
+              - paragraph [ref=e2211]: Monitoring as Code
+              - link "What is Monitoring as Code?" [ref=e2212] [cursor=pointer]:
                 - /url: /product/monitoring-as-code/
-              - link "Checkly CLI" [ref=e2212] [cursor=pointer]:
+              - link "Checkly CLI" [ref=e2213] [cursor=pointer]:
                 - /url: /cli/
-              - link "Agent Skills" [ref=e2213] [cursor=pointer]:
+              - link "Agent Skills" [ref=e2214] [cursor=pointer]:
                 - /url: /docs/ai/skills/
-              - link "Terraform Provider" [ref=e2214] [cursor=pointer]:
+              - link "Terraform Provider" [ref=e2215] [cursor=pointer]:
                 - /url: /product/terraform-provider/
-              - link "All Integrations" [ref=e2215] [cursor=pointer]:
+              - link "All Integrations" [ref=e2216] [cursor=pointer]:
                 - /url: /docs/integrations/alerts/discord/
-              - link "Pulumi Provider" [ref=e2216] [cursor=pointer]:
+              - link "Pulumi Provider" [ref=e2217] [cursor=pointer]:
                 - /url: /product/pulumi-provider/
-            - generic [ref=e2217]:
-              - paragraph [ref=e2219]: Company
-              - link "About" [ref=e2220] [cursor=pointer]:
+            - generic [ref=e2218]:
+              - paragraph [ref=e2220]: Company
+              - link "About" [ref=e2221] [cursor=pointer]:
                 - /url: /about/
-              - link "Careers" [ref=e2221] [cursor=pointer]:
+              - link "Careers" [ref=e2222] [cursor=pointer]:
                 - /url: /careers/
-              - link "Security" [ref=e2222] [cursor=pointer]:
+              - link "Security" [ref=e2223] [cursor=pointer]:
                 - /url: /security/
-              - link "Pricing" [ref=e2223] [cursor=pointer]:
+              - link "Pricing" [ref=e2224] [cursor=pointer]:
                 - /url: /pricing/
-              - link "Customers" [ref=e2224] [cursor=pointer]:
+              - link "Customers" [ref=e2225] [cursor=pointer]:
                 - /url: /customers/
-              - link "Terms of use" [ref=e2225] [cursor=pointer]:
+              - link "Terms of use" [ref=e2226] [cursor=pointer]:
                 - /url: /terms/
-              - link "Privacy" [ref=e2226] [cursor=pointer]:
+              - link "Privacy" [ref=e2227] [cursor=pointer]:
                 - /url: /privacy/
-          - generic [ref=e2227]:
-            - generic [ref=e2228]:
-              - paragraph [ref=e2230]: Developers
-              - link "Blog" [ref=e2231] [cursor=pointer]:
+          - generic [ref=e2228]:
+            - generic [ref=e2229]:
+              - paragraph [ref=e2231]: Developers
+              - link "Blog" [ref=e2232] [cursor=pointer]:
                 - /url: /blog/
-              - link "Learn" [ref=e2232] [cursor=pointer]:
+              - link "Learn" [ref=e2233] [cursor=pointer]:
                 - /url: /docs/learn/
-              - link "Webinars" [ref=e2233] [cursor=pointer]:
+              - link "Webinars" [ref=e2234] [cursor=pointer]:
                 - /url: /webinars/
-              - link "Events" [ref=e2234] [cursor=pointer]:
+              - link "Events" [ref=e2235] [cursor=pointer]:
                 - /url: /events/
-            - generic [ref=e2235]:
-              - paragraph [ref=e2237]: Resources
-              - link "Public Roadmap" [ref=e2238] [cursor=pointer]:
+            - generic [ref=e2236]:
+              - paragraph [ref=e2238]: Resources
+              - link "Public Roadmap" [ref=e2239] [cursor=pointer]:
                 - /url: https://feedback.checklyhq.com/
-              - link "Community Slack" [ref=e2239] [cursor=pointer]:
+              - link "Community Slack" [ref=e2240] [cursor=pointer]:
                 - /url: /slack/
-            - generic [ref=e2240]:
-              - paragraph [ref=e2242]: Connect
-              - link "Contact Us" [ref=e2243] [cursor=pointer]:
+            - generic [ref=e2241]:
+              - paragraph [ref=e2243]: Connect
+              - link "Contact Us" [ref=e2244] [cursor=pointer]:
                 - /url: /contact-sales/
-              - link "Support" [ref=e2244] [cursor=pointer]:
+              - link "Support" [ref=e2245] [cursor=pointer]:
                 - /url: mailto:support@checklyhq.com
-              - link "Twitter @ChecklyHQ" [ref=e2245] [cursor=pointer]:
+              - link "Twitter @ChecklyHQ" [ref=e2246] [cursor=pointer]:
                 - /url: https://twitter.com/checklyhq
-              - link "YouTube" [ref=e2246] [cursor=pointer]:
+              - link "YouTube" [ref=e2247] [cursor=pointer]:
                 - /url: https://youtube.com/checklyhq
-              - link "LinkedIn" [ref=e2247] [cursor=pointer]:
+              - link "LinkedIn" [ref=e2248] [cursor=pointer]:
                 - /url: https://linkedin.com/company/checkly
-          - generic [ref=e2248]:
-            - generic [ref=e2249]:
-              - paragraph [ref=e2251]: Community
-              - link "About" [ref=e2252] [cursor=pointer]:
+          - generic [ref=e2249]:
+            - generic [ref=e2250]:
+              - paragraph [ref=e2252]: Community
+              - link "About" [ref=e2253] [cursor=pointer]:
                 - /url: /about/
-              - link "Careers" [ref=e2253] [cursor=pointer]:
+              - link "Careers" [ref=e2254] [cursor=pointer]:
                 - /url: /careers/
-            - generic [ref=e2254]:
-              - paragraph [ref=e2256]: How we compare
-              - link "Alternative to Datadog" [ref=e2257] [cursor=pointer]:
+            - generic [ref=e2255]:
+              - paragraph [ref=e2257]: How we compare
+              - link "Alternative to Datadog" [ref=e2258] [cursor=pointer]:
                 - /url: /datadog-alternative/
-              - link "Alternative to New Relic" [ref=e2258] [cursor=pointer]:
+              - link "Alternative to New Relic" [ref=e2259] [cursor=pointer]:
                 - /url: /new-relic-alternative/
-              - link "Alternative to Dynatrace" [ref=e2259] [cursor=pointer]:
+              - link "Alternative to Dynatrace" [ref=e2260] [cursor=pointer]:
                 - /url: /dynatrace-alternative/
-              - link "Alternative to Pingdom" [ref=e2260] [cursor=pointer]:
+              - link "Alternative to Pingdom" [ref=e2261] [cursor=pointer]:
                 - /url: /alternative-pingdom/
-              - link "Alternative to Runscope" [ref=e2261] [cursor=pointer]:
+              - link "Alternative to Runscope" [ref=e2262] [cursor=pointer]:
                 - /url: /alternative-runscope/
-            - generic [ref=e2262]:
-              - paragraph [ref=e2264]: Articles
-              - link "What is Synthetic Monitoring?" [ref=e2265] [cursor=pointer]:
+            - generic [ref=e2263]:
+              - paragraph [ref=e2265]: Articles
+              - link "What is Synthetic Monitoring?" [ref=e2266] [cursor=pointer]:
                 - /url: /learn/monitoring/synthetic-monitoring/
-              - link "What is API monitoring?" [ref=e2266] [cursor=pointer]:
+              - link "What is API monitoring?" [ref=e2267] [cursor=pointer]:
                 - /url: /learn/monitoring/api-monitoring/
-              - link "What is Playwright?" [ref=e2267] [cursor=pointer]:
+              - link "What is Playwright?" [ref=e2268] [cursor=pointer]:
                 - /url: /learn/playwright/what-is-playwright/
-              - link "A guide to Monitoring as Code" [ref=e2268] [cursor=pointer]:
+              - link "A guide to Monitoring as Code" [ref=e2269] [cursor=pointer]:
                 - /url: /learn/monitoring/monitoring-as-code/
-              - link "Playwright vs other frameworks" [ref=e2269] [cursor=pointer]:
+              - link "Playwright vs other frameworks" [ref=e2270] [cursor=pointer]:
                 - /url: /learn/playwright/playwright-vs-others/
-        - generic [ref=e2270]:
-          - generic [ref=e2271]:
-            - generic [ref=e2272]:
-              - link "Hi!" [ref=e2273] [cursor=pointer]:
+        - generic [ref=e2271]:
+          - generic [ref=e2272]:
+            - generic [ref=e2273]:
+              - link "Hi!" [ref=e2274] [cursor=pointer]:
                 - /url: /
-                - img [ref=e2274]
-              - link "Available in AWS Marketplace" [ref=e2279] [cursor=pointer]:
+                - img [ref=e2275]
+              - link "Available in AWS Marketplace" [ref=e2280] [cursor=pointer]:
                 - /url: https://aws.amazon.com/marketplace/pp/prodview-cntlyhi5si6ka?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
-                - img "Available in AWS Marketplace" [ref=e2280]
-            - generic [ref=e2281]:
-              - link "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2282] [cursor=pointer]:
+                - img "Available in AWS Marketplace" [ref=e2281]
+            - generic [ref=e2282]:
+              - link "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2283] [cursor=pointer]:
                 - /url: /checkly-and-monitoring-as-code-mac-earn-third-gartner/
-                - img "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2283]
-              - link "SOC Certification" [ref=e2284] [cursor=pointer]:
+                - img "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2284]
+              - link "SOC Certification" [ref=e2285] [cursor=pointer]:
                 - /url: /security/
-                - img "SOC Certification" [ref=e2285]
-          - generic [ref=e2286]: Copyright © 2026 Checkly Inc. All rights reserved.
-  - alert [ref=e2287]
+                - img "SOC Certification" [ref=e2286]
+          - generic [ref=e2287]: Copyright © 2026 Checkly Inc. All rights reserved.
+  - alert [ref=e2288]
 ```
 
 # Test source

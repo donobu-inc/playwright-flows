@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-07-08T12:43:13.550Z",
+  "plan": {
+    "failureSummary": "The deterministic cache attempted to click a non-existent element: a button with text 'Select your occupation' under an ID matching '#:rl:-form-item'. The live screenshot reveals that the current page structure has changed and no longer contains this occupation dropdown field on this step of the form, causing a locator mismatch.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "DETERMINISTIC mode cache hit on an old page layout",
+      "Selector failed during deterministic step execution",
+      "Visual mismatch between cached expected elements and live page state"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page AI Cache and Retry",
+        "details": "Delete the local cache file for the test to force page.ai to execute in live mode rather than deterministic cached mode. This allows the AI agent to dynamically locate and fill the correct current form fields."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The test uses DETERMINISTIC runMode (cached execution). The cached step expected a combobox dropdown for 'Select your occupation'. However, looking at the live failure screenshot, the active form screen has fields like 'Email Address', 'Age Group' (radio buttons), 'How did you hear about us?' (checkboxes), and 'Additional Comments' (textarea), but no occupation dropdown. Clearing the Page AI cache and running with fresh AI reasoning will allow the autonomous agent to see the updated/current layout and successfully navigate the form.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 22957,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-08T12-38-39-086Z-91974d29",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-08T12-38-39-086Z-91974d29",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-08T12-38-39-086Z-91974d29/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-354fc922-f6df-43d4-8ee1-ef7363646b88.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

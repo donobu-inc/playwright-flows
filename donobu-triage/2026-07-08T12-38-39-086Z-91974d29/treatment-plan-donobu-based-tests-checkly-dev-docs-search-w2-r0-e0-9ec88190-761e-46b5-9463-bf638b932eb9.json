@@ -1,0 +1,53 @@
+{
+  "generatedAtIso": "2026-07-08T12:42:57.996Z",
+  "plan": {
+    "failureSummary": "The cached selectors for navigating the 'Resources' dropdown to reach the 'Documentation' page failed. The live page structure or dropdown behavior on checklyhq.com has changed, making the cached element selector 'li:nth-of-type(1) > [href=\\\"/docs/\\\"]' obsolete or unreachable under the currently rendered DOM structure.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "staleCacheIndicators.usedDeterministicMode",
+      "staleCacheIndicators.selectorFailedDuringPageAi"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.ai Cache and Retry Flow",
+        "details": "Clear the Donobu page.ai cache and trigger a retry. This will allow the autonomous agent to re-inspect the live DOM of the 'Resources' dropdown on checklyhq.com and find the correct new link/selector for 'Documentation' ('/docs/')."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "By looking at the live failure screenshot, the 'Resources' dropdown header was successfully hovered/clicked, but the dropdown menu itself is either not rendered/visible or the underlying list elements have changed their structures or href attributes. Clearing the Page.ai cache will force the agent to re-discover the new selectors for 'Documentation' under 'Resources'.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 11949,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-08T12-38-39-086Z-91974d29",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-08T12-38-39-086Z-91974d29",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-08T12-38-39-086Z-91974d29/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-9ec88190-761e-46b5-9463-bf638b932eb9.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
