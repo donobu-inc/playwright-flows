@@ -6,12 +6,12 @@ by the AI web agent.
 
 ## Setup
 
-1. `npm install`
-2. `npx playwright install`
+1. `pnpm install`
+2. `pnpm exec playwright install`
 
 ## Running
 
-`OPENAI_API_KEY=<YOUR_KEY> npm run test`
+`OPENAI_API_KEY=<YOUR_KEY> pnpm run test`
 
 Note that the underlying GPT client used (if necessary) will be dynamically set based on the environment variable provided.
 Supported environment variables/platforms are:

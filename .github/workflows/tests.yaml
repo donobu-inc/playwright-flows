@@ -17,13 +17,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node
         uses: actions/setup-node@v6
+        with:
+          cache: pnpm
 
       - name: Install Dependencies
         env:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
-        run: npm ci && npx playwright install --with-deps
+        run: pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps
 
       - name: Run Playwright Tests
         id: run_tests
@@ -32,7 +37,7 @@ jobs:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
           DONOBU_SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           DONOBU_REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        run: npx donobu test --auto-heal
+        run: pnpm exec donobu test --auto-heal
 
       - name: Save Test Reports as Artifacts
         uses: actions/upload-artifact@v6
