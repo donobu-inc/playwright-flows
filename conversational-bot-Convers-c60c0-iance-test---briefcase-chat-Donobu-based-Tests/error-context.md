@@ -19,7 +19,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The briefcase.chat legal chatbot requires a user to enter their own personal OpenAI API Key in the settings or upgrade to a paid subscription plan to actually generate responses to messages. Since an external API key is required and not provided in the environment, the objective of evaluating the chatbot's compliance with topic-related questions cannot be completed."
+  "rationale": "The chatbot interface does not yield any response (the message area remains blank and inactive), and it requires users to either purchase a Pro Plan or input a personal OpenAI API Key to properly handle chatbot queries. Since no valid API key or payment method is provided for this task, we cannot evaluate the chatbot's compliance with topic restrictions or its response accuracy."
 }
 ```
 
@@ -45,7 +45,7 @@ Result payload:
               - generic:
                 - generic:
                   - generic:
-                    - generic: What is the difference between...
+                    - generic: What is a non-disclosure agree...
                   - generic:
                     - button:
                       - img
@@ -60,9 +60,9 @@ Result payload:
             - generic:
               - generic:
                 - generic:
-                  - paragraph: What is the difference between a patent and a trademark?
+                  - paragraph: What is a non-disclosure agreement (NDA) and when should a startup use one?
               - generic:
-                - generic: E
+                - generic: T
       - generic:
         - paragraph:
           - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
