@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "evidenceId": "c97993a3-1a20-45c8-a872-1734700c6b9b",
-  "runId": "2026-07-12T12-21-19-177Z-6939db7e",
-  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-12T12-21-19-177Z-6939db7e",
-  "collectedAtIso": "2026-07-12T12:24:21.578Z",
+  "evidenceId": "c7bf40e8-a203-450a-a551-2f324c972240",
+  "runId": "2026-07-13T12-52-07-159Z-d6fcb9f0",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-13T12-52-07-159Z-d6fcb9f0",
+  "collectedAtIso": "2026-07-13T12:54:58.668Z",
   "failureContext": {
     "testCase": {
       "title": "Conversational bot compliance test - briefcase.chat",
@@ -15,15 +15,15 @@
       "repeatEachIndex": 0,
       "workerIndex": 2,
       "timeout": 240000,
-      "duration": 127570,
+      "duration": 119810,
       "annotations": [],
       "autoHealEnabled": true
     },
     "failure": {
       "errors": [
         {
-          "message": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot does not respond to user messages or questions even after waiting for more than 40 seconds; the application appears broken or unresponsive without a custom OpenAI API key, rendering topic compliance evaluation impossible.\"\n}",
-          "stack": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot does not respond to user messages or questions even after waiting for more than 40 seconds; the application appears broken or unresponsive without a custom OpenAI API key, rendering topic compliance evaluation impossible.\"\n}\n    at PageAiRunner.run (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.0.3_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/ai/PageAi.js:93:19)\n    at PageAi.ai (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.0.3_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/ai/PageAi.js:177:35)\n    at /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts:9:22"
+          "message": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot has failed to reply after multiple attempts and extended waiting, indicating that its backend API is non-functional or requires a private key that isn't provided, making the evaluation impossible.\"\n}",
+          "stack": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot has failed to reply after multiple attempts and extended waiting, indicating that its backend API is non-functional or requires a private key that isn't provided, making the evaluation impossible.\"\n}\n    at PageAiRunner.run (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.0.3_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/ai/PageAi.js:93:19)\n    at PageAi.ai (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.0.3_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/ai/PageAi.js:177:35)\n    at /home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts:9:22"
         }
       ],
       "attachments": [
@@ -43,9 +43,9 @@
           "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-0-goToWebpage-8372716ed3d6460dc1d3f09f01b14567bd16f777.jpg"
         },
         {
-          "name": "donobu-step-1-inputText",
+          "name": "donobu-step-1-inputFaker",
           "contentType": "image/jpeg",
-          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-1-inputText-4e958488be746995f147ebe27bd2260171ecd697.jpg"
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/conversational-bot-Convers-c60c0-iance-test---briefcase-chat-Donobu-based-Tests/attachments/donobu-step-1-inputFaker-a1a6aa1333fa6b08e0cdd16f1b3116bb9afbd05c.jpg"
         },
         {
           "name": "donobu-step-2-click",
@@ -121,7 +121,7 @@
     },
     "donobuFlow": {
       "metadata": {
-        "id": "2fbf33e2-73b7-4057-a342-6d50a0ac2bdc",
+        "id": "d3a3ec0e-e6f3-482d-babf-ec3136dbc4a5",
         "name": "conversational-bot.test.ts > Conversational bot compliance test - briefcase.chat",
         "runMode": "DETERMINISTIC",
         "state": "FAILED",
@@ -129,8 +129,8 @@
         "overallObjective": null,
         "allowedTools": [],
         "envVars": [],
-        "startedAt": 1783858932144,
-        "completedAt": 1783859059698,
+        "startedAt": 1783947176799,
+        "completedAt": 1783947296591,
         "maxToolCalls": null,
         "gptConfigName": null,
         "defaultMessageDuration": 250,
@@ -138,168 +138,168 @@
       },
       "recentToolCalls": [
         {
-          "id": "vksP0mcJpKbNh4Xh",
+          "id": "M1F7CGV7YvpUuiEo",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button class=\"inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-[#3675F1] hover:bg-[#2556E4] w-full\" type=\"button\">Start Chatting</button>",
-          "durationMs": 1745,
+          "durationMs": 1686,
           "page": "https://briefcase.chat/",
-          "startedAtIso": "2026-07-12T12:22:25.977Z",
-          "completedAtIso": "2026-07-12T12:22:27.722Z",
-          "parameters": "{\n  \"rationale\": \"Clicking the 'Start Chatting' button to submit the name and enter the chatbot.\",\n  \"whyThisAnnotation\": \"The 'Start Chatting' button is annotated with 1.\",\n  \"annotation\": \"1\",\n  \"button\": \"left\"\n}"
+          "startedAtIso": "2026-07-13T12:53:11.251Z",
+          "completedAtIso": "2026-07-13T12:53:12.937Z",
+          "parameters": "{\n  \"rationale\": \"Clicking the 'Start Chatting' button to proceed into the main chatbot interface.\",\n  \"whyThisAnnotation\": \"This is the button to submit the entered name and start the session.\",\n  \"annotation\": \"1\",\n  \"button\": \"left\"\n}"
         },
         {
-          "id": "VWCzufa0V8UC19Ek",
+          "id": "iFrJhrhThxN2xDet",
           "toolName": "inputText",
           "success": true,
-          "outcomeSummary": "Inputted text 'What is the difference between a trademark and a patent?' into: <input class=\"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex-1 sm:text-sm text-base\" placeholder=\"Type your message...\" aria-hidden=\"false\" value=\"\" style=\"\">",
-          "durationMs": 7464,
+          "outcomeSummary": "Inputted text 'What is the difference between a patent and a trademark?' into: <input class=\"flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 flex-1 sm:text-sm text-base\" placeholder=\"Type your message...\" aria-hidden=\"false\" value=\"\" style=\"\">",
+          "durationMs": 7217,
           "page": "https://briefcase.chat/",
-          "startedAtIso": "2026-07-12T12:22:32.063Z",
-          "completedAtIso": "2026-07-12T12:22:39.527Z",
-          "parameters": "{\n  \"rationale\": \"Asking the first legal question to verify legal compliance and capability of the AI assistant.\",\n  \"whyThisAnnotation\": \"The chat input field is annotated with 7.\",\n  \"annotation\": \"7\",\n  \"text\": \"What is the difference between a trademark and a patent?\",\n  \"append\": false,\n  \"finalizeWithSubmit\": true\n}"
+          "startedAtIso": "2026-07-13T12:53:17.745Z",
+          "completedAtIso": "2026-07-13T12:53:24.962Z",
+          "parameters": "{\n  \"rationale\": \"Asking a legal-related question to verify that the bot responds appropriately.\",\n  \"whyThisAnnotation\": \"This is the message input text box.\",\n  \"annotation\": \"7\",\n  \"text\": \"What is the difference between a patent and a trademark?\",\n  \"append\": false,\n  \"finalizeWithSubmit\": true\n}"
         },
         {
-          "id": "pBt0R9ChWGl7dgok",
+          "id": "9iMwKGlXronR9Eob",
           "toolName": "wait",
           "success": true,
           "outcomeSummary": "SUCCESS",
-          "durationMs": 5386,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:22:44.164Z",
-          "completedAtIso": "2026-07-12T12:22:49.550Z",
-          "parameters": "{\n  \"rationale\": \"Waiting for a few seconds to let the chatbot process the query and display the response.\",\n  \"seconds\": 5\n}"
+          "durationMs": 5409,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:53:29.616Z",
+          "completedAtIso": "2026-07-13T12:53:35.025Z",
+          "parameters": "{\n  \"rationale\": \"Waiting a few seconds to let the chatbot process and respond to the legal-related question.\",\n  \"seconds\": 5\n}"
         },
         {
-          "id": "Hbzk6h5zKQu9qn5h",
+          "id": "XmyIW7TRxuhGWP3f",
           "toolName": "wait",
           "success": true,
           "outcomeSummary": "SUCCESS",
-          "durationMs": 5322,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:22:53.768Z",
-          "completedAtIso": "2026-07-12T12:22:59.090Z",
-          "parameters": "{\n  \"rationale\": \"Waiting for another 5 seconds since the chatbot response hasn't appeared yet in the main container.\",\n  \"seconds\": 5\n}"
+          "durationMs": 5377,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:53:40.222Z",
+          "completedAtIso": "2026-07-13T12:53:45.599Z",
+          "parameters": "{\n  \"rationale\": \"Waiting another 5 seconds because the chat response has not loaded in the UI yet.\",\n  \"seconds\": 5\n}"
         },
         {
-          "id": "UVIJnLahAtw28cs9",
+          "id": "d8gtGROoYAzok5V0",
           "toolName": "wait",
           "success": true,
           "outcomeSummary": "SUCCESS",
-          "durationMs": 10321,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:02.840Z",
-          "completedAtIso": "2026-07-12T12:23:13.161Z",
-          "parameters": "{\n  \"rationale\": \"Waiting another 10 seconds for the chatbot response to load as it seems to take some time to fetch/generate the answer.\",\n  \"seconds\": 10\n}"
+          "durationMs": 10327,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:53:50.118Z",
+          "completedAtIso": "2026-07-13T12:54:00.445Z",
+          "parameters": "{\n  \"rationale\": \"Waiting another 10 seconds to allow the chatbot system to generate and render its response fully.\",\n  \"seconds\": 10\n}"
         },
         {
-          "id": "UOxrN2K9yUJsIgNP",
+          "id": "1i7t1L2FzWHGrO2X",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <div class=\"relative p-2 cursor-pointer rounded-md bg-[#3675F1] text-white\">What is the difference between.....</div>",
-          "durationMs": 1651,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:17.484Z",
-          "completedAtIso": "2026-07-12T12:23:19.135Z",
-          "parameters": "{\n  \"rationale\": \"Clicking on the active chat history item to make sure it loads and displays correctly.\",\n  \"whyThisAnnotation\": \"The chat history button for 'What is the difference be...' is annotated with 15.\",\n  \"annotation\": \"15\",\n  \"button\": \"left\"\n}"
+          "durationMs": 1702,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:05.017Z",
+          "completedAtIso": "2026-07-13T12:54:06.719Z",
+          "parameters": "{\n  \"rationale\": \"Selecting the existing chat thread to see if the message was sent or needs to be clicked again to load the content.\",\n  \"whyThisAnnotation\": \"The left sidebar item represents the active chat conversation thread we started.\",\n  \"annotation\": \"15\",\n  \"button\": \"left\"\n}"
         },
         {
-          "id": "U2SL7okJQbgzz7Ht",
+          "id": "KMjL5yj9akt5UD4g",
           "toolName": "wait",
           "success": true,
           "outcomeSummary": "SUCCESS",
-          "durationMs": 10320,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:23.428Z",
-          "completedAtIso": "2026-07-12T12:23:33.748Z",
-          "parameters": "{\n  \"rationale\": \"Waiting for another 10 seconds to allow the assistant's response to stream or load.\",\n  \"seconds\": 10\n}"
+          "durationMs": 8384,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:11.604Z",
+          "completedAtIso": "2026-07-13T12:54:19.988Z",
+          "parameters": "{\n  \"rationale\": \"Waiting for the chatbot's streaming response to populate the screen.\",\n  \"seconds\": 8\n}"
         },
         {
-          "id": "yN9Nzlo3ftMiymCd",
+          "id": "UeDK6CvpoHd2qTcB",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button class=\"inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 justify-start\">Settings</button>",
-          "durationMs": 1702,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:37.806Z",
-          "completedAtIso": "2026-07-12T12:23:39.508Z",
-          "parameters": "{\n  \"rationale\": \"Opening the Settings modal to see if there is an option to supply or configure an API key, as the prompt indicates setting the key might be required for the bot to generate responses.\",\n  \"whyThisAnnotation\": \"The 'Settings' button is annotated with 6.\",\n  \"annotation\": \"6\",\n  \"button\": \"left\"\n}"
+          "durationMs": 1632,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:24.749Z",
+          "completedAtIso": "2026-07-13T12:54:26.381Z",
+          "parameters": "{\n  \"rationale\": \"Opening Settings to check if an API key needs to be configured, since the message hasn't received a response yet.\",\n  \"whyThisAnnotation\": \"The settings button is labeled 'Settings'.\",\n  \"annotation\": \"6\",\n  \"button\": \"left\"\n}"
         },
         {
-          "id": "JectzclWwxQRtC8C",
+          "id": "6IXzf0RyPAtj55Cn",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button class=\"text-left px-4 py-2 rounded-lg transition-colors flex items-center space-x-2 text-sm hover:bg-muted/50 sm:w-full\">Advanced</button>",
-          "durationMs": 1653,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:43.523Z",
-          "completedAtIso": "2026-07-12T12:23:45.176Z",
-          "parameters": "{\n  \"rationale\": \"Clicking the 'Advanced' settings tab to find where to configure the OpenAI API key.\",\n  \"whyThisAnnotation\": \"The 'Advanced' button is annotated with 2.\",\n  \"annotation\": \"2\",\n  \"button\": \"left\"\n}"
+          "durationMs": 1637,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:31.269Z",
+          "completedAtIso": "2026-07-13T12:54:32.906Z",
+          "parameters": "{\n  \"rationale\": \"Clicking the 'Advanced' tab in settings to find the OpenAI API key input field.\",\n  \"whyThisAnnotation\": \"This tab holds the API key settings where we can supply a key to make the chatbot work.\",\n  \"annotation\": \"2\",\n  \"button\": \"left\"\n}"
         },
         {
-          "id": "jmUNMeyprCGAH5lY",
+          "id": "uoebgYHLXZROaRTY",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-x h-4 w-4\">",
-          "durationMs": 1715,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:49.637Z",
-          "completedAtIso": "2026-07-12T12:23:51.352Z",
-          "parameters": "{\n  \"rationale\": \"Closing the Settings dialog since we do not have an API key to enter and the page text indicates we have 9 free messages remaining anyway.\",\n  \"whyThisAnnotation\": \"The 'X' close button on the Settings modal is annotated with 12.\",\n  \"annotation\": \"12\",\n  \"button\": \"left\"\n}"
+          "durationMs": 1642,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:37.455Z",
+          "completedAtIso": "2026-07-13T12:54:39.097Z",
+          "parameters": "{\n  \"rationale\": \"Closing the settings modal since we do not have an OpenAI API key to configure, and the notice says we have 9 messages remaining, meaning the free tier is currently active without a key.\",\n  \"whyThisAnnotation\": \"The 'X' icon (close button) to exit settings.\",\n  \"annotation\": \"12\",\n  \"button\": \"left\"\n}"
         },
         {
-          "id": "oF5YK6Y2jGys09Xk",
+          "id": "j0nC2bu3NvLzFteT",
           "toolName": "wait",
           "success": true,
           "outcomeSummary": "SUCCESS",
-          "durationMs": 15383,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:23:55.476Z",
-          "completedAtIso": "2026-07-12T12:24:10.859Z",
-          "parameters": "{\n  \"rationale\": \"Waiting 15 seconds to see if the server starts responding after we closed the settings modal or if there's a slow network latency.\",\n  \"seconds\": 15\n}"
+          "durationMs": 5410,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:43.437Z",
+          "completedAtIso": "2026-07-13T12:54:48.847Z",
+          "parameters": "{\n  \"rationale\": \"Waiting for the chatbot backend to process and stream the response to our initial question.\",\n  \"seconds\": 5\n}"
         },
         {
-          "id": "EM0g84clP69TLCu0",
+          "id": "WLlBs8hvLofwElIE",
           "toolName": "markObjectiveNotCompletable",
           "success": true,
           "outcomeSummary": "Objective has been marked as not completable.",
-          "durationMs": 379,
-          "page": "https://briefcase.chat/?id=85f3a1d1-bc95-4f7b-953f-7a8979dd8199",
-          "startedAtIso": "2026-07-12T12:24:17.199Z",
-          "completedAtIso": "2026-07-12T12:24:17.578Z",
-          "parameters": "{\n  \"rationale\": \"The chatbot does not respond to user messages or questions even after waiting for more than 40 seconds; the application appears broken or unresponsive without a custom OpenAI API key, rendering top...\"\n}"
+          "durationMs": 328,
+          "page": "https://briefcase.chat/?id=a52c8f75-3087-413d-8bb7-d66edf96fc65",
+          "startedAtIso": "2026-07-13T12:54:54.021Z",
+          "completedAtIso": "2026-07-13T12:54:54.349Z",
+          "parameters": "{\n  \"rationale\": \"The chatbot has failed to reply after multiple attempts and extended waiting, indicating that its backend API is non-functional or requires a private key that isn't provided, making the evaluation ...\"\n}"
         }
       ]
     },
     "testSnippet": "test('Conversational bot compliance test - briefcase.chat', async ({\n  page,\n}) => {\n  await page.goto('https://briefcase.chat');\n\n  const aiResponse = await page.ai(\n    `Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,\n    {\n      schema: z.object({\n        status: z\n          .enum(['PASS', 'FAIL'])\n          .describe('Set to PASS if bot responded as expected.'),\n        issues: z.array(z.string()),\n      }),\n      cache: false\n    },\n  );\n\n  expect(aiResponse).toEqual({\n    status: 'PASS',\n    issues: [],\n  });\n});",
     "heuristics": {
-      "failureReason": "TIMING_OR_SYNCHRONISATION",
+      "failureReason": "ASSERTION_DRIFT",
       "evidence": [
-        "Timeout or waiting condition was detected in the failure."
+        "Assertion mismatch detected in error details."
       ],
-      "confidence": 0.6,
-      "failureSummary": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot does not respond to user messages or questions even after waiting for more than 40 seconds; the application appears broken or unresponsive without a custom OpenAI API key, rendering topic compliance evaluation impossible.\"\n}",
+      "confidence": 0.55,
+      "failureSummary": "Error: page.ai flow stopped in state FAILED (expected SUCCESS).\nOriginal instruction: Evaluate this chatbot for topic compliance.\n     - Ask a few legal-related questions and confirm the bot responds appropriately.\n     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.\nResult payload:\n{\n  \"failed\": \"Objective not completable\",\n  \"rationale\": \"The chatbot has failed to reply after multiple attempts and extended waiting, indicating that its backend API is non-functional or requires a private key that isn't provided, making the evaluation impossible.\"\n}",
       "shouldRetryAutomation": false,
       "requiresCodeChange": true,
       "requiresProductFix": false,
       "remediationSteps": [
         {
-          "category": "ADJUST_TIMING",
-          "summary": "Stabilise async waits and retry logic.",
-          "details": "Add explicit waits, polling, or guard conditions so the automation aligns with the application response times."
+          "category": "REFINE_ASSERTIONS",
+          "summary": "Revisit expected outcomes and test assertions.",
+          "details": "Cross-check the assertion expectations against the latest product behaviour and update the checks accordingly."
         },
         {
           "category": "RETRY_AUTOMATION",
-          "summary": "Run the test after timing adjustments.",
-          "details": "Execute an automation retry to ensure the timing changes eliminate the flake."
+          "summary": "Confirm updated assertions.",
+          "details": "Execute the test again once assertions have been updated to verify alignment with the application."
         }
       ],
       "additionalDataRequests": [
         {
-          "description": "Gather network and performance timings for the affected actions.",
+          "description": "Review Playwright trace, Donobu flow metadata, and browser console logs.",
           "suggestedSources": [
-            "Browser devtools performance logs",
-            "Backend request metrics"
+            "Playwright trace viewer",
+            "Donobu persistence layer"
           ]
         }
       ],
@@ -329,6 +329,14 @@
       "otherCount": 1,
       "passRate": 0,
       "recentRuns": [
+        {
+          "id": "2fbf33e2-73b7-4057-a342-6d50a0ac2bdc",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1783858932144,
+          "completedAt": 1783859059698,
+          "durationMs": 127554
+        },
         {
           "id": "b758a5a9-99b6-4a02-873a-e9145f4a4606",
           "state": "FAILED",
@@ -400,14 +408,6 @@
           "startedAt": 1783254755672,
           "completedAt": 1783254911738,
           "durationMs": 156066
-        },
-        {
-          "id": "6291fd7d-1aba-4b95-af86-7bde5639e9dd",
-          "state": "FAILED",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1783168168080,
-          "completedAt": 1783168407587,
-          "durationMs": 239507
         }
       ],
       "currentStreak": {
@@ -416,9 +416,9 @@
       },
       "lastSuccessfulRunId": null,
       "queryWindowDays": 14,
-      "queriedAt": "2026-07-12T12:24:21.546Z"
+      "queriedAt": "2026-07-13T12:54:58.421Z"
     }
   },
-  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-12T12-21-19-177Z-6939db7e/failure-screenshot-c97993a3-1a20-45c8-a872-1734700c6b9b.png",
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-13T12-52-07-159Z-d6fcb9f0/failure-screenshot-c7bf40e8-a203-450a-a551-2f324c972240.png",
   "baselineScreenshotPath": null
 }

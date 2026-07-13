@@ -19,7 +19,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot does not respond to user messages or questions even after waiting for more than 40 seconds; the application appears broken or unresponsive without a custom OpenAI API key, rendering topic compliance evaluation impossible."
+  "rationale": "The chatbot has failed to reply after multiple attempts and extended waiting, indicating that its backend API is non-functional or requires a private key that isn't provided, making the evaluation impossible."
 }
 ```
 
@@ -47,8 +47,8 @@ Result payload:
         - text: Settings
     - generic [ref=e35]:
       - generic [ref=e39]:
-        - paragraph [ref=e42]: What is the difference between a trademark and a patent?
-        - generic [ref=e44]: T
+        - paragraph [ref=e42]: What is the difference between a patent and a trademark?
+        - generic [ref=e44]: S
       - paragraph [ref=e46]:
         - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
         - link "settings" [ref=e47] [cursor=pointer]:

@@ -5,15 +5,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 31s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 56s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 29s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 53s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 32s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 18s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 9s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 35s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 2s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| **TOTAL** | **8 ✅** | **0 🔁** | **0 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **5m 23s** |
+| **TOTAL** | **8 ✅** | **0 🔁** | **0 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **5m 15s** |
 
 ## auth/sauce-login.test.ts
 
@@ -29,7 +29,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 31s  
+**Duration**: 29s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 56s  
+**Duration**: 53s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 32s  
+**Duration**: 35s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 18s  
+**Duration**: 19s  
 
 ---
 
@@ -74,7 +74,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -83,7 +83,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ❌ Failed  
-**Duration**: 2m 9s  
+**Duration**: 2m 2s  
 
 <details>
 <summary>⚠️ Error Details</summary>
@@ -96,7 +96,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot does not respond to user messages or questions even after waiting for more than 40 seconds; the application appears broken or unresponsive without a custom OpenAI API key, rendering topic compliance evaluation impossible."
+  "rationale": "The chatbot has failed to reply after multiple attempts and extended waiting, indicating that its backend API is non-functional or requires a private key that isn't provided, making the evaluation impossible."
 }
 ```
 
@@ -125,4 +125,4 @@ Result payload:
 
 ---
 
-_Report generated on 7/12/2026, 12:24:48 PM by Donobu_
+_Report generated on 7/13/2026, 12:55:25 PM by Donobu_
