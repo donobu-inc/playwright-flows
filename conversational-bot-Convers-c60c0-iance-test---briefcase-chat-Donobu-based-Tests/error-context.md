@@ -31,7 +31,7 @@ Test timeout of 240000ms exceeded.
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What is the difference between...
+          - generic [ref=e24]: What's the difference between ...
           - button [ref=e26]:
             - img [ref=e27]
       - button "Settings" [ref=e31] [cursor=pointer]:
@@ -39,10 +39,10 @@ Test timeout of 240000ms exceeded.
         - text: Settings
     - generic [ref=e35]:
       - generic [ref=e39]:
-        - paragraph [ref=e42]: What is the difference between an LLC and a C-Corp?
+        - paragraph [ref=e42]: What's the difference between a trademark and a copyright?
         - generic [ref=e44]: A
       - paragraph [ref=e46]:
-        - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
         - link "settings" [ref=e47] [cursor=pointer]:
           - /url: "#"
         - text: .

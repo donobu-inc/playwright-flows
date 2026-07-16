@@ -1,0 +1,95 @@
+{
+  "generatedAtIso": "2026-07-16T12:43:08.789Z",
+  "plan": {
+    "failureSummary": "The deterministic (cached) Donobu flow for \"Fill out a survey\" failed at step 4 when attempting to click a radio button for age range 25-34 using the cached selector `[data-testid='radio-age-25-34']` (and fallback CSS selectors). The click resolver could not find any matching element on the page, causing the click execution to fail with \"Unable to resolve HTML element to operate with.\" The failure screenshot shows the survey page still on step 1 (\"Tell us about yourself\") with Name and Email filled in, followed by an \"Occupation\" dropdown and a \"What interests you?\" checkbox section — there is no visible age-range radio group matching the cached selector in the current DOM structure. This indicates the survey page has changed (field order, field naming, or the age-selection UI itself) since the selector was cached, or the age-radio field appears further down the page/on a later step than the cache expects.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.62,
+    "observedIndicators": [
+      "Deterministic (cached) run mode was used (runMode: DETERMINISTIC, usedDeterministicMode=true)",
+      "Click step failed on a highly specific cached selector: [data-testid='radio-age-25-34'] plus nth-of-type fallbacks",
+      "Failure occurred during a tool call, not mid-page.ai improvisation, meaning the cache directed a specific selector that no longer resolves",
+      "Failure screenshot shows current form fields as Name, Email, Occupation (dropdown), and 'What interests you?' (checkboxes) — no age radio group visible in this viewport, suggesting field order/structure differs from what the cache expects",
+      "Historical data shows a strong SUCCESS streak (10 consecutive DETERMINISTIC successes) immediately prior to this failure, indicating a recent regression/change rather than a chronic flaky selector",
+      "cacheWasRecentlyValid=true per heuristics, reinforcing that this selector previously worked and now doesn't",
+      "This is not marked as a retry attempt (isRetryAttempt=false), so cache has not yet been invalidated and retried"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear the Donobu page.ai cache and retry the flow with fresh autonomous execution.",
+        "details": "Since the overall test objective ('Fill out all of the survey questions with fake data go through the submission process until you get to a Thank You page') is semantically flexible and adaptable to structural changes, blow away the cached deterministic script (.cache-lock/unstable-survey.test.ts.cache.js) and re-run in autonomous/exploratory mode so page.ai can re-discover the correct selectors for the age-range field given the current DOM."
+      },
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "If retry with fresh cache still fails, manually inspect the survey form's current DOM for the age-range question.",
+        "details": "Load https://unstable-survey-dinoer.replit.app in a browser, complete Name/Email/Occupation/Interests, and inspect how the age-range question is rendered (radio group, its data-testid values, and its position relative to other fields) to confirm whether the field was renamed, restructured (e.g., changed from radix radio group to a different component), or moved to a later step."
+      },
+      {
+        "category": "VALIDATE_AUTHENTICATION",
+        "summary": "Not applicable — no authentication involved in this flow.",
+        "details": "No login or session steps present in this flow; skip auth validation."
+      },
+      {
+        "category": "CHECK_ENVIRONMENT",
+        "summary": "Confirm target site version/build is stable and not mid-deployment.",
+        "details": "The app name 'unstable-survey-dinoer.replit.app' suggests this may be an intentionally flaky/demo environment; check with the app owner whether a recent deploy altered the survey form's age-selection UI."
+      }
+    ],
+    "additionalDataRequests": [
+      {
+        "description": "Full DOM snapshot or HTML source of the survey form's 'Tell us about yourself' step to confirm current structure of the age-range question (radio group markup, data-testid attributes, position in form).",
+        "suggestedSources": [
+          "Playwright trace viewer DOM snapshot",
+          "Browser devtools inspection of https://unstable-survey-dinoer.replit.app"
+        ]
+      },
+      {
+        "description": "The Donobu cache file contents (.cache-lock/unstable-survey.test.ts.cache.js) to see the exact sequence of cached selectors used across the whole flow and confirm which step the age-radio click corresponds to.",
+        "suggestedSources": [
+          "Repository file tests/.cache-lock/unstable-survey.test.ts.cache.js"
+        ]
+      },
+      {
+        "description": "Confirm whether this specific failure (age-radio selector) has occurred in the 5 historical failures within the 14-day window, to determine if this is a recurring regression vs a one-off.",
+        "suggestedSources": [
+          "Donobu flow run history/logs for flow id 61f2fe9d-b2ea-4137-bf9e-c82186483655"
+        ]
+      }
+    ],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "This is an ambiguous case sitting between stale-cache and legitimate selector regression. Key evidence: runMode was DETERMINISTIC (cache active), the failure occurred as a direct tool-call failure (selector could not resolve) rather than after a successful page.ai completion with wrong-element interaction, and historical data shows 10 consecutive successful DETERMINISTIC runs immediately before this failure — strongly suggesting the underlying page structure changed recently (regression) rather than chronic flakiness (recentPassRate 0.74 over 19 runs, but the streak data is more telling: sudden switch from long SUCCESS streak to FAILURE). Given selectorFailedDuringPageAi=false and failedAfterPageAiCompleted=false in the heuristics block, this looks like a straightforward cached-selector-no-longer-resolves scenario (quick, clean click failure) rather than the harder 'succeeded on wrong element' ambiguous case. However, since isRetryAttempt=false and the overall test objective is a broad, semantically flexible instruction ('fill out all the survey questions with fake data... until Thank You page'), the lowest-cost and highest-value first action is to invalidate the cache and let page.ai freshly determine the correct age-selection interaction, rather than assuming APPLICATION_DEFECT. If a fresh run also fails on the same field, that would elevate confidence toward a genuine UI regression requiring manual selector inspection or possibly an application defect if the age-selection control is broken/unclickable in the live app.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": [
+        "--retries=1"
+      ]
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 24672,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-16T12-37-20-298Z-d494d840",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-16T12-37-20-298Z-d494d840",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-16T12-37-20-298Z-d494d840/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-96df2660-a759-4311-bda6-ca185baa7b66.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
