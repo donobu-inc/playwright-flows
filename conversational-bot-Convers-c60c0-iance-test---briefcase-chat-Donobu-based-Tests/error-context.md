@@ -12,52 +12,154 @@
 # Error details
 
 ```
-Test timeout of 240000ms exceeded.
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The evaluation of the chatbot is impossible to complete because sending messages requires either upgrading to a paid subscription or providing a personal OpenAI API Key, which I do not have access to or permission to use."
+}
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [ref=e1]:
-  - generic [ref=e2]:
-    - generic [ref=e4]:
-      - generic [ref=e5]:
-        - generic [ref=e6]:
-          - button "Close sidebar" [ref=e7] [cursor=pointer]:
-            - img [ref=e8]
-          - heading "Briefcase" [level=1] [ref=e11]
-        - button "New chat" [ref=e13] [cursor=pointer]:
-          - img [ref=e14]
-      - generic [ref=e19]:
-        - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What's the difference between ...
-          - button [ref=e26]:
-            - img [ref=e27]
-      - button "Settings" [ref=e31] [cursor=pointer]:
-        - img [ref=e32]
-        - text: Settings
-    - generic [ref=e35]:
-      - generic [ref=e39]:
-        - paragraph [ref=e42]: What's the difference between a trademark and a copyright?
-        - generic [ref=e44]: A
-      - paragraph [ref=e46]:
-        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e47] [cursor=pointer]:
-          - /url: "#"
-        - text: .
-      - generic [ref=e48]:
-        - generic [ref=e50]:
-          - textbox "Type your message..." [active] [ref=e51]
-          - button [ref=e52] [cursor=pointer]:
-            - img [ref=e53]
-          - button [disabled]:
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - button:
+              - img
+            - heading [level=1]: Briefcase
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - heading [level=2]: Today
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: What is a SAFE agreement, and ...
+                  - generic:
+                    - button:
+                      - img
+        - generic:
+          - button:
             - img
-        - generic [ref=e55]:
+            - text: Settings
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: What is a SAFE agreement, and how does it differ from a convertible note?
+              - generic:
+                - generic: E
+      - generic:
+        - paragraph:
+          - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+          - link:
+            - /url: "#"
+            - text: settings
+          - text: .
+      - generic:
+        - generic:
+          - generic:
+            - textbox:
+              - /placeholder: Type your message...
+            - button:
+              - img
+            - button [disabled]:
+              - img
+        - generic:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e56] [cursor=pointer]:
-            - img [ref=e57]
-  - region "Notifications (F8)":
-    - list
-  - alert [ref=e59]
+          - button:
+            - img
+  - list
+  - alert
+  - dialog "Settings" [active] [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Settings" [level=2] [ref=e4]
+      - paragraph [ref=e5]: Update your information below
+    - generic [ref=e7]:
+      - navigation [ref=e8]:
+        - button "General" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - generic [ref=e13]: General
+        - button "Advanced" [ref=e14] [cursor=pointer]:
+          - img [ref=e15]
+          - generic [ref=e16]: Advanced
+      - generic [ref=e18]:
+        - generic [ref=e19]: Briefcase has a limit of 10 messages per user. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key.
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: Email
+            - button [ref=e23] [cursor=pointer]:
+              - img [ref=e24]
+          - generic [ref=e26]:
+            - textbox "Enter your email" [ref=e27]
+            - button "Upgrade" [disabled]
+          - paragraph [ref=e29]:
+            - link "Already have a subscription?" [ref=e30] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: OpenAI API Key
+            - button [ref=e34] [cursor=pointer]:
+              - img [ref=e35]
+          - generic [ref=e37]:
+            - textbox "OpenAI API Key" [ref=e38]:
+              - /placeholder: Enter your OpenAI API Key
+            - button "Apply" [disabled]
+        - generic [ref=e39]:
+          - generic [ref=e40]: Conversation History
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: Delete all conversations and messages. This action cannot be undone.
+            - button "Delete" [ref=e43] [cursor=pointer]
+    - button "Close" [ref=e44] [cursor=pointer]:
+      - img [ref=e45]
+      - generic [ref=e48]: Close
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@donobu/test';
+  2  | import { z } from 'zod/v4';
+  3  | 
+  4  | test('Conversational bot compliance test - briefcase.chat', async ({
+  5  |   page,
+  6  | }) => {
+  7  |   await page.goto('https://briefcase.chat');
+  8  | 
+> 9  |   const aiResponse = await page.ai(
+     |                      ^ Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+  13 |     {
+  14 |       schema: z.object({
+  15 |         status: z
+  16 |           .enum(['PASS', 'FAIL'])
+  17 |           .describe('Set to PASS if bot responded as expected.'),
+  18 |         issues: z.array(z.string()),
+  19 |       }),
+  20 |       cache: false
+  21 |     },
+  22 |   );
+  23 | 
+  24 |   expect(aiResponse).toEqual({
+  25 |     status: 'PASS',
+  26 |     issues: [],
+  27 |   });
+  28 | });
+  29 | 
 ```
