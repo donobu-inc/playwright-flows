@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 14s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 15s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 30s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 57s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 10s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 32s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 56s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 28s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts | 1 ✅ |  |  |  |  |  |  | 3m 18s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 22s |
-| **TOTAL** | **8 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 39s** |
+| conversational-bot.test.ts | 1 ✅ |  |  |  |  |  |  | 2m 14s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
+| **TOTAL** | **8 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 29s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 15s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 57s  
+**Duration**: 56s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 10s  
+**Duration**: 9s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 32s  
+**Duration**: 1m 28s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
@@ -87,7 +87,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ✅ Passed  
-**Duration**: 3m 18s  
+**Duration**: 2m 14s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 22s  
+**Duration**: 21s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 7/20/2026, 12:51:53 PM by Donobu_
+_Report generated on 7/21/2026, 12:41:13 PM by Donobu_
