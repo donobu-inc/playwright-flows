@@ -34,7 +34,28 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Entering a fake last name to start filling out the survey form.
+        // I am filling in the fake name to complete the survey form as part of the overall objective.
+        await page
+          .find(
+            ".//label[normalize-space()='Your Name *']/following-sibling::input",
+            { failover: ["[name='name']", "[placeholder='Enter your name']"] },
+          )
+          .inputFaker('person.fullName');
+
+        // I am entering a fake but valid-looking email address to complete the contact email field for the survey objective.
+        await page
+          .find(
+            ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+            {
+              failover: [
+                "[name='email']",
+                "[placeholder='Enter your contact email']",
+              ],
+            },
+          )
+          .inputRandomizedEmailAddress('example@gmail.com');
+
+        // I am entering a fake last name to continue filling out the survey as required by the overall objective.
         await page
           .find("[data-testid='input-lastname']", {
             failover: [
@@ -44,7 +65,7 @@ module.exports = {
           })
           .inputFaker('person.lastName');
 
-        // Entering a fake email address to satisfy the required field.
+        // I am providing a fake but valid-looking email address to complete the email field for the survey objective.
         await page
           .find(
             ".//label[normalize-space()='Email Address *']/following-sibling::input",
@@ -55,9 +76,9 @@ module.exports = {
               ],
             },
           )
-          .inputFaker('internet.email');
+          .inputRandomizedEmailAddress('surveyuser@gmail.com');
 
-        // Selecting an age group (25-34) from the radio button options.
+        // I am selecting an age group option to complete the required age group question in the survey.
         await page
           .find("[data-testid='radio-age-25-34']", {
             failover: [
@@ -67,10 +88,17 @@ module.exports = {
           })
           .click('left');
 
-        // Scrolling down to see the remaining survey questions on the page.
-        await page.find('html').scroll('DOWN', { maxScroll: true });
+        // I am scrolling down the main page to find the Next or Submit button so I can continue the survey process toward the Thank You page.
+        await page.find('html').scroll('DOWN');
 
-        // Selecting 'Social Media' under 'How did you hear about us?'.
+        // I am clicking the Next button to move to the next step of the survey and progress toward reaching the Thank You page.
+        await page
+          .find(".//button[normalize-space(.)='Next']", {
+            failover: ['button.inline-flex', 'div.mt-8 > button'],
+          })
+          .click('left');
+
+        // I am selecting at least one option for how the user heard about us to satisfy the required survey question and proceed toward the Thank You page.
         await page
           .find("div:nth-of-type(1) > [role='checkbox']", {
             failover: [
@@ -80,14 +108,24 @@ module.exports = {
           })
           .click('left');
 
-        // Clicking the 'Next' button to submit this step of the survey.
+        // I am selecting another option for how the user heard about us to ensure the required question is completed so we can continue the survey toward the Thank You page.
+        await page
+          .find("div:nth-of-type(2) > [role='checkbox']", {
+            failover: [
+              "div:nth-of-type(2) > [data-state='unchecked']",
+              'div:nth-of-type(2) > button.peer',
+            ],
+          })
+          .click('left');
+
+        // I am clicking the Next button to submit this page of the survey and move toward the Thank You page as required by the overall objective.
         await page
           .find(".//button[normalize-space(.)='Next']", {
             failover: ['button.inline-flex', 'div.mt-8 > button'],
           })
           .click('left');
 
-        // Clicking the 'Submit' button to complete the survey and reach the 'Thank You' page.
+        // I am clicking the Submit button to finalize the survey and move to the Thank You page, completing the overall objective.
         await page
           .find(".//button[normalize-space(.)='Submit']", {
             failover: [
@@ -97,10 +135,10 @@ module.exports = {
           })
           .click('left');
 
-        // The survey has been successfully submitted and the 'Thank You' page is displayed, matching our overall objective.
+        // I am marking the objective complete because the survey has been filled with fake data, submitted, and the Thank You page is now displayed, fulfilling the overall objective.
         await page.run('markObjectiveComplete', {
           details:
-            "Successfully completed all survey steps with fake data and reached the 'Thank You' confirmation page.",
+            'Completed all survey steps with fake data, submitted the form, and reached the Thank You page at https://unstable-survey-dinoer.replit.app/thank-you.',
         });
       },
     },
