@@ -1,0 +1,102 @@
+{
+  "generatedAtIso": "2026-07-22T12:40:31.767Z",
+  "plan": {
+    "failureSummary": "Donobu click on age radio option failed: target selector(s) no longer resolve on the Selection step, leaving the survey incomplete and URL not advanced to /thank-you.",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.78,
+    "observedIndicators": [
+      "Click tool call failed with 'Unable to resolve HTML element to operate with.'",
+      "Failed selector candidates: [data-testid='radio-age-25-34'], div:nth-of-type(2) > [role='radio'], div:nth-of-type(2) > [data-radix-collection-item=''].",
+      "Failure screenshot shows the form on step 1/Survey with name and email filled but no age selection; baseline screenshot shows final Thank You page.",
+      "Recent history: high pass rate (~0.84) with intermittent failures, suggesting occasional UI/selector instability rather than systemic application defect.",
+      "Run mode is DETERMINISTIC with no indication of a stale cache assertion pattern; failure occurred directly in a Donobu click tool, not after successful completion of the flow.",
+      "Other Donobu selectors for text inputs resolved successfully in this run, indicating page loaded correctly and environment is healthy."
+    ],
+    "remediationSteps": [
+      {
+        "category": "UPDATE_SELECTORS",
+        "summary": "Update Donobu smart selector for the age radio option.",
+        "details": "Inspect the current DOM for the age/selection step and adjust the selector list used by the failing click tool. Prefer a stable attribute such as data-testid or an accessible role/name that actually exists, and remove brittle nth-of-type fallbacks that no longer match."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Harden the autonomous flow around survey progression.",
+        "details": "Ensure the PageAi instructions and Donobu tools cover all required fields and navigation actions (e.g., proceed to Selection step, choose an age option, click Next/Submit). Consider adding an explicit step to wait for and verify the Selection step content before clicking radio options."
+      },
+      {
+        "category": "ADJUST_TIMING",
+        "summary": "Introduce appropriate waits for the Selection step content.",
+        "details": "If the Selection step is rendered dynamically, add waits for the radio group container or a distinctive heading before attempting the click, to avoid transient not-found errors when elements are still mounting."
+      },
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Re-run the flow after selector and timing fixes.",
+        "details": "Once selectors are updated and any necessary waits are in place, re-run the deterministic Donobu/PageAi flow to confirm it reliably reaches the /thank-you URL across multiple runs."
+      },
+      {
+        "category": "ESCALATE_MANUAL_REVIEW",
+        "summary": "Visually compare the selection UI vs. past successful DOM.",
+        "details": "If selector updates do not resolve the failure, have a human review DOM snapshots or Playwright traces from both successful and failing runs to spot any subtle layout or component changes affecting the radio control structure."
+      }
+    ],
+    "additionalDataRequests": [
+      {
+        "description": "DOM snapshot or Playwright trace around the failing click on the age radio element.",
+        "suggestedSources": [
+          "Playwright trace viewer",
+          "Donobu DOM capture, if enabled"
+        ]
+      },
+      {
+        "description": "Current HTML markup for the age/selection radio group, including attributes and roles.",
+        "suggestedSources": [
+          "Live application in a browser inspector",
+          "Saved HTML from CI run"
+        ]
+      },
+      {
+        "description": "Logs or telemetry from other recent failures of this flow to see if different selectors or steps fail.",
+        "suggestedSources": [
+          "CI logs for the same test file",
+          "Donobu flow history with tool-level error metadata"
+        ]
+      }
+    ],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The deterministic Donobu run failed during a click on a specific radio option because none of the configured selector variants resolved to an element. Screenshots confirm the page is otherwise healthy and on the survey form, implying the UI changed in a way that invalidated the cached selector for that radio control. Given historical intermittent failures but overall high pass rate, this is best addressed as a selector/automation robustness issue rather than an application defect. A simple rerun without selector updates is unlikely to systematically fix the issue.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": [
+        "--project=Donobu-based Tests",
+        "tests/unstable-survey.test.ts"
+      ]
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 23021,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-22T12-36-06-214Z-3ceab8e4",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-22T12-36-06-214Z-3ceab8e4",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-22T12-36-06-214Z-3ceab8e4/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-d16a04a9-1c12-4afd-8380-542b6bc354c8.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

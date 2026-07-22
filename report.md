@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 15s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 30s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 31s |
 | account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 56s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 28s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 27s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts | 1 ✅ |  |  |  |  |  |  | 2m 14s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **8 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 29s** |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
+| conversational-bot.test.ts | 1 ✅ |  |  |  |  |  |  | 2m 55s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| **TOTAL** | **8 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 6s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 15s  
+**Duration**: 13s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 30s  
+**Duration**: 31s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 28s  
+**Duration**: 27s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 11s  
 
 ---
 
@@ -87,7 +87,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ✅ Passed  
-**Duration**: 2m 14s  
+**Duration**: 2m 55s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 20s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 7/21/2026, 12:41:13 PM by Donobu_
+_Report generated on 7/22/2026, 12:41:02 PM by Donobu_

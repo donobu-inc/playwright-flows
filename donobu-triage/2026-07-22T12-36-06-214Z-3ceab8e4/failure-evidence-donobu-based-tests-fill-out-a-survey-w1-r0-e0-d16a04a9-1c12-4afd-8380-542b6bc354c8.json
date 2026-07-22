@@ -1,9 +1,9 @@
 {
   "schemaVersion": 2,
-  "evidenceId": "cbbd9534-d576-4a90-8042-2f81fab39a19",
-  "runId": "2026-07-21T12-35-54-310Z-6c305199",
-  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-21T12-35-54-310Z-6c305199",
-  "collectedAtIso": "2026-07-21T12:37:31.629Z",
+  "evidenceId": "d16a04a9-1c12-4afd-8380-542b6bc354c8",
+  "runId": "2026-07-22T12-36-06-214Z-3ceab8e4",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-22T12-36-06-214Z-3ceab8e4",
+  "collectedAtIso": "2026-07-22T12:37:43.618Z",
   "failureContext": {
     "testCase": {
       "title": "Fill out a survey",
@@ -15,7 +15,7 @@
       "repeatEachIndex": 0,
       "workerIndex": 1,
       "timeout": 240000,
-      "duration": 23691,
+      "duration": 23021,
       "annotations": [],
       "autoHealEnabled": true
     },
@@ -71,7 +71,7 @@
     },
     "donobuFlow": {
       "metadata": {
-        "id": "1faaf779-b8b3-4627-b012-f6c4bbd04e9b",
+        "id": "089a7a8c-e354-4b1f-b024-280498427a5c",
         "name": "unstable-survey.test.ts > Fill out a survey",
         "runMode": "DETERMINISTIC",
         "state": "FAILED",
@@ -79,8 +79,8 @@
         "overallObjective": null,
         "allowedTools": [],
         "envVars": [],
-        "startedAt": 1784637425596,
-        "completedAt": 1784637449246,
+        "startedAt": 1784723838080,
+        "completedAt": 1784723861054,
         "maxToolCalls": null,
         "gptConfigName": null,
         "defaultMessageDuration": 250,
@@ -88,47 +88,47 @@
       },
       "recentToolCalls": [
         {
-          "id": "adhoc_b6c5ac68fe75463b8825d8f346d8166e",
+          "id": "adhoc_3ba4e10f305e4d009c294cfd28b721b3",
           "toolName": "goToWebpage",
           "success": true,
           "outcomeSummary": "Successfully navigated to https://unstable-survey-dinoer.replit.app",
-          "durationMs": 7162,
+          "durationMs": 7182,
           "page": "https://unstable-survey-dinoer.replit.app",
-          "startedAtIso": "2026-07-21T12:37:06.935Z",
-          "completedAtIso": "2026-07-21T12:37:14.097Z",
+          "startedAtIso": "2026-07-22T12:37:19.544Z",
+          "completedAtIso": "2026-07-22T12:37:26.726Z",
           "parameters": "{\n  \"url\": \"https://unstable-survey-dinoer.replit.app\"\n}"
         },
         {
-          "id": "adhoc_e6ff84381f794f7b99add98124ce3045",
+          "id": "adhoc_f4f26f5d2c9e455596e26d58f6430ca7",
           "toolName": "inputFaker",
           "success": true,
-          "outcomeSummary": "Inputted generated value 'Carter' into: <label class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\" for=\":rj:-form-item\">Your Name *</label>",
-          "durationMs": 4175,
+          "outcomeSummary": "Inputted generated value 'Marvin' into: <label class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\" for=\":rj:-form-item\">Your Name *</label>",
+          "durationMs": 4185,
           "page": "https://unstable-survey-dinoer.replit.app/",
-          "startedAtIso": "2026-07-21T12:37:14.478Z",
-          "completedAtIso": "2026-07-21T12:37:18.653Z",
+          "startedAtIso": "2026-07-22T12:37:27.058Z",
+          "completedAtIso": "2026-07-22T12:37:31.243Z",
           "parameters": "{\n  \"dataType\": \"person.lastName\",\n  \"finalizeWithSubmit\": false,\n  \"selector\": {\n    \"element\": [\n      \"[data-testid='input-lastname']\",\n      \".//label[normalize-space()='Last Name *']/following-sibling::input\",\n      \"[name='name']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_9f2ed4f60f2f45a69a102338ee9f0683",
+          "id": "adhoc_c41cbd401ec949058177f5e072332a32",
           "toolName": "inputFaker",
           "success": true,
-          "outcomeSummary": "Inputted generated value 'Lynda_Hagenes12@yahoo.com' into: <label class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\" for=\":rk:-form-item\">Contact Email *</label>",
-          "durationMs": 6099,
+          "outcomeSummary": "Inputted generated value 'Colleen65@yahoo.com' into: <label class=\"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70\" for=\":rk:-form-item\">Contact Email *</label>",
+          "durationMs": 5580,
           "page": "https://unstable-survey-dinoer.replit.app/",
-          "startedAtIso": "2026-07-21T12:37:19.337Z",
-          "completedAtIso": "2026-07-21T12:37:25.436Z",
+          "startedAtIso": "2026-07-22T12:37:31.844Z",
+          "completedAtIso": "2026-07-22T12:37:37.424Z",
           "parameters": "{\n  \"dataType\": \"internet.email\",\n  \"finalizeWithSubmit\": false,\n  \"selector\": {\n    \"element\": [\n      \".//label[normalize-space()='Email Address *']/following-sibling::input\",\n      \"[name='email']\",\n      \"[placeholder='Enter your email address']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_40d17a6987094c3f993a484b08c62093",
+          "id": "adhoc_a7b6c40edcae492a8c10cec65bcd3c12",
           "toolName": "click",
           "success": false,
           "outcomeSummary": "FAILED! Unable to resolve HTML element to operate with.",
-          "durationMs": 2448,
+          "durationMs": 2354,
           "page": "https://unstable-survey-dinoer.replit.app/",
-          "startedAtIso": "2026-07-21T12:37:26.141Z",
-          "completedAtIso": "2026-07-21T12:37:28.589Z",
+          "startedAtIso": "2026-07-22T12:37:38.085Z",
+          "completedAtIso": "2026-07-22T12:37:40.439Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"[data-testid='radio-age-25-34']\",\n      \"div:nth-of-type(2) > [role='radio']\",\n      \"div:nth-of-type(2) > [data-radix-collection-item='']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         }
       ]
@@ -178,7 +178,7 @@
         "assertionsFailedAfterSuccessfulPageAi": false
       },
       "historicalSignals": {
-        "flakinessScore": 0.4444444444444444,
+        "flakinessScore": 0.6666666666666666,
         "regressionLikelihood": 0,
         "recentPassRate": 0.8421052631578947,
         "priorSelfHealSuccess": true,
@@ -193,6 +193,22 @@
       "otherCount": 0,
       "passRate": 0.8421052631578947,
       "recentRuns": [
+        {
+          "id": "b848e813-4012-47b4-865d-d52c8b923dd7",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1784637584807,
+          "completedAt": 1784637671753,
+          "durationMs": 86946
+        },
+        {
+          "id": "1faaf779-b8b3-4627-b012-f6c4bbd04e9b",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1784637425596,
+          "completedAt": 1784637449246,
+          "durationMs": 23650
+        },
         {
           "id": "03b6d0cd-299b-4a6a-9357-2be5b2a7fbb3",
           "state": "SUCCESS",
@@ -256,33 +272,17 @@
           "startedAt": 1784118800312,
           "completedAt": 1784118831908,
           "durationMs": 31596
-        },
-        {
-          "id": "27e0e189-ebb1-414a-90cc-5f78c61c119a",
-          "state": "SUCCESS",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1784032319174,
-          "completedAt": 1784032349453,
-          "durationMs": 30279
-        },
-        {
-          "id": "7e0691f8-6b3e-4698-b499-701f82052dca",
-          "state": "SUCCESS",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1783947194510,
-          "completedAt": 1783947228040,
-          "durationMs": 33530
         }
       ],
       "currentStreak": {
         "state": "SUCCESS",
         "length": 1
       },
-      "lastSuccessfulRunId": "03b6d0cd-299b-4a6a-9357-2be5b2a7fbb3",
+      "lastSuccessfulRunId": "b848e813-4012-47b4-865d-d52c8b923dd7",
       "queryWindowDays": 14,
-      "queriedAt": "2026-07-21T12:37:31.014Z"
+      "queriedAt": "2026-07-22T12:37:43.014Z"
     }
   },
-  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-21T12-35-54-310Z-6c305199/failure-screenshot-cbbd9534-d576-4a90-8042-2f81fab39a19.png",
-  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-21T12-35-54-310Z-6c305199/baseline-screenshot-cbbd9534-d576-4a90-8042-2f81fab39a19.png"
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-22T12-36-06-214Z-3ceab8e4/failure-screenshot-d16a04a9-1c12-4afd-8380-542b6bc354c8.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-22T12-36-06-214Z-3ceab8e4/baseline-screenshot-d16a04a9-1c12-4afd-8380-542b6bc354c8.png"
 }
