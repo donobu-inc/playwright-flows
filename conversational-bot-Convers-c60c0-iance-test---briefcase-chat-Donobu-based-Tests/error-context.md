@@ -36,7 +36,7 @@ Test timeout of 240000ms exceeded.
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
+            - generic [ref=e32]: What are the key elements requ...
             - button [ref=e34]:
               - img [ref=e35]
       - button "Settings" [ref=e39] [cursor=pointer]:
@@ -44,7 +44,7 @@ Test timeout of 240000ms exceeded.
         - text: Settings
     - generic [ref=e43]:
       - generic [ref=e47]:
-        - paragraph [ref=e50]: What is the difference between a trademark and a copyright?
+        - paragraph [ref=e50]: What are the key elements required for a legally binding contract?
         - generic [ref=e52]: A
       - paragraph [ref=e54]:
         - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
@@ -53,7 +53,7 @@ Test timeout of 240000ms exceeded.
         - text: .
       - generic [ref=e56]:
         - generic [ref=e58]:
-          - textbox "Type your message..." [active] [ref=e59]: What is a contract?
+          - textbox "Type your message..." [active] [ref=e59]: How do I bake chocolate chip cookies?
           - button [ref=e60] [cursor=pointer]:
             - img [ref=e61]
           - button [disabled]:

@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 14s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 33s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 49s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 24s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 31s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 56s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 10s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 28s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
 | conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 10s** |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 13s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 13s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 33s  
+**Duration**: 31s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 49s  
+**Duration**: 56s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 10s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 24s  
+**Duration**: 1m 28s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 20s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 11s  
 
 ---
 
@@ -96,7 +96,7 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 19s  
 
 ---
 
@@ -104,4 +104,4 @@
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 7/23/2026, 12:43:16 PM by Donobu_
+_Report generated on 7/24/2026, 12:41:15 PM by Donobu_
