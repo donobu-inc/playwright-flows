@@ -8,14 +8,14 @@
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
 | checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 31s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 56s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 10s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 28s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 53s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 37s |
 | wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 11s |
-| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 13s** |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 1s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| **TOTAL** | **8 ✅** | **0 🔁** | **0 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 22s** |
 
 ## auth/sauce-login.test.ts
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 56s  
+**Duration**: 53s  
 
 ---
 
@@ -49,7 +49,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 10s  
+**Duration**: 9s  
 
 ---
 
@@ -57,10 +57,8 @@
 
 ### Fill out a survey
 
-**Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 28s  
-> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
-
+**Status**: ✅ Passed  
+**Duration**: 37s  
 
 ---
 
@@ -78,7 +76,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -86,8 +84,41 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❌ Failed  
+**Duration**: 3m 1s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 4
+
+  Object {
+-   "issues": Array [],
+-   "status": "PASS",
++   "issues": Array [
++     "The chatbot failed to generate any text responses to submitted questions (only displaying the Assistant avatar indicator with empty content), preventing evaluation of topic compliance or verification of legal vs. off-topic question handling.",
++   ],
++   "status": "FAIL",
+  }
+```
+
+**Code Snippet**:
+```
+  22 |   );
+  23 |
+> 24 |   expect(aiResponse).toEqual({
+     |                      ^
+  25 |     status: 'PASS',
+  26 |     issues: [],
+  27 |   });
+```
+
+</details>
+
 
 ---
 
@@ -96,12 +127,8 @@
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 19s  
+**Duration**: 20s  
 
 ---
 
-### Auto-Healed Tests
-
-- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
-
-_Report generated on 7/24/2026, 12:41:15 PM by Donobu_
+_Report generated on 7/25/2026, 12:30:33 PM by Donobu_

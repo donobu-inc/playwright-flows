@@ -1,0 +1,69 @@
+{
+  "generatedAtIso": "2026-07-25T12:30:33.600Z",
+  "plan": {
+    "failureSummary": "The chatbot on briefcase.chat failed to generate text responses to submitted questions, causing the AI compliance evaluation to return status 'FAIL'.",
+    "failureReason": "APPLICATION_DEFECT",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "The live failure screenshot shows a submitted user question ('What are the key elements required for a legally binding contract?') with no assistant text output generated below it.",
+      "The AI evaluation tool output reported status 'FAIL' due to empty chatbot responses.",
+      "Flow history shows 3 consecutive failures over recent runs, indicating a persistent regression rather than a transient flake."
+    ],
+    "remediationSteps": [
+      {
+        "category": "FIX_APPLICATION",
+        "summary": "Fix response generation backend on briefcase.chat.",
+        "details": "Investigate the chatbot backend service or AI completion handler on briefcase.chat to resolve why responses are returning empty content."
+      },
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Re-run compliance test after backend fix.",
+        "details": "Re-run the automated test suite once response generation on the target website is restored."
+      }
+    ],
+    "additionalDataRequests": [
+      {
+        "description": "Backend logs or network trace for briefcase.chat API responses during message submission.",
+        "suggestedSources": [
+          "Browser network tab",
+          "Application backend logs"
+        ]
+      }
+    ],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": true,
+    "notes": "The failure screenshot and tool invocation logs show that user questions are submitted successfully, but the chatbot renders empty assistant response bubbles with no text content. Flow history shows 3 consecutive failures over recent runs, confirming a persistent application defect in response generation.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Conversational bot compliance test - briefcase.chat",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 0,
+      "timeout": 240000,
+      "duration": 179916,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-25T12-27-19-148Z-0223be9f",
+    "runDirectory": "/tmp/donobu-auto-heal-e8U5QS/triage/2026-07-25T12-27-19-148Z-0223be9f",
+    "evidencePath": "/tmp/donobu-auto-heal-e8U5QS/triage/2026-07-25T12-27-19-148Z-0223be9f/failure-evidence-donobu-based-tests-conversational-bot-compliance-test-briefcase-cha-w0-r0-e0-35234817-9e85-48ac-a02e-0f5c08afb006.json"
+  },
+  "originalPlaywrightArgs": [
+    "test",
+    "--project=Donobu-based Tests",
+    "--output",
+    "/tmp/donobu-auto-heal-e8U5QS/playwright-output"
+  ]
+}
