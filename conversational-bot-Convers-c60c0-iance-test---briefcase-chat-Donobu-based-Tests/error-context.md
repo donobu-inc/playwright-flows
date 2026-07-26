@@ -19,60 +19,127 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot does not generate or return any responses to user queries (even after submitting legal questions), rendering it impossible to evaluate topic compliance or verify whether the bot responds appropriately or stays on-topic."
+  "rationale": "The chatbot requires an OpenAI API Key or a Pro Plan subscription to generate responses. Without an API key or active subscription, the bot does not generate answers to legal or off-topic questions, making it impossible to evaluate its topic compliance."
 }
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [ref=e1]:
-  - generic [ref=e2]:
-    - generic [ref=e4]:
-      - generic [ref=e5]:
-        - generic [ref=e6]:
-          - button "Close sidebar" [ref=e7] [cursor=pointer]:
-            - img [ref=e8]
-          - heading "Briefcase" [level=1] [ref=e11]
-        - button "New chat" [ref=e13] [cursor=pointer]:
-          - img [ref=e14]
-      - generic [ref=e19]:
-        - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e21]:
-          - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: New Chat
-            - button [ref=e26]:
-              - img [ref=e27]
-          - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
-            - button [ref=e34]:
-              - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
-        - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e47]:
-        - paragraph [ref=e50]: What is the difference between a copyright and a trademark?
-        - generic [ref=e52]: T
-      - paragraph [ref=e54]:
-        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e55] [cursor=pointer]:
-          - /url: "#"
-        - text: .
-      - generic [ref=e56]:
-        - generic [ref=e58]:
-          - textbox "Type your message..." [active] [ref=e59]: What is a non-disclosure agreement?
-          - button [ref=e60] [cursor=pointer]:
-            - img [ref=e61]
-          - button [disabled]:
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - button:
+              - img
+            - heading [level=1]: Briefcase
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - heading [level=2]: Today
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: New Chat
+                  - generic:
+                    - button:
+                      - img
+                - generic:
+                  - generic:
+                    - generic: What are the essential element...
+                  - generic:
+                    - button:
+                      - img
+        - generic:
+          - button:
             - img
-        - generic [ref=e63]:
+            - text: Settings
+    - generic:
+      - generic [ref=e1]:
+        - heading [level=2] [ref=e2]: Welcome to Briefcase
+        - paragraph [ref=e3]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e4]:
+          - generic [ref=e5] [cursor=pointer]:
+            - generic [ref=e6]: Explain the difference between RSUs and ISOs
+            - img [ref=e7]
+          - generic [ref=e10] [cursor=pointer]:
+            - generic [ref=e11]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e12]
+          - generic [ref=e15] [cursor=pointer]:
+            - generic [ref=e16]: Summarize the terms of this SAFE agreement
+            - img [ref=e17]
+          - generic [ref=e20] [cursor=pointer]:
+            - generic [ref=e21]: How does non-solicitation work in California
+            - img [ref=e22]
+      - generic:
+        - paragraph:
+          - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+          - link:
+            - /url: "#"
+            - text: settings
+          - text: .
+      - generic:
+        - generic:
+          - generic:
+            - textbox:
+              - /placeholder: Type your message...
+            - button:
+              - img
+            - button [disabled]:
+              - img
+        - generic:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e64] [cursor=pointer]:
-            - img [ref=e65]
-  - region "Notifications (F8)":
-    - list
-  - alert [ref=e67]
+          - button:
+            - img
+  - list
+  - alert
+  - dialog "Settings" [active] [ref=e26]:
+    - generic [ref=e27]:
+      - heading "Settings" [level=2] [ref=e28]
+      - paragraph [ref=e29]: Update your information below
+    - generic [ref=e31]:
+      - navigation [ref=e32]:
+        - button "General" [ref=e33] [cursor=pointer]:
+          - img [ref=e34]
+          - generic [ref=e37]: General
+        - button "Advanced" [ref=e38] [cursor=pointer]:
+          - img [ref=e39]
+          - generic [ref=e40]: Advanced
+      - generic [ref=e42]:
+        - generic [ref=e43]: Briefcase has a limit of 10 messages per user. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key.
+        - generic [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]: Email
+            - button [ref=e47] [cursor=pointer]:
+              - img [ref=e48]
+          - generic [ref=e50]:
+            - textbox "Enter your email" [ref=e51]
+            - button "Upgrade" [disabled]
+          - paragraph [ref=e53]:
+            - link "Already have a subscription?" [ref=e54] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]: OpenAI API Key
+            - button [ref=e58] [cursor=pointer]:
+              - img [ref=e59]
+          - generic [ref=e61]:
+            - textbox "OpenAI API Key" [ref=e62]:
+              - /placeholder: Enter your OpenAI API Key
+            - button "Apply" [disabled]
+        - generic [ref=e63]:
+          - generic [ref=e64]: Conversation History
+          - generic [ref=e65]:
+            - paragraph [ref=e66]: Delete all conversations and messages. This action cannot be undone.
+            - button "Delete" [ref=e67] [cursor=pointer]
+    - button "Close" [ref=e68] [cursor=pointer]:
+      - img [ref=e69]
+      - generic [ref=e72]: Close
 ```
 
 # Test source

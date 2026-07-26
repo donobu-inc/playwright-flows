@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 31s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 53s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 32s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 51s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 37s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 24s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 19s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 1s |
+| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 20s |
-| **TOTAL** | **8 ✅** | **0 🔁** | **0 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 22s** |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 4s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 12s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 31s  
+**Duration**: 32s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 53s  
+**Duration**: 51s  
 
 ---
 
@@ -57,8 +57,10 @@
 
 ### Fill out a survey
 
-**Status**: ✅ Passed  
-**Duration**: 37s  
+**Status**: ❤️‍🩹 Healed  
+**Duration**: 1m 24s  
+> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
+
 
 ---
 
@@ -67,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 20s  
+**Duration**: 19s  
 
 ---
 
@@ -84,41 +86,8 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ❌ Failed  
-**Duration**: 3m 1s  
-
-<details>
-<summary>⚠️ Error Details</summary>
-
-```
-Error: expect(received).toEqual(expected) // deep equality
-
-- Expected  - 2
-+ Received  + 4
-
-  Object {
--   "issues": Array [],
--   "status": "PASS",
-+   "issues": Array [
-+     "The chatbot failed to generate any text responses to submitted questions (only displaying the Assistant avatar indicator with empty content), preventing evaluation of topic compliance or verification of legal vs. off-topic question handling.",
-+   ],
-+   "status": "FAIL",
-  }
-```
-
-**Code Snippet**:
-```
-  22 |   );
-  23 |
-> 24 |   expect(aiResponse).toEqual({
-     |                      ^
-  25 |     status: 'PASS',
-  26 |     issues: [],
-  27 |   });
-```
-
-</details>
-
+**Status**: ⏰ Timed Out  
+**Duration**: 4m 1s  
 
 ---
 
@@ -131,4 +100,8 @@ Error: expect(received).toEqual(expected) // deep equality
 
 ---
 
-_Report generated on 7/25/2026, 12:30:33 PM by Donobu_
+### Auto-Healed Tests
+
+- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
+
+_Report generated on 7/26/2026, 12:35:40 PM by Donobu_

@@ -1,0 +1,68 @@
+{
+  "generatedAtIso": "2026-07-26T12:31:22.156Z",
+  "plan": {
+    "failureSummary": "The chatbot requires an OpenAI API Key or Pro Plan subscription to respond to questions, preventing topic compliance evaluation.",
+    "failureReason": "AUTHENTICATION_FAILURE",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "page.ai agent reported 'Objective not completable' with rationale regarding missing OpenAI API Key or Pro Plan subscription",
+      "Live failure screenshot confirms Settings modal prompting for OpenAI API Key / subscription",
+      "Flow history shows 4 consecutive failures across recent deterministic runs",
+      "Test code visits briefcase.chat without setting up API key credentials or session authentication"
+    ],
+    "remediationSteps": [
+      {
+        "category": "VALIDATE_AUTHENTICATION",
+        "summary": "Configure required API key in test environment",
+        "details": "Supply a valid OpenAI API Key via environment variables or repository secrets for the test run."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Inject API key into settings during test setup",
+        "details": "Update conversational-bot.test.ts to open briefcase.chat settings and input the OpenAI API key before running the page.ai topic compliance prompt."
+      }
+    ],
+    "additionalDataRequests": [
+      {
+        "description": "Valid OpenAI API Key or Pro account credentials for briefcase.chat test execution.",
+        "suggestedSources": [
+          "Repository secrets / environment variables",
+          "Test fixture configuration"
+        ]
+      }
+    ],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": true,
+    "requiresProductFix": false,
+    "notes": "The test execution failed because briefcase.chat now requires an OpenAI API Key or an active Pro Plan subscription to generate chat responses. Without pre-configuring an API key in the app settings or providing subscription credentials, the AI agent cannot complete the evaluation.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "tests/conversational-bot.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Conversational bot compliance test - briefcase.chat",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 198413,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-26T12-26-36-446Z-522b7495",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-26T12-26-36-446Z-522b7495",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-26T12-26-36-446Z-522b7495/failure-evidence-donobu-based-tests-conversational-bot-compliance-test-briefcase-cha-w2-r0-e0-b6626bc5-432d-4794-9fcc-ca5cdfd16f5d.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
