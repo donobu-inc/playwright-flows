@@ -5,15 +5,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 32s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 57s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 38s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 22s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 33s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 56s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 10s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  | 40s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 23s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  | 4m 1s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 15s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **8 ✅** | **0 🔁** | **0 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 ⚡** | **7m 29s** |
+| **TOTAL** | **8 ✅** | **0 🔁** | **0 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **5m 47s** |
 
 ## auth/sauce-login.test.ts
 
@@ -29,7 +29,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 32s  
+**Duration**: 33s  
 
 ---
 
@@ -38,7 +38,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 57s  
+**Duration**: 56s  
 
 ---
 
@@ -47,7 +47,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 10s  
 
 ---
 
@@ -56,7 +56,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 38s  
+**Duration**: 40s  
 
 ---
 
@@ -65,7 +65,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 22s  
+**Duration**: 23s  
 
 ---
 
@@ -82,8 +82,37 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❌ Failed  
+**Duration**: 2m 15s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The chatbot does not generate responses to questions without a valid OpenAI API key configured in settings, making it impossible to evaluate its topic compliance."
+}
+```
+
+**Code Snippet**:
+```
+   7 |   await page.goto('https://briefcase.chat');
+   8 |
+>  9 |   const aiResponse = await page.ai(
+     |                      ^
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+```
+
+</details>
+
 
 ---
 
@@ -96,4 +125,4 @@
 
 ---
 
-_Report generated on 7/27/2026, 1:14:12 PM by Donobu_
+_Report generated on 7/28/2026, 12:44:54 PM by Donobu_
