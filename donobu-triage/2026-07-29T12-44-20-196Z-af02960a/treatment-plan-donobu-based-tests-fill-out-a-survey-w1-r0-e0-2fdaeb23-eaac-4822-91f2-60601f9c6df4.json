@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-07-29T12:48:48.323Z",
+  "plan": {
+    "failureSummary": "Deterministic click step failed because element '[data-testid=\\'radio-age-25-34\\']' was not found on the page (survey form rendered 'Set 2' layout).",
+    "failureReason": "SELECTOR_REGRESSION",
+    "confidence": 0.9,
+    "observedIndicators": [
+      "Deterministic tool call 'click' failed with error: FAILED! Unable to resolve HTML element to operate with.",
+      "Cached selectors ([data-testid='radio-age-25-34'], div:nth-of-type(2) > [role='radio']) were not present in the rendered DOM.",
+      "Failure screenshot shows the survey rendered 'Set 2' with different input fields (Your Name, Contact Email, Occupation, Interests) compared to the cached form layout.",
+      "Historical run context indicates periodic ~23s failures when dynamic question sets conflict with cached deterministic steps."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page AI cache and retry test",
+        "details": "Clear the cached Page AI steps for this test and retry automation so page.ai dynamically interacts with the currently rendered survey question set."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Ensure prompt flexibility for dynamic question sets",
+        "details": "If the survey application intentionally rotates form sets, ensure page.ai instructions provide sufficient context for handling dynamic question variants."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The test ran in DETERMINISTIC mode using cached AI tool steps. The page rendered 'Set 2' of the survey form (as seen in the failure screenshot), which lacks the cached age radio group selector '[data-testid=\\'radio-age-25-34\\']'. Clearing the Page AI cache will allow the autonomous agent to dynamically inspect 'Set 2' and successfully complete the survey.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests",
+      "additionalPlaywrightArgs": []
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 22910,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-07-29T12-44-20-196Z-af02960a",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-29T12-44-20-196Z-af02960a",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-07-29T12-44-20-196Z-af02960a/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-2fdaeb23-eaac-4822-91f2-60601f9c6df4.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
