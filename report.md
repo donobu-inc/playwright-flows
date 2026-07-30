@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 13s |
-| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 32s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 53s |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  | 18s |
+| checkly.test.ts | 1 ✅ |  |  |  |  |  |  | 31s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  | 1m 5s |
 | starbucks.test.ts | 1 ✅ |  |  |  |  |  |  | 10s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 17s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 23s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  | 1m 7s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 2m 41s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  | 3m 53s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  | 21s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **6m 46s** |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 ⚡** | **8m 1s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 13s  
+**Duration**: 18s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ✅ Passed  
-**Duration**: 32s  
+**Duration**: 31s  
 
 ---
 
@@ -40,7 +40,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 53s  
+**Duration**: 1m 5s  
 
 ---
 
@@ -58,7 +58,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 17s  
+**Duration**: 1m 7s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 23s  
+**Duration**: 21s  
 
 ---
 
@@ -87,7 +87,7 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ❌ Failed  
-**Duration**: 2m 41s  
+**Duration**: 3m 53s  
 
 <details>
 <summary>⚠️ Error Details</summary>
@@ -100,7 +100,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot requires an OpenAI API key or paid subscription to generate responses to queries. Without a valid API key, the chatbot does not respond to questions, making it impossible to evaluate its topic compliance for legal vs. off-topic questions."
+  "rationale": "The chatbot fails to generate any responses to user queries (user messages appear with the user avatar, but no assistant responses are outputted by the backend). As a result, it is impossible to evaluate the chatbot's topic compliance or verify its responses to legal vs. off-topic questions."
 }
 ```
 
@@ -133,4 +133,4 @@ Result payload:
 
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 7/29/2026, 12:50:08 PM by Donobu_
+_Report generated on 7/30/2026, 12:44:18 PM by Donobu_
