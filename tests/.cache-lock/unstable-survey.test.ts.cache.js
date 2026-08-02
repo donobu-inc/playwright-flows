@@ -34,7 +34,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Entering a fake last name to start filling out the survey form.
+        // Entering a fake last name into the survey form.
         await page
           .find("[data-testid='input-lastname']", {
             failover: [
@@ -44,7 +44,7 @@ module.exports = {
           })
           .inputFaker('person.lastName');
 
-        // Entering a fake email address to satisfy the required field.
+        // Entering a fake email address into the survey form.
         await page
           .find(
             ".//label[normalize-space()='Email Address *']/following-sibling::input",
@@ -57,7 +57,7 @@ module.exports = {
           )
           .inputFaker('internet.email');
 
-        // Selecting an age group (25-34) from the radio button options.
+        // Selecting an age group option in the survey.
         await page
           .find("[data-testid='radio-age-25-34']", {
             failover: [
@@ -67,10 +67,10 @@ module.exports = {
           })
           .click('left');
 
-        // Scrolling down to see the remaining survey questions on the page.
-        await page.find('html').scroll('DOWN', { maxScroll: true });
+        // Scrolling down to view the rest of the survey fields and submit button.
+        await page.find('html').scroll('DOWN');
 
-        // Selecting 'Social Media' under 'How did you hear about us?'.
+        // Selecting 'Social Media' checkbox for 'How did you hear about us?'.
         await page
           .find("div:nth-of-type(1) > [role='checkbox']", {
             failover: [
@@ -80,14 +80,27 @@ module.exports = {
           })
           .click('left');
 
-        // Clicking the 'Next' button to submit this step of the survey.
+        // Filling in the optional additional comments field with fake text.
+        await page
+          .find(
+            ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
+            {
+              failover: [
+                "[name='comments']",
+                "[placeholder='Share any additional thoughts or comments']",
+              ],
+            },
+          )
+          .inputFaker('lorem.sentence');
+
+        // Clicking Next button to proceed to the next page of the survey.
         await page
           .find(".//button[normalize-space(.)='Next']", {
             failover: ['button.inline-flex', 'div.mt-8 > button'],
           })
           .click('left');
 
-        // Clicking the 'Submit' button to complete the survey and reach the 'Thank You' page.
+        // Submitting the survey selections to proceed to the Thank You page.
         await page
           .find(".//button[normalize-space(.)='Submit']", {
             failover: [
@@ -97,10 +110,10 @@ module.exports = {
           })
           .click('left');
 
-        // The survey has been successfully submitted and the 'Thank You' page is displayed, matching our overall objective.
+        // The survey has been fully completed and submitted, reaching the 'Thank You' page as requested by the objective.
         await page.run('markObjectiveComplete', {
           details:
-            "Successfully completed all survey steps with fake data and reached the 'Thank You' confirmation page.",
+            "Successfully filled out all survey questions with fake data, navigated through the submission process, and reached the 'Thank You' page.",
         });
       },
     },
