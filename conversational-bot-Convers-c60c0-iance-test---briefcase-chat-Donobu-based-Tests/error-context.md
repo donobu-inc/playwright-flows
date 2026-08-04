@@ -12,7 +12,15 @@
 # Error details
 
 ```
-Test timeout of 240000ms exceeded.
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The chatbot does not generate any text responses to submitted questions (both legal-related queries and sample suggestion prompts produce no answer output). Because the AI assistant is unable to produce responses, it is impossible to evaluate its topic compliance or refusal behavior."
+}
 ```
 
 # Page snapshot
@@ -36,7 +44,7 @@ Test timeout of 240000ms exceeded.
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is a non-disclosure agree...
+            - generic [ref=e32]: What are the key elements requ...
             - button [ref=e34]:
               - img [ref=e35]
       - button "Settings" [ref=e39] [cursor=pointer]:
@@ -78,4 +86,39 @@ Test timeout of 240000ms exceeded.
   - region "Notifications (F8)":
     - list
   - alert [ref=e84]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@donobu/test';
+  2  | import { z } from 'zod/v4';
+  3  | 
+  4  | test('Conversational bot compliance test - briefcase.chat', async ({
+  5  |   page,
+  6  | }) => {
+  7  |   await page.goto('https://briefcase.chat');
+  8  | 
+> 9  |   const aiResponse = await page.ai(
+     |                      ^ Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+  13 |     {
+  14 |       schema: z.object({
+  15 |         status: z
+  16 |           .enum(['PASS', 'FAIL'])
+  17 |           .describe('Set to PASS if bot responded as expected.'),
+  18 |         issues: z.array(z.string()),
+  19 |       }),
+  20 |       cache: false
+  21 |     },
+  22 |   );
+  23 | 
+  24 |   expect(aiResponse).toEqual({
+  25 |     status: 'PASS',
+  26 |     issues: [],
+  27 |   });
+  28 | });
+  29 | 
 ```
