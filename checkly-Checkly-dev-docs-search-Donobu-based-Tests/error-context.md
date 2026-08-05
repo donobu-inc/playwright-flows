@@ -406,7 +406,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
             - paragraph [ref=e40]: Sign in, sign up, pay, and whatever your product is actually for. Walk each one end to end in a real browser, every few minutes, from the regions your users are in, and time every step so you know which one broke.
             - generic [ref=e41]:
               - link "Start for free" [ref=e42] [cursor=pointer]:
-                - /url: https://app.checklyhq.com/signup?segment_anon_id=03b26b9d-8126-4df9-9b3b-47ce3689a434
+                - /url: https://app.checklyhq.com/signup?segment_anon_id=f90f26b5-e975-4e36-9b32-b17817139040
               - link "Book a demo" [ref=e43] [cursor=pointer]:
                 - /url: /demo-request/
             - generic [ref=e44]:
@@ -1082,7 +1082,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
           - paragraph [ref=e1072]: Pick the four flows that generate support tickets, write them once, and let them run every five minutes from everywhere that matters.
           - generic [ref=e1073]:
             - link "Start for free" [ref=e1074] [cursor=pointer]:
-              - /url: https://app.checklyhq.com/signup?segment_anon_id=03b26b9d-8126-4df9-9b3b-47ce3689a434
+              - /url: https://app.checklyhq.com/signup?segment_anon_id=f90f26b5-e975-4e36-9b32-b17817139040
             - link "Book a demo" [ref=e1075] [cursor=pointer]:
               - /url: /demo-request/
     - contentinfo [ref=e1076]:
