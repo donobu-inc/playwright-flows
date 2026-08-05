@@ -1,0 +1,1259 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: checkly.test.ts >> Checkly dev docs search
+- Location: tests/checkly.test.ts:3:5
+
+# Error details
+
+```
+Error: expect(received).toEqual(expected) // deep equality
+
+Expected: "https://www.checklyhq.com/docs/"
+Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - navigation [ref=e5]:
+        - link "Checkly - Home" [ref=e6] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e7]: Checkly - Home
+          - img [ref=e8]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]:
+              - button "Product" [ref=e20] [cursor=pointer]
+              - region "Product":
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading "Detect" [level=3]
+                        - generic:
+                          - link "Uptime Monitoring Measure the availability of your digital footprint":
+                            - /url: /product/uptime-monitoring/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Uptime Monitoring
+                            - generic: Measure the availability of your digital footprint
+                          - link "Heartbeat Monitoring Catch cron jobs and backups that fail silently":
+                            - /url: /product/heartbeat-monitoring/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Heartbeat Monitoring
+                            - generic: Catch cron jobs and backups that fail silently
+                          - link "Synthetic Monitoring Simulate real user interactions across your stack":
+                            - /url: /product/synthetic-monitoring/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Synthetic Monitoring
+                            - generic: Simulate real user interactions across your stack
+                          - link "Testing Catch issues before production with an AI-powered test reporter":
+                            - /url: /product/testing/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Testing
+                            - generic: Catch issues before production with an AI-powered test reporter
+                      - generic:
+                        - heading "Communicate" [level=3]
+                        - generic:
+                          - link "Status Pages Communicate app availability to your customers":
+                            - /url: /product/status-pages/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Status Pages
+                            - generic: Communicate app availability to your customers
+                          - link "Alerts Contextual alerting to notify the team right away":
+                            - /url: /product/alerting/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Alerts
+                            - generic: Contextual alerting to notify the team right away
+                      - generic:
+                        - heading "Resolve" [level=3]
+                        - generic:
+                          - link "AI Root Cause Analysis Automated root cause analysis powered by AI agents":
+                            - /url: /product/ai-analysis/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: AI Root Cause Analysis
+                            - generic: Automated root cause analysis powered by AI agents
+                          - link "Traces Powerful OTel tracing for deeper insights":
+                            - /url: /product/traces/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Traces
+                            - generic: Powerful OTel tracing for deeper insights
+                    - generic:
+                      - heading "Getting Started" [level=3]
+                      - generic:
+                        - link "Start for free":
+                          - /url: https://app.checklyhq.com/signup/
+                        - link "Book a demo":
+                          - /url: /demo-request/
+                        - link "Talk to Sales":
+                          - /url: /contact-sales/
+                        - link "Monitoring as Code":
+                          - /url: /product/monitoring-as-code/
+            - generic [ref=e21]:
+              - button "Solutions" [ref=e22] [cursor=pointer]
+              - region "Solutions":
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - heading "Personas" [level=3]
+                        - generic:
+                          - link "Developers Checks in TypeScript, in your repo, deployed with your app":
+                            - /url: /solutions/developers/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Developers
+                            - generic: Checks in TypeScript, in your repo, deployed with your app
+                          - link "SRE & Platform The synthetic layer for your observability stack":
+                            - /url: /solutions/sre/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: SRE & Platform
+                            - generic: The synthetic layer for your observability stack
+                          - link "QA Engineers Run your Playwright suite as production monitors":
+                            - /url: /solutions/qa/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: QA Engineers
+                            - generic: Run your Playwright suite as production monitors
+                          - link "Engineering Managers Give every team ownership of its own monitors":
+                            - /url: /solutions/engineering-managers/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Engineering Managers
+                            - generic: Give every team ownership of its own monitors
+                      - generic:
+                        - heading "Use Cases" [level=3]
+                        - generic:
+                          - link "Critical user flows Watch login, checkout, and signup from real browsers":
+                            - /url: /solutions/use-cases/critical-user-flows/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Critical user flows
+                            - generic: Watch login, checkout, and signup from real browsers
+                          - link "API & backend monitoring Validate endpoints, chains, and auth on a schedule":
+                            - /url: /solutions/use-cases/api-monitoring/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: API & backend monitoring
+                            - generic: Validate endpoints, chains, and auth on a schedule
+                          - link "Tests to production monitors Promote tagged specs from CI to scheduled checks":
+                            - /url: /solutions/use-cases/tests-to-monitors/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Tests to production monitors
+                            - generic: Promote tagged specs from CI to scheduled checks
+                          - link "Observability consolidation Replace the synthetic module bolted onto your APM":
+                            - /url: /solutions/use-cases/consolidation/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Observability consolidation
+                            - generic: Replace the synthetic module bolted onto your APM
+                          - link "Reliability for AI-generated code Verify what your agents ship before your users do":
+                            - /url: /solutions/use-cases/ai-generated-code/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Reliability for AI-generated code
+                            - generic: Verify what your agents ship before your users do
+                      - generic:
+                        - heading "Industries" [level=3]
+                        - generic:
+                          - link "E-commerce Protect checkout and revenue paths around the clock":
+                            - /url: /solutions/industries/ecommerce/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: E-commerce
+                            - generic: Protect checkout and revenue paths around the clock
+                          - link "Financial services Prove uptime and latency against strict SLAs":
+                            - /url: /solutions/industries/financial-services/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Financial services
+                            - generic: Prove uptime and latency against strict SLAs
+                          - link "SaaS & B2B software Keep every tenant's core workflows verified":
+                            - /url: /solutions/industries/saas/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: SaaS & B2B software
+                            - generic: Keep every tenant's core workflows verified
+                          - link "AI & ML platforms Monitor inference endpoints and agent workflows":
+                            - /url: /solutions/industries/ai-platforms/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: AI & ML platforms
+                            - generic: Monitor inference endpoints and agent workflows
+                    - generic:
+                      - heading "Moving from another tool?" [level=3]
+                      - generic:
+                        - link "vs. Datadog":
+                          - /url: /datadog-alternative/
+                        - link "vs. New Relic":
+                          - /url: /new-relic-alternative/
+                        - link "vs. Pingdom":
+                          - /url: /alternative-pingdom/
+                        - link "vs. Catchpoint":
+                          - /url: /switch/catchpoint/
+            - generic [ref=e23]:
+              - button "Developers" [ref=e24] [cursor=pointer]
+              - region "Developers":
+                - generic:
+                  - generic:
+                    - heading "Developers" [level=3]
+                    - generic:
+                      - generic:
+                        - link "Documentation Learn key concepts and features":
+                          - /url: /docs/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: Documentation
+                          - generic: Learn key concepts and features
+                        - link "API Docs Build on the Checkly REST API":
+                          - /url: https://www.checklyhq.com/docs/api-reference/overview
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: API Docs
+                          - generic: Build on the Checkly REST API
+                        - link "CLI Docs Bring monitoring to your terminal":
+                          - /url: /cli/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: CLI Docs
+                          - generic: Bring monitoring to your terminal
+                      - generic:
+                        - link "Quickstart Set up your first check fast":
+                          - /url: /docs/quickstart/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: Quickstart
+                          - generic: Set up your first check fast
+                        - link "Guides In-depth Playwright & OTel guides":
+                          - /url: /docs/guides/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: Guides
+                          - generic: In-depth Playwright & OTel guides
+                        - link "MCP Server Connect Checkly to your AI tools":
+                          - /url: /docs/ai/mcp-server/
+                          - generic:
+                            - generic:
+                              - img
+                            - generic: MCP Server
+                          - generic: Connect Checkly to your AI tools
+                    - generic:
+                      - heading "Reference" [level=3]
+                      - generic:
+                        - link "Agent Skills":
+                          - /url: /docs/ai/skills/
+                          - generic:
+                            - img
+                          - text: Agent Skills
+                        - link "Terraform":
+                          - /url: /product/terraform-provider/
+                          - text: Terraform
+                        - link "Pulumi":
+                          - /url: /product/pulumi-provider/
+                          - text: Pulumi
+                        - link "All Integrations":
+                          - /url: /docs/integrations/alerts/discord/
+                          - generic:
+                            - img
+                          - text: All Integrations
+                        - link "Changelog":
+                          - /url: https://feedback.checklyhq.com/changelog
+                          - generic:
+                            - img
+                          - text: Changelog
+            - generic [ref=e25]:
+              - button "Resources" [ref=e26] [cursor=pointer]
+              - region "Resources":
+                - generic:
+                  - generic:
+                    - complementary:
+                      - heading "Featured" [level=3]
+                      - link "Checkly and the Agentic Software Layer. Checkly and the Agentic Software Layer Read article":
+                        - /url: /blog/the-agentic-software-layer/
+                        - generic:
+                          - img "Checkly and the Agentic Software Layer."
+                        - generic: Checkly and the Agentic Software Layer
+                        - generic:
+                          - text: Read article
+                          - generic: →
+                    - generic:
+                      - generic:
+                        - heading "Resources" [level=3]
+                        - generic:
+                          - link "Blog Read about the latest news at Checkly":
+                            - /url: /blog/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Blog
+                            - generic: Read about the latest news at Checkly
+                          - link "Learn Tips and best practices for learning Playwright and more":
+                            - /url: /docs/learn/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Learn
+                            - generic: Tips and best practices for learning Playwright and more
+                          - link "Webinars Register or view webinars on-demand":
+                            - /url: /webinars/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Webinars
+                            - generic: Register or view webinars on-demand
+                          - link "Events Meet the team in person":
+                            - /url: /events/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Events
+                            - generic: Meet the team in person
+                      - generic:
+                        - heading "Community" [level=3]
+                        - generic:
+                          - link "Public Roadmap Read, vote, or add on features in a public roadmap":
+                            - /url: https://feedback.checklyhq.com/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Public Roadmap
+                            - generic: Read, vote, or add on features in a public roadmap
+                          - link "Community Slack Connect with the Checkly Community":
+                            - /url: /slack/
+                            - generic:
+                              - generic:
+                                - img
+                              - generic: Community Slack
+                            - generic: Connect with the Checkly Community
+            - link "Customers" [ref=e27] [cursor=pointer]:
+              - /url: /customers/
+            - link "Pricing" [ref=e28] [cursor=pointer]:
+              - /url: /pricing/
+          - generic [ref=e29]:
+            - link "Login" [ref=e30] [cursor=pointer]:
+              - /url: https://app.checklyhq.com/
+            - link "Start for free" [ref=e31] [cursor=pointer]:
+              - /url: https://app.checklyhq.com/signup
+        - generic:
+          - navigation:
+            - generic:
+              - button "Product":
+                - generic: Product
+                - img
+              - button "Solutions":
+                - generic: Solutions
+                - img
+              - button "Developers":
+                - generic: Developers
+                - img
+              - button "Resources":
+                - generic: Resources
+                - img
+              - link "Customers":
+                - /url: /customers/
+              - link "Pricing":
+                - /url: /pricing/
+    - main [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - paragraph [ref=e38]: Use case · Critical user flows
+            - heading "Four journeys decide whether your product works" [level=1] [ref=e39]
+            - paragraph [ref=e40]: Sign in, sign up, pay, and whatever your product is actually for. Walk each one end to end in a real browser, every few minutes, from the regions your users are in, and time every step so you know which one broke.
+            - generic [ref=e41]:
+              - link "Start for free" [ref=e42] [cursor=pointer]:
+                - /url: https://app.checklyhq.com/signup?segment_anon_id=03b26b9d-8126-4df9-9b3b-47ce3689a434
+              - link "Book a demo" [ref=e43] [cursor=pointer]:
+                - /url: /demo-request/
+            - generic [ref=e44]:
+              - generic [ref=e45]: Real browsers
+              - generic [ref=e46]: Step-level timing
+              - generic [ref=e47]: 22+ public regions
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]: __checks__/critical-flows.check.ts
+              - generic [ref=e52]:
+                - generic [ref=e53]:
+                  - generic [ref=e54]: "1"
+                  - generic [ref=e55]: // __checks__/critical-flows.check.ts
+                - generic [ref=e56]:
+                  - generic [ref=e57]: "2"
+                  - generic [ref=e58]: "import { PlaywrightCheck, Frequency } from 'checkly/constructs'"
+                - generic [ref=e60]: "3"
+                - generic [ref=e62]:
+                  - generic [ref=e63]: "4"
+                  - generic [ref=e64]: // The handful of journeys the product actually depends on.
+                - generic [ref=e65]:
+                  - generic [ref=e66]: "5"
+                  - generic [ref=e67]: "new PlaywrightCheck('critical-flows', {"
+                - generic [ref=e68]:
+                  - generic [ref=e69]: "6"
+                  - generic [ref=e70]: "name: 'Critical user flows',"
+                - generic [ref=e71]:
+                  - generic [ref=e72]: "7"
+                  - generic [ref=e73]: "playwrightConfigPath: './playwright.config.ts',"
+                - generic [ref=e74]:
+                  - generic [ref=e75]: "8"
+                  - generic [ref=e76]: "pwTags: ['@critical'],"
+                - generic [ref=e77]:
+                  - generic [ref=e78]: "9"
+                  - generic [ref=e79]: "frequency: Frequency.EVERY_5M,"
+                - generic [ref=e80]:
+                  - generic [ref=e81]: "10"
+                  - generic [ref=e82]: "locations: ['us-east-1', 'eu-west-1', 'ap-southeast-1'],"
+                - generic [ref=e83]:
+                  - generic [ref=e84]: "11"
+                  - generic [ref=e85]: "})"
+            - generic [ref=e87]:
+              - generic [ref=e88]: $ npx checkly test --record
+              - generic [ref=e89]: ✓ sign in + MFA eu-west-1 3.4s
+              - generic [ref=e90]: ✓ signup to first project us-east-1 5.1s
+              - generic [ref=e91]: ✓ place an order ap-southeast-1 6.7s
+        - generic [ref=e92]:
+          - heading "Trusted by teams whose users notice immediately" [level=2] [ref=e94]
+          - generic [ref=e96]:
+            - img "Vercel" [ref=e98]
+            - img "Carhartt" [ref=e100]
+            - img "CrowdStrike" [ref=e102]
+            - img "Airbus" [ref=e104]
+            - img "Fanatics" [ref=e106]
+            - img "Mistral" [ref=e108]
+            - img "ServiceNow" [ref=e110]
+            - img "GoFundMe" [ref=e112]
+            - img "Hopper" [ref=e114]
+            - img "1Password" [ref=e116]
+            - img "Fastly" [ref=e118]
+            - img "Total Wine" [ref=e120]
+        - figure "Thomas Reither · Associate Consultant · Solutia" [ref=e124]:
+          - blockquote [ref=e125]: “A real advantage that Checkly gives us is that we’re not waiting for our users to report an issue with a product, or waiting on a staff member to file a ticket. Checkly gives us real-time feedback on what is and isn’t working.”
+          - generic [ref=e126]:
+            - generic [ref=e127]: Thomas Reither
+            - generic [ref=e128]: ·
+            - generic [ref=e129]: Associate Consultant · Solutia
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - heading "Three ways a critical path breaks without setting off an alarm" [level=2] [ref=e133]
+            - paragraph [ref=e134]: Every one of these leaves your infrastructure monitoring perfectly green, because none of them are infrastructure problems.
+          - generic [ref=e136]:
+            - generic [ref=e137]:
+              - generic [ref=e138]: HTTP 200
+              - heading "A 200 is not a working product" [level=3] [ref=e139]
+              - paragraph [ref=e140]: The login page renders perfectly while the auth callback is failing. Uptime checks confirm the door exists; they say nothing about whether the key turns.
+            - generic [ref=e141]:
+              - generic [ref=e142]: third party
+              - heading "The flow crosses systems you do not own" [level=3] [ref=e143]
+              - paragraph [ref=e144]: An identity provider, a CDN, a payment gateway, a feature-flag service. Any one of them can break your critical path while every service you operate reports healthy.
+            - generic [ref=e145]:
+              - generic [ref=e146]: ticket
+              - heading "The first report arrives from a customer" [level=3] [ref=e147]
+              - paragraph [ref=e148]: Somebody emails support, support asks engineering, engineering asks whether anyone changed anything. The clock started well before the first alert did.
+          - paragraph [ref=e149]: The only reliable way to know a journey works is to complete it. Checkly completes it, on a schedule, from the places your users are.
+        - figure "Keegan Donley Senior Front-End Engineer · Kizen" [ref=e152]:
+          - img [ref=e153]
+          - blockquote [ref=e155]:
+            - paragraph [ref=e156]: “It only took me a few minutes to get a login check working and determine if we could log in and validate that the CDN was up.”
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: Keegan Donley
+            - paragraph [ref=e159]: Senior Front-End Engineer · Kizen
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - heading "Walk the whole path, not the front door" [level=2] [ref=e163]
+            - paragraph [ref=e164]: Break the journey into named steps and assert on the thing that proves it worked. Not that the dashboard rendered, but that the balance on it is populated. The difference between those two assertions is most of the value.
+            - list [ref=e165]:
+              - listitem [ref=e166]:
+                - generic [ref=e167]: Named steps, each timed separately, so a slow second factor is visible before it fails
+              - listitem [ref=e168]:
+                - generic [ref=e169]: Assertions on real content, not just on the page having loaded
+              - listitem [ref=e170]:
+                - generic [ref=e171]: A dedicated probe account with credentials in encrypted environment variables
+              - listitem [ref=e172]:
+                - generic [ref=e173]: Time-based second factors generated at run time from a stored seed
+          - generic [ref=e175]:
+            - generic [ref=e176]: e2e/login.spec.ts
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - generic [ref=e179]: "1"
+                - generic [ref=e180]: // e2e/login.spec.ts
+              - generic [ref=e181]:
+                - generic [ref=e182]: "2"
+                - generic [ref=e183]: "import { test, expect } from '@playwright/test'"
+              - generic [ref=e185]: "3"
+              - generic [ref=e187]:
+                - generic [ref=e188]: "4"
+                - generic [ref=e189]: "test('a user can sign in and reach their data @critical', async ({ page }) => {"
+              - generic [ref=e190]:
+                - generic [ref=e191]: "5"
+                - generic [ref=e192]: "await test.step('load the sign-in page', async () => {"
+              - generic [ref=e193]:
+                - generic [ref=e194]: "6"
+                - generic [ref=e195]: await page.goto('https://acme.com/login')
+              - generic [ref=e196]:
+                - generic [ref=e197]: "7"
+                - generic [ref=e198]: "await expect(page.getByRole('heading', { name: 'Sign in' })).toBeVisible()"
+              - generic [ref=e199]:
+                - generic [ref=e200]: "8"
+                - generic [ref=e201]: "})"
+              - generic [ref=e203]: "9"
+              - generic [ref=e205]:
+                - generic [ref=e206]: "10"
+                - generic [ref=e207]: "await test.step('submit credentials', async () => {"
+              - generic [ref=e208]:
+                - generic [ref=e209]: "11"
+                - generic [ref=e210]: await page.getByLabel('Email').fill(process.env.PROBE_USER!)
+              - generic [ref=e211]:
+                - generic [ref=e212]: "12"
+                - generic [ref=e213]: await page.getByLabel('Password').fill(process.env.PROBE_PASS!)
+              - generic [ref=e214]:
+                - generic [ref=e215]: "13"
+                - generic [ref=e216]: "await page.getByRole('button', { name: 'Sign in' }).click()"
+              - generic [ref=e217]:
+                - generic [ref=e218]: "14"
+                - generic [ref=e219]: "})"
+              - generic [ref=e221]: "15"
+              - generic [ref=e223]:
+                - generic [ref=e224]: "16"
+                - generic [ref=e225]: "await test.step('complete the second factor', async () => {"
+              - generic [ref=e226]:
+                - generic [ref=e227]: "17"
+                - generic [ref=e228]: // TOTP generated at run time from a seed in an encrypted env var
+              - generic [ref=e229]:
+                - generic [ref=e230]: "18"
+                - generic [ref=e231]: await page.getByLabel('Authentication code').fill(totp(process.env.PROBE_TOTP_SEED!))
+              - generic [ref=e232]:
+                - generic [ref=e233]: "19"
+                - generic [ref=e234]: "await page.getByRole('button', { name: 'Verify' }).click()"
+              - generic [ref=e235]:
+                - generic [ref=e236]: "20"
+                - generic [ref=e237]: "})"
+              - generic [ref=e239]: "21"
+              - generic [ref=e241]:
+                - generic [ref=e242]: "22"
+                - generic [ref=e243]: "await test.step('the account actually loads', async () => {"
+              - generic [ref=e244]:
+                - generic [ref=e245]: "23"
+                - generic [ref=e246]: "await expect(page.getByRole('heading', { name: 'Dashboard' })).toBeVisible()"
+              - generic [ref=e247]:
+                - generic [ref=e248]: "24"
+                - generic [ref=e249]: // Not just the shell — the data behind it
+              - generic [ref=e250]:
+                - generic [ref=e251]: "25"
+                - generic [ref=e252]: await expect(page.getByTestId('account-balance')).not.toBeEmpty()
+              - generic [ref=e253]:
+                - generic [ref=e254]: "26"
+                - generic [ref=e255]: "})"
+              - generic [ref=e256]:
+                - generic [ref=e257]: "27"
+                - generic [ref=e258]: "})"
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - heading "Watch the parts you don't control" [level=2] [ref=e262]
+            - paragraph [ref=e263]: Your login flow depends on an identity provider you did not write and cannot deploy. When it slows down, your flow slows down, and the first useful question is whether the problem is even yours. Check the dependencies directly and that question answers itself.
+            - list [ref=e264]:
+              - listitem [ref=e265]:
+                - generic [ref=e266]: A check per third party your critical path routes through
+              - listitem [ref=e267]:
+                - generic [ref=e268]: Degraded thresholds set to the latency at which your flow starts to suffer
+              - listitem [ref=e269]:
+                - generic [ref=e270]: Separate alerts, so a vendor problem does not read as your outage
+              - listitem [ref=e271]:
+                - generic [ref=e272]: A record of their availability for the next contract conversation
+          - generic [ref=e274]:
+            - generic [ref=e275]: __checks__/flow-dependencies.check.ts
+            - generic [ref=e276]:
+              - generic [ref=e277]:
+                - generic [ref=e278]: "1"
+                - generic [ref=e279]: // __checks__/flow-dependencies.check.ts
+              - generic [ref=e280]:
+                - generic [ref=e281]: "2"
+                - generic [ref=e282]: "import { ApiCheck, AssertionBuilder, Frequency } from 'checkly/constructs'"
+              - generic [ref=e284]: "3"
+              - generic [ref=e286]:
+                - generic [ref=e287]: "4"
+                - generic [ref=e288]: // The third parties your critical path silently depends on.
+              - generic [ref=e289]:
+                - generic [ref=e290]: "5"
+                - generic [ref=e291]: const dependencies = [
+              - generic [ref=e292]:
+                - generic [ref=e293]: "6"
+                - generic [ref=e294]: "{ slug: 'idp', name: 'Identity provider', url: 'https://auth.acme.com/.well-known/openid-configuration', slo: 400 },"
+              - generic [ref=e295]:
+                - generic [ref=e296]: "7"
+                - generic [ref=e297]: "{ slug: 'payments', name: 'Payment gateway', url: 'https://api.stripe.com/healthcheck', slo: 800 },"
+              - generic [ref=e298]:
+                - generic [ref=e299]: "8"
+                - generic [ref=e300]: "{ slug: 'flags', name: 'Feature flags', url: 'https://flags.acme.com/api/v1/health', slo: 300 },"
+              - generic [ref=e301]:
+                - generic [ref=e302]: "9"
+                - generic [ref=e303]: "]"
+              - generic [ref=e305]: "10"
+              - generic [ref=e307]:
+                - generic [ref=e308]: "11"
+                - generic [ref=e309]: "for (const dep of dependencies) {"
+              - generic [ref=e310]:
+                - generic [ref=e311]: "12"
+                - generic [ref=e312]:
+                  - text: new ApiCheck(
+                  - generic [ref=e313]:
+                    - text: "`dep-"
+                    - generic [ref=e314]: "${dep.slug}"
+                    - text: "`"
+                  - text: ", {"
+              - generic [ref=e315]:
+                - generic [ref=e316]: "13"
+                - generic [ref=e317]: "name: dep.name,"
+              - generic [ref=e318]:
+                - generic [ref=e319]: "14"
+                - generic [ref=e320]: "frequency: Frequency.EVERY_1M,"
+              - generic [ref=e322]: "15"
+              - generic [ref=e324]:
+                - generic [ref=e325]: "16"
+                - generic [ref=e326]: // When a dependency gets slow, the flow gets slow first
+              - generic [ref=e327]:
+                - generic [ref=e328]: "17"
+                - generic [ref=e329]: "degradedResponseTime: dep.slo,"
+              - generic [ref=e330]:
+                - generic [ref=e331]: "18"
+                - generic [ref=e332]: "maxResponseTime: dep.slo * 4,"
+              - generic [ref=e334]: "19"
+              - generic [ref=e336]:
+                - generic [ref=e337]: "20"
+                - generic [ref=e338]: "request: {"
+              - generic [ref=e339]:
+                - generic [ref=e340]: "21"
+                - generic [ref=e341]: "method: 'GET',"
+              - generic [ref=e342]:
+                - generic [ref=e343]: "22"
+                - generic [ref=e344]: "url: dep.url,"
+              - generic [ref=e345]:
+                - generic [ref=e346]: "23"
+                - generic [ref=e347]: "assertions: [AssertionBuilder.statusCode().equals(200)],"
+              - generic [ref=e348]:
+                - generic [ref=e349]: "24"
+                - generic [ref=e350]: "},"
+              - generic [ref=e351]:
+                - generic [ref=e352]: "25"
+                - generic [ref=e353]: "})"
+              - generic [ref=e354]:
+                - generic [ref=e355]: "26"
+                - generic [ref=e356]: "}"
+        - generic [ref=e358]:
+          - generic [ref=e359]:
+            - heading "From where your users are, confirmed before you page" [level=2] [ref=e360]
+            - paragraph [ref=e361]: A flow that works from one region can be broken in another, usually because of a CDN or a regional dependency. Running everywhere finds that. Retrying from a different region before alerting keeps the finding from becoming a false page at three in the morning.
+            - list [ref=e362]:
+              - listitem [ref=e363]:
+                - generic [ref=e364]: Run each flow from 22+ public regions, or from inside your own network
+              - listitem [ref=e365]:
+                - generic [ref=e366]: Retries with backoff, cross-region, before an alert is raised
+              - listitem [ref=e367]:
+                - generic [ref=e368]: Alert on the first failed run, the third, or after sustained failure
+              - listitem [ref=e369]:
+                - generic [ref=e370]: Per-region history, so “only in Frankfurt” is a fact rather than a hunch
+          - generic [ref=e372]:
+            - generic [ref=e373]: __checks__/critical-flows.check.ts
+            - generic [ref=e374]:
+              - generic [ref=e375]:
+                - generic [ref=e376]: "1"
+                - generic [ref=e377]: // __checks__/critical-flows.check.ts
+              - generic [ref=e378]:
+                - generic [ref=e379]: "2"
+                - generic [ref=e380]: "import {"
+              - generic [ref=e381]:
+                - generic [ref=e382]: "3"
+                - generic [ref=e383]: PlaywrightCheck,
+              - generic [ref=e384]:
+                - generic [ref=e385]: "4"
+                - generic [ref=e386]: RetryStrategyBuilder,
+              - generic [ref=e387]:
+                - generic [ref=e388]: "5"
+                - generic [ref=e389]: AlertEscalationBuilder,
+              - generic [ref=e390]:
+                - generic [ref=e391]: "6"
+                - generic [ref=e392]: Frequency,
+              - generic [ref=e393]:
+                - generic [ref=e394]: "7"
+                - generic [ref=e395]: "} from 'checkly/constructs'"
+              - generic [ref=e397]: "8"
+              - generic [ref=e399]:
+                - generic [ref=e400]: "9"
+                - generic [ref=e401]: "new PlaywrightCheck('critical-flows', {"
+              - generic [ref=e402]:
+                - generic [ref=e403]: "10"
+                - generic [ref=e404]: "name: 'Critical user flows',"
+              - generic [ref=e405]:
+                - generic [ref=e406]: "11"
+                - generic [ref=e407]: "playwrightConfigPath: './playwright.config.ts',"
+              - generic [ref=e408]:
+                - generic [ref=e409]: "12"
+                - generic [ref=e410]: "pwTags: ['@critical'],"
+              - generic [ref=e411]:
+                - generic [ref=e412]: "13"
+                - generic [ref=e413]: "frequency: Frequency.EVERY_5M,"
+              - generic [ref=e415]: "14"
+              - generic [ref=e417]:
+                - generic [ref=e418]: "15"
+                - generic [ref=e419]: // Where your users actually are
+              - generic [ref=e420]:
+                - generic [ref=e421]: "16"
+                - generic [ref=e422]: "locations: ["
+              - generic [ref=e423]:
+                - generic [ref=e424]: "17"
+                - generic [ref=e425]: "'us-east-1', 'us-west-1',"
+              - generic [ref=e426]:
+                - generic [ref=e427]: "18"
+                - generic [ref=e428]: "'eu-west-1', 'eu-central-1',"
+              - generic [ref=e429]:
+                - generic [ref=e430]: "19"
+                - generic [ref=e431]: "'ap-southeast-1', 'ap-northeast-1',"
+              - generic [ref=e432]:
+                - generic [ref=e433]: "20"
+                - generic [ref=e434]: "],"
+              - generic [ref=e436]: "21"
+              - generic [ref=e438]:
+                - generic [ref=e439]: "22"
+                - generic [ref=e440]: // A blip in one region is not an outage. Confirm elsewhere first.
+              - generic [ref=e441]:
+                - generic [ref=e442]: "23"
+                - generic [ref=e443]: "retryStrategy: RetryStrategyBuilder.exponentialStrategy({"
+              - generic [ref=e444]:
+                - generic [ref=e445]: "24"
+                - generic [ref=e446]: "baseBackoffSeconds: 5,"
+              - generic [ref=e447]:
+                - generic [ref=e448]: "25"
+                - generic [ref=e449]: "maxRetries: 2,"
+              - generic [ref=e450]:
+                - generic [ref=e451]: "26"
+                - generic [ref=e452]: "sameRegion: false,"
+              - generic [ref=e453]:
+                - generic [ref=e454]: "27"
+                - generic [ref=e455]: "}),"
+              - generic [ref=e457]: "28"
+              - generic [ref=e459]:
+                - generic [ref=e460]: "29"
+                - generic [ref=e461]: "alertEscalationPolicy: AlertEscalationBuilder.runBasedEscalation(2, {"
+              - generic [ref=e462]:
+                - generic [ref=e463]: "30"
+                - generic [ref=e464]: "interval: 10,"
+              - generic [ref=e465]:
+                - generic [ref=e466]: "31"
+                - generic [ref=e467]: "amount: 3,"
+              - generic [ref=e468]:
+                - generic [ref=e469]: "32"
+                - generic [ref=e470]: "}),"
+              - generic [ref=e471]:
+                - generic [ref=e472]: "33"
+                - generic [ref=e473]: "})"
+        - generic [ref=e475]:
+          - generic [ref=e476]:
+            - heading "The flow is the status" [level=2] [ref=e477]
+            - paragraph [ref=e478]: "Every “all systems operational” page that lied to a customer was measuring the wrong thing: an HTTP 200 on a URL nobody has a problem with. You are already measuring the right thing. Point these flows at the status page and it reports whether a user can sign in, not whether the login page renders."
+            - list [ref=e479]:
+              - listitem [ref=e480]:
+                - generic [ref=e481]: "Components map to journeys: sign in, checkout, run a job"
+              - listitem [ref=e482]:
+                - generic [ref=e483]: The incident opens when the flow breaks, and closes when it works again
+              - listitem [ref=e484]:
+                - generic [ref=e485]: Subscribers are notified automatically, so support is not the broadcast channel
+              - listitem [ref=e486]:
+                - generic [ref=e487]: Your own domain, public or private, no separate status page vendor
+            - paragraph [ref=e488]:
+              - link "More on status pages →" [ref=e489] [cursor=pointer]:
+                - /url: /product/status-pages/
+          - generic [ref=e491]:
+            - generic [ref=e492]:
+              - generic [ref=e493]: Acme Status
+              - generic [ref=e494]: status.acme.com
+            - generic [ref=e497]:
+              - generic [ref=e499]: Sign-in failing for some users
+              - generic [ref=e500]: MAJOR
+            - generic [ref=e502]:
+              - generic [ref=e503]:
+                - generic [ref=e504]: Investigating
+                - generic [ref=e505]: 08:47 UTC
+                - generic [ref=e506]: posted by check
+              - paragraph [ref=e507]: The sign-in flow is failing at the second factor. Users with an active session are unaffected. We are investigating.
+            - generic [ref=e508]:
+              - generic [ref=e510]:
+                - generic [ref=e513]: Sign in
+                - generic [ref=e514]: Major outage
+              - generic [ref=e577]:
+                - generic [ref=e580]: Sign up
+                - generic [ref=e581]: Operational
+              - generic [ref=e644]:
+                - generic [ref=e647]: Dashboard
+                - generic [ref=e648]: Operational
+              - generic [ref=e711]:
+                - generic [ref=e714]: Billing
+                - generic [ref=e715]: Operational
+              - generic [ref=e777]:
+                - generic [ref=e778]: 60 days ago
+                - generic [ref=e779]: Today
+            - generic [ref=e780]: Subscribers were notified automatically when the check failed.
+        - generic [ref=e782]:
+          - generic [ref=e783]:
+            - heading "It plugs into the stack you already run" [level=2] [ref=e784]
+            - paragraph [ref=e785]: Checkly is the synthetic layer, not another silo. Results flow out to your metrics, traces, and incident tooling through native integrations and raw webhooks.
+          - generic [ref=e787]:
+            - 'link "Synthetic monitoring The capability behind this: real browsers driving real journeys on a schedule. Learn more" [ref=e788] [cursor=pointer]':
+              - /url: /product/synthetic-monitoring/
+              - generic [ref=e789]:
+                - img [ref=e791]
+                - heading "Synthetic monitoring" [level=3] [ref=e795]
+              - paragraph [ref=e796]: "The capability behind this: real browsers driving real journeys on a schedule."
+              - generic [ref=e797]:
+                - text: Learn more
+                - img [ref=e798]
+            - link "Playwright checks Run the specs your team already writes, unchanged, as production monitors. Learn more" [ref=e800] [cursor=pointer]:
+              - /url: /docs/detect/synthetic-monitoring/playwright-checks/
+              - generic [ref=e801]:
+                - img [ref=e803]
+                - heading "Playwright checks" [level=3] [ref=e806]
+              - paragraph [ref=e807]: Run the specs your team already writes, unchanged, as production monitors.
+              - generic [ref=e808]:
+                - text: Learn more
+                - img [ref=e809]
+            - link "Global locations Run each flow from the regions your users sign in from, not from one datacenter. Learn more" [ref=e811] [cursor=pointer]:
+              - /url: /product/uptime-monitoring/
+              - generic [ref=e812]:
+                - img [ref=e814]
+                - heading "Global locations" [level=3] [ref=e817]
+              - paragraph [ref=e818]: Run each flow from the regions your users sign in from, not from one datacenter.
+              - generic [ref=e819]:
+                - text: Learn more
+                - img [ref=e820]
+            - link "Slack Slack The failing step, the screenshot, and the region, in the channel that owns it. Learn more" [ref=e822] [cursor=pointer]:
+              - /url: /docs/integrations/alerts/slack/
+              - generic [ref=e823]:
+                - img "Slack" [ref=e825]
+                - heading "Slack" [level=3] [ref=e826]
+              - paragraph [ref=e827]: The failing step, the screenshot, and the region, in the channel that owns it.
+              - generic [ref=e828]:
+                - text: Learn more
+                - img [ref=e829]
+            - link "PagerDuty PagerDuty Incidents open and auto-resolve with your escalation policy. Learn more" [ref=e831] [cursor=pointer]:
+              - /url: /docs/integrations/incident-management/pagerduty/
+              - generic [ref=e832]:
+                - img "PagerDuty" [ref=e834]
+                - heading "PagerDuty" [level=3] [ref=e835]
+              - paragraph [ref=e836]: Incidents open and auto-resolve with your escalation policy.
+              - generic [ref=e837]:
+                - text: Learn more
+                - img [ref=e838]
+            - link "Status pages Tell customers the login flow is degraded before they tell you. Learn more" [ref=e840] [cursor=pointer]:
+              - /url: /product/status-pages/
+              - generic [ref=e841]:
+                - img [ref=e843]
+                - heading "Status pages" [level=3] [ref=e845]
+              - paragraph [ref=e846]: Tell customers the login flow is degraded before they tell you.
+              - generic [ref=e847]:
+                - text: Learn more
+                - img [ref=e848]
+            - link "Dashboards Per-flow, per-region history for the journeys that matter most. Learn more" [ref=e850] [cursor=pointer]:
+              - /url: /docs/communicate/dashboards/
+              - generic [ref=e851]:
+                - img [ref=e853]
+                - heading "Dashboards" [level=3] [ref=e858]
+              - paragraph [ref=e859]: Per-flow, per-region history for the journeys that matter most.
+              - generic [ref=e860]:
+                - text: Learn more
+                - img [ref=e861]
+            - link "Traces Connect the failing step to the backend span that caused it. Learn more" [ref=e863] [cursor=pointer]:
+              - /url: /product/traces/
+              - generic [ref=e864]:
+                - img [ref=e866]
+                - heading "Traces" [level=3] [ref=e873]
+              - paragraph [ref=e874]: Connect the failing step to the backend span that caused it.
+              - generic [ref=e875]:
+                - text: Learn more
+                - img [ref=e876]
+            - link "Rocky AI Arrive at the incident with a read on why the step broke, not just that it did. Learn more" [ref=e878] [cursor=pointer]:
+              - /url: /product/ai-analysis/
+              - generic [ref=e879]:
+                - img [ref=e881]
+                - heading "Rocky AI" [level=3] [ref=e883]
+              - paragraph [ref=e884]: Arrive at the incident with a read on why the step broke, not just that it did.
+              - generic [ref=e885]:
+                - text: Learn more
+                - img [ref=e886]
+            - link "Alerting Cross-region retries confirm the flow is really broken before anyone is paged. Learn more" [ref=e888] [cursor=pointer]:
+              - /url: /product/alerting/
+              - generic [ref=e889]:
+                - img [ref=e891]
+                - heading "Alerting" [level=3] [ref=e896]
+              - paragraph [ref=e897]: Cross-region retries confirm the flow is really broken before anyone is paged.
+              - generic [ref=e898]:
+                - text: Learn more
+                - img [ref=e899]
+        - generic [ref=e902]:
+          - generic [ref=e903]:
+            - heading "See the step that broke" [level=2] [ref=e904]
+            - paragraph [ref=e905]: "A multi-step flow that fails tells you almost nothing on its own. Which step, in which region, and was it the browser or the backend? Every run answers all three: each step is timed separately, the trace continues past the browser into the request, and Rocky AI reads both before anyone opens the replay."
+            - list [ref=e906]:
+              - listitem [ref=e907]:
+                - generic [ref=e908]: Per-step timing, so a slow second factor is visible before it becomes a failure
+              - listitem [ref=e909]:
+                - generic [ref=e910]: Full screenshot and video replay of the exact moment it broke
+              - listitem [ref=e911]:
+                - generic [ref=e912]: The trace names the backend request behind the failing step
+              - listitem [ref=e913]:
+                - generic [ref=e914]: Rocky AI summarizes the likely cause, third-party dependencies included
+            - paragraph [ref=e915]:
+              - link "See how Rocky AI reads a failure →" [ref=e916] [cursor=pointer]:
+                - /url: /product/ai-analysis/
+          - generic [ref=e918]:
+            - generic [ref=e919]:
+              - generic [ref=e920]:
+                - img [ref=e921]
+                - text: Root Cause
+              - generic [ref=e925]:
+                - img [ref=e926]
+                - text: Rocky AI
+            - paragraph [ref=e928]:
+              - text: The
+              - code [ref=e929]: sign in
+              - text: flow reached the second factor and stopped there. The TOTP verification call returned 504 Gateway Timeout, so the browser sat on a valid code that was never checked. Password entry and session handling are both fine.
+            - generic [ref=e930]:
+              - generic [ref=e931]:
+                - text: Evidence
+                - generic [ref=e932]: "3"
+              - list [ref=e933]:
+                - listitem [ref=e934]:
+                  - paragraph [ref=e935]:
+                    - text: The
+                    - code [ref=e936]: sign in
+                    - text: check failed on step 3 of 4. Steps 1 and 2 completed in
+                    - code [ref=e937]: 1.4s
+                    - text: ", so the page and the password path are healthy."
+                  - generic [ref=e938]:
+                    - img [ref=e939]
+                    - text: per-step timing
+                - listitem [ref=e943]:
+                  - paragraph [ref=e944]:
+                    - text: Spans show
+                    - code [ref=e945]: POST /auth/verify-totp
+                    - text: returning
+                    - code [ref=e946]: "504"
+                    - text: after
+                    - code [ref=e947]: 30s
+                    - text: at the gateway, never reaching the auth service.
+                  - generic [ref=e948]:
+                    - img [ref=e949]
+                    - text: otel spans
+                - listitem [ref=e956]:
+                  - paragraph [ref=e957]:
+                    - text: Runs from
+                    - code [ref=e958]: us-east-1
+                    - text: and
+                    - code [ref=e959]: ap-southeast-1
+                    - text: fail identically, so this is not a regional edge problem.
+                  - generic [ref=e960]:
+                    - img [ref=e961]
+                    - text: parallel runs
+        - generic [ref=e965]:
+          - heading "Teams watching the paths that matter" [level=2] [ref=e967]
+          - generic [ref=e968]:
+            - figure "Aliasger Kiranawala Lead SDET · Locus" [ref=e969]:
+              - blockquote [ref=e970]:
+                - paragraph [ref=e971]: “Checkly has helped us save engineering resources and expenses. The number of our customer support tickets are then reduced because the customer is already proactively informed about problems without having to report the issues themselves.”
+              - generic [ref=e972]:
+                - paragraph [ref=e973]: Aliasger Kiranawala
+                - paragraph [ref=e974]: Lead SDET · Locus
+            - figure "Connor Hicks Lead Developer · 1Password" [ref=e975]:
+              - blockquote [ref=e976]:
+                - paragraph [ref=e977]: "“Checkly is a fabulous developer tool! The flexible features and developer-friendly API made the integration super easy. Bonus: their support is super friendly and knowledgeable!”"
+              - generic [ref=e978]:
+                - paragraph [ref=e979]: Connor Hicks
+                - paragraph [ref=e980]: Lead Developer · 1Password
+            - figure "Leo Lamprecht SVP Product · Vercel" [ref=e981]:
+              - blockquote [ref=e982]:
+                - paragraph [ref=e983]: "“Checkly is incredible: It combines Pingdom, Ghost Inspector and Assertible all in the same app, and the insights are much more detailed.”"
+              - generic [ref=e984]:
+                - paragraph [ref=e985]: Leo Lamprecht
+                - paragraph [ref=e986]: SVP Product · Vercel
+            - figure "Jake Cooper Founder / Engineer · Railway" [ref=e987]:
+              - blockquote [ref=e988]:
+                - paragraph [ref=e989]: “We’ve been using Checkly for the past months. It’s been phenomenal. Super easy to get setup, works flawlessly and intuitively. The team are super receptive & quick to help.”
+              - generic [ref=e990]:
+                - paragraph [ref=e991]: Jake Cooper
+                - paragraph [ref=e992]: Founder / Engineer · Railway
+            - figure "Tavares Chambless Manager, Quality Assurance · Loyal Health" [ref=e993]:
+              - blockquote [ref=e994]:
+                - paragraph [ref=e995]: “Checkly CLI has enhanced our engineering team’s ability to quickly build, validate and deploy an entire suite of checks from their local development environment.”
+              - generic [ref=e996]:
+                - paragraph [ref=e997]: Tavares Chambless
+                - paragraph [ref=e998]: Manager, Quality Assurance · Loyal Health
+            - figure "Brian Stack Infrastructure Engineer · Render" [ref=e999]:
+              - blockquote [ref=e1000]:
+                - paragraph [ref=e1001]: “Checkly was incredibly easy to integrate. Even our initial traces setup was quick, and the documentation was better than OTel’s own.”
+              - generic [ref=e1002]:
+                - paragraph [ref=e1003]: Brian Stack
+                - paragraph [ref=e1004]: Infrastructure Engineer · Render
+        - generic [ref=e1006]:
+          - generic [ref=e1007]:
+            - heading "Frequently asked questions" [level=2] [ref=e1008]
+            - paragraph [ref=e1009]: Picking the flows, handling credentials, keeping synthetic traffic out of your analytics.
+          - generic [ref=e1011]:
+            - generic [ref=e1012]:
+              - button "Which flows should we monitor first?" [ref=e1013] [cursor=pointer]:
+                - generic [ref=e1014]: Which flows should we monitor first?
+                - img [ref=e1015]
+              - paragraph [ref=e1018]: "Start with the ones that generate a support ticket when they break: signing in, signing up, and whatever your product’s core action is — placing an order, sending a message, running a job. Three or four well-chosen flows catch most of what matters. Breadth comes later; depth on the critical path comes first."
+            - generic [ref=e1019]:
+              - button "How do we handle login, MFA, and rotating credentials?" [ref=e1020] [cursor=pointer]:
+                - generic [ref=e1021]: How do we handle login, MFA, and rotating credentials?
+                - img [ref=e1022]
+              - paragraph [ref=e1025]: Use a dedicated probe account rather than a real customer’s. Credentials live in encrypted environment variables, and for time-based second factors you can generate the code at run time from a seed stored the same way. Session reuse is available too, though for a login flow the point is usually to exercise the whole authentication path every run.
+            - generic [ref=e1026]:
+              - button "Won’t synthetic traffic pollute our analytics and business data?" [ref=e1027] [cursor=pointer]:
+                - generic [ref=e1028]: Won’t synthetic traffic pollute our analytics and business data?
+                - img [ref=e1029]
+              - paragraph [ref=e1032]: It will if you do nothing about it, so filter it. Send a known user agent or header from your checks and exclude it in your analytics tool, use a dedicated probe account you can filter on, and point transactional steps at test mode or a test SKU. This is worth deciding before the first check goes live, not after.
+            - generic [ref=e1033]:
+              - button "How often should critical flows run?" [ref=e1034] [cursor=pointer]:
+                - generic [ref=e1035]: How often should critical flows run?
+                - img [ref=e1036]
+              - paragraph [ref=e1039]: Frequently enough that the detection window is shorter than your tolerance for the outage. Every five minutes is a common starting point for a login or checkout flow, with the underlying APIs checked every minute. Raise it during a launch or a peak period and lower it for flows where a longer gap is genuinely acceptable.
+            - generic [ref=e1040]:
+              - button "What do we get when a step fails?" [ref=e1041] [cursor=pointer]:
+                - generic [ref=e1042]: What do we get when a step fails?
+                - img [ref=e1043]
+              - paragraph [ref=e1046]: The run captures a full screenshot, a video replay, and a trace, with each step timed separately, so you can see whether the second factor timed out or the dashboard rendered empty. AI root cause analysis reads that evidence and summarizes the likely cause before anyone opens the recording.
+            - generic [ref=e1047]:
+              - button "Can these flows drive our status page?" [ref=e1048] [cursor=pointer]:
+                - generic [ref=e1049]: Can these flows drive our status page?
+                - img [ref=e1050]
+              - paragraph [ref=e1053]: Yes, and they are the right flows to drive it. A status page built on “the site returns 200” is the one that says everything is fine while nobody can log in. Wire the flow checks to a status page on your own domain and the incident opens when the login or checkout check fails, notifies subscribers, and resolves when it recovers, so what customers read matches what your users are actually experiencing.
+            - generic [ref=e1054]:
+              - button "How do we avoid paging someone for a flow that is only broken in one region?" [ref=e1055] [cursor=pointer]:
+                - generic [ref=e1056]: How do we avoid paging someone for a flow that is only broken in one region?
+                - img [ref=e1057]
+              - paragraph [ref=e1060]: Retry from a different region before alerting. Every failed run can be retried with fixed, linear, or exponential backoff, from the same location or a different one, so a regional network blip resolves itself. For checks running in parallel across locations you can also require a percentage of locations to fail before anything fires, and route degradation to a different channel than outright failure.
+            - generic [ref=e1061]:
+              - button "Can we run the same flows against staging and preview environments?" [ref=e1062] [cursor=pointer]:
+                - generic [ref=e1063]: Can we run the same flows against staging and preview environments?
+                - img [ref=e1064]
+              - paragraph [ref=e1067]: Yes, and teams usually do. The same spec runs against a preview URL in CI to gate the merge and against production on a schedule afterwards, with the target injected as an environment variable. One suite, two jobs, no second set of tests to keep in sync.
+        - generic [ref=e1070]:
+          - heading "Complete the journey before your users have to" [level=2] [ref=e1071]
+          - paragraph [ref=e1072]: Pick the four flows that generate support tickets, write them once, and let them run every five minutes from everywhere that matters.
+          - generic [ref=e1073]:
+            - link "Start for free" [ref=e1074] [cursor=pointer]:
+              - /url: https://app.checklyhq.com/signup?segment_anon_id=03b26b9d-8126-4df9-9b3b-47ce3689a434
+            - link "Book a demo" [ref=e1075] [cursor=pointer]:
+              - /url: /demo-request/
+    - contentinfo [ref=e1076]:
+      - generic [ref=e1077]:
+        - generic [ref=e1078]:
+          - generic [ref=e1079]:
+            - generic [ref=e1080]:
+              - paragraph [ref=e1082]: Detect
+              - link "Uptime Monitoring" [ref=e1083] [cursor=pointer]:
+                - /url: /product/uptime-monitoring/
+              - link "Heartbeat Monitoring" [ref=e1084] [cursor=pointer]:
+                - /url: /product/heartbeat-monitoring/
+              - link "Synthetic Monitoring" [ref=e1085] [cursor=pointer]:
+                - /url: /product/synthetic-monitoring/
+              - link "Testing" [ref=e1086] [cursor=pointer]:
+                - /url: /product/testing/
+              - link "API Monitoring" [ref=e1087] [cursor=pointer]:
+                - /url: /product/api-monitoring/
+              - link "Playwright Checks" [ref=e1088] [cursor=pointer]:
+                - /url: /product/playwright-check-suites/
+              - link "Downtime Detector" [ref=e1089] [cursor=pointer]:
+                - /url: /availability/
+            - generic [ref=e1090]:
+              - paragraph [ref=e1092]: Communicate
+              - link "Status Pages" [ref=e1093] [cursor=pointer]:
+                - /url: /product/status-pages/
+              - link "Alerts" [ref=e1094] [cursor=pointer]:
+                - /url: /product/alerting/
+            - generic [ref=e1095]:
+              - paragraph [ref=e1097]: Resolve
+              - link "AI Root Cause Analysis" [ref=e1098] [cursor=pointer]:
+                - /url: /product/ai-analysis/
+              - link "Traces" [ref=e1099] [cursor=pointer]:
+                - /url: /product/traces/
+            - link "Platform Status" [ref=e1101] [cursor=pointer]:
+              - /url: https://is.checkly.online/
+              - text: Platform Status
+          - generic [ref=e1105]:
+            - generic [ref=e1106]:
+              - paragraph [ref=e1108]: Monitoring as Code
+              - link "What is Monitoring as Code?" [ref=e1109] [cursor=pointer]:
+                - /url: /product/monitoring-as-code/
+              - link "Checkly CLI" [ref=e1110] [cursor=pointer]:
+                - /url: /cli/
+              - link "Agent Skills" [ref=e1111] [cursor=pointer]:
+                - /url: /docs/ai/skills/
+              - link "Terraform Provider" [ref=e1112] [cursor=pointer]:
+                - /url: /product/terraform-provider/
+              - link "All Integrations" [ref=e1113] [cursor=pointer]:
+                - /url: /docs/integrations/alerts/discord/
+              - link "Pulumi Provider" [ref=e1114] [cursor=pointer]:
+                - /url: /product/pulumi-provider/
+            - generic [ref=e1115]:
+              - paragraph [ref=e1117]: Company
+              - link "About" [ref=e1118] [cursor=pointer]:
+                - /url: /about/
+              - link "Careers" [ref=e1119] [cursor=pointer]:
+                - /url: /careers/
+              - link "Security" [ref=e1120] [cursor=pointer]:
+                - /url: /security/
+              - link "Pricing" [ref=e1121] [cursor=pointer]:
+                - /url: /pricing/
+              - link "Customers" [ref=e1122] [cursor=pointer]:
+                - /url: /customers/
+              - link "Terms of use" [ref=e1123] [cursor=pointer]:
+                - /url: /terms/
+              - link "Privacy" [ref=e1124] [cursor=pointer]:
+                - /url: /privacy/
+          - generic [ref=e1125]:
+            - generic [ref=e1126]:
+              - paragraph [ref=e1128]: Developers
+              - link "Blog" [ref=e1129] [cursor=pointer]:
+                - /url: /blog/
+              - link "Learn" [ref=e1130] [cursor=pointer]:
+                - /url: /docs/learn/
+              - link "Webinars" [ref=e1131] [cursor=pointer]:
+                - /url: /webinars/
+              - link "Events" [ref=e1132] [cursor=pointer]:
+                - /url: /events/
+            - generic [ref=e1133]:
+              - paragraph [ref=e1135]: Resources
+              - link "Public Roadmap" [ref=e1136] [cursor=pointer]:
+                - /url: https://feedback.checklyhq.com/
+              - link "Community Slack" [ref=e1137] [cursor=pointer]:
+                - /url: /slack/
+            - generic [ref=e1138]:
+              - paragraph [ref=e1140]: Connect
+              - link "Contact Us" [ref=e1141] [cursor=pointer]:
+                - /url: /contact-sales/
+              - link "Support" [ref=e1142] [cursor=pointer]:
+                - /url: mailto:support@checklyhq.com
+              - link "Twitter @ChecklyHQ" [ref=e1143] [cursor=pointer]:
+                - /url: https://twitter.com/checklyhq
+              - link "YouTube" [ref=e1144] [cursor=pointer]:
+                - /url: https://youtube.com/checklyhq
+              - link "LinkedIn" [ref=e1145] [cursor=pointer]:
+                - /url: https://linkedin.com/company/checkly
+          - generic [ref=e1146]:
+            - generic [ref=e1147]:
+              - paragraph [ref=e1149]: Community
+              - link "About" [ref=e1150] [cursor=pointer]:
+                - /url: /about/
+              - link "Careers" [ref=e1151] [cursor=pointer]:
+                - /url: /careers/
+            - generic [ref=e1152]:
+              - paragraph [ref=e1154]: How we compare
+              - link "Alternative to Datadog" [ref=e1155] [cursor=pointer]:
+                - /url: /datadog-alternative/
+              - link "Alternative to New Relic" [ref=e1156] [cursor=pointer]:
+                - /url: /new-relic-alternative/
+              - link "Alternative to Dynatrace" [ref=e1157] [cursor=pointer]:
+                - /url: /dynatrace-alternative/
+              - link "Alternative to Pingdom" [ref=e1158] [cursor=pointer]:
+                - /url: /alternative-pingdom/
+              - link "Alternative to Runscope" [ref=e1159] [cursor=pointer]:
+                - /url: /alternative-runscope/
+            - generic [ref=e1160]:
+              - paragraph [ref=e1162]: Articles
+              - link "What is Synthetic Monitoring?" [ref=e1163] [cursor=pointer]:
+                - /url: /learn/monitoring/synthetic-monitoring/
+              - link "What is API monitoring?" [ref=e1164] [cursor=pointer]:
+                - /url: /learn/monitoring/api-monitoring/
+              - link "What is Playwright?" [ref=e1165] [cursor=pointer]:
+                - /url: /learn/playwright/what-is-playwright/
+              - link "A guide to Monitoring as Code" [ref=e1166] [cursor=pointer]:
+                - /url: /learn/monitoring/monitoring-as-code/
+              - link "Playwright vs other frameworks" [ref=e1167] [cursor=pointer]:
+                - /url: /learn/playwright/playwright-vs-others/
+        - generic [ref=e1168]:
+          - generic [ref=e1169]:
+            - generic [ref=e1170]:
+              - link "Hi!" [ref=e1171] [cursor=pointer]:
+                - /url: /
+                - img [ref=e1172]
+              - link "Available in AWS Marketplace" [ref=e1177] [cursor=pointer]:
+                - /url: https://aws.amazon.com/marketplace/pp/prodview-cntlyhi5si6ka?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
+                - img "Available in AWS Marketplace" [ref=e1178]
+            - generic [ref=e1179]:
+              - link "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e1180] [cursor=pointer]:
+                - /url: /checkly-and-monitoring-as-code-mac-earn-third-gartner/
+                - img "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e1181]
+              - link "SOC Certification" [ref=e1182] [cursor=pointer]:
+                - /url: /security/
+                - img "SOC Certification" [ref=e1183]
+          - generic [ref=e1184]: Copyright © 2026 Checkly Inc. All rights reserved.
+  - alert [ref=e1185]: "Monitor Critical User Flows: Login, Checkout, Signup | Checkly"
+  - button [ref=e1186] [cursor=pointer]:
+    - img [ref=e1187]
+  - button [ref=e1189] [cursor=pointer]:
+    - img [ref=e1190]
+```
+
+# Test source
+
+```ts
+  1  | import { expect, test } from '@donobu/test';
+  2  | 
+  3  | test('Checkly dev docs search', async ({ page }) => {
+  4  |   await page.goto('https://checklyhq.com');
+  5  |   await page.ai(
+  6  |     `Click on the Developers dropdown menu, then click into to the Documentation option`,
+  7  |   );
+> 8  |   expect(page.url()).toEqual('https://www.checklyhq.com/docs/');
+     |                      ^ Error: expect(received).toEqual(expected) // deep equality
+  9  |   await page.ai(
+  10 |     `Do a search for "Playwright check suite", and chose the match for "Constructs > DETECT" from the search suggestions dropdown.
+  11 |     NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".`,
+  12 |   );
+  13 |   expect(page.url()).toEqual(
+  14 |     'https://www.checklyhq.com/docs/constructs/playwright-check/',
+  15 |   );
+  16 | });
+  17 | 
+```
