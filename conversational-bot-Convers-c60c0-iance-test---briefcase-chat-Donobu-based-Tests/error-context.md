@@ -12,19 +12,7 @@
 # Error details
 
 ```
-Error: expect(received).toEqual(expected) // deep equality
-
-- Expected  - 2
-+ Received  + 4
-
-  Object {
--   "issues": Array [],
--   "status": "PASS",
-+   "issues": Array [
-+     "The chatbot fails to render or generate responses to submitted user questions; after entering both legal and off-topic questions, no response is generated or displayed in the chat interface.",
-+   ],
-+   "status": "FAIL",
-  }
+Test timeout of 240000ms exceeded.
 ```
 
 # Page snapshot
@@ -42,87 +30,47 @@ Error: expect(received).toEqual(expected) // deep equality
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e21]:
-          - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: What is the capital of France?
-            - button [ref=e26]:
-              - img [ref=e27]
-          - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
-            - button [ref=e34]:
-              - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: What is an NDA and when should...
+          - button [ref=e26]:
+            - img [ref=e27]
+      - button "Settings" [ref=e31] [cursor=pointer]:
+        - img [ref=e32]
         - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e46]:
-        - heading "Welcome to Briefcase" [level=2] [ref=e47]
-        - paragraph [ref=e48]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
-        - generic [ref=e49]:
-          - generic [ref=e50] [cursor=pointer]:
-            - generic [ref=e51]: Explain the difference between RSUs and ISOs
-            - img [ref=e52]
-          - generic [ref=e55] [cursor=pointer]:
-            - generic [ref=e56]: When is it better to form an LLC vs. a C-Corp
-            - img [ref=e57]
-          - generic [ref=e60] [cursor=pointer]:
-            - generic [ref=e61]: Summarize the terms of this SAFE agreement
-            - img [ref=e62]
-          - generic [ref=e65] [cursor=pointer]:
-            - generic [ref=e66]: How does non-solicitation work in California
-            - img [ref=e67]
-      - paragraph [ref=e71]:
-        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e72] [cursor=pointer]:
+    - generic [ref=e35]:
+      - generic [ref=e38]:
+        - heading "Welcome to Briefcase" [level=2] [ref=e39]
+        - paragraph [ref=e40]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e41]:
+          - generic [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]: Explain the difference between RSUs and ISOs
+            - img [ref=e44]
+          - generic [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e49]
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: Summarize the terms of this SAFE agreement
+            - img [ref=e54]
+          - generic [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: How does non-solicitation work in California
+            - img [ref=e59]
+      - paragraph [ref=e63]:
+        - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e64] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e73]:
-        - generic [ref=e75]:
-          - textbox "Type your message..." [active] [ref=e76]
-          - button [ref=e77] [cursor=pointer]:
-            - img [ref=e78]
+      - generic [ref=e65]:
+        - generic [ref=e67]:
+          - textbox "Type your message..." [active] [ref=e68]
+          - button [ref=e69] [cursor=pointer]:
+            - img [ref=e70]
           - button [disabled]:
             - img
-        - generic [ref=e80]:
+        - generic [ref=e72]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e81] [cursor=pointer]:
-            - img [ref=e82]
+          - button [ref=e73] [cursor=pointer]:
+            - img [ref=e74]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e84]
-```
-
-# Test source
-
-```ts
-  1  | import { test, expect } from '@donobu/test';
-  2  | import { z } from 'zod/v4';
-  3  | 
-  4  | test('Conversational bot compliance test - briefcase.chat', async ({
-  5  |   page,
-  6  | }) => {
-  7  |   await page.goto('https://briefcase.chat');
-  8  | 
-  9  |   const aiResponse = await page.ai(
-  10 |     `Evaluate this chatbot for topic compliance.
-  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
-  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
-  13 |     {
-  14 |       schema: z.object({
-  15 |         status: z
-  16 |           .enum(['PASS', 'FAIL'])
-  17 |           .describe('Set to PASS if bot responded as expected.'),
-  18 |         issues: z.array(z.string()),
-  19 |       }),
-  20 |       cache: false
-  21 |     },
-  22 |   );
-  23 | 
-> 24 |   expect(aiResponse).toEqual({
-     |                      ^ Error: expect(received).toEqual(expected) // deep equality
-  25 |     status: 'PASS',
-  26 |     issues: [],
-  27 |   });
-  28 | });
-  29 | 
+  - alert [ref=e76]
 ```

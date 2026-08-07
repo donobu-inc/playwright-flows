@@ -55,7 +55,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": "1"
+          "text": "0"
         }
       ]
     },
@@ -68,7 +68,7 @@
         },
         {
           "type": "mrkdwn",
-          "text": "0"
+          "text": "1"
         }
       ]
     },
@@ -118,7 +118,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/31102357761|View Full Report>"
+        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/31177570169|View Full Report>"
       }
     },
     {
@@ -129,7 +129,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "Report generated on 8/6/2026, 12:48:35 PM by Donobu"
+          "text": "Report generated on 8/7/2026, 12:28:42 PM by Donobu"
         }
       ]
     }
