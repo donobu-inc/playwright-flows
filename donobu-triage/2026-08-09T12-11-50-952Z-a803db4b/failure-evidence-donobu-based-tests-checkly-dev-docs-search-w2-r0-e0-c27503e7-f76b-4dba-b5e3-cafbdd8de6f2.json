@@ -1,9 +1,9 @@
 {
   "schemaVersion": 5,
-  "evidenceId": "9dd415d2-6f75-4f7d-8bfe-fdcb6247bbea",
-  "runId": "2026-08-08T12-11-01-609Z-a97bb5e3",
-  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-08T12-11-01-609Z-a97bb5e3",
-  "collectedAtIso": "2026-08-08T12:11:45.084Z",
+  "evidenceId": "c27503e7-f76b-4dba-b5e3-cafbdd8de6f2",
+  "runId": "2026-08-09T12-11-50-952Z-a803db4b",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-09T12-11-50-952Z-a803db4b",
+  "collectedAtIso": "2026-08-09T12:12:37.607Z",
   "failureContext": {
     "testCase": {
       "title": "Checkly dev docs search",
@@ -15,7 +15,7 @@
       "repeatEachIndex": 0,
       "workerIndex": 2,
       "timeout": 240000,
-      "duration": 19582,
+      "duration": 19791,
       "annotations": [],
       "autoHealEnabled": true
     },
@@ -86,7 +86,7 @@
     },
     "donobuFlow": {
       "metadata": {
-        "id": "a3cd197e-af18-4f43-98a6-32f6322f97d5",
+        "id": "00248137-69c2-4f0f-b797-5dc617c4f213",
         "name": "checkly.test.ts > Checkly dev docs search",
         "runMode": "DETERMINISTIC",
         "state": "FAILED",
@@ -94,8 +94,8 @@
         "overallObjective": null,
         "allowedTools": [],
         "envVars": [],
-        "startedAt": 1786191082568,
-        "completedAt": 1786191101675,
+        "startedAt": 1786277533487,
+        "completedAt": 1786277552658,
         "maxToolCalls": null,
         "gptConfigName": null,
         "defaultMessageDuration": 250,
@@ -103,69 +103,69 @@
       },
       "recentToolCalls": [
         {
-          "id": "adhoc_7f646a2387cd44afa5132ae6643d35f5",
+          "id": "adhoc_8e18c957aacb44e5a65d6945babce626",
           "toolName": "goToWebpage",
           "success": true,
           "outcomeSummary": "Successfully navigated to https://checklyhq.com",
-          "durationMs": 2106,
+          "durationMs": 3707,
           "page": "https://checklyhq.com",
-          "startedAtIso": "2026-08-08T12:11:24.001Z",
-          "completedAtIso": "2026-08-08T12:11:26.107Z",
+          "startedAtIso": "2026-08-09T12:12:14.796Z",
+          "completedAtIso": "2026-08-09T12:12:18.503Z",
           "parameters": "{\n  \"url\": \"https://checklyhq.com\"\n}"
         },
         {
-          "id": "adhoc_2cb4890ff9274cb7bef32b66bdec115e",
+          "id": "adhoc_45cd9d8c4bd24ffcb7d5e6e223cd9e2e",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button class=\"nav-item\" aria-expanded=\"false\" aria-controls=\"nav-dropdown-solutions\" aria-haspopup=\"true\">Solutions</button>",
-          "durationMs": 2632,
+          "durationMs": 1985,
           "page": "https://www.checklyhq.com/",
-          "startedAtIso": "2026-08-08T12:11:26.470Z",
-          "completedAtIso": "2026-08-08T12:11:29.102Z",
+          "startedAtIso": "2026-08-09T12:12:18.833Z",
+          "completedAtIso": "2026-08-09T12:12:20.818Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button\",\n      \"(.//button[normalize-space(.)='Developers'])[1]\",\n      \"div:nth-of-type(2) > button.nav-item\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_5c345675532241c781f816a3349e5332",
+          "id": "adhoc_2fe17266f2b64be9bb7f4787d1ca53e8",
           "toolName": "hoverOverElement",
           "success": true,
           "outcomeSummary": "Hovered over: <button class=\"nav-item\" aria-expanded=\"false\" aria-controls=\"nav-dropdown-solutions\" aria-haspopup=\"true\">Solutions</button>",
-          "durationMs": 2595,
+          "durationMs": 2609,
           "page": "https://www.checklyhq.com/",
-          "startedAtIso": "2026-08-08T12:11:29.822Z",
-          "completedAtIso": "2026-08-08T12:11:32.417Z",
+          "startedAtIso": "2026-08-09T12:12:21.487Z",
+          "completedAtIso": "2026-08-09T12:12:24.096Z",
           "parameters": "{\n  \"selector\": {\n    \"element\": [\n      \"#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button\",\n      \"(.//button[normalize-space(.)='Developers'])[1]\",\n      \"div:nth-of-type(2) > button.nav-item\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_1bdcc45966634a778e063089e710f5f4",
+          "id": "adhoc_08da5972d34e418399f6a6e3b07b6228",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked on: <button class=\"nav-item\" aria-expanded=\"false\" aria-controls=\"nav-dropdown-solutions\" aria-haspopup=\"true\">Solutions</button>",
-          "durationMs": 1895,
+          "durationMs": 1705,
           "page": "https://www.checklyhq.com/",
-          "startedAtIso": "2026-08-08T12:11:33.108Z",
-          "completedAtIso": "2026-08-08T12:11:35.003Z",
+          "startedAtIso": "2026-08-09T12:12:24.682Z",
+          "completedAtIso": "2026-08-09T12:12:26.387Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button\",\n      \"(.//button[normalize-space(.)='Developers'])[1]\",\n      \"div:nth-of-type(2) > button.nav-item\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_24576eb73ff544c6917f6f29bc95d145",
+          "id": "adhoc_3a58374f2b6142b2b88cf2af6110fd9f",
           "toolName": "click",
           "success": true,
           "outcomeSummary": "Left-clicked at 583.4499969482422px by 151.1875px on: <a class=\"flex flex-col gap-0.5 px-2.5 py-[3px] -mx-2.5 rounded-md transition-colors duration-150 group hover:bg-gray-100\" href=\"/docs/\">DocumentationLearn key concepts ...</a>",
-          "durationMs": 3957,
+          "durationMs": 3758,
           "page": "https://www.checklyhq.com/",
-          "startedAtIso": "2026-08-08T12:11:35.690Z",
-          "completedAtIso": "2026-08-08T12:11:39.647Z",
+          "startedAtIso": "2026-08-09T12:12:26.991Z",
+          "completedAtIso": "2026-08-09T12:12:30.749Z",
           "parameters": "{\n  \"button\": \"left\",\n  \"selector\": {\n    \"element\": [\n      \"#nav-dropdown-developers > div > div > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)\",\n      \".//a[normalize-space(.)='DocumentationLearn key concepts and features']\",\n      \"[href='/docs/']\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         },
         {
-          "id": "adhoc_4297ea56e9c34cd2b73bbfeb07c8ac15",
+          "id": "adhoc_d089dff3e3d1489e873127f99a08df08",
           "toolName": "markObjectiveComplete",
           "success": true,
           "outcomeSummary": "Objective has been marked as complete.",
-          "durationMs": 485,
+          "durationMs": 512,
           "page": "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/",
-          "startedAtIso": "2026-08-08T12:11:40.429Z",
-          "completedAtIso": "2026-08-08T12:11:40.914Z",
+          "startedAtIso": "2026-08-09T12:12:31.447Z",
+          "completedAtIso": "2026-08-09T12:12:31.959Z",
           "parameters": "{\n  \"details\": \"Successfully clicked the Developers dropdown and navigated to the Documentation option.\",\n  \"rationale\": \"\"\n}"
         }
       ]
@@ -177,24 +177,24 @@
     },
     "browserLogs": {
       "totalBrowserEntries": 1,
-      "totalNetworkEntries": 255,
+      "totalNetworkEntries": 257,
       "evictedEntries": 0,
       "browserErrorCount": 0,
-      "failedRequestCount": 15,
+      "failedRequestCount": 17,
       "notableBrowserEntries": [
         "[warn] [Meta Pixel] - Duplicate Pixel ID: 1553741195720242."
       ],
       "notableNetworkEntries": [
-        "[error] https://www.google.com/ccm/collect?rcb=11&frm=0&apvc=1&ae=g&auid=1670574818.1786191087&dt=Checkly%20%E2%80%94%20The%20active%20reliability%20layer%20for%20developers%20%26%20agents&en=page_view&dl=...",
-        "[error] https://analytics.google.com/g/collect?v=2&tid=G-SYSCT5RC16&gtm=45je6852v889943154z878059851za20gzb78059851zd78059851&_p=1786191086406&_gaz=1&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&_eu=AAAAAGAC&are=...",
-        "[error] https://www.google.com/rmkt/collect/10926832230/?random=1786191087328&cv=11&fst=1786191087328&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6852v9117819768z878059851za20gzb78059851zd780598...",
-        "[error] https://analytics.google.com/g/collect?v=2&tid=G-SYSCT5RC16&gtm=45je6852v889943154z878059851za20gzb78059851zd78059851&_p=1786191086406&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=5...",
+        "[error] https://www.google.com/rmkt/collect/10926832230/?random=1786277537836&cv=11&fst=1786277537836&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6852v9117819768z878059851za20gzb78059851zd780598...",
+        "[error] https://connect.facebook.net//log/error?p=pixel&sl=2&v=2.9.373&e=%5BMeta%20pixel%5D%20Bot%20traffic%20detected%20and%20blocked%20-%20pixel_id%3A%201553741195720242&ue=0&rs=stable&rqm=FGET FAILED: n...",
+        "[error] https://analytics.google.com/g/collect?v=2&tid=G-SYSCT5RC16&gtm=45je6852v889943154z878059851za20gzb78059851zd78059851&_p=1786277537111&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=1...",
+        "[error] https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=0&auid=1207068832.1786277537&dt=Checkly%20%E2%80%94%20The%20active%20reliability%20layer%20for%20developers%20%26%20agents&tid=AW-10926832230&en... (x2)",
+        "[error] https://www.google.com/rmkt/collect/10926832230/?random=1786277549677&cv=11&fst=1786277549677&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6852v9117819768z878059851za20gzb78059851zd780598...",
         "[error] https://api.unifyintent.com/analytics/v1/page FAILED: net::ERR_ABORTED (x2)",
-        "[error] https://www.google.com/ccm/collect?rcb=5&frm=0&apvc=0&auid=1670574818.1786191087&dt=Checkly%20%E2%80%94%20The%20active%20reliability%20layer%20for%20developers%20%26%20agents&tid=AW-10926832230&en=... (x2)",
-        "[error] https://www.google.com/rmkt/collect/10926832230/?random=1786191098519&cv=11&fst=1786191098519&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6852v9117819768z878059851za20gzb78059851zd780598...",
-        "[error] https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g FAILED: net::ERR_ABORTED (x5)"
+        "[error] https://px.ads.linkedin.com/wa/?medium=fetch&fmt=g FAILED: net::ERR_ABORTED (x5)",
+        "[error] https://analytics.google.com/g/collect?v=2&tid=G-SYSCT5RC16&gtm=45je6852v889943154za20gzb78059851zd78059851&_p=1786277537111&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&_eu=AEAAAGQC&ae=a&are=1&cid=139193..."
       ],
-      "omittedNotableEntries": 1
+      "omittedNotableEntries": 3
     },
     "priorHumanVerdicts": null,
     "testSnippet": "test('Checkly dev docs search', async ({ page }) => {\n  await page.goto('https://checklyhq.com');\n  await page.ai(\n    `Click on the Developers dropdown menu, then click into to the Documentation option`,\n  );\n  expect(page.url()).toEqual('https://www.checklyhq.com/docs/');\n  await page.ai(\n    `Do a search for \"Playwright check suite\", and chose the match for \"Constructs > DETECT\" from the search suggestions dropdown.\n    NOTE: Since this website uses typeahead for search, do not submit the search via \"Enter\".`,\n  );\n  expect(page.url()).toEqual(\n    'https://www.checklyhq.com/docs/constructs/playwright-check/',\n  );\n});",
@@ -255,9 +255,9 @@
         "contradictingEvidence": []
       },
       "historicalSignals": {
-        "flakinessScore": 0.8888888888888888,
+        "flakinessScore": 1,
         "regressionLikelihood": 0,
-        "recentPassRate": 0.7894736842105263,
+        "recentPassRate": 0.7368421052631579,
         "priorSelfHealSuccess": true,
         "cacheWasRecentlyValid": true
       }
@@ -265,11 +265,27 @@
     "flowHistory": {
       "flowName": "checkly.test.ts > Checkly dev docs search",
       "totalRuns": 19,
-      "successCount": 15,
-      "failureCount": 4,
+      "successCount": 14,
+      "failureCount": 5,
       "otherCount": 0,
-      "passRate": 0.7894736842105263,
+      "passRate": 0.7368421052631579,
       "recentRuns": [
+        {
+          "id": "b01c840d-b0c5-4789-a51b-6ca4f2d0cafe",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1786191393395,
+          "completedAt": 1786191495515,
+          "durationMs": 102120
+        },
+        {
+          "id": "a3cd197e-af18-4f43-98a6-32f6322f97d5",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1786191082568,
+          "completedAt": 1786191101675,
+          "durationMs": 19107
+        },
         {
           "id": "201ac09a-9594-4c0e-a689-681e56fe7dd4",
           "state": "SUCCESS",
@@ -333,33 +349,17 @@
           "startedAt": 1785933660004,
           "completedAt": 1785933680962,
           "durationMs": 20958
-        },
-        {
-          "id": "f5876d76-5e13-4ac0-afb5-49de7be08497",
-          "state": "SUCCESS",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1785847288797,
-          "completedAt": 1785847318412,
-          "durationMs": 29615
-        },
-        {
-          "id": "30df2e01-2490-418a-b495-b3de146a794e",
-          "state": "SUCCESS",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1785762465089,
-          "completedAt": 1785762497014,
-          "durationMs": 31925
         }
       ],
       "currentStreak": {
         "state": "SUCCESS",
         "length": 1
       },
-      "lastSuccessfulRunId": "201ac09a-9594-4c0e-a689-681e56fe7dd4",
+      "lastSuccessfulRunId": "b01c840d-b0c5-4789-a51b-6ca4f2d0cafe",
       "queryWindowDays": 14,
-      "queriedAt": "2026-08-08T12:11:43.679Z"
+      "queriedAt": "2026-08-09T12:12:36.247Z"
     }
   },
-  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-08T12-11-01-609Z-a97bb5e3/failure-screenshot-9dd415d2-6f75-4f7d-8bfe-fdcb6247bbea.png",
-  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-08T12-11-01-609Z-a97bb5e3/baseline-screenshot-9dd415d2-6f75-4f7d-8bfe-fdcb6247bbea.png"
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-09T12-11-50-952Z-a803db4b/failure-screenshot-c27503e7-f76b-4dba-b5e3-cafbdd8de6f2.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-09T12-11-50-952Z-a803db4b/baseline-screenshot-c27503e7-f76b-4dba-b5e3-cafbdd8de6f2.png"
 }
