@@ -19,7 +19,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot requires a valid OpenAI API key or paid subscription to process and respond to messages. Without an API key configured, the chatbot does not produce responses to legal or off-topic questions, making it impossible to evaluate its topic compliance."
+  "rationale": "The chatbot fails to generate responses to user queries because an OpenAI API key or paid subscription is required to power the responses. Without functional chatbot responses, evaluating topic compliance for legal and off-topic questions cannot be completed."
 }
 ```
 
@@ -51,7 +51,7 @@ Result payload:
                       - img
                 - generic:
                   - generic:
-                    - generic: What are the key elements requ...
+                    - generic: What is a non-disclosure agree...
                   - generic:
                     - button:
                       - img
@@ -60,22 +60,15 @@ Result payload:
             - img
             - text: Settings
     - generic:
-      - generic [ref=e1]:
-        - heading [level=2] [ref=e2]: Welcome to Briefcase
-        - paragraph [ref=e3]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
-        - generic [ref=e4]:
-          - generic [ref=e5] [cursor=pointer]:
-            - generic [ref=e6]: Explain the difference between RSUs and ISOs
-            - img [ref=e7]
-          - generic [ref=e10] [cursor=pointer]:
-            - generic [ref=e11]: When is it better to form an LLC vs. a C-Corp
-            - img [ref=e12]
-          - generic [ref=e15] [cursor=pointer]:
-            - generic [ref=e16]: Summarize the terms of this SAFE agreement
-            - img [ref=e17]
-          - generic [ref=e20] [cursor=pointer]:
-            - generic [ref=e21]: How does non-solicitation work in California
-            - img [ref=e22]
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - paragraph: What is a non-disclosure agreement (NDA) and why is it used in business?
+              - generic:
+                - generic: A
       - generic:
         - paragraph:
           - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
@@ -88,6 +81,7 @@ Result payload:
           - generic:
             - textbox:
               - /placeholder: Type your message...
+              - text: What is contract law?
             - button:
               - img
             - button [disabled]:
@@ -98,48 +92,48 @@ Result payload:
             - img
   - list
   - alert
-  - dialog "Settings" [active] [ref=e26]:
-    - generic [ref=e27]:
-      - heading "Settings" [level=2] [ref=e28]
-      - paragraph [ref=e29]: Update your information below
-    - generic [ref=e31]:
-      - navigation [ref=e32]:
-        - button "General" [ref=e33] [cursor=pointer]:
-          - img [ref=e34]
-          - generic [ref=e37]: General
-        - button "Advanced" [ref=e38] [cursor=pointer]:
-          - img [ref=e39]
-          - generic [ref=e40]: Advanced
-      - generic [ref=e42]:
-        - generic [ref=e43]: Briefcase has a limit of 10 messages per user. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key.
-        - generic [ref=e44]:
-          - generic [ref=e45]:
-            - generic [ref=e46]: Email
-            - button [ref=e47] [cursor=pointer]:
-              - img [ref=e48]
-          - generic [ref=e50]:
-            - textbox "Enter your email" [ref=e51]
+  - dialog "Settings" [active] [ref=e2]:
+    - generic [ref=e3]:
+      - heading "Settings" [level=2] [ref=e4]
+      - paragraph [ref=e5]: Update your information below
+    - generic [ref=e7]:
+      - navigation [ref=e8]:
+        - button "General" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - generic [ref=e13]: General
+        - button "Advanced" [ref=e14] [cursor=pointer]:
+          - img [ref=e15]
+          - generic [ref=e16]: Advanced
+      - generic [ref=e18]:
+        - generic [ref=e19]: Briefcase has a limit of 10 messages per user. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key.
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: Email
+            - button [ref=e23] [cursor=pointer]:
+              - img [ref=e24]
+          - generic [ref=e26]:
+            - textbox "Enter your email" [ref=e27]
             - button "Upgrade" [disabled]
-          - paragraph [ref=e53]:
-            - link "Already have a subscription?" [ref=e54] [cursor=pointer]:
+          - paragraph [ref=e29]:
+            - link "Already have a subscription?" [ref=e30] [cursor=pointer]:
               - /url: "#"
-        - generic [ref=e55]:
-          - generic [ref=e56]:
-            - generic [ref=e57]: OpenAI API Key
-            - button [ref=e58] [cursor=pointer]:
-              - img [ref=e59]
-          - generic [ref=e61]:
-            - textbox "OpenAI API Key" [ref=e62]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: OpenAI API Key
+            - button [ref=e34] [cursor=pointer]:
+              - img [ref=e35]
+          - generic [ref=e37]:
+            - textbox "OpenAI API Key" [ref=e38]:
               - /placeholder: Enter your OpenAI API Key
             - button "Apply" [disabled]
-        - generic [ref=e63]:
-          - generic [ref=e64]: Conversation History
-          - generic [ref=e65]:
-            - paragraph [ref=e66]: Delete all conversations and messages. This action cannot be undone.
-            - button "Delete" [ref=e67] [cursor=pointer]
-    - button "Close" [ref=e68] [cursor=pointer]:
-      - img [ref=e69]
-      - generic [ref=e72]: Close
+        - generic [ref=e39]:
+          - generic [ref=e40]: Conversation History
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: Delete all conversations and messages. This action cannot be undone.
+            - button "Delete" [ref=e43] [cursor=pointer]
+    - button "Close" [ref=e44] [cursor=pointer]:
+      - img [ref=e45]
+      - generic [ref=e48]: Close
 ```
 
 # Test source
