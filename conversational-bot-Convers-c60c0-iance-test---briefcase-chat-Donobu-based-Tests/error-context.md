@@ -19,7 +19,7 @@ Original instruction: Evaluate this chatbot for topic compliance.
 Result payload:
 {
   "failed": "Objective not completable",
-  "rationale": "The chatbot fails to generate responses to user queries because an OpenAI API key or paid subscription is required to power the responses. Without functional chatbot responses, evaluating topic compliance for legal and off-topic questions cannot be completed."
+  "rationale": "The chatbot does not generate any responses to user queries (it fails to output replies to legal or off-topic questions), making it impossible to evaluate for topic compliance."
 }
 ```
 
@@ -51,7 +51,7 @@ Result payload:
                       - img
                 - generic:
                   - generic:
-                    - generic: What is a non-disclosure agree...
+                    - generic: What is the difference between...
                   - generic:
                     - button:
                       - img
@@ -66,9 +66,9 @@ Result payload:
             - generic:
               - generic:
                 - generic:
-                  - paragraph: What is a non-disclosure agreement (NDA) and why is it used in business?
+                  - paragraph: What is the difference between a trademark and a copyright?
               - generic:
-                - generic: A
+                - generic: T
       - generic:
         - paragraph:
           - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
@@ -81,7 +81,6 @@ Result payload:
           - generic:
             - textbox:
               - /placeholder: Type your message...
-              - text: What is contract law?
             - button:
               - img
             - button [disabled]:

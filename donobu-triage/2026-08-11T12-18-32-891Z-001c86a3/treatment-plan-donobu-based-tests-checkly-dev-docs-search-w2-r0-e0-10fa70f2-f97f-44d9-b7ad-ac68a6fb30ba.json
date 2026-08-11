@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-08-11T12:23:11.023Z",
+  "evidenceId": "10fa70f2-f97f-44d9-b7ad-ac68a6fb30ba",
+  "plan": {
+    "failureSummary": "The cached page.ai script replayed a stale positional CSS selector that targeted the 'Solutions' header menu button instead of 'Developers', leading to navigation to a solutions page and causing the downstream URL assertion to fail.",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "The cached page.ai instruction used a positional selector `#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button` to target the 'Developers' button.",
+      "Execution logs show the tool clicked the 'Solutions' button (`<button class=\"nav-item\"...>Solutions</button>`) using that cached selector.",
+      "The browser arrived at `https://www.checklyhq.com/solutions/use-cases/critical-user-flows/` instead of `https://www.checklyhq.com/docs/`, causing `expect(page.url()).toEqual('https://www.checklyhq.com/docs/')` to fail."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and re-run automation",
+        "details": "Purge the cached page.ai instructions for checkly.test.ts so that page.ai re-evaluates the prompt against the current site layout."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "Clearing the page.ai cache will force Donobu to dynamically re-evaluate the site header and click the correct 'Developers' menu button.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 19700,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-08-11T12-18-32-891Z-001c86a3",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-11T12-18-32-891Z-001c86a3",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-11T12-18-32-891Z-001c86a3/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-10fa70f2-f97f-44d9-b7ad-ac68a6fb30ba.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
