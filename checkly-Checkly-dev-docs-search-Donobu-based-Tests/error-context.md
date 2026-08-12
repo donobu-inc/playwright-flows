@@ -348,13 +348,13 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                       - generic:
                         - heading "Community" [level=3]
                         - generic:
-                          - link "Public Roadmap Read, vote, or add on features in a public roadmap":
-                            - /url: https://feedback.checklyhq.com/
+                          - link "Public Roadmap See Checkly's active customer outcomes and product direction":
+                            - /url: /roadmap/
                             - generic:
                               - generic:
                                 - img
                               - generic: Public Roadmap
-                            - generic: Read, vote, or add on features in a public roadmap
+                            - generic: See Checkly's active customer outcomes and product direction
                           - link "Community Slack Connect with the Checkly Community":
                             - /url: /slack/
                             - generic:
@@ -399,7 +399,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
             - paragraph [ref=e40]: Sign in, sign up, pay, and whatever your product is actually for. Walk each one end to end in a real browser, every few minutes, from the regions your users are in, and time every step so you know which one broke.
             - generic [ref=e41]:
               - link "Start for free" [ref=e42] [cursor=pointer]:
-                - /url: https://app.checklyhq.com/signup?segment_anon_id=e9b4fd69-e738-4050-a9fc-f128138ea42a
+                - /url: https://app.checklyhq.com/signup?segment_anon_id=24e68295-fe40-494e-8263-ebcbc5d90604
               - link "Book a demo" [ref=e43] [cursor=pointer]:
                 - /url: /demo-request/
             - generic [ref=e44]:
@@ -1075,7 +1075,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
           - paragraph [ref=e1072]: Pick the four flows that generate support tickets, write them once, and let them run every five minutes from everywhere that matters.
           - generic [ref=e1073]:
             - link "Start for free" [ref=e1074] [cursor=pointer]:
-              - /url: https://app.checklyhq.com/signup?segment_anon_id=e9b4fd69-e738-4050-a9fc-f128138ea42a
+              - /url: https://app.checklyhq.com/signup?segment_anon_id=24e68295-fe40-494e-8263-ebcbc5d90604
             - link "Book a demo" [ref=e1075] [cursor=pointer]:
               - /url: /demo-request/
     - contentinfo [ref=e1076]:
@@ -1158,7 +1158,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
             - generic [ref=e1133]:
               - paragraph [ref=e1135]: Resources
               - link "Public Roadmap" [ref=e1136] [cursor=pointer]:
-                - /url: https://feedback.checklyhq.com/
+                - /url: /roadmap/
               - link "Community Slack" [ref=e1137] [cursor=pointer]:
                 - /url: /slack/
             - generic [ref=e1138]:
