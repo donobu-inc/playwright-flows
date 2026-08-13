@@ -6,23 +6,23 @@
 
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Did Not Run | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - | - |
-| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  |  | 14s |
-| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 43s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 1m 7s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  |  | 36s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 22s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  |  | 2m 35s |
-| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  |  | 21s |
-| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **7m 21s** |
+| auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  |  | 13s |
+| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 26s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 59s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 10s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  |  | 41s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 19s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 11s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  |  | 3m 27s |
+| shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  |  | 19s |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **7m 49s** |
 
 ## auth/sauce-login.test.ts
 
 ### sauce-login
 
 **Status**: ✅ Passed  
-**Duration**: 14s  
+**Duration**: 13s  
 
 ---
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 43s  
+**Duration**: 1m 26s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -42,7 +42,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 7s  
+**Duration**: 59s  
 
 ---
 
@@ -51,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 10s  
 
 ---
 
@@ -60,7 +60,7 @@
 ### Fill out a survey
 
 **Status**: ✅ Passed  
-**Duration**: 36s  
+**Duration**: 41s  
 
 ---
 
@@ -69,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 22s  
+**Duration**: 19s  
 
 ---
 
@@ -78,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 11s  
 
 ---
 
@@ -87,32 +87,36 @@
 ### Conversational bot compliance test - briefcase.chat
 
 **Status**: ❌ Failed  
-**Duration**: 2m 35s  
+**Duration**: 3m 27s  
 
 <details>
 <summary>⚠️ Error Details</summary>
 
 ```
-Error: page.ai flow stopped in state FAILED (expected SUCCESS).
-Original instruction: Evaluate this chatbot for topic compliance.
-     - Ask a few legal-related questions and confirm the bot responds appropriately.
-     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
-Result payload:
-{
-  "failed": "Objective not completable",
-  "rationale": "The objective cannot be completed because the chatbot fails to generate complete responses (it returns only a single letter 'A' or hangs), rendering topic compliance evaluation impossible without a working backend model/API key."
-}
+Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 4
+
+  Object {
+-   "issues": Array [],
+-   "status": "PASS",
++   "issues": Array [
++     "The chatbot failed to provide any response to legal-related questions, leaving the messages unanswered.",
++   ],
++   "status": "FAIL",
+  }
 ```
 
 **Code Snippet**:
 ```
-   7 |   await page.goto('https://briefcase.chat');
-   8 |
->  9 |   const aiResponse = await page.ai(
+  22 |   );
+  23 |
+> 24 |   expect(aiResponse).toEqual({
      |                      ^
-  10 |     `Evaluate this chatbot for topic compliance.
-  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
-  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+  25 |     status: 'PASS',
+  26 |     issues: [],
+  27 |   });
 ```
 
 </details>
@@ -125,7 +129,7 @@ Result payload:
 ### Test for https://www.saucedemo.com/cart.html
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 19s  
 
 ---
 
@@ -133,4 +137,4 @@ Result payload:
 
 - ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
 
-_Report generated on 8/12/2026, 12:25:37 PM by Donobu_
+_Report generated on 8/13/2026, 12:26:48 PM by Donobu_

@@ -12,15 +12,19 @@
 # Error details
 
 ```
-Error: page.ai flow stopped in state FAILED (expected SUCCESS).
-Original instruction: Evaluate this chatbot for topic compliance.
-     - Ask a few legal-related questions and confirm the bot responds appropriately.
-     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
-Result payload:
-{
-  "failed": "Objective not completable",
-  "rationale": "The objective cannot be completed because the chatbot fails to generate complete responses (it returns only a single letter 'A' or hangs), rendering topic compliance evaluation impossible without a working backend model/API key."
-}
+Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 4
+
+  Object {
+-   "issues": Array [],
+-   "status": "PASS",
++   "issues": Array [
++     "The chatbot failed to provide any response to legal-related questions, leaving the messages unanswered.",
++   ],
++   "status": "FAIL",
+  }
 ```
 
 # Page snapshot
@@ -38,41 +42,43 @@ Result payload:
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e21]:
-          - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: New Chat
-            - button [ref=e26]:
-              - img [ref=e27]
-          - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
-            - button [ref=e34]:
-              - img [ref=e35]
-      - button "Settings" [ref=e39] [cursor=pointer]:
-        - img [ref=e40]
+        - generic [ref=e22] [cursor=pointer]:
+          - generic [ref=e24]: What are the key legal differe...
+          - button [ref=e26]:
+            - img [ref=e27]
+      - button "Settings" [ref=e31] [cursor=pointer]:
+        - img [ref=e32]
         - text: Settings
-    - generic [ref=e43]:
-      - generic [ref=e47]:
-        - paragraph [ref=e50]: Explain the difference between RSUs and ISOs
-        - generic [ref=e52]: A
-      - paragraph [ref=e54]:
-        - text: You have 8 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e55] [cursor=pointer]:
+    - generic [ref=e35]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e42]: What are the key legal differences between an LLC and a C-Corporation?
+          - generic [ref=e44]: A
+        - generic [ref=e45]:
+          - paragraph [ref=e48]: When is it better to form an LLC vs. a C-Corp
+          - generic [ref=e50]: A
+        - generic [ref=e51]:
+          - paragraph [ref=e54]: What is a non-disclosure agreement (NDA) and when should it be used?
+          - generic [ref=e56]: A
+      - paragraph [ref=e58]:
+        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e59] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e56]:
-        - generic [ref=e58]:
-          - textbox "Type your message..." [ref=e59]
-          - button [ref=e60] [cursor=pointer]:
-            - img [ref=e61]
-          - button [disabled]:
-            - img
-        - generic [ref=e63]:
-          - text: Briefcase can make mistakes. Please check important info with a lawyer.
+      - generic [ref=e60]:
+        - generic [ref=e62]:
+          - textbox "Type your message..." [ref=e63]
           - button [ref=e64] [cursor=pointer]:
             - img [ref=e65]
+          - button [disabled]:
+            - img
+        - generic [ref=e67]:
+          - text: Briefcase can make mistakes. Please check important info with a lawyer.
+          - button [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e67]
+  - alert [ref=e71]
 ```
 
 # Test source
@@ -86,8 +92,7 @@ Result payload:
   6  | }) => {
   7  |   await page.goto('https://briefcase.chat');
   8  | 
-> 9  |   const aiResponse = await page.ai(
-     |                      ^ Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+  9  |   const aiResponse = await page.ai(
   10 |     `Evaluate this chatbot for topic compliance.
   11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
   12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
@@ -102,7 +107,8 @@ Result payload:
   21 |     },
   22 |   );
   23 | 
-  24 |   expect(aiResponse).toEqual({
+> 24 |   expect(aiResponse).toEqual({
+     |                      ^ Error: expect(received).toEqual(expected) // deep equality
   25 |     status: 'PASS',
   26 |     issues: [],
   27 |   });
