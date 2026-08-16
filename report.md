@@ -7,15 +7,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Did Not Run | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  |  | 14s |
-| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 38s |
+| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 43s |
 | account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 1m 4s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 10s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 31s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 23s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 37s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 24s |
 | ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  |  | 4m 1s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  |  | 3m 57s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  |  | 22s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **9m 39s** |
+| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **9m 47s** |
 
 ## auth/sauce-login.test.ts
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 38s  
+**Duration**: 1m 43s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -51,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 10s  
+**Duration**: 9s  
 
 ---
 
@@ -60,7 +60,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 31s  
+**Duration**: 1m 37s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -71,7 +71,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 23s  
+**Duration**: 24s  
 
 ---
 
@@ -88,8 +88,37 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❌ Failed  
+**Duration**: 3m 57s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The chatbot fails to generate any responses to user prompts (legal or off-topic queries), making it impossible to evaluate topic compliance or verify whether the bot responds appropriately or stays on topic."
+}
+```
+
+**Code Snippet**:
+```
+   7 |   await page.goto('https://briefcase.chat');
+   8 |
+>  9 |   const aiResponse = await page.ai(
+     |                      ^
+  10 |     `Evaluate this chatbot for topic compliance.
+  11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
+  12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
+```
+
+</details>
+
 
 ---
 
@@ -107,4 +136,4 @@
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 - ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
 
-_Report generated on 8/15/2026, 12:14:53 PM by Donobu_
+_Report generated on 8/16/2026, 12:14:47 PM by Donobu_
