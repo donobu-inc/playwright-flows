@@ -1056,8 +1056,8 @@ Received: "https://www.checklyhq.com/"
             - generic [ref=e1642]:
               - generic [ref=e1643]:
                 - generic [ref=e1644]:
-                  - generic [ref=e1645]: 5 Open
-                  - generic [ref=e1647]: 5 Merged
+                  - generic [ref=e1645]: 6 Open
+                  - generic [ref=e1647]: 4 Merged
                 - generic [ref=e1649]: LIVE
               - generic [ref=e1651]:
                 - generic [ref=e1652]:
@@ -1196,7 +1196,7 @@ Received: "https://www.checklyhq.com/"
                 - generic [ref=e1820]: The checkout browser check just failed. What happened?
                 - generic [ref=e1821]:
                   - img [ref=e1823]
-                  - generic [ref=e1826]: "I analyzed the failure and correlated it with your OpenTelemetry traces. Here's what I found: The payment service at /api/v2/payments/charge is returning 503s. The root cause is a connection pool exhaustion on your Stripe integration — active connections spiked from 12"
+                  - generic [ref=e1826]: "I analyzed the failure and correlated it with your OpenTelemetry traces. Here's what I found: The payment service at /api/v2/payments/charge is returning 503s. The root cause is a conn"
               - generic [ref=e1829]:
                 - paragraph [ref=e1830]
                 - generic [ref=e1831]:
@@ -1724,6 +1724,8 @@ Received: "https://www.checklyhq.com/"
                 - img "SOC Certification" [ref=e2430]
           - generic [ref=e2431]: Copyright © 2026 Checkly Inc. All rights reserved.
   - alert [ref=e2432]
+  - button [ref=e2433] [cursor=pointer]:
+    - img [ref=e2434]
 ```
 
 # Test source

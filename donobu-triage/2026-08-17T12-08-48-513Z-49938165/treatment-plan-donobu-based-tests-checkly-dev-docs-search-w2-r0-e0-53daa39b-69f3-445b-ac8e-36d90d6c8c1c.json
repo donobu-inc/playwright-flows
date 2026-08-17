@@ -1,0 +1,55 @@
+{
+  "generatedAtIso": "2026-08-17T12:14:33.007Z",
+  "evidenceId": "53daa39b-69f3-445b-ac8e-36d90d6c8c1c",
+  "plan": {
+    "failureSummary": "Cached page.ai selector for the Developers navigation menu clicked the Solutions menu instead, preventing navigation to /docs/ and failing the subsequent URL assertion.",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Cached page.ai runSource uses positional selector `#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button`",
+      "Tool history shows left-clicking on `<button ...>Solutions</button>` instead of Developers",
+      "Failure screenshot shows the 'Solutions' dropdown open on the homepage instead of navigating to `/docs/`",
+      "URL assertion `expect(page.url()).toEqual('https://www.checklyhq.com/docs/')` failed with received `https://www.checklyhq.com/`"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry automation",
+        "details": "Clear the deterministic page.ai cache for checkly.test.ts and re-run the test autonomously so that Donobu targets the 'Developers' navigation item correctly."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The cached instruction relied on a positional CSS selector (#nav > ... > div:nth-of-type(2) > button) which now matches 'Solutions' instead of 'Developers'. As seen in the failure screenshot, the Solutions dropdown was opened instead of Developers, so the Documentation link was not clicked. The semantic intent is fully achievable on the live site by clearing the cache.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 19542,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-08-17T12-08-48-513Z-49938165",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-17T12-08-48-513Z-49938165",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-17T12-08-48-513Z-49938165/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-53daa39b-69f3-445b-ac8e-36d90d6c8c1c.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
