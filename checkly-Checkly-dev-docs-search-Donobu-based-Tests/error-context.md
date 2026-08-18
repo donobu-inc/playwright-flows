@@ -281,7 +281,7 @@ Received: "https://www.checklyhq.com/"
                             - img
                           - text: All Integrations
                         - link "Changelog":
-                          - /url: https://feedback.checklyhq.com/changelog
+                          - /url: /changelog/
                           - generic:
                             - img
                           - text: Changelog
@@ -1056,8 +1056,8 @@ Received: "https://www.checklyhq.com/"
             - generic [ref=e1642]:
               - generic [ref=e1643]:
                 - generic [ref=e1644]:
-                  - generic [ref=e1645]: 6 Open
-                  - generic [ref=e1647]: 4 Merged
+                  - generic [ref=e1645]: 7 Open
+                  - generic [ref=e1647]: 3 Merged
                 - generic [ref=e1649]: LIVE
               - generic [ref=e1651]:
                 - generic [ref=e1652]:
@@ -1196,7 +1196,7 @@ Received: "https://www.checklyhq.com/"
                 - generic [ref=e1820]: The checkout browser check just failed. What happened?
                 - generic [ref=e1821]:
                   - img [ref=e1823]
-                  - generic [ref=e1826]: "I analyzed the failure and correlated it with your OpenTelemetry traces. Here's what I found: The payment service at /api/v2/payments/charge is returning 503s. The root cause is a conn"
+                  - generic [ref=e1826]: "I analyzed the failure and correlated it with your OpenTelemetry traces. Here's what I found: The payment service at /api/v2/payments/charge is returning 503s. The root cause is a connection pool exhaustion on your Stripe integration — active co"
               - generic [ref=e1829]:
                 - paragraph [ref=e1830]
                 - generic [ref=e1831]:
@@ -1682,50 +1682,50 @@ Received: "https://www.checklyhq.com/"
                 - /url: /about/
               - link "Careers" [ref=e2398] [cursor=pointer]:
                 - /url: /careers/
-            - generic [ref=e2399]:
-              - paragraph [ref=e2401]: How we compare
-              - link "Alternative to Datadog" [ref=e2402] [cursor=pointer]:
+              - link "Changelog" [ref=e2399] [cursor=pointer]:
+                - /url: /changelog/
+            - generic [ref=e2400]:
+              - paragraph [ref=e2402]: How we compare
+              - link "Alternative to Datadog" [ref=e2403] [cursor=pointer]:
                 - /url: /datadog-alternative/
-              - link "Alternative to New Relic" [ref=e2403] [cursor=pointer]:
+              - link "Alternative to New Relic" [ref=e2404] [cursor=pointer]:
                 - /url: /new-relic-alternative/
-              - link "Alternative to Dynatrace" [ref=e2404] [cursor=pointer]:
+              - link "Alternative to Dynatrace" [ref=e2405] [cursor=pointer]:
                 - /url: /dynatrace-alternative/
-              - link "Alternative to Pingdom" [ref=e2405] [cursor=pointer]:
+              - link "Alternative to Pingdom" [ref=e2406] [cursor=pointer]:
                 - /url: /alternative-pingdom/
-              - link "Alternative to Runscope" [ref=e2406] [cursor=pointer]:
+              - link "Alternative to Runscope" [ref=e2407] [cursor=pointer]:
                 - /url: /alternative-runscope/
-            - generic [ref=e2407]:
-              - paragraph [ref=e2409]: Articles
-              - link "What is Synthetic Monitoring?" [ref=e2410] [cursor=pointer]:
+            - generic [ref=e2408]:
+              - paragraph [ref=e2410]: Articles
+              - link "What is Synthetic Monitoring?" [ref=e2411] [cursor=pointer]:
                 - /url: /docs/learn/monitoring/synthetic-monitoring/
-              - link "What is API monitoring?" [ref=e2411] [cursor=pointer]:
+              - link "What is API monitoring?" [ref=e2412] [cursor=pointer]:
                 - /url: /docs/learn/monitoring/api-monitoring/
-              - link "What is Playwright?" [ref=e2412] [cursor=pointer]:
+              - link "What is Playwright?" [ref=e2413] [cursor=pointer]:
                 - /url: /docs/learn/playwright/what-is-playwright/
-              - link "A guide to Monitoring as Code" [ref=e2413] [cursor=pointer]:
+              - link "A guide to Monitoring as Code" [ref=e2414] [cursor=pointer]:
                 - /url: /docs/learn/monitoring/monitoring-as-code/
-              - link "Playwright vs other frameworks" [ref=e2414] [cursor=pointer]:
+              - link "Playwright vs other frameworks" [ref=e2415] [cursor=pointer]:
                 - /url: /docs/comparisons/frameworks/playwright-vs-others/
-        - generic [ref=e2415]:
-          - generic [ref=e2416]:
-            - generic [ref=e2417]:
-              - link "Hi!" [ref=e2418] [cursor=pointer]:
+        - generic [ref=e2416]:
+          - generic [ref=e2417]:
+            - generic [ref=e2418]:
+              - link "Hi!" [ref=e2419] [cursor=pointer]:
                 - /url: /
-                - img [ref=e2419]
-              - link "Available in AWS Marketplace" [ref=e2424] [cursor=pointer]:
+                - img [ref=e2420]
+              - link "Available in AWS Marketplace" [ref=e2425] [cursor=pointer]:
                 - /url: https://aws.amazon.com/marketplace/pp/prodview-cntlyhi5si6ka?sr=0-1&ref_=beagle&applicationId=AWSMPContessa
-                - img "Available in AWS Marketplace" [ref=e2425]
-            - generic [ref=e2426]:
-              - link "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2427] [cursor=pointer]:
+                - img "Available in AWS Marketplace" [ref=e2426]
+            - generic [ref=e2427]:
+              - link "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2428] [cursor=pointer]:
                 - /url: /checkly-and-monitoring-as-code-mac-earn-third-gartner/
-                - img "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2428]
-              - link "SOC Certification" [ref=e2429] [cursor=pointer]:
+                - img "Learn more about Checkly's Gartner Cool Vendor recognition" [ref=e2429]
+              - link "SOC Certification" [ref=e2430] [cursor=pointer]:
                 - /url: /security/
-                - img "SOC Certification" [ref=e2430]
-          - generic [ref=e2431]: Copyright © 2026 Checkly Inc. All rights reserved.
-  - alert [ref=e2432]
-  - button [ref=e2433] [cursor=pointer]:
-    - img [ref=e2434]
+                - img "SOC Certification" [ref=e2431]
+          - generic [ref=e2432]: Copyright © 2026 Checkly Inc. All rights reserved.
+  - alert [ref=e2433]
 ```
 
 # Test source
