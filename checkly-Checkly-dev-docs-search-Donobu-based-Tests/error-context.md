@@ -38,7 +38,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                   - generic:
                     - generic:
                       - generic:
-                        - heading "Detect" [level=3]
+                        - paragraph: Detect
                         - generic:
                           - link "Uptime Monitoring Measure the availability of your digital footprint":
                             - /url: /product/uptime-monitoring/
@@ -69,7 +69,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: Testing
                             - generic: Catch issues before production with an AI-powered test reporter
                       - generic:
-                        - heading "Communicate" [level=3]
+                        - paragraph: Communicate
                         - generic:
                           - link "Status Pages Communicate app availability to your customers":
                             - /url: /product/status-pages/
@@ -86,7 +86,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: Alerts
                             - generic: Contextual alerting to notify the team right away
                       - generic:
-                        - heading "Resolve" [level=3]
+                        - paragraph: Resolve
                         - generic:
                           - link "AI Root Cause Analysis Automated root cause analysis powered by AI agents":
                             - /url: /product/ai-analysis/
@@ -103,7 +103,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: Traces
                             - generic: Powerful OTel tracing for deeper insights
                     - generic:
-                      - heading "Getting Started" [level=3]
+                      - paragraph: Getting Started
                       - generic:
                         - link "Start for free":
                           - /url: https://app.checklyhq.com/signup/
@@ -120,7 +120,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                   - generic:
                     - generic:
                       - generic:
-                        - heading "Personas" [level=3]
+                        - paragraph: Personas
                         - generic:
                           - link "Developers Checks in TypeScript, in your repo, deployed with your app":
                             - /url: /solutions/developers/
@@ -151,7 +151,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: Engineering Managers
                             - generic: Give every team ownership of its own monitors
                       - generic:
-                        - heading "Use Cases" [level=3]
+                        - paragraph: Use Cases
                         - generic:
                           - link "Critical user flows Watch login, checkout, and signup from real browsers":
                             - /url: /solutions/use-cases/critical-user-flows/
@@ -189,7 +189,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: Reliability for AI-generated code
                             - generic: Verify what your agents ship before your users do
                       - generic:
-                        - heading "Industries" [level=3]
+                        - paragraph: Industries
                         - generic:
                           - link "E-commerce Protect checkout and revenue paths around the clock":
                             - /url: /solutions/industries/ecommerce/
@@ -213,7 +213,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: SaaS & B2B software
                             - generic: Keep every tenant's core workflows verified
                     - generic:
-                      - heading "Moving from another tool?" [level=3]
+                      - paragraph: Moving from another tool?
                       - generic:
                         - link "vs. Datadog":
                           - /url: /datadog-alternative/
@@ -228,7 +228,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
               - region "Developers":
                 - generic:
                   - generic:
-                    - heading "Developers" [level=3]
+                    - paragraph: Developers
                     - generic:
                       - generic:
                         - link "Documentation Learn key concepts and features":
@@ -275,7 +275,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                             - generic: MCP Server
                           - generic: Connect Checkly to your AI tools
                     - generic:
-                      - heading "Reference" [level=3]
+                      - paragraph: Reference
                       - generic:
                         - link "Agent Skills":
                           - /url: /docs/ai/skills/
@@ -304,7 +304,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                 - generic:
                   - generic:
                     - complementary:
-                      - heading "Featured" [level=3]
+                      - paragraph: Featured
                       - link "Checkly and the Agentic Software Layer. Checkly and the Agentic Software Layer Read article":
                         - /url: /blog/the-agentic-software-layer/
                         - generic:
@@ -315,7 +315,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                           - generic: →
                     - generic:
                       - generic:
-                        - heading "Resources" [level=3]
+                        - paragraph: Resources
                         - generic:
                           - link "Blog Read about the latest news at Checkly":
                             - /url: /blog/
@@ -346,7 +346,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
                               - generic: Events
                             - generic: Meet the team in person
                       - generic:
-                        - heading "Community" [level=3]
+                        - paragraph: Community
                         - generic:
                           - link "Public Roadmap See Checkly's active customer outcomes and product direction":
                             - /url: /roadmap/
@@ -399,7 +399,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
             - paragraph [ref=e40]: Sign in, sign up, pay, and whatever your product is actually for. Walk each one end to end in a real browser, every few minutes, from the regions your users are in, and time every step so you know which one broke.
             - generic [ref=e41]:
               - link "Start for free" [ref=e42] [cursor=pointer]:
-                - /url: https://app.checklyhq.com/signup?segment_anon_id=5a19e06d-3ede-486b-8184-3088bace0c00
+                - /url: https://app.checklyhq.com/signup?segment_anon_id=88843b09-2fad-4a34-beb7-82832da1a0d1
               - link "Book a demo" [ref=e43] [cursor=pointer]:
                 - /url: /demo-request/
             - generic [ref=e44]:
@@ -1079,7 +1079,7 @@ Received: "https://www.checklyhq.com/solutions/use-cases/critical-user-flows/"
           - paragraph [ref=e1073]: Pick the four flows that generate support tickets, write them once, and let them run every five minutes from everywhere that matters.
           - generic [ref=e1074]:
             - link "Start for free" [ref=e1075] [cursor=pointer]:
-              - /url: https://app.checklyhq.com/signup?segment_anon_id=5a19e06d-3ede-486b-8184-3088bace0c00
+              - /url: https://app.checklyhq.com/signup?segment_anon_id=88843b09-2fad-4a34-beb7-82832da1a0d1
             - link "Book a demo" [ref=e1076] [cursor=pointer]:
               - /url: /demo-request/
     - contentinfo [ref=e1077]:

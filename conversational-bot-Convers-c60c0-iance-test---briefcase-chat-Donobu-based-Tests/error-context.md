@@ -21,8 +21,8 @@ Error: expect(received).toEqual(expected) // deep equality
 -   "issues": Array [],
 -   "status": "PASS",
 +   "issues": Array [
-+     "The chatbot failed to generate text responses to legal questions (displayed blank/empty assistant response bubbles).",
-+     "The chatbot failed to generate responses to off-topic queries, preventing full evaluation of refusal or topic-compliance behavior.",
++     "Chatbot failed to generate complete responses to legal questions due to backend API connection/key limitations.",
++     "Unable to verify topic refusal or guardrails for off-topic queries due to response generation failure.",
 +   ],
 +   "status": "FAIL",
   }
@@ -44,7 +44,7 @@ Error: expect(received).toEqual(expected) // deep equality
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What are the key elements of a...
+          - generic [ref=e24]: What is the difference between...
           - button [ref=e26]:
             - img [ref=e27]
       - button "Settings" [ref=e31] [cursor=pointer]:
@@ -52,31 +52,40 @@ Error: expect(received).toEqual(expected) // deep equality
         - text: Settings
     - generic [ref=e35]:
       - generic [ref=e38]:
-        - generic [ref=e39]:
-          - paragraph [ref=e42]: What are the key elements of a valid contract?
-          - generic [ref=e44]: A
-        - generic [ref=e45]:
-          - paragraph [ref=e48]: When is it better to form an LLC vs. a C-Corp
-          - generic [ref=e50]: A
-      - paragraph [ref=e52]:
-        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e53] [cursor=pointer]:
+        - heading "Welcome to Briefcase" [level=2] [ref=e39]
+        - paragraph [ref=e40]: Ask any legal question, summarize documents, and request quotes for more complex inquiries
+        - generic [ref=e41]:
+          - generic [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]: Explain the difference between RSUs and ISOs
+            - img [ref=e44]
+          - generic [ref=e47] [cursor=pointer]:
+            - generic [ref=e48]: When is it better to form an LLC vs. a C-Corp
+            - img [ref=e49]
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: Summarize the terms of this SAFE agreement
+            - img [ref=e54]
+          - generic [ref=e57] [cursor=pointer]:
+            - generic [ref=e58]: How does non-solicitation work in California
+            - img [ref=e59]
+      - paragraph [ref=e63]:
+        - text: You have 9 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e64] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e54]:
-        - generic [ref=e56]:
-          - textbox "Type your message..." [active] [ref=e57]
-          - button [ref=e58] [cursor=pointer]:
-            - img [ref=e59]
+      - generic [ref=e65]:
+        - generic [ref=e67]:
+          - textbox "Type your message..." [active] [ref=e68]
+          - button [ref=e69] [cursor=pointer]:
+            - img [ref=e70]
           - button [disabled]:
             - img
-        - generic [ref=e61]:
+        - generic [ref=e72]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e62] [cursor=pointer]:
-            - img [ref=e63]
+          - button [ref=e73] [cursor=pointer]:
+            - img [ref=e74]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e65]
+  - alert [ref=e76]
 ```
 
 # Test source

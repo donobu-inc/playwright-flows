@@ -1,0 +1,54 @@
+{
+  "generatedAtIso": "2026-08-22T12:12:24.311Z",
+  "evidenceId": "a20d6bd5-94b5-4e5a-a5fe-34155b58ece0",
+  "plan": {
+    "failureSummary": "The chatbot on briefcase.chat failed to generate responses to legal queries because the backend /api/chat endpoint returned a 500 Internal Server Error.",
+    "failureReason": "APPLICATION_DEFECT",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Network logs show https://briefcase.chat/api/chat returned a 500 Internal Server Error.",
+      "page.ai evaluation returned status FAIL with issues indicating the chatbot failed to generate responses.",
+      "The UI failed to display responses to user queries."
+    ],
+    "remediationSteps": [
+      {
+        "category": "FIX_APPLICATION",
+        "summary": "Fix backend /api/chat 500 error in briefcase.chat",
+        "details": "Investigate and resolve the backend server error (HTTP 500) on https://briefcase.chat/api/chat, ensuring API keys and downstream LLM connections are properly configured and operational."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": false,
+    "requiresCodeChange": false,
+    "requiresProductFix": true,
+    "notes": "The test evaluates briefcase.chat's chatbot compliance using page.ai (with caching disabled). The AI evaluation found that the bot failed to respond to prompts. Browser network logs confirm that calls to https://briefcase.chat/api/chat failed with HTTP 500 responses. This is an application defect in the chatbot service backend.",
+    "automationDirectives": {
+      "clearPageAiCache": false,
+      "targetTestFile": "tests/conversational-bot.test.ts",
+      "targetProject": "Donobu-based Tests"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Conversational bot compliance test - briefcase.chat",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/conversational-bot.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 3,
+      "timeout": 240000,
+      "duration": 198749,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-08-22T12-07-03-152Z-ca6e5f54",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-22T12-07-03-152Z-ca6e5f54",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-22T12-07-03-152Z-ca6e5f54/failure-evidence-donobu-based-tests-conversational-bot-compliance-test-briefcase-cha-w3-r0-e0-a20d6bd5-94b5-4e5a-a5fe-34155b58ece0.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
