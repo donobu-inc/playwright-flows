@@ -8,14 +8,14 @@
 | - | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  |  | 13s |
 | checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 28s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 1m 1s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 9s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 38s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 21s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 11s |
-| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  |  | 3m 21s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 59s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 8s |
+| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 35s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 24s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 12s |
+| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  |  | 4m 1s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  |  | 20s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **8m 48s** |
+| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **9m 22s** |
 
 ## auth/sauce-login.test.ts
 
@@ -42,7 +42,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 1m 1s  
+**Duration**: 59s  
 
 ---
 
@@ -51,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 9s  
+**Duration**: 8s  
 
 ---
 
@@ -60,7 +60,7 @@
 ### Fill out a survey
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 38s  
+**Duration**: 1m 35s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -71,7 +71,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 21s  
+**Duration**: 24s  
 
 ---
 
@@ -80,7 +80,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 11s  
+**Duration**: 12s  
 
 ---
 
@@ -88,42 +88,8 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ❌ Failed  
-**Duration**: 3m 21s  
-
-<details>
-<summary>⚠️ Error Details</summary>
-
-```
-Error: expect(received).toEqual(expected) // deep equality
-
-- Expected  - 2
-+ Received  + 5
-
-  Object {
--   "issues": Array [],
--   "status": "PASS",
-+   "issues": Array [
-+     "Chatbot failed to generate complete responses to legal questions due to backend API connection/key limitations.",
-+     "Unable to verify topic refusal or guardrails for off-topic queries due to response generation failure.",
-+   ],
-+   "status": "FAIL",
-  }
-```
-
-**Code Snippet**:
-```
-  22 |   );
-  23 |
-> 24 |   expect(aiResponse).toEqual({
-     |                      ^
-  25 |     status: 'PASS',
-  26 |     issues: [],
-  27 |   });
-```
-
-</details>
-
+**Status**: ⏰ Timed Out  
+**Duration**: 4m 1s  
 
 ---
 
@@ -141,4 +107,4 @@ Error: expect(received).toEqual(expected) // deep equality
 - ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
 - ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 8/22/2026, 12:14:12 PM by Donobu_
+_Report generated on 8/23/2026, 12:14:30 PM by Donobu_
