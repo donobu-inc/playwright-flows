@@ -7,15 +7,15 @@
 | File | Passed | Flaky | Self-Healed | Failed | Timed Out | Skipped | Did Not Run | Interrupted | Duration |
 | - | - | - | - | - | - | - | - | - | - |
 | auth/sauce-login.test.ts | 1 ✅ |  |  |  |  |  |  |  | 13s |
-| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 28s |
-| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 59s |
-| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 8s |
-| unstable-survey.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 35s |
-| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 24s |
-| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 12s |
-| conversational-bot.test.ts |  |  |  |  | 1 ⏰ |  |  |  | 4m 1s |
+| checkly.test.ts |  |  | 1 ❤️‍🩹 |  |  |  |  |  | 1m 34s |
+| account-signup.test.ts | 1 ✅ |  |  |  |  |  |  |  | 1m 4s |
+| starbucks.test.ts | 1 ✅ |  |  |  |  |  |  |  | 9s |
+| unstable-survey.test.ts | 1 ✅ |  |  |  |  |  |  |  | 39s |
+| wikipedia-assert.test.ts | 1 ✅ |  |  |  |  |  |  |  | 21s |
+| ycombinator-search.test.ts | 1 ✅ |  |  |  |  |  |  |  | 11s |
+| conversational-bot.test.ts |  |  |  | 1 ❌ |  |  |  |  | 3m 17s |
 | shopping/cart-checkout.test.ts | 1 ✅ |  |  |  |  |  |  |  | 20s |
-| **TOTAL** | **6 ✅** | **0 🔁** | **2 ❤️‍🩹** | **0 ❌** | **1 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **9m 22s** |
+| **TOTAL** | **7 ✅** | **0 🔁** | **1 ❤️‍🩹** | **1 ❌** | **0 ⏰** | **0 ⏭️** | **0 🚫** | **0 ⚡** | **7m 52s** |
 
 ## auth/sauce-login.test.ts
 
@@ -31,7 +31,7 @@
 ### Checkly dev docs search
 
 **Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 28s  
+**Duration**: 1m 34s  
 > ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
 
 
@@ -42,7 +42,7 @@
 ### Account signup for Everbutton
 
 **Status**: ✅ Passed  
-**Duration**: 59s  
+**Duration**: 1m 4s  
 
 ---
 
@@ -51,7 +51,7 @@
 ### Test survives modals and popups
 
 **Status**: ✅ Passed  
-**Duration**: 8s  
+**Duration**: 9s  
 
 ---
 
@@ -59,10 +59,8 @@
 
 ### Fill out a survey
 
-**Status**: ❤️‍🩹 Healed  
-**Duration**: 1m 35s  
-> ❤️‍🩹 This test was automatically healed by re-running with Donobu treatment plan directives.
-
+**Status**: ✅ Passed  
+**Duration**: 39s  
 
 ---
 
@@ -71,7 +69,7 @@
 ### Inspect Wiki article history
 
 **Status**: ✅ Passed  
-**Duration**: 24s  
+**Duration**: 21s  
 
 ---
 
@@ -80,7 +78,7 @@
 ### Hackernews search
 
 **Status**: ✅ Passed  
-**Duration**: 12s  
+**Duration**: 11s  
 
 ---
 
@@ -88,8 +86,42 @@
 
 ### Conversational bot compliance test - briefcase.chat
 
-**Status**: ⏰ Timed Out  
-**Duration**: 4m 1s  
+**Status**: ❌ Failed  
+**Duration**: 3m 17s  
+
+<details>
+<summary>⚠️ Error Details</summary>
+
+```
+Error: expect(received).toEqual(expected) // deep equality
+
+- Expected  - 2
++ Received  + 5
+
+  Object {
+-   "issues": Array [],
+-   "status": "PASS",
++   "issues": Array [
++     "The chatbot backend fails to generate responses to user queries, rendering empty assistant placeholders for legal prompts and off-topic prompts alike.",
++     "Topic compliance cannot be confirmed because the model does not produce any text output.",
++   ],
++   "status": "FAIL",
+  }
+```
+
+**Code Snippet**:
+```
+  22 |   );
+  23 |
+> 24 |   expect(aiResponse).toEqual({
+     |                      ^
+  25 |     status: 'PASS',
+  26 |     issues: [],
+  27 |   });
+```
+
+</details>
+
 
 ---
 
@@ -105,6 +137,5 @@
 ### Auto-Healed Tests
 
 - ❤️‍🩹 checkly.test.ts::Donobu-based Tests::Checkly dev docs search
-- ❤️‍🩹 unstable-survey.test.ts::Donobu-based Tests::Fill out a survey
 
-_Report generated on 8/23/2026, 12:14:30 PM by Donobu_
+_Report generated on 8/24/2026, 12:17:06 PM by Donobu_

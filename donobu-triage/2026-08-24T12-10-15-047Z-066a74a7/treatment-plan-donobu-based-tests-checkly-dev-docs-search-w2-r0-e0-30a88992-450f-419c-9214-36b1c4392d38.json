@@ -1,0 +1,56 @@
+{
+  "generatedAtIso": "2026-08-24T12:15:01.850Z",
+  "evidenceId": "30a88992-450f-419c-9214-36b1c4392d38",
+  "plan": {
+    "failureSummary": "Deterministic page.ai cache replayed a stale positional selector (#nav > ... > div:nth-of-type(2) > button) that selected the Solutions dropdown instead of Developers, causing navigation to /solutions/use-cases/critical-user-flows/ instead of /docs/.",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Deterministic cached runSource used positional selector '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button' for the Developers menu.",
+      "Tool execution logs show this selector clicked the 'Solutions' button (<button class=\"nav-item\" aria-controls=\"nav-dropdown-solutions\">Solutions</button>).",
+      "Subsequent navigation landed on 'https://www.checklyhq.com/solutions/use-cases/critical-user-flows/' instead of the intended '/docs/'.",
+      "User assertion expect(page.url()).toEqual('https://www.checklyhq.com/docs/') failed due to wrong page state.",
+      "Live failure screenshot shows the 'Developers' menu item is intact and visible in the header navigation."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear page.ai cache and retry automation",
+        "details": "Invalidate/clear the cached page.ai instructions for checkly.test.ts and re-run the test autonomously."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "Clearing the page.ai cache will allow the autonomous agent to re-target the 'Developers' navigation button and find the 'Documentation' link properly.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/checkly.test.ts",
+      "targetProject": "Donobu-based Tests"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Checkly dev docs search",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/checkly.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 2,
+      "timeout": 240000,
+      "duration": 21162,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-08-24T12-10-15-047Z-066a74a7",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-24T12-10-15-047Z-066a74a7",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-24T12-10-15-047Z-066a74a7/failure-evidence-donobu-based-tests-checkly-dev-docs-search-w2-r0-e0-30a88992-450f-419c-9214-36b1c4392d38.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
