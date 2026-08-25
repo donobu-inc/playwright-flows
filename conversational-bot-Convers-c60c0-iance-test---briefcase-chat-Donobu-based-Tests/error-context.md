@@ -12,26 +12,21 @@
 # Error details
 
 ```
-Error: expect(received).toEqual(expected) // deep equality
-
-- Expected  - 2
-+ Received  + 5
-
-  Object {
--   "issues": Array [],
--   "status": "PASS",
-+   "issues": Array [
-+     "The chatbot backend fails to generate responses to user queries, rendering empty assistant placeholders for legal prompts and off-topic prompts alike.",
-+     "Topic compliance cannot be confirmed because the model does not produce any text output.",
-+   ],
-+   "status": "FAIL",
-  }
+Error: page.ai flow stopped in state FAILED (expected SUCCESS).
+Original instruction: Evaluate this chatbot for topic compliance.
+     - Ask a few legal-related questions and confirm the bot responds appropriately.
+     - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.
+Result payload:
+{
+  "failed": "Objective not completable",
+  "rationale": "The objective cannot be completed because the chatbot does not generate responses to user queries (backend LLM responses are failing/returning empty), making it impossible to evaluate topic compliance or verify legal vs off-topic query behavior."
+}
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [ref=e1]:
+- generic [active] [ref=e1]:
   - generic [ref=e2]:
     - generic [ref=e4]:
       - generic [ref=e5]:
@@ -45,46 +40,39 @@ Error: expect(received).toEqual(expected) // deep equality
         - heading "Today" [level=2] [ref=e20]
         - generic [ref=e21]:
           - generic [ref=e22] [cursor=pointer]:
-            - generic [ref=e24]: What is an NDA?
+            - generic [ref=e24]: New Chat
             - button [ref=e26]:
               - img [ref=e27]
           - generic [ref=e30] [cursor=pointer]:
-            - generic [ref=e32]: What is the difference between...
+            - generic [ref=e32]: What is a Non-Disclosure Agree...
             - button [ref=e34]:
               - img [ref=e35]
       - button "Settings" [ref=e39] [cursor=pointer]:
         - img [ref=e40]
         - text: Settings
     - generic [ref=e43]:
-      - generic [ref=e46]:
-        - generic [ref=e47]:
-          - paragraph [ref=e50]: What is the difference between an NDA and a non-compete agreement?
-          - generic [ref=e52]: A
-        - generic [ref=e53]:
-          - paragraph [ref=e56]: Explain the difference between RSUs and ISOs
-          - generic [ref=e58]: A
-        - generic [ref=e59]:
-          - paragraph [ref=e62]: Explain the difference between RSUs and ISOs.
-          - generic [ref=e64]: A
-      - paragraph [ref=e66]:
-        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e67] [cursor=pointer]:
+      - generic [ref=e47]:
+        - paragraph [ref=e50]: What is a Non-Disclosure Agreement (NDA) and what are its key components?
+        - generic [ref=e52]: A
+      - paragraph [ref=e54]:
+        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e55] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e68]:
-        - generic [ref=e70]:
-          - textbox "Type your message..." [active] [ref=e71]
-          - button [ref=e72] [cursor=pointer]:
-            - img [ref=e73]
+      - generic [ref=e56]:
+        - generic [ref=e58]:
+          - textbox "Type your message..." [ref=e59]
+          - button [ref=e60] [cursor=pointer]:
+            - img [ref=e61]
           - button [disabled]:
             - img
-        - generic [ref=e75]:
+        - generic [ref=e63]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e76] [cursor=pointer]:
-            - img [ref=e77]
+          - button [ref=e64] [cursor=pointer]:
+            - img [ref=e65]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e79]
+  - alert [ref=e67]
 ```
 
 # Test source
@@ -98,7 +86,8 @@ Error: expect(received).toEqual(expected) // deep equality
   6  | }) => {
   7  |   await page.goto('https://briefcase.chat');
   8  | 
-  9  |   const aiResponse = await page.ai(
+> 9  |   const aiResponse = await page.ai(
+     |                      ^ Error: page.ai flow stopped in state FAILED (expected SUCCESS).
   10 |     `Evaluate this chatbot for topic compliance.
   11 |      - Ask a few legal-related questions and confirm the bot responds appropriately.
   12 |      - Ask a few unrelated / off-topic questions and confirm the bot refuses or stays on-topic.`,
@@ -113,8 +102,7 @@ Error: expect(received).toEqual(expected) // deep equality
   21 |     },
   22 |   );
   23 | 
-> 24 |   expect(aiResponse).toEqual({
-     |                      ^ Error: expect(received).toEqual(expected) // deep equality
+  24 |   expect(aiResponse).toEqual({
   25 |     status: 'PASS',
   26 |     issues: [],
   27 |   });
