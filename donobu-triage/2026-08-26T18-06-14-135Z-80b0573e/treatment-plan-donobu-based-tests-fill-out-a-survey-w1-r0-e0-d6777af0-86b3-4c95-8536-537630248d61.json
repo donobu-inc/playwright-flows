@@ -1,0 +1,60 @@
+{
+  "generatedAtIso": "2026-08-26T18:11:54.211Z",
+  "evidenceId": "d6777af0-86b3-4c95-8536-537630248d61",
+  "plan": {
+    "failureSummary": "Cached deterministic replay failed to find the radio button element '[data-testid=\\'radio-age-25-34\\']' because the survey form structure changed on the live page.",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Failure occurred during cache replay in DETERMINISTIC mode at .cache-lock/unstable-survey.test.ts.cache.js:61:9",
+      "Live screenshot shows 'Occupation' dropdown and 'What interests you?' checkboxes rather than age radio buttons expected by the cached script",
+      "Overall objective 'Fill out the all of the survey questions with fake data...' is semantically flexible and easily adaptable autonomously",
+      "No application browser errors or failed network requests recorded in browserLogs"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.AI cache and retry test",
+        "details": "Clear the cached Page.AI file for 'tests/unstable-survey.test.ts' and re-run the test to allow Page.AI to autonomously complete the current survey form layout."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Review survey variation handling if autonomous retry encounters issues",
+        "details": "If the survey dynamically randomizes question sets between runs, verify that the Page.AI prompt and test flow handle dynamic form state variations gracefully."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The test failed inside the generated cache replay file (.cache-lock/unstable-survey.test.ts.cache.js) while trying to click an age radio button that is no longer present on the active survey variation (which shows 'Occupation' and 'What interests you?' fields instead). Clearing the Page.AI cache and re-running will allow autonomous execution to adapt to the current form fields.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "Donobu-based Tests"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "Donobu-based Tests",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 18719,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-08-26T18-06-14-135Z-80b0573e",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-26T18-06-14-135Z-80b0573e",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-08-26T18-06-14-135Z-80b0573e/failure-evidence-donobu-based-tests-fill-out-a-survey-w1-r0-e0-d6777af0-86b3-4c95-8536-537630248d61.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}

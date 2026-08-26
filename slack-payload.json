@@ -12,45 +12,6 @@
       "fields": [
         {
           "type": "mrkdwn",
-          "text": "✅ Passed"
-        },
-        {
-          "type": "mrkdwn",
-          "text": "7"
-        }
-      ]
-    },
-    {
-      "type": "section",
-      "fields": [
-        {
-          "type": "mrkdwn",
-          "text": "🔁 Flaky"
-        },
-        {
-          "type": "mrkdwn",
-          "text": "0"
-        }
-      ]
-    },
-    {
-      "type": "section",
-      "fields": [
-        {
-          "type": "mrkdwn",
-          "text": "❤️‍🩹 Self-Healed"
-        },
-        {
-          "type": "mrkdwn",
-          "text": "1"
-        }
-      ]
-    },
-    {
-      "type": "section",
-      "fields": [
-        {
-          "type": "mrkdwn",
           "text": "❌ Failed"
         },
         {
@@ -77,7 +38,7 @@
       "fields": [
         {
           "type": "mrkdwn",
-          "text": "⏭️ Skipped"
+          "text": "⚡ Interrupted"
         },
         {
           "type": "mrkdwn",
@@ -103,11 +64,50 @@
       "fields": [
         {
           "type": "mrkdwn",
-          "text": "⚡ Interrupted"
+          "text": "❤️‍🩹 Auto-Healed"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "2"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "🔁 Flaky"
         },
         {
           "type": "mrkdwn",
           "text": "0"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "⏭️ Skipped"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "fields": [
+        {
+          "type": "mrkdwn",
+          "text": "✅ Passed"
+        },
+        {
+          "type": "mrkdwn",
+          "text": "6"
         }
       ]
     },
@@ -118,7 +118,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/32967100756|View Full Report>"
+        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/32997761995|View Full Report>"
       }
     },
     {
@@ -129,7 +129,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "Report generated on 8/26/2026, 12:18:15 PM by Donobu"
+          "text": "Report generated on 8/26/2026, 6:13:46 PM by Donobu"
         }
       ]
     }

@@ -30,41 +30,47 @@ Test timeout of 240000ms exceeded.
           - img [ref=e14]
       - generic [ref=e19]:
         - heading "Today" [level=2] [ref=e20]
-        - generic [ref=e22] [cursor=pointer]:
-          - generic [ref=e24]: What is the difference between...
-          - button [ref=e26]:
-            - img [ref=e27]
-      - button "Settings" [ref=e31] [cursor=pointer]:
-        - img [ref=e32]
+        - generic [ref=e21]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e24]: New Chat
+            - button [ref=e26]:
+              - img [ref=e27]
+          - generic [ref=e30] [cursor=pointer]:
+            - generic [ref=e32]: What are the key elements requ...
+            - button [ref=e34]:
+              - img [ref=e35]
+          - generic [ref=e38] [cursor=pointer]:
+            - generic [ref=e40]: New Chat
+            - button [ref=e42]:
+              - img [ref=e43]
+      - button "Settings" [ref=e47] [cursor=pointer]:
+        - img [ref=e48]
         - text: Settings
-    - generic [ref=e35]:
-      - generic [ref=e38]:
-        - generic [ref=e39]:
-          - paragraph [ref=e42]: What is the difference between a copyright and a trademark?
-          - generic [ref=e44]: A
-        - generic [ref=e45]:
-          - paragraph [ref=e48]: Explain the difference between RSUs and ISOs
-          - generic [ref=e50]: A
-        - generic [ref=e51]:
-          - paragraph [ref=e54]: What is the difference between a copyright and a trademark?
-          - generic [ref=e56]: A
-      - paragraph [ref=e58]:
-        - text: You have 7 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
-        - link "settings" [ref=e59] [cursor=pointer]:
+    - generic [ref=e51]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - paragraph [ref=e58]: What are the key elements required to form a legally binding contract?
+          - generic [ref=e60]: A
+        - generic [ref=e61]:
+          - paragraph [ref=e64]: What is the capital of France?
+          - generic [ref=e66]: A
+      - paragraph [ref=e68]:
+        - text: You have 6 messages remaining. To send more messages, please upgrade to the Pro Plan or set your OpenAI API key in
+        - link "settings" [ref=e69] [cursor=pointer]:
           - /url: "#"
         - text: .
-      - generic [ref=e60]:
-        - generic [ref=e62]:
-          - textbox "Type your message..." [active] [ref=e63]
-          - button [ref=e64] [cursor=pointer]:
-            - img [ref=e65]
+      - generic [ref=e70]:
+        - generic [ref=e72]:
+          - textbox "Type your message..." [active] [ref=e73]
+          - button [ref=e74] [cursor=pointer]:
+            - img [ref=e75]
           - button [disabled]:
             - img
-        - generic [ref=e67]:
+        - generic [ref=e77]:
           - text: Briefcase can make mistakes. Please check important info with a lawyer.
-          - button [ref=e68] [cursor=pointer]:
-            - img [ref=e69]
+          - button [ref=e78] [cursor=pointer]:
+            - img [ref=e79]
   - region "Notifications (F8)":
     - list
-  - alert [ref=e71]
+  - alert [ref=e81]
 ```
