@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@donobu/test':
-        specifier: 1.17.0
-        version: 1.17.0(@playwright/test@1.61.0)(playwright-core@1.61.0)(playwright@1.61.0)
+        specifier: 1.18.0
+        version: 1.18.0(@playwright/test@1.61.0)(playwright-core@1.61.0)(playwright@1.61.0)
       '@playwright/test':
         specifier: 1.61.0
         version: 1.61.0
@@ -57,8 +57,8 @@ packages:
   '@dabh/diagnostics@2.0.8':
     resolution: {integrity: sha512-R4MSXTVnuMzGD7bzHdW2ZhhdPC/igELENcq5IjEverBvq5hn1SXCWcsi6eSsdWP0/Ur+SItRRjAktmdoX/8R/Q==}
 
-  '@donobu/test@1.17.0':
-    resolution: {integrity: sha512-ASYUwp1+nEM3zrglwPTV1BphzXNE5+XaQjQPV2ebCv706ZK7KJ7gsEbtisE1JDtddwOdqVaHwLoS1mN2sD2mEA==}
+  '@donobu/test@1.18.0':
+    resolution: {integrity: sha512-tdSXc5LXcVa8Ju+pDoGZ84SHcLjqK0ZXx91nZx4lOvCkPKECZVLPCYtTJd2kuZkXr3Q4iF/XVb3C59fQAYOvAg==}
     engines: {node: '>=20.19'}
     hasBin: true
     peerDependencies:
@@ -837,7 +837,7 @@ snapshots:
       enabled: 2.0.0
       kuler: 2.0.0
 
-  '@donobu/test@1.17.0(@playwright/test@1.61.0)(playwright-core@1.61.0)(playwright@1.61.0)':
+  '@donobu/test@1.18.0(@playwright/test@1.61.0)(playwright-core@1.61.0)(playwright@1.61.0)':
     dependencies:
       '@ai-sdk/google': 3.0.64(zod@4.3.6)
       '@axe-core/playwright': 4.11.2(playwright-core@1.61.0)

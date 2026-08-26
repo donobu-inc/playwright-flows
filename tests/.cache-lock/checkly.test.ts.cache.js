@@ -15,62 +15,59 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Clicking on the Developers dropdown menu to open it.
+        // Clicking on the Developers dropdown menu to reveal its options.
         await page
           .find(
-            '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button',
+            '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > button',
             {
               failover: [
                 "(.//button[normalize-space(.)='Developers'])[1]",
-                'div:nth-of-type(2) > button.nav-item',
+                'div:nth-of-type(3) > button.nav-item',
               ],
             },
           )
           .click('left');
 
-        // Hovering over the Developers navigation element to trigger the dropdown menu if a simple click didn't trigger it, or to keep it active.
+        // Hovering over the Developers dropdown menu to open it.
         await page
           .find(
-            '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button',
+            '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > button',
             {
               failover: [
                 "(.//button[normalize-space(.)='Developers'])[1]",
-                'div:nth-of-type(2) > button.nav-item',
+                'div:nth-of-type(3) > button.nav-item',
               ],
             },
           )
           .hover();
 
-        // Clicking on the Developers dropdown menu button again to toggle and open it since it didn't open on the first attempt or hover.
+        // Clicking the Developers button to open the dropdown menu.
         await page
           .find(
-            '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button',
+            '#nav > nav > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > button',
             {
               failover: [
                 "(.//button[normalize-space(.)='Developers'])[1]",
-                'div:nth-of-type(2) > button.nav-item',
+                'div:nth-of-type(3) > button.nav-item',
               ],
             },
           )
           .click('left');
 
-        // Clicking on the Documentation option from the opened Developers dropdown menu.
+        // Clicking on the Documentation option inside the Developers dropdown menu.
         await page
-          .find(
-            '#nav-dropdown-developers > div > div > div:nth-of-type(1) > div:nth-of-type(1) > a:nth-of-type(1)',
-            {
-              failover: [
-                ".//a[normalize-space(.)='DocumentationLearn key concepts and features']",
-                "[href='/docs/']",
-              ],
-            },
-          )
+          .find("#nav-dropdown-developers a[href='/docs/']", {
+            failover: [
+              "//div[@id='nav-dropdown-developers']//a[contains(., 'Documentation')]",
+              "[href='/docs/']",
+            ],
+          })
           .click('left');
 
-        // Marking the task as complete because the Documentation page has successfully loaded.
+        // Completing the objective since the Developers dropdown was clicked and the Documentation option was selected.
         await page.run('markObjectiveComplete', {
           details:
-            'Successfully clicked the Developers dropdown and navigated to the Documentation option.',
+            'Successfully clicked on the Developers dropdown menu and navigated to the Documentation page (https://www.checklyhq.com/docs/).',
         });
       },
     },
@@ -82,7 +79,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Opening the search bar to search for 'Playwright check suite'
+        // Clicking the search bar entry button to open the search dialog.
         await page
           .find('#search-bar-entry', {
             failover: [
@@ -92,30 +89,33 @@ module.exports = {
           })
           .click('left');
 
-        // Typing the search query 'Playwright check suite' into the search input field without submitting.
+        // Typing "Playwright check suite" into the search input without submitting via Enter.
         await page
           .find('#search-input', {
             failover: [
-              "div:nth-of-type(1) > div > [aria-label='Search or ask a question...']",
               "[placeholder='Search or ask a question...']",
+              "[data-component-part='search-input']",
             ],
           })
           .inputText('Playwright check suite');
 
-        // Selecting the 'Playwright Check Suite' match under 'Constructs > DETECT' from the search suggestions.
+        // Choosing the match for 'Constructs > DETECT' from the search suggestions dropdown.
         await page
-          .find('#base-ui-_r_1t_-0', {
-            failover: [
-              ".//a[normalize-space(.)='Playwright Check SuiteConstructsDETECT']",
-              "[href='/docs/constructs/playwright-check#playwright-check-suite']",
-            ],
-          })
+          .find(
+            "[href='/docs/constructs/playwright-check#playwright-check-suite']",
+            {
+              failover: [
+                "//a[@data-component-part='search-item'][contains(., 'Playwright Check Suite') and contains(., 'Constructs')]",
+                ".//a[normalize-space(.)='Playwright Check SuiteConstructsDETECT']",
+              ],
+            },
+          )
           .click('left');
 
-        // The search was successfully performed, the correct match was clicked from the dropdown list, and the browser navigated to the targeted Playwright Check Suite constructs documentation page.
+        // Completing the objective as all steps have been successfully performed.
         await page.run('markObjectiveComplete', {
           details:
-            "Successfully searched for 'Playwright check suite' and selected the 'Constructs > DETECT' match ('Playwright Check Suite') from the suggestions dropdown without hitting Enter.",
+            "Searched for 'Playwright check suite' using typeahead without pressing Enter, and selected the match under 'Constructs > DETECT' which navigated to the Playwright Check Suite documentation under Constructs.",
         });
       },
     },

@@ -34,17 +34,17 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Entering a fake last name to start filling out the survey form.
+        // Entering a fake last name into the last name input field.
         await page
           .find("[data-testid='input-lastname']", {
             failover: [
+              "[placeholder='Enter your last name']",
               ".//label[normalize-space()='Last Name *']/following-sibling::input",
-              "[name='name']",
             ],
           })
-          .inputFaker('person.lastName');
+          .inputText('Smith');
 
-        // Entering a fake email address to satisfy the required field.
+        // Entering a fake email address into the email input field.
         await page
           .find(
             ".//label[normalize-space()='Email Address *']/following-sibling::input",
@@ -55,39 +55,48 @@ module.exports = {
               ],
             },
           )
-          .inputFaker('internet.email');
+          .inputText('john.smith@example.com');
 
-        // Selecting an age group (25-34) from the radio button options.
+        // Selecting an age group option.
         await page
           .find("[data-testid='radio-age-25-34']", {
             failover: [
+              "button[role='radio'][value='25-34']",
               "div:nth-of-type(2) > [role='radio']",
-              "div:nth-of-type(2) > [data-radix-collection-item='']",
             ],
           })
           .click('left');
 
-        // Scrolling down to see the remaining survey questions on the page.
-        await page.find('html').scroll('DOWN', { maxScroll: true });
+        // Scrolling down to view more survey fields.
+        await page.find('html').scroll('DOWN');
 
-        // Selecting 'Social Media' under 'How did you hear about us?'.
+        // Selecting the 'Social Media' checkbox for 'How did you hear about us?'.
         await page
-          .find("div:nth-of-type(1) > [role='checkbox']", {
-            failover: [
-              "div:nth-of-type(2) > div:nth-of-type(1) > [data-state='unchecked']",
-              'div:nth-of-type(1) > button.peer',
-            ],
-          })
+          .find(
+            "//label[contains(text(), 'Social Media')]/parent::div//button[@role='checkbox']",
+            {
+              failover: [
+                "//button[@role='checkbox' and following-sibling::label[contains(text(), 'Social Media')]]",
+                "div:nth-of-type(1) > [role='checkbox']",
+              ],
+            },
+          )
           .click('left');
 
-        // Clicking the 'Next' button to submit this step of the survey.
+        // Scrolling up to verify all required fields on the first page of the survey are completed.
+        await page.find('html').scroll('UP', { maxScroll: true });
+
+        // Scrolling down to locate and click the Next button.
+        await page.find('html').scroll('DOWN');
+
+        // Clicking the Next button to proceed to the next step of the survey.
         await page
           .find(".//button[normalize-space(.)='Next']", {
-            failover: ['button.inline-flex', 'div.mt-8 > button'],
+            failover: ['button[type="submit"]', 'div.mt-8 > button'],
           })
           .click('left');
 
-        // Clicking the 'Submit' button to complete the survey and reach the 'Thank You' page.
+        // Clicking the Submit button to finalize the survey submission.
         await page
           .find(".//button[normalize-space(.)='Submit']", {
             failover: [
@@ -97,10 +106,10 @@ module.exports = {
           })
           .click('left');
 
-        // The survey has been successfully submitted and the 'Thank You' page is displayed, matching our overall objective.
+        // Marking the objective complete as the survey submission has been finished and the Thank You page is reached.
         await page.run('markObjectiveComplete', {
           details:
-            "Successfully completed all survey steps with fake data and reached the 'Thank You' confirmation page.",
+            "Successfully filled out all survey questions with fake data, reviewed selections, submitted the survey, and reached the 'Thank You' page.",
         });
       },
     },

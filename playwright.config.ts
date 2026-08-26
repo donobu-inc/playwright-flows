@@ -3,26 +3,33 @@ import { defineConfig, devices } from '@donobu/test';
 export default defineConfig({
   testDir: './tests',
   projects: [
+    // Chained suite: authenticate once, then run the shopping journey with
+    // the saved session. A future chained app gets its own domain-named
+    // directory and an equivalent pair of project blocks.
     {
-      name: 'sauce-auth',
+      name: 'shopping-setup',
+      testMatch: 'tests/shopping/*.setup.ts',
       use: {
         ...devices['Desktop Chrome'],
       },
-      testMatch: 'tests/auth/sauce-login.test.ts',
     },
     {
-      name: 'sauce-shopping',
-      use: {
-        ...devices['Desktop Chrome'],
-        storageState: 'sauce-auth.json',
-      },
+      name: 'shopping',
       testMatch: 'tests/shopping/**/*.test.ts',
-      dependencies: ['sauce-auth'],
+      dependencies: ['shopping-setup'],
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: '.auth/shopping.json',
+      },
     },
+    // Standalone flows live flat at the tests root; the top-level glob does
+    // not descend, so no ignore list is needed.
     {
-      name: 'Donobu-based Tests',
-      testMatch: 'tests/**/*.test.ts',
-      testIgnore: ['tests/auth/**', 'tests/shopping/**'],
+      name: 'standalone',
+      testMatch: 'tests/*.test.ts',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
     },
   ],
   use: {
@@ -34,5 +41,5 @@ export default defineConfig({
     ['@donobu/test/reporter/markdown'],
     ['@donobu/test/reporter/slack'],
   ],
-  timeout: 240000
+  timeout: 240000,
 });
