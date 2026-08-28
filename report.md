@@ -6,27 +6,27 @@
 | - | - | - | - | - | - | - | - |
 | 0 ❌ | 0 ⏰ | 0 ⚡ | 0 🚫 | 0 ❤️‍🩹 | 0 🔁 | 0 ⏭️ | 9 ✅ |
 
-_9 tests in 6m 2s_
+_9 tests in 4m 37s_
 
-**[Open the full report →](https://github.com/donobu-inc/playwright-flows/actions/runs/33188716034)**
+**[Open the full report →](https://github.com/donobu-inc/playwright-flows/actions/runs/33217596458)**
 
 <details>
 <summary>📋 Results by file (9 files)</summary>
 
 | File | Result | Duration |
 | --- | --- | --- |
-| shopping/auth.setup.ts | 1 ✅ | 17s |
-| checkly.test.ts | 1 ✅ | 35s |
-| account-signup.test.ts | 1 ✅ | 1m 6s |
-| starbucks.test.ts | 1 ✅ | 10s |
-| unstable-survey.test.ts | 1 ✅ | 44s |
-| wikipedia-assert.test.ts | 1 ✅ | 22s |
-| ycombinator-search.test.ts | 1 ✅ | 12s |
-| conversational-bot.test.ts | 1 ✅ | 2m 11s |
-| shopping/cart-checkout.test.ts | 1 ✅ | 23s |
+| shopping/auth.setup.ts | 1 ✅ | 14s |
+| checkly.test.ts | 1 ✅ | 26s |
+| account-signup.test.ts | 1 ✅ | 1m 1s |
+| starbucks.test.ts | 1 ✅ | 6s |
+| unstable-survey.test.ts | 1 ✅ | 36s |
+| wikipedia-assert.test.ts | 1 ✅ | 19s |
+| conversational-bot.test.ts | 1 ✅ | 1m 24s |
+| ycombinator-search.test.ts | 1 ✅ | 9s |
+| shopping/cart-checkout.test.ts | 1 ✅ | 17s |
 
 </details>
 
 ---
 
-_Run started 2026-08-28T16:11:51.303Z · 3m 29s wall clock · [workflow run #715](https://github.com/donobu-inc/playwright-flows/actions/runs/33188716034) · Donobu_
+_Run started 2026-08-28T22:39:55.027Z · 2m 33s wall clock · [workflow run #716](https://github.com/donobu-inc/playwright-flows/actions/runs/33217596458) · Donobu_
