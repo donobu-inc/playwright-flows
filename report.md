@@ -4,17 +4,11 @@
 
 | Failed | Timed Out | Interrupted | Did Not Run | Auto-Healed | Flaky | Skipped | Passed |
 | - | - | - | - | - | - | - | - |
-| 0 ❌ | 0 ⏰ | 0 ⚡ | 0 🚫 | 1 ❤️‍🩹 | 0 🔁 | 0 ⏭️ | 8 ✅ |
+| 0 ❌ | 0 ⏰ | 0 ⚡ | 0 🚫 | 0 ❤️‍🩹 | 0 🔁 | 0 ⏭️ | 9 ✅ |
 
-_9 tests in 7m 8s_
+_9 tests in 6m 2s_
 
-### ❤️‍🩹 Auto-healed (1)
-
-| Test | Diagnosis |
-| --- | --- |
-| [unstable-survey.test.ts › Fill out a survey](https://donobu.com/home/me/flows/69ff1bac-57a5-4544-867a-85fc27d2b2a4) _(standalone)_ | **Stale Cached Instructions** — Cached page.ai step failed to locate 'Last Name' input field on an updated survey form variant. |
-
-**[Open the full report →](https://github.com/donobu-inc/playwright-flows/actions/runs/33089430721)**
+**[Open the full report →](https://github.com/donobu-inc/playwright-flows/actions/runs/33188716034)**
 
 <details>
 <summary>📋 Results by file (9 files)</summary>
@@ -22,17 +16,17 @@ _9 tests in 7m 8s_
 | File | Result | Duration |
 | --- | --- | --- |
 | shopping/auth.setup.ts | 1 ✅ | 17s |
-| checkly.test.ts | 1 ✅ | 36s |
-| account-signup.test.ts | 1 ✅ | 1m 22s |
-| starbucks.test.ts | 1 ✅ | 13s |
-| unstable-survey.test.ts | 1 ❤️‍🩹 | 1m 56s |
-| wikipedia-assert.test.ts | 1 ✅ | 21s |
-| ycombinator-search.test.ts | 1 ✅ | 13s |
-| conversational-bot.test.ts | 1 ✅ | 1m 43s |
-| shopping/cart-checkout.test.ts | 1 ✅ | 22s |
+| checkly.test.ts | 1 ✅ | 35s |
+| account-signup.test.ts | 1 ✅ | 1m 6s |
+| starbucks.test.ts | 1 ✅ | 10s |
+| unstable-survey.test.ts | 1 ✅ | 44s |
+| wikipedia-assert.test.ts | 1 ✅ | 22s |
+| ycombinator-search.test.ts | 1 ✅ | 12s |
+| conversational-bot.test.ts | 1 ✅ | 2m 11s |
+| shopping/cart-checkout.test.ts | 1 ✅ | 23s |
 
 </details>
 
 ---
 
-_Run started 2026-08-27T15:45:02.023Z · 5m 13s wall clock · auto-heal merged · [workflow run #713](https://github.com/donobu-inc/playwright-flows/actions/runs/33089430721) · Donobu_
+_Run started 2026-08-28T16:11:51.303Z · 3m 29s wall clock · [workflow run #715](https://github.com/donobu-inc/playwright-flows/actions/runs/33188716034) · Donobu_
