@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 5,
+  "evidenceId": "6fa567fe-06ef-4b33-a803-cbe80530dce3",
+  "runId": "2026-09-04T12-17-46-431Z-70865dc7",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-04T12-17-46-431Z-70865dc7",
+  "collectedAtIso": "2026-09-04T12:19:13.551Z",
+  "failureContext": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "standalone",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 10972,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "failure": {
+      "errors": [
+        {
+          "message": "Error: inputText execution failed: {\n  \"isSuccessful\": false,\n  \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\",\n  \"metadata\": {\n    \"selector\": {\n      \"element\": [\n        \"[data-testid='input-lastname']\",\n        \"[placeholder='Enter your last name']\",\n        \".//label[normalize-space()='Last Name *']/following-sibling::input\"\n      ]\n    }\n  }\n}",
+          "stack": "Error: inputText execution failed: {\n  \"isSuccessful\": false,\n  \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\",\n  \"metadata\": {\n    \"selector\": {\n      \"element\": [\n        \"[data-testid='input-lastname']\",\n        \"[placeholder='Enter your last name']\",\n        \".//label[normalize-space()='Last Name *']/following-sibling::input\"\n      ]\n    }\n  }\n}\n    at _Page.page.run (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.18.1_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/page/extendPage.js:1314:19)\n    at SmartSelectorImpl.inputText (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.18.1_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/page/SmartSelector.js:52:9)\n    at Object.run (/home/runner/work/playwright-flows/playwright-flows/tests/.cache-lock/unstable-survey.test.ts.cache.js:38:9)\n    at PageAi.ai (/home/runner/work/playwright-flows/playwright-flows/node_modules/.pnpm/@donobu+test@1.18.1_@playwright+test@1.61.0_playwright-core@1.61.0_playwright@1.61.0/node_modules/@donobu/test/dist/lib/ai/PageAi.js:169:21)\n    at /home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts:6:22"
+        }
+      ],
+      "attachments": [
+        {
+          "name": "screenshot",
+          "contentType": "image/png",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/unstable-survey-Fill-out-a-survey-standalone/test-failed-1.png"
+        },
+        {
+          "name": "test-flow-metadata.json",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-step-0-goToWebpage",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/unstable-survey-Fill-out-a-survey-standalone/attachments/donobu-step-0-goToWebpage-9c5211b8a3bcec945e5f00d6993e231c1b9f9fa5.jpg"
+        },
+        {
+          "name": "donobu-step-1-inputText",
+          "contentType": "image/jpeg",
+          "path": "/home/runner/work/playwright-flows/playwright-flows/test-results/unstable-survey-Fill-out-a-survey-standalone/attachments/donobu-step-1-inputText-bc3b2bd3f9481ff8722ac21fe7bbfa914dc7b47a.jpg"
+        },
+        {
+          "name": "donobu-step-summary",
+          "contentType": "application/json",
+          "path": null
+        },
+        {
+          "name": "donobu-ai-invocations",
+          "contentType": "application/json",
+          "path": null
+        }
+      ]
+    },
+    "donobuFlow": {
+      "metadata": {
+        "id": "38202c01-4114-4193-b777-07088509df33",
+        "name": "unstable-survey.test.ts > Fill out a survey",
+        "runMode": "DETERMINISTIC",
+        "state": "FAILED",
+        "targetWebsite": "https://unstable-survey-dinoer.replit.app",
+        "overallObjective": null,
+        "allowedTools": [],
+        "envVars": [],
+        "startedAt": 1788524340121,
+        "completedAt": 1788524351089,
+        "maxToolCalls": null,
+        "gptConfigName": null,
+        "defaultMessageDuration": 250,
+        "resultSummary": null
+      },
+      "recentToolCalls": [
+        {
+          "id": "adhoc_7632e4c120de40a6b3be269269ae2325",
+          "toolName": "goToWebpage",
+          "success": true,
+          "outcomeSummary": "Successfully navigated to https://unstable-survey-dinoer.replit.app",
+          "durationMs": 6876,
+          "page": "https://unstable-survey-dinoer.replit.app",
+          "startedAtIso": "2026-09-04T12:19:00.949Z",
+          "completedAtIso": "2026-09-04T12:19:07.825Z",
+          "parameters": "{\n  \"url\": \"https://unstable-survey-dinoer.replit.app\"\n}"
+        },
+        {
+          "id": "adhoc_746306e27e454bf39f618da6207b1ee7",
+          "toolName": "inputText",
+          "success": false,
+          "outcomeSummary": "FAILED! Unable to resolve HTML element to operate with.",
+          "durationMs": 2317,
+          "page": "https://unstable-survey-dinoer.replit.app/",
+          "startedAtIso": "2026-09-04T12:19:08.105Z",
+          "completedAtIso": "2026-09-04T12:19:10.422Z",
+          "parameters": "{\n  \"text\": \"Smith\",\n  \"finalizeWithSubmit\": false,\n  \"finalizeWithTab\": false,\n  \"selector\": {\n    \"element\": [\n      \"[data-testid='input-lastname']\",\n      \"[placeholder='Enter your last name']\",\n      \".//label[normalize-space()='Last Name *']/following-sibling::input\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
+        }
+      ]
+    },
+    "cachedReplay": {
+      "cacheFilePath": "/home/runner/work/playwright-flows/playwright-flows/tests/.cache-lock/unstable-survey.test.ts.cache.js",
+      "cacheFileExists": true,
+      "cachedEntrySnippet": "/**\n * @generated\n * This file was generated by Donobu; do not edit manually.\n */\n/* eslint-disable */\nconst { expect } = require('@donobu/test');\n\nmodule.exports = {\n  caches: [\n    {\n      pageUrl: 'unstable-survey-dinoer.replit.app',\n      instruction:\n        'Fill out the all of the survey questions with fake data go through\\nthe submission process until you get to a \"Thank You\" page.',\n      schema: {\n        $schema: 'https://json-schema.org/draft/2020-12/schema',\n        type: 'object',\n        properties: {\n          surveyData: {\n            type: 'array',\n            items: {\n              type: 'object',\n              properties: {\n                question: { type: 'string' },\n                response: { type: 'string' },\n              },\n              required: ['question', 'response'],\n              additionalProperties: false,\n            },\n          },\n        },\n        required: ['surveyData'],\n        additionalProperties: false,\n      },\n      allowedTools: [],\n      maxToolCalls: 50,\n      run: async ({ page }) => {\n        // Entering a fake last name into the last name input field.\n        await page\n          .find(\"[data-testid='input-lastname']\", {\n            failover: [\n              \"[placeholder='Enter your last name']\",\n              \".//label[normalize-space()='Last Name *']/following-sibling::input\",\n            ],\n          })\n          .inputText('Smith');\n\n        // Entering a fake email address into the email input field.\n        await page\n          .find(\n            \".//label[normalize-space()='Email Address *']/following-sibling::input\",\n            {\n              failover: [\n                \"[name='email']\",\n                \"[placeholder='Enter your email address']\",\n              ],\n            },\n          )\n          .inputText('john.smith@example.com');\n\n        // Selecting an age group option.\n        await page\n          .find(\"[data-testid='radio-age-25-34']\", {\n            failover: [\n              \"button[role='radio'][value='25-34']\",\n              \"div:nth-of-type(2) > [role='radio']\",\n            ],\n          })\n          .click('left');\n\n        // Scrolling down to view more survey fields.\n        await page.find('html').scroll('DOWN');\n\n        // Selecting the 'Social Media' checkbox for 'How did you hear about us?'.\n        await page\n          .find(\n            \"//label[contains(text(), 'Social Media')]/parent::div//button[@role='checkbox']\",\n            {\n              failover: [\n       ..."
+    },
+    "browserLogs": {
+      "totalBrowserEntries": 0,
+      "totalNetworkEntries": 9,
+      "evictedEntries": 0,
+      "browserErrorCount": 0,
+      "failedRequestCount": 0,
+      "notableBrowserEntries": [],
+      "notableNetworkEntries": [],
+      "omittedNotableEntries": 0
+    },
+    "priorHumanVerdicts": null,
+    "testSnippet": "test('Fill out a survey', async ({ page }) => {\n  await page.goto('https://unstable-survey-dinoer.replit.app');\n  const surveyData = await page.ai(\n    `Fill out the all of the survey questions with fake data go through\nthe submission process until you get to a \"Thank You\" page.`,\n    {\n      schema: z.object({\n        surveyData: z.array(\n          z.object({\n            question: z.string(),\n            response: z.string(),\n          }),\n        ),\n      }),\n    },\n  );\n  console.log(\n    `Completed the survey! Survey data: ${JSON.stringify(surveyData, null, 2)}`,\n  );\n  await expect(page).toHaveURL(/thank-you/);\n});",
+    "heuristics": {
+      "failureReason": "STALE_CACHED_INSTRUCTIONS",
+      "evidence": [
+        "Falling back to automation script issue from generic error content.",
+        "The failing step was replayed from a generated page.ai cache file (cache-replay frame in the error stack).",
+        "Recent DETERMINISTIC SUCCESS confirms cache was valid recently, strengthening stale-cache hypothesis."
+      ],
+      "confidence": 0.9,
+      "failureSummary": "Error: inputText execution failed: {\n  \"isSuccessful\": false,\n  \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\",\n  \"metadata\": {\n    \"selector\": {\n      \"element\": [\n        \"[data-testid='input-lastname']\",\n        \"[placeholder='Enter your last name']\",\n        \".//label[normalize-space()='Last Name *']/following-sibling::input\"\n      ]\n    }\n  }\n}",
+      "shouldRetryAutomation": true,
+      "requiresCodeChange": false,
+      "requiresProductFix": false,
+      "remediationSteps": [
+        {
+          "category": "RETRY_AUTOMATION",
+          "summary": "Delete the test cache and retry the test.",
+          "details": "Remove the cached .cache-lock/<spec-file>.cache.js entry so page.ai regenerates selectors, locators, and assertions against the live DOM,\nthen rerun the automation to confirm recovery before escalating."
+        },
+        {
+          "category": "UPDATE_TEST_LOGIC",
+          "summary": "Review the page.ai instruction if the fresh run still fails.",
+          "details": "If cache regeneration and an autonomous retry still fail, the objective may no longer be achievable on the current page; revisit the page.ai instruction or the test expectations."
+        }
+      ],
+      "additionalDataRequests": [
+        {
+          "description": "Compare the cached instructions against the current page structure.",
+          "suggestedSources": [
+            "Generated .cache-lock/<spec-file>.cache.js cache file",
+            "Donobu tool call screenshots"
+          ]
+        }
+      ],
+      "notes": "The failure originates in Donobu-generated cached instructions, not user test code. Cache regeneration and an autonomous retry are recommended. Historical data shows a prior run recovered on retry. Automated retry has high likelihood of success.",
+      "occurredDuringPageAi": false,
+      "staleCacheIndicators": {
+        "usedDeterministicMode": true,
+        "selectorFailedDuringPageAi": false,
+        "failedAfterPageAiCompleted": false,
+        "isRetryAttempt": false,
+        "quickFailurePattern": false,
+        "toolCallsShowSelectorIssues": false,
+        "assertionsFailedAfterSuccessfulPageAi": false,
+        "failureInCacheReplay": true
+      },
+      "staleCacheAssessment": {
+        "score": 0.65,
+        "isLikelyStaleCache": true,
+        "isLikelyLegitimateFailure": false,
+        "supportingEvidence": [
+          "Used DETERMINISTIC mode (cache was active and could be stale)",
+          "Failure occurred while replaying cached page.ai instructions on the first attempt (the failing step/assertion text was authored by a prior AI run, not the test author)"
+        ],
+        "contradictingEvidence": []
+      },
+      "historicalSignals": {
+        "flakinessScore": 0.7777777777777778,
+        "regressionLikelihood": 0,
+        "recentPassRate": 0.631578947368421,
+        "priorSelfHealSuccess": true,
+        "cacheWasRecentlyValid": true
+      }
+    },
+    "flowHistory": {
+      "flowName": "unstable-survey.test.ts > Fill out a survey",
+      "totalRuns": 19,
+      "successCount": 12,
+      "failureCount": 7,
+      "otherCount": 0,
+      "passRate": 0.631578947368421,
+      "recentRuns": [
+        {
+          "id": "d235e6f9-9cac-4027-a249-0d4ca5739ec8",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788438012559,
+          "completedAt": 1788438050755,
+          "durationMs": 38196
+        },
+        {
+          "id": "d525a763-d353-4d92-8493-5ff8d0e3f260",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788351686569,
+          "completedAt": 1788351779022,
+          "durationMs": 92453
+        },
+        {
+          "id": "22bf11b2-20fa-4b25-8fe4-51846e82ee5e",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788351568992,
+          "completedAt": 1788351579779,
+          "durationMs": 10787
+        },
+        {
+          "id": "9e02d9b7-bf98-4ea9-8ae6-7bcf7b80076f",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788265253969,
+          "completedAt": 1788265338583,
+          "durationMs": 84614
+        },
+        {
+          "id": "66327c2d-bf73-401f-9c34-26043d7caa56",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788265140950,
+          "completedAt": 1788265146313,
+          "durationMs": 5363
+        },
+        {
+          "id": "633615f8-94ff-4d37-9fbf-599cb7a48472",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788178860519,
+          "completedAt": 1788178902400,
+          "durationMs": 41881
+        },
+        {
+          "id": "4b5cde99-7e84-48b8-990a-0c4e18af5012",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788092315755,
+          "completedAt": 1788092417066,
+          "durationMs": 101311
+        },
+        {
+          "id": "2fb6889f-59b1-4783-90b4-c8baa8b4dca5",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788092204068,
+          "completedAt": 1788092215989,
+          "durationMs": 11921
+        },
+        {
+          "id": "d12e8f4e-4911-4922-8b45-c158bdf6623f",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788005923238,
+          "completedAt": 1788006083981,
+          "durationMs": 160743
+        },
+        {
+          "id": "aa986fce-ac1a-400a-8afc-5a46c3b3107b",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1788005807315,
+          "completedAt": 1788005819944,
+          "durationMs": 12629
+        }
+      ],
+      "currentStreak": {
+        "state": "SUCCESS",
+        "length": 2
+      },
+      "lastSuccessfulRunId": "d235e6f9-9cac-4027-a249-0d4ca5739ec8",
+      "queryWindowDays": 14,
+      "queriedAt": "2026-09-04T12:19:12.536Z"
+    }
+  },
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-04T12-17-46-431Z-70865dc7/failure-screenshot-6fa567fe-06ef-4b33-a803-cbe80530dce3.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-04T12-17-46-431Z-70865dc7/baseline-screenshot-6fa567fe-06ef-4b33-a803-cbe80530dce3.png"
+}

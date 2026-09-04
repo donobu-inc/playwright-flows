@@ -1,0 +1,55 @@
+{
+  "generatedAtIso": "2026-09-04T12:20:52.825Z",
+  "evidenceId": "6fa567fe-06ef-4b33-a803-cbe80530dce3",
+  "plan": {
+    "failureSummary": "Page.ai deterministic cache replay failed because the live survey form fields ('Your Name *', 'Contact Email *') differ from the cached selectors ('Last Name *', 'Email Address *').",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Error occurred directly inside the generated cache replay file (.cache-lock/unstable-survey.test.ts.cache.js:38).",
+      "Failure screenshot shows fields 'Your Name *' and 'Contact Email *', whereas the cached replay expected '[data-testid=\\x27input-lastname\\x27]' / 'Last Name *'.",
+      "The overall objective is semantically flexible ('Fill out the all of the survey questions with fake data...') and can readily adapt to the updated form structure on a fresh run.",
+      "Test was executed in DETERMINISTIC replay mode on its initial attempt (isRetryAttempt: false)."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.AI cache and retry test execution",
+        "details": "Clear the Page.AI cache for tests/unstable-survey.test.ts and trigger an automated retry so the autonomous agent can inspect the live form and generate fresh selectors."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The unstable survey form presents different fields than what was recorded in the cache lock file. Clearing the Page.AI cache and allowing the agent to dynamically fulfill the flexible objective ('Fill out the all of the survey questions with fake data...') will resolve the failure.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "standalone"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "standalone",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 10972,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-09-04T12-17-46-431Z-70865dc7",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-04T12-17-46-431Z-70865dc7",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-04T12-17-46-431Z-70865dc7/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-6fa567fe-06ef-4b33-a803-cbe80530dce3.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
