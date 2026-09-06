@@ -1,0 +1,68 @@
+{
+  "generatedAtIso": "2026-09-06T12:18:14.040Z",
+  "evidenceId": "aaa58f23-9c74-440d-9082-4c28d6d3e374",
+  "plan": {
+    "failureSummary": "The test failed during deterministic cache replay because the survey form fields changed (from 'Last Name' to 'Your Name'), causing cached selectors to fail.",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Failure occurred during deterministic cache replay inside .cache-lock/unstable-survey.test.ts.cache.js",
+      "Cached replay attempted to locate 'Last Name *' / input-lastname, which does not exist on the current page",
+      "Failure screenshot shows updated form fields ('Your Name *', 'Contact Email *', 'Occupation *') instead of the previous 'Last Name' field",
+      "Overall objective is semantically flexible and easily adaptable by a fresh autonomous Page.AI execution",
+      "No application or network errors logged in browserLogs"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.AI cache and retry test",
+        "details": "Clear the Page.AI cache (.cache-lock/unstable-survey.test.ts.cache.js) and re-run the test to allow Page.AI to autonomously interact with the updated survey fields and record a new cache."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Verify autonomous flow if failure recurs",
+        "details": "If autonomous retries fail to complete the survey, verify whether additional dynamic variations exist and adjust the prompt or wait conditions accordingly."
+      }
+    ],
+    "additionalDataRequests": [
+      {
+        "description": "Compare the newly generated cache with previous versions if form variations continue.",
+        "suggestedSources": [
+          "tests/.cache-lock/unstable-survey.test.ts.cache.js"
+        ]
+      }
+    ],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The survey application appears to alter question fields dynamically or across variants. Since the overall objective ('Fill out all of the survey questions with fake data...') is semantically flexible, regenerating the cache autonomously will allow Page.AI to discover the updated form fields and complete the submission.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "standalone"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "standalone",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 11433,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-09-06T12-15-19-408Z-093508c1",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-06T12-15-19-408Z-093508c1",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-06T12-15-19-408Z-093508c1/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-aaa58f23-9c74-440d-9082-4c28d6d3e374.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
