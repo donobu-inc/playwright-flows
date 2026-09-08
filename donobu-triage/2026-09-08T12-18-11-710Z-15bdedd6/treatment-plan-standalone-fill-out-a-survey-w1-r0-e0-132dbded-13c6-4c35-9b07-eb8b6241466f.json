@@ -1,0 +1,55 @@
+{
+  "generatedAtIso": "2026-09-08T12:21:10.488Z",
+  "evidenceId": "132dbded-13c6-4c35-9b07-eb8b6241466f",
+  "plan": {
+    "failureSummary": "Cached Page.AI replay failed to locate 'Last Name' input field on an unstable survey form variant (Set 2).",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Failure occurred during DETERMINISTIC cache replay in .cache-lock/unstable-survey.test.ts.cache.js",
+      "Cached replay attempted to find '[data-testid=\\'input-lastname\\']' / 'Last Name *' input",
+      "Failure screenshot displays a different form structure ('Set 2') with 'Your Name *' and 'Contact Email *' instead of separate first/last name fields",
+      "The page.ai instruction ('Fill out the all of the survey questions with fake data...') has high semantic flexibility and can adapt autonomously upon cache clearance"
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.AI cache and retry test",
+        "details": "Clear the cached instructions for unstable-survey.test.ts and allow Page.AI to execute autonomously against the current form layout."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The test runs against an unstable survey application that alternates form field schemas/sets. Clearing the Page.AI cache will let the agent autonomously adapt to the active form variant.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "standalone"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "standalone",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 10918,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-09-08T12-18-11-710Z-15bdedd6",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-08T12-18-11-710Z-15bdedd6",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-08T12-18-11-710Z-15bdedd6/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-132dbded-13c6-4c35-9b07-eb8b6241466f.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
