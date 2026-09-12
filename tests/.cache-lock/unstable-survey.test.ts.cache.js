@@ -34,17 +34,58 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Entering a fake last name into the last name input field.
+        // Entering a fake name into the name field to complete the survey.
+        await page
+          .find(
+            ".//label[normalize-space()='Your Name *']/following-sibling::input",
+            { failover: ["[name='name']", "[placeholder='Enter your name']"] },
+          )
+          .inputFaker('person.fullName');
+
+        // Entering a fake email address into the contact email field.
+        await page
+          .find(
+            ".//label[normalize-space()='Contact Email *']/following-sibling::input",
+            {
+              failover: [
+                "[name='email']",
+                "[placeholder='Enter your contact email']",
+              ],
+            },
+          )
+          .inputFaker('internet.email');
+
+        // Opening the occupation dropdown menu to select an occupation.
+        await page
+          .find(".//button[normalize-space(.)='Select your occupation']", {
+            failover: [
+              "[role='combobox']",
+              "//div[label[contains(., 'Occupation')]]//button",
+            ],
+          })
+          .click('left');
+
+        // Clicking to open the occupation dropdown menu.
+        await page
+          .find(".//button[normalize-space(.)='Select your occupation']", {
+            failover: [
+              "[role='combobox']",
+              "//div[label[contains(., 'Occupation')]]//button",
+            ],
+          })
+          .click('left');
+
+        // Entering fake last name into the last name input field.
         await page
           .find("[data-testid='input-lastname']", {
             failover: [
-              "[placeholder='Enter your last name']",
               ".//label[normalize-space()='Last Name *']/following-sibling::input",
+              "[placeholder='Enter your last name']",
             ],
           })
-          .inputText('Smith');
+          .inputFaker('person.lastName');
 
-        // Entering a fake email address into the email input field.
+        // Entering fake email into the email field.
         await page
           .find(
             ".//label[normalize-space()='Email Address *']/following-sibling::input",
@@ -55,9 +96,9 @@ module.exports = {
               ],
             },
           )
-          .inputText('john.smith@example.com');
+          .inputFaker('internet.email');
 
-        // Selecting an age group option.
+        // Selecting the age group 25-34 to fulfill the survey requirements.
         await page
           .find("[data-testid='radio-age-25-34']", {
             failover: [
@@ -67,32 +108,32 @@ module.exports = {
           })
           .click('left');
 
-        // Scrolling down to view more survey fields.
+        // Scrolling down to see the rest of the survey form questions and submit button.
         await page.find('html').scroll('DOWN');
 
-        // Selecting the 'Social Media' checkbox for 'How did you hear about us?'.
+        // Checking the 'Social Media' option for the 'How did you hear about us?' question.
         await page
           .find(
-            "//label[contains(text(), 'Social Media')]/parent::div//button[@role='checkbox']",
+            "//label[contains(., 'Social Media')]/preceding-sibling::button",
             {
               failover: [
-                "//button[@role='checkbox' and following-sibling::label[contains(text(), 'Social Media')]]",
+                "//div[label[contains(., 'Social Media')]]/button[@role='checkbox']",
                 "div:nth-of-type(1) > [role='checkbox']",
               ],
             },
           )
           .click('left');
 
-        // Scrolling up to verify all required fields on the first page of the survey are completed.
+        // Scrolling to the top of the form to verify all required fields are filled.
         await page.find('html').scroll('UP', { maxScroll: true });
 
-        // Scrolling down to locate and click the Next button.
+        // Scrolling down to reach the Next button.
         await page.find('html').scroll('DOWN');
 
         // Clicking the Next button to proceed to the next step of the survey.
         await page
           .find(".//button[normalize-space(.)='Next']", {
-            failover: ['button[type="submit"]', 'div.mt-8 > button'],
+            failover: ["button[type='submit']", 'div.mt-8 > button'],
           })
           .click('left');
 
@@ -106,10 +147,10 @@ module.exports = {
           })
           .click('left');
 
-        // Marking the objective complete as the survey submission has been finished and the Thank You page is reached.
+        // Completing the overall objective as the survey has been submitted and the 'Thank You' page is reached.
         await page.run('markObjectiveComplete', {
           details:
-            "Successfully filled out all survey questions with fake data, reviewed selections, submitted the survey, and reached the 'Thank You' page.",
+            "Successfully filled out the survey form with fake data, reviewed selections, submitted the form, and reached the 'Thank You' page.",
         });
       },
     },
