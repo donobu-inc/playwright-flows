@@ -1,0 +1,55 @@
+{
+  "generatedAtIso": "2026-09-15T12:21:09.680Z",
+  "evidenceId": "6b6edb72-8a77-4fde-ad01-b22ad17344cb",
+  "plan": {
+    "failureSummary": "The cached Page.AI replay failed to find the 'Last Name' input field because the survey form rendered a different question set ('Your Name', 'Contact Email', 'Occupation').",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Error occurred during execution of cached replay script '.cache-lock/unstable-survey.test.ts.cache.js:38:9' in DETERMINISTIC mode.",
+      "The cached step attempted to locate '[data-testid=\\'input-lastname\\']' / 'Last Name *', but the failure screenshot shows the form contains 'Your Name *' and 'Contact Email *'.",
+      "The overall objective ('Fill out the all of the survey questions with fake data...') is semantically flexible and easily adaptable by a fresh autonomous execution.",
+      "Browser console and network logs show 0 errors, indicating the application itself is functioning normally."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.AI cache and retry test",
+        "details": "Clear the Page.AI cache for tests/unstable-survey.test.ts and re-run the test to allow the autonomous agent to handle the current form layout."
+      }
+    ],
+    "additionalDataRequests": [],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The target application alternates form variants. Clearing the Page.AI cache will allow the autonomous agent to dynamically inspect and fill the active form variant.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "standalone"
+    }
+  },
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "standalone",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 12310,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-09-15T12-17-19-515Z-e4aa554f",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-15T12-17-19-515Z-e4aa554f",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-15T12-17-19-515Z-e4aa554f/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-6b6edb72-8a77-4fde-ad01-b22ad17344cb.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
