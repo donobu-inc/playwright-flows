@@ -118,7 +118,7 @@
       "type": "section",
       "text": {
         "type": "mrkdwn",
-        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/34967891801|View Full Report>"
+        "text": "📊 <https://github.com/donobu-inc/playwright-flows/actions/runs/35094922110|View Full Report>"
       }
     },
     {
@@ -129,7 +129,7 @@
       "elements": [
         {
           "type": "mrkdwn",
-          "text": "Report generated on 9/15/2026, 12:22:39 PM by Donobu"
+          "text": "Report generated on 9/16/2026, 12:22:27 PM by Donobu"
         }
       ]
     }
