@@ -1,0 +1,95 @@
+{
+  "generatedAtIso": "2026-09-18T01:29:09.532Z",
+  "evidenceId": "5e7242e6-a97e-4f58-a35a-6c0ccc762846",
+  "plan": {
+    "failureSummary": "Cached deterministic replay failed to find the 'Last Name' input field because the survey form rendered a different field layout ('Your Name', 'Contact Email').",
+    "failureReason": "STALE_CACHED_INSTRUCTIONS",
+    "confidence": 0.95,
+    "observedIndicators": [
+      "Failure occurred inside the cache replay file .cache-lock/unstable-survey.test.ts.cache.js.",
+      "Failure screenshot shows form fields 'Your Name' and 'Contact Email' instead of the cached 'Last Name' field.",
+      "usedDeterministicMode is true and isRetryAttempt is false.",
+      "Overall objective is semantically flexible and easily satisfied by fresh autonomous exploration."
+    ],
+    "remediationSteps": [
+      {
+        "category": "RETRY_AUTOMATION",
+        "summary": "Clear Page.AI cache and retry test",
+        "details": "Clear the Page.AI cache for tests/unstable-survey.test.ts and re-run the test to allow autonomous interaction with the live form layout."
+      }
+    ],
+    "additionalDataRequests": [
+      {
+        "description": "Review if the survey layout intentionally changes dynamically across runs as described in the test objective.",
+        "suggestedSources": [
+          "tests/unstable-survey.test.ts",
+          "application source code or documentation"
+        ]
+      }
+    ],
+    "shouldRetryAutomation": true,
+    "requiresCodeChange": false,
+    "requiresProductFix": false,
+    "notes": "The test description explicitly notes that form layouts shift between loads. The cached replay locked onto selectors from a previous variant with 'Last Name', failing against the current DOM variant. Clearing the page.ai cache and running an autonomous attempt will adapt to the current form fields.",
+    "automationDirectives": {
+      "clearPageAiCache": true,
+      "targetTestFile": "tests/unstable-survey.test.ts",
+      "targetProject": "standalone"
+    },
+    "provenance": {
+      "kind": "AI"
+    }
+  },
+  "failureSignature": {
+    "captureVersion": 1,
+    "components": {
+      "testTitle": "Fill out a survey",
+      "testFile": "tests/unstable-survey.test.ts",
+      "stepPath": [],
+      "failingStepTitle": null,
+      "failingStepCategory": null,
+      "userFrames": [
+        "run (unstable-survey.test.ts.cache.js)",
+        "unstable-survey.test.ts"
+      ],
+      "kind": "tool:inputText",
+      "subject": "{ 'text': 'Smith', 'finalizeWithSubmit': false, 'finalizeWithTab': false, 'selector': { 'element': [ '[data-testid='input-lastname']', '[placeholder='Enter your last name']', './/label[normalize-space()='Last Name *']/following-sibling::input' ] }, 'rationale':…",
+      "expected": null,
+      "received": null,
+      "errorName": "Error",
+      "errorHeadline": "Error: inputText execution failed: {",
+      "errorMessageNormalized": "Error: inputText execution failed: { \"isSuccessful\": false, \"forLlm\": \"FAILED! Unable to resolve HTML element to operate with.\", \"metadata\": { \"selector\": { \"element\": [ \"[data-testid='input-lastname']\", \"[placeholder='Enter your last name']\", \".//label[normalize-space()='Last Name *']/following-sibling::input\" ] } } }",
+      "errorCount": 1,
+      "failedTool": {
+        "toolName": "inputText",
+        "parameters": "{\n  \"text\": \"Smith\",\n  \"finalizeWithSubmit\": false,\n  \"finalizeWithTab\": false,\n  \"selector\": {\n    \"element\": [\n      \"[data-testid='input-lastname']\",\n      \"[placeholder='Enter your last name']\",\n      \".//label[normalize-space()='Last Name *']/following-sibling::input\"\n    ]\n  },\n  \"rationale\":…"
+      },
+      "pageUrl": "https://unstable-survey-dinoer.replit.app/",
+      "cacheEntryKey": "{\"allowedTools\":[],\"dimensions\":{\"pageUrl\":\"unstable-survey-dinoer.replit.app\"},\"instruction\":\"Fill out the all of the survey questions with fake data go through\\nthe submission process until you get to a \\\"Thank You\\\" page.\",\"kind\":\"act\",\"maxToolCalls\":50,\"schema\":{\"$schema\":\"https://json-schema.org/draft/2020-12/schema\",\"additionalProperties\":false,\"properties\":{\"surveyData\":{\"items\":{\"additionalProperties\":false,\"properties\":{\"question\":{\"type\":\"string\"},\"response\":{\"type\":\"string\"}},\"required\":[\"question\",\"response\"],\"type\":\"object\"},\"type\":\"array\"}},\"required\":[\"surveyData\"],\"type\":\"object\"}}"
+    }
+  },
+  "standingVerdict": null,
+  "failure": {
+    "testCase": {
+      "title": "Fill out a survey",
+      "file": "/home/runner/work/playwright-flows/playwright-flows/tests/unstable-survey.test.ts",
+      "projectName": "standalone",
+      "status": "failed",
+      "expectedStatus": "passed",
+      "retry": 0,
+      "repeatEachIndex": 0,
+      "workerIndex": 1,
+      "timeout": 240000,
+      "duration": 5750,
+      "annotations": [],
+      "autoHealEnabled": true
+    },
+    "runId": "2026-09-18T01-25-30-407Z-8abafa42",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-18T01-25-30-407Z-8abafa42",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-18T01-25-30-407Z-8abafa42/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-5e7242e6-a97e-4f58-a35a-6c0ccc762846.json"
+  },
+  "originalPlaywrightArgs": [
+    "test"
+  ],
+  "reportPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/report.json"
+}
