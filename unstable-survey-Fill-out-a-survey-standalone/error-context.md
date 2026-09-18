@@ -7,7 +7,7 @@
 # Test info
 
 - Name: unstable-survey.test.ts >> Fill out a survey
-- Location: tests/unstable-survey.test.ts:4:5
+- Location: tests/unstable-survey.test.ts:9:5
 
 # Error details
 
@@ -47,7 +47,7 @@ Error: inputText execution failed: {
   - generic [ref=e24]:
     - generic [ref=e25]: "Current Time:"
     - generic [ref=e26]:
-      - generic [ref=e27]: 12:19:09
+      - generic [ref=e27]: 00:29:26
       - generic [ref=e28]: Set 2
   - generic [ref=e29]:
     - heading "Tell us about yourself" [level=2] [ref=e30]
@@ -64,26 +64,25 @@ Error: inputText execution failed: {
         - generic [ref=e39]: Occupation *
         - combobox "Occupation *" [ref=e40] [cursor=pointer]:
           - generic: Select your occupation
-          - img [ref=e41]
-        - combobox [ref=e43]
+        - combobox [aria-hidden] [ref=e43]
       - generic [ref=e44]:
-        - generic [ref=e46]: What interests you? *
+        - generic [ref=e45]: What interests you? *
         - generic [ref=e47]:
           - generic [ref=e48]:
             - checkbox "Technology" [ref=e49] [cursor=pointer]
-            - checkbox
+            - checkbox [aria-hidden]
             - generic [ref=e50]: Technology
           - generic [ref=e51]:
             - checkbox "Science" [ref=e52] [cursor=pointer]
-            - checkbox
+            - checkbox [aria-hidden]
             - generic [ref=e53]: Science
           - generic [ref=e54]:
             - checkbox "Arts & Culture" [ref=e55] [cursor=pointer]
-            - checkbox
+            - checkbox [aria-hidden]
             - generic [ref=e56]: Arts & Culture
           - generic [ref=e57]:
             - checkbox "Sports & Fitness" [ref=e58] [cursor=pointer]
-            - checkbox
+            - checkbox [aria-hidden]
             - generic [ref=e59]: Sports & Fitness
       - generic [ref=e60]:
         - text: Suggestions (Optional)
