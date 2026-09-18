@@ -1,6 +1,10 @@
 import { expect, test } from '@donobu/test';
 import { z } from 'zod/v4';
 
+/**
+ * A new visitor can sign up for an Everbutton account with freshly generated
+ * credentials and reach the signed-in state.
+ */
 test('Account signup for Everbutton', async ({ page }) => {
   await page.goto('https://stage.everbutton.com');
   const newCredentials = await page.ai(

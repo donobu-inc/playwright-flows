@@ -10,6 +10,44 @@ Every command prints JSON on stdout. Exit code 1 means the action failed or an
 assertion did not hold — read the `result`/`failure` field, don't retry
 blindly.
 
+## Exploring an app
+
+There are two ways to learn an app you do not know yet. Both write what they
+see into the same knowledge base, so `npx donobu context show` reads the
+result either way.
+
+```bash
+npx donobu explore https://app.example.com                       # autonomous
+npx donobu explore https://app.example.com --focus "checkout"    # steered
+npx donobu session start --url https://app.example.com           # you drive
+```
+
+- **`donobu explore <url>`** runs Donobu's own read-only tour: it maps the
+  navigation, visits the important pages, notes anything broken or
+  inconsistent, and never creates, changes, or deletes data. It takes minutes
+  and needs no decisions from you. Prefer it to learn an app from zero, or to
+  answer an open question about a part of the app you have not seen. Add
+  `--focus "<what to look for>"` to aim it, `--env NAME` to allow a login
+  credential from the project `.env`, `--headless` in CI, and
+  `--timeout-minutes <n>` to cap the run. The command waits for the tour to
+  finish and to distill, then prints what it learned. The cap is a real bound:
+  at the budget the run is stopped and given a short grace period (30 seconds)
+  to save what it learned, then the command exits 1 whether or not the run
+  wound down in time.
+- **`donobu session`** (the rest of this document) puts you in control, one
+  step at a time. Prefer it when you need exact steps, a specific bug
+  reproduced, a state only you know how to reach, or a recording you will save
+  as a spec.
+
+Ask what the knowledge base already knows before you explore again:
+
+```bash
+npx donobu context ask "Does the consent banner have a Reject button?"
+```
+
+When it cannot answer, it names the captured pages worth reading and prints
+the exact `donobu explore` command that would find out.
+
 ## The loop
 
 ```bash
@@ -148,10 +186,15 @@ immediately — a failing check exits 1 and records a failed step.
 - `donobu save <path> [--name <title>] [--steps 1,2,5-9]` — emit the selected
   successful steps as a `@donobu/test` spec. Failed steps and notes are
   excluded automatically; use `--steps` to drop exploratory dead ends.
+- `donobu save <path> --case <slug>` files the spec against a test case: the
+  emitted test carries `tag: ['@<slug>']`, which is the link, plus the case's
+  title as its title and objective. An unknown slug fails the save. See
+  `references/cases.md`.
 - `donobu save <path> --amend --name '<exact test title>'` — replace that one
   test inside an EXISTING spec (describe-nested tests included); imports,
   hooks, and sibling tests survive, and a missing or ambiguous title is
-  refused rather than overwritten.
+  refused rather than overwritten. With `--case`, the case title names the
+  test to replace when `--name` is absent.
 - Saving also seeds the spec's `.cache-lock` AI cache with every recorded
   assert's verified checks, so the emitted `page.ai.assert(...)` lines replay
   deterministically — no AI key needed at run time.

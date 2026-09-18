@@ -47,16 +47,39 @@ Six operations, freely mixable with native Playwright calls in one test:
 
 Native and AI steps interleave naturally in one test. Picking the surface:
 
-| Need                                        | Reach for                          |
-| ------------------------------------------- | ---------------------------------- |
-| Exact value, URL, visibility, count         | Playwright `expect`                |
-| Stable, known element                       | Playwright locator                 |
-| Selector likely to drift, intent stable     | `page.find(sel, { failover })`     |
-| Element you can only describe               | `page.ai.locate('…')` → `Locator`  |
-| Adaptive multi-step interaction             | `page.ai('…')`                     |
-| Structured data off the page                | `page.ai.extract(schema)`          |
-| Semantic or visual judgment                 | `page.ai.assert('…')`              |
-| Judgment confined to one region             | `page.ai.within(…).assert('…')`    |
+| Need                                    | Reach for                          |
+| --------------------------------------- | ---------------------------------- |
+| The interaction the test is about       | `page.ai('…')`                     |
+| Element you can only describe           | `page.ai.locate('…')` → `Locator`  |
+| Semantic or visual judgment             | `page.ai.assert('…')`              |
+| Judgment confined to one region         | `page.ai.within(…).assert('…')`    |
+| Structured data off the page            | `page.ai.extract(schema)`          |
+| Exact value, URL, visibility, count     | Playwright `expect`                |
+| Incidental plumbing on a fixed selector | Playwright locator                 |
+| Selector likely to drift, intent stable | `page.find(sel, { failover })`     |
+| One step the AI cannot target reliably  | Playwright locator, that step only |
+
+Default to `page.ai` for the behavior under test; drop to a raw locator
+deliberately, not by habit. A stable selector is not itself the reason to —
+cost is not the tiebreaker either, since an AI step spends tokens only on
+its **first** run and replays from `.cache-lock` with no LLM after that
+(`page.ai.assert` replays as a plain Playwright `expect()`). Repair is the
+tiebreaker: triage and heal fix a Donobu step by clearing its cache entry
+and re-deriving it live, so AI steps absorb app changes on their own, while
+a hand-written locator has nothing to re-derive and fails until someone
+edits the spec.
+
+So when an AI step really is the wrong tool for one interaction — a drag, or
+a coordinate inside a canvas, where the tool pack has nothing to call and
+there is no element to describe — make *that step* deterministic and leave
+the rest of the test on `page.ai`. One of many similar elements is **not**
+such a case: `locate` counts its matches, has the model pick from the
+candidate snippets, and appends the `.nth()` itself, and `within` scopes to
+the instance you mean. A hand-written index is the more brittle of the two —
+it is frozen against the DOM you wrote it for, while the AI re-derives from
+the rendered page whenever the cache is cleared. Rewriting the whole flow in
+raw Playwright trades away both the recorded intent and the healing that
+made it worth writing in Donobu.
 
 ```ts
 const cell = await page.ai.locate('The price cell in the Total row');
@@ -161,6 +184,21 @@ await page.ai(INSTRUCTION, { envVals: { NAV: 'contact' } });
 - Opt out per call with `{ cache: false }`; clear per run with
   `donobu test --clear-ai-cache` (this changes behavior and cost, not just
   speed); invalidate a single entry by deleting it from the cache file.
+- With a `DONOBU_API_KEY` and an account entitled for hosted AI-cache sync,
+  entries also mirror to Donobu Cloud in the background, and a cache miss
+  consults the cloud before falling back to live AI — a fetched entry is
+  written into the local `.cache-lock` file, so it still shows up in the
+  diff for review. Local files stay authoritative by default, and an
+  unreachable or unentitled service changes nothing. `DONOBU_AI_CACHE_MODE`
+  changes that policy: `local-only` never contacts the cloud (the kill
+  switch; the `donobu cache` commands honor it too), `cloud-first` makes
+  the cloud authoritative (a cloud hit is written back into the file, and
+  the file only answers when the cloud misses or is dormant), and
+  `cloud-only` keeps no cache files at all. `donobu cache status` shows the
+  account's activation state. A clearing run (`--clear-ai-cache`, or
+  auto-heal's per-file variant) never reads from the cloud — cleared
+  entries re-record live, and the fresh recordings republish under the
+  same identity, repairing the hosted copy.
 
 ## Objectives: JSDoc becomes test intent
 
@@ -198,6 +236,25 @@ meaning to the `objective` and `ENV` annotation types. Env-var names used as
 `{{$.env.X}}` in an **annotation** objective are allow-listed automatically;
 JSDoc prose is deliberately not scanned.
 
+## Tags: `@<slug>` links a test to its test case
+
+A tag equal to a test case's slug is what links this test to that case in
+the account's inventory. Every run mirrors `testInfo.tags` onto the test
+record, so the tag is the only thing the spec carries, and the case title
+doubles as the objective:
+
+```ts
+/**
+ * Guest checkout completes end to end.
+ */
+test('Guest checkout completes end to end', { tag: ['@checkout-guest'] },
+  async ({ page }) => { … });
+```
+
+Read `references/cases.md` before writing a spec for a case: it covers the
+description template the steps and assertions mirror, and the workflows for
+automating an existing case or creating cases from app knowledge.
+
 ## Config: the Playwright seam
 
 `defineConfig` is Playwright's, unchanged. The Donobu-specific parts of a
@@ -208,7 +265,7 @@ import { defineConfig, devices } from '@donobu/test';
 
 export default defineConfig({
   testDir: './tests',
-  use: { screenshot: 'on', video: 'on' },
+  use: { screenshot: 'on', video: 'retain-on-failure' },
   reporter: [
     ['@donobu/test/reporter/html'],
     ['@donobu/test/reporter/markdown'],
@@ -218,7 +275,11 @@ export default defineConfig({
 ```
 
 The Donobu reporters are opt-in package subpath exports — without them you
-get only Playwright's own reporting. Donobu reads three `metadata` keys:
+get only Playwright's own reporting. Donobu persists whatever Playwright
+retains, so keep `video` off the `'on'` setting in CI-bound configs — a
+video per test is what turns a run's artifacts into gigabytes.
+
+Donobu reads three `metadata` keys:
 `autoHeal: false` on a project opts its tests out of auto-healing,
 `visualCueDurationMs` tunes action highlighting, and
 `SELF_HEAL_TESTS_ENABLED` gates legacy V1 healing. Playwright `projects`,

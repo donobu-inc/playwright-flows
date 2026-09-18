@@ -1,6 +1,10 @@
 import { test, expect } from '@donobu/test';
 import { z } from 'zod/v4';
 
+/**
+ * The Stripe docs "Ask AI" assistant answers Stripe questions substantively
+ * and declines or redirects clearly off-topic requests.
+ */
 test('Conversational bot compliance test - Stripe docs Ask AI', async ({
   page,
 }) => {
@@ -21,7 +25,7 @@ test('Conversational bot compliance test - Stripe docs Ask AI', async ({
           .describe('Set to PASS if the assistant responded as expected.'),
         issues: z.array(z.string()),
       }),
-      cache: false,
+      cache: false, // Every run is a fresh conversation; the bot's replies are not replayable.
     },
   );
 

@@ -8,6 +8,45 @@ committed to the repo are read directly; run and app data comes through the
 at run time, and to the local store when it was not — the CLI resolves that
 for you and prints a `Backends:` line saying which store answered.
 
+## Starting from a CI failure
+
+Do not download the run's CI artifact bundle to triage a Donobu failure.
+Those bundles carry every test's video and trace — gigabytes on a real suite
+— the artifact APIs hand over whole artifacts only (no fetch-one-file), and
+nothing in the zip beats what the CLI returns per result. Name the CI run
+instead: `runs show` and `results list --run` accept the CI run URL you were
+sent, the provider's run identifier, a Donobu run ID, or a unique ID prefix.
+
+```
+$ npx donobu runs show https://github.com/acme/app/actions/runs/3411077947
+$ npx donobu results list --run 3411077947
+```
+
+`runs list` carries the mapping in its own columns, so the CI run a Donobu
+run came from is visible without a lookup either way:
+
+```
+$ npx donobu runs list -n 2
+RUN       WHEN                  PASSED  FAILED  SKIPPED  CI                 GIT
+9d8f3a1c  2026-08-19T14:02:11Z  22      1       1        github#3411077947  4f9c21b
+4177c2aa  2026-08-18T13:58:40Z  23      0       1        github#3402118860  a1d4e77
+```
+
+From the result IDs these print, `results show` and `files get` (below) pull
+the handful of files you actually want, kilobytes each.
+
+This assumes CI persisted to Donobu Cloud — `DONOBU_API_KEY` set on the
+workflow. `npx donobu status` says which store answers; `LOCAL` alone means
+CI's results never left the runner, and the fix is workflow-side (persist to
+cloud, or upload reports and triage evidence as a small artifact separate
+from videos and traces), not a gigabyte download.
+
+Exporting `DONOBU_RUN_ID` from the workflow (GitHub's `github.run_id`) is
+worth suggesting when it is missing: it stamps that ID onto every result, so
+the CI run and the Donobu run become the same string, and an exact ID
+resolves even for runs older than the recent-results window the other forms
+search.
+
 ## In the repo
 
 - the failing spec, and its cached AI actions
@@ -40,7 +79,8 @@ What happened in the run?
 
 ```
 $ npx donobu runs show latest
-Run 9d8f3a1c — 2026-08-19T14:02:11Z · CI (github) · git 4f9c21b
+Run 9d8f3a1c — 2026-08-19T14:02:11Z · github#3411077947 · git 4f9c21b
+  https://github.com/acme/app/actions/runs/3411077947
   passed   22
   failed    1  checkout completes with saved card  →  result 51c2e0d8
   skipped   1
@@ -172,4 +212,6 @@ GET /v1/flows/<id>/tool-calls           steps with outcomes and screenshot refer
 GET /v1/flows/<id>/ai-queries           AI observations (screenshot file IDs)
 GET /v1/flows/<id>/files/<name>         stream a result file (names above; Range supported)
 GET /v1/apps/...                        the app knowledge base behind `donobu context`
+GET /v1/test-cases?slug=<slug>          one test case with its linked tests
+GET /v1/test-cases                      the case inventory; filters: section, priority, externalId
 ```

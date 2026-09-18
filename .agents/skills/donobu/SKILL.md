@@ -3,11 +3,13 @@ name: donobu
 description: >-
   Writing, running, and maintaining Donobu browser-automation tests — the
   @donobu/test library (page.ai act/assert/locate/extract/within on top of
-  Playwright) and the donobu CLI (test, heal, runs, results, files, context,
-  status, session). Use when authoring or editing Donobu test specs, running
-  or healing tests, debugging failures, pulling app knowledge and run history
-  for a test repo, or driving a live browser session step-by-step (explore an
-  app, reproduce a bug, record a test interactively).
+  Playwright) and the donobu CLI (test, heal, runs, results, files, cases,
+  context, localize, cache, status, session). Use when authoring or editing
+  Donobu test specs, running or healing tests, debugging failures, pulling
+  app knowledge and run history for a test repo, managing the account's
+  test-case inventory (list/create/accept/link test cases), or driving a
+  live browser session step-by-step (explore an app, reproduce a bug,
+  record a test interactively).
 metadata:
   generated-by: '@donobu/test'
 ---
@@ -29,6 +31,8 @@ Read the reference for the task at hand before starting it:
 - **Driving a live browser** (explore an app, reproduce a bug, answer
   questions about a live page, author a test interactively) —
   `references/driving.md`.
+- **Managing test cases** (create cases from app knowledge, automate a
+  case, link tests to cases) — `references/cases.md`.
 
 ## Commands
 
@@ -36,11 +40,34 @@ Read the reference for the task at hand before starting it:
 - `npx donobu test --auto-heal` — run with self-healing enabled.
 - `npx donobu heal --plan <path>` — apply a previously generated heal plan.
 - `npx donobu context list|show|export` — inspect the app knowledge base.
-- `npx donobu runs`, `npx donobu results` — run history and test results.
+- `npx donobu context proposals` lists the test cases Donobu proposes for an
+  app, each with the ID that `cases accept` takes. Cloud-only.
+- `npx donobu context ask "<question>"`: answer a question about the app from
+  what Donobu already learned, with citations. When it cannot answer, it names
+  the captured pages to read and the `donobu explore` command to run. Needs an
+  LLM API key.
+- `npx donobu explore <url>`: run the autonomous, read-only tour that Studio's
+  Explore button launches, then distill it into the knowledge base. Takes
+  `--focus "<what to look for>"`, `--headless` for CI, and `--env NAME` to
+  allow a login credential. See `references/driving.md`. Needs an LLM API key.
+- `npx donobu localize <origin>` — locale sweep of an app: page × locale
+  coverage and localization findings.
+- `npx donobu runs`, `npx donobu results` — run history and test results;
+  a CI run URL names a run, so a CI failure needs no artifact download.
 - `npx donobu files get` — fetch a result's files (screenshots, evidence) by name.
+- `npx donobu cases list|show|create|accept|update|delete|link|unlink` — the
+  account's test-case inventory in Donobu Cloud: inspect cases, create or
+  edit them, accept one of Donobu's proposals as a case, and link tests to
+  the cases they cover. A case is named by its exact slug or UUID; `delete`
+  alone requires the UUID (get it from `cases show <slug>`), and `accept`
+  takes a proposal ID from `context proposals`. A test links itself to a
+  case by carrying the case slug as a Playwright tag (see
+  `references/cases.md`).
 - `npx donobu session start|list|end` — live browser sessions driven
   step-by-step via `observe`, `click`/`type`/`goto`/`act`, `assert`, `logs`,
   and `save` (see `references/driving.md`).
+- `npx donobu cache status|push|show` — the AI-action cache
+  (`.cache-lock` files): local staleness, cloud push, entry detail.
 - `npx donobu status` — storage backends, auth, and cloud identity.
 - `npx donobu skills install` — refresh this skill from the installed package.
 

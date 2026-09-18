@@ -62,4 +62,20 @@ module.exports = {
       },
     },
   ],
+  assertions: [
+    {
+      pageUrl: 'www.saucedemo.com',
+      assertion: 'The page thanks the shopper for their order.',
+      steps: [
+        {
+          locator: 'text',
+          role: null,
+          value: 'Thank you for your order!',
+          valueIsRegex: false,
+          assertion: 'toBeVisible',
+          attributeValue: null,
+        },
+      ],
+    },
+  ],
 };

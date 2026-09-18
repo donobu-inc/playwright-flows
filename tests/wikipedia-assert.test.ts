@@ -1,6 +1,11 @@
 import { expect, test } from '@donobu/test';
 import { z } from 'zod/v4';
 
+/**
+ * A reader can open the revision history of the "Software testing" article,
+ * sort it oldest-first, and find that the article was created on
+ * 5 December 2001.
+ */
 test('Inspect Wiki article history', async ({ page }) => {
   await page.goto('https://en.wikipedia.org/wiki/Software_testing');
   const oldestRevision = await page.ai(
@@ -13,7 +18,5 @@ test('Inspect Wiki article history', async ({ page }) => {
       }),
     },
   );
-  expect(oldestRevision.day).toEqual(5);
-  expect(oldestRevision.month).toEqual(12);
-  expect(oldestRevision.year).toEqual(2001);
+  expect(oldestRevision).toEqual({ day: 5, month: 12, year: 2001 });
 });
