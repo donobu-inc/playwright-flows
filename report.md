@@ -6,35 +6,35 @@
 | - | - | - | - | - | - | - | - |
 | 0 ❌ | 0 ⏰ | 0 ⚡ | 0 🚫 | 1 ❤️‍🩹 | 0 🔁 | 0 ⏭️ | 14 ✅ |
 
-_15 tests in 7m 30s_
+_15 tests in 7m 19s_
 
 ### ❤️‍🩹 Auto-healed (1)
 
 | Test | Diagnosis |
 | --- | --- |
-| [unstable-survey.test.ts › Fill out a survey](https://donobu.com/home/demo-flows/flows/63383e74-80ed-4e16-8a6e-146c9622fa89) _(standalone)_ | **Stale Cached Instructions** — Cached step failed to locate 'Last Name' input because the survey page rendered a different set of fields ('Your Name', 'Contact Email', etc.). |
+| [unstable-survey.test.ts › Fill out a survey](https://donobu.com/home/demo-flows/flows/78697af7-1269-4057-a073-28529f9ae568) _(standalone)_ | **Stale Cached Instructions** — Cached page.ai instruction failed to resolve the 'Last Name' input field because the survey form layout shifted to 'Your Name'. |
 
-**[Open the full report →](https://github.com/donobu-inc/playwright-flows/actions/runs/35442318386)**
+**[Open the full report →](https://github.com/donobu-inc/playwright-flows/actions/runs/35510077470)**
 
 <details>
 <summary>📋 Results by file (11 files)</summary>
 
 | File | Result | Duration |
 | --- | --- | --- |
-| shopping/auth.setup.ts | 1 ✅ | 15s |
-| checkly.test.ts | 1 ✅ | 28s |
+| shopping/auth.setup.ts | 1 ✅ | 14s |
+| checkly.test.ts | 1 ✅ | 29s |
 | account-signup.test.ts | 1 ✅ | 51s |
-| starbucks.test.ts | 1 ✅ | 8s |
-| unstable-survey.test.ts | 1 ❤️‍🩹 | 1m 48s |
-| virvly-contact.test.ts | 5 ✅ | 1m 12s |
-| conversational-bot.test.ts | 1 ✅ | 1m 50s |
-| wikipedia-search.test.ts | 1 ✅ | 9s |
+| starbucks.test.ts | 1 ✅ | 7s |
+| unstable-survey.test.ts | 1 ❤️‍🩹 | 1m 59s |
+| virvly-contact.test.ts | 5 ✅ | 1m 13s |
+| conversational-bot.test.ts | 1 ✅ | 1m 27s |
 | wikipedia-assert.test.ts | 1 ✅ | 16s |
+| wikipedia-search.test.ts | 1 ✅ | 9s |
 | ycombinator-search.test.ts | 1 ✅ | 10s |
-| shopping/cart-checkout.test.ts | 1 ✅ | 18s |
+| shopping/cart-checkout.test.ts | 1 ✅ | 19s |
 
 </details>
 
 ---
 
-_Run started 2026-09-19T12:15:52.237Z · 5m 16s wall clock · auto-heal merged · [workflow run #764](https://github.com/donobu-inc/playwright-flows/actions/runs/35442318386) · Donobu_
+_Run started 2026-09-20T12:15:54.678Z · 5m 14s wall clock · auto-heal merged · [workflow run #766](https://github.com/donobu-inc/playwright-flows/actions/runs/35510077470) · Donobu_

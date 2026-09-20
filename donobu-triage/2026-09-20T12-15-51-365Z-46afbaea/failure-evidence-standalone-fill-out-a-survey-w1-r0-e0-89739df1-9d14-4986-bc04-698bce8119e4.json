@@ -1,9 +1,9 @@
 {
   "schemaVersion": 6,
-  "evidenceId": "961b1301-04f5-41da-a6a7-18cf76ab7919",
-  "runId": "2026-09-19T12-15-48-183Z-4e6ce4f9",
-  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-19T12-15-48-183Z-4e6ce4f9",
-  "collectedAtIso": "2026-09-19T12:17:06.842Z",
+  "evidenceId": "89739df1-9d14-4986-bc04-698bce8119e4",
+  "runId": "2026-09-20T12-15-51-365Z-46afbaea",
+  "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-20T12-15-51-365Z-46afbaea",
+  "collectedAtIso": "2026-09-20T12:17:07.681Z",
   "failureContext": {
     "testCase": {
       "title": "Fill out a survey",
@@ -15,7 +15,7 @@
       "repeatEachIndex": 0,
       "workerIndex": 1,
       "timeout": 240000,
-      "duration": 12049,
+      "duration": 10868,
       "annotations": [],
       "autoHealEnabled": true
     },
@@ -61,7 +61,7 @@
     },
     "donobuFlow": {
       "metadata": {
-        "id": "63383e74-80ed-4e16-8a6e-146c9622fa89",
+        "id": "78697af7-1269-4057-a073-28529f9ae568",
         "name": "unstable-survey.test.ts > Fill out a survey",
         "runMode": "DETERMINISTIC",
         "state": "FAILED",
@@ -69,8 +69,8 @@
         "overallObjective": "A respondent can complete every question of the survey with made-up answers\nand submit it through to the \"Thank You\" page, even though the form's\nlayout and element IDs shift between loads.",
         "allowedTools": [],
         "envVars": [],
-        "startedAt": 1789820212654,
-        "completedAt": 1789820224674,
+        "startedAt": 1789906614336,
+        "completedAt": 1789906625236,
         "maxToolCalls": null,
         "gptConfigName": null,
         "defaultMessageDuration": 250,
@@ -78,25 +78,25 @@
       },
       "recentToolCalls": [
         {
-          "id": "adhoc_ae1a191c0b4c4f81a1284db6e9c8e8aa",
+          "id": "adhoc_d3e231d50f104a30a62174a92577024a",
           "toolName": "goToWebpage",
           "success": true,
           "outcomeSummary": "Successfully navigated to https://unstable-survey-dinoer.replit.app",
-          "durationMs": 7804,
+          "durationMs": 6864,
           "page": "https://unstable-survey-dinoer.replit.app",
-          "startedAtIso": "2026-09-19T12:16:53.586Z",
-          "completedAtIso": "2026-09-19T12:17:01.390Z",
+          "startedAtIso": "2026-09-20T12:16:55.195Z",
+          "completedAtIso": "2026-09-20T12:17:02.059Z",
           "parameters": "{\n  \"url\": \"https://unstable-survey-dinoer.replit.app\"\n}"
         },
         {
-          "id": "adhoc_b2937e26b41f4f9eb08b12384414d49a",
+          "id": "adhoc_bdec03e509974abe91397aedaf7918de",
           "toolName": "inputText",
           "success": false,
           "outcomeSummary": "FAILED! Unable to resolve HTML element to operate with.",
-          "durationMs": 2343,
+          "durationMs": 2303,
           "page": "https://unstable-survey-dinoer.replit.app/",
-          "startedAtIso": "2026-09-19T12:17:01.775Z",
-          "completedAtIso": "2026-09-19T12:17:04.118Z",
+          "startedAtIso": "2026-09-20T12:17:02.348Z",
+          "completedAtIso": "2026-09-20T12:17:04.651Z",
           "parameters": "{\n  \"text\": \"Smith\",\n  \"finalizeWithSubmit\": false,\n  \"finalizeWithTab\": false,\n  \"selector\": {\n    \"element\": [\n      \"[data-testid='input-lastname']\",\n      \"[placeholder='Enter your last name']\",\n      \".//label[normalize-space()='Last Name *']/following-sibling::input\"\n    ]\n  },\n  \"rationale\": \"\"\n}"
         }
       ]
@@ -205,19 +205,35 @@
       "historicalSignals": {
         "flakinessScore": 0.6666666666666666,
         "regressionLikelihood": 0,
-        "recentPassRate": 0.6,
+        "recentPassRate": 0.5882352941176471,
         "priorSelfHealSuccess": true,
         "cacheWasRecentlyValid": true
       }
     },
     "flowHistory": {
       "flowName": "unstable-survey.test.ts > Fill out a survey",
-      "totalRuns": 15,
-      "successCount": 9,
-      "failureCount": 6,
+      "totalRuns": 17,
+      "successCount": 10,
+      "failureCount": 7,
       "otherCount": 0,
-      "passRate": 0.6,
+      "passRate": 0.5882352941176471,
       "recentRuns": [
+        {
+          "id": "e735aaa6-dd3b-406a-90bf-304440389a49",
+          "state": "SUCCESS",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1789820361042,
+          "completedAt": 1789820467548,
+          "durationMs": 106506
+        },
+        {
+          "id": "63383e74-80ed-4e16-8a6e-146c9622fa89",
+          "state": "FAILED",
+          "runMode": "DETERMINISTIC",
+          "startedAt": 1789820212654,
+          "completedAt": 1789820224674,
+          "durationMs": 12020
+        },
         {
           "id": "c232be71-1722-4553-9284-30dc6cf486de",
           "state": "SUCCESS",
@@ -281,33 +297,17 @@
           "startedAt": 1789695397950,
           "completedAt": 1789695492628,
           "durationMs": 94678
-        },
-        {
-          "id": "c343efe2-6ce2-447e-98ec-72b727e3fef1",
-          "state": "FAILED",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1789695275247,
-          "completedAt": 1789695291855,
-          "durationMs": 16608
-        },
-        {
-          "id": "01bf36e9-7a57-43d7-a516-2e7c49dfcc27",
-          "state": "SUCCESS",
-          "runMode": "DETERMINISTIC",
-          "startedAt": 1789694953081,
-          "completedAt": 1789695097277,
-          "durationMs": 144196
         }
       ],
       "currentStreak": {
         "state": "SUCCESS",
-        "length": 4
+        "length": 1
       },
-      "lastSuccessfulRunId": "c232be71-1722-4553-9284-30dc6cf486de",
+      "lastSuccessfulRunId": "e735aaa6-dd3b-406a-90bf-304440389a49",
       "queryWindowDays": 14,
-      "queriedAt": "2026-09-19T12:17:06.060Z"
+      "queriedAt": "2026-09-20T12:17:06.706Z"
     }
   },
-  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-19T12-15-48-183Z-4e6ce4f9/failure-screenshot-961b1301-04f5-41da-a6a7-18cf76ab7919.png",
-  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-19T12-15-48-183Z-4e6ce4f9/baseline-screenshot-961b1301-04f5-41da-a6a7-18cf76ab7919.png"
+  "failureScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-20T12-15-51-365Z-46afbaea/failure-screenshot-89739df1-9d14-4986-bc04-698bce8119e4.png",
+  "baselineScreenshotPath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-20T12-15-51-365Z-46afbaea/baseline-screenshot-89739df1-9d14-4986-bc04-698bce8119e4.png"
 }
