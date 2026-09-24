@@ -1,28 +1,33 @@
 {
-  "generatedAtIso": "2026-09-23T12:21:15.041Z",
-  "evidenceId": "565c112a-8b16-4784-8642-f83dfbeb49e4",
+  "generatedAtIso": "2026-09-24T12:21:53.041Z",
+  "evidenceId": "68ab93b6-b222-44d8-92e5-d4e175efb33c",
   "plan": {
-    "failureSummary": "Cached page.ai step failed to locate the 'Last Name' input field because the dynamic survey rendered a different form variant ('Your Name' / 'Contact Email').",
+    "failureSummary": "Deterministic replay failed when attempting to locate the cached 'Last Name' input field on an unstable survey form variant.",
     "failureReason": "STALE_CACHED_INSTRUCTIONS",
     "confidence": 0.95,
     "observedIndicators": [
-      "The failing step executed inside generated cache file '.cache-lock/unstable-survey.test.ts.cache.js' (failureInCacheReplay is true).",
-      "Cached instruction looked for '[data-testid=\\'input-lastname\\']' and 'Last Name *', but the live failure screenshot displays 'Your Name *' and 'Contact Email *'.",
-      "No application errors or 5xx network responses were recorded in browser logs.",
-      "The overall objective is semantically flexible ('Fill out all of the survey questions with fake data...') and intended to handle shifting form layouts."
+      "Failure occurred inside generated cache replay file .cache-lock/unstable-survey.test.ts.cache.js",
+      "Failure screenshot shows 'Your Name *' and 'Contact Email *' fields instead of the cached 'Last Name *' selector targets",
+      "Used DETERMINISTIC mode with isRetryAttempt = false",
+      "The flow overall objective and test doc explicitly account for shifting form layouts across loads"
     ],
     "remediationSteps": [
       {
         "category": "RETRY_AUTOMATION",
-        "summary": "Clear Page.AI cache and re-run automation",
-        "details": "Clear the cached instructions in .cache-lock/unstable-survey.test.ts.cache.js and re-run the test autonomously so page.ai generates fresh actions against the active DOM variant."
+        "summary": "Clear Page.AI cache and retry autonomously",
+        "details": "Clear the cached Page.AI file (.cache-lock/unstable-survey.test.ts.cache.js) and rerun the test in autonomous mode to allow it to dynamically interact with the current form fields."
+      },
+      {
+        "category": "UPDATE_TEST_LOGIC",
+        "summary": "Review prompt flexibility if retry fails",
+        "details": "If the fresh autonomous execution fails to complete the survey, verify that the prompt instruction covers all dynamic form permutations."
       }
     ],
     "additionalDataRequests": [],
     "shouldRetryAutomation": true,
     "requiresCodeChange": false,
     "requiresProductFix": false,
-    "notes": "The test targets an unstable/dynamic survey where fields and element IDs vary across loads. The failure happened directly within the cached replay (.cache-lock/unstable-survey.test.ts.cache.js). Clearing the cache and running autonomously will allow page.ai to adapt to the current form layout.",
+    "notes": "The application dynamically alters form layout and field names across sessions. The cached replay attempted to locate 'Last Name *', but the live page presented 'Your Name *'. Clearing the page.ai cache and retrying in autonomous mode will allow Page.AI to adapt to the current form structure.",
     "automationDirectives": {
       "clearPageAiCache": true,
       "targetTestFile": "tests/unstable-survey.test.ts",
@@ -72,13 +77,13 @@
       "repeatEachIndex": 0,
       "workerIndex": 1,
       "timeout": 240000,
-      "duration": 11081,
+      "duration": 11240,
       "annotations": [],
       "autoHealEnabled": true
     },
-    "runId": "2026-09-23T12-17-47-330Z-e8ccdb1b",
-    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-23T12-17-47-330Z-e8ccdb1b",
-    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-23T12-17-47-330Z-e8ccdb1b/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-565c112a-8b16-4784-8642-f83dfbeb49e4.json"
+    "runId": "2026-09-24T12-18-29-949Z-9981f3ef",
+    "runDirectory": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-24T12-18-29-949Z-9981f3ef",
+    "evidencePath": "/home/runner/work/playwright-flows/playwright-flows/test-results/donobu-triage/2026-09-24T12-18-29-949Z-9981f3ef/failure-evidence-standalone-fill-out-a-survey-w1-r0-e0-68ab93b6-b222-44d8-92e5-d4e175efb33c.json"
   },
   "originalPlaywrightArgs": [
     "test"
