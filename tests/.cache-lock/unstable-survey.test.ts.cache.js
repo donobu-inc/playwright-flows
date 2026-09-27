@@ -34,7 +34,7 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Entering a fake last name into the last name input field.
+        // Typing a fake last name into the last name input field to continue filling out the survey.
         await page
           .find("[data-testid='input-lastname']", {
             failover: [
@@ -42,9 +42,9 @@ module.exports = {
               ".//label[normalize-space()='Last Name *']/following-sibling::input",
             ],
           })
-          .inputText('Smith');
+          .inputText('Doe');
 
-        // Entering a fake email address into the email input field.
+        // Typing a fake email address into the email input field to continue filling out the survey.
         await page
           .find(
             ".//label[normalize-space()='Email Address *']/following-sibling::input",
@@ -55,9 +55,9 @@ module.exports = {
               ],
             },
           )
-          .inputText('john.smith@example.com');
+          .inputText('john.doe@example.com');
 
-        // Selecting an age group option.
+        // Selecting an age group option to continue filling out the survey.
         await page
           .find("[data-testid='radio-age-25-34']", {
             failover: [
@@ -67,36 +67,43 @@ module.exports = {
           })
           .click('left');
 
-        // Scrolling down to view more survey fields.
+        // Scrolling down to view the remaining questions in the survey form.
         await page.find('html').scroll('DOWN');
 
-        // Selecting the 'Social Media' checkbox for 'How did you hear about us?'.
+        // Selecting 'Social Media' for the 'How did you hear about us?' question.
         await page
           .find(
-            "//label[contains(text(), 'Social Media')]/parent::div//button[@role='checkbox']",
+            "//div[label[contains(., 'Social Media')]]/button[@role='checkbox']",
             {
               failover: [
-                "//button[@role='checkbox' and following-sibling::label[contains(text(), 'Social Media')]]",
+                "//label[contains(., 'Social Media')]/preceding-sibling::button[@role='checkbox']",
                 "div:nth-of-type(1) > [role='checkbox']",
               ],
             },
           )
           .click('left');
 
-        // Scrolling up to verify all required fields on the first page of the survey are completed.
-        await page.find('html').scroll('UP', { maxScroll: true });
+        // Filling in the additional comments field with fake data to complete all survey questions.
+        await page
+          .find(
+            ".//label[normalize-space()='Additional Comments (Optional)']/following-sibling::textarea",
+            {
+              failover: [
+                "[name='comments']",
+                "[placeholder='Share any additional thoughts or comments']",
+              ],
+            },
+          )
+          .inputText('Great survey!');
 
-        // Scrolling down to locate and click the Next button.
-        await page.find('html').scroll('DOWN');
-
-        // Clicking the Next button to proceed to the next step of the survey.
+        // Clicking element 13 as the next step toward the objective.
         await page
           .find(".//button[normalize-space(.)='Next']", {
-            failover: ['button[type="submit"]', 'div.mt-8 > button'],
+            failover: ["form button[type='submit']", 'div.mt-8 > button'],
           })
-          .click('left');
+          .click();
 
-        // Clicking the Submit button to finalize the survey submission.
+        // Clicking element 1 as the next step toward the objective.
         await page
           .find(".//button[normalize-space(.)='Submit']", {
             failover: [
@@ -104,12 +111,12 @@ module.exports = {
               'div.bg-white > div:nth-of-type(2) > button:nth-of-type(2)',
             ],
           })
-          .click('left');
+          .click();
 
-        // Marking the objective complete as the survey submission has been finished and the Thank You page is reached.
+        // Verifying that the survey submission process is complete and the 'Thank You!' confirmation page has been reached.
         await page.run('markObjectiveComplete', {
           details:
-            "Successfully filled out all survey questions with fake data, reviewed selections, submitted the survey, and reached the 'Thank You' page.",
+            "Successfully completed all survey questions with fake data, reviewed selections, submitted the form, and reached the 'Thank You!' page.",
         });
       },
     },
