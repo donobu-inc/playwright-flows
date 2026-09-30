@@ -334,3 +334,13 @@ Playwright step tree, AI invocation records with cache-hit badges, logs,
 video (when your config enables it), browser state, and — on failure —
 triage evidence and a treatment plan. Author nothing for any of this; see
 `references/debugging.md` for consuming it.
+
+### Localization review
+
+Use `await page.checkLocalization({ locale: 'ja-JP', currency: 'JPY' })` to
+review one viewport. It returns a report with findings and screenshot polygons;
+it does not fail the test when findings exist. Check both `report.findings` and
+`report.warnings` before treating a review as clean. Supply currency only when
+known, and original copy as `sourceText` when available. OCR costs one Donobu
+wallet credit plus model usage; rerunning performs a new paid review. Studio
+shows the annotated screenshot under **View localization report**.

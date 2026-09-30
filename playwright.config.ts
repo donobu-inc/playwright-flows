@@ -37,6 +37,7 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   reporter: [
+    [process.env.CI ? 'github' : 'list'],
     ['@donobu/test/reporter/html'],
     ['@donobu/test/reporter/markdown'],
     ['@donobu/test/reporter/slack'],
