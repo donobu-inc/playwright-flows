@@ -8,6 +8,15 @@ on:
   schedule:
     - cron: '0 12 * * *' # Runs daily at 12:00 UTC
   workflow_dispatch:
+    inputs:
+      donobu_run_id:
+        description: 'Override the Donobu run id verbatim. Paste the rerun-of:<original-run-id>:<epoch> value from the Donobu dashboard''s "Copy CI re-run command" so this dispatch reports as a re-run of that run. Leave blank for the standard composed id.'
+        required: false
+        type: string
+
+permissions:
+  contents: write # auto-heal PR branch and the gh-pages push
+  pull-requests: write
 
 jobs:
   run-donobu-flows:
@@ -30,14 +39,19 @@ jobs:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
         run: pnpm install --frozen-lockfile && pnpm exec playwright install --with-deps
 
+      # DONOBU_API_KEY also persists results to Donobu Cloud; the reporters then
+      # link the hosted Test Runs page for DONOBU_RUN_ID and add the link to
+      # this workflow run on their own, so DONOBU_REPORT_URL stays unset. The
+      # public copy of the report is the GitHub Pages site published below.
+      # run_attempt keeps a re-run of this workflow from merging into the
+      # original run's results.
       - name: Run Playwright Tests
         id: run_tests
         continue-on-error: true
         env:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
-          DONOBU_RUN_ID: ${{ github.run_id }}
+          DONOBU_RUN_ID: ${{ inputs.donobu_run_id || format('playwright-flows:{0}:{1}:{2}:{3}', github.ref_name, github.event_name, github.run_id, github.run_attempt) }}
           DONOBU_SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          DONOBU_REPORT_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: pnpm exec donobu test --auto-heal
 
       - name: Save Test Reports as Artifacts
@@ -70,3 +84,7 @@ jobs:
           base: ${{ github.ref_name }}
           labels: donobu, auto-heal
           delete-branch: true
+
+      - name: Fail if Donobu Tests Failed
+        if: steps.run_tests.outcome == 'failure'
+        run: exit 1
