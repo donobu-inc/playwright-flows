@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       donobu_run_id:
-        description: 'Override the Donobu run id verbatim. Paste the rerun-of:<original-run-id>:<epoch> value from the Donobu dashboard''s "Copy CI re-run command" so this dispatch reports as a re-run of that run. Leave blank for the standard composed id.'
+        description: 'Override the Donobu run ID verbatim. Paste the rerun-of:<original-run-id>:<epoch> value from the Donobu dashboard''s "Copy CI re-run command" so this dispatch reports as a re-run of that run. Leave blank for the standard composed ID.'
         required: false
         type: string
 
@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: Setup Node
         uses: actions/setup-node@v6
