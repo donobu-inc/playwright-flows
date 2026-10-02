@@ -15,8 +15,8 @@ on:
         type: string
 
 permissions:
-  contents: write # auto-heal PR branch and the gh-pages push
-  pull-requests: write
+  contents: write # the heal branch
+  pull-requests: write # the pull request Donobu's heal agent opens
 
 jobs:
   run-donobu-flows:
@@ -41,15 +41,22 @@ jobs:
 
       # DONOBU_API_KEY also persists results to Donobu Cloud; the reporters then
       # link the hosted Test Runs page for DONOBU_RUN_ID and add the link to
-      # this workflow run on their own, so DONOBU_REPORT_URL stays unset. The
-      # public copy of the report is the GitHub Pages site published below.
+      # this workflow run on their own, so DONOBU_REPORT_URL stays unset.
       # run_attempt keeps a re-run of this workflow from merging into the
       # original run's results.
+      #
+      # When tests fail, --auto-heal puts Donobu's heal agent on them: it
+      # diagnoses each failure, fixes the tests that are out of date, and
+      # Donobu re-runs them. On a run that is not itself for a pull request,
+      # the agent then opens a pull request with the fix from
+      # donobu/heal/<branch>, through the GitHub command-line tool, which
+      # reads GH_TOKEN.
       - name: Run Playwright Tests
         id: run_tests
         continue-on-error: true
         env:
           DONOBU_API_KEY: ${{ secrets.DONOBU_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
           DONOBU_RUN_ID: ${{ inputs.donobu_run_id || format('playwright-flows:{0}:{1}:{2}:{3}', github.ref_name, github.event_name, github.run_id, github.run_attempt) }}
           DONOBU_SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: pnpm exec donobu test --auto-heal
@@ -61,29 +68,6 @@ jobs:
           name: test-results
           path: test-results/
           retention-days: 3
-
-      - name: Publish the HTML report to GitHub Pages
-        if: always() && github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./test-results
-
-      # Open a self-healing PR with whatever auto-heal changed. Donobu writes
-      # the PR body to test-results/auto-heal-pr-body.md when it heals tests;
-      # the hashFiles() guard skips PR creation when no body is present.
-      - name: Create Pull Request for Test Fixes (if any)
-        if: ${{ github.event_name != 'pull_request' && hashFiles('test-results/auto-heal-pr-body.md') }}
-        uses: peter-evans/create-pull-request@v8
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Donobu auto-heal: fix failing tests"
-          title: "Donobu auto-heal: Test fixes for ${{ github.ref_name }}"
-          body-path: test-results/auto-heal-pr-body.md
-          branch: fix-playwright-tests-for-${{ github.ref_name }}
-          base: ${{ github.ref_name }}
-          labels: donobu, auto-heal
-          delete-branch: true
 
       - name: Fail if Donobu Tests Failed
         if: steps.run_tests.outcome == 'failure'

@@ -38,7 +38,6 @@ export default defineConfig({
   },
   reporter: [
     [process.env.CI ? 'github' : 'list'],
-    ['@donobu/test/reporter/html'],
     ['@donobu/test/reporter/markdown'],
     ['@donobu/test/reporter/slack'],
   ],

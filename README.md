@@ -37,7 +37,6 @@ requests, a daily schedule, and manual dispatch. It needs the
 - Results persist to Donobu Cloud under
   `DONOBU_RUN_ID=playwright-flows:<ref>:<event>:<run_id>:<attempt>`; a manual
   dispatch can override it with the dashboard's re-run id.
-- Runs on `main` also publish the HTML report publicly to
-  [GitHub Pages](https://donobu-inc.github.io/playwright-flows/).
-- When auto-heal changes a test on a non-PR run, the workflow opens a pull
-  request with the fix.
+- When tests fail, Donobu's heal agent diagnoses them, fixes the ones that
+  are out of date, and Donobu re-runs them. On a non-PR run the agent opens a
+  pull request with the fix from `donobu/heal/<branch>`.

@@ -290,10 +290,9 @@ Donobu (e.g. retried attempts carry `provenance.attempt`).
 
 AI steps need a model. Resolution priority: `BASE64_GPT_CONFIG` →
 `DONOBU_API_KEY` (Donobu-hosted models; also enables cloud persistence —
-outranks all BYO keys) → AWS Bedrock (`AWS_BEDROCK_MODEL_NAME` + AWS creds)
-→ `ANTHROPIC_API_KEY` → `GOOGLE_GENERATIVE_AI_API_KEY` → `OPENAI_API_KEY` →
-Ollama (`OLLAMA_MODEL_NAME`). Each provider's `*_MODEL_NAME` var overrides
-its default model. Per-test or per-call overrides:
+outranks all BYO keys) → `ANTHROPIC_API_KEY` → `GOOGLE_GENERATIVE_AI_API_KEY`
+→ `OPENAI_API_KEY` → Ollama (`OLLAMA_MODEL_NAME`). Each provider's
+`*_MODEL_NAME` var overrides its default model. Per-test or per-call overrides:
 
 ```ts
 import { test, anthropicClientFixture } from '@donobu/test';
@@ -344,3 +343,18 @@ it does not fail the test when findings exist. Check both `report.findings` and
 known, and original copy as `sourceText` when available. OCR costs one Donobu
 wallet credit plus model usage; rerunning performs a new paid review. Studio
 shows the annotated screenshot under **View localization report**.
+
+### Proofreading and PDF text
+
+Use `const report = await page.ai.proofread()` to check the page's visible
+text for spelling and grammar errors, then assert on it, for example
+`expect(report.findings).toEqual([])`; pass `failOnErrors: true` instead to
+throw with a readable list. Pass `glossary: { allowed: [...], brands: [...] }`
+for product terms and exact brand spellings, and `locale` for the spelling
+variety. Each finding has its line, character offset, and suggested fix. For a PDF, pass `pdfSource: '<url or path>'`, or
+read it first with `const pdf = await page.extractPdfText({ source })` and
+pass `{ text: pdf }` so findings name the PDF page. Scanned PDF pages are
+OCRed at one Donobu wallet credit per page. Verdicts are cached per line in
+`.cache-lock/proofread.cache.json`; commit it with the other cache files. The
+checker needs a Donobu account enrolled in Jev (`@donobu/jev-fast-path`); PDF
+reading needs the `pdfjs-dist` package (and `@napi-rs/canvas` for scans).

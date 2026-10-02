@@ -64,7 +64,7 @@ $ npx donobu status
 
 Env file:  /repo/.env (applied DONOBU_API_KEY)
 
-Backends (PERSISTENCE_PRIORITY: DONOBU, S3, GCS, LOCAL, RAM):
+Backends (PERSISTENCE_PRIORITY: DONOBU, LOCAL, RAM):
   DONOBU  active   api.donobu.com (key …a4f2, from .env)
   LOCAL   active   /Users/dev/Library/Application Support/Donobu Studio/database.sqlite
 
@@ -112,7 +112,8 @@ $ npx donobu files get 51c2e0d8 triage-failure-screenshot.png --out evidence/
 The well-known names: `donobu-test-result.json` (spec path, errors),
 `treatment-plan.json` (Donobu's diagnosis and proposed fix),
 `heal-outcome.json` (heal verdict: `HEALED` / `NOT_REATTEMPTED` /
-`RERUN_FAILED`), `triage-evidence.json` (classified failure reason plus
+`RERUN_FAILED`), `heal-journal.json` (the heal agent's rounds, when it
+ran), `triage-evidence.json` (classified failure reason plus
 historical signals — `cacheWasRecentlyValid: true` means a recent run passed
 with the same cached steps, i.e. the app changed underneath the test),
 `triage-failure-screenshot.png`,
@@ -176,6 +177,11 @@ machinery already did before hand-editing a spec:
   `npx donobu heal --plan <path>` applies a previously generated plan. Both
   can rewrite spec files and rerun dependent tests, and heal reruns are
   stamped `HEAL_RERUN` in result provenance.
+- On accounts with the heal agent, `--auto-heal` edits test code itself, in
+  rounds, and in CI opens a pull request from `donobu/heal/<branch>`. A
+  result's `heal-journal.json` records each round: the diagnosis, the files
+  changed, the files put back, and how the rerun went. Check for an open
+  heal pull request before fixing the same spec by hand.
 - Heal reruns invoke the LLM (real token cost), and a pending treatment plan
   and a hand-edit to the same spec will conflict.
 
