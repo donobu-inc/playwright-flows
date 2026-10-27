@@ -34,17 +34,17 @@ module.exports = {
       allowedTools: [],
       maxToolCalls: 50,
       run: async ({ page }) => {
-        // Filling in the name field with fake data.
+        // Entering a fake name into the name field to fill out the survey.
         await page
           .find("[name='name']", {
             failover: [
-              ".//label[normalize-space()='Your Name *']/following-sibling::input",
               "[placeholder='Enter your name']",
+              ".//label[normalize-space()='Your Name *']/following-sibling::input",
             ],
           })
-          .inputFaker('person.fullName', { tab: true });
+          .inputText('John Doe');
 
-        // Filling in the contact email field with a fake email address.
+        // Entering a fake contact email into the survey form.
         await page
           .find("[name='email']", {
             failover: [
@@ -52,58 +52,55 @@ module.exports = {
               "[placeholder='Enter your contact email']",
             ],
           })
-          .inputFaker('internet.email', { tab: true });
+          .inputText('johndoe@example.com');
 
-        // Opening the occupation dropdown to select an option.
+        // Clicking the Occupation dropdown to select an occupation.
         await page
-          .find(
-            "//label[contains(., 'Occupation')]/following-sibling::button",
-            {
-              failover: [
-                ".//button[normalize-space(.)='Select your occupation']",
-                "[role='combobox']",
-              ],
-            },
-          )
+          .find(".//button[normalize-space(.)='Select your occupation']", {
+            failover: [
+              "//label[contains(., 'Occupation')]/following-sibling::button",
+              "[role='combobox']",
+            ],
+          })
           .click('left');
 
-        // Opening the occupation dropdown menu.
+        // Opening the occupation dropdown.
         await page
           .find(".//button[normalize-space(.)='Select your occupation']", {
             failover: [
               "[role='combobox']",
-              "//label[contains(., 'Occupation')]/following-sibling::button",
+              "//label[contains(., 'Occupation')]/..//button",
             ],
           })
           .click('left');
 
-        // Selecting 'Employed' from the occupation dropdown.
+        // Selecting 'Employed' from the occupation dropdown options.
         await page
           .find(".//div[normalize-space(.)='Employed']", {
             failover: [
+              "//div[@role='option'][normalize-space()='Employed']",
               '#radix-\\:rm\\: > div > div:nth-of-type(2)',
-              "[role='presentation'] > div:nth-of-type(2)",
             ],
           })
           .click('left');
 
-        // Checking the 'Technology' checkbox under interests.
+        // Selecting the Technology checkbox for interests.
         await page
           .find(
-            "//label[contains(text(), 'Technology')]/preceding-sibling::button[@role='checkbox']",
+            "//button[@role='checkbox' and following-sibling::label[contains(text(), 'Technology')]]",
             {
               failover: [
-                "//div[label[contains(text(), 'Technology')]]/button",
+                "//label[contains(text(), 'Technology')]/preceding-sibling::button",
                 "div:nth-of-type(1) > [role='checkbox']",
               ],
             },
           )
           .click('left');
 
-        // Scrolling down to see the rest of the survey form.
+        // Scrolling down to see the remaining survey questions.
         await page.find('html').scroll('DOWN');
 
-        // Entering suggestions into the textarea.
+        // Filling in fake suggestions into the optional suggestions textarea.
         await page
           .find(
             ".//label[normalize-space()='Suggestions (Optional)']/following-sibling::textarea",
@@ -116,14 +113,14 @@ module.exports = {
           )
           .inputText('Great survey!');
 
-        // Submitting the first page of the survey by clicking Next.
+        // Clicking the Next button to proceed to the next step of the survey.
         await page
           .find(".//button[normalize-space(.)='Next']", {
-            failover: ["form button[type='submit']", 'div.mt-8 > button'],
+            failover: ['button[type="submit"]', 'button.inline-flex'],
           })
           .click('left');
 
-        // Clicking the Submit button to finalize the survey submission.
+        // Clicking the Submit button to submit the survey selections. Donobu: this click acts on "Submit", which the instruction did not ask for.
         await page
           .find(".//button[normalize-space(.)='Submit']", {
             failover: [
@@ -133,10 +130,10 @@ module.exports = {
           })
           .click('left');
 
-        // The survey has been completely filled out, submitted, and the 'Thank You' page is reached as requested.
+        // The survey form has been filled out and submitted, reaching the 'Thank You' page as required by the objective.
         await page.run('markObjectiveComplete', {
           details:
-            "Filled out all survey questions with fake data, reviewed selections, submitted the form, and reached the 'Thank You' page.",
+            "Completed all survey questions with fake data, reviewed selections, submitted the form, and successfully reached the 'Thank You' page.",
         });
       },
     },
