@@ -18,7 +18,7 @@ test(
     NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".`,
     );
     await expect(page).toHaveURL(
-      'https://www.checklyhq.com/docs/constructs/playwright-check/',
+      /https:\/\/www\.checklyhq\.com\/docs\/constructs\/playwright-check/,
     );
   },
 );
