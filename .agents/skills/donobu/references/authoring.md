@@ -183,7 +183,9 @@ await page.ai(INSTRUCTION, { envVals: { NAV: 'contact' } });
 
 - Opt out per call with `{ cache: false }`; clear per run with
   `donobu test --clear-ai-cache` (this changes behavior and cost, not just
-  speed); invalidate a single entry by deleting it from the cache file.
+  speed). Deleting an entry from the cache file clears only the local copy:
+  with hosted sync on, the next miss restores it from Donobu Cloud, so a
+  lasting re-record goes through `--clear-ai-cache`.
 - With a `DONOBU_API_KEY` and an account entitled for hosted AI-cache sync,
   entries also mirror to Donobu Cloud in the background, and a cache miss
   consults the cloud before falling back to live AI — a fetched entry is
@@ -279,12 +281,22 @@ get only Playwright's own reporting. Donobu persists whatever Playwright
 retains, so keep `video` off the `'on'` setting in CI-bound configs — a
 video per test is what turns a run's artifacts into gigabytes.
 
-Donobu reads three `metadata` keys:
+Donobu reads five `metadata` keys:
 `autoHeal: false` on a project opts its tests out of auto-healing,
-`visualCueDurationMs` tunes action highlighting, and
-`SELF_HEAL_TESTS_ENABLED` gates legacy V1 healing. Playwright `projects`,
-`dependencies`, `retries`, and timeouts all work normally and interact with
-Donobu (e.g. retried attempts carry `provenance.attempt`).
+`autoHealExcludeTags` (a list of tags, in the config's `metadata` or a
+project's; a project's list replaces the config's) opts out the tests that
+carry one of them, so the heal agent diagnoses a test asserting the right
+behaviour against an open product bug but never changes it,
+`visualCueDurationMs` tunes action highlighting, and `volatileElementIds` /
+`noSelectorFailover` (booleans, in the config's `metadata` or a project's)
+set defaults for the `page.ai` options of the same names. Precedence: the
+call, then the project, then the config; a project with other metadata keys
+still inherits these from the config. They shape only what a step keeps when
+it is recorded (`assert`/`locate`/`extract` and `cache: false` calls are
+unaffected), and steps already in a cache keep their selectors until
+re-recorded with `--clear-ai-cache`. Playwright `projects`, `dependencies`,
+`retries`, and timeouts all work normally and interact with Donobu (e.g.
+retried attempts carry `provenance.attempt`).
 
 ## Models
 

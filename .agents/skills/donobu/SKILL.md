@@ -1,11 +1,13 @@
 ---
 name: donobu
 description: >-
-  Writing, running, and maintaining Donobu browser-automation tests — the
-  @donobu/test library (page.ai act/assert/locate/extract/within on top of
-  Playwright) and the donobu CLI (test, heal, runs, results, files, cases,
-  context, localize, cache, status, session). Use when authoring or editing
-  Donobu test specs, running or healing tests, debugging failures, pulling
+  Writing, running, and maintaining Donobu tests of web apps, and of mobile
+  apps and HTTP APIs through the first-party plugins — the @donobu/test
+  library (page.ai act/assert/locate/extract/within on top of Playwright)
+  and the donobu CLI (test, heal, runs, results, files, cases, context,
+  localize, cache, status, session), which every target shares. Use when
+  authoring or editing Donobu test specs, running or healing tests of any
+  target, debugging failures, pulling
   app knowledge and run history for a test repo, managing the account's
   test-case inventory (list/create/accept/link test cases), or driving a
   live browser session step-by-step (explore an app, reproduce a bug,

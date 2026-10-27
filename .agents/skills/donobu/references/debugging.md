@@ -173,6 +173,14 @@ machinery already did before hand-editing a spec:
 - A failed result's `treatment-plan.json` is Donobu's diagnosis of that
   failure and its proposed fix; `heal-outcome.json` records the verdict of a
   past heal attempt.
+- On accounts with the heal agent, a read-only agent session diagnoses each
+  failure from the run's recording, and the plan cites the items it rests
+  on. The recording stays in the output directory: with that folder at hand
+  (`test-results` by default), `npx donobu evidence failures --from
+  test-results` reads it — full errors, trace actions, DOM snapshots,
+  network, the full log with WebSocket frames — and `npx donobu evidence
+  --help` lists the rest. `npx donobu evidence earlier <failure>` gives the
+  verdicts and diagnoses of earlier failures with the same signature.
 - `npx donobu test --auto-heal` triages, plans, and reruns in one pass;
   `npx donobu heal --plan <path>` applies a previously generated plan. Both
   can rewrite spec files and rerun dependent tests, and heal reruns are
@@ -181,7 +189,9 @@ machinery already did before hand-editing a spec:
   rounds, and in CI opens a pull request from `donobu/heal/<branch>`. A
   result's `heal-journal.json` records each round: the diagnosis, the files
   changed, the files put back, and how the rerun went. Check for an open
-  heal pull request before fixing the same spec by hand.
+  heal pull request before fixing the same spec by hand; when none was
+  opened, the fix is in `auto-heal.patch` in the output directory (`test-results` by default), for `git apply` at
+  the repository root.
 - Heal reruns invoke the LLM (real token cost), and a pending treatment plan
   and a hand-edit to the same spec will conflict.
 
