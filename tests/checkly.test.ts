@@ -18,7 +18,10 @@ test(
     NOTE: Since this website uses typeahead for search, do not submit the search via "Enter".`,
     );
     await expect(page).toHaveURL(
-      'https://www.checklyhq.com/docs/constructs/playwright-check/#playwright-check-suite',
+      /^https:\/\/www\.checklyhq\.com\/docs\/constructs\/playwright-check\/(#playwright-check-suite)?$/,
     );
+    await expect(
+      page.getByRole('heading', { name: 'Playwright Check Suite', level: 1, exact: true }),
+    ).toBeVisible();
   },
 );
